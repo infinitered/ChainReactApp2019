@@ -1,0 +1,3 @@
+rootProject.name = 'ChainReactApp2018'
+
+include ':app'
