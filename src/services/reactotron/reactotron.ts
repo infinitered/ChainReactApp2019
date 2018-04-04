@@ -3,6 +3,7 @@ import { RootStore } from "../../models/root-store"
 import { onSnapshot } from "mobx-state-tree"
 import { ReactotronConfig, DEFAULT_REACTOTRON_CONFIG } from "./reactotron-config"
 import { mst } from "reactotron-mst"
+import { withCustomActions } from "./with-custom-actions-reactotron"
 
 // Teach TypeScript about the bad things we want to do.
 declare global {
@@ -109,7 +110,15 @@ export class Reactotron {
         asyncStorage: this.config.useAsyncStorage ? undefined : false,
       })
 
-      Tron.use(mst())
+      Tron.use(
+        mst({
+          filter: event => {
+            return !event.name.endsWith("@APPLY_SNAPSHOT")
+          },
+        }),
+      )
+
+      Tron.use(withCustomActions(() => this.rootStore))
 
       // connect to the app
       Tron.connect()

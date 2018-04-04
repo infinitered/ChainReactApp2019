@@ -7,7 +7,7 @@
   "errors": {
     "invalidEmail": "Invalid email address."
   },
-  "firstExampleScreen": {
+  "welcomeScreen": {
     "header": "First Screen",
     "nextScreenButton": "Next Screen"
   },
