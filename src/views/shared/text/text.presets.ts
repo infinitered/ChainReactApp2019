@@ -30,7 +30,12 @@ export const presets = {
   /**
    * Large headers.
    */
-  header: { ...BASE, fontSize: 24, fontWeight: "600" } as TextStyle,
+  header: { ...BASE, fontSize: 28, fontWeight: "500" } as TextStyle,
+
+  /**
+   * Small headers.
+   */
+  subheader: { ...BASE, fontSize: 16, lineHeight: 27 } as TextStyle,
 
   /**
    * Field labels that appear on forms above the inputs.

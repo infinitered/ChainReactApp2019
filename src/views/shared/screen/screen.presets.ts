@@ -10,7 +10,11 @@ const SHAPE: ScrollViewStyle = { backgroundColor: color.background, flex: 1 }
 /**
  * Governs the default child layout.
  */
-const CONTENTS: ViewStyle = { justifyContent: "flex-start", alignItems: "flex-start" }
+const CONTENTS: ViewStyle = {
+  justifyContent: "flex-start",
+  alignItems: "flex-start",
+  flexDirection: "column",
+}
 
 /**
  * Glues the shape & child layout together since there's no restrictions on view style.

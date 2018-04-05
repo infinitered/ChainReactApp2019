@@ -3,13 +3,13 @@ import { Text } from "../../shared/text"
 import { NavigationScreenProps } from "react-navigation"
 import { Screen } from "../../shared/screen"
 
-export interface SecondExampleScreenProps extends NavigationScreenProps<{}> {}
+export interface InfoScreenProps extends NavigationScreenProps<{}> {}
 
-export class SecondExampleScreen extends React.Component<SecondExampleScreenProps, {}> {
+export class InfoScreen extends React.Component<InfoScreenProps, {}> {
   render() {
     return (
       <Screen preset="fixedCenter">
-        <Text preset="header" tx="secondExampleScreen.header" />
+        <Text preset="header" tx="infoScreen.header" />
       </Screen>
     )
   }

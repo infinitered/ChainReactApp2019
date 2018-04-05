@@ -1,9 +1,9 @@
 import { StackNavigator } from "react-navigation"
-import { ExampleNavigator } from "./example-navigator"
+import { MainNavigator } from "./main-navigator"
 
 export const RootNavigator = StackNavigator(
   {
-    exampleStack: { screen: ExampleNavigator },
+    mainStack: { screen: MainNavigator },
   },
   {
     headerMode: "none",
