@@ -16,4 +16,9 @@ export interface ScreenProps {
    * One of the different types of presets.
    */
   preset?: ScreenPresets
+
+  /**
+   * An optional background image
+   */
+  backgroundImage?: string
 }

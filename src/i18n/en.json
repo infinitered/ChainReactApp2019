@@ -8,10 +8,13 @@
     "invalidEmail": "Invalid email address."
   },
   "welcomeScreen": {
-    "header": "First Screen",
-    "nextScreenButton": "Next Screen"
+    "header1": "Welcome to",
+    "header2": "Chain React 2018",
+    "subtitle":
+      "We've rebuilt our app to make it easier to view the schedule, explore the city, and access need-to-know details!",
+    "nextScreenButton": "I'm Ready!"
   },
-  "secondExampleScreen": {
-    "header": "Second Screen"
+  "infoScreen": {
+    "header": "Info"
   }
 }

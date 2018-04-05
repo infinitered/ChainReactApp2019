@@ -1,5 +1,5 @@
 import * as React from "react"
-import { ScrollView, View, ViewStyle } from "react-native"
+import { ScrollView, View, ViewStyle, Image } from "react-native"
 import { ScreenProps } from "./screen.props"
 import { presets, isNonScrolling } from "./screen.presets"
 
@@ -12,7 +12,19 @@ function ScreenWithoutScrolling(props: ScreenProps) {
   const preset = presets[props.preset] || presets["fixed"]
   const style = { ...preset.nonScroll, ...props.style }
 
-  return <View style={style}>{props.children}</View>
+  if (props.backgroundImage) {
+    return (
+      <View style={style}>
+        <Image
+          source={props.backgroundImage}
+          style={{ position: "absolute", resizeMode: "cover" }}
+        />
+        {props.children}
+      </View>
+    )
+  } else {
+    return <View style={style}>{props.children}</View>
+  }
 }
 
 /**
