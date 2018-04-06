@@ -12,12 +12,12 @@ export const MainNavigator = StackNavigator(
         {
           schedule: StackNavigator(
             {
-              schedule: ScheduleScreen,
-              talkDetails: TalkDetailsScreen,
+              scheduleScreen: { screen: ScheduleScreen },
+              talkDetails: { screen: TalkDetailsScreen },
             },
             {
               headerMode: "none",
-              initialRouteName: "schedule",
+              initialRouteName: "scheduleScreen",
             },
           ),
           venue: { screen: VenueScreen },

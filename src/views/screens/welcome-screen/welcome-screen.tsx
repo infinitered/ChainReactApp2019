@@ -25,7 +25,7 @@ const SUBHEADER: TextStyle = {
 }
 
 export class WelcomeScreen extends React.Component<WelcomeScreenProps, {}> {
-  nextScreen = () => this.props.navigation.navigate("info")
+  nextScreen = () => this.props.navigation.navigate("tabs")
 
   render() {
     return (
