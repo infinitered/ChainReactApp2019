@@ -28,5 +28,8 @@
   "infoScreen": {
     "header": "Info",
     "presentedBy": "PRESENTED BY"
+  },
+  "talkDetailsScreen": {
+    "title": "Talk Details"
   }
 }
