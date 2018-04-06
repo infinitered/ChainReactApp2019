@@ -15,6 +15,7 @@
     "nextScreenButton": "I'm Ready!"
   },
   "infoScreen": {
-    "header": "Info"
+    "header": "Info",
+    "presentedBy": "PRESENTED BY"
   }
 }

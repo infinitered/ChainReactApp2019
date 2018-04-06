@@ -17,6 +17,9 @@ storiesOf("Text")
         <Text style={{ paddingTop: 10 }}>The quick brown fox jumped over the slow lazy dog.</Text>
         <Text>$123,456,789.00</Text>
       </UseCase>
+      <UseCase text="label" usage="Used for label text.">
+        <Text preset="label">Label, for things.</Text>
+      </UseCase>
       <UseCase text="bold" usage="Used for bolded body text.">
         <Text preset="bold">Osnap! I'm puffy.</Text>
       </UseCase>
