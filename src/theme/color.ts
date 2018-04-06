@@ -48,4 +48,5 @@ export const color = {
    * Error messages and icons.
    */
   error: palette.angry,
+  tabbar: palette.ebony,
 }
