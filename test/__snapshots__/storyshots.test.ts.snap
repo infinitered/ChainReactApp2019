@@ -133,12 +133,12 @@ exports[`Storyshots Button Style Presets 1`] = `
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#FBA928",
+                  "backgroundColor": "#EC174F",
                   "borderRadius": 4,
                   "justifyContent": "center",
                   "opacity": 1,
-                  "paddingHorizontal": 8,
-                  "paddingVertical": 8,
+                  "paddingHorizontal": undefined,
+                  "paddingVertical": undefined,
                 }
               }
               testID={undefined}
@@ -153,7 +153,7 @@ exports[`Storyshots Button Style Presets 1`] = `
                     "color": "#ffffff",
                     "fontFamily": "Avenir",
                     "fontSize": 9,
-                    "paddingHorizontal": 12,
+                    "paddingHorizontal": undefined,
                   }
                 }
               >
@@ -269,12 +269,12 @@ exports[`Storyshots Button Style Presets 1`] = `
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#FBA928",
+                  "backgroundColor": "#EC174F",
                   "borderRadius": 4,
                   "justifyContent": "center",
                   "opacity": 1,
-                  "paddingHorizontal": 8,
-                  "paddingVertical": 8,
+                  "paddingHorizontal": undefined,
+                  "paddingVertical": undefined,
                 }
               }
               testID={undefined}
@@ -289,7 +289,7 @@ exports[`Storyshots Button Style Presets 1`] = `
                     "color": "#ffffff",
                     "fontFamily": "Avenir",
                     "fontSize": 9,
-                    "paddingHorizontal": 12,
+                    "paddingHorizontal": undefined,
                   }
                 }
               >
@@ -439,7 +439,7 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
                   "alignSelf": "flex-start",
                   "flexDirection": "row",
                   "opacity": 1,
-                  "paddingVertical": 4,
+                  "paddingVertical": undefined,
                 }
               }
               testID={undefined}
@@ -449,7 +449,7 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
                 style={
                   Object {
                     "alignItems": "center",
-                    "borderColor": "#EB9918",
+                    "borderColor": "#161637",
                     "borderRadius": 1,
                     "borderWidth": 1,
                     "height": 16,
@@ -469,7 +469,7 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
                     "color": "#1d1d1d",
                     "fontFamily": "Avenir",
                     "fontSize": 15,
-                    "paddingLeft": 8,
+                    "paddingLeft": undefined,
                   }
                 }
               >
@@ -587,7 +587,7 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
                   "alignSelf": "flex-start",
                   "flexDirection": "row",
                   "opacity": 1,
-                  "paddingVertical": 4,
+                  "paddingVertical": undefined,
                 }
               }
               testID={undefined}
@@ -597,7 +597,7 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
                 style={
                   Object {
                     "alignItems": "center",
-                    "borderColor": "#EB9918",
+                    "borderColor": "#161637",
                     "borderRadius": 1,
                     "borderWidth": 1,
                     "height": 16,
@@ -610,7 +610,7 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
                 <View
                   style={
                     Object {
-                      "backgroundColor": "#FBA928",
+                      "backgroundColor": "#EC174F",
                       "height": 12,
                       "width": 12,
                     }
@@ -627,7 +627,7 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
                     "color": "#1d1d1d",
                     "fontFamily": "Avenir",
                     "fontSize": 15,
-                    "paddingLeft": 8,
+                    "paddingLeft": undefined,
                   }
                 }
               >
@@ -745,7 +745,7 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
                   "alignSelf": "flex-start",
                   "flexDirection": "row",
                   "opacity": 1,
-                  "paddingVertical": 4,
+                  "paddingVertical": undefined,
                 }
               }
               testID={undefined}
@@ -755,7 +755,7 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
                 style={
                   Object {
                     "alignItems": "center",
-                    "borderColor": "#EB9918",
+                    "borderColor": "#161637",
                     "borderRadius": 1,
                     "borderWidth": 1,
                     "height": 16,
@@ -775,7 +775,7 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
                     "color": "#1d1d1d",
                     "fontFamily": "Avenir",
                     "fontSize": 15,
-                    "paddingLeft": 8,
+                    "paddingLeft": undefined,
                   }
                 }
               >
@@ -926,7 +926,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                     "alignSelf": "flex-start",
                     "flexDirection": "row",
                     "opacity": 1,
-                    "paddingVertical": 4,
+                    "paddingVertical": undefined,
                   }
                 }
                 testID={undefined}
@@ -936,7 +936,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                   style={
                     Object {
                       "alignItems": "center",
-                      "borderColor": "#EB9918",
+                      "borderColor": "#161637",
                       "borderRadius": 1,
                       "borderWidth": 1,
                       "height": 16,
@@ -956,7 +956,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                       "color": "#1d1d1d",
                       "fontFamily": "Avenir",
                       "fontSize": 15,
-                      "paddingLeft": 8,
+                      "paddingLeft": undefined,
                     }
                   }
                 >
@@ -1089,7 +1089,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                   style={
                     Object {
                       "alignItems": "center",
-                      "borderColor": "#EB9918",
+                      "borderColor": "#161637",
                       "borderRadius": 1,
                       "borderWidth": 1,
                       "height": 16,
@@ -1109,7 +1109,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                       "color": "#1d1d1d",
                       "fontFamily": "Avenir",
                       "fontSize": 15,
-                      "paddingLeft": 8,
+                      "paddingLeft": undefined,
                     }
                   }
                 >
@@ -1229,7 +1229,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                     "alignSelf": "flex-start",
                     "flexDirection": "row",
                     "opacity": 1,
-                    "paddingVertical": 4,
+                    "paddingVertical": undefined,
                   }
                 }
                 testID={undefined}
@@ -1259,7 +1259,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                       "color": "#1d1d1d",
                       "fontFamily": "Avenir",
                       "fontSize": 15,
-                      "paddingLeft": 8,
+                      "paddingLeft": undefined,
                     }
                   }
                 >
@@ -1379,7 +1379,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                     "alignSelf": "flex-start",
                     "flexDirection": "row",
                     "opacity": 1,
-                    "paddingVertical": 4,
+                    "paddingVertical": undefined,
                   }
                 }
                 testID={undefined}
@@ -1389,7 +1389,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                   style={
                     Object {
                       "alignItems": "center",
-                      "borderColor": "#EB9918",
+                      "borderColor": "#161637",
                       "borderRadius": 1,
                       "borderWidth": 1,
                       "height": 16,
@@ -1409,7 +1409,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                       "color": "#1d1d1d",
                       "fontFamily": "Avenir",
                       "fontSize": 15,
-                      "paddingLeft": 8,
+                      "paddingLeft": undefined,
                     }
                   }
                 >
@@ -1542,11 +1542,11 @@ exports[`Storyshots FormRow Assembled 1`] = `
               style={
                 Object {
                   "borderBottomWidth": 0,
-                  "borderColor": "#e6e6e6",
+                  "borderColor": "#C7C4DB",
                   "borderTopLeftRadius": 8,
                   "borderTopRightRadius": 8,
                   "borderWidth": 1,
-                  "padding": 8,
+                  "padding": undefined,
                 }
               }
             >
@@ -1569,9 +1569,9 @@ exports[`Storyshots FormRow Assembled 1`] = `
               style={
                 Object {
                   "borderBottomWidth": 0,
-                  "borderColor": "#e6e6e6",
+                  "borderColor": "#C7C4DB",
                   "borderWidth": 1,
-                  "padding": 8,
+                  "padding": undefined,
                 }
               }
             >
@@ -1594,9 +1594,9 @@ exports[`Storyshots FormRow Assembled 1`] = `
               style={
                 Object {
                   "borderBottomWidth": 0,
-                  "borderColor": "#e6e6e6",
+                  "borderColor": "#C7C4DB",
                   "borderWidth": 1,
-                  "padding": 8,
+                  "padding": undefined,
                 }
               }
             >
@@ -1620,9 +1620,9 @@ exports[`Storyshots FormRow Assembled 1`] = `
                 Object {
                   "borderBottomLeftRadius": 8,
                   "borderBottomRightRadius": 8,
-                  "borderColor": "#e6e6e6",
+                  "borderColor": "#C7C4DB",
                   "borderWidth": 1,
-                  "padding": 8,
+                  "padding": undefined,
                 }
               }
             >
@@ -1735,7 +1735,7 @@ exports[`Storyshots FormRow Assembled 1`] = `
                 Object {
                   "borderColor": "rgba(0, 0, 0, 0)",
                   "borderWidth": 1,
-                  "padding": 8,
+                  "padding": undefined,
                 }
               }
             >
@@ -1757,10 +1757,10 @@ exports[`Storyshots FormRow Assembled 1`] = `
             <View
               style={
                 Object {
-                  "borderColor": "#e6e6e6",
+                  "borderColor": "#C7C4DB",
                   "borderRadius": 8,
                   "borderWidth": 1,
-                  "padding": 8,
+                  "padding": undefined,
                 }
               }
             >
@@ -1783,10 +1783,10 @@ exports[`Storyshots FormRow Assembled 1`] = `
               style={
                 Object {
                   "backgroundColor": "#ffe",
-                  "borderColor": "#e6e6e6",
+                  "borderColor": "#C7C4DB",
                   "borderWidth": 1,
                   "marginTop": 10,
-                  "padding": 8,
+                  "padding": undefined,
                 }
               }
             >
@@ -1930,11 +1930,11 @@ exports[`Storyshots FormRow Presets 1`] = `
               style={
                 Object {
                   "borderBottomWidth": 0,
-                  "borderColor": "#e6e6e6",
+                  "borderColor": "#C7C4DB",
                   "borderTopLeftRadius": 8,
                   "borderTopRightRadius": 8,
                   "borderWidth": 1,
-                  "padding": 8,
+                  "padding": undefined,
                 }
               }
             >
@@ -2060,9 +2060,9 @@ exports[`Storyshots FormRow Presets 1`] = `
               style={
                 Object {
                   "borderBottomWidth": 0,
-                  "borderColor": "#e6e6e6",
+                  "borderColor": "#C7C4DB",
                   "borderWidth": 1,
-                  "padding": 8,
+                  "padding": undefined,
                 }
               }
             >
@@ -2175,9 +2175,9 @@ exports[`Storyshots FormRow Presets 1`] = `
                 Object {
                   "borderBottomLeftRadius": 8,
                   "borderBottomRightRadius": 8,
-                  "borderColor": "#e6e6e6",
+                  "borderColor": "#C7C4DB",
                   "borderWidth": 1,
-                  "padding": 8,
+                  "padding": undefined,
                 }
               }
             >
@@ -2302,10 +2302,10 @@ exports[`Storyshots FormRow Presets 1`] = `
             <View
               style={
                 Object {
-                  "borderColor": "#e6e6e6",
+                  "borderColor": "#C7C4DB",
                   "borderRadius": 8,
                   "borderWidth": 1,
-                  "padding": 8,
+                  "padding": undefined,
                 }
               }
             >
@@ -2416,9 +2416,9 @@ exports[`Storyshots FormRow Presets 1`] = `
             <View
               style={
                 Object {
-                  "borderColor": "#e6e6e6",
+                  "borderColor": "#C7C4DB",
                   "borderWidth": 1,
-                  "padding": 8,
+                  "padding": undefined,
                 }
               }
             >
@@ -2531,7 +2531,7 @@ exports[`Storyshots FormRow Presets 1`] = `
                 Object {
                   "borderColor": "rgba(0, 0, 0, 0)",
                   "borderWidth": 1,
-                  "padding": 8,
+                  "padding": undefined,
                 }
               }
             >
@@ -2688,7 +2688,7 @@ exports[`Storyshots Switch Behaviour 1`] = `
               onStartShouldSetResponder={[Function]}
               style={
                 Object {
-                  "backgroundColor": "#e6e6e6",
+                  "backgroundColor": "#C7C4DB",
                   "borderColor": "rgba(0, 0, 0, 0.1)",
                   "borderRadius": 22.5,
                   "borderWidth": 1,
@@ -2832,8 +2832,8 @@ exports[`Storyshots Switch Behaviour 1`] = `
               onStartShouldSetResponder={[Function]}
               style={
                 Object {
-                  "backgroundColor": "#FBA928",
-                  "borderColor": "#FBA928",
+                  "backgroundColor": "#EC174F",
+                  "borderColor": "#EC174F",
                   "borderRadius": 22.5,
                   "borderWidth": 1,
                   "height": 32,
@@ -2976,7 +2976,7 @@ exports[`Storyshots Switch Behaviour 1`] = `
               onStartShouldSetResponder={[Function]}
               style={
                 Object {
-                  "backgroundColor": "#e6e6e6",
+                  "backgroundColor": "#C7C4DB",
                   "borderColor": "rgba(0, 0, 0, 0.1)",
                   "borderRadius": 22.5,
                   "borderWidth": 1,
@@ -4053,8 +4053,8 @@ exports[`Storyshots Text Style Presets 1`] = `
                 Object {
                   "color": "#1d1d1d",
                   "fontFamily": "Avenir",
-                  "fontSize": 24,
-                  "fontWeight": "600",
+                  "fontSize": 28,
+                  "fontWeight": "500",
                 }
               }
             >
@@ -4184,7 +4184,7 @@ exports[`Storyshots TextField Labelling 1`] = `
             <View
               style={
                 Object {
-                  "paddingVertical": 12,
+                  "paddingVertical": undefined,
                 }
               }
             >
@@ -4312,7 +4312,7 @@ exports[`Storyshots TextField Labelling 1`] = `
             <View
               style={
                 Object {
-                  "paddingVertical": 12,
+                  "paddingVertical": undefined,
                 }
               }
             >
@@ -4474,7 +4474,7 @@ exports[`Storyshots TextField Style Overrides 1`] = `
                 Object {
                   "paddingHorizontal": 40,
                   "paddingTop": 0,
-                  "paddingVertical": 12,
+                  "paddingVertical": undefined,
                 }
               }
             >
@@ -4514,7 +4514,7 @@ exports[`Storyshots TextField Style Overrides 1`] = `
               style={
                 Object {
                   "paddingBottom": 0,
-                  "paddingVertical": 12,
+                  "paddingVertical": undefined,
                 }
               }
             >
@@ -4642,7 +4642,7 @@ exports[`Storyshots TextField Style Overrides 1`] = `
             <View
               style={
                 Object {
-                  "paddingVertical": 12,
+                  "paddingVertical": undefined,
                 }
               }
             >
