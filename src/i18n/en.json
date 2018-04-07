@@ -7,6 +7,11 @@
   "errors": {
     "invalidEmail": "Invalid email address."
   },
+  "tabbar": {
+    "schedule": "Schedule",
+    "venue": "Venue",
+    "info": "Info"
+  },
   "welcomeScreen": {
     "header1": "Welcome to",
     "header2": "Chain React 2018",
@@ -14,8 +19,17 @@
       "We've rebuilt our app to make it easier to view the schedule, explore the city, and access need-to-know details!",
     "nextScreenButton": "I'm Ready!"
   },
+  "scheduleScreen": {
+    "title": "Schedule"
+  },
+  "venueScreen": {
+    "title": "Venue"
+  },
   "infoScreen": {
     "header": "Info",
     "presentedBy": "PRESENTED BY"
+  },
+  "talkDetailsScreen": {
+    "title": "Talk Details"
   }
 }
