@@ -28,14 +28,57 @@ export const presets = {
   bold: { ...BASE, fontWeight: "600" } as TextStyle,
 
   /**
+   * Large Titles
+   */
+  title: {
+    ...BASE,
+    fontSize: 36,
+    fontWeight: "500",
+    lineHeight: 45,
+    color: color.palette.white,
+  } as TextStyle,
+
+  /**
    * Large headers.
    */
-  header: { ...BASE, fontSize: 28, fontWeight: "500" } as TextStyle,
+  header: {
+    ...BASE,
+    fontSize: 28,
+    fontWeight: "500",
+    lineHeight: 35,
+    color: color.palette.white,
+  } as TextStyle,
+
+  /**
+   * Body text.
+   */
+  body: { ...BASE, fontSize: 18, lineHeight: 32, color: color.palette.offWhite } as TextStyle,
+
+  /**
+   * Small headers.
+   */
+  input: {
+    ...BASE,
+    fontStyle: "italic",
+    fontSize: 15,
+    lineHeight: 18,
+    color: color.palette.lightGrey,
+  } as TextStyle,
 
   /**
    * Small headers.
    */
   subheader: { ...BASE, fontSize: 16, lineHeight: 27 } as TextStyle,
+
+  /**
+   * Field labels that appear on forms above the inputs.
+   */
+  sectionHeader: {
+    ...BASE,
+    fontSize: 14,
+    lineHeight: 17,
+    color: color.palette.offWhite,
+  } as TextStyle,
 
   /**
    * Field labels that appear on forms above the inputs.

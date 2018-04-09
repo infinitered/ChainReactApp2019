@@ -10,6 +10,7 @@ const BASE_VIEW: ViewStyle = {
   width: 379,
   justifyContent: "center",
   alignItems: "center",
+  marginTop: spacing.ginormous + spacing.large,
 }
 
 /**

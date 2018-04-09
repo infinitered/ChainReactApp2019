@@ -10,7 +10,7 @@ const BASE_VIEW: ViewStyle = {
   alignItems: "center",
   alignSelf: "flex-end",
   width: 375,
-  height: 117,
+  height: 86,
   paddingTop: 16,
   paddingHorizontal: 20,
 }

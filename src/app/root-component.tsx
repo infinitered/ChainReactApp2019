@@ -1,5 +1,6 @@
 import "../i18n"
 import * as React from "react"
+import { SafeAreaView, StatusBar, Platform, PlatformOSType } from "react-native"
 import { setupRootStore } from "./setup-root-store"
 import { StatefulNavigator } from "../navigation"
 import { RootStore } from "../models/root-store"
@@ -7,6 +8,7 @@ import { Provider } from "mobx-react"
 import { BackButtonHandler } from "../navigation/back-button-handler"
 import { contains } from "ramda"
 import { DEFAULT_NAVIGATION_CONFIG } from "../navigation/navigation-config"
+import { palette } from "../theme/palette"
 
 interface RootComponentState {
   rootStore?: RootStore
@@ -16,6 +18,10 @@ interface RootComponentState {
  * This is the root component of our app.
  */
 export class RootComponent extends React.Component<{}, RootComponentState> {
+  componentWillMount() {
+    if (Platform.OS === "android") StatusBar.setBackgroundColor(palette.portGore)
+    StatusBar.setBarStyle("light-content")
+  }
   /**
    * When the component is mounted. This happens asynchronously and simply
    * re-renders when we're good to go.
@@ -58,11 +64,17 @@ export class RootComponent extends React.Component<{}, RootComponentState> {
     // --- am: end list of stores ---
 
     return (
-      <Provider rootStore={rootStore} navigationStore={rootStore.navigationStore} {...otherStores}>
-        <BackButtonHandler canExit={this.canExit}>
-          <StatefulNavigator />
-        </BackButtonHandler>
-      </Provider>
+      <SafeAreaView style={{ flex: 1, backgroundColor: palette.ebony }}>
+        <Provider
+          rootStore={rootStore}
+          navigationStore={rootStore.navigationStore}
+          {...otherStores}
+        >
+          <BackButtonHandler canExit={this.canExit}>
+            <StatefulNavigator />
+          </BackButtonHandler>
+        </Provider>
+      </SafeAreaView>
     )
   }
 }
