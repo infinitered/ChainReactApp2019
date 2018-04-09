@@ -8,7 +8,9 @@ export const RootNavigator = StackNavigator(
     mainStack: { screen: MainNavigator },
   },
   {
+    initialRouteName: "welcome",
     headerMode: "none",
     navigationOptions: { gesturesEnabled: false },
+    cardStyle: { shadowColor: "transparent" },
   },
 )

@@ -3,5 +3,7 @@ export const spacing = {
   small: 10,
   medium: 14,
   large: 20,
-  huge: 64,
+  extraLarge: 43,
+  huge: 80,
+  ginormous: 100,
 }

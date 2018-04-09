@@ -39,5 +39,6 @@ export const MainNavigator = StackNavigator(
     navigationOptions: {
       gesturesEnabled: false,
     },
+    cardStyle: { shadowColor: "transparent" },
   },
 )

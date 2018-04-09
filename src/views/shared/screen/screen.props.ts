@@ -21,4 +21,9 @@ export interface ScreenProps {
    * An optional background image
    */
   backgroundImage?: string
+
+  /**
+   * An optional background color
+   */
+  backgroundColor?: string
 }

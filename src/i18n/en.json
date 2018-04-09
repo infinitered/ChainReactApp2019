@@ -27,6 +27,23 @@
   },
   "infoScreen": {
     "header": "Info",
+    "wifi": {
+      "title": "WIFI NETWORK",
+      "description": "Git clone, Slack, and surf cat videos to your heart's content!",
+      "networkLabel": "WIFI NETWORK",
+      "networkName": "SponsorNameWiFi",
+      "passwordLabel": "WIFI PASSWORD",
+      "password": "SponsorNamePassword"
+    },
+    "sponsors": {
+      "title": "THANKS TO THIS YEAR'S SPONSORS",
+      "description": "Support from our amazing sponsors make Chain React possible!",
+      "platinum": "PLATINUM SPONSORS",
+      "gold": "GOLD SPONSORS",
+      "silver": "SILVER SPONSORS",
+      "bronze": "BRONZE SPONSORS",
+      "additional": "ADDITIONAL SPONSORS"
+    },
     "presentedBy": "PRESENTED BY"
   },
   "talkDetailsScreen": {
