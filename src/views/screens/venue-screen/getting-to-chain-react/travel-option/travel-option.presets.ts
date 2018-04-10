@@ -1,5 +1,4 @@
 export const presets = {
-  plane: require("./Plane.png"),
   rideShare: require("./Car.png"),
   massTransit: require("./Lightrail.png"),
 }

@@ -34,7 +34,6 @@ export class GettingToChainReact extends React.Component<{}, {}> {
         />
         <Text preset="body" tx="venueScreen.gettingToChainReact.description1" style={DESCRIPTION} />
         <Text preset="body" tx="venueScreen.gettingToChainReact.description2" style={DESCRIPTION} />
-        <TravelOption preset="plane" />
         <TravelOption preset="rideShare" />
         <TravelOption preset="massTransit" />
       </View>
