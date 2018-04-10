@@ -1,5 +1,5 @@
 import * as React from "react"
-import { TextStyle, ViewStyle } from "react-native"
+import { TextStyle } from "react-native"
 import { Text } from "../../shared/text"
 import { NavigationScreenProps } from "react-navigation"
 import { Screen } from "../../shared/screen"
@@ -11,10 +11,7 @@ import { Sponsors } from "./sponsors"
 
 export interface InfoScreenProps extends NavigationScreenProps<{}> {}
 
-const ROOT: ViewStyle = {
-  backgroundColor: palette.portGore,
-}
-const TEXT: TextStyle = {
+const TITLE: TextStyle = {
   marginTop: spacing.extraLarge,
   marginLeft: spacing.large,
 }
@@ -22,8 +19,8 @@ const TEXT: TextStyle = {
 export class InfoScreen extends React.Component<InfoScreenProps, {}> {
   render() {
     return (
-      <Screen preset="scrollStack" style={ROOT} backgroundColor={palette.portGore}>
-        <Text preset="title" tx="infoScreen.header" style={TEXT} />
+      <Screen preset="scrollStack" backgroundColor={palette.portGore}>
+        <Text preset="title" tx="infoScreen.title" style={TITLE} />
         <WiFi />
         <Sponsors />
         <PresentedBy />

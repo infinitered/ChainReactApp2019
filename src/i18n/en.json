@@ -23,10 +23,27 @@
     "title": "Schedule"
   },
   "venueScreen": {
-    "title": "Venue"
+    "title": "Explore",
+    "gerdingTheater": {
+      "title": "PORTLAND'S\nGERDING THEATER",
+      "description":
+        "The spacious Gerding Theater, located in Portland's bustling downtown city-center, is the ideal location for a single-track conference like Chain React."
+    },
+    "gettingToChainReact": {
+      "title1": "PORTLAND GUIDE",
+      "title2": "EXPLORE THE CITY",
+      "subtitle": "GETTING TO CHAIN REACT",
+      "description1":
+        "The closest airport is Portland Intertation Airport (PDX), a one-hour flight from San Francisco. From New York, PDX is more like a six or seven-hour flight, depending on connections. Think of all that email you can catch up on.",
+      "description2":
+        "Upon arriving at PDX, take a taxi, Uber, or Lyft to your hotel. It's an easy 10-minute ride to The Benson Hotel. Once you're at your hotel, grabbing a Lyft or Uber is a breeze, so no need to rent a car.",
+      "plane": "PDX AIRPORT (20 MINS)",
+      "rideShare": "UBER & LYFT (8 MINS)",
+      "massTransit": "MAX/LIGHTRAIL (4 MINS)"
+    }
   },
   "infoScreen": {
-    "header": "Info",
+    "title": "Info",
     "wifi": {
       "title": "WIFI NETWORK",
       "description": "Git clone, Slack, and surf cat videos to your heart's content!",
