@@ -1,16 +1,27 @@
 import * as React from "react"
+import { TextStyle } from "react-native"
 import { Text } from "../../shared/text"
 import { NavigationScreenProps } from "react-navigation"
 import { Screen } from "../../shared/screen"
 import { palette } from "../../../theme/palette"
+import { spacing } from "../../../theme/spacing"
+import { GerdingTheater } from "./gerding-theater"
+import { GettingToChainReact } from "./getting-to-chain-react"
 
 export interface VenueScreenProps extends NavigationScreenProps<{}> {}
+
+const TITLE: TextStyle = {
+  marginTop: spacing.extraLarge,
+  marginLeft: spacing.large,
+}
 
 export class VenueScreen extends React.Component<VenueScreenProps, {}> {
   render() {
     return (
-      <Screen preset="fixedCenter" backgroundColor={palette.portGore}>
-        <Text preset="title" tx="venueScreen.title" />
+      <Screen preset="scroll" backgroundColor={palette.portGore}>
+        <Text preset="title" tx="venueScreen.title" style={TITLE} />
+        <GerdingTheater />
+        <GettingToChainReact />
       </Screen>
     )
   }
