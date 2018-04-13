@@ -8,8 +8,8 @@ import { SocialButton } from "./social-button"
 
 const BACKGROUND: ImageStyle = {
   position: "absolute",
-  resizeMode: "cover",
   bottom: 0,
+  width: "100%",
 }
 const LOGO: ImageStyle = {
   width: 110,
