@@ -39,6 +39,14 @@
         "Upon arriving at PDX, take a taxi, Uber, or Lyft downtown. It's an easy 20-minute ride to The Benson Hotel where the conference kicks off. Once you’re at your hotel, grabbing a Lyft or Uber is a breeze, so there’s no need to rent a car. You’ll be exploring all the city has to offer in no time.",
       "rideShare": "UBER & LYFT (30 MINS)",
       "massTransit": "MAX/LIGHTRAIL (55 MINS)"
+    },
+    "nearbyAttractions": {
+      "navigation": {
+        "food": "FOOD",
+        "drink": "DRINK",
+        "coffee": "COFFEE",
+        "sights": "SIGHTS"
+      }
     }
   },
   "infoScreen": {
