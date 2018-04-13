@@ -7,7 +7,7 @@ import { spacing } from "../../../../theme/spacing"
  */
 const BASE_VIEW: ViewStyle = {
   height: 262,
-  width: 379,
+  width: "100%",
   justifyContent: "center",
   alignItems: "center",
   marginTop: spacing.ginormous + spacing.large,

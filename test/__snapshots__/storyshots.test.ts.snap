@@ -2495,7 +2495,7 @@ exports[`Storyshots Footer Presets 1`] = `
                   "justifyContent": "flex-start",
                   "paddingHorizontal": 20,
                   "paddingTop": 16,
-                  "width": 375,
+                  "width": "100%",
                 }
               }
             />
@@ -2598,7 +2598,7 @@ exports[`Storyshots Footer Presets 1`] = `
                   "justifyContent": "flex-start",
                   "paddingHorizontal": 20,
                   "paddingTop": 16,
-                  "width": 375,
+                  "width": "100%",
                 }
               }
             >
@@ -4297,7 +4297,7 @@ exports[`Storyshots PresentedBy Presets 1`] = `
                   "height": 262,
                   "justifyContent": "center",
                   "marginTop": 120,
-                  "width": 379,
+                  "width": "100%",
                 }
               }
             >
@@ -4307,7 +4307,7 @@ exports[`Storyshots PresentedBy Presets 1`] = `
                   Object {
                     "bottom": 0,
                     "position": "absolute",
-                    "resizeMode": "cover",
+                    "width": "100%",
                   }
                 }
               />

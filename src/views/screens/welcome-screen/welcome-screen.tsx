@@ -29,7 +29,12 @@ export class WelcomeScreen extends React.Component<WelcomeScreenProps, {}> {
 
   render() {
     return (
-      <Screen preset="fixed" style={ROOT} backgroundImage={backgroundImage}>
+      <Screen
+        preset="fixed"
+        style={ROOT}
+        backgroundImage={backgroundImage}
+        backgroundColor={palette.portGore}
+      >
         <Text preset="header" tx="welcomeScreen.header1" style={HEADER1} />
         <Text preset="header" tx="welcomeScreen.header2" style={HEADER2} />
         <Text preset="subheader" tx="welcomeScreen.subtitle" style={SUBHEADER} />

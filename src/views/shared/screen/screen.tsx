@@ -16,10 +16,7 @@ function ScreenWithoutScrolling(props: ScreenProps) {
   if (props.backgroundImage) {
     return (
       <View style={[style, backgroundStyle]}>
-        <Image
-          source={props.backgroundImage}
-          style={{ position: "absolute", resizeMode: "cover" }}
-        />
+        <Image source={props.backgroundImage} style={{ position: "absolute", width: "100%" }} />
         {props.children}
       </View>
     )
