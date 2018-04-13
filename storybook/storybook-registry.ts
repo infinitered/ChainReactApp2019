@@ -12,5 +12,8 @@ require("../src/views/screens/info-screen/presented-by/social-button/social-butt
 require("../src/views/screens/venue-screen/gerding-theater/gerding-theater.story")
 require("../src/views/screens/venue-screen/getting-to-chain-react/getting-to-chain-react.story")
 require("../src/views/screens/venue-screen/getting-to-chain-react/travel-option/travel-option.story")
+require("../src/views/screens/venue-screen/nearby-attractions/attractions-list/attraction/attraction.story")
+require("../src/views/screens/venue-screen/nearby-attractions/attractions-list/attraction/rating/rating.story")
+require("../src/views/screens/venue-screen/nearby-attractions/attractions-list/attractions-list.story")
 require("../src/views/shared/tab-bar/tab-bar.story")
 require("../src/views/shared/footer/footer.story")

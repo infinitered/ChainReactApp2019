@@ -1,5 +1,952 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Attraction Props 1`] = `
+<View
+  enabled={true}
+  keyboardVerticalOffset={50}
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+        "flex": 1,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <RCTScrollView>
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#eee",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#e6e6e6",
+                "borderBottomWidth": 1,
+                "paddingBottom": 10,
+                "paddingHorizontal": 10,
+                "paddingTop": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderTopColor": "#e6e6e6",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 10,
+                    "paddingBottom": 2,
+                    "paddingHorizontal": 4,
+                  }
+                }
+              >
+                Use Case
+              </Text>
+            </View>
+            <View
+              style={Object {}}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#3d3d3d",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                Simple attraction
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgba(0,0,0,1)",
+                "padding": 10,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "paddingVertical": 25,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Avenir",
+                      "fontSize": 14,
+                      "lineHeight": 17,
+                    }
+                  }
+                >
+                  COURIER COFFEE
+                </Text>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "height": 11,
+                      "marginLeft": "auto",
+                      "width": 85,
+                    }
+                  }
+                >
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "height": 11,
+                        "marginLeft": 6,
+                        "width": 11,
+                      }
+                    }
+                  />
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "height": 11,
+                        "marginLeft": 6,
+                        "width": 11,
+                      }
+                    }
+                  />
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "height": 11,
+                        "marginLeft": 6,
+                        "width": 11,
+                      }
+                    }
+                  />
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "height": 11,
+                        "marginLeft": 6,
+                        "width": 11,
+                      }
+                    }
+                  />
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "height": 11,
+                        "marginLeft": 6,
+                        "width": 11,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#C7C4DB",
+                    "fontFamily": "Avenir",
+                    "fontSize": 13,
+                  }
+                }
+              >
+                923 SW Oak St,
+Portland, OR 97205
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;
+
+exports[`Storyshots AttractionsList Props 1`] = `
+<View
+  enabled={true}
+  keyboardVerticalOffset={50}
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+        "flex": 1,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <RCTScrollView>
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#eee",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#e6e6e6",
+                "borderBottomWidth": 1,
+                "paddingBottom": 10,
+                "paddingHorizontal": 10,
+                "paddingTop": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderTopColor": "#e6e6e6",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 10,
+                    "paddingBottom": 2,
+                    "paddingHorizontal": 4,
+                  }
+                }
+              >
+                Use Case
+              </Text>
+            </View>
+            <View
+              style={Object {}}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#3d3d3d",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                default
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgba(0,0,0,1)",
+                "padding": 10,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  }
+                }
+              >
+                <View
+                  accessibilityComponentType={undefined}
+                  accessibilityLabel={undefined}
+                  accessibilityTraits={undefined}
+                  accessible={true}
+                  collapsable={undefined}
+                  hasTVPreferredFocus={undefined}
+                  hitSlop={undefined}
+                  isTVSelectable={true}
+                  nativeID={undefined}
+                  onLayout={undefined}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                      "paddingRight": 43,
+                      "paddingVertical": 10,
+                    }
+                  }
+                  testID={undefined}
+                  tvParallaxProperties={undefined}
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#56E39F",
+                        "fontFamily": "Avenir",
+                        "fontSize": 11,
+                      }
+                    }
+                  >
+                    venueScreen.nearbyAttractions.navigation.food.test
+                  </Text>
+                </View>
+                <View
+                  accessibilityComponentType={undefined}
+                  accessibilityLabel={undefined}
+                  accessibilityTraits={undefined}
+                  accessible={true}
+                  collapsable={undefined}
+                  hasTVPreferredFocus={undefined}
+                  hitSlop={undefined}
+                  isTVSelectable={true}
+                  nativeID={undefined}
+                  onLayout={undefined}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                      "paddingRight": 43,
+                      "paddingVertical": 10,
+                    }
+                  }
+                  testID={undefined}
+                  tvParallaxProperties={undefined}
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#C7C4DB",
+                        "fontFamily": "Avenir",
+                        "fontSize": 11,
+                      }
+                    }
+                  >
+                    venueScreen.nearbyAttractions.navigation.drink.test
+                  </Text>
+                </View>
+                <View
+                  accessibilityComponentType={undefined}
+                  accessibilityLabel={undefined}
+                  accessibilityTraits={undefined}
+                  accessible={true}
+                  collapsable={undefined}
+                  hasTVPreferredFocus={undefined}
+                  hitSlop={undefined}
+                  isTVSelectable={true}
+                  nativeID={undefined}
+                  onLayout={undefined}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                      "paddingRight": 43,
+                      "paddingVertical": 10,
+                    }
+                  }
+                  testID={undefined}
+                  tvParallaxProperties={undefined}
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#C7C4DB",
+                        "fontFamily": "Avenir",
+                        "fontSize": 11,
+                      }
+                    }
+                  >
+                    venueScreen.nearbyAttractions.navigation.coffee.test
+                  </Text>
+                </View>
+                <View
+                  accessibilityComponentType={undefined}
+                  accessibilityLabel={undefined}
+                  accessibilityTraits={undefined}
+                  accessible={true}
+                  collapsable={undefined}
+                  hasTVPreferredFocus={undefined}
+                  hitSlop={undefined}
+                  isTVSelectable={true}
+                  nativeID={undefined}
+                  onLayout={undefined}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                      "paddingRight": 43,
+                      "paddingVertical": 10,
+                    }
+                  }
+                  testID={undefined}
+                  tvParallaxProperties={undefined}
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#C7C4DB",
+                        "fontFamily": "Avenir",
+                        "fontSize": 11,
+                      }
+                    }
+                  >
+                    venueScreen.nearbyAttractions.navigation.sights.test
+                  </Text>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "marginTop": 80,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingVertical": 25,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flexDirection": "row",
+                      }
+                    }
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "#ffffff",
+                          "fontFamily": "Avenir",
+                          "fontSize": 14,
+                          "lineHeight": 17,
+                        }
+                      }
+                    >
+                      VOODOO DOUGHNUT
+                    </Text>
+                    <View
+                      style={
+                        Object {
+                          "flexDirection": "row",
+                          "height": 11,
+                          "marginLeft": "auto",
+                          "width": 85,
+                        }
+                      }
+                    >
+                      <Image
+                        source={1}
+                        style={
+                          Object {
+                            "height": 11,
+                            "marginLeft": 6,
+                            "width": 11,
+                          }
+                        }
+                      />
+                      <Image
+                        source={1}
+                        style={
+                          Object {
+                            "height": 11,
+                            "marginLeft": 6,
+                            "width": 11,
+                          }
+                        }
+                      />
+                      <Image
+                        source={1}
+                        style={
+                          Object {
+                            "height": 11,
+                            "marginLeft": 6,
+                            "width": 11,
+                          }
+                        }
+                      />
+                      <Image
+                        source={1}
+                        style={
+                          Object {
+                            "height": 11,
+                            "marginLeft": 6,
+                            "width": 11,
+                          }
+                        }
+                      />
+                      <Image
+                        source={1}
+                        style={
+                          Object {
+                            "height": 11,
+                            "marginLeft": 6,
+                            "width": 11,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#C7C4DB",
+                        "fontFamily": "Avenir",
+                        "fontSize": 13,
+                      }
+                    }
+                  >
+                    22 SW 3rd Ave,
+Portland, OR 97204
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingVertical": 25,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flexDirection": "row",
+                      }
+                    }
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "#ffffff",
+                          "fontFamily": "Avenir",
+                          "fontSize": 14,
+                          "lineHeight": 17,
+                        }
+                      }
+                    >
+                      SALT & STRAW
+                    </Text>
+                    <View
+                      style={
+                        Object {
+                          "flexDirection": "row",
+                          "height": 11,
+                          "marginLeft": "auto",
+                          "width": 85,
+                        }
+                      }
+                    >
+                      <Image
+                        source={1}
+                        style={
+                          Object {
+                            "height": 11,
+                            "marginLeft": 6,
+                            "width": 11,
+                          }
+                        }
+                      />
+                      <Image
+                        source={1}
+                        style={
+                          Object {
+                            "height": 11,
+                            "marginLeft": 6,
+                            "width": 11,
+                          }
+                        }
+                      />
+                      <Image
+                        source={1}
+                        style={
+                          Object {
+                            "height": 11,
+                            "marginLeft": 6,
+                            "width": 11,
+                          }
+                        }
+                      />
+                      <Image
+                        source={1}
+                        style={
+                          Object {
+                            "height": 11,
+                            "marginLeft": 6,
+                            "width": 11,
+                          }
+                        }
+                      />
+                      <Image
+                        source={1}
+                        style={
+                          Object {
+                            "height": 11,
+                            "marginLeft": 6,
+                            "width": 11,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#C7C4DB",
+                        "fontFamily": "Avenir",
+                        "fontSize": 13,
+                      }
+                    }
+                  >
+                    838 NW 23rd Ave,
+Portland, OR 97210
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingVertical": 25,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flexDirection": "row",
+                      }
+                    }
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "#ffffff",
+                          "fontFamily": "Avenir",
+                          "fontSize": 14,
+                          "lineHeight": 17,
+                        }
+                      }
+                    >
+                      TASTY N' ALDER
+                    </Text>
+                    <View
+                      style={
+                        Object {
+                          "flexDirection": "row",
+                          "height": 11,
+                          "marginLeft": "auto",
+                          "width": 85,
+                        }
+                      }
+                    >
+                      <Image
+                        source={1}
+                        style={
+                          Object {
+                            "height": 11,
+                            "marginLeft": 6,
+                            "width": 11,
+                          }
+                        }
+                      />
+                      <Image
+                        source={1}
+                        style={
+                          Object {
+                            "height": 11,
+                            "marginLeft": 6,
+                            "width": 11,
+                          }
+                        }
+                      />
+                      <Image
+                        source={1}
+                        style={
+                          Object {
+                            "height": 11,
+                            "marginLeft": 6,
+                            "width": 11,
+                          }
+                        }
+                      />
+                      <Image
+                        source={1}
+                        style={
+                          Object {
+                            "height": 11,
+                            "marginLeft": 6,
+                            "width": 11,
+                          }
+                        }
+                      />
+                      <Image
+                        source={1}
+                        style={
+                          Object {
+                            "height": 11,
+                            "marginLeft": 6,
+                            "width": 11,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#C7C4DB",
+                        "fontFamily": "Avenir",
+                        "fontSize": 13,
+                      }
+                    }
+                  >
+                    580 SW 12th Ave,
+Portland, OR 97205
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingVertical": 25,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "flexDirection": "row",
+                      }
+                    }
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "#ffffff",
+                          "fontFamily": "Avenir",
+                          "fontSize": 14,
+                          "lineHeight": 17,
+                        }
+                      }
+                    >
+                      LITTLE BIG BURGER
+                    </Text>
+                    <View
+                      style={
+                        Object {
+                          "flexDirection": "row",
+                          "height": 11,
+                          "marginLeft": "auto",
+                          "width": 85,
+                        }
+                      }
+                    >
+                      <Image
+                        source={1}
+                        style={
+                          Object {
+                            "height": 11,
+                            "marginLeft": 6,
+                            "width": 11,
+                          }
+                        }
+                      />
+                      <Image
+                        source={1}
+                        style={
+                          Object {
+                            "height": 11,
+                            "marginLeft": 6,
+                            "width": 11,
+                          }
+                        }
+                      />
+                      <Image
+                        source={1}
+                        style={
+                          Object {
+                            "height": 11,
+                            "marginLeft": 6,
+                            "width": 11,
+                          }
+                        }
+                      />
+                      <Image
+                        source={1}
+                        style={
+                          Object {
+                            "height": 11,
+                            "marginLeft": 6,
+                            "width": 11,
+                          }
+                        }
+                      />
+                      <Image
+                        source={1}
+                        style={
+                          Object {
+                            "height": 11,
+                            "marginLeft": 6,
+                            "width": 11,
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#C7C4DB",
+                        "fontFamily": "Avenir",
+                        "fontSize": 13,
+                      }
+                    }
+                  >
+                    122 NW 10th Ave,
+Portland, OR 97209
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;
+
 exports[`Storyshots Button Style Presets 1`] = `
 <View
   enabled={true}
@@ -3598,6 +4545,854 @@ exports[`Storyshots PresentedBy Presets 1`] = `
                   />
                 </View>
               </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;
+
+exports[`Storyshots Rating Props 1`] = `
+<View
+  enabled={true}
+  keyboardVerticalOffset={50}
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+        "flex": 1,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <RCTScrollView>
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#eee",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#e6e6e6",
+                "borderBottomWidth": 1,
+                "paddingBottom": 10,
+                "paddingHorizontal": 10,
+                "paddingTop": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderTopColor": "#e6e6e6",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 10,
+                    "paddingBottom": 2,
+                    "paddingHorizontal": 4,
+                  }
+                }
+              >
+                Use Case
+              </Text>
+            </View>
+            <View
+              style={Object {}}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#3d3d3d",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                default
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgba(0,0,0,1)",
+                "padding": 10,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "height": 11,
+                  "marginLeft": "auto",
+                  "width": 85,
+                }
+              }
+            >
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#eee",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#e6e6e6",
+                "borderBottomWidth": 1,
+                "paddingBottom": 10,
+                "paddingHorizontal": 10,
+                "paddingTop": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderTopColor": "#e6e6e6",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 10,
+                    "paddingBottom": 2,
+                    "paddingHorizontal": 4,
+                  }
+                }
+              >
+                Use Case
+              </Text>
+            </View>
+            <View
+              style={Object {}}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#3d3d3d",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                1 star
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgba(0,0,0,1)",
+                "padding": 10,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "height": 11,
+                  "marginLeft": "auto",
+                  "width": 85,
+                }
+              }
+            >
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#eee",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#e6e6e6",
+                "borderBottomWidth": 1,
+                "paddingBottom": 10,
+                "paddingHorizontal": 10,
+                "paddingTop": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderTopColor": "#e6e6e6",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 10,
+                    "paddingBottom": 2,
+                    "paddingHorizontal": 4,
+                  }
+                }
+              >
+                Use Case
+              </Text>
+            </View>
+            <View
+              style={Object {}}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#3d3d3d",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                2 star
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgba(0,0,0,1)",
+                "padding": 10,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "height": 11,
+                  "marginLeft": "auto",
+                  "width": 85,
+                }
+              }
+            >
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#eee",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#e6e6e6",
+                "borderBottomWidth": 1,
+                "paddingBottom": 10,
+                "paddingHorizontal": 10,
+                "paddingTop": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderTopColor": "#e6e6e6",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 10,
+                    "paddingBottom": 2,
+                    "paddingHorizontal": 4,
+                  }
+                }
+              >
+                Use Case
+              </Text>
+            </View>
+            <View
+              style={Object {}}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#3d3d3d",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                3 star
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgba(0,0,0,1)",
+                "padding": 10,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "height": 11,
+                  "marginLeft": "auto",
+                  "width": 85,
+                }
+              }
+            >
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#eee",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#e6e6e6",
+                "borderBottomWidth": 1,
+                "paddingBottom": 10,
+                "paddingHorizontal": 10,
+                "paddingTop": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderTopColor": "#e6e6e6",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 10,
+                    "paddingBottom": 2,
+                    "paddingHorizontal": 4,
+                  }
+                }
+              >
+                Use Case
+              </Text>
+            </View>
+            <View
+              style={Object {}}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#3d3d3d",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                4 star
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgba(0,0,0,1)",
+                "padding": 10,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "height": 11,
+                  "marginLeft": "auto",
+                  "width": 85,
+                }
+              }
+            >
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#eee",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#e6e6e6",
+                "borderBottomWidth": 1,
+                "paddingBottom": 10,
+                "paddingHorizontal": 10,
+                "paddingTop": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderTopColor": "#e6e6e6",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 10,
+                    "paddingBottom": 2,
+                    "paddingHorizontal": 4,
+                  }
+                }
+              >
+                Use Case
+              </Text>
+            </View>
+            <View
+              style={Object {}}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#3d3d3d",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                5 star
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgba(0,0,0,1)",
+                "padding": 10,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flexDirection": "row",
+                  "height": 11,
+                  "marginLeft": "auto",
+                  "width": 85,
+                }
+              }
+            >
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": 11,
+                    "marginLeft": 6,
+                    "width": 11,
+                  }
+                }
+              />
             </View>
           </View>
         </View>
