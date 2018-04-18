@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest",
+    "test": "NODE_ENV=test TZ=America/Los_Angeles jest",
     "compile": "tsc --noEmit -p . --pretty",
     "format": "npm-run-all format:*",
     "format:js": "prettier --write {.,**}/*.js",
