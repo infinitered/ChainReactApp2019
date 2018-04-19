@@ -1,0 +1,23 @@
+{
+  "name": "react-native-mapbox-gl",
+  "summary": "React Native Component for Mapbox GL",
+  "version": "6.0.3",
+  "authors": {
+    "Nick Italiano": "ni6@njit.edu"
+  },
+  "homepage": "https://github.com/mapbox/react-native-mapbox-gl#readme",
+  "license": "MIT",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source": {
+    "git": "https://github.com/mapbox/react-native-mapbox-gl.git"
+  },
+  "source_files": "ios/RCTMGL/**/*.{h,m}",
+  "vendored_frameworks": "ios/Mapbox.framework",
+  "dependencies": {
+    "React": [
+
+    ]
+  }
+}
