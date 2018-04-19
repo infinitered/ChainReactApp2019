@@ -392,6 +392,12 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
+"@mapbox/react-native-mapbox-gl@6.0.3":
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/@mapbox/react-native-mapbox-gl/-/react-native-mapbox-gl-6.0.3.tgz#eec96ad717ef2a9841cfa8f12667fc04276f20ca"
+  dependencies:
+    "@turf/helpers" "4.6.0"
+
 "@storybook/addon-actions@3.4.0":
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-3.4.0.tgz#8f6f869f708856845dff210af9340e54b443f346"
@@ -615,6 +621,10 @@
     react-modal "^3.3.2"
     react-split-pane "^0.1.77"
     react-treebeard "^2.1.0"
+
+"@turf/helpers@4.6.0":
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/@turf/helpers/-/helpers-4.6.0.tgz#12398733b8ae28420df6166fa44c7ee8ffd6414c"
 
 "@types/jest@^22.2.0":
   version "22.2.2"

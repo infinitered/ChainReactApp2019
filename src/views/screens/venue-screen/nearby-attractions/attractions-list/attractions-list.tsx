@@ -11,7 +11,10 @@ export interface AttractionsListState {
 }
 
 const ROOT: ViewStyle = {
+  width: "100%",
   flex: 1,
+  paddingHorizontal: 17,
+  paddingBottom: spacing.large + spacing.small,
 }
 const NAV: ViewStyle = {
   flexDirection: "row",

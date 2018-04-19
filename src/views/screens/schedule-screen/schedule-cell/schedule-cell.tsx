@@ -17,7 +17,9 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
     const style: any = ScheduleCellPresets[preset] || ScheduleCellPresets.default
     const isOdd = index % 2 === 0 // index starts at 0
     return (
-      <View style={[style.root as ViewStyle, isOdd && { backgroundColor: palette.portGoreLight }]}>
+      <View
+        style={[style.root as ViewStyle, isOdd && { backgroundColor: palette.portGoreLighter }]}
+      >
         <View style={style.timeWrapper as ViewStyle}>
           {talk.track && <Text preset="label" text={talk.track} style={style.track} />}
           <Text
