@@ -8,7 +8,7 @@ import { TravelOption } from "./travel-option"
 const ROOT: ViewStyle = {
   marginTop: spacing.huge,
   paddingHorizontal: spacing.large,
-  marginBottom: spacing.medium,
+  marginBottom: spacing.huge,
 }
 const TITLE_GRAY: TextStyle = {
   color: palette.offWhite,

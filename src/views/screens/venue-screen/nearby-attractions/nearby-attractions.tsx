@@ -7,8 +7,8 @@ import { AttractionsList } from "./attractions-list"
 import { AttractionsMap } from "./attractions-map"
 
 const ROOT: ViewStyle = {
-  paddingVertical: spacing.large,
-  paddingHorizontal: 17,
+  width: "100%",
+  paddingTop: spacing.large,
   backgroundColor: palette.portGoreLight,
 }
 
