@@ -5405,6 +5405,1080 @@ exports[`Storyshots Rating Props 1`] = `
 </View>
 `;
 
+exports[`Storyshots ScheduleCell Presets 1`] = `
+<View
+  enabled={true}
+  keyboardVerticalOffset={50}
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+        "flex": 1,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <RCTScrollView>
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#eee",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#e6e6e6",
+                "borderBottomWidth": 1,
+                "paddingBottom": 10,
+                "paddingHorizontal": 10,
+                "paddingTop": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderTopColor": "#e6e6e6",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 10,
+                    "paddingBottom": 2,
+                    "paddingHorizontal": 4,
+                  }
+                }
+              >
+                Use Case
+              </Text>
+            </View>
+            <View
+              style={Object {}}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#3d3d3d",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                ScheduleCell
+              </Text>
+            </View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#666",
+                  "fontSize": 10,
+                  "paddingTop": 0,
+                }
+              }
+            >
+              odd
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgba(0,0,0,1)",
+                "padding": 0,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#161637",
+                  },
+                  Object {
+                    "backgroundColor": "#201B48",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderBottomColor": "#ffffff",
+                    "borderBottomWidth": 1,
+                    "flexDirection": "row",
+                    "padding": 20,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "#56E39F",
+                      "fontFamily": "Avenir",
+                      "fontSize": 11,
+                    }
+                  }
+                >
+                  9:00 AM - 10:00 AM
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingHorizontal": 20,
+                    "paddingVertical": 40,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "borderBottomLeftRadius": 8,
+                      "borderTopRightRadius": 8,
+                      "marginRight": 20,
+                      "overflow": "hidden",
+                      "width": 62,
+                    }
+                  }
+                >
+                  <Image
+                    source={
+                      Object {
+                        "uri": "https://pbs.twimg.com/profile_images/985388996011405312/O6rB4xNM_400x400.jpg",
+                      }
+                    }
+                    style={
+                      Object {
+                        "height": 68,
+                        "width": 62,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#ffffff",
+                        "fontFamily": "Avenir",
+                        "fontSize": 16,
+                        "fontWeight": "500",
+                        "lineHeight": 32,
+                      }
+                    }
+                  >
+                    World's Coolest Talk
+                  </Text>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#C7C4DB",
+                        "fontFamily": "Avenir",
+                        "fontSize": 16,
+                        "fontWeight": "300",
+                        "lineHeight": 27,
+                      }
+                    }
+                  >
+                    Ken Wheeler
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#eee",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#e6e6e6",
+                "borderBottomWidth": 1,
+                "paddingBottom": 10,
+                "paddingHorizontal": 10,
+                "paddingTop": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderTopColor": "#e6e6e6",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 10,
+                    "paddingBottom": 2,
+                    "paddingHorizontal": 4,
+                  }
+                }
+              >
+                Use Case
+              </Text>
+            </View>
+            <View
+              style={Object {}}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#3d3d3d",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                ScheduleCell
+              </Text>
+            </View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#666",
+                  "fontSize": 10,
+                  "paddingTop": 0,
+                }
+              }
+            >
+              even
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgba(0,0,0,1)",
+                "padding": 0,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#161637",
+                  },
+                  false,
+                ]
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderBottomColor": "#ffffff",
+                    "borderBottomWidth": 1,
+                    "flexDirection": "row",
+                    "padding": 20,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "#56E39F",
+                      "fontFamily": "Avenir",
+                      "fontSize": 11,
+                    }
+                  }
+                >
+                  9:00 AM - 10:00 AM
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingHorizontal": 20,
+                    "paddingVertical": 40,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "borderBottomLeftRadius": 8,
+                      "borderTopRightRadius": 8,
+                      "marginRight": 20,
+                      "overflow": "hidden",
+                      "width": 62,
+                    }
+                  }
+                >
+                  <Image
+                    source={
+                      Object {
+                        "uri": "https://pbs.twimg.com/profile_images/985388996011405312/O6rB4xNM_400x400.jpg",
+                      }
+                    }
+                    style={
+                      Object {
+                        "height": 68,
+                        "width": 62,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#ffffff",
+                        "fontFamily": "Avenir",
+                        "fontSize": 16,
+                        "fontWeight": "500",
+                        "lineHeight": 32,
+                      }
+                    }
+                  >
+                    World's Coolest Talk
+                  </Text>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#C7C4DB",
+                        "fontFamily": "Avenir",
+                        "fontSize": 16,
+                        "fontWeight": "300",
+                        "lineHeight": 27,
+                      }
+                    }
+                  >
+                    Ken Wheeler
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#eee",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#e6e6e6",
+                "borderBottomWidth": 1,
+                "paddingBottom": 10,
+                "paddingHorizontal": 10,
+                "paddingTop": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderTopColor": "#e6e6e6",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 10,
+                    "paddingBottom": 2,
+                    "paddingHorizontal": 4,
+                  }
+                }
+              >
+                Use Case
+              </Text>
+            </View>
+            <View
+              style={Object {}}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#3d3d3d",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                ScheduleCell
+              </Text>
+            </View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#666",
+                  "fontSize": 10,
+                  "paddingTop": 0,
+                }
+              }
+            >
+              break
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgba(0,0,0,1)",
+                "padding": 0,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#161637",
+                  },
+                  Object {
+                    "backgroundColor": "#201B48",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderBottomColor": "#ffffff",
+                    "borderBottomWidth": 1,
+                    "flexDirection": "row",
+                    "padding": 20,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "#56E39F",
+                      "fontFamily": "Avenir",
+                      "fontSize": 11,
+                    }
+                  }
+                >
+                  9:00 AM - 10:00 AM
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingHorizontal": 20,
+                    "paddingVertical": 34,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "borderBottomLeftRadius": 8,
+                      "borderTopRightRadius": 8,
+                      "marginRight": 20,
+                      "overflow": "hidden",
+                      "width": 62,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Object {
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#ffffff",
+                        "fontFamily": "Avenir",
+                        "fontSize": 16,
+                        "fontWeight": "500",
+                        "lineHeight": 32,
+                      }
+                    }
+                  >
+                    Break
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#eee",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#e6e6e6",
+                "borderBottomWidth": 1,
+                "paddingBottom": 10,
+                "paddingHorizontal": 10,
+                "paddingTop": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderTopColor": "#e6e6e6",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 10,
+                    "paddingBottom": 2,
+                    "paddingHorizontal": 4,
+                  }
+                }
+              >
+                Use Case
+              </Text>
+            </View>
+            <View
+              style={Object {}}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#3d3d3d",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                ScheduleCell
+              </Text>
+            </View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#666",
+                  "fontSize": 10,
+                  "paddingTop": 0,
+                }
+              }
+            >
+              workshop
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgba(0,0,0,1)",
+                "padding": 0,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#161637",
+                  },
+                  Object {
+                    "backgroundColor": "#201B48",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderBottomColor": "#ffffff",
+                    "borderBottomWidth": 1,
+                    "flexDirection": "row",
+                    "padding": 20,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "#56E39F",
+                      "fontFamily": "Avenir",
+                      "fontSize": 11,
+                      "width": 100,
+                    }
+                  }
+                >
+                  TRACK 2
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "#56E39F",
+                      "fontFamily": "Avenir",
+                      "fontSize": 11,
+                    }
+                  }
+                >
+                  9:00 AM - 10:00 AM
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingHorizontal": 20,
+                    "paddingVertical": 40,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "borderBottomLeftRadius": 8,
+                      "borderTopRightRadius": 8,
+                      "marginRight": 20,
+                      "overflow": "hidden",
+                      "width": 62,
+                    }
+                  }
+                >
+                  <Image
+                    source={
+                      Object {
+                        "uri": "https://pbs.twimg.com/profile_images/985388996011405312/O6rB4xNM_400x400.jpg",
+                      }
+                    }
+                    style={
+                      Object {
+                        "height": 68,
+                        "width": 62,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#ffffff",
+                        "fontFamily": "Avenir",
+                        "fontSize": 16,
+                        "fontWeight": "500",
+                        "lineHeight": 32,
+                      }
+                    }
+                  >
+                    World's Coolest Talk
+                  </Text>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#C7C4DB",
+                        "fontFamily": "Avenir",
+                        "fontSize": 16,
+                        "fontWeight": "300",
+                        "lineHeight": 27,
+                      }
+                    }
+                  >
+                    Ken Wheeler
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#eee",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#e6e6e6",
+                "borderBottomWidth": 1,
+                "paddingBottom": 10,
+                "paddingHorizontal": 10,
+                "paddingTop": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderTopColor": "#e6e6e6",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 10,
+                    "paddingBottom": 2,
+                    "paddingHorizontal": 4,
+                  }
+                }
+              >
+                Use Case
+              </Text>
+            </View>
+            <View
+              style={Object {}}
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#3d3d3d",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                ScheduleCell
+              </Text>
+            </View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#666",
+                  "fontSize": 10,
+                  "paddingTop": 0,
+                }
+              }
+            >
+              afterparty
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgba(0,0,0,1)",
+                "padding": 0,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#161637",
+                  },
+                  Object {
+                    "backgroundColor": "#201B48",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderBottomColor": "#ffffff",
+                    "borderBottomWidth": 1,
+                    "flexDirection": "row",
+                    "padding": 20,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "#56E39F",
+                      "fontFamily": "Avenir",
+                      "fontSize": 11,
+                    }
+                  }
+                >
+                  9:00 AM - 10:00 AM
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingHorizontal": 20,
+                    "paddingVertical": 40,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "borderBottomLeftRadius": 8,
+                      "borderTopRightRadius": 8,
+                      "marginRight": 20,
+                      "overflow": "hidden",
+                      "width": 62,
+                    }
+                  }
+                >
+                  <Image
+                    source={
+                      Object {
+                        "uri": "https://pbs.twimg.com/profile_images/839854654636752896/yZ6aVelI_400x400.jpg",
+                      }
+                    }
+                    style={
+                      Object {
+                        "height": 68,
+                        "width": 62,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#ffffff",
+                        "fontFamily": "Avenir",
+                        "fontSize": 16,
+                        "fontWeight": "500",
+                        "lineHeight": 32,
+                      }
+                    }
+                  >
+                    SquareSpace Afterparty
+                  </Text>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#C7C4DB",
+                        "fontFamily": "Avenir",
+                        "fontSize": 16,
+                        "fontWeight": "300",
+                        "lineHeight": 27,
+                      }
+                    }
+                  >
+                    Join us for an afterparty sponsored by SquareSpace!
+                  </Text>
+                  <View
+                    accessibilityComponentType={undefined}
+                    accessibilityLabel={undefined}
+                    accessibilityTraits={undefined}
+                    accessible={true}
+                    collapsable={undefined}
+                    hasTVPreferredFocus={undefined}
+                    hitSlop={undefined}
+                    isTVSelectable={true}
+                    nativeID={undefined}
+                    onLayout={undefined}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "#EC174F",
+                        "borderRadius": 0,
+                        "justifyContent": "center",
+                        "marginTop": 34,
+                        "opacity": 1,
+                        "paddingHorizontal": 34,
+                        "paddingVertical": 14,
+                        "width": 160,
+                      }
+                    }
+                    testID={undefined}
+                    tvParallaxProperties={undefined}
+                  >
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "#ffffff",
+                          "fontFamily": "Avenir",
+                          "fontSize": 14,
+                          "paddingHorizontal": undefined,
+                        }
+                      }
+                    >
+                      RSVP Now
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;
+
 exports[`Storyshots SocialButton Presets 1`] = `
 <View
   enabled={true}

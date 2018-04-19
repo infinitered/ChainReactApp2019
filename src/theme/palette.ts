@@ -6,6 +6,7 @@ export const palette = {
   ebony: "#10102A",
   portGore: "#161637",
   portGoreLight: "#1B1840",
+  portGoreLighter: "#201B48",
   waterloo: "#878794",
   martinique: "#2C2C4C",
   shamrock: "#56E39F",
