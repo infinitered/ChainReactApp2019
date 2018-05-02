@@ -12,5 +12,6 @@ export const palette = {
   shamrock: "#56E39F",
   lightGrey: "#E6EAF4",
   lighterGrey: "#CDD4DA",
+  haiti: "#0F0F30",
   angry: "#dd3333",
 }

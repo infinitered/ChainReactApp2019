@@ -20,7 +20,12 @@
     "nextScreenButton": "I'm Ready!"
   },
   "scheduleScreen": {
-    "title": "Schedule"
+    "title": "Schedule",
+    "nav": {
+      "wednesday": "WED",
+      "thursday": "THU",
+      "friday": "FRI"
+    }
   },
   "venueScreen": {
     "title": "Explore",
