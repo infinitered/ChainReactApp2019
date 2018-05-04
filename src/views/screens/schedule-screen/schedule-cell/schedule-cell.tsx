@@ -1,24 +1,29 @@
 import * as React from "react"
-import { View, ViewStyle, Image, ImageStyle, TextStyle, Linking } from "react-native"
+import {
+  View,
+  ViewStyle,
+  Image,
+  ImageStyle,
+  TextStyle,
+  Linking,
+  TouchableOpacity,
+} from "react-native"
 import { ScheduleCellPresets } from "./schedule-cell.presets"
 import { ScheduleCellProps } from "./schedule-cell.props"
 import { Text } from "../../../shared/text"
 import { Button } from "../../../shared/button"
 import { palette } from "../../../../theme/palette"
 import { format } from "date-fns"
-/**
- * For your text displaying needs.
- *
- * This component is a HOC over the built-in React Native one.
- */
+
 export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
   render() {
-    const { preset, index, talk } = this.props
+    const { preset, index, talk, onPress } = this.props
     const style: any = ScheduleCellPresets[preset] || ScheduleCellPresets.default
     const isOdd = index % 2 === 0 // index starts at 0
     return (
-      <View
+      <TouchableOpacity
         style={[style.root as ViewStyle, isOdd && { backgroundColor: palette.portGoreLighter }]}
+        onPress={() => onPress(this.props.talk)}
       >
         <View style={style.timeWrapper as ViewStyle}>
           {talk.track && <Text preset="label" text={talk.track} style={style.track} />}
@@ -58,7 +63,7 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
               )}
           </View>
         </View>
-      </View>
+      </TouchableOpacity>
     )
   }
 }

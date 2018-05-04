@@ -7,4 +7,5 @@ export interface ScheduleCellProps extends ViewProperties {
   index: number
   talk: any
   preset?: ScheduleCellPresetNames
+  onPress: Function
 }

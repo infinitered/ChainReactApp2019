@@ -15,7 +15,7 @@ export class AttractionsMap extends React.Component<{}, {}> {
         pitchEnabled={false}
         styleURL="mapbox://styles/jhuskey/cjabpqolp3lf02so534xe4q9g"
         style={{ width: "100%", height: 506, flex: 1 }}
-        showUserLocation
+        // showUserLocation
       >
         {Object.keys(nearbyAttractionsData).map(key => {
           this.renderCategory(nearbyAttractionsData[key])

@@ -1,6 +1,6 @@
 import * as React from "react"
 import { TouchableHighlight, Image, Linking } from "react-native"
-import { viewPresets, imageSource, imageStyle, linkPresets } from "./social-button.presets"
+import { viewPresets, imageSource, imageStyle } from "./social-button.presets"
 import { SocialButtonProps } from "./social-button.props"
 
 /**
@@ -10,10 +10,9 @@ import { SocialButtonProps } from "./social-button.props"
  */
 export function SocialButton(props: SocialButtonProps) {
   // grab the props
-  const { preset = "website", ...rest } = props
+  const { preset = "website", link, ...rest } = props
 
   const image = imageSource[preset] || imageSource["website"]
-  const link = linkPresets[preset] || linkPresets["website"]
 
   return (
     <TouchableHighlight style={viewPresets.default} onPress={() => Linking.openURL(link)} {...rest}>

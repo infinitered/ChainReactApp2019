@@ -1,6 +1,5 @@
 import { ViewStyle } from "react-native"
-import { color } from "../../../../../theme/color"
-import { spacing } from "../../../../../theme/spacing"
+import { spacing } from "../../../theme/spacing"
 
 /**
  * All text will start off looking like this.
@@ -37,16 +36,6 @@ export const imageSource = {
 
 export const imageStyle = {
   default: {},
-}
-
-export const linkPresets = {
-  website: "https://infinite.red",
-  twitter: "https://twitter.com/infinite_red",
-  github: "https://github.com/infinitered",
-  medium: "https://shift.infinite.red",
-  dribbble: "https://dribbble.com/infinitered",
-  instagram: "https://www.instagram.com/infinitered_designers/",
-  facebook: "https://facebook.com/infiniteredinc",
 }
 
 /**

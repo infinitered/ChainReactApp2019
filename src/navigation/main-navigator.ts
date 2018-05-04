@@ -16,7 +16,7 @@ export const MainNavigator = StackNavigator(
               talkDetails: { screen: TalkDetailsScreen },
             },
             {
-              headerMode: "none",
+              // headerMode: "none",
               initialRouteName: "scheduleScreen",
             },
           ),
