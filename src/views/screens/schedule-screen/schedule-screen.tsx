@@ -64,6 +64,16 @@ const WORKSHOP = {
   location: "1134 NE Washington St #302\nPortland, OR 97006",
 }
 
+const COFFEE = {
+  type: "break",
+  startTime: new Date("2018-07-13T16:00:00Z"),
+  endTime: new Date("2018-07-13T17:00:00Z"),
+  title: "Coffee Break",
+  sponsor: "QuickLeft Studio",
+  description:
+    "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Nullam id dolor id nibsdflkj.",
+}
+
 export interface ScheduleScreenProps extends NavigationScreenProps<{}> {}
 
 export class ScheduleScreen extends React.Component<
@@ -100,6 +110,13 @@ export class ScheduleScreen extends React.Component<
         <ScheduleCell
           index={1}
           talk={WORKSHOP}
+          onPress={talk => {
+            this.props.navigation.navigate("talkDetails", { talk })
+          }}
+        />
+        <ScheduleCell
+          index={2}
+          talk={COFFEE}
           onPress={talk => {
             this.props.navigation.navigate("talkDetails", { talk })
           }}

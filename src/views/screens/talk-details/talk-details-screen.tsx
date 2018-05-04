@@ -1,10 +1,10 @@
 import * as React from "react"
-import { View, ScrollView, ViewStyle } from "react-native"
+import { View, Image, ViewStyle } from "react-native"
 import { NavigationScreenProps } from "react-navigation"
 import { Screen } from "../../shared/screen"
 import { palette } from "../../../theme/palette"
 import { spacing } from "../../../theme/spacing"
-// import { TitleBar } from "../../shared/title-bar"
+import { Text } from "../../shared/text"
 import { format } from "date-fns"
 import { SpeakerImage } from "./speaker-image"
 import { TalkTitle } from "./talk-title"
@@ -75,7 +75,26 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
   }
 
   renderBreak = () => {
-    return <View />
+    const { sponsor, description } = this.props.navigation.state.params.talk
+    return (
+      <View style={{ width: "100%", height: "100%" }}>
+        <Image source={require("./img.event.png")} style={{ width: "100%" }} />
+        <Text
+          text="Coffee Break"
+          preset="body"
+          style={{ fontSize: 20, color: palette.white, marginTop: spacing.large }}
+        />
+        <View style={{ flexDirection: "row", marginTop: spacing.small }}>
+          <Text text="Sponsored By " preset="input" style={{ color: palette.offWhite }} />
+          <Text text={sponsor} preset="input" style={{ fontWeight: "500" }} />
+        </View>
+        <Text
+          text={description}
+          preset="body"
+          style={{ marginTop: spacing.large + spacing.tiny + spacing.tiny }}
+        />
+      </View>
+    )
   }
 
   renderLunch = () => {
