@@ -1,5 +1,5 @@
 import * as React from "react"
-import { ViewStyle, ScrollView } from "react-native"
+import { View, ViewStyle, ScrollView } from "react-native"
 import { Text } from "../../shared/text"
 import { NavigationScreenProps } from "react-navigation"
 import { Screen } from "../../shared/screen"
@@ -38,6 +38,32 @@ const TALK = {
   description: "",
 }
 
+const WORKSHOP = {
+  type: "workshop",
+  startTime: new Date("2018-07-13T16:00:00Z"),
+  endTime: new Date("2018-07-13T17:00:00Z"),
+  title:
+    "Realtime Event Processing, Streaming and Subscription for React Native Using Cloud Services",
+  speakers: [
+    {
+      name: "Jason Harrelso",
+      bio:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt laoreet dui, ac vulputate tortor porttitor non. Mauris iaculis turpis vitae augue vestibulum commodo. Praesent sit amet augue massa. Nam maximus mauris sed eros facilisis, quis efficitur purus scelerisque. In in hendrerit nunc. es, nascetur ridiculus mus.",
+      employer: "Microsoft",
+      facebook: "https://facebook.com",
+      twitter: "https://twitter.com",
+      links: {
+        facebook: "https://bing.com",
+        twitter: "https://google.com",
+        websites: ["https://microsoft.com"],
+      },
+    },
+  ],
+  description:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt laoreet dui, ac vulputate tortor porttitor non. Mauris iaculis turpis vitae augue vestibulum commodo. Praesent sit amet augue massa. Nam maximus mauris sed eros facilisis, quis efficitur purus scelerisque. In in hendrerit nunc. es, nascetur ridiculus mus.",
+  location: "1134 NE Washington St #302\nPortland, OR 97006",
+}
+
 export interface ScheduleScreenProps extends NavigationScreenProps<{}> {}
 
 export class ScheduleScreen extends React.Component<
@@ -63,13 +89,22 @@ export class ScheduleScreen extends React.Component<
 
   renderContent = () => {
     return (
-      <ScheduleCell
-        index={0}
-        talk={TALK}
-        onPress={talk => {
-          this.props.navigation.navigate("talkDetails", { talk })
-        }}
-      />
+      <View>
+        <ScheduleCell
+          index={0}
+          talk={TALK}
+          onPress={talk => {
+            this.props.navigation.navigate("talkDetails", { talk })
+          }}
+        />
+        <ScheduleCell
+          index={1}
+          talk={WORKSHOP}
+          onPress={talk => {
+            this.props.navigation.navigate("talkDetails", { talk })
+          }}
+        />
+      </View>
     )
   }
 
