@@ -27,6 +27,13 @@
       "friday": "FRI"
     }
   },
+  "talkDetailsScreen": {
+    "workshop": "WORKSHOP",
+    "location": "LOCATION",
+    "aboutWorkshop": "ABOUT WORKSHOP",
+    "sponsoredBy": "Sponsored By ",
+    "menuTitle": "WHAT'S ON THE MENU"
+  },
   "venueScreen": {
     "title": "Explore",
     "gerdingTheater": {
@@ -74,8 +81,5 @@
       "additional": "ADDITIONAL SPONSORS"
     },
     "presentedBy": "PRESENTED BY"
-  },
-  "talkDetailsScreen": {
-    "title": "Talk Details"
   }
 }

@@ -1,5 +1,5 @@
 import * as React from "react"
-import { View, Image, ViewStyle } from "react-native"
+import { View, Image, ViewStyle, TextStyle } from "react-native"
 import { NavigationScreenProps } from "react-navigation"
 import { Screen } from "../../shared/screen"
 import { palette } from "../../../theme/palette"
@@ -13,6 +13,21 @@ import { SpeakerBio } from "./speaker-bio"
 const ROOT: ViewStyle = {
   paddingVertical: spacing.medium,
   paddingHorizontal: spacing.large,
+}
+
+const LABEL: TextStyle = {
+  marginTop: spacing.extraLarge + spacing.large,
+  color: palette.shamrock,
+  marginBottom: spacing.large,
+}
+
+const BULLET: ViewStyle = {
+  width: 6,
+  height: 6,
+  borderRadius: 3,
+  backgroundColor: palette.shamrock,
+  marginRight: spacing.small,
+  marginTop: spacing.small,
 }
 
 export interface TalkDetailsScreenProps extends NavigationScreenProps<{}> {}
@@ -80,12 +95,16 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
       <View style={{ width: "100%", height: "100%" }}>
         <Image source={require("./img.event.png")} style={{ width: "100%" }} />
         <Text
-          text="Coffee Break"
+          text={title}
           preset="body"
           style={{ fontSize: 20, color: palette.white, marginTop: spacing.large }}
         />
         <View style={{ flexDirection: "row", marginTop: spacing.small }}>
-          <Text text="Sponsored By " preset="input" style={{ color: palette.offWhite }} />
+          <Text
+            tx="talkDetailsScreen.sponsoredBy"
+            preset="input"
+            style={{ color: palette.offWhite }}
+          />
           <Text text={sponsor} preset="input" style={{ fontWeight: "500" }} />
         </View>
         <Text
@@ -98,6 +117,40 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
   }
 
   renderLunch = () => {
-    return <View />
+    const { sponsor, description, menuItems, title } = this.props.navigation.state.params.talk
+    return (
+      <View style={{ width: "100%", height: "100%" }}>
+        <Image source={require("./img.event.png")} style={{ width: "100%" }} />
+        <Text
+          text={title}
+          preset="body"
+          style={{ fontSize: 20, color: palette.white, marginTop: spacing.large }}
+        />
+        <View style={{ flexDirection: "row", marginTop: spacing.small }}>
+          <Text
+            tx="talkDetailsScreen.sponsoredBy"
+            preset="input"
+            style={{ color: palette.offWhite }}
+          />
+          <Text text={sponsor} preset="input" style={{ fontWeight: "500" }} />
+        </View>
+        <Text
+          text={description}
+          preset="body"
+          style={{ marginTop: spacing.large + spacing.tiny + spacing.tiny }}
+        />
+        <Text preset="sectionHeader" tx="talkDetailsScreen.menuTitle" style={LABEL} />
+        {menuItems.map(item => this.renderMenuItem(item))}
+      </View>
+    )
+  }
+
+  renderMenuItem = item => {
+    return (
+      <View style={{ flexDirection: "row", marginBottom: spacing.large }}>
+        <View style={BULLET} />
+        <Text preset="subheader" text={item} style={{ color: palette.white }} />
+      </View>
+    )
   }
 }

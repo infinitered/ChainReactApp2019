@@ -55,18 +55,18 @@ export class TalkTitle extends React.Component<{ talk: any }, {}> {
   }
 
   renderWorkshop = () => {
-    const { title, speakers, location, description } = this.props.talk
+    const { title, location, description } = this.props.talk
     return (
       <View style={ROOT}>
-        <Text text="WORKSHOP" preset="sectionHeader" style={LABEL} />
+        <Text tx="talkDetailsScreen.workshop" preset="sectionHeader" style={LABEL} />
         <Text text={title} preset="header" style={TITLE} />
-        <Text text="LOCATION" preset="sectionHeader" style={LABEL} />
+        <Text tx="talkDetailsScreen.location" preset="sectionHeader" style={LABEL} />
         <Text
           text={location}
           preset="subheader"
           style={{ color: palette.white, fontWeight: "500" }}
         />
-        <Text text="ABOUT WORKSHOP" preset="sectionHeader" style={LABEL} />
+        <Text tx="talkDetailsScreen.aboutWorkshop" preset="sectionHeader" style={LABEL} />
         <Text text={description} preset="body" style={{}} />
       </View>
     )
