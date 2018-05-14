@@ -1,5 +1,5 @@
 import * as React from "react"
-import { View, Image, ViewStyle, TextStyle } from "react-native"
+import { View, Image, ViewStyle, TextStyle, Linking } from "react-native"
 import { NavigationScreenProps } from "react-navigation"
 import { Screen } from "../../shared/screen"
 import { palette } from "../../../theme/palette"
@@ -9,6 +9,7 @@ import { format } from "date-fns"
 import { SpeakerImage } from "./speaker-image"
 import { TalkTitle } from "./talk-title"
 import { SpeakerBio } from "./speaker-bio"
+import { Button } from "../../shared/button"
 
 const ROOT: ViewStyle = {
   paddingVertical: spacing.medium,
@@ -64,6 +65,8 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
         return this.renderBreak()
       case "lunch":
         return this.renderLunch()
+      case "afterParty":
+        return this.renderAfterParty()
     }
   }
 
@@ -90,7 +93,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
   }
 
   renderBreak = () => {
-    const { sponsor, description } = this.props.navigation.state.params.talk
+    const { sponsor, description, title } = this.props.navigation.state.params.talk
     return (
       <View style={{ width: "100%", height: "100%" }}>
         <Image source={require("./img.event.png")} style={{ width: "100%" }} />
@@ -141,6 +144,43 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
         />
         <Text preset="sectionHeader" tx="talkDetailsScreen.menuTitle" style={LABEL} />
         {menuItems.map(item => this.renderMenuItem(item))}
+      </View>
+    )
+  }
+
+  renderAfterParty = () => {
+    const { title, description, location, rsvpWebsite } = this.props.navigation.state.params.talk
+    return (
+      <View style={{ width: "100%", height: "100%" }}>
+        <View>
+          <Image source={require("./img.event.png")} style={{ width: "100%" }} />
+          <Image
+            source={require("./img.partylogo.png")}
+            style={{ position: "absolute", bottom: spacing.large, right: 18 }}
+          />
+        </View>
+        <Text
+          text={title}
+          preset="body"
+          style={{ fontSize: 20, color: palette.white, marginTop: spacing.large }}
+        />
+        <Text text={description} preset="body" style={{ marginTop: spacing.large }} />
+        <Text
+          text={location}
+          preset="body"
+          style={{ marginTop: spacing.extraLarge, fontWeight: "500", color: palette.white }}
+        />
+        <Button
+          preset="primary"
+          onPress={() => Linking.openURL(rsvpWebsite)}
+          tx="talkDetailsScreen.rsvp"
+          style={{
+            borderRadius: 0,
+            marginTop: spacing.extraLarge + spacing.large,
+            paddingVertical: 18,
+          }}
+          textStyle={{ fontSize: 14, fontWeight: "500" }}
+        />
       </View>
     )
   }

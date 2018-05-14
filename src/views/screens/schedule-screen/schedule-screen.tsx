@@ -85,6 +85,17 @@ const LUNCH = {
   menuItems: ["Black Forest Ham", "Vegan Option", "Pita Chips", "Premium Coffee", "Soft Drinks"],
 }
 
+const AFTER_PARTY = {
+  type: "afterParty",
+  startTime: new Date("2018-07-13T16:00:00Z"),
+  endTime: new Date("2018-07-13T17:00:00Z"),
+  title: "SquareSpace After Party",
+  description:
+    "Join us after the first day for an afterparty hosted by our good friends at Squarespace. Lorem Ipsum dolor sit amet lorem.",
+  location: "11134 Washington St #302\nPortland, OR 97006",
+  rsvpWebsite: "https://bing.com",
+}
+
 export interface ScheduleScreenProps extends NavigationScreenProps<{}> {}
 
 export class ScheduleScreen extends React.Component<
@@ -135,6 +146,13 @@ export class ScheduleScreen extends React.Component<
         <ScheduleCell
           index={3}
           talk={LUNCH}
+          onPress={talk => {
+            this.props.navigation.navigate("talkDetails", { talk })
+          }}
+        />
+        <ScheduleCell
+          index={4}
+          talk={AFTER_PARTY}
           onPress={talk => {
             this.props.navigation.navigate("talkDetails", { talk })
           }}
