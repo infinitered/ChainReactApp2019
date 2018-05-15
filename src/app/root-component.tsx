@@ -64,17 +64,13 @@ export class RootComponent extends React.Component<{}, RootComponentState> {
     // --- am: end list of stores ---
 
     return (
-      <SafeAreaView style={{ flex: 1, backgroundColor: palette.ebony }}>
-        <Provider
-          rootStore={rootStore}
-          navigationStore={rootStore.navigationStore}
-          {...otherStores}
-        >
-          <BackButtonHandler canExit={this.canExit}>
-            <StatefulNavigator />
-          </BackButtonHandler>
-        </Provider>
-      </SafeAreaView>
+      // <SafeAreaView style={{ flex: 1, backgroundColor: palette.ebony }}>
+      <Provider rootStore={rootStore} navigationStore={rootStore.navigationStore} {...otherStores}>
+        <BackButtonHandler canExit={this.canExit}>
+          <StatefulNavigator />
+        </BackButtonHandler>
+      </Provider>
+      // </SafeAreaView>
     )
   }
 }
