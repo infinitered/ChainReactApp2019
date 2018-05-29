@@ -1,47 +1,47 @@
 PODS:
-  - React (0.54.2):
-    - React/Core (= 0.54.2)
+  - React (0.55.4):
+    - React/Core (= 0.55.4)
   - react-native-mapbox-gl (6.0.3):
     - React
-  - React/Core (0.54.2):
-    - yoga (= 0.54.2.React)
-  - React/DevSupport (0.54.2):
+  - React/Core (0.55.4):
+    - yoga (= 0.55.4.React)
+  - React/DevSupport (0.55.4):
     - React/Core
     - React/RCTWebSocket
-  - React/fishhook (0.54.2)
-  - React/RCTActionSheet (0.54.2):
+  - React/fishhook (0.55.4)
+  - React/RCTActionSheet (0.55.4):
     - React/Core
-  - React/RCTAnimation (0.54.2):
+  - React/RCTAnimation (0.55.4):
     - React/Core
-  - React/RCTBlob (0.54.2):
+  - React/RCTBlob (0.55.4):
     - React/Core
-  - React/RCTCameraRoll (0.54.2):
+  - React/RCTCameraRoll (0.55.4):
     - React/Core
     - React/RCTImage
-  - React/RCTGeolocation (0.54.2):
+  - React/RCTGeolocation (0.55.4):
     - React/Core
-  - React/RCTImage (0.54.2):
+  - React/RCTImage (0.55.4):
     - React/Core
     - React/RCTNetwork
-  - React/RCTLinkingIOS (0.54.2):
+  - React/RCTLinkingIOS (0.55.4):
     - React/Core
-  - React/RCTNetwork (0.54.2):
+  - React/RCTNetwork (0.55.4):
     - React/Core
-  - React/RCTPushNotification (0.54.2):
+  - React/RCTPushNotification (0.55.4):
     - React/Core
-  - React/RCTSettings (0.54.2):
+  - React/RCTSettings (0.55.4):
     - React/Core
-  - React/RCTTest (0.54.2):
+  - React/RCTTest (0.55.4):
     - React/Core
-  - React/RCTText (0.54.2):
+  - React/RCTText (0.55.4):
     - React/Core
-  - React/RCTVibration (0.54.2):
+  - React/RCTVibration (0.55.4):
     - React/Core
-  - React/RCTWebSocket (0.54.2):
+  - React/RCTWebSocket (0.55.4):
     - React/Core
     - React/fishhook
     - React/RCTBlob
-  - yoga (0.54.2.React)
+  - yoga (0.55.4.React)
 
 DEPENDENCIES:
   - react-native-mapbox-gl (from `../node_modules/@mapbox/react-native-mapbox-gl`)
@@ -72,9 +72,9 @@ EXTERNAL SOURCES:
     :path: ../node_modules/react-native/ReactCommon/yoga/Yoga.podspec
 
 SPEC CHECKSUMS:
-  React: c237e42de9c70e5cac6eeb52b4cfd3a0910c1f00
+  React: aa2040dbb6f317b95314968021bd2888816e03d5
   react-native-mapbox-gl: b42480060cdcc515dfa3d8e403fb4dd32466a1b9
-  yoga: 55da126afc384965b96bff46652464373b330add
+  yoga: a23273df0088bf7f2bb7e5d7b00044ea57a2a54a
 
 PODFILE CHECKSUM: f158ad4a0952350c1645873d602f10af6ca4b2b0
 
