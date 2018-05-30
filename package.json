@@ -22,7 +22,6 @@
     "@mapbox/react-native-mapbox-gl": "6.0.3",
     "apisauce": "^0.14.3",
     "date-fns": "^1.29.0",
-    "lodash.throttle": "^4.1.1",
     "mobx": "^4.1.0",
     "mobx-react": "^5.0.0",
     "mobx-state-tree": "^2.0.3",
