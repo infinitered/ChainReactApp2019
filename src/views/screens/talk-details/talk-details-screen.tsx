@@ -33,13 +33,16 @@ const BULLET: ViewStyle = {
 
 export interface TalkDetailsScreenProps extends NavigationScreenProps<{}> {}
 
+const backImage = () => <Image source={require("../../shared/title-bar/icon.back-arrow.png")} />
+
 export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> {
   static navigationOptions = ({ navigation }) => {
     const { talk } = navigation.state.params
     return {
       // header: <TitleBar />,
       headerStyle: { backgroundColor: palette.portGore, borderBottomWidth: 0 },
-      headerBackImage: require("../../shared/title-bar/icon.back-arrow.png"),
+      //headerBackImage: require("../../shared/title-bar/icon.back-arrow.png"),
+      headerBackImage: backImage,
       headerTintColor: palette.shamrock,
       title: `${format(talk.startTime, "h:mm")} - ${format(talk.endTime, "h:mm")}`,
       headerTitleStyle: { textAlign: "left", fontWeight: "500", width: "100%", marginLeft: -50 },

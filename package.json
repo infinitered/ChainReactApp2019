@@ -22,7 +22,6 @@
     "@mapbox/react-native-mapbox-gl": "6.0.3",
     "apisauce": "^0.14.3",
     "date-fns": "^1.29.0",
-    "lodash.throttle": "^4.1.1",
     "mobx": "^4.1.0",
     "mobx-react": "^5.0.0",
     "mobx-state-tree": "^2.0.3",
@@ -31,7 +30,7 @@
     "react-native": "0.55.4",
     "react-native-i18n": "^2.0.12",
     "react-native-keychain": "3.0.0-rc.3",
-    "react-navigation": "^1.5.8",
+    "react-navigation": "^2.0.4",
     "reactotron-mst": "2.0.0-beta.1",
     "reactotron-react-native": "2.0.0-beta.1",
     "validate.js": "^0.12.0"
