@@ -1,6 +1,5 @@
 import * as React from "react"
 import { inject, observer } from "mobx-react"
-import { addNavigationHelpers } from "react-navigation"
 import { RootNavigator } from "./root-navigator"
 import { NavigationStore } from "../models/navigation-store/navigation-store"
 import throttle from "lodash.throttle"
