@@ -1529,6 +1529,7 @@
 				PRODUCT_NAME = ChainReactApp2018;
 				PROVISIONING_PROFILE = "ec7ac40d-98c0-4b31-aae2-0d6f288d4127";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore infinitered.stage.ChainReactConf 1530206700";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
