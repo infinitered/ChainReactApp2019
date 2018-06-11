@@ -47,6 +47,8 @@
 		79E9137EE55942A081E34C75 /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA4F6F71EDA4A2D857FFD28 /* libRNI18n.a */; };
 		7B5BB075374C4BA9AD25C7C1 /* GothamRnd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C1B04F0D25B54D9EB9295059 /* GothamRnd-Medium.otf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		8A34CBED20E5987B00470345 /* ViroKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A34CBC020E5987B00470345 /* ViroKit.framework */; };
+		8A34CBEE20E5987B00470345 /* libViroReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A34CBEC20E5987B00470345 /* libViroReact.a */; };
 		8F3D58FA741B4D22A7BEDD39 /* GothamRnd-BookItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2023F53DD46B4B8E99CCB9FB /* GothamRnd-BookItal.otf */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		C02628ED285C4E8D86633100 /* GothamRnd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9FE22C32232B4D598E6D601B /* GothamRnd-Book.otf */; };
@@ -424,6 +426,8 @@
 		6BA943FE46404E12A351BF86 /* GothamRnd-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-Light.otf"; path = "../src/theme/fonts/GothamRnd-Light.otf"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		8A34CBC020E5987B00470345 /* ViroKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ViroKit.framework; path = "../node_modules/react-viro/ios/dist/ViroRenderer/ViroKit.framework"; sourceTree = "<group>"; };
+		8A34CBEC20E5987B00470345 /* libViroReact.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libViroReact.a; path = "../node_modules/react-viro/ios/dist/lib/libViroReact.a"; sourceTree = "<group>"; };
 		9F92DA4225964F149C4DCCDF /* GothamRnd-LightItal.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-LightItal.otf"; path = "../src/theme/fonts/GothamRnd-LightItal.otf"; sourceTree = "<group>"; };
 		9FE22C32232B4D598E6D601B /* GothamRnd-Book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-Book.otf"; path = "../src/theme/fonts/GothamRnd-Book.otf"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
@@ -461,6 +465,8 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				8A34CBED20E5987B00470345 /* ViroKit.framework in Frameworks */,
+				8A34CBEE20E5987B00470345 /* libViroReact.a in Frameworks */,
 				037B2A98E90093A2E69C1C83 /* libPods-ChainReactApp2018.a in Frameworks */,
 				79E9137EE55942A081E34C75 /* libRNI18n.a in Frameworks */,
 				58E0CE2D84A74FA3A119CFF2 /* libRNKeychain.a in Frameworks */,
@@ -615,6 +621,8 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8A34CBEC20E5987B00470345 /* libViroReact.a */,
+				8A34CBC020E5987B00470345 /* ViroKit.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
 				00B59CB5301A423EEC256770 /* libPods-ChainReactApp2018.a */,
 			);

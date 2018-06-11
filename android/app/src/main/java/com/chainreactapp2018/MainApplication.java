@@ -12,6 +12,7 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 import com.mapbox.rctmgl.RCTMGLPackage;
+import com.viromedia.bridge.ReactViroPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -31,7 +32,8 @@ public class MainApplication extends Application implements ReactApplication {
         new KeychainPackage(),
         new RNI18nPackage(),
         new RCTMGLPackage(),
-        new SplashScreenReactPackage()
+        new SplashScreenReactPackage(),
+        new ReactViroPackage(ReactViroPackage.ViroPlatform.GVR)
       );
     }
 
