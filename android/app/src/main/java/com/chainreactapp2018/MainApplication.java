@@ -3,6 +3,9 @@ package com.chainreactapp2018;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.oblador.keychain.KeychainPackage;
+import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
+import com.mapbox.rctmgl.RCTMGLPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -23,8 +26,11 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-          new MainReactPackage(),
-          new SplashScreenReactPackage()
+        new MainReactPackage(),
+        new KeychainPackage(),
+        new RNI18nPackage(),
+        new RCTMGLPackage(),
+        new SplashScreenReactPackage()
       );
     }
 
