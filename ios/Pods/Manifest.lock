@@ -1,7 +1,7 @@
 PODS:
   - React (0.55.4):
     - React/Core (= 0.55.4)
-  - react-native-mapbox-gl (6.0.3):
+  - react-native-mapbox-gl (6.1.1):
     - React
   - React/Core (0.55.4):
     - yoga (= 0.55.4.React)
@@ -44,7 +44,7 @@ PODS:
   - yoga (0.55.4.React)
 
 DEPENDENCIES:
-  - react-native-mapbox-gl (from `../node_modules/@mapbox/react-native-mapbox-gl`)
+  - "react-native-mapbox-gl (from `../node_modules/@mapbox/react-native-mapbox-gl`)"
   - React/Core (from `../node_modules/react-native`)
   - React/DevSupport (from `../node_modules/react-native`)
   - React/RCTActionSheet (from `../node_modules/react-native`)
@@ -65,11 +65,11 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   React:
-    :path: ../node_modules/react-native
+    :path: "../node_modules/react-native"
   react-native-mapbox-gl:
-    :path: ../node_modules/@mapbox/react-native-mapbox-gl
+    :path: "../node_modules/@mapbox/react-native-mapbox-gl"
   yoga:
-    :path: ../node_modules/react-native/ReactCommon/yoga/Yoga.podspec
+    :path: "../node_modules/react-native/ReactCommon/yoga/Yoga.podspec"
 
 SPEC CHECKSUMS:
   React: aa2040dbb6f317b95314968021bd2888816e03d5
@@ -78,4 +78,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: f158ad4a0952350c1645873d602f10af6ca4b2b0
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

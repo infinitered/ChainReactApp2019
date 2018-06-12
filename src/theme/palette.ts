@@ -14,4 +14,6 @@ export const palette = {
   lighterGrey: "#CDD4DA",
   haiti: "#0F0F30",
   angry: "#dd3333",
+  purple: "#6600FF",
+  darkPurple: "#0F0F30",
 }
