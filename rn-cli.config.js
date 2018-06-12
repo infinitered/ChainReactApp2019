@@ -5,4 +5,7 @@ module.exports = {
   getSourceExts() {
     return ["ts", "tsx"]
   },
+  getAssetExts() {
+    return ["obj", "mtl", "JPG", "vrx", "hdr"]
+  },
 }

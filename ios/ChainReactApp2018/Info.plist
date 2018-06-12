@@ -48,6 +48,10 @@
 		<string>GothamRnd-MedItal.otf</string>
 		<string>GothamRnd-Medium.otf</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string></string>
+	<key>NSCameraUsageDescription</key>
+	<string>Need Camera access for AR feature</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

@@ -6,7 +6,12 @@ import { TabBar } from "./tab-bar"
 
 const navigation = {
   state: {
-    routes: [{ routeName: "schedule" }, { routeName: "venue" }, { routeName: "info" }],
+    routes: [
+      { routeName: "schedule" },
+      { routeName: "venue" },
+      { routeName: "info" },
+      { routeName: "ar" },
+    ],
   },
 }
 

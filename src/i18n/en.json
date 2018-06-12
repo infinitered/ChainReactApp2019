@@ -10,7 +10,8 @@
   "tabbar": {
     "schedule": "Schedule",
     "venue": "Venue",
-    "info": "Info"
+    "info": "Info",
+    "ar": "AR"
   },
   "welcomeScreen": {
     "header1": "Welcome to",
