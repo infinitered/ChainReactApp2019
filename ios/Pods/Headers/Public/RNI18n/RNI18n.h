@@ -1,0 +1,1 @@
+../../../../../node_modules/react-native-i18n/ios/RNI18n.h
