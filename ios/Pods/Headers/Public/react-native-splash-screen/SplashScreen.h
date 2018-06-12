@@ -1,0 +1,1 @@
+../../../../../node_modules/react-native-splash-screen/ios/SplashScreen.h

@@ -3,6 +3,8 @@ PODS:
     - React/Core (= 0.55.4)
   - react-native-mapbox-gl (6.0.3):
     - React
+  - react-native-splash-screen (3.0.6):
+    - React
   - React/Core (0.55.4):
     - yoga (= 0.55.4.React)
   - React/DevSupport (0.55.4):
@@ -41,10 +43,15 @@ PODS:
     - React/Core
     - React/fishhook
     - React/RCTBlob
+  - RNI18n (2.0.12):
+    - React
+  - RNKeychain (3.0.0-rc.3):
+    - React
   - yoga (0.55.4.React)
 
 DEPENDENCIES:
-  - react-native-mapbox-gl (from `../node_modules/@mapbox/react-native-mapbox-gl`)
+  - "react-native-mapbox-gl (from `../node_modules/@mapbox/react-native-mapbox-gl`)"
+  - react-native-splash-screen (from `../node_modules/react-native-splash-screen`)
   - React/Core (from `../node_modules/react-native`)
   - React/DevSupport (from `../node_modules/react-native`)
   - React/RCTActionSheet (from `../node_modules/react-native`)
@@ -61,21 +68,32 @@ DEPENDENCIES:
   - React/RCTText (from `../node_modules/react-native`)
   - React/RCTVibration (from `../node_modules/react-native`)
   - React/RCTWebSocket (from `../node_modules/react-native`)
+  - RNI18n (from `../node_modules/react-native-i18n`)
+  - RNKeychain (from `../node_modules/react-native-keychain`)
   - yoga (from `../node_modules/react-native/ReactCommon/yoga/Yoga.podspec`)
 
 EXTERNAL SOURCES:
   React:
-    :path: ../node_modules/react-native
+    :path: "../node_modules/react-native"
   react-native-mapbox-gl:
-    :path: ../node_modules/@mapbox/react-native-mapbox-gl
+    :path: "../node_modules/@mapbox/react-native-mapbox-gl"
+  react-native-splash-screen:
+    :path: "../node_modules/react-native-splash-screen"
+  RNI18n:
+    :path: "../node_modules/react-native-i18n"
+  RNKeychain:
+    :path: "../node_modules/react-native-keychain"
   yoga:
-    :path: ../node_modules/react-native/ReactCommon/yoga/Yoga.podspec
+    :path: "../node_modules/react-native/ReactCommon/yoga/Yoga.podspec"
 
 SPEC CHECKSUMS:
   React: aa2040dbb6f317b95314968021bd2888816e03d5
   react-native-mapbox-gl: b42480060cdcc515dfa3d8e403fb4dd32466a1b9
+  react-native-splash-screen: 8e3f866dc79bfe533baeffd0a38c33f7a7eae7f8
+  RNI18n: db9be06a40336f04d136f24dd5de3f5eb9f3207c
+  RNKeychain: 627c6095cef215dd3d9804a9a9cf45ab96aa3997
   yoga: a23273df0088bf7f2bb7e5d7b00044ea57a2a54a
 
-PODFILE CHECKSUM: f158ad4a0952350c1645873d602f10af6ca4b2b0
+PODFILE CHECKSUM: 3c9a421c6b841ea1d7bd404123c9d34ed84ce51d
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

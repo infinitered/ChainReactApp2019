@@ -1,0 +1,26 @@
+{
+  "name": "RNI18n",
+  "version": "2.0.12",
+  "description": "Provide I18n to your React Native application",
+  "homepage": "https://github.com/AlexanderZaytsev/react-native-i18n",
+  "summary": "React Native + i18n.js",
+  "license": "MIT",
+  "authors": {
+    "Alexander Zaytsev": "alexander@say26.com"
+  },
+  "platforms": {
+    "ios": "7.0",
+    "tvos": "9.0"
+  },
+  "source": {
+    "git": "https://github.com/AlexanderZaytsev/react-native-i18n.git",
+    "tag": "2.0.12"
+  },
+  "source_files": "ios/**/*.{h,m}",
+  "requires_arc": true,
+  "dependencies": {
+    "React": [
+
+    ]
+  }
+}

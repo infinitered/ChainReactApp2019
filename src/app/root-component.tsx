@@ -1,6 +1,7 @@
 import "../i18n"
 import * as React from "react"
-import { SafeAreaView, StatusBar, Platform, PlatformOSType } from "react-native"
+import { StatusBar, Platform } from "react-native"
+import SplashScreen from "react-native-splash-screen"
 import { setupRootStore } from "./setup-root-store"
 import { StatefulNavigator } from "../navigation"
 import { RootStore } from "../models/root-store"
@@ -30,6 +31,7 @@ export class RootComponent extends React.Component<{}, RootComponentState> {
     this.setState({
       rootStore: await setupRootStore(),
     })
+    SplashScreen.hide()
   }
 
   /**
