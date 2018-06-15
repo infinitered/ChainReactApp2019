@@ -15,12 +15,21 @@ import {
   ViroARImageMarker,
   ViroBox,
   ViroARTrackingTargets,
+  ViroPortal,
+  ViroPortalScene,
+  ViroImage,
 } from "react-viro"
 
-const BADGE_NOT_FOUND = 0
-const BADGE_ATTENDEE = 1
-const BADGE_SPEAKER = 2
-const BADGE_STAFF = 3
+const BADGE_NOT_FOUND = -1
+
+const BADGE_TYPES = [
+  "badges-final_attendee-front_v2",
+  "badges-final_speaker-front_v2",
+  "badges-final_staff-front_v3",
+  "badges-final_attendee-front_v3",
+  "badges-final_speaker-front_v3",
+  "badges-final_staff-front_v3",
+]
 
 export default class RecognizeBadgeScene extends Component {
   constructor() {
@@ -34,7 +43,6 @@ export default class RecognizeBadgeScene extends Component {
     // bind 'this' to functions
     this._getMarkers = this._getMarkers.bind(this)
     this._getARImageMarkerProps = this._getARImageMarkerProps.bind(this)
-    this._getTarget = this._getTarget.bind(this)
     this._getOnMarkerFoundCallback = this._getOnMarkerFoundCallback.bind(this)
     this._getExperience = this._getExperience.bind(this)
     this._onInitialized = this._onInitialized.bind(this)
@@ -56,12 +64,13 @@ export default class RecognizeBadgeScene extends Component {
    marker for that badge type w/ the experience.
    */
   _getMarkers() {
+    console.log("[Viro] getting markers, current found badge: " + this.state.foundBadgeType)
     if (this.state.foundBadgeType == BADGE_NOT_FOUND) {
-      return [
-        <ViroARImageMarker {...this._getARImageMarkerProps(BADGE_ATTENDEE)} />,
-        <ViroARImageMarker {...this._getARImageMarkerProps(BADGE_SPEAKER)} />,
-        <ViroARImageMarker {...this._getARImageMarkerProps(BADGE_STAFF)} />,
-      ]
+      let markers = []
+      for (var badgeType = 0; badgeType < BADGE_TYPES.length; badgeType++) {
+        markers.push(<ViroARImageMarker {...this._getARImageMarkerProps(badgeType)} />)
+      }
+      return markers
     } else {
       return [
         <ViroARImageMarker {...this._getARImageMarkerProps(this.state.foundBadgeType)}>
@@ -74,23 +83,16 @@ export default class RecognizeBadgeScene extends Component {
   _getARImageMarkerProps(badgeType) {
     return {
       key: badgeType,
-      target: this._getTarget(badgeType),
+      target: BADGE_TYPES[badgeType],
       onAnchorFound: this._getOnMarkerFoundCallback(badgeType),
-    }
-  }
-
-  _getTarget(badgeType) {
-    if (badgeType == BADGE_SPEAKER) {
-      return "badge_speaker"
-    } else if (badgeType == BADGE_STAFF) {
-      return "badge_staff"
-    } else {
-      return "badge_attendee"
     }
   }
 
   _getOnMarkerFoundCallback(badgeType) {
     return () => {
+      // notify the parent view that the badge was found
+      this.props.onBadgeFound()
+      console.log("[Viro] found badge: " + badgeType)
       this.setState({ foundBadgeType: badgeType })
     }
   }
@@ -100,16 +102,34 @@ export default class RecognizeBadgeScene extends Component {
    */
   _getExperience() {
     return (
-      <Viro3DObject source={require("./res/cr_map.vrx")} type={"VRX"} scale={[0.1, 0.1, 0.1]} />
+      <ViroNode scale={[0.015, 0.015, 0.015]}>
+        <Viro3DObject source={require("./res/cr_map.vrx")} type={"VRX"} />
+        <ViroPortalScene>
+          <ViroPortal>
+            <Viro3DObject
+              source={require("./res/cr_portal.vrx")}
+              type={"VRX"}
+              resources={[require("./res/cr_box.png")]}
+            />
+          </ViroPortal>
+
+          <Viro3DObject
+            source={require("./res/cr_shadowbox.vrx")}
+            type={"VRX"}
+            resources={[require("./res/cr_box.png")]}
+          />
+        </ViroPortalScene>
+      </ViroNode>
     )
   }
 
-  // TODO: Add some UI instructions for initialization
   _onInitialized(state, reason) {
     if (state == ViroConstants.TRACKING_NORMAL) {
       // Handle resumption of tracking
+      this.props.onARInitialized(true)
     } else if (state == ViroConstants.TRACKING_NONE) {
       // Handle loss of tracking
+      this.props.onARInitialized(false)
     }
   }
 }
@@ -137,6 +157,51 @@ ViroARTrackingTargets.createTargets({
   },
   badge_staff: {
     source: require("./res/badge_staff.jpg"),
+    orientation: "Up",
+    physicalWidth: 0.09525, // 3.75 inches wide
+  },
+  "badges-final_attendee-back": {
+    source: require("./res/badges-final_attendee-back.png"),
+    orientation: "Up",
+    physicalWidth: 0.09525, // 3.75 inches wide
+  },
+  "badges-final_speaker-back": {
+    source: require("./res/badges-final_speaker-back.png"),
+    orientation: "Up",
+    physicalWidth: 0.09525, // 3.75 inches wide
+  },
+  "badges-final_staff-back": {
+    source: require("./res/badges-final_staff-back.png"),
+    orientation: "Up",
+    physicalWidth: 0.09525, // 3.75 inches wide
+  },
+  "badges-final_attendee-front_v2": {
+    source: require("./res/badges-final_attendee-front_v2.png"),
+    orientation: "Up",
+    physicalWidth: 0.09525, // 3.75 inches wide
+  },
+  "badges-final_speaker-front_v2": {
+    source: require("./res/badges-final_speaker-front_v2.png"),
+    orientation: "Up",
+    physicalWidth: 0.09525, // 3.75 inches wide
+  },
+  "badges-final_staff-front_v2": {
+    source: require("./res/badges-final_staff-front_v2.png"),
+    orientation: "Up",
+    physicalWidth: 0.09525, // 3.75 inches wide
+  },
+  "badges-final_attendee-front_v3": {
+    source: require("./res/badges-final_attendee-front_v3.png"),
+    orientation: "Up",
+    physicalWidth: 0.09525, // 3.75 inches wide
+  },
+  "badges-final_speaker-front_v3": {
+    source: require("./res/badges-final_speaker-front_v3.png"),
+    orientation: "Up",
+    physicalWidth: 0.09525, // 3.75 inches wide
+  },
+  "badges-final_staff-front_v3": {
+    source: require("./res/badges-final_staff-front_v3.png"),
     orientation: "Up",
     physicalWidth: 0.09525, // 3.75 inches wide
   },

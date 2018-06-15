@@ -1,85 +1,132 @@
 import * as React from "react"
-import { TextStyle, ViewStyle, View, TouchableHighlight, StyleSheet, Text } from "react-native"
+import {
+  ViewStyle,
+  View,
+  TouchableHighlight,
+  Image,
+  Animated,
+  Easing,
+  Dimensions,
+} from "react-native"
 import { NavigationScreenProps } from "react-navigation"
-import { Screen } from "../../shared/screen"
-import { palette } from "../../../theme/palette"
-import { spacing } from "../../../theme/spacing"
 import { ViroARSceneNavigator } from "react-viro"
-import { Button } from "../../shared/button"
-import { Footer } from "../../shared/footer"
+import ARInitializationUI from "./arscenes/ARInitializationUI.js"
 
 export interface ARScreenProps extends NavigationScreenProps<{}> {}
 
-const TITLE: TextStyle = {
-  marginTop: spacing.extraLarge,
-  marginLeft: spacing.large,
+const exitButton: ViewStyle = {
+  position: "absolute",
+  height: 60,
+  width: 60,
+  paddingTop: 15,
+  paddingLeft: 15,
 }
 
-const button: ViewStyle = {
-  height: 80,
-  width: 150,
-  paddingTop: 20,
-  paddingBottom: 20,
-  marginTop: 10,
-  marginBottom: 10,
-  backgroundColor: "#68a0cf",
-  borderRadius: 10,
-  borderWidth: 1,
-  borderColor: "#fff",
-  alignSelf: "center",
-}
-
-const screen: ViewStyle = {
-  flex: 1,
+const arInitUIContainer: ViewStyle = {
+  position: "absolute",
   justifyContent: "center",
   alignItems: "center",
+  flexDirection: "row",
+  width: "100%", // Dimensions.get('window').width,
+  height: "100%", // Dimensions.get('window').height,
 }
 
-const buttonText: TextStyle = {
-  color: "#fff",
-  textAlign: "center",
-  fontSize: 20,
-}
-
-const exitButtonContainer: ViewStyle = {
-  position: "absolute",
-  bottom: 20,
+const arInitializationUIStyle: ViewStyle = {
+  left: 0,
+  right: 0,
+  width: "100%",
+  height: 140,
+  flexDirection: "column",
+  justifyContent: "space-between",
   alignItems: "center",
-  alignSelf: "center",
 }
 
-export class ARTab extends React.Component {
-  enterARScreen = () => this.props.navigation.navigate("arscreen")
-
-  render() {
-    return (
-      <View style={screen} backgroundColor={palette.portGore}>
-        <TouchableHighlight style={button} onPress={this.enterARScreen} underlayColor={"#68a0ff"}>
-          <Text style={buttonText}>Enter AR!</Text>
-        </TouchableHighlight>
-      </View>
-    )
-  }
+const overlayImage: ViewStyle = {
+  flex: 1,
+  position: "absolute",
+  left: 0,
+  top: 0,
+  resizeMode: "cover",
+  width: "100%", // Dimensions.get('window').width,
+  height: "100%", // Dimensions.get('window').height,
 }
 
 export class ARScreen extends React.Component<ARScreenProps, {}> {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      arInitialized: false,
+      hasBadgeBeenFound: false,
+      badgeOpacity: new Animated.Value(1),
+    }
+
+    this.onARInitialized = this.onARInitialized.bind(this)
+    this.onBadgeFound = this.onBadgeFound.bind(this)
+    this.getBadgeFrame = this.getBadgeFrame.bind(this)
+  }
+
+  onARInitialized(initialized: boolean) {
+    this.setState({
+      arInitialized: initialized,
+    })
+  }
+
+  onBadgeFound() {
+    Animated.timing(this.state.badgeOpacity, {
+      toValue: 0,
+      duration: 1000,
+      easing: Easing.linear,
+    }).start(() => {
+      // set the state once the animation finishes
+      this.setState({
+        hasBadgeBeenFound: true,
+      })
+    })
+  }
+
+  getBadgeFrame() {
+    if (!this.state.hasBadgeBeenFound) {
+      return (
+        <Animated.Image
+          style={{ ...overlayImage, opacity: this.state.badgeOpacity }}
+          source={require("./res/badge_frame.png")}
+        />
+      )
+    }
+  }
+
   render() {
     return (
       <View style={{ flex: 1 }}>
         <ViroARSceneNavigator
-          apiKey={"API_KEY_HERE"}
-          initialScene={{ scene: require("./arscenes/RecognizeBadgeScene") }}
+          apiKey={"94B48744-8E99-4F49-BD71-845EAE94F5B4"}
+          initialScene={{
+            scene: require("./arscenes/RecognizeBadgeScene"),
+            passProps: {
+              onARInitialized: this.onARInitialized,
+              onBadgeFound: this.onBadgeFound,
+            },
+          }}
         />
 
-        <View style={exitButtonContainer}>
-          <TouchableHighlight
-            style={button}
-            onPress={() => this.props.navigation.goBack()}
-            underlayColor={"#00000000"}
-          >
-            <Text style={buttonText}>Exit</Text>
-          </TouchableHighlight>
+        {this.getBadgeFrame()}
+
+        <View style={arInitUIContainer}>
+          <ARInitializationUI
+            style={arInitializationUIStyle}
+            arSceneInitialized={this.state.arInitialized}
+          />
         </View>
+
+        <TouchableHighlight
+          style={exitButton}
+          onPress={() => this.props.navigation.goBack()}
+          activeOpacity={0.6}
+          underlayColor={"#00000000"}
+        >
+          <Image source={require("./res/btn_close.png")} />
+        </TouchableHighlight>
       </View>
     )
   }
