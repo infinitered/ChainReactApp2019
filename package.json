@@ -24,6 +24,7 @@
     "apollo-boost": "^0.1.9",
     "date-fns": "^1.29.0",
     "graphql": "^0.13.2",
+    "lottie-react-native": "2.3.2",
     "mobx": "^4.1.0",
     "mobx-react": "^5.0.0",
     "mobx-state-tree": "^2.0.3",

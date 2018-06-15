@@ -145,6 +145,7 @@ dependencies {
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:26.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules
+    compile project(':lottie-react-native')
     compile project(':arcore_client') // remove this if AR not required
     compile project(':gvr_common')
     compile project(path: ':viro_renderer')

@@ -2,6 +2,7 @@ package com.chainreactapp2018;
 
 import android.app.Application;
 
+import com.airbnb.android.react.lottie.LottiePackage;
 import com.facebook.react.ReactApplication;
 import com.oblador.keychain.KeychainPackage;
 import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
@@ -11,7 +12,6 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
-import com.mapbox.rctmgl.RCTMGLPackage;
 import com.viromedia.bridge.ReactViroPackage;
 
 import java.util.Arrays;
@@ -33,7 +33,8 @@ public class MainApplication extends Application implements ReactApplication {
         new RNI18nPackage(),
         new RCTMGLPackage(),
         new SplashScreenReactPackage(),
-        new ReactViroPackage(ReactViroPackage.ViroPlatform.GVR)
+        new ReactViroPackage(ReactViroPackage.ViroPlatform.GVR),
+        new LottiePackage()
       );
     }
 
