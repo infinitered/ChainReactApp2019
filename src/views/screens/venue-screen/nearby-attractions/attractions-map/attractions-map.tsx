@@ -1,6 +1,6 @@
 import * as React from "react"
 import Mapbox from "@mapbox/react-native-mapbox-gl"
-import { View, ViewStyle } from "react-native"
+import { View, ViewStyle, TouchableWithoutFeedback } from "react-native"
 import { AttractionsMapCallout } from "../attractions-map-callout"
 import { color } from "../../../../../theme"
 import { unnest } from "ramda"
@@ -26,7 +26,7 @@ const VENUE_MARKER: ViewStyle = { width: 41, height: 66 }
 
 const ATTRACTION_MARKER: ViewStyle = { width: 18, height: 32 }
 
-export class AttractionsMap extends React.Component<{}, {}> {
+export class AttractionsMap extends React.Component<{}, AttractionsMapState> {
   mapView: any
   state = {
     selected: null,
@@ -37,7 +37,7 @@ export class AttractionsMap extends React.Component<{}, {}> {
   renderLocation = (key, location) => {
     const markerDimensions = key === "locations" ? VENUE_MARKER : ATTRACTION_MARKER
     const locationId = `${location.id}-${key}`
-    const isSelected = this.state.selected && this.state.selected === locationId
+    const isSelected = this.state.selected === locationId
     return (
       <Mapbox.PointAnnotation
         key={locationId}
@@ -45,9 +45,10 @@ export class AttractionsMap extends React.Component<{}, {}> {
         title={location.properties.place_name}
         coordinate={location.geometry.coordinates}
         selected={isSelected}
-        onSelected={_ => this.setState({ selected: locationId })}
       >
-        <View style={[HIDDEN_MARKER, markerDimensions]} />
+        <TouchableWithoutFeedback onPress={() => this.setState({ selected: locationId })}>
+          <View style={[HIDDEN_MARKER, markerDimensions]} />
+        </TouchableWithoutFeedback>
         <AttractionsMapCallout
           title={location.properties.place_name}
           description={location.properties.place_description}

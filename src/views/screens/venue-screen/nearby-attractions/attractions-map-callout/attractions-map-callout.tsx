@@ -1,8 +1,16 @@
 import * as React from "react"
 import Mapbox from "@mapbox/react-native-mapbox-gl"
-import { View, ViewStyle, Image, TextStyle, TouchableOpacity, Linking } from "react-native"
+import {
+  View,
+  ViewStyle,
+  Image,
+  ImageStyle,
+  TextStyle,
+  TouchableOpacity,
+  Linking,
+} from "react-native"
 import { Text } from "../../../../shared/text"
-import { color, spacing } from "../../../../../theme"
+import { color, spacing, SCREEN_WIDTH } from "../../../../../theme"
 import { CLOSE_ICON } from "./"
 
 export interface AttractionsMapCalloutProps {
@@ -19,7 +27,7 @@ const CALLOUT_CONTAINER: ViewStyle = {
 }
 
 const CALLOUT_CONTENT_CONTAINER: ViewStyle = {
-  width: 300,
+  width: SCREEN_WIDTH * 0.9,
   padding: spacing.large,
   backgroundColor: color.callout,
   shadowColor: color.calloutShadow,
@@ -44,6 +52,8 @@ const CALLOUT_ARROW: ViewStyle = {
   borderBottomColor: "transparent",
   borderLeftColor: "transparent",
 }
+
+const CALLOUT_INFO: ViewStyle = { flex: 1 }
 
 const TITLE: TextStyle = {
   fontSize: 14,
@@ -71,6 +81,23 @@ const DIRECTIONS: TextStyle = {
   fontWeight: "500",
 }
 
+const CLOSE_TOUCHABLE: ViewStyle = {
+  paddingLeft: spacing.large,
+  paddingBottom: spacing.large,
+}
+
+const CLOSE_IMAGE: ImageStyle = {
+  width: 14,
+  height: 14,
+}
+
+const HIT_SLOP = {
+  top: spacing.large,
+  right: spacing.large,
+  bottom: spacing.large,
+  left: spacing.large,
+}
+
 export class AttractionsMapCallout extends React.Component<AttractionsMapCalloutProps, {}> {
   renderLink = link => {
     const openLink = () => {
@@ -91,25 +118,18 @@ export class AttractionsMapCallout extends React.Component<AttractionsMapCallout
       <Mapbox.Callout>
         <View style={CALLOUT_CONTAINER}>
           <View style={CALLOUT_CONTENT_CONTAINER}>
-            <View
-              style={{
-                marginRight: spacing.large,
-                flex: 1,
-              }}
-            >
+            <View style={CALLOUT_INFO}>
               <Text style={TITLE} text={this.props.title.toUpperCase()} />
               <Text style={DESCRIPTION} text={this.props.description} />
               {this.renderLink(this.props.link)}
             </View>
             <View>
-              <TouchableOpacity onPress={this.props.onPressClose}>
-                <Image
-                  source={CLOSE_ICON}
-                  style={{
-                    width: 14,
-                    height: 14,
-                  }}
-                />
+              <TouchableOpacity
+                style={CLOSE_TOUCHABLE}
+                onPress={this.props.onPressClose}
+                hitSlop={HIT_SLOP}
+              >
+                <Image source={CLOSE_ICON} style={CLOSE_IMAGE} />
               </TouchableOpacity>
             </View>
           </View>
