@@ -13,6 +13,11 @@ const BASE_VIEW: ViewStyle = {
   alignItems: "center",
 }
 
+const DARK_BASE_VIEW: ViewStyle = {
+  backgroundColor: color.palette.vintageRock,
+  paddingVertical: spacing.small,
+}
+
 const BASE_TEXT: TextStyle = {
   paddingHorizontal: spacing[3],
 }
@@ -24,13 +29,15 @@ const BASE_TEXT: TextStyle = {
  */
 export const viewPresets = {
   /**
-   * A smaller piece of secondard information.
+   * A smaller piece of secondary information.
    */
   primary: { ...BASE_VIEW, backgroundColor: color.palette.crimson } as ViewStyle,
+  dark: { ...BASE_VIEW, ...DARK_BASE_VIEW } as ViewStyle,
 }
 
 export const textPresets = {
   primary: { ...BASE_TEXT, fontSize: 9, color: color.palette.white } as TextStyle,
+  dark: { ...BASE_TEXT, fontSize: 14, color: color.palette.shamrock } as TextStyle,
 }
 
 /**

@@ -1,5 +1,4 @@
 import { Platform } from "react-native"
-
 /**
  * Just the font names.
  *
@@ -9,10 +8,16 @@ export const typography = {
   /**
    * The primary font.  Used in most places.
    */
-  primary: Platform.select({ ios: "Avenir", android: "Roboto" }),
+  primary: Platform.select({
+    ios: "Gotham Rounded",
+    android: "gothamrounded",
+  }),
 
   /**
    * An alternate font used for perhaps titles and stuff.
    */
-  secondary: Platform.select({ ios: "Avenir", android: "Roboto" }),
+  secondary: Platform.select({
+    ios: "Gotham Rounded",
+    android: "gothamrounded",
+  }),
 }

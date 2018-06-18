@@ -35,6 +35,17 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>GothamRnd-Bold.otf</string>
+		<string>GothamRnd-BoldItal.otf</string>
+		<string>GothamRnd-Book.otf</string>
+		<string>GothamRnd-BookItal.otf</string>
+		<string>GothamRnd-Light.otf</string>
+		<string>GothamRnd-LightItal.otf</string>
+		<string>GothamRnd-MedItal.otf</string>
+		<string>GothamRnd-Medium.otf</string>
+	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>UIRequiredDeviceCapabilities</key>

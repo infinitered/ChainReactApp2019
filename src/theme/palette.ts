@@ -10,8 +10,11 @@ export const palette = {
   waterloo: "#878794",
   martinique: "#2C2C4C",
   shamrock: "#56E39F",
+  vintageRock: "rgba(86,227,159,0.20)",
   lightGrey: "#E6EAF4",
   lighterGrey: "#CDD4DA",
   haiti: "#0F0F30",
   angry: "#dd3333",
+  purple: "#6600FF",
+  darkPurple: "#0F0F30",
 }
