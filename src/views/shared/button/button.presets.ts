@@ -24,13 +24,15 @@ const BASE_TEXT: TextStyle = {
  */
 export const viewPresets = {
   /**
-   * A smaller piece of secondard information.
+   * A smaller piece of secondary information.
    */
   primary: { ...BASE_VIEW, backgroundColor: color.palette.crimson } as ViewStyle,
+  dark: { ...BASE_VIEW, backgroundColor: color.palette.vintageRock, borderRadius: 0 } as ViewStyle,
 }
 
 export const textPresets = {
   primary: { ...BASE_TEXT, fontSize: 9, color: color.palette.white } as TextStyle,
+  dark: { ...BASE_TEXT, fontSize: 14, color: color.palette.shamrock } as TextStyle,
 }
 
 /**

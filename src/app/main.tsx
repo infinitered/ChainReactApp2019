@@ -14,7 +14,7 @@ const APP_NAME = "ChainReactApp2018"
 // Should we show storybook instead of our app?
 //
 // ⚠️ Leave this as `false` when checking into git.
-const SHOW_STORYBOOK = false
+const SHOW_STORYBOOK = true
 
 if (SHOW_STORYBOOK && __DEV__) {
   // 🎗 REMINDER: Storybook has a server you need to run from a terminal window.
