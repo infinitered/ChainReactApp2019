@@ -15,4 +15,9 @@ export class Environment {
    * Our api.
    */
   api: Api
+
+  /**
+   * Our graphql client.
+   */
+  graphql: any
 }
