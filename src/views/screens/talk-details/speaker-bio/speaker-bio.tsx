@@ -5,6 +5,11 @@ import { SocialButton } from "../../../shared/social-button"
 import { palette } from "../../../../theme/palette"
 import { spacing } from "../../../../theme/spacing"
 
+export interface SpeakerBioProps {
+  speaker: any
+  last?: boolean
+}
+
 const ROOT: ViewStyle = {
   width: "100%",
   marginTop: spacing.extraLarge + spacing.large,
@@ -19,13 +24,18 @@ const NAME: ViewStyle = {
 const SOCIAL_WRAPPER: ViewStyle = {
   flexDirection: "row",
   marginTop: spacing.large + spacing.small,
+}
+
+const SOCIAL_WRAPPER_LAST: ViewStyle = {
   marginBottom: spacing.ginormous + spacing.large,
 }
 
-export class SpeakerBio extends React.Component<{ speaker: any }, {}> {
+export class SpeakerBio extends React.Component<SpeakerBioProps, {}> {
   render() {
     const { name, bio, links } = this.props.speaker
+    const { last = true } = this.props
     const splitName = name.split(" ")
+    const socialStyles = [SOCIAL_WRAPPER, last && SOCIAL_WRAPPER_LAST]
     return (
       <View style={ROOT}>
         <Text
@@ -34,7 +44,7 @@ export class SpeakerBio extends React.Component<{ speaker: any }, {}> {
           style={{ color: palette.shamrock }}
         />
         <Text text={bio} preset="body" style={{ fontSize: 16, marginTop: spacing.large }} />
-        <View style={SOCIAL_WRAPPER}>
+        <View style={socialStyles}>
           {Object.keys(links).map(k => {
             return k === "websites"
               ? links[k].map(link => this.renderLink("website", link))
