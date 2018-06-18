@@ -121,7 +121,7 @@ exports[`Storyshots Attraction Props 1`] = `
                   style={
                     Object {
                       "color": "#ffffff",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
                       "lineHeight": 17,
                     }
@@ -198,7 +198,7 @@ exports[`Storyshots Attraction Props 1`] = `
                 style={
                   Object {
                     "color": "#C7C4DB",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 13,
                   }
                 }
@@ -366,7 +366,7 @@ exports[`Storyshots AttractionsList Props 1`] = `
                     style={
                       Object {
                         "color": "#56E39F",
-                        "fontFamily": "Avenir",
+                        "fontFamily": "Gotham Rounded",
                         "fontSize": 11,
                       }
                     }
@@ -408,7 +408,7 @@ exports[`Storyshots AttractionsList Props 1`] = `
                     style={
                       Object {
                         "color": "#C7C4DB",
-                        "fontFamily": "Avenir",
+                        "fontFamily": "Gotham Rounded",
                         "fontSize": 11,
                       }
                     }
@@ -450,7 +450,7 @@ exports[`Storyshots AttractionsList Props 1`] = `
                     style={
                       Object {
                         "color": "#C7C4DB",
-                        "fontFamily": "Avenir",
+                        "fontFamily": "Gotham Rounded",
                         "fontSize": 11,
                       }
                     }
@@ -492,7 +492,7 @@ exports[`Storyshots AttractionsList Props 1`] = `
                     style={
                       Object {
                         "color": "#C7C4DB",
-                        "fontFamily": "Avenir",
+                        "fontFamily": "Gotham Rounded",
                         "fontSize": 11,
                       }
                     }
@@ -530,7 +530,7 @@ exports[`Storyshots AttractionsList Props 1`] = `
                       style={
                         Object {
                           "color": "#ffffff",
-                          "fontFamily": "Avenir",
+                          "fontFamily": "Gotham Rounded",
                           "fontSize": 14,
                           "lineHeight": 17,
                         }
@@ -607,7 +607,7 @@ exports[`Storyshots AttractionsList Props 1`] = `
                     style={
                       Object {
                         "color": "#C7C4DB",
-                        "fontFamily": "Avenir",
+                        "fontFamily": "Gotham Rounded",
                         "fontSize": 13,
                       }
                     }
@@ -638,7 +638,7 @@ Portland, OR 97204
                       style={
                         Object {
                           "color": "#ffffff",
-                          "fontFamily": "Avenir",
+                          "fontFamily": "Gotham Rounded",
                           "fontSize": 14,
                           "lineHeight": 17,
                         }
@@ -715,7 +715,7 @@ Portland, OR 97204
                     style={
                       Object {
                         "color": "#C7C4DB",
-                        "fontFamily": "Avenir",
+                        "fontFamily": "Gotham Rounded",
                         "fontSize": 13,
                       }
                     }
@@ -746,7 +746,7 @@ Portland, OR 97210
                       style={
                         Object {
                           "color": "#ffffff",
-                          "fontFamily": "Avenir",
+                          "fontFamily": "Gotham Rounded",
                           "fontSize": 14,
                           "lineHeight": 17,
                         }
@@ -823,7 +823,7 @@ Portland, OR 97210
                     style={
                       Object {
                         "color": "#C7C4DB",
-                        "fontFamily": "Avenir",
+                        "fontFamily": "Gotham Rounded",
                         "fontSize": 13,
                       }
                     }
@@ -854,7 +854,7 @@ Portland, OR 97205
                       style={
                         Object {
                           "color": "#ffffff",
-                          "fontFamily": "Avenir",
+                          "fontFamily": "Gotham Rounded",
                           "fontSize": 14,
                           "lineHeight": 17,
                         }
@@ -931,7 +931,7 @@ Portland, OR 97205
                     style={
                       Object {
                         "color": "#C7C4DB",
-                        "fontFamily": "Avenir",
+                        "fontFamily": "Gotham Rounded",
                         "fontSize": 13,
                       }
                     }
@@ -1101,7 +1101,7 @@ exports[`Storyshots Button Style Presets 1`] = `
                 style={
                   Object {
                     "color": "#ffffff",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 9,
                     "paddingHorizontal": undefined,
                   }
@@ -1237,7 +1237,7 @@ exports[`Storyshots Button Style Presets 1`] = `
                 style={
                   Object {
                     "color": "#ffffff",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 9,
                     "paddingHorizontal": undefined,
                   }
@@ -1417,7 +1417,7 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
                 style={
                   Object {
                     "color": "#1d1d1d",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                     "paddingLeft": undefined,
                   }
@@ -1575,7 +1575,7 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
                 style={
                   Object {
                     "color": "#1d1d1d",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                     "paddingLeft": undefined,
                   }
@@ -1723,7 +1723,7 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
                 style={
                   Object {
                     "color": "#1d1d1d",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                     "paddingLeft": undefined,
                   }
@@ -1904,7 +1904,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                   style={
                     Object {
                       "color": "#1d1d1d",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 15,
                       "paddingLeft": undefined,
                     }
@@ -2057,7 +2057,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                   style={
                     Object {
                       "color": "#1d1d1d",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 15,
                       "paddingLeft": undefined,
                     }
@@ -2207,7 +2207,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                   style={
                     Object {
                       "color": "#1d1d1d",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 15,
                       "paddingLeft": undefined,
                     }
@@ -2357,7 +2357,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                   style={
                     Object {
                       "color": "#1d1d1d",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 15,
                       "paddingLeft": undefined,
                     }
@@ -2612,7 +2612,7 @@ exports[`Storyshots Footer Presets 1`] = `
                 style={
                   Object {
                     "color": "#C7C4DB",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 18,
                     "lineHeight": 32,
                   }
@@ -2761,7 +2761,7 @@ exports[`Storyshots FormRow Assembled 1`] = `
                 style={
                   Object {
                     "color": "#E6EAF4",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 13,
                   }
                 }
@@ -2786,7 +2786,7 @@ exports[`Storyshots FormRow Assembled 1`] = `
                 style={
                   Object {
                     "color": "#1d1d1d",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
                 }
@@ -2811,7 +2811,7 @@ exports[`Storyshots FormRow Assembled 1`] = `
                 style={
                   Object {
                     "color": "#E6EAF4",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 9,
                   }
                 }
@@ -2837,7 +2837,7 @@ exports[`Storyshots FormRow Assembled 1`] = `
                 style={
                   Object {
                     "color": "#1d1d1d",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
                 }
@@ -2950,7 +2950,7 @@ exports[`Storyshots FormRow Assembled 1`] = `
                 style={
                   Object {
                     "color": "#1d1d1d",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
                 }
@@ -2975,7 +2975,7 @@ exports[`Storyshots FormRow Assembled 1`] = `
                 style={
                   Object {
                     "color": "#1d1d1d",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
                 }
@@ -3001,7 +3001,7 @@ exports[`Storyshots FormRow Assembled 1`] = `
                 style={
                   Object {
                     "color": "#1d1d1d",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
                 }
@@ -3149,7 +3149,7 @@ exports[`Storyshots FormRow Presets 1`] = `
                 style={
                   Object {
                     "color": "#1d1d1d",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
                 }
@@ -3163,7 +3163,7 @@ exports[`Storyshots FormRow Presets 1`] = `
                 style={
                   Object {
                     "color": "#1d1d1d",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
                 }
@@ -3277,7 +3277,7 @@ exports[`Storyshots FormRow Presets 1`] = `
                 style={
                   Object {
                     "color": "#1d1d1d",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
                 }
@@ -3392,7 +3392,7 @@ exports[`Storyshots FormRow Presets 1`] = `
                 style={
                   Object {
                     "color": "#1d1d1d",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
                 }
@@ -3406,7 +3406,7 @@ exports[`Storyshots FormRow Presets 1`] = `
                 style={
                   Object {
                     "color": "#1d1d1d",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
                 }
@@ -3520,7 +3520,7 @@ exports[`Storyshots FormRow Presets 1`] = `
                 style={
                   Object {
                     "color": "#1d1d1d",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
                 }
@@ -3633,7 +3633,7 @@ exports[`Storyshots FormRow Presets 1`] = `
                 style={
                   Object {
                     "color": "#1d1d1d",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
                 }
@@ -3746,7 +3746,7 @@ exports[`Storyshots FormRow Presets 1`] = `
                 style={
                   Object {
                     "color": "#1d1d1d",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
                 }
@@ -3890,7 +3890,7 @@ exports[`Storyshots GerdingTheater Presets 1`] = `
                 style={
                   Object {
                     "color": "#ffffff",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 28,
                     "fontWeight": "500",
                     "lineHeight": 35,
@@ -3907,7 +3907,7 @@ exports[`Storyshots GerdingTheater Presets 1`] = `
                 style={
                   Object {
                     "color": "#C7C4DB",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 18,
                     "lineHeight": 32,
                     "marginTop": 20,
@@ -4040,7 +4040,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                 style={
                   Object {
                     "color": "#ffffff",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 28,
                     "fontWeight": "500",
                     "lineHeight": 35,
@@ -4056,7 +4056,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                 style={
                   Object {
                     "color": "#C7C4DB",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 28,
                     "fontWeight": "500",
                     "lineHeight": 35,
@@ -4072,7 +4072,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                 style={
                   Object {
                     "color": "#56E39F",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 14,
                     "lineHeight": 17,
                     "marginTop": 78,
@@ -4088,7 +4088,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                 style={
                   Object {
                     "color": "#C7C4DB",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 18,
                     "lineHeight": 32,
                     "marginTop": 20,
@@ -4104,7 +4104,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                 style={
                   Object {
                     "color": "#C7C4DB",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 18,
                     "lineHeight": 32,
                     "marginTop": 20,
@@ -4131,7 +4131,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                   style={
                     Object {
                       "color": "#C7C4DB",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
                       "lineHeight": 17,
                       "marginLeft": 20,
@@ -4160,7 +4160,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                   style={
                     Object {
                       "color": "#C7C4DB",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
                       "lineHeight": 17,
                       "marginLeft": 20,
@@ -4321,7 +4321,7 @@ exports[`Storyshots PresentedBy Presets 1`] = `
                 style={
                   Object {
                     "color": "#C7C4DB",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 11,
                   }
                 }
@@ -5561,7 +5561,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                   style={
                     Object {
                       "color": "#56E39F",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 11,
                     }
                   }
@@ -5617,7 +5617,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                     style={
                       Object {
                         "color": "#ffffff",
-                        "fontFamily": "Avenir",
+                        "fontFamily": "Gotham Rounded",
                         "fontSize": 16,
                         "fontWeight": "500",
                         "lineHeight": 32,
@@ -5633,7 +5633,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                     style={
                       Object {
                         "color": "#C7C4DB",
-                        "fontFamily": "Avenir",
+                        "fontFamily": "Gotham Rounded",
                         "fontSize": 16,
                         "fontWeight": "300",
                         "lineHeight": 27,
@@ -5777,7 +5777,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                   style={
                     Object {
                       "color": "#56E39F",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 11,
                     }
                   }
@@ -5833,7 +5833,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                     style={
                       Object {
                         "color": "#ffffff",
-                        "fontFamily": "Avenir",
+                        "fontFamily": "Gotham Rounded",
                         "fontSize": 16,
                         "fontWeight": "500",
                         "lineHeight": 32,
@@ -5849,7 +5849,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                     style={
                       Object {
                         "color": "#C7C4DB",
-                        "fontFamily": "Avenir",
+                        "fontFamily": "Gotham Rounded",
                         "fontSize": 16,
                         "fontWeight": "300",
                         "lineHeight": 27,
@@ -5993,7 +5993,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                   style={
                     Object {
                       "color": "#56E39F",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 11,
                     }
                   }
@@ -6035,7 +6035,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                     style={
                       Object {
                         "color": "#ffffff",
-                        "fontFamily": "Avenir",
+                        "fontFamily": "Gotham Rounded",
                         "fontSize": 16,
                         "fontWeight": "500",
                         "lineHeight": 32,
@@ -6179,7 +6179,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                   style={
                     Object {
                       "color": "#56E39F",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 11,
                       "width": 100,
                     }
@@ -6194,7 +6194,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                   style={
                     Object {
                       "color": "#56E39F",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 11,
                     }
                   }
@@ -6250,7 +6250,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                     style={
                       Object {
                         "color": "#ffffff",
-                        "fontFamily": "Avenir",
+                        "fontFamily": "Gotham Rounded",
                         "fontSize": 16,
                         "fontWeight": "500",
                         "lineHeight": 32,
@@ -6266,7 +6266,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                     style={
                       Object {
                         "color": "#C7C4DB",
-                        "fontFamily": "Avenir",
+                        "fontFamily": "Gotham Rounded",
                         "fontSize": 16,
                         "fontWeight": "300",
                         "lineHeight": 27,
@@ -6410,7 +6410,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                   style={
                     Object {
                       "color": "#56E39F",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 11,
                     }
                   }
@@ -6466,7 +6466,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                     style={
                       Object {
                         "color": "#ffffff",
-                        "fontFamily": "Avenir",
+                        "fontFamily": "Gotham Rounded",
                         "fontSize": 16,
                         "fontWeight": "500",
                         "lineHeight": 32,
@@ -6482,7 +6482,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                     style={
                       Object {
                         "color": "#C7C4DB",
-                        "fontFamily": "Avenir",
+                        "fontFamily": "Gotham Rounded",
                         "fontSize": 16,
                         "fontWeight": "300",
                         "lineHeight": 27,
@@ -6531,7 +6531,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                       style={
                         Object {
                           "color": "#ffffff",
-                          "fontFamily": "Avenir",
+                          "fontFamily": "Gotham Rounded",
                           "fontSize": 14,
                           "paddingHorizontal": undefined,
                         }
@@ -6711,7 +6711,7 @@ exports[`Storyshots ScheduleNav Presets 1`] = `
                   style={
                     Object {
                       "color": "#0F0F30",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
                       "lineHeight": 17,
                     }
@@ -6760,7 +6760,7 @@ exports[`Storyshots ScheduleNav Presets 1`] = `
                   style={
                     Object {
                       "color": "#0F0F30",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
                       "lineHeight": 17,
                     }
@@ -6809,7 +6809,7 @@ exports[`Storyshots ScheduleNav Presets 1`] = `
                   style={
                     Object {
                       "color": "#0F0F30",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
                       "lineHeight": 17,
                     }
@@ -6955,7 +6955,7 @@ exports[`Storyshots ScheduleNav Presets 1`] = `
                   style={
                     Object {
                       "color": "#0F0F30",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
                       "lineHeight": 17,
                     }
@@ -7004,7 +7004,7 @@ exports[`Storyshots ScheduleNav Presets 1`] = `
                   style={
                     Object {
                       "color": "#0F0F30",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
                       "lineHeight": 17,
                     }
@@ -7053,7 +7053,7 @@ exports[`Storyshots ScheduleNav Presets 1`] = `
                   style={
                     Object {
                       "color": "#0F0F30",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
                       "lineHeight": 17,
                     }
@@ -7199,7 +7199,7 @@ exports[`Storyshots ScheduleNav Presets 1`] = `
                   style={
                     Object {
                       "color": "#0F0F30",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
                       "lineHeight": 17,
                     }
@@ -7248,7 +7248,7 @@ exports[`Storyshots ScheduleNav Presets 1`] = `
                   style={
                     Object {
                       "color": "#0F0F30",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
                       "lineHeight": 17,
                     }
@@ -7297,7 +7297,7 @@ exports[`Storyshots ScheduleNav Presets 1`] = `
                   style={
                     Object {
                       "color": "#0F0F30",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
                       "lineHeight": 17,
                     }
@@ -8892,7 +8892,7 @@ exports[`Storyshots Sponsors Presets 1`] = `
                 style={
                   Object {
                     "color": "#ffffff",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 28,
                     "fontWeight": "500",
                     "lineHeight": 35,
@@ -8908,7 +8908,7 @@ exports[`Storyshots Sponsors Presets 1`] = `
                 style={
                   Object {
                     "color": "#C7C4DB",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 18,
                     "lineHeight": 32,
                     "marginTop": 14,
@@ -8931,7 +8931,7 @@ exports[`Storyshots Sponsors Presets 1`] = `
                   style={
                     Object {
                       "color": "#C7C4DB",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
                       "lineHeight": 17,
                     }
@@ -8977,7 +8977,7 @@ exports[`Storyshots Sponsors Presets 1`] = `
                   style={
                     Object {
                       "color": "#C7C4DB",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
                       "lineHeight": 17,
                     }
@@ -9065,7 +9065,7 @@ exports[`Storyshots Sponsors Presets 1`] = `
                   style={
                     Object {
                       "color": "#C7C4DB",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
                       "lineHeight": 17,
                     }
@@ -9153,7 +9153,7 @@ exports[`Storyshots Sponsors Presets 1`] = `
                   style={
                     Object {
                       "color": "#C7C4DB",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
                       "lineHeight": 17,
                     }
@@ -9241,7 +9241,7 @@ exports[`Storyshots Sponsors Presets 1`] = `
                   style={
                     Object {
                       "color": "#C7C4DB",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
                       "lineHeight": 17,
                     }
@@ -10178,7 +10178,7 @@ exports[`Storyshots TabBar Behaviour 1`] = `
                     style={
                       Object {
                         "color": "#878794",
-                        "fontFamily": "Avenir",
+                        "fontFamily": "Gotham Rounded",
                         "fontSize": 11,
                       }
                     }
@@ -10268,7 +10268,7 @@ exports[`Storyshots TabBar Behaviour 1`] = `
                     style={
                       Object {
                         "color": "#878794",
-                        "fontFamily": "Avenir",
+                        "fontFamily": "Gotham Rounded",
                         "fontSize": 11,
                       }
                     }
@@ -10358,7 +10358,7 @@ exports[`Storyshots TabBar Behaviour 1`] = `
                     style={
                       Object {
                         "color": "#878794",
-                        "fontFamily": "Avenir",
+                        "fontFamily": "Gotham Rounded",
                         "fontSize": 11,
                       }
                     }
@@ -10496,7 +10496,7 @@ exports[`Storyshots Text Passing Content 1`] = `
               style={
                 Object {
                   "color": "#1d1d1d",
-                  "fontFamily": "Avenir",
+                  "fontFamily": "Gotham Rounded",
                   "fontSize": 15,
                 }
               }
@@ -10599,7 +10599,7 @@ exports[`Storyshots Text Passing Content 1`] = `
               style={
                 Object {
                   "color": "#1d1d1d",
-                  "fontFamily": "Avenir",
+                  "fontFamily": "Gotham Rounded",
                   "fontSize": 15,
                 }
               }
@@ -10613,7 +10613,7 @@ exports[`Storyshots Text Passing Content 1`] = `
               style={
                 Object {
                   "color": "#1d1d1d",
-                  "fontFamily": "Avenir",
+                  "fontFamily": "Gotham Rounded",
                   "fontSize": 15,
                 }
               }
@@ -10716,7 +10716,7 @@ exports[`Storyshots Text Passing Content 1`] = `
               style={
                 Object {
                   "color": "#1d1d1d",
-                  "fontFamily": "Avenir",
+                  "fontFamily": "Gotham Rounded",
                   "fontSize": 15,
                 }
               }
@@ -10819,7 +10819,7 @@ exports[`Storyshots Text Passing Content 1`] = `
               style={
                 Object {
                   "color": "#1d1d1d",
-                  "fontFamily": "Avenir",
+                  "fontFamily": "Gotham Rounded",
                   "fontSize": 15,
                 }
               }
@@ -10833,7 +10833,7 @@ exports[`Storyshots Text Passing Content 1`] = `
                 style={
                   Object {
                     "color": "#1d1d1d",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                     "fontWeight": "600",
                   }
@@ -10971,7 +10971,7 @@ exports[`Storyshots Text Style Presets 1`] = `
               style={
                 Object {
                   "color": "#1d1d1d",
-                  "fontFamily": "Avenir",
+                  "fontFamily": "Gotham Rounded",
                   "fontSize": 15,
                 }
               }
@@ -10985,7 +10985,7 @@ exports[`Storyshots Text Style Presets 1`] = `
               style={
                 Object {
                   "color": "#1d1d1d",
-                  "fontFamily": "Avenir",
+                  "fontFamily": "Gotham Rounded",
                   "fontSize": 15,
                   "paddingTop": 10,
                 }
@@ -11006,7 +11006,7 @@ exports[`Storyshots Text Style Presets 1`] = `
               style={
                 Object {
                   "color": "#1d1d1d",
-                  "fontFamily": "Avenir",
+                  "fontFamily": "Gotham Rounded",
                   "fontSize": 15,
                   "paddingTop": 10,
                 }
@@ -11021,7 +11021,7 @@ exports[`Storyshots Text Style Presets 1`] = `
               style={
                 Object {
                   "color": "#1d1d1d",
-                  "fontFamily": "Avenir",
+                  "fontFamily": "Gotham Rounded",
                   "fontSize": 15,
                 }
               }
@@ -11124,7 +11124,7 @@ exports[`Storyshots Text Style Presets 1`] = `
               style={
                 Object {
                   "color": "#C7C4DB",
-                  "fontFamily": "Avenir",
+                  "fontFamily": "Gotham Rounded",
                   "fontSize": 11,
                 }
               }
@@ -11227,7 +11227,7 @@ exports[`Storyshots Text Style Presets 1`] = `
               style={
                 Object {
                   "color": "#1d1d1d",
-                  "fontFamily": "Avenir",
+                  "fontFamily": "Gotham Rounded",
                   "fontSize": 15,
                   "fontWeight": "600",
                 }
@@ -11331,7 +11331,7 @@ exports[`Storyshots Text Style Presets 1`] = `
               style={
                 Object {
                   "color": "#ffffff",
-                  "fontFamily": "Avenir",
+                  "fontFamily": "Gotham Rounded",
                   "fontSize": 28,
                   "fontWeight": "500",
                   "lineHeight": 35,
@@ -11475,7 +11475,7 @@ exports[`Storyshots TextField Labelling 1`] = `
                 style={
                   Object {
                     "color": "#E6EAF4",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 13,
                   }
                 }
@@ -11491,7 +11491,7 @@ exports[`Storyshots TextField Labelling 1`] = `
                   Object {
                     "backgroundColor": "#ffffff",
                     "color": "#1d1d1d",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 18,
                     "minHeight": 44,
                   }
@@ -11603,7 +11603,7 @@ exports[`Storyshots TextField Labelling 1`] = `
                 style={
                   Object {
                     "color": "#E6EAF4",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 13,
                   }
                 }
@@ -11619,7 +11619,7 @@ exports[`Storyshots TextField Labelling 1`] = `
                   Object {
                     "backgroundColor": "#ffffff",
                     "color": "#1d1d1d",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 18,
                     "minHeight": 44,
                   }
@@ -11765,7 +11765,7 @@ exports[`Storyshots TextField Style Overrides 1`] = `
                 style={
                   Object {
                     "color": "#E6EAF4",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 13,
                   }
                 }
@@ -11781,7 +11781,7 @@ exports[`Storyshots TextField Style Overrides 1`] = `
                   Object {
                     "backgroundColor": "#ffffff",
                     "color": "#1d1d1d",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 18,
                     "minHeight": 44,
                   }
@@ -11805,7 +11805,7 @@ exports[`Storyshots TextField Style Overrides 1`] = `
                 style={
                   Object {
                     "color": "#E6EAF4",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 13,
                   }
                 }
@@ -11821,7 +11821,7 @@ exports[`Storyshots TextField Style Overrides 1`] = `
                   Object {
                     "backgroundColor": "#ffffff",
                     "color": "#1d1d1d",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 18,
                     "minHeight": 44,
                   }
@@ -11933,7 +11933,7 @@ exports[`Storyshots TextField Style Overrides 1`] = `
                 style={
                   Object {
                     "color": "#E6EAF4",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 13,
                   }
                 }
@@ -11952,7 +11952,7 @@ exports[`Storyshots TextField Style Overrides 1`] = `
                     "borderRadius": 4,
                     "borderWidth": 10,
                     "color": "white",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 18,
                     "minHeight": 44,
                     "padding": 40,
@@ -11969,7 +11969,7 @@ exports[`Storyshots TextField Style Overrides 1`] = `
               style={
                 Object {
                   "color": "#E6EAF4",
-                  "fontFamily": "Avenir",
+                  "fontFamily": "Gotham Rounded",
                   "fontSize": 9,
                 }
               }
@@ -12115,7 +12115,7 @@ exports[`Storyshots TravelOption Presets 1`] = `
                 style={
                   Object {
                     "color": "#C7C4DB",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 14,
                     "lineHeight": 17,
                     "marginLeft": 20,
@@ -12233,7 +12233,7 @@ exports[`Storyshots TravelOption Presets 1`] = `
                 style={
                   Object {
                     "color": "#C7C4DB",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 14,
                     "lineHeight": 17,
                     "marginLeft": 20,
@@ -12366,7 +12366,7 @@ exports[`Storyshots WiFi Presets 1`] = `
                 style={
                   Object {
                     "color": "#ffffff",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 28,
                     "fontWeight": "500",
                     "lineHeight": 35,
@@ -12382,7 +12382,7 @@ exports[`Storyshots WiFi Presets 1`] = `
                 style={
                   Object {
                     "color": "#C7C4DB",
-                    "fontFamily": "Avenir",
+                    "fontFamily": "Gotham Rounded",
                     "fontSize": 18,
                     "lineHeight": 32,
                     "marginTop": 20,
@@ -12410,7 +12410,7 @@ exports[`Storyshots WiFi Presets 1`] = `
                   style={
                     Object {
                       "color": "#C7C4DB",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 11,
                     }
                   }
@@ -12424,7 +12424,7 @@ exports[`Storyshots WiFi Presets 1`] = `
                   style={
                     Object {
                       "color": "#E6EAF4",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 15,
                       "fontStyle": "italic",
                       "lineHeight": 18,
@@ -12454,7 +12454,7 @@ exports[`Storyshots WiFi Presets 1`] = `
                   style={
                     Object {
                       "color": "#C7C4DB",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 11,
                     }
                   }
@@ -12468,7 +12468,7 @@ exports[`Storyshots WiFi Presets 1`] = `
                   style={
                     Object {
                       "color": "#E6EAF4",
-                      "fontFamily": "Avenir",
+                      "fontFamily": "Gotham Rounded",
                       "fontSize": 15,
                       "fontStyle": "italic",
                       "lineHeight": 18,
