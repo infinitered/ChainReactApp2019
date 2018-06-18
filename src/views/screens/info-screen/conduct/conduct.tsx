@@ -1,5 +1,5 @@
 import * as React from "react"
-import { View, ViewStyle, TextStyle } from "react-native"
+import { View, ViewStyle, TextStyle, TouchableOpacityProperties } from "react-native"
 import { Text } from "../../../shared/text"
 import { Button } from "../../../shared/button"
 import { spacing } from "../../../../theme/spacing"
@@ -31,14 +31,12 @@ const LOGO_ROW: ViewStyle = {
   justifyContent: "space-between",
 }
 
-export class Conduct extends React.Component {
-  render() {
-    return (
-      <View style={ROOT}>
-        <Text preset="header" tx="infoScreen.conduct.title" style={HEADER} />
-        <Text preset="body" tx="infoScreen.conduct.description" style={BODY} />
-        <Button text="VIEW CODE OF CONDUCT" preset="dark" onPress={() => window.alert("pressed")} />
-      </View>
-    )
-  }
+export function Conduct(props: TouchableOpacityProperties) {
+  return (
+    <View style={ROOT}>
+      <Text preset="header" tx="infoScreen.conduct.title" style={HEADER} />
+      <Text preset="body" tx="infoScreen.conduct.description" style={BODY} />
+      <Button text="VIEW CODE OF CONDUCT" preset="dark" onPress={props.onPress} />
+    </View>
+  )
 }
