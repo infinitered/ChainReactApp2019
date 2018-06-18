@@ -15,9 +15,15 @@ import { palette } from "../../../../theme/palette"
 import { spacing } from "../../../../theme/spacing"
 import { format } from "date-fns"
 
+export interface SpeakerImageProps {
+  speaker: any
+}
+
 const ROOT: ViewStyle = {
   width: "100%",
 }
+
+const SPEAKER_IMAGE: ImageStyle = { maxHeight: 383 }
 
 const NAME: ViewStyle = {
   position: "absolute",
@@ -25,29 +31,30 @@ const NAME: ViewStyle = {
   right: 0,
 }
 
-export class SpeakerImage extends React.Component<{ speaker: any }, {}> {
+const SPEAKER_NAME: TextStyle = {
+  color: palette.white,
+  textAlign: "right",
+  lineHeight: 22,
+}
+
+const EMPLOYER: TextStyle = {
+  color: palette.offWhite,
+  textAlign: "right",
+  marginTop: spacing.small,
+}
+
+export class SpeakerImage extends React.Component<SpeakerImageProps, {}> {
   render() {
     const { name, employer } = this.props.speaker
     const splitName = name.split(" ")
+    const key = `${splitName.join("-")}-image`
     return (
-      <View style={ROOT}>
-        <Image source={require("./img.speaker.lg.png")} style={{ maxHeight: 383 }} />
+      <View key={key} style={ROOT}>
+        <Image source={require("./img.speaker.lg.png")} style={SPEAKER_IMAGE} />
         <View style={NAME}>
-          <Text
-            text={splitName[0].toUpperCase()}
-            preset="body"
-            style={{ color: palette.white, textAlign: "right", lineHeight: 22 }}
-          />
-          <Text
-            text={splitName[1].toUpperCase()}
-            preset="body"
-            style={{ color: palette.white, textAlign: "right", lineHeight: 22 }}
-          />
-          <Text
-            text={employer}
-            preset="input"
-            style={{ color: palette.offWhite, textAlign: "right", marginTop: spacing.small }}
-          />
+          <Text text={splitName[0].toUpperCase()} preset="body" style={SPEAKER_NAME} />
+          <Text text={splitName[1].toUpperCase()} preset="body" style={SPEAKER_NAME} />
+          <Text text={employer} preset="input" style={EMPLOYER} />
         </View>
       </View>
     )

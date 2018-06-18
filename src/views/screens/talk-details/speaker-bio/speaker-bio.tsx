@@ -36,8 +36,9 @@ export class SpeakerBio extends React.Component<SpeakerBioProps, {}> {
     const { last = true } = this.props
     const splitName = name.split(" ")
     const socialStyles = [SOCIAL_WRAPPER, last && SOCIAL_WRAPPER_LAST]
+    const key = `${splitName.join("-")}-bio`
     return (
-      <View style={ROOT}>
+      <View key={key} style={ROOT}>
         <Text
           text={`ABOUT ${splitName[0].toUpperCase()}`}
           preset="sectionHeader"
@@ -56,6 +57,6 @@ export class SpeakerBio extends React.Component<SpeakerBioProps, {}> {
   }
 
   renderLink = (k, link) => {
-    return <SocialButton preset={k} link={link} />
+    return <SocialButton key={k} preset={k} link={link} />
   }
 }

@@ -199,7 +199,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
           talk.speakers.map((speaker, index) => {
             const isLast = index === talk.speakers.length - 1
             return (
-              <View style={PANEL_BIO}>
+              <View key={index} style={PANEL_BIO}>
                 <SpeakerImage speaker={speaker} />
                 <SpeakerBio speaker={speaker} last={isLast} />
               </View>
