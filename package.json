@@ -19,7 +19,7 @@
     "storybook": "storybook start -p 9001 --skip-packager"
   },
   "dependencies": {
-    "@mapbox/react-native-mapbox-gl": "6.0.3",
+    "@mapbox/react-native-mapbox-gl": "6.1.1",
     "apisauce": "^0.14.3",
     "apollo-boost": "^0.1.9",
     "date-fns": "^1.29.0",
@@ -71,6 +71,11 @@
   },
   "jest": {
     "preset": "jest-preset-ignite"
+  },
+  "rnpm": {
+    "assets": [
+      "./src/theme/fonts"
+    ]
   },
   "lint-staged": {
     "*.js": [

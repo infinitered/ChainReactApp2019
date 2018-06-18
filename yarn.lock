@@ -505,11 +505,12 @@
     lodash "^4.17.5"
     to-fast-properties "^2.0.0"
 
-"@mapbox/react-native-mapbox-gl@6.0.3":
-  version "6.0.3"
-  resolved "https://registry.yarnpkg.com/@mapbox/react-native-mapbox-gl/-/react-native-mapbox-gl-6.0.3.tgz#eec96ad717ef2a9841cfa8f12667fc04276f20ca"
+"@mapbox/react-native-mapbox-gl@6.1.1":
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/@mapbox/react-native-mapbox-gl/-/react-native-mapbox-gl-6.1.1.tgz#d4a791d5ba51f25c837991b5c7a48ede9d5b5f49"
   dependencies:
     "@turf/helpers" "4.6.0"
+    underscore "^1.8.3"
 
 "@storybook/addon-actions@3.4.0":
   version "3.4.0"
@@ -10216,6 +10217,10 @@ ultron@1.0.x:
 ultron@~1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ultron/-/ultron-1.1.1.tgz#9fe1536a10a664a65266a1e3ccf85fd36302bc9c"
+
+underscore@^1.8.3:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.9.1.tgz#06dce34a0e68a7babc29b365b8e74b8925203961"
 
 union-value@^1.0.0:
   version "1.0.0"

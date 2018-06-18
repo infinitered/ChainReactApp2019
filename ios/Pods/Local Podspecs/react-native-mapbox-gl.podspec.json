@@ -1,7 +1,7 @@
 {
   "name": "react-native-mapbox-gl",
   "summary": "React Native Component for Mapbox GL",
-  "version": "6.0.3",
+  "version": "6.1.1",
   "authors": {
     "Nick Italiano": "ni6@njit.edu"
   },

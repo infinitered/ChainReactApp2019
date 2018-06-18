@@ -58,7 +58,8 @@
         "food": "FOOD",
         "drink": "DRINK",
         "coffee": "COFFEE",
-        "sights": "SIGHTS"
+        "sights": "SIGHTS",
+        "getDirections": "GET DIRECTIONS"
       }
     }
   },
