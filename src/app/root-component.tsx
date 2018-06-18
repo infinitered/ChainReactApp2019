@@ -31,7 +31,6 @@ export class RootComponent extends React.Component<{}, RootComponentState> {
     this.setState({
       rootStore: await setupRootStore(),
     })
-    SplashScreen.hide()
   }
 
   /**
@@ -60,19 +59,19 @@ export class RootComponent extends React.Component<{}, RootComponentState> {
     }
 
     // otherwise, we're ready to render the app
+    SplashScreen.hide()
 
-    // --- am: begin list of stores ---
-    const otherStores = {}
-    // --- am: end list of stores ---
+    const injectableStores = {
+      navigationStore: rootStore.navigationStore,
+      talkStore: rootStore.talkStore,
+    }
 
     return (
-      // <SafeAreaView style={{ flex: 1, backgroundColor: palette.ebony }}>
-      <Provider rootStore={rootStore} navigationStore={rootStore.navigationStore} {...otherStores}>
+      <Provider {...injectableStores}>
         <BackButtonHandler canExit={this.canExit}>
           <StatefulNavigator />
         </BackButtonHandler>
       </Provider>
-      // </SafeAreaView>
     )
   }
 }

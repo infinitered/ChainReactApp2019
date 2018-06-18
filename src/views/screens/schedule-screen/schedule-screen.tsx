@@ -1,12 +1,14 @@
 import * as React from "react"
 import { View, ViewStyle, ScrollView } from "react-native"
-import { Text } from "../../shared/text"
 import { NavigationScreenProps } from "react-navigation"
+import { Text } from "../../shared/text"
 import { Screen } from "../../shared/screen"
 import { palette } from "../../../theme/palette"
+import { TalkStore } from "../../../models/talk-store"
 import { isThursday, isFriday } from "date-fns"
 import { ScheduleNav } from "./schedule-nav"
 import { ScheduleCell } from "./schedule-cell"
+import { inject, observer } from "mobx-react"
 
 const ROOT: ViewStyle = {
   flex: 1,
@@ -96,8 +98,12 @@ const AFTER_PARTY = {
   rsvpWebsite: "https://bing.com",
 }
 
-export interface ScheduleScreenProps extends NavigationScreenProps<{}> {}
+export interface ScheduleScreenProps extends NavigationScreenProps<{}> {
+  talkStore: TalkStore
+}
 
+@inject("talkStore")
+@observer
 export class ScheduleScreen extends React.Component<
   ScheduleScreenProps,
   { selected: "wednesday" | "thursday" | "friday" }
@@ -107,6 +113,11 @@ export class ScheduleScreen extends React.Component<
   }
   static navigationOptions = {
     header: null,
+  }
+
+  componentWillMount() {
+    const { talkStore } = this.props
+    talkStore && talkStore.getAll()
   }
 
   render() {
@@ -120,15 +131,19 @@ export class ScheduleScreen extends React.Component<
   }
 
   renderContent = () => {
+    const { talkStore: { talks } } = this.props
     return (
       <View>
-        <ScheduleCell
-          index={0}
-          talk={TALK}
-          onPress={talk => {
-            this.props.navigation.navigate("talkDetails", { talk })
-          }}
-        />
+        {talks &&
+          talks.map((talk, i) => (
+            <ScheduleCell
+              index={i}
+              talk={talk}
+              onPress={talk => {
+                this.props.navigation.navigate("talkDetails", { talk })
+              }}
+            />
+          ))}
         <ScheduleCell
           index={1}
           talk={WORKSHOP}

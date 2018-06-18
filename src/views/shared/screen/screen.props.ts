@@ -1,4 +1,4 @@
-import { ViewStyle } from "react-native"
+import { ImageURISource, ViewStyle } from "react-native"
 import { ScreenPresets } from "./screen.presets"
 
 export interface ScreenProps {
@@ -20,7 +20,7 @@ export interface ScreenProps {
   /**
    * An optional background image
    */
-  backgroundImage?: string
+  backgroundImage?: ImageURISource
 
   /**
    * An optional background color
