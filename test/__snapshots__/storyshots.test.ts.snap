@@ -8428,9 +8428,10 @@ exports[`Storyshots SponsorLogo Presets 1`] = `
                 Object {
                   "alignSelf": "center",
                   "flex": 1,
-                  "height": 36,
-                  "resizeMode": "center",
-                  "width": 258,
+                  "height": 134,
+                  "margin": 0,
+                  "resizeMode": "contain",
+                  "width": 335,
                 }
               }
             />
@@ -8513,8 +8514,12 @@ exports[`Storyshots SponsorLogo Presets 1`] = `
               source={1}
               style={
                 Object {
+                  "alignSelf": "center",
                   "flex": 1,
-                  "resizeMode": "center",
+                  "height": 60,
+                  "margin": 10,
+                  "resizeMode": "contain",
+                  "width": 135,
                 }
               }
             />
@@ -8597,8 +8602,12 @@ exports[`Storyshots SponsorLogo Presets 1`] = `
               source={1}
               style={
                 Object {
+                  "alignSelf": "center",
                   "flex": 1,
-                  "resizeMode": "center",
+                  "height": 40,
+                  "margin": 10,
+                  "resizeMode": "contain",
+                  "width": 100,
                 }
               }
             />
@@ -8681,8 +8690,12 @@ exports[`Storyshots SponsorLogo Presets 1`] = `
               source={1}
               style={
                 Object {
+                  "alignSelf": "center",
                   "flex": 1,
-                  "resizeMode": "center",
+                  "height": 40,
+                  "margin": 10,
+                  "resizeMode": "contain",
+                  "width": 100,
                 }
               }
             />
@@ -8765,8 +8778,12 @@ exports[`Storyshots SponsorLogo Presets 1`] = `
               source={1}
               style={
                 Object {
+                  "alignSelf": "center",
                   "flex": 1,
-                  "resizeMode": "center",
+                  "height": 60,
+                  "margin": 10,
+                  "resizeMode": "contain",
+                  "width": 100,
                 }
               }
             />
@@ -8956,9 +8973,10 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     Object {
                       "alignSelf": "center",
                       "flex": 1,
-                      "height": 36,
-                      "resizeMode": "center",
-                      "width": 258,
+                      "height": 134,
+                      "margin": 0,
+                      "resizeMode": "contain",
+                      "width": 335,
                     }
                   }
                 />
@@ -9008,8 +9026,12 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     source={1}
                     style={
                       Object {
+                        "alignSelf": "center",
                         "flex": 1,
-                        "resizeMode": "center",
+                        "height": 60,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 135,
                       }
                     }
                   />
@@ -9017,8 +9039,12 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     source={1}
                     style={
                       Object {
+                        "alignSelf": "center",
                         "flex": 1,
-                        "resizeMode": "center",
+                        "height": 60,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 135,
                       }
                     }
                   />
@@ -9035,8 +9061,12 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     source={1}
                     style={
                       Object {
+                        "alignSelf": "center",
                         "flex": 1,
-                        "resizeMode": "center",
+                        "height": 60,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 135,
                       }
                     }
                   />
@@ -9044,8 +9074,34 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     source={1}
                     style={
                       Object {
+                        "alignSelf": "center",
                         "flex": 1,
-                        "resizeMode": "center",
+                        "height": 60,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 135,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                    }
+                  }
+                >
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "flex": 1,
+                        "height": 60,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 135,
                       }
                     }
                   />
@@ -9096,8 +9152,12 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     source={1}
                     style={
                       Object {
+                        "alignSelf": "center",
                         "flex": 1,
-                        "resizeMode": "center",
+                        "height": 40,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 100,
                       }
                     }
                   />
@@ -9105,8 +9165,12 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     source={1}
                     style={
                       Object {
+                        "alignSelf": "center",
                         "flex": 1,
-                        "resizeMode": "center",
+                        "height": 40,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 100,
                       }
                     }
                   />
@@ -9123,8 +9187,12 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     source={1}
                     style={
                       Object {
+                        "alignSelf": "center",
                         "flex": 1,
-                        "resizeMode": "center",
+                        "height": 40,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 100,
                       }
                     }
                   />
@@ -9132,8 +9200,47 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     source={1}
                     style={
                       Object {
+                        "alignSelf": "center",
                         "flex": 1,
-                        "resizeMode": "center",
+                        "height": 40,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 100,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                    }
+                  }
+                >
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "flex": 1,
+                        "height": 40,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 100,
+                      }
+                    }
+                  />
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "flex": 1,
+                        "height": 40,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 100,
                       }
                     }
                   />
@@ -9184,8 +9291,12 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     source={1}
                     style={
                       Object {
+                        "alignSelf": "center",
                         "flex": 1,
-                        "resizeMode": "center",
+                        "height": 40,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 100,
                       }
                     }
                   />
@@ -9193,8 +9304,12 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     source={1}
                     style={
                       Object {
+                        "alignSelf": "center",
                         "flex": 1,
-                        "resizeMode": "center",
+                        "height": 40,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 100,
                       }
                     }
                   />
@@ -9211,8 +9326,12 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     source={1}
                     style={
                       Object {
+                        "alignSelf": "center",
                         "flex": 1,
-                        "resizeMode": "center",
+                        "height": 40,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 100,
                       }
                     }
                   />
@@ -9220,8 +9339,82 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     source={1}
                     style={
                       Object {
+                        "alignSelf": "center",
                         "flex": 1,
-                        "resizeMode": "center",
+                        "height": 40,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 100,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                    }
+                  }
+                >
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "flex": 1,
+                        "height": 40,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 100,
+                      }
+                    }
+                  />
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "flex": 1,
+                        "height": 40,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 100,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                    }
+                  }
+                >
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "flex": 1,
+                        "height": 40,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 100,
+                      }
+                    }
+                  />
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "flex": 1,
+                        "height": 40,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 100,
                       }
                     }
                   />
@@ -9272,8 +9465,12 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     source={1}
                     style={
                       Object {
+                        "alignSelf": "center",
                         "flex": 1,
-                        "resizeMode": "center",
+                        "height": 60,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 100,
                       }
                     }
                   />
@@ -9281,8 +9478,12 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     source={1}
                     style={
                       Object {
+                        "alignSelf": "center",
                         "flex": 1,
-                        "resizeMode": "center",
+                        "height": 60,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 100,
                       }
                     }
                   />
@@ -9299,8 +9500,12 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     source={1}
                     style={
                       Object {
+                        "alignSelf": "center",
                         "flex": 1,
-                        "resizeMode": "center",
+                        "height": 60,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 100,
                       }
                     }
                   />
@@ -9308,8 +9513,12 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     source={1}
                     style={
                       Object {
+                        "alignSelf": "center",
                         "flex": 1,
-                        "resizeMode": "center",
+                        "height": 60,
+                        "margin": 10,
+                        "resizeMode": "contain",
+                        "width": 100,
                       }
                     }
                   />

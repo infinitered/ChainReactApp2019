@@ -66,11 +66,11 @@
     "title": "Info",
     "wifi": {
       "title": "WIFI NETWORK",
-      "description": "Git clone, Slack, and surf cat videos to your heart's content!",
+      "description": "Thanks to PlayStation for sponsoring our wifi this year.",
       "networkLabel": "WIFI NETWORK",
-      "networkName": "SponsorNameWiFi",
+      "networkName": "PlayStation",
       "passwordLabel": "WIFI PASSWORD",
-      "password": "SponsorNamePassword"
+      "password": "diversity"
     },
     "sponsors": {
       "title": "THANKS TO THIS YEAR'S SPONSORS",
