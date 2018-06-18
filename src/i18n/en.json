@@ -73,6 +73,11 @@
       "passwordLabel": "WIFI PASSWORD",
       "password": "SponsorNamePassword"
     },
+    "conduct": {
+      "title": "CODE OF CONDUCT",
+      "description":
+        "All attendees, speakers, sponsors, and volunteers at our conference are required to agree with our code of conduct.  Please read it carefully."
+    },
     "sponsors": {
       "title": "THANKS TO THIS YEAR'S SPONSORS",
       "description": "Support from our amazing sponsors make Chain React possible!",

@@ -7,6 +7,7 @@ import { PresentedBy } from "./presented-by"
 import { palette } from "../../../theme/palette"
 import { spacing } from "../../../theme/spacing"
 import { WiFi } from "./wi-fi"
+import { Conduct } from "./conduct"
 import { Sponsors } from "./sponsors"
 
 export interface InfoScreenProps extends NavigationScreenProps<{}> {}
@@ -22,6 +23,7 @@ export class InfoScreen extends React.Component<InfoScreenProps, {}> {
       <Screen preset="scrollStack" backgroundColor={palette.portGore}>
         <Text preset="title" tx="infoScreen.title" style={TITLE} />
         <WiFi />
+        <Conduct />
         <Sponsors />
         <PresentedBy />
       </Screen>
