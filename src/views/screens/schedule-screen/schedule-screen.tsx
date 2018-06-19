@@ -38,6 +38,7 @@ const TALK = {
     },
   ],
   description: "",
+  image: "https://via.placeholder.com/100x100",
 }
 
 const WORKSHOP = {
@@ -64,6 +65,7 @@ const WORKSHOP = {
   description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt laoreet dui, ac vulputate tortor porttitor non. Mauris iaculis turpis vitae augue vestibulum commodo. Praesent sit amet augue massa. Nam maximus mauris sed eros facilisis, quis efficitur purus scelerisque. In in hendrerit nunc. es, nascetur ridiculus mus.",
   location: "1134 NE Washington St #302\nPortland, OR 97006",
+  image: "https://via.placeholder.com/100x100",
 }
 
 const COFFEE = {
@@ -74,6 +76,7 @@ const COFFEE = {
   sponsor: "QuickLeft Studio",
   description:
     "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Nullam id dolor id nibsdflkj.",
+  image: "https://via.placeholder.com/100x100",
 }
 
 const LUNCH = {
@@ -85,6 +88,45 @@ const LUNCH = {
   description:
     "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Nullam id dolor id nibsdflkj.",
   menuItems: ["Black Forest Ham", "Vegan Option", "Pita Chips", "Premium Coffee", "Soft Drinks"],
+  image: "https://via.placeholder.com/100x100",
+}
+
+const PANEL = {
+  type: "panel",
+  startTime: new Date("2018-07-13T16:00:00Z"),
+  endTime: new Date("2018-07-13T17:00:00Z"),
+  title: "Panel",
+  speakers: [
+    {
+      name: "Jason Harrelso",
+      bio:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt laoreet dui, ac vulputate tortor porttitor non. Mauris iaculis turpis vitae augue vestibulum commodo. Praesent sit amet augue massa. Nam maximus mauris sed eros facilisis, quis efficitur purus scelerisque. In in hendrerit nunc. es, nascetur ridiculus mus.",
+      employer: "Microsoft",
+      facebook: "https://facebook.com",
+      twitter: "https://twitter.com",
+      links: {
+        facebook: "https://bing.com",
+        twitter: "https://google.com",
+        websites: ["https://microsoft.com"],
+      },
+    },
+    {
+      name: "Johnny Storm",
+      bio:
+        'Like the rest of the Fantastic Four, Jonathan "Johnny" Storm gained his powers on a spacecraft bombarded by cosmic rays. He can engulf his entire body in flames, fly, absorb fire harmlessly into his own body, and control any nearby fire by sheer force of will. "Flame on!" which the Torch customarily shouts when activating his full-body flame effect, has become his catchphrase.',
+      employer: "Marvel",
+      facebook: "https://facebook.com",
+      twitter: "https://twitter.com",
+      links: {
+        facebook: "https://bing.com",
+        twitter: "https://google.com",
+        websites: ["https://microsoft.com"],
+      },
+    },
+  ],
+  description: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+  location: "1134 NE Washington St #302\nPortland, OR 97006",
+  image: "https://via.placeholder.com/100x100",
 }
 
 const AFTER_PARTY = {
@@ -96,6 +138,7 @@ const AFTER_PARTY = {
     "Join us after the first day for an afterparty hosted by our good friends at Squarespace. Lorem Ipsum dolor sit amet lorem.",
   location: "11134 Washington St #302\nPortland, OR 97006",
   rsvpWebsite: "https://bing.com",
+  image: "https://via.placeholder.com/100x100",
 }
 
 export interface ScheduleScreenProps extends NavigationScreenProps<{}> {
@@ -167,6 +210,13 @@ export class ScheduleScreen extends React.Component<
         />
         <ScheduleCell
           index={4}
+          talk={PANEL}
+          onPress={talk => {
+            this.props.navigation.navigate("talkDetails", { talk })
+          }}
+        />
+        <ScheduleCell
+          index={5}
           talk={AFTER_PARTY}
           onPress={talk => {
             this.props.navigation.navigate("talkDetails", { talk })
