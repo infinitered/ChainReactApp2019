@@ -10,16 +10,16 @@ const BASE: ImageStyle = {
   resizeMode: "contain",
   alignSelf: "center",
   width: 100,
-  height: 40,
+  maxHeight: 51,
   margin: spacing.small,
 }
 
 export const sponsorLogoSizePresets = {
   platinum: { ...BASE, width: 335, height: 134, margin: 0 } as ImageStyle,
-  gold: { ...BASE, width: 135, height: 60 },
+  gold: { ...BASE, width: 135, maxHeight: 60 },
   silver: { ...BASE },
   bronze: { ...BASE },
-  additional: { ...BASE, height: 60 },
+  additional: { ...BASE, maxHeight: 60 },
 }
 
 export const sponsors = {

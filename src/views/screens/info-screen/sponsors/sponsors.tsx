@@ -17,14 +17,14 @@ const BODY: TextStyle = {
   marginTop: spacing.medium,
 }
 const SECTION: ViewStyle = {
-  marginTop: spacing.ginormous,
+  marginTop: spacing.extraLarge,
 }
 const LINE_BREAK: ViewStyle = {
-  flex: 1,
   height: 1,
   backgroundColor: palette.martinique,
   marginTop: spacing.large,
   marginBottom: spacing.extraLarge,
+  width: "100%",
 }
 const LOGO_ROW: ViewStyle = {
   flexDirection: "row",
