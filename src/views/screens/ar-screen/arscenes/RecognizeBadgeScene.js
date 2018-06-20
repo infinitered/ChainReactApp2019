@@ -14,10 +14,16 @@ import {
   ViroNode,
   ViroARImageMarker,
   ViroBox,
+  ViroQuad,
   ViroARTrackingTargets,
   ViroPortal,
   ViroPortalScene,
   ViroImage,
+  ViroLightingEnvironment,
+  ViroDirectionalLight,
+  ViroSpotLight,
+  ViroSpinner,
+  ViroSphere,
 } from "react-viro"
 
 const BADGE_NOT_FOUND = -1
@@ -38,14 +44,17 @@ export default class RecognizeBadgeScene extends Component {
     // Set initial state here
     this.state = {
       foundBadgeType: BADGE_NOT_FOUND,
+      runAnimation: false,
     }
 
     // bind 'this' to functions
     this._getMarkers = this._getMarkers.bind(this)
     this._getARImageMarkerProps = this._getARImageMarkerProps.bind(this)
     this._getOnMarkerFoundCallback = this._getOnMarkerFoundCallback.bind(this)
+    this._onAnchorUpdated = this._onAnchorUpdated.bind(this)
     this._getExperience = this._getExperience.bind(this)
     this._onInitialized = this._onInitialized.bind(this)
+    this._objLoadEnd = this._objLoadEnd.bind(this)
   }
 
   render() {
@@ -54,12 +63,14 @@ export default class RecognizeBadgeScene extends Component {
         <ViroAmbientLight color={"#ffffff"} />
 
         {this._getMarkers()}
+
+        {this._getExperience()}
       </ViroARScene>
     )
   }
 
   /*
-   This function either returns 3 ViroARImageMarkers for each badge type if a badge
+   This function either returns a ViroARImageMarkers for each badge image if a badge
    hasn't been found yet or if a badge type has already been found, it returns the
    marker for that badge type w/ the experience.
    */
@@ -72,11 +83,7 @@ export default class RecognizeBadgeScene extends Component {
       }
       return markers
     } else {
-      return [
-        <ViroARImageMarker {...this._getARImageMarkerProps(this.state.foundBadgeType)}>
-          {this._getExperience()}
-        </ViroARImageMarker>,
-      ]
+      return [<ViroARImageMarker {...this._getARImageMarkerProps(this.state.foundBadgeType)} />]
     }
   }
 
@@ -85,40 +92,97 @@ export default class RecognizeBadgeScene extends Component {
       key: badgeType,
       target: BADGE_TYPES[badgeType],
       onAnchorFound: this._getOnMarkerFoundCallback(badgeType),
+      onAnchorUpdated: this._onAnchorUpdated,
     }
   }
 
   _getOnMarkerFoundCallback(badgeType) {
-    return () => {
+    return anchor => {
       // notify the parent view that the badge was found
       this.props.onBadgeFound()
       console.log("[Viro] found badge: " + badgeType)
-      this.setState({ foundBadgeType: badgeType })
+      this.setState({ foundBadgeType: badgeType, foundAnchor: anchor, runAnimation: true })
     }
+  }
+
+  _onAnchorUpdated(anchor) {
+    this.setState({
+      foundAnchor: anchor,
+    })
+  }
+
+  _objLoadEnd() {
+    // wait 1 second, and show the experience and run the animation!
+    setTimeout(() => {
+      this.setState({
+        runAnimation: true,
+      })
+    }, 1000)
   }
 
   /*
    Return the experience we want once a badge is found
    */
   _getExperience() {
+    let scale = [0, 0, 0]
+    let position = [0, 0, 0]
+    let rotation = [0, 0, 0]
+
+    if (this.state.foundAnchor != undefined) {
+      scale = [1, 1, 1]
+      position = this.state.foundAnchor.position
+      rotation = this.state.foundAnchor.rotation
+    }
+
     return (
-      <ViroNode scale={[0.015, 0.015, 0.015]}>
-        <Viro3DObject source={require("./res/cr_map.vrx")} type={"VRX"} />
-        <ViroPortalScene>
-          <ViroPortal>
-            <Viro3DObject
-              source={require("./res/cr_portal.vrx")}
-              type={"VRX"}
-              resources={[require("./res/cr_box.png")]}
-            />
-          </ViroPortal>
+      <ViroNode position={position} rotation={rotation} scale={scale}>
+        <ViroNode scale={[0.011, 0.011, 0.011]} position={[0, 0, 0.005]}>
+          <ViroLightingEnvironment source={require("./res/floral_tent_1k.hdr")} />
 
           <Viro3DObject
-            source={require("./res/cr_shadowbox.vrx")}
+            source={require("./res/cr_logo_obj.vrx")}
             type={"VRX"}
-            resources={[require("./res/cr_box.png")]}
+            resources={[require("./res/cr_logo.png")]}
           />
-        </ViroPortalScene>
+          <Viro3DObject
+            source={require("./res/cr_city.vrx")}
+            type={"VRX"}
+            animation={{ name: "01", run: this.state.runAnimation, loop: false }}
+            resources={[
+              require("./res/cr_ar_badges_Normal_OpenGL.png"),
+              require("./res/cr_ar_badges_Base_Color.png"),
+              require("./res/cr_ar_badges_Roughness.png"),
+              require("./res/cr_ar_badges_Metallic.png"),
+            ]}
+          />
+          <Viro3DObject
+            source={require("./res/cr_floorplan.vrx")}
+            type={"VRX"}
+            animation={{ name: "01", run: this.state.runAnimation, loop: false }}
+            resources={[
+              require("./res/cr_ar_badges_Normal_OpenGL.png"),
+              require("./res/cr_ar_badges_Base_Color.png"),
+              require("./res/cr_ar_badges_Roughness.png"),
+              require("./res/cr_ar_badges_Metallic.png"),
+            ]}
+          />
+          <Viro3DObject
+            source={require("./res/cr_cars.vrx")}
+            type={"VRX"}
+            animation={{ name: "01", run: this.state.runAnimation, loop: true }}
+            resources={[
+              require("./res/cr_cars_BaseColor.png"),
+              require("./res/cr_cars_Metallic.png"),
+              require("./res/cr_cars_Roughness.png"),
+            ]}
+          />
+          <Viro3DObject
+            source={require("./res/cr_labels_obj.vrx")}
+            type={"VRX"}
+            animation={{ name: "01", run: this.state.runAnimation, loop: false }}
+            resources={[require("./res/cr_labels.png")]}
+          />
+        </ViroNode>
       </ViroNode>
     )
   }
@@ -141,6 +205,19 @@ var styles = StyleSheet.create({
     color: "#ffffff",
     textAlignVertical: "center",
     textAlign: "center",
+  },
+})
+
+ViroMaterials.createMaterials({
+  red: {
+    lightingModel: "Blinn",
+    cullMode: "None",
+    shininess: 2.0,
+    diffuseColor: "#ff1111",
+  },
+  black: {
+    lightingModel: "Constant",
+    diffuseColor: "#000",
   },
 })
 
