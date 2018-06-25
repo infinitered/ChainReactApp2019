@@ -4,8 +4,7 @@ import { Text } from "../../shared/text"
 import { NavigationScreenProps } from "react-navigation"
 import { Screen } from "../../shared/screen"
 import { palette } from "../../../theme/palette"
-import { spacing } from "../../../theme/spacing"
-import { color } from "../../../theme"
+import { color, spacing } from "../../../theme"
 import { Contact } from "./contact"
 
 export interface CodeOfConductScreenProps extends NavigationScreenProps<{}> {}
