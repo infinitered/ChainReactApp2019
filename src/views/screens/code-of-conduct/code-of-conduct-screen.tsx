@@ -6,6 +6,7 @@ import { Screen } from "../../shared/screen"
 import { palette } from "../../../theme/palette"
 import { spacing } from "../../../theme/spacing"
 import { color } from "../../../theme"
+import { Contact } from "./contact"
 
 export interface CodeOfConductScreenProps extends NavigationScreenProps<{}> {}
 
@@ -30,12 +31,16 @@ const BACK_ARROW: ViewStyle = {
 const INTRO: TextStyle = {
   marginTop: spacing.medium,
 }
+
 const backArrow = () => (
   <View style={BACK_ARROW}>
     <Image source={require("../../shared/title-bar/icon.back-arrow.png")} />
     <Text text="INFO" style={HEADER_TEXT} />
   </View>
 )
+
+const email = "conf@infinite.red"
+const twitter = "chainreactconf"
 
 export class CodeOfConductScreen extends React.Component<CodeOfConductScreenProps, {}> {
   static navigationOptions = {
@@ -46,9 +51,10 @@ export class CodeOfConductScreen extends React.Component<CodeOfConductScreenProp
 
   render() {
     return (
-      <Screen style={ROOT} preset="scrollStack" backgroundColor={palette.portGore}>
+      <Screen style={ROOT} preset="scroll" backgroundColor={palette.portGore}>
         <Text preset="header" tx="codeOfConductScreen.title" style={TITLE} />
         <Text preset="body" tx="codeOfConductScreen.intro" style={INTRO} />
+        <Contact email={email} twitter={twitter} />
       </Screen>
     )
   }

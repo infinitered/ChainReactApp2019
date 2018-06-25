@@ -20,3 +20,4 @@ require("../src/views/screens/venue-screen/nearby-attractions/attractions-list/a
 require("../src/views/shared/tab-bar/tab-bar.story")
 require("../src/views/shared/footer/footer.story")
 require("../src/views/shared/social-button/social-button.story")
+require("../src/views/screens/code-of-conduct/contact/contact.story")
