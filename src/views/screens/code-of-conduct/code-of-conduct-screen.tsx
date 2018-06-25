@@ -28,6 +28,7 @@ const TITLE: TextStyle = {
 const BACK_ARROW: ViewStyle = {
   flexDirection: "row",
   paddingLeft: spacing.medium,
+  alignItems: "center",
 }
 const SECTION: TextStyle = {
   marginVertical: spacing.medium,
