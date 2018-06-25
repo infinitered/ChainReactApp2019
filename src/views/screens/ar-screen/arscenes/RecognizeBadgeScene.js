@@ -24,17 +24,27 @@ import {
   ViroSpotLight,
   ViroSpinner,
   ViroSphere,
+  ViroAnimations,
 } from "react-viro"
 
 const BADGE_NOT_FOUND = -1
 
 const BADGE_TYPES = [
-  "badges-final_attendee-front_v2",
-  "badges-final_speaker-front_v2",
-  "badges-final_staff-front_v3",
-  "badges-final_attendee-front_v3",
-  "badges-final_speaker-front_v3",
-  "badges-final_staff-front_v3",
+  "attendee_1",
+  "attendee_2",
+  "attendee_3",
+  "attendee_4",
+  "attendee_6",
+  "speaker_1",
+  "speaker_2",
+  "speaker_3",
+  "speaker_4",
+  "speaker_6",
+  "staff_1",
+  "staff_2",
+  "staff_3",
+  "staff_4",
+  "staff_6",
 ]
 
 export default class RecognizeBadgeScene extends Component {
@@ -45,9 +55,15 @@ export default class RecognizeBadgeScene extends Component {
     this.state = {
       foundBadgeType: BADGE_NOT_FOUND,
       runAnimation: false,
+      finishedInitialAnimation: false,
+      showFloorOne: true,
+      runAnimationLabel1: false,
+      runAnimationLabel2: false,
+      readyLoadModel: false, // TODO: delay model loading by a bit to allow animations to run.
     }
 
     // bind 'this' to functions
+    this._switchFloors = this._switchFloors.bind(this)
     this._getMarkers = this._getMarkers.bind(this)
     this._getARImageMarkerProps = this._getARImageMarkerProps.bind(this)
     this._getOnMarkerFoundCallback = this._getOnMarkerFoundCallback.bind(this)
@@ -55,11 +71,21 @@ export default class RecognizeBadgeScene extends Component {
     this._getExperience = this._getExperience.bind(this)
     this._onInitialized = this._onInitialized.bind(this)
     this._objLoadEnd = this._objLoadEnd.bind(this)
+    this._getButtonAnimation = this._getButtonAnimation.bind(this)
+    this._onFinishInitialAnimation = this._onFinishInitialAnimation.bind(this)
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        readyLoadModel: true,
+      })
+    }, 300)
   }
 
   render() {
     return (
-      <ViroARScene onTrackingUpdated={this._onInitialized}>
+      <ViroARScene onTrackingUpdated={this._onInitialized} onClick={this._switchFloors}>
         <ViroAmbientLight color={"#ffffff"} />
 
         {this._getMarkers()}
@@ -67,6 +93,12 @@ export default class RecognizeBadgeScene extends Component {
         {this._getExperience()}
       </ViroARScene>
     )
+  }
+
+  _switchFloors() {
+    if (this.state.finishedInitialAnimation) {
+      this.setState({ showFloorOne: !this.state.showFloorOne })
+    }
   }
 
   /*
@@ -120,10 +152,24 @@ export default class RecognizeBadgeScene extends Component {
     }, 1000)
   }
 
+  _getButtonAnimation(btnNumber) {
+    if (
+      (btnNumber == 1 && this.state.showFloorOne) ||
+      (btnNumber == 2 && !this.state.showFloorOne)
+    ) {
+      return "buttonFadeSelected"
+    }
+    return "buttonFadeUnselected"
+  }
+
   /*
    Return the experience we want once a badge is found
    */
   _getExperience() {
+    if (!this.state.readyLoadModel) {
+      return null
+    }
+
     let scale = [0, 0, 0]
     let position = [0, 0, 0]
     let rotation = [0, 0, 0]
@@ -132,6 +178,29 @@ export default class RecognizeBadgeScene extends Component {
       scale = [1, 1, 1]
       position = this.state.foundAnchor.position
       rotation = this.state.foundAnchor.rotation
+    }
+
+    let floor1Animation = {}
+    let floor2Animation = {}
+    if (!this.state.finishedInitialAnimation) {
+      floor1Animation = {
+        name: "01",
+        run: this.state.runAnimation,
+        loop: false,
+        onFinish: this._onFinishInitialAnimation,
+      }
+      floor2Animation = { name: "01", run: this.state.runAnimation, loop: false }
+    } else {
+      floor1Animation = {
+        name: this.state.showFloorOne ? "fadeIn" : "fadeOut",
+        run: true,
+        loop: false,
+      }
+      floor2Animation = {
+        name: !this.state.showFloorOne ? "fadeIn" : "fadeOut",
+        run: true,
+        loop: false,
+      }
     }
 
     return (
@@ -147,7 +216,6 @@ export default class RecognizeBadgeScene extends Component {
           <Viro3DObject
             source={require("./res/cr_city.vrx")}
             type={"VRX"}
-            animation={{ name: "01", run: this.state.runAnimation, loop: false }}
             resources={[
               require("./res/cr_ar_badges_Normal_OpenGL.png"),
               require("./res/cr_ar_badges_Base_Color.png"),
@@ -156,15 +224,40 @@ export default class RecognizeBadgeScene extends Component {
             ]}
           />
           <Viro3DObject
-            source={require("./res/cr_floorplan.vrx")}
+            source={require("./res/cr_floor_1.vrx")}
             type={"VRX"}
-            animation={{ name: "01", run: this.state.runAnimation, loop: false }}
+            animation={floor1Animation}
             resources={[
               require("./res/cr_ar_badges_Normal_OpenGL.png"),
               require("./res/cr_ar_badges_Base_Color.png"),
               require("./res/cr_ar_badges_Roughness.png"),
               require("./res/cr_ar_badges_Metallic.png"),
             ]}
+          />
+          <Viro3DObject
+            source={require("./res/cr_floor_1_labels.vrx")}
+            type={"VRX"}
+            animation={floor1Animation}
+            resources={[require("./res/cr_labels.png")]}
+          />
+          <Viro3DObject
+            source={require("./res/cr_floor_2.vrx")}
+            opacity={0}
+            type={"VRX"}
+            animation={floor2Animation}
+            resources={[
+              require("./res/cr_floor_2_Normal_OpenGL.png"),
+              require("./res/cr_floor_2_Base_Color.png"),
+              require("./res/cr_floor_2_Roughness.png"),
+              require("./res/cr_floor_2_Metallic.png"),
+            ]}
+          />
+          <Viro3DObject
+            source={require("./res/cr_floor_2_labels.vrx")}
+            opacity={0}
+            type={"VRX"}
+            animation={floor2Animation}
+            resources={[require("./res/cr_labels.png")]}
           />
           <Viro3DObject
             source={require("./res/cr_cars.vrx")}
@@ -177,14 +270,34 @@ export default class RecognizeBadgeScene extends Component {
             ]}
           />
           <Viro3DObject
-            source={require("./res/cr_labels_obj.vrx")}
+            source={require("./res/cr_btn_floor_1.vrx")}
             type={"VRX"}
-            animation={{ name: "01", run: this.state.runAnimation, loop: false }}
+            animation={{
+              name: this._getButtonAnimation(1),
+              run: this.state.runAnimation,
+              loop: false,
+            }}
+            resources={[require("./res/cr_labels.png")]}
+          />
+          <Viro3DObject
+            source={require("./res/cr_btn_floor_2.vrx")}
+            type={"VRX"}
+            animation={{
+              name: this._getButtonAnimation(2),
+              run: this.state.runAnimation,
+              loop: false,
+            }}
             resources={[require("./res/cr_labels.png")]}
           />
         </ViroNode>
       </ViroNode>
     )
+  }
+
+  _onFinishInitialAnimation() {
+    this.setState({
+      finishedInitialAnimation: true,
+    })
   }
 
   _onInitialized(state, reason) {
@@ -221,64 +334,117 @@ ViroMaterials.createMaterials({
   },
 })
 
+ViroAnimations.registerAnimations({
+  buttonFadeUnselected: {
+    properties: { opacity: 0.3 },
+    duration: 500,
+    delay: 0,
+  },
+  buttonFadeSelected: {
+    properties: { opacity: 1 },
+    duration: 500,
+    delay: 0,
+  },
+  fadeOut: {
+    properties: { opacity: 0 },
+    duration: 250,
+    delay: 0,
+  },
+  fadeIn: {
+    properties: { opacity: 1 },
+    duration: 250,
+    delay: 250,
+  },
+})
+
 ViroARTrackingTargets.createTargets({
-  badge_attendee: {
-    source: require("./res/badge_attendee.jpg"),
+  attendee_1: {
+    source: require("./res/badges/attendee_1.png"),
     orientation: "Up",
     physicalWidth: 0.09525, // 3.75 inches wide
   },
-  badge_speaker: {
-    source: require("./res/badge_speaker.jpg"),
+  attendee_2: {
+    source: require("./res/badges/attendee_2.png"),
     orientation: "Up",
     physicalWidth: 0.09525, // 3.75 inches wide
   },
-  badge_staff: {
-    source: require("./res/badge_staff.jpg"),
+  attendee_3: {
+    source: require("./res/badges/attendee_3.png"),
     orientation: "Up",
     physicalWidth: 0.09525, // 3.75 inches wide
   },
-  "badges-final_attendee-back": {
-    source: require("./res/badges-final_attendee-back.png"),
+  attendee_4: {
+    source: require("./res/badges/attendee_4.png"),
     orientation: "Up",
     physicalWidth: 0.09525, // 3.75 inches wide
   },
-  "badges-final_speaker-back": {
-    source: require("./res/badges-final_speaker-back.png"),
+  attendee_5: {
+    source: require("./res/badges/attendee_5.png"),
     orientation: "Up",
     physicalWidth: 0.09525, // 3.75 inches wide
   },
-  "badges-final_staff-back": {
-    source: require("./res/badges-final_staff-back.png"),
+  attendee_6: {
+    source: require("./res/badges/attendee_6.png"),
     orientation: "Up",
     physicalWidth: 0.09525, // 3.75 inches wide
   },
-  "badges-final_attendee-front_v2": {
-    source: require("./res/badges-final_attendee-front_v2.png"),
+  speaker_1: {
+    source: require("./res/badges/speaker_1.png"),
     orientation: "Up",
     physicalWidth: 0.09525, // 3.75 inches wide
   },
-  "badges-final_speaker-front_v2": {
-    source: require("./res/badges-final_speaker-front_v2.png"),
+  speaker_2: {
+    source: require("./res/badges/speaker_2.png"),
     orientation: "Up",
     physicalWidth: 0.09525, // 3.75 inches wide
   },
-  "badges-final_staff-front_v2": {
-    source: require("./res/badges-final_staff-front_v2.png"),
+  speaker_3: {
+    source: require("./res/badges/speaker_3.png"),
     orientation: "Up",
     physicalWidth: 0.09525, // 3.75 inches wide
   },
-  "badges-final_attendee-front_v3": {
-    source: require("./res/badges-final_attendee-front_v3.png"),
+  speaker_4: {
+    source: require("./res/badges/speaker_4.png"),
     orientation: "Up",
     physicalWidth: 0.09525, // 3.75 inches wide
   },
-  "badges-final_speaker-front_v3": {
-    source: require("./res/badges-final_speaker-front_v3.png"),
+  speaker_5: {
+    source: require("./res/badges/speaker_5.png"),
     orientation: "Up",
     physicalWidth: 0.09525, // 3.75 inches wide
   },
-  "badges-final_staff-front_v3": {
-    source: require("./res/badges-final_staff-front_v3.png"),
+  speaker_6: {
+    source: require("./res/badges/speaker_6.png"),
+    orientation: "Up",
+    physicalWidth: 0.09525, // 3.75 inches wide
+  },
+  staff_1: {
+    source: require("./res/badges/staff_1.png"),
+    orientation: "Up",
+    physicalWidth: 0.09525, // 3.75 inches wide
+  },
+  staff_2: {
+    source: require("./res/badges/staff_2.png"),
+    orientation: "Up",
+    physicalWidth: 0.09525, // 3.75 inches wide
+  },
+  staff_3: {
+    source: require("./res/badges/staff_3.png"),
+    orientation: "Up",
+    physicalWidth: 0.09525, // 3.75 inches wide
+  },
+  staff_4: {
+    source: require("./res/badges/staff_4.png"),
+    orientation: "Up",
+    physicalWidth: 0.09525, // 3.75 inches wide
+  },
+  staff_5: {
+    source: require("./res/badges/staff_5.png"),
+    orientation: "Up",
+    physicalWidth: 0.09525, // 3.75 inches wide
+  },
+  staff_6: {
+    source: require("./res/badges/staff_6.png"),
     orientation: "Up",
     physicalWidth: 0.09525, // 3.75 inches wide
   },

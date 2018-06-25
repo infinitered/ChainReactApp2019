@@ -56,12 +56,14 @@ export class ARScreen extends React.Component<ARScreenProps, {}> {
     super(props)
 
     this.state = {
+      hideARInitializedView: false,
       arInitialized: false,
       hasBadgeBeenFound: false,
       badgeOpacity: new Animated.Value(1),
     }
 
     this.onARInitialized = this.onARInitialized.bind(this)
+    this.getARInitializationUI = this.getARInitializationUI.bind(this)
     this.onBadgeFound = this.onBadgeFound.bind(this)
     this.getBadgeFrame = this.getBadgeFrame.bind(this)
   }
@@ -70,6 +72,13 @@ export class ARScreen extends React.Component<ARScreenProps, {}> {
     this.setState({
       arInitialized: initialized,
     })
+
+    // after 2 seconds, remove the invisible view (it's eating the touch targets)
+    setTimeout(() => {
+      this.setState({
+        hideARInitializedView: true,
+      })
+    }, 2000)
   }
 
   onBadgeFound() {
@@ -96,6 +105,21 @@ export class ARScreen extends React.Component<ARScreenProps, {}> {
     }
   }
 
+  getARInitializationUI() {
+    if (this.state.hideARInitializedView) {
+      return
+    } else {
+      return (
+        <View style={arInitUIContainer}>
+          <ARInitializationUI
+            style={arInitializationUIStyle}
+            arSceneInitialized={this.state.arInitialized}
+          />
+        </View>
+      )
+    }
+  }
+
   render() {
     return (
       <View style={{ flex: 1 }}>
@@ -112,12 +136,7 @@ export class ARScreen extends React.Component<ARScreenProps, {}> {
 
         {this.getBadgeFrame()}
 
-        <View style={arInitUIContainer}>
-          <ARInitializationUI
-            style={arInitializationUIStyle}
-            arSceneInitialized={this.state.arInitialized}
-          />
-        </View>
+        {this.getARInitializationUI()}
 
         <TouchableHighlight
           style={exitButton}
