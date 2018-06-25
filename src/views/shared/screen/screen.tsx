@@ -1,5 +1,5 @@
 import * as React from "react"
-import { ScrollView, View, ViewStyle, Image } from "react-native"
+import { Image, SafeAreaView, ScrollView, ViewStyle } from "react-native"
 import { ScreenProps } from "./screen.props"
 import { presets, isNonScrolling } from "./screen.presets"
 
@@ -15,13 +15,13 @@ function ScreenWithoutScrolling(props: ScreenProps) {
 
   if (props.backgroundImage) {
     return (
-      <View style={[style, backgroundStyle]}>
+      <SafeAreaView style={[style, backgroundStyle]}>
         <Image source={props.backgroundImage} style={{ position: "absolute", width: "100%" }} />
         {props.children}
-      </View>
+      </SafeAreaView>
     )
   } else {
-    return <View style={[style, backgroundStyle]}>{props.children}</View>
+    return <SafeAreaView style={[style, backgroundStyle]}>{props.children}</SafeAreaView>
   }
 }
 
@@ -38,7 +38,7 @@ function ScreenWithScrolling(props: ScreenProps) {
 
   return (
     <ScrollView style={[outerStyle, backgroundStyle]} contentContainerStyle={innerStyle}>
-      {props.children}
+      <SafeAreaView>{props.children}</SafeAreaView>
     </ScrollView>
   )
 }

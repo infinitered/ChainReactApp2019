@@ -11,16 +11,16 @@ storiesOf("SponsorLogo")
         <SponsorLogo size="platinum" sponsor="squarespace" />
       </UseCase>
       <UseCase text="Gold Sponsor" noBackground>
-        <SponsorLogo size="gold" sponsor="gold" />
+        <SponsorLogo size="gold" sponsor="agora" />
       </UseCase>
       <UseCase text="Silver Sponsor" noBackground>
-        <SponsorLogo size="silver" sponsor="gold" />
+        <SponsorLogo size="silver" sponsor="callstack" />
       </UseCase>
       <UseCase text="Bronze Sponsor" noBackground>
-        <SponsorLogo size="bronze" sponsor="gold" />
+        <SponsorLogo size="bronze" sponsor="modus" />
       </UseCase>
       <UseCase text="Additional Sponsor" noBackground>
-        <SponsorLogo size="additional" sponsor="gold" />
+        <SponsorLogo size="additional" sponsor="squarespaceAdditional" />
       </UseCase>
     </Story>
   ))

@@ -1,15 +1,30 @@
 import * as React from "react"
-import { View, Image, ViewStyle, ImageStyle } from "react-native"
+import { View, Image, ViewStyle, ImageStyle, TextStyle } from "react-native"
 import { presentedByPresets } from "./presented-by.presets"
 import { PresentedByProps } from "./presented-by.props"
 import { Text } from "../../../shared/text"
 import { SocialButton } from "../../../shared/social-button"
 import { spacing } from "../../../../theme/spacing"
+import { palette } from "../../../../theme/palette"
 
 const BACKGROUND: ImageStyle = {
   position: "absolute",
   bottom: 0,
   width: "100%",
+  alignSelf: "center",
+}
+const TEXT: TextStyle = {
+  color: palette.offWhite,
+}
+const TITLE: TextStyle = {
+  color: palette.white,
+}
+const SUBTITLE: TextStyle = {
+  ...TEXT,
+}
+const BIO: TextStyle = {
+  ...TEXT,
+  marginVertical: spacing.large,
 }
 const LOGO: ImageStyle = {
   width: 110,
@@ -22,6 +37,9 @@ const SOCIAL_WRAPPER: ViewStyle = {
   alignItems: "center",
   marginTop: 40,
   marginBottom: 117,
+}
+const FOOTER: ViewStyle = {
+  alignItems: "center",
 }
 const backgroundImage = require("./bg.team.png")
 const infiniteRedLogo = require("./logo.infinitered.png")
@@ -46,17 +64,23 @@ export function PresentedBy(props: PresentedByProps) {
   const viewStyle = { ...viewPresetToUse }
 
   return (
-    <View style={viewStyle} {...rest}>
+    <View>
       <Image style={BACKGROUND} source={backgroundImage} />
-      <Text tx="infoScreen.presentedBy" preset="label" />
-      <Image style={LOGO} source={infiniteRedLogo} />
-      <View style={SOCIAL_WRAPPER}>
-        <SocialButton preset="website" link={linkPresets.website} />
-        <SocialButton preset="twitter" link={linkPresets.twitter} />
-        <SocialButton preset="github" link={linkPresets.github} />
-        <SocialButton preset="medium" link={linkPresets.medium} />
-        <SocialButton preset="dribbble" link={linkPresets.dribbble} />
-        <SocialButton preset="instagram" link={linkPresets.instagram} />
+      <View style={viewStyle} {...rest}>
+        <Text preset="header" tx="infoScreen.presentedBy.title" style={TITLE} />
+        <Text preset="header" tx="infoScreen.presentedBy.subtitle" style={SUBTITLE} />
+        <Text preset="body" style={BIO} tx="infoScreen.presentedBy.bio" />
+        <View style={FOOTER}>
+          <Image style={LOGO} source={infiniteRedLogo} />
+          <View style={SOCIAL_WRAPPER}>
+            <SocialButton preset="website" link={linkPresets.website} />
+            <SocialButton preset="twitter" link={linkPresets.twitter} />
+            <SocialButton preset="github" link={linkPresets.github} />
+            <SocialButton preset="medium" link={linkPresets.medium} />
+            <SocialButton preset="dribbble" link={linkPresets.dribbble} />
+            <SocialButton preset="instagram" link={linkPresets.instagram} />
+          </View>
+        </View>
       </View>
     </View>
   )

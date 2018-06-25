@@ -49,4 +49,6 @@ export const color = {
    */
   error: palette.angry,
   tabbar: palette.ebony,
+  callout: palette.purple,
+  calloutShadow: palette.darkPurple,
 }

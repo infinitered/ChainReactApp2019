@@ -1,7 +1,7 @@
 import { ViewProperties } from "react-native"
-import { SponsorLogoSizePresets, SponsorLogoPresets } from "./sponsor-logo.presets"
+import { SponsorLogoSizePresetNames, SponsorNames } from "./sponsor-logo.presets"
 
 export interface SponsorLogoProps extends ViewProperties {
-  size?: SponsorLogoSizePresets
-  sponsor?: SponsorLogoPresets
+  size?: SponsorLogoSizePresetNames
+  sponsor?: SponsorNames
 }

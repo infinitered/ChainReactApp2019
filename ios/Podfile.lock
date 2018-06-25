@@ -1,7 +1,7 @@
 PODS:
   - React (0.55.4):
     - React/Core (= 0.55.4)
-  - react-native-mapbox-gl (6.0.3):
+  - react-native-mapbox-gl (6.1.1):
     - React
   - react-native-splash-screen (3.0.6):
     - React
