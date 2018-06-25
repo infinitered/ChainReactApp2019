@@ -54,9 +54,9 @@ const twitter = "chainreactconf"
 
 export class CodeOfConductScreen extends React.Component<CodeOfConductScreenProps, {}> {
   static navigationOptions = {
-    headerStyle: { backgroundColor: palette.portGore, borderBottomWidth: 0 },
+    headerStyle: { backgroundColor: color.palette.portGore, borderBottomWidth: 0 },
     headerBackImage: backArrow,
-    headerTintColor: palette.shamrock,
+    headerTintColor: color.palette.shamrock,
   }
 
   render() {
