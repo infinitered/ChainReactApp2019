@@ -13,6 +13,7 @@ export interface CodeOfConductScreenProps extends NavigationScreenProps<{}> {}
 const ROOT: ViewStyle = {
   marginTop: spacing.extraLarge,
   marginHorizontal: spacing.large,
+  paddingBottom: spacing.huge,
 }
 const HEADER_TEXT: TextStyle = {
   fontWeight: "600",
@@ -28,7 +29,15 @@ const BACK_ARROW: ViewStyle = {
   flexDirection: "row",
   paddingLeft: spacing.medium,
 }
-const INTRO: TextStyle = {
+const SECTION: TextStyle = {
+  marginVertical: spacing.medium,
+}
+
+const SECTION_TITLE: TextStyle = {
+  fontWeight: "500",
+  letterSpacing: 3.0,
+  fontSize: 14,
+  color: color.palette.shamrock,
   marginTop: spacing.medium,
 }
 
@@ -53,8 +62,12 @@ export class CodeOfConductScreen extends React.Component<CodeOfConductScreenProp
     return (
       <Screen style={ROOT} preset="scroll" backgroundColor={palette.portGore}>
         <Text preset="header" tx="codeOfConductScreen.title" style={TITLE} />
-        <Text preset="body" tx="codeOfConductScreen.intro" style={INTRO} />
+        <Text preset="body" tx="codeOfConductScreen.intro" style={SECTION} />
         <Contact email={email} twitter={twitter} />
+        <Text preset="body" style={SECTION_TITLE} tx={"codeOfConductScreen.quickVersionTitle"} />
+        <Text preset="body" style={SECTION} tx={"codeOfConductScreen.quickVersion"} />
+        <Text preset="body" style={SECTION_TITLE} tx={"codeOfConductScreen.lessQuickTitle"} />
+        <Text preset="body" style={SECTION} tx={"codeOfConductScreen.lessQuickVersion"} />
       </Screen>
     )
   }
