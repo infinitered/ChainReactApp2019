@@ -4,6 +4,7 @@ import { VenueScreen } from "../views/screens/venue-screen"
 import { InfoScreen } from "../views/screens/info-screen"
 import { TalkDetailsScreen } from "../views/screens/talk-details"
 import { TabBar } from "../views/shared/tab-bar"
+import { CodeOfConductScreen } from "../views/screens/code-of-conduct"
 
 export const MainNavigator = createStackNavigator(
   {
@@ -21,7 +22,15 @@ export const MainNavigator = createStackNavigator(
             },
           ),
           venue: { screen: VenueScreen },
-          info: { screen: InfoScreen },
+          info: createStackNavigator(
+            {
+              infoScreen: { screen: InfoScreen },
+              codeOfConduct: { screen: CodeOfConductScreen },
+            },
+            {
+              initialRouteName: "infoScreen",
+            },
+          ),
         },
         {
           tabBarComponent: TabBar,
