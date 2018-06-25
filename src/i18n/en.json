@@ -93,5 +93,10 @@
       "bio":
         "Infinite Red is a distributed app design and development team of mobile and web experts in Portland, San Francisco, New Orleans, and other locales across the U.S. We’re passionate about creating beautifully functional products and amazing user experiences.\n\nOur team has been creating apps and websites for over ten years, and we’ve worked with companies from BlueJeans to Microsoft to Fandor. We believe it’s important to participate in and give back to the tech community, which is one reason we started Chain React."
     }
+  },
+  "codeOfConductScreen": {
+    "title": "CONFERENCE CODE OF CONDUCT",
+    "intro":
+      "All attendees, speakers, sponsors and volunteers at our conference are required to agree with the following code of conduct. Organisers will enforce this code throughout the event. We expect cooperation from all participants to help ensure a safe environment for everybody. "
   }
 }

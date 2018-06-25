@@ -21,12 +21,16 @@ const ROOT: ViewStyle = {
 }
 
 export class InfoScreen extends React.Component<InfoScreenProps, {}> {
+  static navigationOptions = {
+    header: null,
+  }
+
   render() {
     return (
       <Screen style={ROOT} preset="scrollStack" backgroundColor={palette.portGore}>
         <Text preset="title" tx="infoScreen.title" style={TITLE} />
         <WiFi />
-        <Conduct />
+        <Conduct onPress={() => this.props.navigation.navigate("codeOfConduct")} />
         <Sponsors />
         <PresentedBy />
       </Screen>
