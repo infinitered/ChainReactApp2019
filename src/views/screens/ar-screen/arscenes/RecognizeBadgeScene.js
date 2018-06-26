@@ -32,18 +32,12 @@ const BADGE_NOT_FOUND = -1
 const BADGE_TYPES = [
   "attendee_1",
   "attendee_2",
-  "attendee_3",
-  "attendee_4",
   "attendee_6",
   "speaker_1",
   "speaker_2",
-  "speaker_3",
-  "speaker_4",
   "speaker_6",
   "staff_1",
   "staff_2",
-  "staff_3",
-  "staff_4",
   "staff_6",
 ]
 
@@ -269,25 +263,31 @@ export default class RecognizeBadgeScene extends Component {
               require("./res/cr_cars_Roughness.png"),
             ]}
           />
-          <Viro3DObject
-            source={require("./res/cr_btn_floor_1.vrx")}
-            type={"VRX"}
+          <ViroImage
+            source={require("./res/cr_label_floor_1.png")}
+            position={[7.2155, 0.123619, 4.1603]}
+            height={1.675}
+            width={4.697}
+            rotation={[-90, 0, 0]}
+            resizeMode="ScaleToFill"
             animation={{
               name: this._getButtonAnimation(1),
               run: this.state.runAnimation,
               loop: false,
             }}
-            resources={[require("./res/cr_labels.png")]}
           />
-          <Viro3DObject
-            source={require("./res/cr_btn_floor_2.vrx")}
-            type={"VRX"}
+          <ViroImage
+            source={require("./res/cr_label_floor_2.png")}
+            position={[7.2155, 0.123619, 6.3425]}
+            height={1.675}
+            width={4.697}
+            rotation={[-90, 0, 0]}
+            resizeMode="ScaleToFill"
             animation={{
               name: this._getButtonAnimation(2),
               run: this.state.runAnimation,
               loop: false,
             }}
-            resources={[require("./res/cr_labels.png")]}
           />
         </ViroNode>
       </ViroNode>
