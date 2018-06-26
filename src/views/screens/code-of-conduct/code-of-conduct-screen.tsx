@@ -50,6 +50,7 @@ const backArrow = () => (
 
 const email = "conf@infinite.red"
 const twitter = "chainreactconf"
+const phoneNumber = "(360) 562-0450"
 
 export class CodeOfConductScreen extends React.Component<CodeOfConductScreenProps, {}> {
   static navigationOptions = {
@@ -63,7 +64,7 @@ export class CodeOfConductScreen extends React.Component<CodeOfConductScreenProp
       <Screen style={ROOT} preset="scroll" backgroundColor={palette.portGore}>
         <Text preset="header" tx="codeOfConductScreen.title" style={TITLE} />
         <Text preset="body" tx="codeOfConductScreen.intro" style={SECTION} />
-        <Contact email={email} twitter={twitter} />
+        <Contact phoneNumber={phoneNumber} email={email} twitter={twitter} />
         <Text preset="body" style={SECTION_TITLE} tx={"codeOfConductScreen.quickVersionTitle"} />
         <Text preset="body" style={SECTION} tx={"codeOfConductScreen.quickVersion"} />
         <Text preset="body" style={SECTION_TITLE} tx={"codeOfConductScreen.lessQuickTitle"} />

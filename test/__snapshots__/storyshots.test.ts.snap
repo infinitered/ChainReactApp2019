@@ -2773,6 +2773,82 @@ exports[`Storyshots Code of Conduct - Contact Presets 1`] = `
                   @FAKE
                 </Text>
               </View>
+              <View
+                accessibilityComponentType={undefined}
+                accessibilityLabel={undefined}
+                accessibilityTraits={undefined}
+                accessible={true}
+                collapsable={undefined}
+                hasTVPreferredFocus={undefined}
+                hitSlop={undefined}
+                isTVSelectable={true}
+                nativeID={undefined}
+                onLayout={undefined}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "opacity": 1,
+                    "paddingVertical": 20,
+                  }
+                }
+                testID={undefined}
+                tvParallaxProperties={undefined}
+              >
+                <View
+                  accessibilityComponentType={undefined}
+                  accessibilityLabel={undefined}
+                  accessibilityTraits={undefined}
+                  accessible={true}
+                  hasTVPreferredFocus={undefined}
+                  hitSlop={undefined}
+                  isTVSelectable={true}
+                  nativeID={undefined}
+                  onLayout={undefined}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "height": 32,
+                      "justifyContent": "center",
+                      "marginRight": 14,
+                      "width": 32,
+                    }
+                  }
+                  testID={undefined}
+                  tvParallaxProperties={undefined}
+                >
+                  <Image
+                    source={1}
+                    style={Object {}}
+                  />
+                </View>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "#C7C4DB",
+                      "fontFamily": "Gotham Rounded",
+                      "fontSize": 14,
+                      "fontWeight": "500",
+                      "letterSpacing": 3,
+                      "lineHeight": 32,
+                    }
+                  }
+                />
+              </View>
             </View>
           </View>
         </View>

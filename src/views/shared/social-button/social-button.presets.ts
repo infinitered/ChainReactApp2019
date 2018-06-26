@@ -33,6 +33,7 @@ export const imageSource = {
   instagram: require("./instagram.png"),
   facebook: require("./facebook.png"),
   email: require("./email.icon.png"),
+  phone: require("./phone.icon.png"),
 }
 
 export const imageStyle = {
