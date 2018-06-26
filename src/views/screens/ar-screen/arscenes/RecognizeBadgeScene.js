@@ -80,7 +80,7 @@ export default class RecognizeBadgeScene extends Component {
       this.setState({
         readyLoadModel: true,
       })
-    }, 300)
+    }, 500)
   }
 
   render() {
