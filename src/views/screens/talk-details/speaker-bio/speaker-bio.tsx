@@ -34,7 +34,6 @@ export class SpeakerBio extends React.Component<SpeakerBioProps, {}> {
   render() {
     const {
       name,
-      bio,
       facebook,
       twitter,
       github,
@@ -46,7 +45,15 @@ export class SpeakerBio extends React.Component<SpeakerBioProps, {}> {
     const { last = true } = this.props
     const splitName = name.split(" ")
     const key = `${splitName.join("-")}-bio`
-    const links = { facebook, twitter, github, medium, instagram, dribbble, websites }
+    const links = {
+      facebook,
+      twitter,
+      github,
+      medium,
+      instagram,
+      dribbble,
+      websites: websites || [],
+    }
     const socialStyles = [SOCIAL_WRAPPER, last && SOCIAL_WRAPPER_LAST]
 
     if (
@@ -68,7 +75,7 @@ export class SpeakerBio extends React.Component<SpeakerBioProps, {}> {
           <View style={socialStyles}>
             {Object.keys(links).map(k => {
               return k === "websites"
-                ? links[k].map(link => this.renderLink("website", link))
+                ? links.websites.map(link => this.renderLink("website", link))
                 : this.renderLink(k, links[k])
             })}
           </View>
