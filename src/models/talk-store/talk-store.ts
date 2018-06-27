@@ -31,6 +31,7 @@ export const TalkStoreModel = types
               menuItems
               sponsor
               talkType
+              location
               speakers {
                 id
                 name
@@ -40,6 +41,9 @@ export const TalkStoreModel = types
                 twitter
                 github
                 medium
+                instagram
+                dribbble
+                websites
               }
             }
           }

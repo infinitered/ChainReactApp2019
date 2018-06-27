@@ -12,6 +12,7 @@ export const TalkModel = types.model().props({
   menuItems: types.maybe(types.array(types.string)),
   sponsor: types.maybe(types.string),
   talkType: types.maybe(types.string),
+  location: types.maybe(types.string),
 })
 
 export type Talk = typeof TalkModel.Type
