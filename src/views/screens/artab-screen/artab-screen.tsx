@@ -54,7 +54,6 @@ const BULLETPOINT: ViewStyle = {
   marginRight: spacing.small,
   height: 6,
   width: 6,
-  borderRadius: 3,
   backgroundColor: color.palette.offWhite,
 }
 
@@ -67,8 +66,8 @@ const ATTR_CONTAINER: ViewStyle = {
 
 const LOGO_IMAGE: ViewStyle = {
   resizeMode: "contain",
-  width: 150,
-  height: 90,
+  width: 140,
+  height: 82,
 }
 
 const OVERLAY: ViewStyle = {
