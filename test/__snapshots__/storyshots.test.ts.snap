@@ -5940,11 +5940,13 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                       "color": "#56E39F",
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 11,
+                      "fontWeight": "600",
                     }
                   }
                 >
                   9:00 AM - 10:00 AM
                 </Text>
+                )}
               </View>
               <View
                 style={
@@ -6156,11 +6158,13 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                       "color": "#56E39F",
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 11,
+                      "fontWeight": "600",
                     }
                   }
                 >
                   9:00 AM - 10:00 AM
                 </Text>
+                )}
               </View>
               <View
                 style={
@@ -6372,11 +6376,13 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                       "color": "#56E39F",
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 11,
+                      "fontWeight": "600",
                     }
                   }
                 >
                   9:00 AM - 10:00 AM
                 </Text>
+                )}
               </View>
               <View
                 style={
@@ -6558,6 +6564,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                       "color": "#56E39F",
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 11,
+                      "fontWeight": "600",
                       "width": 100,
                     }
                   }
@@ -6573,11 +6580,13 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                       "color": "#56E39F",
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 11,
+                      "fontWeight": "600",
                     }
                   }
                 >
                   9:00 AM - 10:00 AM
                 </Text>
+                )}
               </View>
               <View
                 style={
@@ -6789,11 +6798,13 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                       "color": "#56E39F",
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 11,
+                      "fontWeight": "600",
                     }
                   }
                 >
                   9:00 AM - 10:00 AM
                 </Text>
+                )}
               </View>
               <View
                 style={
@@ -6868,55 +6879,6 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                   >
                     Join us for an afterparty sponsored by SquareSpace!
                   </Text>
-                  <View
-                    accessibilityComponentType={undefined}
-                    accessibilityLabel={undefined}
-                    accessibilityTraits={undefined}
-                    accessible={true}
-                    collapsable={undefined}
-                    hasTVPreferredFocus={undefined}
-                    hitSlop={undefined}
-                    isTVSelectable={true}
-                    nativeID={undefined}
-                    onLayout={undefined}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#EC174F",
-                        "borderRadius": 0,
-                        "justifyContent": "center",
-                        "marginTop": 34,
-                        "opacity": 1,
-                        "paddingHorizontal": 34,
-                        "paddingVertical": 14,
-                        "width": 160,
-                      }
-                    }
-                    testID={undefined}
-                    tvParallaxProperties={undefined}
-                  >
-                    <Text
-                      accessible={true}
-                      allowFontScaling={true}
-                      ellipsizeMode="tail"
-                      style={
-                        Object {
-                          "color": "#ffffff",
-                          "fontFamily": "Gotham Rounded",
-                          "fontSize": 14,
-                          "paddingHorizontal": undefined,
-                        }
-                      }
-                    >
-                      RSVP Now
-                    </Text>
-                  </View>
                 </View>
               </View>
             </View>
