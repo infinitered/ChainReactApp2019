@@ -97,7 +97,11 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
   static navigationOptions = ({ navigation }) => {
     const { talk } = navigation.state.params
     return {
-      headerStyle: { backgroundColor: palette.portGore, borderBottomWidth: 0 },
+      headerStyle: {
+        backgroundColor: palette.portGore,
+        borderBottomWidth: 0,
+        paddingLeft: spacing.large + spacing.tiny,
+      },
       headerBackImage: backImage,
       headerTintColor: palette.shamrock,
       title: `${format(talk.startTime, "h:mm")} - ${format(talk.endTime, "h:mm")}`,
@@ -114,8 +118,8 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
   }
 
   renderContent = () => {
-    const { type } = this.props.navigation.state.params.talk
-    switch (type) {
+    const { talkType } = this.props.navigation.state.params.talk
+    switch (talkType.toLowerCase()) {
       case "talk":
         return this.renderTalk()
       case "workshop":
@@ -123,10 +127,11 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
       case "break":
         return this.renderBreak()
       case "lunch":
+      case "breakfast":
         return this.renderLunch()
       case "panel":
         return this.renderPanel()
-      case "afterParty":
+      case "afterparty":
         return this.renderAfterParty()
       default:
         return <View />
@@ -137,9 +142,16 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
     const { talk } = this.props.navigation.state.params
     return (
       <View style={FULL_SIZE}>
-        <SpeakerImage speaker={talk.speakers[0]} />
+        {talk.speakers && <SpeakerImage speaker={talk.speakers[0]} />}
         <TalkTitle talk={talk} />
-        <SpeakerBio speaker={talk.speakers[0]} />
+        {talk.description && (
+          <Text
+            text={talk.description}
+            preset="body"
+            style={{ fontSize: 16, marginTop: spacing.large }}
+          />
+        )}
+        {talk.speakers && <SpeakerBio speaker={talk.speakers[0]} />}
       </View>
     )
   }
@@ -176,13 +188,19 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
       <View style={FULL_SIZE}>
         <Image source={require("./img.event.png")} style={FULL_WIDTH_IMAGE} />
         <Text text={title} preset="body" style={TITLE} />
-        <View style={SPONSOR_CONTAINER}>
-          <Text tx="talkDetailsScreen.sponsoredBy" preset="input" style={SPONSORED_BY} />
-          <Text text={sponsor} preset="input" style={SPONSOR_NAME} />
-        </View>
+        {sponsor && this.renderSponsored(sponsor)}
         <Text text={description} preset="body" style={DESCRIPTION} />
         <Text preset="sectionHeader" tx="talkDetailsScreen.menuTitle" style={LABEL} />
         {menuItems.map(item => this.renderMenuItem(item))}
+      </View>
+    )
+  }
+
+  renderSponsored = sponsor => {
+    return (
+      <View style={SPONSOR_CONTAINER}>
+        <Text tx="talkDetailsScreen.sponsoredBy" preset="input" style={SPONSORED_BY} />
+        <Text text={sponsor} preset="input" style={SPONSOR_NAME} />
       </View>
     )
   }
@@ -210,23 +228,15 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
   }
 
   renderAfterParty = () => {
-    const { title, description, location, rsvpWebsite } = this.props.navigation.state.params.talk
+    const { title, description, image } = this.props.navigation.state.params.talk
     return (
       <View style={FULL_SIZE}>
         <View>
           <Image source={require("./img.event.png")} style={FULL_WIDTH_IMAGE} />
-          <Image source={require("./img.partylogo.png")} style={AFTER_PARTY_LOGO} />
+          <Image source={{ uri: image }} style={AFTER_PARTY_LOGO} />
         </View>
         <Text text={title} preset="body" style={TITLE} />
         <Text text={description} preset="body" style={AFTER_PARTY_DESCRIPTION} />
-        <Text text={location} preset="body" style={AFTER_PARTY_LOCATION} />
-        <Button
-          preset="primary"
-          onPress={() => Linking.openURL(rsvpWebsite)}
-          tx="talkDetailsScreen.rsvp"
-          style={RSVP}
-          textStyle={RSVP_TEXT}
-        />
       </View>
     )
   }

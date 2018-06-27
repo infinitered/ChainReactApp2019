@@ -14,7 +14,7 @@ const ROOT_STATE_STORAGE_KEY = "root"
 /**
  * The uri we'll be using for graphql requests.
  */
-const GRAPHQL_URI = __DEV__ ? "http://localhost:4000/graphql" : "https://infinite.red/graphql"
+const GRAPHQL_URI = "https://infinite.red/graphql"
 
 /**
  * Setup the root state.

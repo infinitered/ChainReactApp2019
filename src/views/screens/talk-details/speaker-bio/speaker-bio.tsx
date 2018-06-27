@@ -32,19 +32,22 @@ const SOCIAL_WRAPPER_LAST: ViewStyle = {
 
 export class SpeakerBio extends React.Component<SpeakerBioProps, {}> {
   render() {
-    const { name, bio, links } = this.props.speaker
+    const { name, bio, facebook, twitter, github, medium } = this.props.speaker
     const { last = true } = this.props
     const splitName = name.split(" ")
     const socialStyles = [SOCIAL_WRAPPER, last && SOCIAL_WRAPPER_LAST]
     const key = `${splitName.join("-")}-bio`
+    const links = { facebook, twitter, github, medium }
     return (
       <View key={key} style={ROOT}>
         <Text
-          text={`ABOUT ${splitName[0].toUpperCase()}`}
+          text={`FOLLOW ${splitName[0].toUpperCase()}`}
           preset="sectionHeader"
           style={{ color: palette.shamrock }}
         />
-        <Text text={bio} preset="body" style={{ fontSize: 16, marginTop: spacing.large }} />
+        {bio && (
+          <Text text={bio} preset="body" style={{ fontSize: 16, marginTop: spacing.large }} />
+        )}
         <View style={socialStyles}>
           {Object.keys(links).map(k => {
             return k === "websites"
@@ -57,6 +60,7 @@ export class SpeakerBio extends React.Component<SpeakerBioProps, {}> {
   }
 
   renderLink = (k, link) => {
+    if (!link) return null
     return <SocialButton key={k} preset={k} link={link} />
   }
 }

@@ -13,7 +13,6 @@ import { Sponsors } from "./sponsors"
 export interface InfoScreenProps extends NavigationScreenProps<{}> {}
 
 const TITLE: TextStyle = {
-  marginTop: spacing.extraLarge,
   marginLeft: spacing.large,
 }
 const ROOT: ViewStyle = {

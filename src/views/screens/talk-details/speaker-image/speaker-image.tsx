@@ -23,7 +23,11 @@ const ROOT: ViewStyle = {
   width: "100%",
 }
 
-const SPEAKER_IMAGE: ImageStyle = { maxHeight: 383 }
+const SPEAKER_IMAGE: ImageStyle = {
+  width: 303,
+  height: 383,
+  marginRight: 32,
+}
 
 const NAME: ViewStyle = {
   position: "absolute",
@@ -45,12 +49,12 @@ const EMPLOYER: TextStyle = {
 
 export class SpeakerImage extends React.Component<SpeakerImageProps, {}> {
   render() {
-    const { name, employer } = this.props.speaker
+    const { name, employer, image } = this.props.speaker
     const splitName = name.split(" ")
     const key = `${splitName.join("-")}-image`
     return (
       <View key={key} style={ROOT}>
-        <Image source={require("./img.speaker.lg.png")} style={SPEAKER_IMAGE} />
+        <Image source={{ uri: image }} style={SPEAKER_IMAGE} />
         <View style={NAME}>
           <Text text={splitName[0].toUpperCase()} preset="body" style={SPEAKER_NAME} />
           <Text text={splitName[1].toUpperCase()} preset="body" style={SPEAKER_NAME} />

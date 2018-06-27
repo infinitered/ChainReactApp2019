@@ -24,6 +24,23 @@ export const TalkStoreModel = types
             talks {
               id
               title
+              description
+              image
+              startTime
+              endTime
+              menuItems
+              sponsor
+              talkType
+              speakers {
+                id
+                name
+                employer
+                image
+                facebook
+                twitter
+                github
+                medium
+              }
             }
           }
         `,
