@@ -34,18 +34,20 @@ const TITLE: TextStyle = {
 
 export class TalkTitle extends React.Component<{ talk: any }, {}> {
   render() {
-    const { type } = this.props.talk
-    switch (type) {
+    const { talkType } = this.props.talk
+    switch (talkType.toLowerCase()) {
       case "talk":
         return this.renderTalk()
       case "workshop":
         return this.renderWorkshop()
+      default:
+        return null
     }
   }
 
   renderTalk = () => {
     const { title, speakers } = this.props.talk
-    const splitName = speakers[0].name.split(" ")
+    const splitName = speakers ? speakers[0].name.split(" ") : [""]
     return (
       <View style={ROOT}>
         <Text text={`${splitName[0].toUpperCase()}'S TALK`} preset="sectionHeader" style={LABEL} />

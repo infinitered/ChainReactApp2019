@@ -1,7 +1,7 @@
 import { types } from "mobx-state-tree"
 import { NavigationStoreModel } from "../navigation-store"
 import { createTalkStoreModel } from "../talk-store"
-import { SpeakerStoreModel } from "../speaker-store";
+import { SpeakerStoreModel } from "../speaker-store"
 
 /**
  * An RootStore model.

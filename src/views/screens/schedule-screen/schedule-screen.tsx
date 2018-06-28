@@ -1,11 +1,11 @@
 import * as React from "react"
-import { View, ViewStyle, ScrollView } from "react-native"
+import { View, ViewStyle, ScrollView, TextStyle } from "react-native"
 import { NavigationScreenProps } from "react-navigation"
 import { Text } from "../../shared/text"
 import { Screen } from "../../shared/screen"
-import { palette } from "../../../theme/palette"
+import { color, spacing } from "../../../theme"
 import { TalkStore } from "../../../models/talk-store"
-import { isThursday, isFriday } from "date-fns"
+import { isWednesday, isThursday, isFriday } from "date-fns"
 import { ScheduleNav } from "./schedule-nav"
 import { ScheduleCell } from "./schedule-cell"
 import { inject, observer } from "mobx-react"
@@ -16,129 +16,21 @@ const ROOT: ViewStyle = {
   justifyContent: "flex-start",
 }
 
-const TALK = {
-  type: "talk",
-  startTime: new Date("2018-07-13T16:00:00Z"),
-  endTime: new Date("2018-07-13T17:00:00Z"),
-  title:
-    "Realtime Event Processing, Streaming and Subscription for React Native Using Cloud Services",
-  speakers: [
-    {
-      name: "Jason Harrelso",
-      bio:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt laoreet dui, ac vulputate tortor porttitor non. Mauris iaculis turpis vitae augue vestibulum commodo. Praesent sit amet augue massa. Nam maximus mauris sed eros facilisis, quis efficitur purus scelerisque. In in hendrerit nunc. es, nascetur ridiculus mus.",
-      employer: "Microsoft",
-      facebook: "https://facebook.com",
-      twitter: "https://twitter.com",
-      links: {
-        facebook: "https://bing.com",
-        twitter: "https://google.com",
-        websites: ["https://microsoft.com"],
-      },
-    },
-  ],
-  description: "",
-  image: "https://via.placeholder.com/100x100",
+const TITLE: TextStyle = {
+  marginTop: spacing.extraLarge,
+  paddingHorizontal: spacing.large,
 }
-
-const WORKSHOP = {
-  type: "workshop",
-  startTime: new Date("2018-07-13T16:00:00Z"),
-  endTime: new Date("2018-07-13T17:00:00Z"),
-  title:
-    "Realtime Event Processing, Streaming and Subscription for React Native Using Cloud Services",
-  speakers: [
-    {
-      name: "Jason Harrelso",
-      bio:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt laoreet dui, ac vulputate tortor porttitor non. Mauris iaculis turpis vitae augue vestibulum commodo. Praesent sit amet augue massa. Nam maximus mauris sed eros facilisis, quis efficitur purus scelerisque. In in hendrerit nunc. es, nascetur ridiculus mus.",
-      employer: "Microsoft",
-      facebook: "https://facebook.com",
-      twitter: "https://twitter.com",
-      links: {
-        facebook: "https://bing.com",
-        twitter: "https://google.com",
-        websites: ["https://microsoft.com"],
-      },
-    },
-  ],
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt laoreet dui, ac vulputate tortor porttitor non. Mauris iaculis turpis vitae augue vestibulum commodo. Praesent sit amet augue massa. Nam maximus mauris sed eros facilisis, quis efficitur purus scelerisque. In in hendrerit nunc. es, nascetur ridiculus mus.",
-  location: "1134 NE Washington St #302\nPortland, OR 97006",
-  image: "https://via.placeholder.com/100x100",
+const SUBTITLE: TextStyle = {
+  color: color.palette.white,
+  fontWeight: "600",
+  paddingHorizontal: spacing.large,
+  marginTop: spacing.small,
 }
-
-const COFFEE = {
-  type: "break",
-  startTime: new Date("2018-07-13T16:00:00Z"),
-  endTime: new Date("2018-07-13T17:00:00Z"),
-  title: "Coffee Break",
-  sponsor: "QuickLeft Studio",
-  description:
-    "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Nullam id dolor id nibsdflkj.",
-  image: "https://via.placeholder.com/100x100",
-}
-
-const LUNCH = {
-  type: "lunch",
-  startTime: new Date("2018-07-13T16:00:00Z"),
-  endTime: new Date("2018-07-13T17:00:00Z"),
-  title: "Lunch Break",
-  sponsor: "QuickLeft Studio",
-  description:
-    "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Nullam id dolor id nibsdflkj.",
-  menuItems: ["Black Forest Ham", "Vegan Option", "Pita Chips", "Premium Coffee", "Soft Drinks"],
-  image: "https://via.placeholder.com/100x100",
-}
-
-const PANEL = {
-  type: "panel",
-  startTime: new Date("2018-07-13T16:00:00Z"),
-  endTime: new Date("2018-07-13T17:00:00Z"),
-  title: "Panel",
-  speakers: [
-    {
-      name: "Jason Harrelso",
-      bio:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt laoreet dui, ac vulputate tortor porttitor non. Mauris iaculis turpis vitae augue vestibulum commodo. Praesent sit amet augue massa. Nam maximus mauris sed eros facilisis, quis efficitur purus scelerisque. In in hendrerit nunc. es, nascetur ridiculus mus.",
-      employer: "Microsoft",
-      facebook: "https://facebook.com",
-      twitter: "https://twitter.com",
-      links: {
-        facebook: "https://bing.com",
-        twitter: "https://google.com",
-        websites: ["https://microsoft.com"],
-      },
-    },
-    {
-      name: "Johnny Storm",
-      bio:
-        'Like the rest of the Fantastic Four, Jonathan "Johnny" Storm gained his powers on a spacecraft bombarded by cosmic rays. He can engulf his entire body in flames, fly, absorb fire harmlessly into his own body, and control any nearby fire by sheer force of will. "Flame on!" which the Torch customarily shouts when activating his full-body flame effect, has become his catchphrase.',
-      employer: "Marvel",
-      facebook: "https://facebook.com",
-      twitter: "https://twitter.com",
-      links: {
-        facebook: "https://bing.com",
-        twitter: "https://google.com",
-        websites: ["https://microsoft.com"],
-      },
-    },
-  ],
-  description: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-  location: "1134 NE Washington St #302\nPortland, OR 97006",
-  image: "https://via.placeholder.com/100x100",
-}
-
-const AFTER_PARTY = {
-  type: "afterParty",
-  startTime: new Date("2018-07-13T16:00:00Z"),
-  endTime: new Date("2018-07-13T17:00:00Z"),
-  title: "SquareSpace After Party",
-  description:
-    "Join us after the first day for an afterparty hosted by our good friends at Squarespace. Lorem Ipsum dolor sit amet lorem.",
-  location: "11134 Washington St #302\nPortland, OR 97006",
-  rsvpWebsite: "https://bing.com",
-  image: "https://via.placeholder.com/100x100",
+const DATE: TextStyle = {
+  fontStyle: "italic",
+  fontWeight: "400",
+  paddingHorizontal: spacing.large,
+  marginBottom: spacing.small + spacing.large,
 }
 
 export interface ScheduleScreenProps extends NavigationScreenProps<{}> {
@@ -156,6 +48,12 @@ export class ScheduleScreen extends React.Component<
   }
   static navigationOptions = {
     header: null,
+    // Header Style is necessary to prevent ugly white header when navigating back to this screen from a child screen
+    headerStyle: {
+      backgroundColor: color.palette.portGore,
+      borderBottomWidth: 0,
+      paddingLeft: spacing.large + spacing.tiny,
+    },
   }
 
   componentWillMount() {
@@ -164,10 +62,13 @@ export class ScheduleScreen extends React.Component<
   }
 
   render() {
+    const { selected } = this.state
     return (
-      <Screen preset="fixed" backgroundColor={palette.portGore} style={ROOT}>
-        <Text preset="title" tx="scheduleScreen.title" />
-        <ScrollView style={{ flex: 1, width: "100%" }}>{this.renderContent()}</ScrollView>
+      <Screen preset="fixed" backgroundColor={color.palette.portGore} style={ROOT}>
+        <ScrollView style={{ flex: 1, width: "100%" }} key={`${selected}-scrollview`}>
+          <Text preset="title" tx="scheduleScreen.title" style={TITLE} />
+          {selected === "wednesday" ? this.renderWorkshops() : this.renderContent()}
+        </ScrollView>
         <ScheduleNav selected={this.state.selected} onSelected={this.onSelected} />
       </Screen>
     )
@@ -175,52 +76,68 @@ export class ScheduleScreen extends React.Component<
 
   renderContent = () => {
     const { talkStore: { talks } } = this.props
+    const { selected } = this.state
+    const selectedTalks = talks.filter(talk => {
+      return selected === "thursday" ? isThursday(talk.startTime) : isFriday(talk.startTime)
+    })
     return (
       <View>
-        {talks &&
-          talks.map((talk, i) => (
+        <Text
+          tx={`scheduleScreen.${selected === "thursday" ? "day1" : "day2"}`}
+          style={SUBTITLE}
+          preset="subheader"
+        />
+        <Text
+          tx={`scheduleScreen.${selected === "thursday" ? "day1" : "day2"}Date`}
+          style={DATE}
+          preset="label"
+        />
+        {selectedTalks &&
+          selectedTalks.map((talk, i) => (
             <ScheduleCell
               index={i}
               talk={talk}
+              preset={talk.talkType.toLowerCase()}
               onPress={talk => {
                 this.props.navigation.navigate("talkDetails", { talk })
               }}
+              key={i}
             />
           ))}
+      </View>
+    )
+  }
+
+  renderWorkshops = () => {
+    const { talkStore: { talks } } = this.props
+    const workshops = talks.filter(talk => {
+      return isWednesday(talk.startTime)
+    })
+    return (
+      <View>
+        <Text tx="scheduleScreen.workshops" style={SUBTITLE} preset="subheader" />
+        <Text tx="scheduleScreen.workshopsDate" style={DATE} preset="label" />
+        <ScheduleCell
+          index={0}
+          talk={{ ...workshops[0], track: "BEGINNER" }}
+          onPress={talk => {
+            this.props.navigation.navigate("talkDetails", { talk })
+          }}
+        />
         <ScheduleCell
           index={1}
-          talk={WORKSHOP}
+          talk={{ ...workshops[1], track: "ADVANCED" }}
           onPress={talk => {
             this.props.navigation.navigate("talkDetails", { talk })
           }}
         />
         <ScheduleCell
-          index={2}
-          talk={COFFEE}
+          index={1}
+          talk={workshops[2]}
           onPress={talk => {
             this.props.navigation.navigate("talkDetails", { talk })
           }}
-        />
-        <ScheduleCell
-          index={3}
-          talk={LUNCH}
-          onPress={talk => {
-            this.props.navigation.navigate("talkDetails", { talk })
-          }}
-        />
-        <ScheduleCell
-          index={4}
-          talk={PANEL}
-          onPress={talk => {
-            this.props.navigation.navigate("talkDetails", { talk })
-          }}
-        />
-        <ScheduleCell
-          index={5}
-          talk={AFTER_PARTY}
-          onPress={talk => {
-            this.props.navigation.navigate("talkDetails", { talk })
-          }}
+          noTime
         />
       </View>
     )

@@ -8,4 +8,5 @@ export interface ScheduleCellProps extends ViewProperties {
   talk: any
   preset?: ScheduleCellPresetNames
   onPress: Function
+  noTime?: boolean
 }

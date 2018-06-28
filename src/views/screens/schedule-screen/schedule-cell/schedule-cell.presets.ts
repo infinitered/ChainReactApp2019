@@ -17,9 +17,11 @@ const BASE_STYLES: any = {
   track: {
     width: 100,
     color: palette.shamrock,
+    fontWeight: "600",
   },
   time: {
     color: palette.shamrock,
+    fontWeight: "600",
   },
   contentWrapper: {
     paddingHorizontal: spacing.large,

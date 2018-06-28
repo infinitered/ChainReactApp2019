@@ -79,6 +79,7 @@ export function PresentedBy(props: PresentedByProps) {
             <SocialButton preset="medium" link={linkPresets.medium} />
             <SocialButton preset="dribbble" link={linkPresets.dribbble} />
             <SocialButton preset="instagram" link={linkPresets.instagram} />
+            <SocialButton preset="facebook" link={linkPresets.facebook} />
           </View>
         </View>
       </View>

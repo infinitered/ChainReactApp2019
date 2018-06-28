@@ -28,9 +28,14 @@ export class RootComponent extends React.Component<{}, RootComponentState> {
    * re-renders when we're good to go.
    */
   async componentDidMount() {
-    this.setState({
-      rootStore: await setupRootStore(),
-    })
+    this.setState(
+      {
+        rootStore: await setupRootStore(),
+      },
+      () => {
+        SplashScreen.hide()
+      },
+    )
   }
 
   /**
@@ -59,7 +64,6 @@ export class RootComponent extends React.Component<{}, RootComponentState> {
     }
 
     // otherwise, we're ready to render the app
-    SplashScreen.hide()
 
     const injectableStores = {
       navigationStore: rootStore.navigationStore,

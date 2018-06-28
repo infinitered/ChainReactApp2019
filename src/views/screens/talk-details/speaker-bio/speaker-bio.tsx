@@ -32,31 +32,62 @@ const SOCIAL_WRAPPER_LAST: ViewStyle = {
 
 export class SpeakerBio extends React.Component<SpeakerBioProps, {}> {
   render() {
-    const { name, bio, links } = this.props.speaker
+    const {
+      name,
+      facebook,
+      twitter,
+      github,
+      medium,
+      instagram,
+      dribbble,
+      websites,
+    } = this.props.speaker
     const { last = true } = this.props
     const splitName = name.split(" ")
-    const socialStyles = [SOCIAL_WRAPPER, last && SOCIAL_WRAPPER_LAST]
     const key = `${splitName.join("-")}-bio`
-    return (
-      <View key={key} style={ROOT}>
-        <Text
-          text={`ABOUT ${splitName[0].toUpperCase()}`}
-          preset="sectionHeader"
-          style={{ color: palette.shamrock }}
-        />
-        <Text text={bio} preset="body" style={{ fontSize: 16, marginTop: spacing.large }} />
-        <View style={socialStyles}>
-          {Object.keys(links).map(k => {
-            return k === "websites"
-              ? links[k].map(link => this.renderLink("website", link))
-              : this.renderLink(k, links[k])
-          })}
+    const links = {
+      facebook,
+      twitter,
+      github,
+      medium,
+      instagram,
+      dribbble,
+      websites: websites || [],
+    }
+    const socialStyles = [SOCIAL_WRAPPER, last && SOCIAL_WRAPPER_LAST]
+
+    if (
+      facebook ||
+      twitter ||
+      github ||
+      medium ||
+      instagram ||
+      dribbble ||
+      (websites && websites.length > 0)
+    ) {
+      return (
+        <View key={key} style={ROOT}>
+          <Text
+            text={`FOLLOW ${splitName[0].toUpperCase()}`}
+            preset="sectionHeader"
+            style={{ color: palette.shamrock }}
+          />
+          <View style={socialStyles}>
+            {Object.keys(links).map(k => {
+              return k === "websites"
+                ? links.websites.map(link => this.renderLink("website", link))
+                : this.renderLink(k, links[k])
+            })}
+          </View>
         </View>
-      </View>
-    )
+      )
+    } else {
+      return null
+    }
   }
 
   renderLink = (k, link) => {
+    if (!link) return null
     return <SocialButton key={k} preset={k} link={link} />
   }
 }
