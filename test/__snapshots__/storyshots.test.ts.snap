@@ -6293,7 +6293,6 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                 >
                   9:00 AM - 10:00 AM
                 </Text>
-                )}
               </View>
               <View
                 style={
@@ -6511,7 +6510,6 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                 >
                   9:00 AM - 10:00 AM
                 </Text>
-                )}
               </View>
               <View
                 style={
@@ -6729,7 +6727,6 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                 >
                   9:00 AM - 10:00 AM
                 </Text>
-                )}
               </View>
               <View
                 style={
@@ -6933,7 +6930,6 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                 >
                   9:00 AM - 10:00 AM
                 </Text>
-                )}
               </View>
               <View
                 style={
@@ -7151,7 +7147,6 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                 >
                   9:00 AM - 10:00 AM
                 </Text>
-                )}
               </View>
               <View
                 style={
