@@ -38,7 +38,7 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
           <View style={style.content as ViewStyle}>
             <Text preset="subheader" text={talk.title} style={style.title as TextStyle} />
             {talk.speakers &&
-              talk.speakers[0] &&
+              talk.speakers.length > 0 &&
               talk.speakers[0].name && (
                 <Text
                   preset="subheader"

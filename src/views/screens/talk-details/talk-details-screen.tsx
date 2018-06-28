@@ -1,5 +1,5 @@
 import * as React from "react"
-import { View, Image, ViewStyle, TextStyle, Linking, ImageStyle } from "react-native"
+import { View, Image, ViewStyle, TextStyle, Linking, ImageStyle, Platform } from "react-native"
 import { NavigationScreenProps } from "react-navigation"
 import { Screen } from "../../shared/screen"
 import { palette } from "../../../theme/palette"
@@ -79,6 +79,7 @@ const backImage = () => <Image source={require("../../shared/title-bar/icon.back
 export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> {
   static navigationOptions = ({ navigation }) => {
     const { talk } = navigation.state.params
+    const titleMargin = Platform.OS === "ios" ? -50 : 0
     return {
       headerStyle: {
         backgroundColor: palette.portGore,
@@ -88,7 +89,12 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
       headerBackImage: backImage,
       headerTintColor: palette.shamrock,
       title: `${format(talk.startTime, "h:mm")} - ${format(talk.endTime, "h:mm")}`,
-      headerTitleStyle: { textAlign: "left", fontWeight: "500", width: "100%", marginLeft: -50 },
+      headerTitleStyle: {
+        textAlign: "left",
+        fontWeight: "500",
+        width: "100%",
+        marginLeft: titleMargin,
+      },
     }
   }
 
@@ -101,7 +107,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
   }
 
   renderContent = () => {
-    const { talkType } = this.props.navigation.state.params.talk
+    const { talkType = "" } = this.props.navigation.state.params.talk
     switch (talkType.toLowerCase()) {
       case "talk":
         return this.renderTalk()
