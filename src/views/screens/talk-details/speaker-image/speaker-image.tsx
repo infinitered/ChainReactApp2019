@@ -51,13 +51,16 @@ export class SpeakerImage extends React.Component<SpeakerImageProps, {}> {
   render() {
     const { name, employer, image } = this.props.speaker
     const splitName = name.split(" ")
+    const lastIndex = splitName.length - 1
+    const firstPart = splitName.slice(0, lastIndex).join(" ")
+    const secondPart = splitName[lastIndex]
     const key = `${splitName.join("-")}-image`
     return (
       <View key={key} style={ROOT}>
         <Image source={{ uri: image }} style={SPEAKER_IMAGE} />
         <View style={NAME}>
-          <Text text={splitName[0].toUpperCase()} preset="body" style={SPEAKER_NAME} />
-          <Text text={splitName[1].toUpperCase()} preset="body" style={SPEAKER_NAME} />
+          <Text text={firstPart.toUpperCase()} preset="body" style={SPEAKER_NAME} />
+          <Text text={secondPart.toUpperCase()} preset="body" style={SPEAKER_NAME} />
           <Text text={employer} preset="input" style={EMPLOYER} />
         </View>
       </View>
