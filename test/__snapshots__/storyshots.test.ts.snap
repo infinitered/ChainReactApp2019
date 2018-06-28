@@ -114,21 +114,29 @@ exports[`Storyshots Attraction Props 1`] = `
                   }
                 }
               >
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <View
                   style={
                     Object {
-                      "color": "#ffffff",
-                      "fontFamily": "Gotham Rounded",
-                      "fontSize": 14,
-                      "lineHeight": 17,
+                      "width": "70%",
                     }
                   }
                 >
-                  COURIER COFFEE
-                </Text>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#ffffff",
+                        "fontFamily": "Gotham Rounded",
+                        "fontSize": 14,
+                        "lineHeight": 17,
+                      }
+                    }
+                  >
+                    COURIER COFFEE
+                  </Text>
+                </View>
                 <View
                   style={
                     Object {
@@ -523,21 +531,29 @@ exports[`Storyshots AttractionsList Props 1`] = `
                       }
                     }
                   >
-                    <Text
-                      accessible={true}
-                      allowFontScaling={true}
-                      ellipsizeMode="tail"
+                    <View
                       style={
                         Object {
-                          "color": "#ffffff",
-                          "fontFamily": "Gotham Rounded",
-                          "fontSize": 14,
-                          "lineHeight": 17,
+                          "width": "70%",
                         }
                       }
                     >
-                      VOODOO DOUGHNUT
-                    </Text>
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "#ffffff",
+                            "fontFamily": "Gotham Rounded",
+                            "fontSize": 14,
+                            "lineHeight": 17,
+                          }
+                        }
+                      >
+                        VOODOO DOUGHNUT
+                      </Text>
+                    </View>
                     <View
                       style={
                         Object {
@@ -631,21 +647,29 @@ Portland, OR 97204
                       }
                     }
                   >
-                    <Text
-                      accessible={true}
-                      allowFontScaling={true}
-                      ellipsizeMode="tail"
+                    <View
                       style={
                         Object {
-                          "color": "#ffffff",
-                          "fontFamily": "Gotham Rounded",
-                          "fontSize": 14,
-                          "lineHeight": 17,
+                          "width": "70%",
                         }
                       }
                     >
-                      SALT & STRAW
-                    </Text>
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "#ffffff",
+                            "fontFamily": "Gotham Rounded",
+                            "fontSize": 14,
+                            "lineHeight": 17,
+                          }
+                        }
+                      >
+                        SALT & STRAW
+                      </Text>
+                    </View>
                     <View
                       style={
                         Object {
@@ -739,21 +763,29 @@ Portland, OR 97210
                       }
                     }
                   >
-                    <Text
-                      accessible={true}
-                      allowFontScaling={true}
-                      ellipsizeMode="tail"
+                    <View
                       style={
                         Object {
-                          "color": "#ffffff",
-                          "fontFamily": "Gotham Rounded",
-                          "fontSize": 14,
-                          "lineHeight": 17,
+                          "width": "70%",
                         }
                       }
                     >
-                      TASTY N' ALDER
-                    </Text>
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "#ffffff",
+                            "fontFamily": "Gotham Rounded",
+                            "fontSize": 14,
+                            "lineHeight": 17,
+                          }
+                        }
+                      >
+                        TASTY N' ALDER
+                      </Text>
+                    </View>
                     <View
                       style={
                         Object {
@@ -847,21 +879,29 @@ Portland, OR 97205
                       }
                     }
                   >
-                    <Text
-                      accessible={true}
-                      allowFontScaling={true}
-                      ellipsizeMode="tail"
+                    <View
                       style={
                         Object {
-                          "color": "#ffffff",
-                          "fontFamily": "Gotham Rounded",
-                          "fontSize": 14,
-                          "lineHeight": 17,
+                          "width": "70%",
                         }
                       }
                     >
-                      LITTLE BIG BURGER
-                    </Text>
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "#ffffff",
+                            "fontFamily": "Gotham Rounded",
+                            "fontSize": 14,
+                            "lineHeight": 17,
+                          }
+                        }
+                      >
+                        LITTLE BIG BURGER
+                      </Text>
+                    </View>
                     <View
                       style={
                         Object {
