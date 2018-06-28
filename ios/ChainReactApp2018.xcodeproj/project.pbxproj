@@ -51,6 +51,8 @@
 		8A34CBED20E5987B00470345 /* ViroKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A34CBC020E5987B00470345 /* ViroKit.framework */; };
 		8A34CBEE20E5987B00470345 /* libViroReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A34CBEC20E5987B00470345 /* libViroReact.a */; };
 		8A34CBF020E59B5100470345 /* ViroKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A34CBC020E5987B00470345 /* ViroKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8A34CE2A20E5A3E900470345 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A34CC6820E59D8800470345 /* Lottie.framework */; };
+		8A34CE2B20E5A3E900470345 /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A34CC6820E59D8800470345 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8F3D58FA741B4D22A7BEDD39 /* GothamRnd-BookItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2023F53DD46B4B8E99CCB9FB /* GothamRnd-BookItal.otf */; };
 		A3580AF649A04E86B2D9164A /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7BA294DFD641EAAC8BB216 /* Lottie.framework */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
@@ -404,6 +406,13 @@
 			remoteGlobalIDString = 11FA5C511C4A1296003AC2EE;
 			remoteInfo = LottieReactNative;
 		};
+		8A34CE2C20E5A3E900470345 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A50F9986E6042E89B77F295 /* Lottie.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 62CA59B71E3C173B002D7188;
+			remoteInfo = Lottie_iOS;
+		};
 		ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
@@ -422,6 +431,7 @@
 			files = (
 				381C6FAC20E54315008B11AA /* Mapbox.framework in Embed Frameworks */,
 				8A34CBF020E59B5100470345 /* ViroKit.framework in Embed Frameworks */,
+				8A34CE2B20E5A3E900470345 /* Lottie.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,6 +523,7 @@
 				8A34CBED20E5987B00470345 /* ViroKit.framework in Frameworks */,
 				8A34CBEE20E5987B00470345 /* libViroReact.a in Frameworks */,
 				037B2A98E90093A2E69C1C83 /* libPods-ChainReactApp2018.a in Frameworks */,
+				8A34CE2A20E5A3E900470345 /* Lottie.framework in Frameworks */,
 				79E9137EE55942A081E34C75 /* libRNI18n.a in Frameworks */,
 				58E0CE2D84A74FA3A119CFF2 /* libRNKeychain.a in Frameworks */,
 				3EABFF5EC2F04B48875D79D5 /* libSplashScreen.a in Frameworks */,
@@ -895,6 +906,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				8A34CE2D20E5A3E900470345 /* PBXTargetDependency */,
 			);
 			name = ChainReactApp2018;
 			productName = "Hello World";
@@ -1549,6 +1561,11 @@
 			isa = PBXTargetDependency;
 			target = 2D02E47A1E0B4A5D006451C7 /* ChainReactApp2018-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
+		};
+		8A34CE2D20E5A3E900470345 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Lottie_iOS;
+			targetProxy = 8A34CE2C20E5A3E900470345 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
