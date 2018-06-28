@@ -68,6 +68,7 @@ const AFTER_PARTY_DESCRIPTION: TextStyle = { marginTop: spacing.large }
 const MENU_ITEM: ViewStyle = {
   flexDirection: "row",
   marginBottom: spacing.large,
+  width: "100%",
 }
 
 const MENU_ITEM_TEXT: TextStyle = { color: palette.white }
@@ -180,7 +181,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
         {sponsor && this.renderSponsored(sponsor)}
         <Text text={description} preset="body" style={DESCRIPTION} />
         <Text preset="sectionHeader" tx="talkDetailsScreen.menuTitle" style={LABEL} />
-        {menuItems.map(item => this.renderMenuItem(item))}
+        {menuItems.map((item, index) => this.renderMenuItem(item, index))}
       </View>
     )
   }
@@ -230,9 +231,9 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
     )
   }
 
-  renderMenuItem = item => {
+  renderMenuItem = (item, index) => {
     return (
-      <View style={MENU_ITEM}>
+      <View key={index} style={MENU_ITEM}>
         <View style={BULLET} />
         <Text preset="subheader" text={item} style={MENU_ITEM_TEXT} />
       </View>
