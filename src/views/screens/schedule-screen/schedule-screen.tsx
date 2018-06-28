@@ -66,7 +66,6 @@ export class ScheduleScreen extends React.Component<
     return (
       <Screen preset="fixed" backgroundColor={color.palette.portGore} style={ROOT}>
         <ScrollView style={{ flex: 1, width: "100%" }} key={`${selected}-scrollview`}>
-          {/* key to reset scrollview when changing tabs*/}
           <Text preset="title" tx="scheduleScreen.title" style={TITLE} />
           {selected === "wednesday" ? this.renderWorkshops() : this.renderContent()}
         </ScrollView>
