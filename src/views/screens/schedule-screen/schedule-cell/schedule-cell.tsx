@@ -19,6 +19,7 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
     const { preset, index, talk, onPress, noTime } = this.props
     const style: any = ScheduleCellPresets[preset] || ScheduleCellPresets.default
     const isOdd = index % 2 === 0 // index starts at 0
+    if (!talk) return null
     return (
       <TouchableOpacity
         style={[style.root as ViewStyle, isOdd && { backgroundColor: palette.portGoreLighter }]}
@@ -68,7 +69,7 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
           preset="label"
           text={`${format(talk.startTime, "h:mm A")} - ${format(talk.endTime, "h:mm A")}`}
           style={style.time as TextStyle}
-        />)}
+        />
       </View>
     )
   }

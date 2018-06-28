@@ -65,23 +65,6 @@ const AFTER_PARTY_LOGO: ImageStyle = {
 
 const AFTER_PARTY_DESCRIPTION: TextStyle = { marginTop: spacing.large }
 
-const AFTER_PARTY_LOCATION: TextStyle = {
-  marginTop: spacing.extraLarge,
-  fontWeight: "500",
-  color: palette.white,
-}
-
-const RSVP: ViewStyle = {
-  borderRadius: 0,
-  marginTop: spacing.extraLarge + spacing.large,
-  paddingVertical: 18,
-}
-
-const RSVP_TEXT: TextStyle = {
-  fontSize: 14,
-  fontWeight: "500",
-}
-
 const MENU_ITEM: ViewStyle = {
   flexDirection: "row",
   marginBottom: spacing.large,

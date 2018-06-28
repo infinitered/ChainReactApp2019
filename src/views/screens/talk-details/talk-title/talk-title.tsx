@@ -40,6 +40,8 @@ export class TalkTitle extends React.Component<{ talk: any }, {}> {
         return this.renderTalk()
       case "workshop":
         return this.renderWorkshop()
+      default:
+        return null
     }
   }
 
