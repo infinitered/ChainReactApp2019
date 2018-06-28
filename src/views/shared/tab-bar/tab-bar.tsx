@@ -22,6 +22,7 @@ const CONTAINER: ViewStyle = {
   flexDirection: "row",
   justifyContent: "center",
   minHeight: 49,
+  paddingBottom: spacing.tiny,
 }
 
 const TAB: ViewStyle = {
@@ -36,7 +37,7 @@ const ICON_WRAPPER: ViewStyle = {
   alignItems: "center",
   flexGrow: 1,
   justifyContent: "center",
-  marginBottom: 4,
+  minHeight: 26,
 }
 
 const ICON: ViewStyle = {

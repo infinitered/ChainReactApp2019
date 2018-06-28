@@ -11018,6 +11018,7 @@ exports[`Storyshots TabBar Behaviour 1`] = `
                     "flexDirection": "row",
                     "justifyContent": "center",
                     "minHeight": 49,
+                    "paddingBottom": 4,
                   }
                 }
               >
@@ -11057,7 +11058,7 @@ exports[`Storyshots TabBar Behaviour 1`] = `
                         "alignItems": "center",
                         "flexGrow": 1,
                         "justifyContent": "center",
-                        "marginBottom": 4,
+                        "minHeight": 26,
                       }
                     }
                   >
@@ -11147,7 +11148,7 @@ exports[`Storyshots TabBar Behaviour 1`] = `
                         "alignItems": "center",
                         "flexGrow": 1,
                         "justifyContent": "center",
-                        "marginBottom": 4,
+                        "minHeight": 26,
                       }
                     }
                   >
@@ -11237,7 +11238,7 @@ exports[`Storyshots TabBar Behaviour 1`] = `
                         "alignItems": "center",
                         "flexGrow": 1,
                         "justifyContent": "center",
-                        "marginBottom": 4,
+                        "minHeight": 26,
                       }
                     }
                   >
