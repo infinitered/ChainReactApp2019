@@ -13,6 +13,9 @@ const ROOT: ViewStyle = {
 const NAME_WRAPPER: ViewStyle = {
   flexDirection: "row",
 }
+const TITLE_WRAPPER: ViewStyle = {
+  width: "70%",
+}
 const TITLE: TextStyle = {
   color: palette.white,
 }
@@ -30,11 +33,13 @@ export class Attraction extends React.Component<AttractionProps, {}> {
     return (
       <View style={ROOT}>
         <View style={NAME_WRAPPER}>
-          <Text
-            preset="sectionHeader"
-            text={attraction.properties.place_name.toUpperCase()}
-            style={TITLE}
-          />
+          <View style={TITLE_WRAPPER}>
+            <Text
+              preset="sectionHeader"
+              text={attraction.properties.place_name.toUpperCase()}
+              style={TITLE}
+            />
+          </View>
           <Rating rating={attraction.properties.rating} />
         </View>
         <Text preset="fieldLabel" text={cleanedAddress} style={ADDRESS} />

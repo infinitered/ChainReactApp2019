@@ -1,13 +1,15 @@
 import * as React from "react"
-import { View, ViewStyle, TextStyle } from "react-native"
+import { View, ViewStyle, TextStyle, Dimensions } from "react-native"
 import { Text } from "../../../shared/text"
 import { spacing } from "../../../../theme/spacing"
 import { palette } from "../../../../theme/palette"
 import { AttractionsList } from "./attractions-list"
 import { AttractionsMap } from "./attractions-map"
 
+const SCREEN_WIDTH = Dimensions.get("window").width
+
 const ROOT: ViewStyle = {
-  width: "100%",
+  width: SCREEN_WIDTH,
   paddingTop: spacing.large,
   backgroundColor: palette.portGoreLight,
 }
