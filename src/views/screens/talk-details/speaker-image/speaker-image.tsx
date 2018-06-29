@@ -1,19 +1,8 @@
 import * as React from "react"
-import {
-  View,
-  ViewStyle,
-  Image,
-  ImageStyle,
-  TextStyle,
-  Linking,
-  TouchableOpacity,
-} from "react-native"
-import { SpeakerImagePresets } from "./schedule-cell.presets"
+import { View, ViewStyle, Image, ImageStyle, TextStyle } from "react-native"
 import { Text } from "../../../shared/text"
-import { Button } from "../../../shared/button"
 import { palette } from "../../../../theme/palette"
 import { spacing } from "../../../../theme/spacing"
-import { format } from "date-fns"
 
 export interface SpeakerImageProps {
   speaker: any
@@ -57,7 +46,7 @@ export class SpeakerImage extends React.Component<SpeakerImageProps, {}> {
     const key = `${splitName.join("-")}-image`
     return (
       <View key={key} style={ROOT}>
-        <Image source={{ uri: image }} style={SPEAKER_IMAGE} />
+        {image && <Image source={{ uri: image }} style={SPEAKER_IMAGE} />}
         <View style={NAME}>
           <Text text={firstPart.toUpperCase()} preset="body" style={SPEAKER_NAME} />
           <Text text={secondPart.toUpperCase()} preset="body" style={SPEAKER_NAME} />
