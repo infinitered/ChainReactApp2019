@@ -16,7 +16,10 @@ function ScreenWithoutScrolling(props: ScreenProps) {
   if (props.backgroundImage) {
     return (
       <SafeAreaView style={[style, backgroundStyle]}>
-        <Image source={props.backgroundImage} style={{ position: "absolute", width: "100%" }} />
+        <Image
+          source={props.backgroundImage}
+          style={{ position: "absolute", width: "100%", height: "100%" }}
+        />
         {props.children}
       </SafeAreaView>
     )
