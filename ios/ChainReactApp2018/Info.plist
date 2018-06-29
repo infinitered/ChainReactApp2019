@@ -36,7 +36,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UIAppFonts</key>
 	<array>
 		<string>GothamRnd-Bold.otf</string>
@@ -48,6 +48,8 @@
 		<string>GothamRnd-MedItal.otf</string>
 		<string>GothamRnd-Medium.otf</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Need Camera access for AR feature</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

@@ -1,8 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.chainreactapp2018">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-sdk android:minSdkVersion="16" tools:overrideLibrary="com.viro.renderer, com.viromedia.virobridge"/>
 
     <application
       android:name=".MainApplication"
@@ -21,6 +25,7 @@
         </intent-filter>
       </activity>
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+      <meta-data android:name="com.google.ar.core" android:value="optional" />
     </application>
 
 </manifest>

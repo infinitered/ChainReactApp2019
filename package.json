@@ -24,6 +24,7 @@
     "apollo-boost": "^0.1.9",
     "date-fns": "^1.29.0",
     "graphql": "^0.13.2",
+    "lottie-react-native": "2.3.2",
     "mobx": "^4.1.0",
     "mobx-react": "^5.0.0",
     "mobx-state-tree": "^2.0.3",
@@ -35,6 +36,7 @@
     "react-native-keychain": "3.0.0-rc.3",
     "react-native-splash-screen": "3.0.6",
     "react-navigation": "^2.0.4",
+    "react-viro": "./react-viro-2.7.3.tgz",
     "reactotron-mst": "2.0.0-beta.1",
     "reactotron-react-native": "2.0.0-beta.1",
     "validate.js": "^0.12.0"
