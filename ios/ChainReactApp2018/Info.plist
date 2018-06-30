@@ -21,9 +21,11 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>5</string>
+	<string>6</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+  <key>ITSAppUsesNonExemptEncryption</key>
+  <false/>
   <key>NSPhotoLibraryUsageDescription</key>
   <string>Access is needed for our VR experience</string>
   <key>NSMicrophoneUsageDescription</key>
