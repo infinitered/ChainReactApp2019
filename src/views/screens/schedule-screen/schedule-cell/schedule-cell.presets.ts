@@ -11,7 +11,7 @@ const BASE_STYLES: any = {
   timeWrapper: {
     padding: spacing.large,
     borderBottomWidth: 1,
-    borderBottomColor: palette.white,
+    borderBottomColor: palette.mantiniqueLight,
     flexDirection: "row",
   },
   track: {

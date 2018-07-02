@@ -1,13 +1,5 @@
 import * as React from "react"
-import {
-  View,
-  ViewStyle,
-  Image,
-  ImageStyle,
-  TextStyle,
-  Linking,
-  TouchableOpacity,
-} from "react-native"
+import { View, ViewStyle, Image, ImageStyle, TextStyle, TouchableOpacity } from "react-native"
 import { ScheduleCellPresets } from "./schedule-cell.presets"
 import { ScheduleCellProps } from "./schedule-cell.props"
 import { Text } from "../../../shared/text"
@@ -56,7 +48,7 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
   }
 
   renderTopBorder = () => {
-    return <View style={{ width: "100%", backgroundColor: palette.white, height: 1 }} />
+    return <View style={{ width: "100%", backgroundColor: palette.mantiniqueLight, height: 1 }} />
   }
 
   renderTime = () => {

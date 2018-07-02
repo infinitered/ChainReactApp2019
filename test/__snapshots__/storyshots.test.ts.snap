@@ -6344,7 +6344,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
               <View
                 style={
                   Object {
-                    "borderBottomColor": "#ffffff",
+                    "borderBottomColor": "#36325a",
                     "borderBottomWidth": 1,
                     "flexDirection": "row",
                     "padding": 20,
@@ -6561,7 +6561,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
               <View
                 style={
                   Object {
-                    "borderBottomColor": "#ffffff",
+                    "borderBottomColor": "#36325a",
                     "borderBottomWidth": 1,
                     "flexDirection": "row",
                     "padding": 20,
@@ -6778,7 +6778,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
               <View
                 style={
                   Object {
-                    "borderBottomColor": "#ffffff",
+                    "borderBottomColor": "#36325a",
                     "borderBottomWidth": 1,
                     "flexDirection": "row",
                     "padding": 20,
@@ -6965,7 +6965,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
               <View
                 style={
                   Object {
-                    "borderBottomColor": "#ffffff",
+                    "borderBottomColor": "#36325a",
                     "borderBottomWidth": 1,
                     "flexDirection": "row",
                     "padding": 20,
@@ -7198,7 +7198,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
               <View
                 style={
                   Object {
-                    "borderBottomColor": "#ffffff",
+                    "borderBottomColor": "#36325a",
                     "borderBottomWidth": 1,
                     "flexDirection": "row",
                     "padding": 20,
