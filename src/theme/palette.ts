@@ -9,6 +9,7 @@ export const palette = {
   portGoreLighter: "#201B48",
   waterloo: "#878794",
   martinique: "#2C2C4C",
+  mantiniqueLight: "#36325a",
   shamrock: "#56E39F",
   vintageRock: "rgba(86,227,159,0.20)",
   lightGrey: "#E6EAF4",
