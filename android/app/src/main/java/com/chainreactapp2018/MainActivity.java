@@ -1,4 +1,4 @@
-package com.chainreactapp2018;
+package com.chainreactapp;
 
 import android.os.Bundle;
 import com.facebook.react.ReactActivity;

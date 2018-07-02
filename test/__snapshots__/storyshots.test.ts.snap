@@ -11332,6 +11332,96 @@ exports[`Storyshots TabBar Behaviour 1`] = `
                     tabbar.info.test
                   </Text>
                 </View>
+                <View
+                  accessibilityComponentType={undefined}
+                  accessibilityLabel={undefined}
+                  accessibilityTraits={undefined}
+                  accessible={true}
+                  collapsable={undefined}
+                  hasTVPreferredFocus={undefined}
+                  hitSlop={undefined}
+                  isTVSelectable={true}
+                  nativeID={undefined}
+                  onLayout={undefined}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flex": 1,
+                      "flexDirection": "column",
+                      "justifyContent": "flex-end",
+                      "marginTop": 10,
+                      "opacity": 1,
+                    }
+                  }
+                  testID={undefined}
+                  tvParallaxProperties={undefined}
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "flexGrow": 1,
+                        "justifyContent": "center",
+                        "minHeight": 26,
+                      }
+                    }
+                  >
+                    <View
+                      collapsable={undefined}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "justifyContent": "center",
+                          "maxHeight": 24,
+                          "maxWidth": 24,
+                          "opacity": 0,
+                          "position": "absolute",
+                        }
+                      }
+                    >
+                      <Image
+                        source={1}
+                      />
+                    </View>
+                    <View
+                      collapsable={undefined}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "justifyContent": "center",
+                          "maxHeight": 24,
+                          "maxWidth": 24,
+                          "opacity": 1,
+                          "position": "absolute",
+                        }
+                      }
+                    >
+                      <Image
+                        source={1}
+                      />
+                    </View>
+                  </View>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#878794",
+                        "fontFamily": "Gotham Rounded",
+                        "fontSize": 11,
+                      }
+                    }
+                  >
+                    tabbar.ar.test
+                  </Text>
+                </View>
               </View>
             </RCTSafeAreaView>
           </View>
