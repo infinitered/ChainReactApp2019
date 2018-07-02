@@ -13459,20 +13459,32 @@ exports[`Storyshots WiFi Presets 1`] = `
                   }
                 }
               >
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <View
                   style={
                     Object {
-                      "color": "#C7C4DB",
-                      "fontFamily": "Gotham Rounded",
-                      "fontSize": 11,
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
                     }
                   }
                 >
-                  infoScreen.wifi.networkLabel.test
-                </Text>
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#C7C4DB",
+                        "fontFamily": "Gotham Rounded",
+                        "fontSize": 11,
+                      }
+                    }
+                  >
+                    infoScreen.wifi.networkLabel.test
+                  </Text>
+                  <Image
+                    source={1}
+                  />
+                </View>
                 <Text
                   accessible={true}
                   allowFontScaling={true}
