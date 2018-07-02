@@ -1,20 +1,26 @@
 import * as React from "react"
-import { View, ViewStyle, Image, ImageStyle, TextStyle } from "react-native"
+import { View, ViewStyle, Image, ImageStyle, TextStyle, Dimensions } from "react-native"
 import { Text } from "../../../shared/text"
 import { palette } from "../../../../theme/palette"
 import { spacing } from "../../../../theme/spacing"
+
+// Image size math
+const SCREEN_WIDTH = Dimensions.get("window").width
+const IMAGE_WIDTH = 0.92 * (SCREEN_WIDTH - 2 * spacing.large) // 95% of the available container, screen width minus twice the screen padding.
+const IMAGE_ASPECT_RATIO = 0.77 // This is the original aspect ratio of all the speaker images as they come from the server, which are 292 x 380.
+const IMAGE_HEIGHT = IMAGE_WIDTH / IMAGE_ASPECT_RATIO
 
 export interface SpeakerImageProps {
   speaker: any
 }
 
 const ROOT: ViewStyle = {
-  width: "100%",
+  flex: 1,
 }
 
 const SPEAKER_IMAGE: ImageStyle = {
-  width: 303,
-  height: 383,
+  width: IMAGE_WIDTH,
+  height: IMAGE_HEIGHT,
   marginRight: 32,
 }
 
@@ -44,6 +50,7 @@ export class SpeakerImage extends React.Component<SpeakerImageProps, {}> {
     const firstPart = splitName.slice(0, lastIndex).join(" ")
     const secondPart = splitName[lastIndex]
     const key = `${splitName.join("-")}-image`
+
     return (
       <View key={key} style={ROOT}>
         {image && <Image source={{ uri: image }} style={SPEAKER_IMAGE} />}
