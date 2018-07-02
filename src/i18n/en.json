@@ -120,7 +120,6 @@
   },
   "arTab": {
     "title": "AR Badges",
-    // add space below to the description to "fill out" the UI horizontally
     "description":
       "Use your camera to view the exhibit hall and bring your badge to life!                                           ",
     "tipsTitle": "TIPS",
