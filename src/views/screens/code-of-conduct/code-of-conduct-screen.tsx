@@ -15,9 +15,11 @@ const ROOT: ViewStyle = {
   paddingBottom: spacing.huge,
 }
 const HEADER_TEXT: TextStyle = {
+  fontSize: 17,
   fontWeight: "600",
+  lineHeight: 45,
   letterSpacing: 3.0,
-  marginLeft: spacing.medium,
+  marginLeft: spacing.large,
   color: color.palette.shamrock,
 }
 const TITLE: TextStyle = {
@@ -26,8 +28,9 @@ const TITLE: TextStyle = {
 }
 const BACK_ARROW: ViewStyle = {
   flexDirection: "row",
-  paddingLeft: spacing.medium,
+  paddingLeft: spacing.large,
   alignItems: "center",
+  justifyContent: "center",
 }
 const SECTION: TextStyle = {
   marginVertical: spacing.medium,
@@ -41,8 +44,15 @@ const SECTION_TITLE: TextStyle = {
   marginTop: spacing.medium,
 }
 
+const HIT_SLOP = {
+  top: 20,
+  left: 20,
+  right: 20,
+  bottom: 20,
+}
+
 const backArrow = () => (
-  <View style={BACK_ARROW}>
+  <View style={BACK_ARROW} hitSlop={HIT_SLOP}>
     <Image source={require("../../shared/title-bar/icon.back-arrow.png")} />
     <Text text="INFO" style={HEADER_TEXT} />
   </View>

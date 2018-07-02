@@ -1,5 +1,5 @@
 import * as React from "react"
-import { View, Image, ViewStyle, TextStyle, Linking, ImageStyle, Platform } from "react-native"
+import { View, Image, ViewStyle, TextStyle, ImageStyle, Platform } from "react-native"
 import { NavigationScreenProps } from "react-navigation"
 import { Screen } from "../../shared/screen"
 import { palette } from "../../../theme/palette"
@@ -9,7 +9,6 @@ import { format } from "date-fns"
 import { SpeakerImage } from "./speaker-image"
 import { TalkTitle } from "./talk-title"
 import { SpeakerBio } from "./speaker-bio"
-import { Button } from "../../shared/button"
 
 const ROOT: ViewStyle = {
   paddingVertical: spacing.medium,
@@ -73,9 +72,20 @@ const MENU_ITEM: ViewStyle = {
 
 const MENU_ITEM_TEXT: TextStyle = { color: palette.white }
 
+const HIT_SLOP = {
+  top: 20,
+  left: 20,
+  right: 20,
+  bottom: 20,
+}
+
 export interface TalkDetailsScreenProps extends NavigationScreenProps<{}> {}
 
-const backImage = () => <Image source={require("../../shared/title-bar/icon.back-arrow.png")} />
+const backImage = () => (
+  <View hitSlop={HIT_SLOP}>
+    <Image source={require("../../shared/title-bar/icon.back-arrow.png")} />
+  </View>
+)
 
 export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> {
   static navigationOptions = ({ navigation }) => {
