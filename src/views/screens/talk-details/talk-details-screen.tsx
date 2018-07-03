@@ -1,5 +1,5 @@
 import * as React from "react"
-import { View, Image, ViewStyle, TextStyle, ImageStyle, Platform } from "react-native"
+import { View, Image, ViewStyle, TextStyle, Dimensions, ImageStyle, Platform } from "react-native"
 import { NavigationScreenProps } from "react-navigation"
 import { Screen } from "../../shared/screen"
 import { palette } from "../../../theme/palette"
@@ -20,7 +20,11 @@ const FULL_SIZE: ViewStyle = {
   height: "100%",
 }
 
-const FULL_WIDTH_IMAGE: ImageStyle = { width: "100%" }
+const SCREEN_WIDTH = Dimensions.get("window").width
+const IMAGE_WIDTH = SCREEN_WIDTH - 2 * spacing.large
+const IMAGE_ASPECT_RATIO = 1.7
+const IMAGE_HEIGHT = IMAGE_WIDTH / IMAGE_ASPECT_RATIO
+const FULL_WIDTH_IMAGE: ImageStyle = { width: IMAGE_WIDTH, height: IMAGE_HEIGHT }
 
 const TITLE: TextStyle = {
   fontSize: 20,
