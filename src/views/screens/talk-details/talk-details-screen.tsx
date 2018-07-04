@@ -22,9 +22,13 @@ const FULL_SIZE: ViewStyle = {
 
 const SCREEN_WIDTH = Dimensions.get("window").width
 const IMAGE_WIDTH = SCREEN_WIDTH - 2 * spacing.large
-const IMAGE_ASPECT_RATIO = 1.7
+const IMAGE_ASPECT_RATIO = 1.5
 const IMAGE_HEIGHT = IMAGE_WIDTH / IMAGE_ASPECT_RATIO
-const FULL_WIDTH_IMAGE: ImageStyle = { width: IMAGE_WIDTH, height: IMAGE_HEIGHT }
+const FULL_WIDTH_IMAGE: ImageStyle = {
+  width: IMAGE_WIDTH,
+  height: IMAGE_HEIGHT,
+  resizeMode: "contain",
+}
 
 const TITLE: TextStyle = {
   fontSize: 20,
@@ -219,7 +223,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
     const { talk } = this.props.navigation.state.params
     return (
       <View style={FULL_SIZE}>
-        {talk.image && <Image source={{ uri: talk.image }} style={FULL_WIDTH_IMAGE} />}
+        {<Image source={require("./panelist.png")} style={FULL_WIDTH_IMAGE} />}
         <Text text={talk.title} preset="body" style={TITLE} />
         <Text text={talk.description} preset="body" style={DESCRIPTION} />
         {talk.speakers &&
@@ -239,8 +243,10 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
 
   renderAfterParty = () => {
     const { title, description, sponsor } = this.props.navigation.state.params.talk
-    let image = require("./img.afterparty-squarespace.png")
-    // require("./img.afterparty-g2i@2x.png")
+    let image =
+      sponsor === "Squarespace"
+        ? require("./img.afterparty-squarespace.png")
+        : require("./img.afterparty-g2i.png")
     return (
       <View style={FULL_SIZE}>
         <View>

@@ -19,14 +19,7 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
       >
         {noTime ? this.renderTopBorder() : this.renderTime()}
         <View style={style.contentWrapper as ViewStyle}>
-          <View style={style.imageWrapper as ViewStyle}>
-            {(talk.image || (talk.speakers && talk.speakers[0] && talk.speakers[0].image)) && (
-              <Image
-                source={{ uri: talk.image || talk.speakers[0].image }}
-                style={style.image as ImageStyle}
-              />
-            )}
-          </View>
+          <View style={style.imageWrapper as ViewStyle}>{this.renderImage()}</View>
           <View style={style.content as ViewStyle}>
             <Text preset="subheader" text={talk.title} style={style.title as TextStyle} />
             {talk.speakers &&
@@ -64,5 +57,28 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
         />
       </View>
     )
+  }
+
+  renderImage = () => {
+    const { preset, talk: { sponsor, talkType, speakers }, talk } = this.props
+    const style: any = ScheduleCellPresets[preset] || ScheduleCellPresets.default
+    let image = null
+    if (talkType.toLowerCase() === "panel") {
+      image = require("./panelist.png")
+    } else if (talkType.toLowerCase() === "afterparty") {
+      if (sponsor === "Squarespace") image = require("./afterparty-squarespace.png")
+      if (sponsor === "G2i") image = require("./afterparty-G2i.png")
+    } else if (talkType.toLowerCase() === "break") {
+      image = require("./coffee-modus.png")
+    } else if (talkType.toLowerCase() === "talk" || talkType.toLowerCase() === "workshop") {
+      image = speakers && speakers[0] && speakers[0].image ? { uri: speakers[0].image } : null
+    } else {
+      if (talk.image) image = { uri: talk.image }
+    }
+    if (image) {
+      return <Image source={image} style={style.image as ImageStyle} />
+    } else {
+      return null
+    }
   }
 }
