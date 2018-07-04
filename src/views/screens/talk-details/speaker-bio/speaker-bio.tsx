@@ -65,10 +65,13 @@ export class SpeakerBio extends React.Component<SpeakerBioProps, {}> {
       dribbble ||
       (websites && websites.length > 0)
     ) {
+      const splitName = name.split(" ")
+      const lastIndex = splitName.length - 1
+      const firstName = splitName.slice(0, lastIndex).join(" ")
       return (
         <View key={key} style={ROOT}>
           <Text
-            text={`FOLLOW ${splitName[0].toUpperCase()}`}
+            text={`FOLLOW ${firstName.toUpperCase()}`}
             preset="sectionHeader"
             style={{ color: palette.shamrock }}
           />

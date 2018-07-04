@@ -161,7 +161,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
     const { sponsor, description, title } = this.props.navigation.state.params.talk
     return (
       <View style={FULL_SIZE}>
-        <Image source={require("./img.event.png")} style={FULL_WIDTH_IMAGE} />
+        <Image source={require("./img.coffee-modus.png")} style={FULL_WIDTH_IMAGE} />
         <Text text={title} preset="body" style={TITLE} />
         <View style={SPONSOR_CONTAINER}>
           <Text tx="talkDetailsScreen.sponsoredBy" preset="input" style={SPONSORED_BY} />
@@ -173,10 +173,16 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
   }
 
   renderLunch = () => {
-    const { sponsor, description, menuItems, title } = this.props.navigation.state.params.talk
+    const {
+      sponsor,
+      description,
+      menuItems,
+      title,
+      image,
+    } = this.props.navigation.state.params.talk
     return (
       <View style={FULL_SIZE}>
-        <Image source={require("./img.event.png")} style={FULL_WIDTH_IMAGE} />
+        <Image source={{ uri: image }} style={FULL_WIDTH_IMAGE} />
         <Text text={title} preset="body" style={TITLE} />
         {sponsor && this.renderSponsored(sponsor)}
         <Text text={description} preset="body" style={DESCRIPTION} />
@@ -218,12 +224,13 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
   }
 
   renderAfterParty = () => {
-    const { title, description, image } = this.props.navigation.state.params.talk
+    const { title, description, sponsor } = this.props.navigation.state.params.talk
+    let image = require("./img.afterparty-squarespace.png")
+    // require("./img.afterparty-g2i@2x.png")
     return (
       <View style={FULL_SIZE}>
         <View>
-          <Image source={require("./img.event.png")} style={FULL_WIDTH_IMAGE} />
-          <Image source={{ uri: image }} style={AFTER_PARTY_LOGO} />
+          <Image source={image} style={FULL_WIDTH_IMAGE} />
         </View>
         <Text text={title} preset="body" style={TITLE} />
         <Text text={description} preset="body" style={AFTER_PARTY_DESCRIPTION} />
