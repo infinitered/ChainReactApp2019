@@ -6321,9 +6321,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
               accessibilityTraits={undefined}
               accessible={true}
               collapsable={undefined}
-              hasTVPreferredFocus={undefined}
               hitSlop={undefined}
-              isTVSelectable={true}
               nativeID={undefined}
               onLayout={undefined}
               onResponderGrant={[Function]}
@@ -6335,11 +6333,14 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
               style={
                 Object {
                   "backgroundColor": "#201B48",
-                  "opacity": 1,
+                  "transform": Array [
+                    Object {
+                      "scale": 1,
+                    },
+                  ],
                 }
               }
               testID={undefined}
-              tvParallaxProperties={undefined}
             >
               <View
                 style={
@@ -6522,9 +6523,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
               accessibilityTraits={undefined}
               accessible={true}
               collapsable={undefined}
-              hasTVPreferredFocus={undefined}
               hitSlop={undefined}
-              isTVSelectable={true}
               nativeID={undefined}
               onLayout={undefined}
               onResponderGrant={[Function]}
@@ -6536,11 +6535,14 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
               style={
                 Object {
                   "backgroundColor": "#161637",
-                  "opacity": 1,
+                  "transform": Array [
+                    Object {
+                      "scale": 1,
+                    },
+                  ],
                 }
               }
               testID={undefined}
-              tvParallaxProperties={undefined}
             >
               <View
                 style={
@@ -6723,9 +6725,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
               accessibilityTraits={undefined}
               accessible={true}
               collapsable={undefined}
-              hasTVPreferredFocus={undefined}
               hitSlop={undefined}
-              isTVSelectable={true}
               nativeID={undefined}
               onLayout={undefined}
               onResponderGrant={[Function]}
@@ -6737,11 +6737,14 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
               style={
                 Object {
                   "backgroundColor": "#201B48",
-                  "opacity": 1,
+                  "transform": Array [
+                    Object {
+                      "scale": 1,
+                    },
+                  ],
                 }
               }
               testID={undefined}
-              tvParallaxProperties={undefined}
             >
               <View
                 style={
@@ -6919,9 +6922,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
               accessibilityTraits={undefined}
               accessible={true}
               collapsable={undefined}
-              hasTVPreferredFocus={undefined}
               hitSlop={undefined}
-              isTVSelectable={true}
               nativeID={undefined}
               onLayout={undefined}
               onResponderGrant={[Function]}
@@ -6933,11 +6934,14 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
               style={
                 Object {
                   "backgroundColor": "#201B48",
-                  "opacity": 1,
+                  "transform": Array [
+                    Object {
+                      "scale": 1,
+                    },
+                  ],
                 }
               }
               testID={undefined}
-              tvParallaxProperties={undefined}
             >
               <View
                 style={
@@ -7136,9 +7140,7 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
               accessibilityTraits={undefined}
               accessible={true}
               collapsable={undefined}
-              hasTVPreferredFocus={undefined}
               hitSlop={undefined}
-              isTVSelectable={true}
               nativeID={undefined}
               onLayout={undefined}
               onResponderGrant={[Function]}
@@ -7150,11 +7152,14 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
               style={
                 Object {
                   "backgroundColor": "#201B48",
-                  "opacity": 1,
+                  "transform": Array [
+                    Object {
+                      "scale": 1,
+                    },
+                  ],
                 }
               }
               testID={undefined}
-              tvParallaxProperties={undefined}
             >
               <View
                 style={
