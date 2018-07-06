@@ -223,7 +223,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
     const { talk } = this.props.navigation.state.params
     return (
       <View style={FULL_SIZE}>
-        {<Image source={require("./panelist.png")} style={FULL_WIDTH_IMAGE} />}
+        {<Image source={{ uri: talk.image }} style={FULL_WIDTH_IMAGE} />}
         <Text text={talk.title} preset="body" style={TITLE} />
         <Text text={talk.description} preset="body" style={DESCRIPTION} />
         {talk.speakers &&

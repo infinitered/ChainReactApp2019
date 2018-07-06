@@ -72,6 +72,10 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
       image = require("./coffee-modus.png")
     } else if (talkType.toLowerCase() === "talk" || talkType.toLowerCase() === "workshop") {
       image = speakers && speakers[0] && speakers[0].image ? { uri: speakers[0].image } : null
+    } else if (talkType.toLowerCase() === "lunch") {
+      image = require("./lunch.png")
+    } else if (talkType.toLowerCase() === "breakfast") {
+      image = require("./registration.png")
     } else {
       if (talk.image) image = { uri: talk.image }
     }
