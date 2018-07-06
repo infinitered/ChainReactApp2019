@@ -15,10 +15,9 @@ const ROOT: ViewStyle = {
   marginTop: spacing.extraLarge + spacing.large,
 }
 
-const NAME: ViewStyle = {
-  position: "absolute",
-  bottom: spacing.large + spacing.medium,
-  right: 0,
+const BIO: TextStyle = {
+  color: palette.offWhite,
+  marginTop: spacing.large,
 }
 
 const SOCIAL_WRAPPER: ViewStyle = {
@@ -41,6 +40,7 @@ export class SpeakerBio extends React.Component<SpeakerBioProps, {}> {
       instagram,
       dribbble,
       websites,
+      bio,
     } = this.props.speaker
     const { last = true } = this.props
     const splitName = name.split(" ")
@@ -71,10 +71,11 @@ export class SpeakerBio extends React.Component<SpeakerBioProps, {}> {
       return (
         <View key={key} style={ROOT}>
           <Text
-            text={`FOLLOW ${firstName.toUpperCase()}`}
+            text={`${bio ? "ABOUT" : "FOLLOW"} ${firstName.toUpperCase()}`}
             preset="sectionHeader"
             style={{ color: palette.shamrock }}
           />
+          {bio && <Text text={bio} preset="subheader" style={BIO} />}
           <View style={socialStyles}>
             {Object.keys(links).map(k => {
               return k === "websites"

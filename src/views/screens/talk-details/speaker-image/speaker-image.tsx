@@ -16,6 +16,7 @@ export interface SpeakerImageProps {
 
 const ROOT: ViewStyle = {
   flex: 1,
+  maxHeight: 400,
 }
 
 const SPEAKER_IMAGE: ImageStyle = {
