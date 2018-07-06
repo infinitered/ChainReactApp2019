@@ -1,5 +1,5 @@
 import * as React from "react"
-import { View, ViewStyle, TextStyle } from "react-native"
+import { View, ViewStyle, TextStyle, TouchableOpacity } from "react-native"
 import { Text } from "../../../shared/text"
 import { spacing } from "../../../../theme/spacing"
 import { palette } from "../../../../theme/palette"
@@ -36,6 +36,13 @@ export class GettingToChainReact extends React.Component<{}, {}> {
         <Text preset="body" tx="venueScreen.gettingToChainReact.description2" style={DESCRIPTION} />
         <TravelOption preset="rideShare" />
         <TravelOption preset="massTransit" />
+
+        <Text preset="body" style={SUBTITLE} tx="venueScreen.gettingToChainReact.parking" />
+        <Text
+          preset="body"
+          tx="venueScreen.gettingToChainReact.parkingDetail"
+          style={DESCRIPTION}
+        />
       </View>
     )
   }
