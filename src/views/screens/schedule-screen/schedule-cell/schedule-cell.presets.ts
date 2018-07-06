@@ -31,13 +31,14 @@ const BASE_STYLES: any = {
   imageWrapper: {
     width: 62,
     marginRight: spacing.large,
-    borderTopRightRadius: 8,
-    borderBottomLeftRadius: 8,
+    // borderTopRightRadius: 8,
+    // borderBottomLeftRadius: 8,
     overflow: "hidden",
   },
   image: {
     width: 62,
     height: 68,
+    resizeMode: "contain",
   },
   content: {
     flex: 1,

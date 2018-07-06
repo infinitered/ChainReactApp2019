@@ -11,6 +11,7 @@ const talk: any = {
   description: "Talk description about things and stuff.",
   image: "https://pbs.twimg.com/profile_images/985388996011405312/O6rB4xNM_400x400.jpg",
   speakers: [{ name: "Ken Wheeler" }],
+  talkType: "TALK",
 }
 
 const workshop: any = {
@@ -22,6 +23,7 @@ const workshop: any = {
   image: "https://pbs.twimg.com/profile_images/985388996011405312/O6rB4xNM_400x400.jpg",
   track: "TRACK 2",
   speakers: [{ name: "Ken Wheeler" }],
+  talkType: "WORKSHOP",
 }
 
 const breakTalk: any = {
@@ -31,6 +33,7 @@ const breakTalk: any = {
   title: "Break",
   description: "",
   speakers: [],
+  talkType: "BREAK",
 }
 
 const afterparty: any = {
@@ -42,6 +45,7 @@ const afterparty: any = {
   image: "https://pbs.twimg.com/profile_images/839854654636752896/yZ6aVelI_400x400.jpg",
   speakers: [],
   action: "http://www.twitter.com/squarespace",
+  talkType: "AFTERPARTY",
 }
 
 storiesOf("ScheduleCell")

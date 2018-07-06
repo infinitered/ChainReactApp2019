@@ -6379,28 +6379,12 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                 <View
                   style={
                     Object {
-                      "borderBottomLeftRadius": 8,
-                      "borderTopRightRadius": 8,
                       "marginRight": 20,
                       "overflow": "hidden",
                       "width": 62,
                     }
                   }
-                >
-                  <Image
-                    source={
-                      Object {
-                        "uri": "https://pbs.twimg.com/profile_images/985388996011405312/O6rB4xNM_400x400.jpg",
-                      }
-                    }
-                    style={
-                      Object {
-                        "height": 68,
-                        "width": 62,
-                      }
-                    }
-                  />
-                </View>
+                />
                 <View
                   style={
                     Object {
@@ -6596,28 +6580,12 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                 <View
                   style={
                     Object {
-                      "borderBottomLeftRadius": 8,
-                      "borderTopRightRadius": 8,
                       "marginRight": 20,
                       "overflow": "hidden",
                       "width": 62,
                     }
                   }
-                >
-                  <Image
-                    source={
-                      Object {
-                        "uri": "https://pbs.twimg.com/profile_images/985388996011405312/O6rB4xNM_400x400.jpg",
-                      }
-                    }
-                    style={
-                      Object {
-                        "height": 68,
-                        "width": 62,
-                      }
-                    }
-                  />
-                </View>
+                />
                 <View
                   style={
                     Object {
@@ -6813,14 +6781,23 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                 <View
                   style={
                     Object {
-                      "borderBottomLeftRadius": 8,
-                      "borderTopRightRadius": 8,
                       "marginRight": 20,
                       "overflow": "hidden",
                       "width": 62,
                     }
                   }
-                />
+                >
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "height": 68,
+                        "resizeMode": "contain",
+                        "width": 62,
+                      }
+                    }
+                  />
+                </View>
                 <View
                   style={
                     Object {
@@ -7016,28 +6993,12 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                 <View
                   style={
                     Object {
-                      "borderBottomLeftRadius": 8,
-                      "borderTopRightRadius": 8,
                       "marginRight": 20,
                       "overflow": "hidden",
                       "width": 62,
                     }
                   }
-                >
-                  <Image
-                    source={
-                      Object {
-                        "uri": "https://pbs.twimg.com/profile_images/985388996011405312/O6rB4xNM_400x400.jpg",
-                      }
-                    }
-                    style={
-                      Object {
-                        "height": 68,
-                        "width": 62,
-                      }
-                    }
-                  />
-                </View>
+                />
                 <View
                   style={
                     Object {
@@ -7233,28 +7194,12 @@ exports[`Storyshots ScheduleCell Presets 1`] = `
                 <View
                   style={
                     Object {
-                      "borderBottomLeftRadius": 8,
-                      "borderTopRightRadius": 8,
                       "marginRight": 20,
                       "overflow": "hidden",
                       "width": 62,
                     }
                   }
-                >
-                  <Image
-                    source={
-                      Object {
-                        "uri": "https://pbs.twimg.com/profile_images/839854654636752896/yZ6aVelI_400x400.jpg",
-                      }
-                    }
-                    style={
-                      Object {
-                        "height": 68,
-                        "width": 62,
-                      }
-                    }
-                  />
-                </View>
+                />
                 <View
                   style={
                     Object {

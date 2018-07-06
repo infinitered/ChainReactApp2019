@@ -22,9 +22,13 @@ const FULL_SIZE: ViewStyle = {
 
 const SCREEN_WIDTH = Dimensions.get("window").width
 const IMAGE_WIDTH = SCREEN_WIDTH - 2 * spacing.large
-const IMAGE_ASPECT_RATIO = 1.7
+const IMAGE_ASPECT_RATIO = 1.5
 const IMAGE_HEIGHT = IMAGE_WIDTH / IMAGE_ASPECT_RATIO
-const FULL_WIDTH_IMAGE: ImageStyle = { width: IMAGE_WIDTH, height: IMAGE_HEIGHT }
+const FULL_WIDTH_IMAGE: ImageStyle = {
+  width: IMAGE_WIDTH,
+  height: IMAGE_HEIGHT,
+  resizeMode: "contain",
+}
 
 const TITLE: TextStyle = {
   fontSize: 20,
@@ -175,7 +179,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
     const { sponsor, description, title } = this.props.navigation.state.params.talk
     return (
       <View style={FULL_SIZE}>
-        <Image source={require("./img.event.png")} style={FULL_WIDTH_IMAGE} />
+        <Image source={require("./img.coffee-modus.png")} style={FULL_WIDTH_IMAGE} />
         <Text text={title} preset="body" style={TITLE} />
         <View style={SPONSOR_CONTAINER}>
           <Text tx="talkDetailsScreen.sponsoredBy" preset="input" style={SPONSORED_BY} />
@@ -187,10 +191,16 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
   }
 
   renderLunch = () => {
-    const { sponsor, description, menuItems, title } = this.props.navigation.state.params.talk
+    const {
+      sponsor,
+      description,
+      menuItems,
+      title,
+      image,
+    } = this.props.navigation.state.params.talk
     return (
       <View style={FULL_SIZE}>
-        <Image source={require("./img.event.png")} style={FULL_WIDTH_IMAGE} />
+        <Image source={{ uri: image }} style={FULL_WIDTH_IMAGE} />
         <Text text={title} preset="body" style={TITLE} />
         {sponsor && this.renderSponsored(sponsor)}
         <Text text={description} preset="body" style={DESCRIPTION} />
@@ -213,7 +223,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
     const { talk } = this.props.navigation.state.params
     return (
       <View style={FULL_SIZE}>
-        {talk.image && <Image source={{ uri: talk.image }} style={FULL_WIDTH_IMAGE} />}
+        {<Image source={{ uri: talk.image }} style={FULL_WIDTH_IMAGE} />}
         <Text text={talk.title} preset="body" style={TITLE} />
         <Text text={talk.description} preset="body" style={DESCRIPTION} />
         {talk.speakers &&
@@ -232,12 +242,15 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
   }
 
   renderAfterParty = () => {
-    const { title, description, image } = this.props.navigation.state.params.talk
+    const { title, description, sponsor } = this.props.navigation.state.params.talk
+    let image =
+      sponsor === "Squarespace"
+        ? require("./img.afterparty-squarespace.png")
+        : require("./img.afterparty-g2i.png")
     return (
       <View style={FULL_SIZE}>
         <View>
-          <Image source={require("./img.event.png")} style={FULL_WIDTH_IMAGE} />
-          <Image source={{ uri: image }} style={AFTER_PARTY_LOGO} />
+          <Image source={image} style={FULL_WIDTH_IMAGE} />
         </View>
         <Text text={title} preset="body" style={TITLE} />
         <Text text={description} preset="body" style={AFTER_PARTY_DESCRIPTION} />
