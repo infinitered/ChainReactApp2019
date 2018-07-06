@@ -64,12 +64,6 @@ const BULLET: ViewStyle = {
 
 const PANEL_BIO: ViewStyle = { marginTop: spacing.extraLarge + spacing.large }
 
-const AFTER_PARTY_LOGO: ImageStyle = {
-  position: "absolute",
-  bottom: spacing.large,
-  right: 18,
-}
-
 const AFTER_PARTY_DESCRIPTION: TextStyle = { marginTop: spacing.large }
 
 const MENU_ITEM: ViewStyle = {
@@ -81,10 +75,10 @@ const MENU_ITEM: ViewStyle = {
 const MENU_ITEM_TEXT: TextStyle = { color: palette.white }
 
 const HIT_SLOP = {
-  top: 20,
-  left: 20,
-  right: 20,
-  bottom: 20,
+  top: 30,
+  left: 30,
+  right: 30,
+  bottom: 30,
 }
 
 export interface TalkDetailsScreenProps extends NavigationScreenProps<{}> {}
@@ -220,16 +214,16 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
   }
 
   renderPanel = () => {
-    const { talk } = this.props.navigation.state.params
+    const { talk: { image, title, description, speakers } } = this.props.navigation.state.params
     return (
       <View style={FULL_SIZE}>
-        {<Image source={{ uri: talk.image }} style={FULL_WIDTH_IMAGE} />}
-        <Text text={talk.title} preset="body" style={TITLE} />
-        <Text text={talk.description} preset="body" style={DESCRIPTION} />
-        {talk.speakers &&
-          talk.speakers.length &&
-          talk.speakers.map((speaker, index) => {
-            const isLast = index === talk.speakers.length - 1
+        {<Image source={{ uri: image }} style={FULL_WIDTH_IMAGE} />}
+        <Text text={title} preset="body" style={TITLE} />
+        <Text text={description} preset="body" style={DESCRIPTION} />
+        {speakers &&
+          speakers.length &&
+          speakers.map((speaker, index) => {
+            const isLast = index === speakers.length - 1
             return (
               <View key={index} style={PANEL_BIO}>
                 <SpeakerImage speaker={speaker} />

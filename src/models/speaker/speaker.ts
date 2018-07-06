@@ -12,4 +12,5 @@ export const SpeakerModel = types.model().props({
   instagram: types.maybe(types.string),
   dribbble: types.maybe(types.string),
   websites: types.maybe(types.array(types.string)),
+  bio: types.maybe(types.string),
 })

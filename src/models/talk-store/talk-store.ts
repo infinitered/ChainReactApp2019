@@ -44,6 +44,7 @@ export const TalkStoreModel = types
                 instagram
                 dribbble
                 websites
+                bio
               }
             }
           }
