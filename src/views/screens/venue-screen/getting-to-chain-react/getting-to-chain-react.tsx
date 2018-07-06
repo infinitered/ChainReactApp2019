@@ -1,6 +1,7 @@
 import * as React from "react"
-import { View, ViewStyle, TextStyle } from "react-native"
+import { View, ViewStyle, TextStyle, Linking } from "react-native"
 import { Text } from "../../../shared/text"
+import { Button } from "../../../shared/button"
 import { spacing } from "../../../../theme/spacing"
 import { palette } from "../../../../theme/palette"
 import { TravelOption } from "./travel-option"
@@ -20,6 +21,7 @@ const SUBTITLE: TextStyle = {
 const DESCRIPTION: TextStyle = {
   marginTop: spacing.large,
 }
+const LINK: string = "https://www.pcs.org/inside-pcs/directions#Parking"
 
 export class GettingToChainReact extends React.Component<{}, {}> {
   render() {
@@ -36,6 +38,12 @@ export class GettingToChainReact extends React.Component<{}, {}> {
         <Text preset="body" tx="venueScreen.gettingToChainReact.description2" style={DESCRIPTION} />
         <TravelOption preset="rideShare" />
         <TravelOption preset="massTransit" />
+        <Button
+          text="PARKING RECOMMENDATION"
+          preset="dark"
+          onPress={() => Linking.openURL(LINK)}
+          style={DESCRIPTION}
+        />
       </View>
     )
   }

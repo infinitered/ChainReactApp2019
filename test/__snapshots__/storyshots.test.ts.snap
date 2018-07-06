@@ -4890,6 +4890,54 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                   venueScreen.gettingToChainReact.massTransit.test
                 </Text>
               </View>
+              <View
+                accessibilityComponentType={undefined}
+                accessibilityLabel={undefined}
+                accessibilityTraits={undefined}
+                accessible={true}
+                collapsable={undefined}
+                hasTVPreferredFocus={undefined}
+                hitSlop={undefined}
+                isTVSelectable={true}
+                nativeID={undefined}
+                onLayout={undefined}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "rgba(86,227,159,0.20)",
+                    "borderRadius": 4,
+                    "justifyContent": "center",
+                    "marginTop": 20,
+                    "opacity": 1,
+                    "paddingHorizontal": undefined,
+                    "paddingVertical": 10,
+                  }
+                }
+                testID={undefined}
+                tvParallaxProperties={undefined}
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "#56E39F",
+                      "fontFamily": "Gotham Rounded",
+                      "fontSize": 14,
+                      "paddingHorizontal": undefined,
+                    }
+                  }
+                >
+                  PARKING RECOMMENDATION
+                </Text>
+              </View>
             </View>
           </View>
         </View>
