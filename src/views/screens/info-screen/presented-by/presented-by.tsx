@@ -1,11 +1,14 @@
 import * as React from "react"
-import { View, Image, ViewStyle, ImageStyle, TextStyle } from "react-native"
+import { View, Image, ViewStyle, ImageStyle, TextStyle, Dimensions } from "react-native"
 import { presentedByPresets } from "./presented-by.presets"
 import { PresentedByProps } from "./presented-by.props"
 import { Text } from "../../../shared/text"
 import { SocialButton } from "../../../shared/social-button"
 import { spacing } from "../../../../theme/spacing"
 import { palette } from "../../../../theme/palette"
+
+const SCREEN_WIDTH = Dimensions.get("window").width
+const MAX_WIDTH = SCREEN_WIDTH - 2 * spacing.large
 
 const BACKGROUND: ImageStyle = {
   position: "absolute",
@@ -36,7 +39,12 @@ const SOCIAL_WRAPPER: ViewStyle = {
   justifyContent: "center",
   alignItems: "center",
   marginTop: 40,
-  marginBottom: 117,
+  marginBottom: 107,
+  maxWidth: MAX_WIDTH,
+  flexWrap: "wrap",
+}
+const SOCIAL_BUTTON: ViewStyle = {
+  marginTop: spacing.small,
 }
 const FOOTER: ViewStyle = {
   alignItems: "center",
@@ -73,13 +81,13 @@ export function PresentedBy(props: PresentedByProps) {
         <View style={FOOTER}>
           <Image style={LOGO} source={infiniteRedLogo} />
           <View style={SOCIAL_WRAPPER}>
-            <SocialButton preset="website" link={linkPresets.website} />
-            <SocialButton preset="twitter" link={linkPresets.twitter} />
-            <SocialButton preset="github" link={linkPresets.github} />
-            <SocialButton preset="medium" link={linkPresets.medium} />
-            <SocialButton preset="dribbble" link={linkPresets.dribbble} />
-            <SocialButton preset="instagram" link={linkPresets.instagram} />
-            <SocialButton preset="facebook" link={linkPresets.facebook} />
+            <SocialButton preset="website" link={linkPresets.website} style={SOCIAL_BUTTON} />
+            <SocialButton preset="twitter" link={linkPresets.twitter} style={SOCIAL_BUTTON} />
+            <SocialButton preset="github" link={linkPresets.github} style={SOCIAL_BUTTON} />
+            <SocialButton preset="medium" link={linkPresets.medium} style={SOCIAL_BUTTON} />
+            <SocialButton preset="dribbble" link={linkPresets.dribbble} style={SOCIAL_BUTTON} />
+            <SocialButton preset="instagram" link={linkPresets.instagram} style={SOCIAL_BUTTON} />
+            <SocialButton preset="facebook" link={linkPresets.facebook} style={SOCIAL_BUTTON} />
           </View>
         </View>
       </View>

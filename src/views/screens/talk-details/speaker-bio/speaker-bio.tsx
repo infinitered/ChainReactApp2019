@@ -1,5 +1,5 @@
 import * as React from "react"
-import { View, ViewStyle, Image, ImageStyle, TextStyle, Linking, Alert } from "react-native"
+import { View, ViewStyle, TextStyle, Dimensions } from "react-native"
 import { Text } from "../../../shared/text"
 import { SocialButton } from "../../../shared/social-button"
 import { palette } from "../../../../theme/palette"
@@ -9,6 +9,9 @@ export interface SpeakerBioProps {
   speaker: any
   last?: boolean
 }
+
+const SCREEN_WIDTH = Dimensions.get("window").width
+const MAX_WIDTH = SCREEN_WIDTH - 2 * spacing.large
 
 const ROOT: ViewStyle = {
   width: "100%",
@@ -21,8 +24,11 @@ const BIO: TextStyle = {
 }
 
 const SOCIAL_WRAPPER: ViewStyle = {
+  flex: 1,
   flexDirection: "row",
-  marginTop: spacing.large + spacing.small,
+  marginTop: spacing.large,
+  maxWidth: MAX_WIDTH,
+  flexWrap: "wrap",
 }
 
 const SOCIAL_WRAPPER_LAST: ViewStyle = {
@@ -92,6 +98,6 @@ export class SpeakerBio extends React.Component<SpeakerBioProps, {}> {
 
   renderLink = (k, link) => {
     if (!link) return null
-    return <SocialButton key={k} preset={k} link={link} />
+    return <SocialButton key={k} preset={k} link={link} style={{ marginTop: spacing.small }} />
   }
 }

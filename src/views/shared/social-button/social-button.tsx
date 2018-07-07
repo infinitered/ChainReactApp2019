@@ -10,12 +10,16 @@ import { SocialButtonProps } from "./social-button.props"
  */
 export function SocialButton(props: SocialButtonProps) {
   // grab the props
-  const { preset = "website", link, ...rest } = props
+  const { preset = "website", link, style, ...rest } = props
 
   const image = imageSource[preset] || imageSource["website"]
 
   return (
-    <TouchableHighlight style={viewPresets.default} onPress={() => Linking.openURL(link)} {...rest}>
+    <TouchableHighlight
+      style={[viewPresets.default, style]}
+      onPress={() => Linking.openURL(link)}
+      {...rest}
+    >
       <Image source={image} style={imageStyle.default} />
     </TouchableHighlight>
   )
