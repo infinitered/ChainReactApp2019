@@ -62,7 +62,7 @@ const BULLET: ViewStyle = {
   marginTop: spacing.small,
 }
 
-const PANEL_BIO: ViewStyle = { marginTop: spacing.extraLarge + spacing.large }
+const PANEL_BIO: ViewStyle = { flex: 1, marginTop: spacing.extraLarge + spacing.large }
 
 const AFTER_PARTY_DESCRIPTION: TextStyle = { marginTop: spacing.large }
 

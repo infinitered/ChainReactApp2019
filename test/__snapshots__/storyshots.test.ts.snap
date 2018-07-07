@@ -2701,13 +2701,16 @@ exports[`Storyshots Code of Conduct - Contact Presets 1`] = `
                   onResponderTerminationRequest={[Function]}
                   onStartShouldSetResponder={[Function]}
                   style={
-                    Object {
-                      "alignItems": "center",
-                      "height": 32,
-                      "justifyContent": "center",
-                      "marginRight": 14,
-                      "width": 32,
-                    }
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "height": 32,
+                        "justifyContent": "center",
+                        "marginRight": 14,
+                        "width": 32,
+                      },
+                      undefined,
+                    ]
                   }
                   testID={undefined}
                   tvParallaxProperties={undefined}
@@ -2779,13 +2782,16 @@ exports[`Storyshots Code of Conduct - Contact Presets 1`] = `
                   onResponderTerminationRequest={[Function]}
                   onStartShouldSetResponder={[Function]}
                   style={
-                    Object {
-                      "alignItems": "center",
-                      "height": 32,
-                      "justifyContent": "center",
-                      "marginRight": 14,
-                      "width": 32,
-                    }
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "height": 32,
+                        "justifyContent": "center",
+                        "marginRight": 14,
+                        "width": 32,
+                      },
+                      undefined,
+                    ]
                   }
                   testID={undefined}
                   tvParallaxProperties={undefined}
@@ -2857,13 +2863,16 @@ exports[`Storyshots Code of Conduct - Contact Presets 1`] = `
                   onResponderTerminationRequest={[Function]}
                   onStartShouldSetResponder={[Function]}
                   style={
-                    Object {
-                      "alignItems": "center",
-                      "height": 32,
-                      "justifyContent": "center",
-                      "marginRight": 14,
-                      "width": 32,
-                    }
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "height": 32,
+                        "justifyContent": "center",
+                        "marginRight": 14,
+                        "width": 32,
+                      },
+                      undefined,
+                    ]
                   }
                   testID={undefined}
                   tvParallaxProperties={undefined}
@@ -5153,9 +5162,11 @@ exports[`Storyshots PresentedBy Presets 1`] = `
                       Object {
                         "alignItems": "center",
                         "flexDirection": "row",
+                        "flexWrap": "wrap",
                         "justifyContent": "center",
-                        "marginBottom": 117,
+                        "marginBottom": 107,
                         "marginTop": 40,
+                        "maxWidth": 710,
                       }
                     }
                   >
@@ -5176,13 +5187,18 @@ exports[`Storyshots PresentedBy Presets 1`] = `
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
                       style={
-                        Object {
-                          "alignItems": "center",
-                          "height": 32,
-                          "justifyContent": "center",
-                          "marginRight": 14,
-                          "width": 32,
-                        }
+                        Array [
+                          Object {
+                            "alignItems": "center",
+                            "height": 32,
+                            "justifyContent": "center",
+                            "marginRight": 14,
+                            "width": 32,
+                          },
+                          Object {
+                            "marginTop": 10,
+                          },
+                        ]
                       }
                       testID={undefined}
                       tvParallaxProperties={undefined}
@@ -5209,13 +5225,18 @@ exports[`Storyshots PresentedBy Presets 1`] = `
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
                       style={
-                        Object {
-                          "alignItems": "center",
-                          "height": 32,
-                          "justifyContent": "center",
-                          "marginRight": 14,
-                          "width": 32,
-                        }
+                        Array [
+                          Object {
+                            "alignItems": "center",
+                            "height": 32,
+                            "justifyContent": "center",
+                            "marginRight": 14,
+                            "width": 32,
+                          },
+                          Object {
+                            "marginTop": 10,
+                          },
+                        ]
                       }
                       testID={undefined}
                       tvParallaxProperties={undefined}
@@ -5242,13 +5263,18 @@ exports[`Storyshots PresentedBy Presets 1`] = `
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
                       style={
-                        Object {
-                          "alignItems": "center",
-                          "height": 32,
-                          "justifyContent": "center",
-                          "marginRight": 14,
-                          "width": 32,
-                        }
+                        Array [
+                          Object {
+                            "alignItems": "center",
+                            "height": 32,
+                            "justifyContent": "center",
+                            "marginRight": 14,
+                            "width": 32,
+                          },
+                          Object {
+                            "marginTop": 10,
+                          },
+                        ]
                       }
                       testID={undefined}
                       tvParallaxProperties={undefined}
@@ -5275,13 +5301,18 @@ exports[`Storyshots PresentedBy Presets 1`] = `
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
                       style={
-                        Object {
-                          "alignItems": "center",
-                          "height": 32,
-                          "justifyContent": "center",
-                          "marginRight": 14,
-                          "width": 32,
-                        }
+                        Array [
+                          Object {
+                            "alignItems": "center",
+                            "height": 32,
+                            "justifyContent": "center",
+                            "marginRight": 14,
+                            "width": 32,
+                          },
+                          Object {
+                            "marginTop": 10,
+                          },
+                        ]
                       }
                       testID={undefined}
                       tvParallaxProperties={undefined}
@@ -5308,13 +5339,18 @@ exports[`Storyshots PresentedBy Presets 1`] = `
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
                       style={
-                        Object {
-                          "alignItems": "center",
-                          "height": 32,
-                          "justifyContent": "center",
-                          "marginRight": 14,
-                          "width": 32,
-                        }
+                        Array [
+                          Object {
+                            "alignItems": "center",
+                            "height": 32,
+                            "justifyContent": "center",
+                            "marginRight": 14,
+                            "width": 32,
+                          },
+                          Object {
+                            "marginTop": 10,
+                          },
+                        ]
                       }
                       testID={undefined}
                       tvParallaxProperties={undefined}
@@ -5341,13 +5377,18 @@ exports[`Storyshots PresentedBy Presets 1`] = `
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
                       style={
-                        Object {
-                          "alignItems": "center",
-                          "height": 32,
-                          "justifyContent": "center",
-                          "marginRight": 14,
-                          "width": 32,
-                        }
+                        Array [
+                          Object {
+                            "alignItems": "center",
+                            "height": 32,
+                            "justifyContent": "center",
+                            "marginRight": 14,
+                            "width": 32,
+                          },
+                          Object {
+                            "marginTop": 10,
+                          },
+                        ]
                       }
                       testID={undefined}
                       tvParallaxProperties={undefined}
@@ -5374,13 +5415,18 @@ exports[`Storyshots PresentedBy Presets 1`] = `
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
                       style={
-                        Object {
-                          "alignItems": "center",
-                          "height": 32,
-                          "justifyContent": "center",
-                          "marginRight": 14,
-                          "width": 32,
-                        }
+                        Array [
+                          Object {
+                            "alignItems": "center",
+                            "height": 32,
+                            "justifyContent": "center",
+                            "marginRight": 14,
+                            "width": 32,
+                          },
+                          Object {
+                            "marginTop": 10,
+                          },
+                        ]
                       }
                       testID={undefined}
                       tvParallaxProperties={undefined}
@@ -8197,13 +8243,16 @@ exports[`Storyshots SocialButton Presets 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "alignItems": "center",
-                  "height": 32,
-                  "justifyContent": "center",
-                  "marginRight": 14,
-                  "width": 32,
-                }
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "height": 32,
+                    "justifyContent": "center",
+                    "marginRight": 14,
+                    "width": 32,
+                  },
+                  undefined,
+                ]
               }
               testID={undefined}
               tvParallaxProperties={undefined}
@@ -8319,13 +8368,16 @@ exports[`Storyshots SocialButton Presets 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "alignItems": "center",
-                  "height": 32,
-                  "justifyContent": "center",
-                  "marginRight": 14,
-                  "width": 32,
-                }
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "height": 32,
+                    "justifyContent": "center",
+                    "marginRight": 14,
+                    "width": 32,
+                  },
+                  undefined,
+                ]
               }
               testID={undefined}
               tvParallaxProperties={undefined}
@@ -8441,13 +8493,16 @@ exports[`Storyshots SocialButton Presets 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "alignItems": "center",
-                  "height": 32,
-                  "justifyContent": "center",
-                  "marginRight": 14,
-                  "width": 32,
-                }
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "height": 32,
+                    "justifyContent": "center",
+                    "marginRight": 14,
+                    "width": 32,
+                  },
+                  undefined,
+                ]
               }
               testID={undefined}
               tvParallaxProperties={undefined}
@@ -8563,13 +8618,16 @@ exports[`Storyshots SocialButton Presets 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "alignItems": "center",
-                  "height": 32,
-                  "justifyContent": "center",
-                  "marginRight": 14,
-                  "width": 32,
-                }
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "height": 32,
+                    "justifyContent": "center",
+                    "marginRight": 14,
+                    "width": 32,
+                  },
+                  undefined,
+                ]
               }
               testID={undefined}
               tvParallaxProperties={undefined}
@@ -8685,13 +8743,16 @@ exports[`Storyshots SocialButton Presets 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "alignItems": "center",
-                  "height": 32,
-                  "justifyContent": "center",
-                  "marginRight": 14,
-                  "width": 32,
-                }
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "height": 32,
+                    "justifyContent": "center",
+                    "marginRight": 14,
+                    "width": 32,
+                  },
+                  undefined,
+                ]
               }
               testID={undefined}
               tvParallaxProperties={undefined}
@@ -8807,13 +8868,16 @@ exports[`Storyshots SocialButton Presets 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "alignItems": "center",
-                  "height": 32,
-                  "justifyContent": "center",
-                  "marginRight": 14,
-                  "width": 32,
-                }
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "height": 32,
+                    "justifyContent": "center",
+                    "marginRight": 14,
+                    "width": 32,
+                  },
+                  undefined,
+                ]
               }
               testID={undefined}
               tvParallaxProperties={undefined}
@@ -8929,13 +8993,16 @@ exports[`Storyshots SocialButton Presets 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "alignItems": "center",
-                  "height": 32,
-                  "justifyContent": "center",
-                  "marginRight": 14,
-                  "width": 32,
-                }
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "height": 32,
+                    "justifyContent": "center",
+                    "marginRight": 14,
+                    "width": 32,
+                  },
+                  undefined,
+                ]
               }
               testID={undefined}
               tvParallaxProperties={undefined}
@@ -9051,13 +9118,16 @@ exports[`Storyshots SocialButton Presets 1`] = `
               onResponderTerminationRequest={[Function]}
               onStartShouldSetResponder={[Function]}
               style={
-                Object {
-                  "alignItems": "center",
-                  "height": 32,
-                  "justifyContent": "center",
-                  "marginRight": 14,
-                  "width": 32,
-                }
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "height": 32,
+                    "justifyContent": "center",
+                    "marginRight": 14,
+                    "width": 32,
+                  },
+                  undefined,
+                ]
               }
               testID={undefined}
               tvParallaxProperties={undefined}
