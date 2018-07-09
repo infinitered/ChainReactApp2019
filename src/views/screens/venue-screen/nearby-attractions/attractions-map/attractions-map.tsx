@@ -1,6 +1,6 @@
 import * as React from "react"
 import Mapbox from "@mapbox/react-native-mapbox-gl"
-import { View, ViewStyle, TouchableWithoutFeedback } from "react-native"
+import { View, ViewStyle, TouchableWithoutFeedback, Dimensions } from "react-native"
 import { AttractionsMapCallout } from "../attractions-map-callout"
 import { color } from "../../../../../theme"
 import { unnest } from "ramda"
@@ -18,6 +18,7 @@ const MAPVIEW: ViewStyle = {
   width: "100%",
   height: 506,
   flex: 1,
+  maxHeight: Dimensions.get("window").height * 0.8,
 }
 
 const HIDDEN_MARKER: ViewStyle = { backgroundColor: color.transparent }
