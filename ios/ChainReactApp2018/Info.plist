@@ -22,14 +22,10 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>10</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-  <key>ITSAppUsesNonExemptEncryption</key>
-  <false/>
-  <key>NSPhotoLibraryUsageDescription</key>
-  <string>Access is needed for our VR experience</string>
-  <key>NSMicrophoneUsageDescription</key>
-  <string>Access is needed to calibrate video in our VR experience</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSExceptionDomains</key>
@@ -41,8 +37,14 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Need Camera access for AR feature</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string/>
+	<string></string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Access is needed to calibrate video in our VR experience</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Access is needed for our VR experience</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>GothamRnd-Bold.otf</string>
@@ -54,8 +56,6 @@
 		<string>GothamRnd-MedItal.otf</string>
 		<string>GothamRnd-Medium.otf</string>
 	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>Need Camera access for AR feature</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
