@@ -7,7 +7,9 @@ import {
   Animated,
   Easing,
   Dimensions,
+  Platform,
 } from "react-native"
+import { Text } from "../../shared/text"
 import { NavigationScreenProps } from "react-navigation"
 import { ViroARSceneNavigator } from "react-viro"
 import ARInitializationUI from "./arscenes/ARInitializationUI.js"
@@ -41,6 +43,24 @@ const arInitializationUIStyle: ViewStyle = {
   alignItems: "center",
 }
 
+const usePlaneInstructions: ViewStyle = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: 140,
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: "#292930B3",
+}
+
+const usePlanesButton: ViewStyle = {
+  position: "absolute",
+  height: 60,
+  width: 180,
+  bottom: 30,
+}
+
 const overlayImage: ViewStyle = {
   flex: 1,
   position: "absolute",
@@ -60,6 +80,8 @@ export class ARScreen extends React.Component<ARScreenProps, {}> {
       arInitialized: false,
       hasBadgeBeenFound: false,
       badgeOpacity: new Animated.Value(1),
+      instructionsOpacity: new Animated.Value(1),
+      usePlanes: Platform.OS == "android", // usePlanes if we're on Android
     }
 
     this.onARInitialized = this.onARInitialized.bind(this)
@@ -92,10 +114,16 @@ export class ARScreen extends React.Component<ARScreenProps, {}> {
         hasBadgeBeenFound: true,
       })
     })
+
+    Animated.timing(this.state.instructionsOpacity, {
+      toValue: 0,
+      duration: 1000,
+      easing: Easing.linear,
+    }).start()
   }
 
   getBadgeFrame() {
-    if (!this.state.hasBadgeBeenFound) {
+    if (!this.state.hasBadgeBeenFound && Platform.OS != "android") {
       return (
         <Animated.Image
           style={{ ...overlayImage, opacity: this.state.badgeOpacity }}
@@ -120,11 +148,22 @@ export class ARScreen extends React.Component<ARScreenProps, {}> {
     }
   }
 
+  getUsePlanesInstructions() {
+    if (this.state.usePlanes && !this.state.hasBadgeBeenFound) {
+      return (
+        <Animated.View style={{ ...usePlaneInstructions, opacity: this.state.instructionsOpacity }}>
+          <Text preset="body" tx="arScreen.usePlaneInstructions" style={{ fontSize: 20 }} />
+        </Animated.View>
+      )
+    }
+  }
+
   render() {
     return (
       <View style={{ flex: 1 }}>
         <ViroARSceneNavigator
           apiKey={"94B48744-8E99-4F49-BD71-845EAE94F5B4"}
+          viroAppProps={{ usePlanes: this.state.usePlanes }}
           initialScene={{
             scene: require("./arscenes/RecognizeBadgeScene"),
             passProps: {
@@ -135,6 +174,7 @@ export class ARScreen extends React.Component<ARScreenProps, {}> {
         />
 
         {this.getBadgeFrame()}
+        {this.getUsePlanesInstructions()}
 
         {this.getARInitializationUI()}
 

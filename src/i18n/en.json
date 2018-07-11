@@ -120,8 +120,13 @@
   },
   "arTab": {
     "title": "AR Badges",
+    "title-android": "AR Map",
+    "comment":
+      "the description has a lot of white space because the interface needs it to force the UI to stretch across the screen",
     "description":
       "Use your camera to view the exhibit hall and bring your badge to life!                                           ",
+    "description-android":
+      "Use your camera to view the exhibit hall in augmented reality!                                                   ",
     "tipsTitle": "TIPS",
     "tips": [
       "Align badge within the frame",
@@ -129,9 +134,17 @@
       "Avoid reflections and glare",
       "Have fun!"
     ],
+    "tips-android": [
+      "Move device around to initialize",
+      "Once plane is detected, tap to place map",
+      "Have fun!"
+    ],
     "poweredBy": "Powered by",
     "viroUrl": "www.viromedia.com",
     "enterARButton": "ENTER AR",
     "notSupported": "AR Badges is not supported\n on this device ☹"
+  },
+  "arScreen": {
+    "usePlaneInstructions": "Look for surfaces and tap to place map"
   }
 }
