@@ -38,7 +38,7 @@ public class MainApplication extends Application implements ReactApplication {
         new SplashScreenReactPackage(),
         new ReactViroPackage(ReactViroPackage.ViroPlatform.GVR),
         new LottiePackage(),
-        new NativeCrashesPackage(MainApplication.this, getResources().getString(R.string.appCenterCrashes_whenToSendCrashes)),
+        new AppCenterReactNativeCrashesPackage(MainApplication.this, getResources().getString(R.string.appCenterCrashes_whenToSendCrashes)),
         new AppCenterReactNativeAnalyticsPackage(MainApplication.this, getResources().getString(R.string.appCenterAnalytics_whenToEnableAnalytics)),
         new AppCenterReactNativePackage(MainApplication.this)
       );
