@@ -32,13 +32,22 @@ const BADGE_NOT_FOUND = -1
 const BADGE_TYPES = [
   "attendee_1",
   "attendee_2",
+  "attendee_3",
+  "attendee_4",
+  "attendee_5",
   "attendee_6",
+  "attendee_7",
+  "attendee_8",
+  "attendee_9",
   "speaker_1",
   "speaker_2",
+  "speaker_3",
+  "speaker_4",
+  "speaker_5",
   "speaker_6",
+  "speaker_7",
   "staff_1",
-  "staff_2",
-  "staff_6",
+  "staff_7",
 ]
 
 export default class RecognizeBadgeScene extends Component {
@@ -388,6 +397,21 @@ ViroARTrackingTargets.createTargets({
     orientation: "Up",
     physicalWidth: 0.09525, // 3.75 inches wide
   },
+  attendee_7: {
+    source: require("./res/badges/attendee_7.png"),
+    orientation: "Up",
+    physicalWidth: 0.09525, // 3.75 inches wide
+  },
+  attendee_8: {
+    source: require("./res/badges/attendee_8.png"),
+    orientation: "Up",
+    physicalWidth: 0.09525, // 3.75 inches wide
+  },
+  attendee_9: {
+    source: require("./res/badges/attendee_8.png"),
+    orientation: "Up",
+    physicalWidth: 0.09525, // 3.75 inches wide
+  },
   speaker_1: {
     source: require("./res/badges/speaker_1.png"),
     orientation: "Up",
@@ -418,6 +442,11 @@ ViroARTrackingTargets.createTargets({
     orientation: "Up",
     physicalWidth: 0.09525, // 3.75 inches wide
   },
+  speaker_7: {
+    source: require("./res/badges/speaker_6.png"),
+    orientation: "Up",
+    physicalWidth: 0.09525, // 3.75 inches wide
+  },
   staff_1: {
     source: require("./res/badges/staff_1.png"),
     orientation: "Up",
@@ -433,17 +462,12 @@ ViroARTrackingTargets.createTargets({
     orientation: "Up",
     physicalWidth: 0.09525, // 3.75 inches wide
   },
-  staff_4: {
-    source: require("./res/badges/staff_4.png"),
-    orientation: "Up",
-    physicalWidth: 0.09525, // 3.75 inches wide
-  },
-  staff_5: {
-    source: require("./res/badges/staff_5.png"),
-    orientation: "Up",
-    physicalWidth: 0.09525, // 3.75 inches wide
-  },
   staff_6: {
+    source: require("./res/badges/staff_6.png"),
+    orientation: "Up",
+    physicalWidth: 0.09525, // 3.75 inches wide
+  },
+  staff_7: {
     source: require("./res/badges/staff_6.png"),
     orientation: "Up",
     physicalWidth: 0.09525, // 3.75 inches wide
