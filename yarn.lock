@@ -8767,7 +8767,7 @@ react-treebeard@^2.1.0:
 
 react-viro@./react-viro-2.7.3.tgz:
   version "2.7.3"
-  resolved "./react-viro-2.7.3.tgz#6d78b3d15f8b949c3fcdf4c9e9f1a0faa2bd15d3"
+  resolved "./react-viro-2.7.3.tgz#c129068edc6a7349c1ea8e5e2c0b704dec03ee8e"
   dependencies:
     prop-types "^15.5.10"
 
