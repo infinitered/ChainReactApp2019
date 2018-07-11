@@ -8,6 +8,7 @@ import {
   ActivityIndicator,
   Image,
   Linking,
+  Platform,
 } from "react-native"
 import { Text as SharedText } from "../../shared/text"
 import { presets } from "../../shared/text/text.presets"
@@ -111,6 +112,9 @@ export class ARTab extends React.Component {
   getTips() {
     let toReturn = []
     let tips = translate("arTab.tips")
+    if (Platform.OS == "android") {
+      tips = translate("arTab.tips-android")
+    }
     for (let tipIndex in tips) {
       toReturn.push(
         <View style={TIPCONTAINER} key={"tip" + tipIndex}>
@@ -162,11 +166,14 @@ export class ARTab extends React.Component {
   }
 
   render() {
+    let title = "arTab.title" + (Platform.OS == "android" ? "-android" : "")
+    let description = "arTab.description" + (Platform.OS == "android" ? "-android" : "")
+
     return (
       <Screen preset="fixed" backgroundColor={palette.portGore}>
         <Screen preset="scrollStack" backgroundColor={palette.portGore} style={{ width: "100%" }}>
-          <SharedText preset="title" tx="arTab.title" style={TITLE} />
-          <SharedText preset="body" tx="arTab.description" style={DESCRIPTION} />
+          <SharedText preset="title" tx={title} style={TITLE} />
+          <SharedText preset="body" tx={description} style={DESCRIPTION} />
           <SharedText preset="body" tx="arTab.tipsTitle" style={TITLE} />
           <View style={DIVIDER} />
 

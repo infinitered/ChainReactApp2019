@@ -27,6 +27,8 @@ import {
   ViroAnimations,
 } from "react-viro"
 
+import ViroARPlaneSelector from "./ViroARPlaneSelector"
+
 const BADGE_NOT_FOUND = -1
 
 const BADGE_TYPES = [
@@ -67,6 +69,8 @@ export default class RecognizeBadgeScene extends Component {
 
     // bind 'this' to functions
     this._switchFloors = this._switchFloors.bind(this)
+    this._getPlaneSelector = this._getPlaneSelector.bind(this)
+    this._onPlaneClick = this._onPlaneClick.bind(this)
     this._getMarkers = this._getMarkers.bind(this)
     this._getARImageMarkerProps = this._getARImageMarkerProps.bind(this)
     this._getOnMarkerFoundCallback = this._getOnMarkerFoundCallback.bind(this)
@@ -88,10 +92,18 @@ export default class RecognizeBadgeScene extends Component {
 
   render() {
     return (
-      <ViroARScene onTrackingUpdated={this._onInitialized} onClick={this._switchFloors}>
+      <ViroARScene
+        ref={ref => {
+          this.arScene = ref
+        }}
+        onTrackingUpdated={this._onInitialized}
+        onClick={this._switchFloors}
+      >
         <ViroAmbientLight color={"#ffffff"} />
 
         {this._getMarkers()}
+
+        {this._getPlaneSelector()}
 
         {this._getExperience()}
       </ViroARScene>
@@ -104,12 +116,53 @@ export default class RecognizeBadgeScene extends Component {
     }
   }
 
+  _getPlaneSelector() {
+    if (!this.props.arSceneNavigator.viroAppProps.usePlanes) {
+      return
+    }
+
+    return (
+      <ViroARPlaneSelector onPlaneSelected={this._onPlaneSelected} onClick={this._onPlaneClick} />
+    )
+  }
+
+  _onPlaneClick(position, source) {
+    this.arScene.performARHitTestWithPosition(position).then(results => {
+      let tempAnchor = {
+        position: position,
+        rotation: [0, 0, 0],
+      }
+
+      if (results.length > 0) {
+        for (var i = 0; i < results.length; i++) {
+          let result = results[i]
+          if (result.type == "ExistingPlaneUsingExtent") {
+            tempAnchor = result.transform
+            break
+          }
+        }
+        // if there was no planes, then use the first result.
+        tempAnchor = results[0].transform
+      }
+
+      // finally, set the state, and notify the parent view that the "badge"/surface was found
+      this.setState({
+        foundAnchor: tempAnchor,
+        runAnimation: true,
+      })
+      this.props.onBadgeFound()
+    })
+  }
+
   /*
    This function either returns a ViroARImageMarkers for each badge image if a badge
    hasn't been found yet or if a badge type has already been found, it returns the
    marker for that badge type w/ the experience.
    */
   _getMarkers() {
+    if (this.props.arSceneNavigator.viroAppProps.usePlanes) {
+      return
+    }
     console.log("[Viro] getting markers, current found badge: " + this.state.foundBadgeType)
     if (this.state.foundBadgeType == BADGE_NOT_FOUND) {
       let markers = []
@@ -206,9 +259,17 @@ export default class RecognizeBadgeScene extends Component {
       }
     }
 
+    let scaleFactor = 1
+    if (this.props.arSceneNavigator.viroAppProps.usePlanes) {
+      scaleFactor = 2
+    }
+
     return (
       <ViroNode position={position} rotation={rotation} scale={scale}>
-        <ViroNode scale={[0.011, 0.011, 0.011]} position={[0, 0, 0.005]}>
+        <ViroNode
+          scale={[0.011 * scaleFactor, 0.011 * scaleFactor, 0.011 * scaleFactor]}
+          position={[0, 0, 0.005]}
+        >
           <ViroLightingEnvironment source={require("./res/floral_tent_1k.hdr")} />
 
           <Viro3DObject
