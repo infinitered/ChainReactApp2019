@@ -22,6 +22,9 @@
     "@mapbox/react-native-mapbox-gl": "6.1.1",
     "apisauce": "^0.14.3",
     "apollo-boost": "^0.1.9",
+    "appcenter": "^1.6.0",
+    "appcenter-analytics": "^1.6.0",
+    "appcenter-crashes": "^1.6.0",
     "date-fns": "^1.29.0",
     "graphql": "^0.13.2",
     "lottie-react-native": "2.3.2",
@@ -72,7 +75,12 @@
     "typescript": "2.7.2"
   },
   "jest": {
-    "preset": "jest-preset-ignite"
+    "preset": "jest-preset-ignite",
+    "setupFiles": [
+      "./node_modules/appcenter/test/AppCenterMock.js",
+      "./node_modules/appcenter-analytics/test/AppCenterAnalyticsMock.js",
+      "./node_modules/appcenter-crashes/test/AppCenterCrashesMock.js"
+    ]
   },
   "rnpm": {
     "assets": [
