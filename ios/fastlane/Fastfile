@@ -84,7 +84,7 @@ platform :ios do
     # match(type: "appstore") # more information: https://codesigning.guide
     gym(
       scheme: "ChainReactApp2018",
-      workspace: "./ChainReactApp2018.xcworkspace"
+      # workspace: "./ChainReactApp2018.xcworkspace"
     ) # Build your app - more options available
 
     # Ship it!
