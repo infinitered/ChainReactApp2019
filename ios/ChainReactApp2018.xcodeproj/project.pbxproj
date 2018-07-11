@@ -54,6 +54,13 @@
 		8A34CE2A20E5A3E900470345 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A34CC6820E59D8800470345 /* Lottie.framework */; };
 		8A34CE2B20E5A3E900470345 /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A34CC6820E59D8800470345 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8F3D58FA741B4D22A7BEDD39 /* GothamRnd-BookItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2023F53DD46B4B8E99CCB9FB /* GothamRnd-BookItal.otf */; };
+		92B2926C20F58779007AF724 /* AppCenterReactNativeShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B2926B20F58779007AF724 /* AppCenterReactNativeShared.framework */; };
+		92B2926E20F5886B007AF724 /* AppCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B2926D20F5886B007AF724 /* AppCenter.framework */; };
+		92B2927020F58878007AF724 /* AppCenterAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B2926F20F58878007AF724 /* AppCenterAnalytics.framework */; };
+		92B2927220F5887F007AF724 /* AppCenterCrashes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B2927120F5887F007AF724 /* AppCenterCrashes.framework */; };
+		92B2928520F58903007AF724 /* libAppCenterReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B2927820F588BD007AF724 /* libAppCenterReactNative.a */; };
+		92B2928620F5890D007AF724 /* libAppCenterReactNativeAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B2927E20F588D3007AF724 /* libAppCenterReactNativeAnalytics.a */; };
+		92B2928720F5890D007AF724 /* libAppCenterReactNativeCrashes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B2928420F588DC007AF724 /* libAppCenterReactNativeCrashes.a */; };
 		A3580AF649A04E86B2D9164A /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7BA294DFD641EAAC8BB216 /* Lottie.framework */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		C02628ED285C4E8D86633100 /* GothamRnd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9FE22C32232B4D598E6D601B /* GothamRnd-Book.otf */; };
@@ -413,6 +420,27 @@
 			remoteGlobalIDString = 62CA59B71E3C173B002D7188;
 			remoteInfo = Lottie_iOS;
 		};
+		92B2927720F588BD007AF724 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92B2927320F588BC007AF724 /* AppCenterReactNative.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C35AEC211EF91F9300931F0C;
+			remoteInfo = AppCenterReactNative;
+		};
+		92B2927D20F588D3007AF724 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92B2927920F588D3007AF724 /* AppCenterReactNativeAnalytics.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 548694001D8384E600E6685A;
+			remoteInfo = AppCenterReactNativeAnalytics;
+		};
+		92B2928320F588DC007AF724 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92B2927F20F588DB007AF724 /* AppCenterReactNativeCrashes.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5419C2701D824AA700DDF3A1;
+			remoteInfo = AppCenterReactNativeCrashes;
+		};
 		ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
@@ -481,6 +509,13 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8A34CBC020E5987B00470345 /* ViroKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ViroKit.framework; path = "../node_modules/react-viro/ios/dist/ViroRenderer/ViroKit.framework"; sourceTree = "<group>"; };
 		8A34CBEC20E5987B00470345 /* libViroReact.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libViroReact.a; path = "../node_modules/react-viro/ios/dist/lib/libViroReact.a"; sourceTree = "<group>"; };
+		92B2926B20F58779007AF724 /* AppCenterReactNativeShared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppCenterReactNativeShared.framework; sourceTree = "<group>"; };
+		92B2926D20F5886B007AF724 /* AppCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppCenter.framework; sourceTree = "<group>"; };
+		92B2926F20F58878007AF724 /* AppCenterAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppCenterAnalytics.framework; sourceTree = "<group>"; };
+		92B2927120F5887F007AF724 /* AppCenterCrashes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppCenterCrashes.framework; sourceTree = "<group>"; };
+		92B2927320F588BC007AF724 /* AppCenterReactNative.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNative.xcodeproj; path = ../node_modules/appcenter/ios/AppCenterReactNative.xcodeproj; sourceTree = "<group>"; };
+		92B2927920F588D3007AF724 /* AppCenterReactNativeAnalytics.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNativeAnalytics.xcodeproj; path = "../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics.xcodeproj"; sourceTree = "<group>"; };
+		92B2927F20F588DB007AF724 /* AppCenterReactNativeCrashes.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNativeCrashes.xcodeproj; path = "../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes.xcodeproj"; sourceTree = "<group>"; };
 		9F92DA4225964F149C4DCCDF /* GothamRnd-LightItal.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-LightItal.otf"; path = "../src/theme/fonts/GothamRnd-LightItal.otf"; sourceTree = "<group>"; };
 		9FE22C32232B4D598E6D601B /* GothamRnd-Book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-Book.otf"; path = "../src/theme/fonts/GothamRnd-Book.otf"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
@@ -507,6 +542,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92B2926E20F5886B007AF724 /* AppCenter.framework in Frameworks */,
+				92B2926C20F58779007AF724 /* AppCenterReactNativeShared.framework in Frameworks */,
+				92B2927220F5887F007AF724 /* AppCenterCrashes.framework in Frameworks */,
+				92B2927020F58878007AF724 /* AppCenterAnalytics.framework in Frameworks */,
+				92B2928620F5890D007AF724 /* libAppCenterReactNativeAnalytics.a in Frameworks */,
+				92B2928720F5890D007AF724 /* libAppCenterReactNativeCrashes.a in Frameworks */,
+				92B2928520F58903007AF724 /* libAppCenterReactNative.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -767,6 +809,9 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				92B2927F20F588DB007AF724 /* AppCenterReactNativeCrashes.xcodeproj */,
+				92B2927920F588D3007AF724 /* AppCenterReactNativeAnalytics.xcodeproj */,
+				92B2927320F588BC007AF724 /* AppCenterReactNative.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -801,6 +846,10 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				92B2927120F5887F007AF724 /* AppCenterCrashes.framework */,
+				92B2926F20F58878007AF724 /* AppCenterAnalytics.framework */,
+				92B2926D20F5886B007AF724 /* AppCenter.framework */,
+				92B2926B20F58779007AF724 /* AppCenterReactNativeShared.framework */,
 				381C6FAA20E54314008B11AA /* Mapbox.framework */,
 				13B07FAE1A68108700A75B9A /* ChainReactApp2018 */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -842,6 +891,30 @@
 			isa = PBXGroup;
 			children = (
 				8A34CCB320E59DA600470345 /* libLottieReactNative.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92B2927420F588BC007AF724 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92B2927820F588BD007AF724 /* libAppCenterReactNative.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92B2927A20F588D3007AF724 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92B2927E20F588D3007AF724 /* libAppCenterReactNativeAnalytics.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92B2928020F588DB007AF724 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92B2928420F588DC007AF724 /* libAppCenterReactNativeCrashes.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -990,6 +1063,18 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 92B2927420F588BC007AF724 /* Products */;
+					ProjectRef = 92B2927320F588BC007AF724 /* AppCenterReactNative.xcodeproj */;
+				},
+				{
+					ProductGroup = 92B2927A20F588D3007AF724 /* Products */;
+					ProjectRef = 92B2927920F588D3007AF724 /* AppCenterReactNativeAnalytics.xcodeproj */;
+				},
+				{
+					ProductGroup = 92B2928020F588DB007AF724 /* Products */;
+					ProjectRef = 92B2927F20F588DB007AF724 /* AppCenterReactNativeCrashes.xcodeproj */;
+				},
 				{
 					ProductGroup = 8A34CC6120E59D8800470345 /* Products */;
 					ProjectRef = 7A50F9986E6042E89B77F295 /* Lottie.xcodeproj */;
@@ -1403,6 +1488,27 @@
 			remoteRef = 8A34CCB220E59DA600470345 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		92B2927820F588BD007AF724 /* libAppCenterReactNative.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAppCenterReactNative.a;
+			remoteRef = 92B2927720F588BD007AF724 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		92B2927E20F588D3007AF724 /* libAppCenterReactNativeAnalytics.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAppCenterReactNativeAnalytics.a;
+			remoteRef = 92B2927D20F588D3007AF724 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		92B2928420F588DC007AF724 /* libAppCenterReactNativeCrashes.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAppCenterReactNativeCrashes.a;
+			remoteRef = 92B2928320F588DC007AF724 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1664,6 +1770,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../node_modules/@mapbox/react-native-mapbox-gl/ios",
 					"$(PROJECT_DIR)/../node_modules/react-viro/ios/dist/ViroRenderer",
+					"$(PROJECT_DIR)",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1673,6 +1780,9 @@
 					"$(SRCROOT)/../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL/**",
 					"$(SRCROOT)/../node_modules/lottie-ios/lottie-ios/Classes/**",
 					"$(SRCROOT)/../node_modules/lottie-react-native/src/ios/LottieReactNative",
+					"$(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative",
+					"$(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics",
+					"$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes",
 				);
 				INFOPLIST_FILE = ChainReactApp2018/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1707,6 +1817,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../node_modules/@mapbox/react-native-mapbox-gl/ios",
 					"$(PROJECT_DIR)/../node_modules/react-viro/ios/dist/ViroRenderer",
+					"$(PROJECT_DIR)",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1716,6 +1827,9 @@
 					"$(SRCROOT)/../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL/**",
 					"$(SRCROOT)/../node_modules/lottie-ios/lottie-ios/Classes/**",
 					"$(SRCROOT)/../node_modules/lottie-react-native/src/ios/LottieReactNative",
+					"$(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative",
+					"$(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics",
+					"$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes",
 				);
 				INFOPLIST_FILE = ChainReactApp2018/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

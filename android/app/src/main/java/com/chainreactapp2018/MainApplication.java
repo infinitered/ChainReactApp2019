@@ -13,6 +13,9 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 import com.viromedia.bridge.ReactViroPackage;
+import com.microsoft.appcenter.reactnative.crashes.AppCenterReactNativeCrashesPackage;
+import com.microsoft.appcenter.reactnative.analytics.AppCenterReactNativeAnalyticsPackage;
+import com.microsoft.appcenter.reactnative.appcenter.AppCenterReactNativePackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -34,7 +37,10 @@ public class MainApplication extends Application implements ReactApplication {
         new RCTMGLPackage(),
         new SplashScreenReactPackage(),
         new ReactViroPackage(ReactViroPackage.ViroPlatform.GVR),
-        new LottiePackage()
+        new LottiePackage(),
+        new NativeCrashesPackage(MainApplication.this, getResources().getString(R.string.appCenterCrashes_whenToSendCrashes)),
+        new AppCenterReactNativeAnalyticsPackage(MainApplication.this, getResources().getString(R.string.appCenterAnalytics_whenToEnableAnalytics)),
+        new AppCenterReactNativePackage(MainApplication.this)
       );
     }
 
