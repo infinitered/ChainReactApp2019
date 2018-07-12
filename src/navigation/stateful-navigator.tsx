@@ -31,6 +31,15 @@ export class StatefulNavigator extends React.Component<StatefulNavigatorProps, {
       navigation.state.index = 1 // MainNavigator
       navigation.state.routes[1].index = 0 // Tabs
       navigation.state.routes[1].routes[0].index = 3 // AR Tab
+
+      // loop through the routes, find the route w/ name "arscreen" one
+      // and splice it out of the array
+      for (var i = 0; i < navigation.state.routes[1].routes.length; i++) {
+        if (navigation.state.routes[1].routes[i].routeName == "arscreen") {
+          navigation.state.routes[1].routes.splice(i, 1)
+          break
+        }
+      }
     }
     firstRun = false
 
