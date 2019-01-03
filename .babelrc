@@ -10,6 +10,12 @@
       {
         "include": ["NODE_ENV", "API"]
       }
-    ]
+    ],
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
   ]
 }

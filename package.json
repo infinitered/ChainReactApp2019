@@ -13,10 +13,11 @@
     "format:ts": "prettier --write {.,**}/*.{ts,tsx} && tslint --fix -p .",
     "lint": "npm-run-all lint:*",
     "lint:ts": "tslint -p .",
-    "postinstall": "solidarity",
+    "postinstall": "solidarity && yarn run fixReactViro",
     "precommit": "lint-staged",
     "prepare": "patch-package",
-    "storybook": "storybook start -p 9001 --skip-packager"
+    "storybook": "storybook start -p 9001 --skip-packager",
+    "fixReactViro": "find ./node_modules/react-viro/components -type f -exec sed -i '' 's#^import normalizeColor from \"react-native/Libraries/StyleSheet/normalizeColor\"#// import normalizeColor from \"react-native/Libraries/StyleSheet/normalizeColor\"#g' {} \\;"
   },
   "dependencies": {
     "@mapbox/react-native-mapbox-gl": "6.1.1",
@@ -27,7 +28,7 @@
     "appcenter-crashes": "^1.6.0",
     "date-fns": "^1.29.0",
     "graphql": "^0.13.2",
-    "lottie-react-native": "2.3.2",
+    "lottie-react-native": "2.5.9",
     "mobx": "^4.1.0",
     "mobx-react": "^5.0.0",
     "mobx-state-tree": "^2.0.3",
@@ -45,6 +46,8 @@
     "validate.js": "^0.12.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/plugin-proposal-decorators": "^7.2.3",
     "@storybook/addon-storyshots": "^3.3.15",
     "@storybook/react-native": "^3.3.15",
     "@types/jest": "^22.2.0",
@@ -66,7 +69,7 @@
     "postinstall-prepare": "^1.0.1",
     "prettier": "^1.11.1",
     "react-dom": "^16.2.0",
-    "react-native-typescript-transformer": "^1.2.3",
+    "react-native-typescript-transformer": "^1.2.10",
     "react-powerplug": "^0.1.5",
     "react-test-renderer": "^16.3.0-alpha.1",
     "solidarity": "^2.1.0",

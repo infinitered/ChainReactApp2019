@@ -129,6 +129,7 @@
 		599A6B83EE401AD0014E097C07E2349C /* RCTModalHostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3693EC4EEBACF35A49721FB54A6D072A /* RCTModalHostView.m */; };
 		5AC4992CF3BF1700ACD71A1F0A15C4BA /* RCTProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = E71A35C5F6F5C007BE4EE0619D55CB82 /* RCTProfile.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5ACFFF873763D0AB97883738BF11B735 /* RCTWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BB8D74E61A03C61100028B0647050 /* RCTWebView.m */; };
+		5B0821E8A79084229D05259B0100BE3E /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FD61D66892E7A9EDCA29E2A9D9F263 /* JavaScriptCore.framework */; };
 		5B206B93118E8253467520F0535889CA /* RCTActivityIndicatorViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D2AD4395AFDA3CB648CC4457A50A106B /* RCTActivityIndicatorViewManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5B53E8866953D231AFA699DE2BC3EC34 /* RCTAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = F169CBD5D2DDCFEE2C6D194C0FBDB50A /* RCTAssert.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5BD2D6C69BFBAF500CA80CE9031045B1 /* RCTI18nUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = AA8607E4C9C1E048788F0570C8401702 /* RCTI18nUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -263,7 +264,6 @@
 		DB2E8B8B94A1AE07F8D7B096032DC92C /* RCTRedBoxExtraDataViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7128BBF7E94E8ACA0ACED2F23AA22BC1 /* RCTRedBoxExtraDataViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DBCE5D82C2C2B64A071D008F2DEC52EC /* RCTAccessibilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D38BA631D40E032881B41DAC6690BFE9 /* RCTAccessibilityManager.m */; };
 		DBF2B2252FC49E792246AF769192E654 /* RCTSurfaceView.h in Headers */ = {isa = PBXBuildFile; fileRef = CAFA6CB860A28D1F8A07BAC7D8DF7724 /* RCTSurfaceView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DC40415D64168E8D4669152D21305391 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B315118F59CCCB14229A53A14911591 /* JavaScriptCore.framework */; };
 		DE5D83FD844DC121E68CA65E56D79E7F /* RCTUIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 26682C63CB6B5FFA87650D2824CB2C4B /* RCTUIManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DE8E651B74B7CEF04CC0431E19AD0F18 /* RCTSourceCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F7B3BD2FF2C3DC22C652C623CA0EABF /* RCTSourceCode.m */; };
 		DEF89BE337B94396F6BB83065765C7CF /* YGEnums.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51708ABA51A4B9F5A7F1D7331BF93C11 /* YGEnums.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC -fno-objc-arc"; }; };
@@ -404,7 +404,6 @@
 		38DFC9BB295DFDD47D41CC137E9ADD05 /* RCTPerfMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTPerfMonitor.m; sourceTree = "<group>"; };
 		38E2904BAC81B472054306DB7C65B694 /* RCTConvert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTConvert.h; sourceTree = "<group>"; };
 		3B00949F53976E46BA95486C6A2CA88B /* RCTVersion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTVersion.m; sourceTree = "<group>"; };
-		3B315118F59CCCB14229A53A14911591 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		3B3E3506F2D0880E68B8DD312EFCC847 /* RCTDevSettings.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = RCTDevSettings.mm; sourceTree = "<group>"; };
 		3B4D4FBF0C0B19A1917E13BA38D348A2 /* RCTPickerManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTPickerManager.m; sourceTree = "<group>"; };
 		3DC45AB8E8898797B22D058315E15CA5 /* RCTFPSGraph.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTFPSGraph.m; sourceTree = "<group>"; };
@@ -565,6 +564,7 @@
 		C597837BC49DA65DC66E310722CB2547 /* RCTBridgeModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTBridgeModule.h; sourceTree = "<group>"; };
 		C66E0C1931EB3C020903FB4A011559BB /* RCTScrollableProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTScrollableProtocol.h; sourceTree = "<group>"; };
 		C6B0D8203235B30067DF0C9342483EA9 /* RCTModalHostViewManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTModalHostViewManager.m; sourceTree = "<group>"; };
+		C6FD61D66892E7A9EDCA29E2A9D9F263 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		C701CB025E80717B5B635D34D927DD39 /* Pods-ChainReactApp2018.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChainReactApp2018.release.xcconfig"; sourceTree = "<group>"; };
 		C809398A02BF0CD8C242691BAD9FE65F /* RCTNavigatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCTNavigatorManager.h; sourceTree = "<group>"; };
 		C80C7A4A649A03C415D16BD2B3066E49 /* RCTSwitchManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCTSwitchManager.m; sourceTree = "<group>"; };
@@ -651,7 +651,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC40415D64168E8D4669152D21305391 /* JavaScriptCore.framework in Frameworks */,
+				5B0821E8A79084229D05259B0100BE3E /* JavaScriptCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,14 +854,6 @@
 			path = SafeAreaView;
 			sourceTree = "<group>";
 		};
-		574421C660AD2108A93C458EB34C133C /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3B315118F59CCCB14229A53A14911591 /* JavaScriptCore.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		68CF6428F12ED4D2C75FC0FAD6DF7F28 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -929,6 +921,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		939CE36816C3AF336807ACA972BFEB3A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C6FD61D66892E7A9EDCA29E2A9D9F263 /* JavaScriptCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		99AB712962EAB4FEAC77059BF40C33F1 /* React */ = {
 			isa = PBXGroup;
 			children = (
@@ -981,7 +981,7 @@
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				574421C660AD2108A93C458EB34C133C /* iOS */,
+				939CE36816C3AF336807ACA972BFEB3A /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1783,31 +1783,7 @@
 			};
 			name = Debug;
 		};
-		B182EB3D45C0D348458E5F5916F9907F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D49672F9DA389D9C9B8148B0C3C6B71C /* yoga.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/yoga/yoga-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = yoga;
-				PRODUCT_NAME = yoga;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		C92782E717C52E3633C9A5F211E7987A /* Debug */ = {
+		8DDFA5FA8D4131BFD96E5E26F3672644 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1867,11 +1843,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		E58926CF5844D11EE7DF6D651D434100 /* Debug */ = {
+		B182EB3D45C0D348458E5F5916F9907F /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D49672F9DA389D9C9B8148B0C3C6B71C /* yoga.xcconfig */;
 			buildSettings = {
@@ -1891,33 +1869,11 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		E9F44F334DD624A5D4E1C4CEE3517C43 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C701CB025E80717B5B635D34D927DD39 /* Pods-ChainReactApp2018.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		EA8C7AF90938697605468604B2A17B9F /* Release */ = {
+		D5F759C82752B2EB010DB3CD3D69707C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1972,7 +1928,56 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		E58926CF5844D11EE7DF6D651D434100 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D49672F9DA389D9C9B8148B0C3C6B71C /* yoga.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/yoga/yoga-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = yoga;
+				PRODUCT_NAME = yoga;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E9F44F334DD624A5D4E1C4CEE3517C43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C701CB025E80717B5B635D34D927DD39 /* Pods-ChainReactApp2018.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -1982,8 +1987,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C92782E717C52E3633C9A5F211E7987A /* Debug */,
-				EA8C7AF90938697605468604B2A17B9F /* Release */,
+				8DDFA5FA8D4131BFD96E5E26F3672644 /* Debug */,
+				D5F759C82752B2EB010DB3CD3D69707C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
