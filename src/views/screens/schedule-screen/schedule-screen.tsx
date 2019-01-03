@@ -9,6 +9,8 @@ import { isWednesday, isThursday, isFriday } from "date-fns"
 import { ScheduleNav } from "./schedule-nav"
 import { ScheduleCell } from "./schedule-cell"
 import { inject, observer } from "mobx-react"
+import { ScheduleCellPresetNames } from "./schedule-cell/schedule-cell.presets"
+import { Talk } from "../../../models/talk"
 
 const ROOT: ViewStyle = {
   flex: 1,
@@ -74,6 +76,24 @@ export class ScheduleScreen extends React.Component<
     )
   }
 
+  renderTalk = (talk: Talk, index: number) => {
+    const talkType = talk.talkType.toLowerCase()
+    const cellPreset: ScheduleCellPresetNames =
+      talkType === "break" || talkType === "afterparty" ? talkType : "default"
+
+    return (
+      <ScheduleCell
+        index={index}
+        talk={talk}
+        preset={cellPreset}
+        onPress={(talk: Talk) => {
+          this.props.navigation.navigate("talkDetails", { talk })
+        }}
+        key={index}
+      />
+    )
+  }
+
   renderContent = () => {
     const { talkStore: { talks } } = this.props
     const { selected } = this.state
@@ -92,18 +112,7 @@ export class ScheduleScreen extends React.Component<
           style={DATE}
           preset="label"
         />
-        {selectedTalks &&
-          selectedTalks.map((talk, i) => (
-            <ScheduleCell
-              index={i}
-              talk={talk}
-              preset={talk.talkType.toLowerCase()}
-              onPress={talk => {
-                this.props.navigation.navigate("talkDetails", { talk })
-              }}
-              key={i}
-            />
-          ))}
+        {selectedTalks && selectedTalks.map(this.renderTalk)}
       </View>
     )
   }

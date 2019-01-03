@@ -17,7 +17,7 @@ export function Button(props: ButtonProps) {
     text,
     style: styleOverride,
     textStyle: textStyleOverride,
-    ...rest,
+    ...rest
   } = props
 
   // assemble the style

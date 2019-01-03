@@ -32,6 +32,7 @@ if (__DEV__) {
     log: noop,
     display: noop,
     error: noop,
+    logImportant: noop,
   }
 }
 

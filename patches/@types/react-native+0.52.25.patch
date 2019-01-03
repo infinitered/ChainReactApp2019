@@ -1,0 +1,11 @@
+patch-package
+--- a/node_modules/@types/react-native/index.d.ts
++++ b/node_modules/@types/react-native/index.d.ts
+@@ -8742,6 +8742,7 @@ declare global {
+      */
+     interface Navigator {
+         readonly product: string;
++        // @ts-ignore
+         readonly geolocation: Geolocation;
+     }
+ 

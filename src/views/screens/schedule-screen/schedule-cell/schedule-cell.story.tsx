@@ -48,24 +48,25 @@ const afterparty: any = {
   talkType: "AFTERPARTY",
 }
 
-storiesOf("ScheduleCell")
-  .addDecorator(fn => <StoryScreen>{fn()}</StoryScreen>)
-  .add("Presets", () => (
-    <Story>
-      <UseCase text="ScheduleCell" usage="odd" noBackground noPad>
-        <ScheduleCell index={0} talk={talk} />
-      </UseCase>
-      <UseCase text="ScheduleCell" usage="even" noBackground noPad>
-        <ScheduleCell index={1} talk={talk} />
-      </UseCase>
-      <UseCase text="ScheduleCell" usage="break" noBackground noPad>
-        <ScheduleCell index={0} talk={breakTalk} preset="break" />
-      </UseCase>
-      <UseCase text="ScheduleCell" usage="workshop" noBackground noPad>
-        <ScheduleCell index={0} talk={workshop} />
-      </UseCase>
-      <UseCase text="ScheduleCell" usage="afterparty" noBackground noPad>
-        <ScheduleCell index={0} talk={afterparty} preset="afterparty" />
-      </UseCase>
-    </Story>
-  ))
+const noop = () =>
+  void storiesOf("ScheduleCell")
+    .addDecorator(fn => <StoryScreen>{fn()}</StoryScreen>)
+    .add("Presets", () => (
+      <Story>
+        <UseCase text="ScheduleCell" usage="odd" noBackground noPad>
+          <ScheduleCell index={0} talk={talk} onPress={noop} />
+        </UseCase>
+        <UseCase text="ScheduleCell" usage="even" noBackground noPad>
+          <ScheduleCell index={1} talk={talk} onPress={noop} />
+        </UseCase>
+        <UseCase text="ScheduleCell" usage="break" noBackground noPad>
+          <ScheduleCell index={0} talk={breakTalk} preset="break" onPress={noop} />
+        </UseCase>
+        <UseCase text="ScheduleCell" usage="workshop" noBackground noPad>
+          <ScheduleCell index={0} talk={workshop} onPress={noop} />
+        </UseCase>
+        <UseCase text="ScheduleCell" usage="afterparty" noBackground noPad>
+          <ScheduleCell index={0} talk={afterparty} preset="afterparty" onPress={noop} />
+        </UseCase>
+      </Story>
+    ))

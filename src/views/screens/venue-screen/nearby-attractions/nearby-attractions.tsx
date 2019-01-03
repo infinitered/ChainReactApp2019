@@ -1,6 +1,5 @@
 import * as React from "react"
-import { View, ViewStyle, TextStyle, Dimensions } from "react-native"
-import { Text } from "../../../shared/text"
+import { View, ViewStyle, Dimensions } from "react-native"
 import { spacing } from "../../../../theme/spacing"
 import { palette } from "../../../../theme/palette"
 import { AttractionsList } from "./attractions-list"

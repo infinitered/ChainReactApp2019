@@ -1,8 +1,7 @@
 import * as React from "react"
-import { View, Image, ViewStyle, ImageStyle, TextStyle } from "react-native"
+import { View, Image, ViewStyle, TextStyle } from "react-native"
 import { Text } from "../../../../shared/text"
 import { spacing } from "../../../../../theme/spacing"
-import { palette } from "../../../../../theme/palette"
 import { presets } from "./travel-option.presets"
 import { TravelOptionProps } from "./travel-option.props"
 

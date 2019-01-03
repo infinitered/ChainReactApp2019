@@ -1,25 +1,11 @@
 import * as React from "react"
-import {
-  View,
-  ViewStyle,
-  Image,
-  ImageStyle,
-  TextStyle,
-  Linking,
-  TouchableOpacity,
-} from "react-native"
+import { View, ViewStyle, TextStyle } from "react-native"
 import { Text } from "../../../shared/text"
 import { palette } from "../../../../theme/palette"
 import { spacing } from "../../../../theme/spacing"
 
 const ROOT: ViewStyle = {
   width: "100%",
-}
-
-const NAME: ViewStyle = {
-  position: "absolute",
-  bottom: spacing.large + spacing.medium,
-  right: 0,
 }
 
 const LABEL: TextStyle = {

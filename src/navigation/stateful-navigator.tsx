@@ -17,7 +17,7 @@ export class StatefulNavigator extends React.Component<StatefulNavigatorProps, {
     const { state, dispatch, addListener } = this.props.navigationStore
 
     // create a custom navigation implementation
-    const navigation = {
+    const navigation: any = {
       dispatch,
       state,
       addListener,

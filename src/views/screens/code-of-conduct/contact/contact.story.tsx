@@ -8,7 +8,7 @@ storiesOf("Code of Conduct - Contact")
   .add("Presets", () => (
     <Story>
       <UseCase text="Conduct" noBackground noPad>
-        <Contact email="fake@email.com" twitter="fake" />
+        <Contact email="fake@email.com" twitter="fake" phoneNumber="5555555555" />
       </UseCase>
     </Story>
   ))

@@ -1,7 +1,6 @@
 import * as React from "react"
-import { View, TouchableOpacity, ViewStyle, TextStyle } from "react-native"
+import { View, ViewStyle, TextStyle } from "react-native"
 import { Text } from "../../../../../shared/text"
-import { spacing } from "../../../../../../theme/spacing"
 import { palette } from "../../../../../../theme/palette"
 import { AttractionProps } from "./attraction.props"
 import { Rating } from "./rating"

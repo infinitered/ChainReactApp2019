@@ -9,6 +9,7 @@ import { format } from "date-fns"
 import { SpeakerImage } from "./speaker-image"
 import { TalkTitle } from "./talk-title"
 import { SpeakerBio } from "./speaker-bio"
+import { Talk } from "../../../models/talk"
 
 const ROOT: ViewStyle = {
   paddingVertical: spacing.medium,
@@ -81,7 +82,10 @@ const HIT_SLOP = {
   bottom: 30,
 }
 
-export interface TalkDetailsScreenProps extends NavigationScreenProps<{}> {}
+export interface NavigationStateParams {
+  talk: Talk
+}
+export interface TalkDetailsScreenProps extends NavigationScreenProps<NavigationStateParams> {}
 
 const backImage = () => (
   <View hitSlop={HIT_SLOP}>

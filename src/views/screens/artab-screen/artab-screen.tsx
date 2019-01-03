@@ -9,6 +9,7 @@ import {
   Image,
   Linking,
   Platform,
+  ImageStyle,
 } from "react-native"
 import { Text as SharedText } from "../../shared/text"
 import { presets } from "../../shared/text/text.presets"
@@ -16,14 +17,16 @@ import { NavigationScreenProps } from "react-navigation"
 import { Screen } from "../../shared/screen"
 import { palette } from "../../../theme/palette"
 import { spacing } from "../../../theme/spacing"
-import { ViroARSceneNavigator } from "react-viro"
 import { Button } from "../../shared/button"
 import { Footer } from "../../shared/footer"
 import { color } from "../../../theme/color"
 import { translate } from "../../../i18n"
 import { ViroUtils } from "react-viro"
 
-export interface ARScreenProps extends NavigationScreenProps<{}> {}
+export interface ARTabScreenProps extends NavigationScreenProps<{}> {}
+export interface ARTabScreenState {
+  isARSupported?: boolean
+}
 
 const TITLE: TextStyle = {
   marginTop: spacing.extraLarge,
@@ -65,7 +68,7 @@ const ATTR_CONTAINER: ViewStyle = {
   alignItems: "center",
 }
 
-const LOGO_IMAGE: ViewStyle = {
+const LOGO_IMAGE: ImageStyle = {
   resizeMode: "contain",
   width: 140,
   height: 82,
@@ -82,14 +85,14 @@ const OVERLAY: ViewStyle = {
   opacity: 0.75,
 }
 
-const OVERLAY_TEXT: ViewStyle = {
+const OVERLAY_TEXT: TextStyle = {
   marginLeft: spacing.large,
   marginRight: spacing.large,
   textAlign: "center",
   color: color.palette.white,
 }
 
-export class ARTab extends React.Component {
+export class ARTab extends React.Component<ARTabScreenProps, ARTabScreenState> {
   constructor(props) {
     super(props)
 
@@ -162,6 +165,8 @@ export class ARTab extends React.Component {
           <SharedText preset="body" tx="arTab.notSupported" style={OVERLAY_TEXT} />
         </View>
       )
+    } else {
+      return null
     }
   }
 

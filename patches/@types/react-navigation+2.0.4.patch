@@ -1,0 +1,31 @@
+patch-package
+--- a/node_modules/@types/react-navigation/index.d.ts
++++ b/node_modules/@types/react-navigation/index.d.ts
+@@ -33,7 +33,7 @@ import * as React from 'react';
+ import {
+   Animated,
+   TextStyle,
+-  ViewProps,
++  ViewProperties,
+   ViewStyle,
+   StyleProp,
+ } from 'react-native';
+@@ -1142,7 +1142,7 @@ export function withNavigationFocus<T = {}>(
+  * SafeAreaView Component
+  */
+ export type SafeAreaViewForceInsetValue = 'always' | 'never';
+-export interface SafeAreaViewProps extends ViewProps {
++export interface SafeAreaViewProps extends ViewProperties {
+   forceInset?: {
+     top?: SafeAreaViewForceInsetValue;
+     bottom?: SafeAreaViewForceInsetValue;
+--- a/node_modules/@types/react-navigation/node_modules/@types/react-native/index.d.ts
++++ b/node_modules/@types/react-navigation/node_modules/@types/react-native/index.d.ts
+@@ -8736,6 +8736,7 @@ declare global {
+      */
+     interface Navigator {
+         readonly product: string;
++        // @ts-ignore
+         readonly geolocation: Geolocation;
+     }
+ 

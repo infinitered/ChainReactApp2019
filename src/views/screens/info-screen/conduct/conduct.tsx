@@ -16,20 +16,6 @@ const BODY: TextStyle = {
   marginTop: spacing.medium,
   marginBottom: spacing.medium,
 }
-const SECTION: ViewStyle = {
-  marginTop: spacing.ginormous,
-}
-const LINE_BREAK: ViewStyle = {
-  flex: 1,
-  height: 1,
-  backgroundColor: palette.martinique,
-  marginTop: spacing.large,
-  marginBottom: spacing.extraLarge,
-}
-const LOGO_ROW: ViewStyle = {
-  flexDirection: "row",
-  justifyContent: "space-between",
-}
 
 export function Conduct(props: TouchableOpacityProperties) {
   return (
