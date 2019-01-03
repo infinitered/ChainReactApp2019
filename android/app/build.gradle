@@ -150,6 +150,7 @@ android {
 }
 
 dependencies {
+    compile project(':@mapbox/react-native-mapbox-gl')
     compile project(':react-native-splash-screen')
     compile project(':react-native-keychain')
     compile project(':react-native-i18n')
