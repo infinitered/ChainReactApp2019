@@ -150,21 +150,16 @@ android {
 }
 
 dependencies {
-    compile project(':@mapbox/react-native-mapbox-gl')
-    compile project(':react-native-splash-screen')
-    compile project(':react-native-keychain')
-    compile project(':react-native-i18n')
-    compile project(':lottie-react-native')
-    compile project(':appcenter-crashes')
-    compile project(':appcenter-analytics')
-    compile project(':appcenter')
-    compile project(':@mapbox_react-native-mapbox-gl')
     implementation project(':appcenter-crashes')
     implementation project(':appcenter-analytics')
     implementation project(':appcenter')
     implementation project(':react-native-keychain')
     implementation project(':react-native-i18n')
-    implementation project(':mapbox-react-native-mapbox-gl')
+    implementation (project(':mapbox-react-native-mapbox-gl')) {
+            implementation ('com.squareup.okhttp3:okhttp:3.6.0') {
+                force = true
+            }
+    }
     implementation project(':react-native-splash-screen')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
