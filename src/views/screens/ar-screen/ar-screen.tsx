@@ -6,15 +6,24 @@ import {
   Image,
   Animated,
   Easing,
-  Dimensions,
   Platform,
+  ImageStyle,
 } from "react-native"
 import { Text } from "../../shared/text"
-import { NavigationScreenProps } from "react-navigation"
+import { NavigationScreenProps, AnimatedValue } from "react-navigation"
 import { ViroARSceneNavigator } from "react-viro"
 import ARInitializationUI from "./arscenes/ARInitializationUI.js"
 
 export interface ARScreenProps extends NavigationScreenProps<{}> {}
+
+export interface ARScreenState {
+  hideARInitializedView: boolean
+  arInitialized: boolean
+  hasBadgeBeenFound: boolean
+  badgeOpacity: AnimatedValue
+  instructionsOpacity: AnimatedValue
+  usePlanes: boolean
+}
 
 const exitButton: ViewStyle = {
   position: "absolute",
@@ -54,14 +63,7 @@ const usePlaneInstructions: ViewStyle = {
   backgroundColor: "#292930B3",
 }
 
-const usePlanesButton: ViewStyle = {
-  position: "absolute",
-  height: 60,
-  width: 180,
-  bottom: 30,
-}
-
-const overlayImage: ViewStyle = {
+const overlayImage: ImageStyle = {
   flex: 1,
   position: "absolute",
   left: 0,
@@ -71,7 +73,7 @@ const overlayImage: ViewStyle = {
   height: "100%", // Dimensions.get('window').height,
 }
 
-export class ARScreen extends React.Component<ARScreenProps, {}> {
+export class ARScreen extends React.Component<ARScreenProps, ARScreenState> {
   constructor(props) {
     super(props)
 
@@ -130,12 +132,14 @@ export class ARScreen extends React.Component<ARScreenProps, {}> {
           source={require("./res/badge_frame.png")}
         />
       )
+    } else {
+      return null
     }
   }
 
   getARInitializationUI() {
     if (this.state.hideARInitializedView) {
-      return
+      return null
     } else {
       return (
         <View style={arInitUIContainer}>
@@ -155,6 +159,8 @@ export class ARScreen extends React.Component<ARScreenProps, {}> {
           <Text preset="body" tx="arScreen.usePlaneInstructions" style={{ fontSize: 20 }} />
         </Animated.View>
       )
+    } else {
+      return null
     }
   }
 

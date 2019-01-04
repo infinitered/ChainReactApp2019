@@ -1,13 +1,5 @@
 import * as React from "react"
-import {
-  Animated,
-  Image,
-  SafeAreaView,
-  TouchableOpacity,
-  View,
-  ViewStyle,
-  TextStyle,
-} from "react-native"
+import { Animated, Image, SafeAreaView, TouchableOpacity, View, ViewStyle } from "react-native"
 import { color } from "../../../theme"
 import { spacing } from "../../../theme"
 import { Text } from "../../shared/text"

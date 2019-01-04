@@ -1,11 +1,15 @@
-module.exports = {
-  getTransformModulePath() {
-    return require.resolve("react-native-typescript-transformer")
-  },
-  getSourceExts() {
-    return ["ts", "tsx"]
-  },
-  getAssetExts() {
-    return ["obj", "mtl", "JPG", "vrx", "hdr"]
-  },
-}
+const { getDefaultConfig } = require("metro-config")
+
+module.exports = (async () => {
+  const { resolver: { sourceExts, assetExts } } = await getDefaultConfig()
+
+  return {
+    transformer: {
+      babelTransformerPath: require.resolve("react-native-typescript-transformer"),
+    },
+    resolver: {
+      sourceExts: [...sourceExts, "ts", "tsx"],
+      assetExts: [...assetExts, "obj", "mtl", "JPG", "vrx", "hdr"],
+    },
+  }
+})()

@@ -32,7 +32,7 @@ const NAV_TEXT: TextStyle = {
 }
 
 export class ScheduleNav extends React.Component<
-  { selected: "wednesday" | "thursday" | "friday"; onSelected: any },
+  { selected: "wednesday" | "thursday" | "friday"; onSelected: (selected: string) => void },
   {}
 > {
   render() {

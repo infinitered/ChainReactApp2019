@@ -1,5 +1,5 @@
 {
-  "presets": ["react-native"],
+  "presets": ["module:metro-react-native-babel-preset"],
   "env": {
     "production": {
     }
@@ -10,6 +10,12 @@
       {
         "include": ["NODE_ENV", "API"]
       }
-    ]
+    ],
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
   ]
 }

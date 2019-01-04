@@ -1,4 +1,4 @@
-import { ViewStyle, TouchableOpacityProperties, TextStyle } from "react-native"
+import { TouchableOpacityProperties } from "react-native"
 import { SocialButtonPresetNames } from "./social-button.presets"
 
 export interface SocialButtonProps extends TouchableOpacityProperties {

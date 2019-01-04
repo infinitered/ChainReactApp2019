@@ -18,7 +18,10 @@ const BACK_BUTTON: ImageStyle = {
 
 const TITLE: TextStyle = {}
 
-export interface TitleBarProps extends NavigationScreenProps<{}> {}
+export interface TitleBarNavigationParams {
+  title?: string
+}
+export interface TitleBarProps extends NavigationScreenProps<TitleBarNavigationParams> {}
 
 export class TitleBar extends React.Component<TitleBarProps, {}> {
   render() {
