@@ -17,7 +17,7 @@
     "precommit": "lint-staged",
     "prepare": "patch-package",
     "storybook": "storybook start -p 9001 --skip-packager",
-    "fixReactViro": "find ./node_modules/react-viro/components -type f -exec sed -i '' 's#^import normalizeColor from \"react-native/Libraries/StyleSheet/normalizeColor\"#// import normalizeColor from \"react-native/Libraries/StyleSheet/normalizeColor\"#g' {} \\;"
+    "fixReactViro": "LANG=C find ./node_modules/react-viro/components -type f -exec sed -i '' 's#^import normalizeColor from \"react-native/Libraries/StyleSheet/normalizeColor\"#// import normalizeColor from \"react-native/Libraries/StyleSheet/normalizeColor\"#g' {} \\;"
   },
   "dependencies": {
     "@mapbox/react-native-mapbox-gl": "6.1.1",
