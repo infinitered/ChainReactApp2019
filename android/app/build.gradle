@@ -150,6 +150,7 @@ android {
 }
 
 dependencies {
+    compile project(':appcenter')
     implementation project(':appcenter-crashes')
     implementation project(':appcenter-analytics')
     implementation project(':appcenter')

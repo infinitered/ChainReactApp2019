@@ -32,6 +32,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
         new MainReactPackage(),
+        new AppCenterReactNativePackage(MainApplication.this),
         new KeychainPackage(),
         new RNI18nPackage(),
         new RCTMGLPackage(),
