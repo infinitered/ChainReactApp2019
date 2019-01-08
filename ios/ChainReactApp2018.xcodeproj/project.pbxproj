@@ -22,8 +22,6 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		20EB4123B0084CCFA46CECAC /* GothamRnd-LightItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9F92DA4225964F149C4DCCDF /* GothamRnd-LightItal.otf */; };
-		28044650ED0145AC89A8F6AE /* GothamRnd-BoldItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED78C14C2004417F94BAEAE6 /* GothamRnd-BoldItal.otf */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2D02E4C21E0B4AEC006451C7 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157351DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
@@ -35,24 +33,19 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* ChainReactApp2018Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ChainReactApp2018Tests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
-		312C63B839CC4E5EBD66A7FA /* GothamRnd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6BA943FE46404E12A351BF86 /* GothamRnd-Light.otf */; };
 		381C6FAB20E54315008B11AA /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381C6FAA20E54314008B11AA /* Mapbox.framework */; };
 		381C6FAC20E54315008B11AA /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 381C6FAA20E54314008B11AA /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3EABFF5EC2F04B48875D79D5 /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FAF8BBE9814469B8C444E2 /* libSplashScreen.a */; };
 		4790DC9324164219AC9348EA /* libLottie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9A243B10744B7FB09F3A96 /* libLottie.a */; };
-		55B755A7C79E459BAD07395D /* GothamRnd-MedItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 05B7C0B16B49431883700FC7 /* GothamRnd-MedItal.otf */; };
 		58E0CE2D84A74FA3A119CFF2 /* libRNKeychain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4584748EEE444C8CBD9718B1 /* libRNKeychain.a */; };
-		65FADF92D5AF44DFBC2A3699 /* GothamRnd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EED10136B3E44620AA77A20B /* GothamRnd-Bold.otf */; };
 		66549EBAAD185DA440350B18 /* libPods-ChainReactApp2018.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CC3B19C09761377D3C65FE /* libPods-ChainReactApp2018.a */; };
 		79E9137EE55942A081E34C75 /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA4F6F71EDA4A2D857FFD28 /* libRNI18n.a */; };
-		7B5BB075374C4BA9AD25C7C1 /* GothamRnd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C1B04F0D25B54D9EB9295059 /* GothamRnd-Medium.otf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8A34CBED20E5987B00470345 /* ViroKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A34CBC020E5987B00470345 /* ViroKit.framework */; };
 		8A34CBEE20E5987B00470345 /* libViroReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A34CBEC20E5987B00470345 /* libViroReact.a */; };
 		8A34CBF020E59B5100470345 /* ViroKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A34CBC020E5987B00470345 /* ViroKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8A34CE2A20E5A3E900470345 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A34CC6820E59D8800470345 /* Lottie.framework */; };
 		8A34CE2B20E5A3E900470345 /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A34CC6820E59D8800470345 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8F3D58FA741B4D22A7BEDD39 /* GothamRnd-BookItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2023F53DD46B4B8E99CCB9FB /* GothamRnd-BookItal.otf */; };
 		92B2926C20F58779007AF724 /* AppCenterReactNativeShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B2926B20F58779007AF724 /* AppCenterReactNativeShared.framework */; };
 		92B2926E20F5886B007AF724 /* AppCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B2926D20F5886B007AF724 /* AppCenter.framework */; };
 		92B2927020F58878007AF724 /* AppCenterAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B2926F20F58878007AF724 /* AppCenterAnalytics.framework */; };
@@ -62,10 +55,17 @@
 		92B2928720F5890D007AF724 /* libAppCenterReactNativeCrashes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B2928420F588DC007AF724 /* libAppCenterReactNativeCrashes.a */; };
 		A3580AF649A04E86B2D9164A /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7BA294DFD641EAAC8BB216 /* Lottie.framework */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
-		C02628ED285C4E8D86633100 /* GothamRnd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9FE22C32232B4D598E6D601B /* GothamRnd-Book.otf */; };
 		DEF6A9377F5642CF93683E77 /* libRCTMGL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF0DE45E9AD4B60989894A6 /* libRCTMGL.a */; };
 		E8519D6B2799422E8BAA0D6D /* libRNI18n-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65458B4DB464475D809F6A9D /* libRNI18n-tvOS.a */; };
 		FD6C522D01B746D99BB49188 /* libLottieReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 673384FCBAE54685B2C45B37 /* libLottieReactNative.a */; };
+		AB388666685D4143B733CB0D /* GothamRnd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 97214954C2FB4A808C4F8A62 /* GothamRnd-Bold.otf */; };
+		1ECEEECE3D0F48B7A3E38B00 /* GothamRnd-BoldItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 606231E212304B7AABC748AA /* GothamRnd-BoldItal.otf */; };
+		336489F9EB834C3CA0F77620 /* GothamRnd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 701C1A6E70D440FC9B653471 /* GothamRnd-Book.otf */; };
+		0226FFDE304446848A8C1E7E /* GothamRnd-BookItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 37E983621E544847B913FFD9 /* GothamRnd-BookItal.otf */; };
+		F04AC33984E44F9A84BF2922 /* GothamRnd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B976D889CA0B4DFE8D6E58D0 /* GothamRnd-Light.otf */; };
+		6D91659140B34158A386B6AD /* GothamRnd-LightItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 99FAFA465416484F811EE8FA /* GothamRnd-LightItal.otf */; };
+		DA4417FE69724F0596E323D2 /* GothamRnd-MedItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC50B8C1FDA54B4AB12134F8 /* GothamRnd-MedItal.otf */; };
+		1E4BC119CE254DA394CD671F /* GothamRnd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9ED1812F5F75456CA751E1FB /* GothamRnd-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -475,7 +475,6 @@
 		00E356EE1AD99517003FC87E /* ChainReactApp2018Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChainReactApp2018Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* ChainReactApp2018Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChainReactApp2018Tests.m; sourceTree = "<group>"; };
-		05B7C0B16B49431883700FC7 /* GothamRnd-MedItal.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-MedItal.otf"; path = "../src/theme/fonts/GothamRnd-MedItal.otf"; sourceTree = "<group>"; };
 		05CC3B19C09761377D3C65FE /* libPods-ChainReactApp2018.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChainReactApp2018.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09FAF8BBE9814469B8C444E2 /* libSplashScreen.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libSplashScreen.a; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
@@ -487,7 +486,6 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ChainReactApp2018/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ChainReactApp2018/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		2023F53DD46B4B8E99CCB9FB /* GothamRnd-BookItal.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-BookItal.otf"; path = "../src/theme/fonts/GothamRnd-BookItal.otf"; sourceTree = "<group>"; };
 		2AA4F6F71EDA4A2D857FFD28 /* libRNI18n.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNI18n.a; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* ChainReactApp2018-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChainReactApp2018-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* ChainReactApp2018-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ChainReactApp2018-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -500,7 +498,6 @@
 		65458B4DB464475D809F6A9D /* libRNI18n-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNI18n-tvOS.a"; sourceTree = "<group>"; };
 		673384FCBAE54685B2C45B37 /* libLottieReactNative.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libLottieReactNative.a; sourceTree = "<group>"; };
 		6952AD460025C7719CA37D7F /* Pods-ChainReactApp2018.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChainReactApp2018.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChainReactApp2018/Pods-ChainReactApp2018.debug.xcconfig"; sourceTree = "<group>"; };
-		6BA943FE46404E12A351BF86 /* GothamRnd-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-Light.otf"; path = "../src/theme/fonts/GothamRnd-Light.otf"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7A50F9986E6042E89B77F295 /* Lottie.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = Lottie.xcodeproj; path = "../node_modules/lottie-ios/Lottie.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -515,20 +512,23 @@
 		92B2927320F588BC007AF724 /* AppCenterReactNative.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNative.xcodeproj; path = ../node_modules/appcenter/ios/AppCenterReactNative.xcodeproj; sourceTree = "<group>"; };
 		92B2927920F588D3007AF724 /* AppCenterReactNativeAnalytics.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNativeAnalytics.xcodeproj; path = "../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics.xcodeproj"; sourceTree = "<group>"; };
 		92B2927F20F588DB007AF724 /* AppCenterReactNativeCrashes.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNativeCrashes.xcodeproj; path = "../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes.xcodeproj"; sourceTree = "<group>"; };
-		9F92DA4225964F149C4DCCDF /* GothamRnd-LightItal.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-LightItal.otf"; path = "../src/theme/fonts/GothamRnd-LightItal.otf"; sourceTree = "<group>"; };
-		9FE22C32232B4D598E6D601B /* GothamRnd-Book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-Book.otf"; path = "../src/theme/fonts/GothamRnd-Book.otf"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		B1AACED6FDE4411086DAF21F /* AppCenter-Config.plist */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "ChainReactApp2018/AppCenter-Config.plist"; sourceTree = "<group>"; };
 		B21A47A5F92F444C848FDD09 /* RNKeychain.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNKeychain.xcodeproj; path = "../node_modules/react-native-keychain/RNKeychain.xcodeproj"; sourceTree = "<group>"; };
 		B58EB9FE107B440C8E26A7E0 /* SplashScreen.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = SplashScreen.xcodeproj; path = "../node_modules/react-native-splash-screen/ios/SplashScreen.xcodeproj"; sourceTree = "<group>"; };
 		BC7BA294DFD641EAAC8BB216 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = System/Library/Frameworks/Lottie.framework; sourceTree = SDKROOT; };
-		C1B04F0D25B54D9EB9295059 /* GothamRnd-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-Medium.otf"; path = "../src/theme/fonts/GothamRnd-Medium.otf"; sourceTree = "<group>"; };
 		CAF0DE45E9AD4B60989894A6 /* libRCTMGL.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTMGL.a; sourceTree = "<group>"; };
 		E36EB9DE818DFEE6EBA282EB /* libPods-ChainReactApp2018-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChainReactApp2018-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED78C14C2004417F94BAEAE6 /* GothamRnd-BoldItal.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-BoldItal.otf"; path = "../src/theme/fonts/GothamRnd-BoldItal.otf"; sourceTree = "<group>"; };
 		ED8B9AAA14F86CE9533AC7C5 /* Pods-ChainReactApp2018.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChainReactApp2018.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChainReactApp2018/Pods-ChainReactApp2018.release.xcconfig"; sourceTree = "<group>"; };
-		EED10136B3E44620AA77A20B /* GothamRnd-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-Bold.otf"; path = "../src/theme/fonts/GothamRnd-Bold.otf"; sourceTree = "<group>"; };
 		F3AACC5D093B4422BFAFF50B /* LottieReactNative.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = LottieReactNative.xcodeproj; path = "../node_modules/lottie-react-native/src/ios/LottieReactNative.xcodeproj"; sourceTree = "<group>"; };
+		97214954C2FB4A808C4F8A62 /* GothamRnd-Bold.otf */ = {isa = PBXFileReference; name = "GothamRnd-Bold.otf"; path = "../app/theme/fonts/GothamRnd-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		606231E212304B7AABC748AA /* GothamRnd-BoldItal.otf */ = {isa = PBXFileReference; name = "GothamRnd-BoldItal.otf"; path = "../app/theme/fonts/GothamRnd-BoldItal.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		701C1A6E70D440FC9B653471 /* GothamRnd-Book.otf */ = {isa = PBXFileReference; name = "GothamRnd-Book.otf"; path = "../app/theme/fonts/GothamRnd-Book.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		37E983621E544847B913FFD9 /* GothamRnd-BookItal.otf */ = {isa = PBXFileReference; name = "GothamRnd-BookItal.otf"; path = "../app/theme/fonts/GothamRnd-BookItal.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B976D889CA0B4DFE8D6E58D0 /* GothamRnd-Light.otf */ = {isa = PBXFileReference; name = "GothamRnd-Light.otf"; path = "../app/theme/fonts/GothamRnd-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		99FAFA465416484F811EE8FA /* GothamRnd-LightItal.otf */ = {isa = PBXFileReference; name = "GothamRnd-LightItal.otf"; path = "../app/theme/fonts/GothamRnd-LightItal.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FC50B8C1FDA54B4AB12134F8 /* GothamRnd-MedItal.otf */ = {isa = PBXFileReference; name = "GothamRnd-MedItal.otf"; path = "../app/theme/fonts/GothamRnd-MedItal.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9ED1812F5F75456CA751E1FB /* GothamRnd-Medium.otf */ = {isa = PBXFileReference; name = "GothamRnd-Medium.otf"; path = "../app/theme/fonts/GothamRnd-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -934,14 +934,14 @@
 		FF0D5A5161824610A946E6BC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EED10136B3E44620AA77A20B /* GothamRnd-Bold.otf */,
-				ED78C14C2004417F94BAEAE6 /* GothamRnd-BoldItal.otf */,
-				9FE22C32232B4D598E6D601B /* GothamRnd-Book.otf */,
-				2023F53DD46B4B8E99CCB9FB /* GothamRnd-BookItal.otf */,
-				6BA943FE46404E12A351BF86 /* GothamRnd-Light.otf */,
-				9F92DA4225964F149C4DCCDF /* GothamRnd-LightItal.otf */,
-				05B7C0B16B49431883700FC7 /* GothamRnd-MedItal.otf */,
-				C1B04F0D25B54D9EB9295059 /* GothamRnd-Medium.otf */,
+				97214954C2FB4A808C4F8A62 /* GothamRnd-Bold.otf */,
+				606231E212304B7AABC748AA /* GothamRnd-BoldItal.otf */,
+				701C1A6E70D440FC9B653471 /* GothamRnd-Book.otf */,
+				37E983621E544847B913FFD9 /* GothamRnd-BookItal.otf */,
+				B976D889CA0B4DFE8D6E58D0 /* GothamRnd-Light.otf */,
+				99FAFA465416484F811EE8FA /* GothamRnd-LightItal.otf */,
+				FC50B8C1FDA54B4AB12134F8 /* GothamRnd-MedItal.otf */,
+				9ED1812F5F75456CA751E1FB /* GothamRnd-Medium.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1535,15 +1535,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				65FADF92D5AF44DFBC2A3699 /* GothamRnd-Bold.otf in Resources */,
-				28044650ED0145AC89A8F6AE /* GothamRnd-BoldItal.otf in Resources */,
-				C02628ED285C4E8D86633100 /* GothamRnd-Book.otf in Resources */,
-				8F3D58FA741B4D22A7BEDD39 /* GothamRnd-BookItal.otf in Resources */,
-				312C63B839CC4E5EBD66A7FA /* GothamRnd-Light.otf in Resources */,
-				20EB4123B0084CCFA46CECAC /* GothamRnd-LightItal.otf in Resources */,
-				55B755A7C79E459BAD07395D /* GothamRnd-MedItal.otf in Resources */,
-				7B5BB075374C4BA9AD25C7C1 /* GothamRnd-Medium.otf in Resources */,
 				0E93A57BF67442D2983EE414 /* AppCenter-Config.plist in Resources */,
+				AB388666685D4143B733CB0D /* GothamRnd-Bold.otf in Resources */,
+				1ECEEECE3D0F48B7A3E38B00 /* GothamRnd-BoldItal.otf in Resources */,
+				336489F9EB834C3CA0F77620 /* GothamRnd-Book.otf in Resources */,
+				0226FFDE304446848A8C1E7E /* GothamRnd-BookItal.otf in Resources */,
+				F04AC33984E44F9A84BF2922 /* GothamRnd-Light.otf in Resources */,
+				6D91659140B34158A386B6AD /* GothamRnd-LightItal.otf in Resources */,
+				DA4417FE69724F0596E323D2 /* GothamRnd-MedItal.otf in Resources */,
+				1E4BC119CE254DA394CD671F /* GothamRnd-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
