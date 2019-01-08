@@ -26,7 +26,9 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: yarn install
+      - run: NOYARNPOSTINSTALL=1 yarn install
+
+      - run: yarn fixReactViro
 
       - save_cache:
           paths:
