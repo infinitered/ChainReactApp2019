@@ -6,6 +6,7 @@
 defaults: &defaults
   macos:
     xcode: "10.1.0"
+  working_directory: ~/repo
 
 version: 2
 jobs:
@@ -43,9 +44,6 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-      - run:
-          name: Change Permissions
-          command: sudo chown -R $(whoami) /usr/local
       - run:
           name: Run tests
           command: yarn ci:test # this command will be added to/found in your package.json scripts
