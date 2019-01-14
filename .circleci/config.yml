@@ -48,25 +48,12 @@ jobs:
           name: Run tests
           command: yarn ci:test # this command will be added to/found in your package.json scripts
 
-#   deploy_android:
-#     <<: *defaults
-#     steps:
-#       - checkout
-#       - restore_cache:
-#           keys:
-#             - v1-dependencies-{{ checksum "package.json" }}
-#             # fallback to using the latest cache if no exact match is found
-#             - v1-dependencies-
-
-#   deploy_ios:
-#     <<: *defaults
-#     steps:
-#       - checkout
-#       - restore_cache:
-#           keys:
-#             - v1-dependencies-{{ checksum "package.json" }}
-#             # fallback to using the latest cache if no exact match is found
-#             - v1-dependencies-
+  deploy_ios:
+    <<: *defaults
+    steps:
+      - run:
+          name: Run fastlane
+          command: bundle exec fastlane ios play
 
 workflows:
   version: 2
@@ -76,13 +63,8 @@ workflows:
       - tests:
           requires:
             - setup
-#       - deploy_android:
-#           requires:
-#             - tests
-#           filters:
-#             branches: master
-#       - deploy_ios:
-#           requires:
-#             - deploy_android
-#           filters:
-#             branches: master
+      - deploy_ios:
+          requires:
+            - tests
+          # filters:
+            # branches: master
