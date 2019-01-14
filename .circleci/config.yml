@@ -4,9 +4,8 @@
 #
 
 defaults: &defaults
-  docker:
-    # Choose the version of Node you want here
-    - image: circleci/node:8.9
+  macos:
+    xcode: "10.1.0"
 
 version: 2
 jobs:
@@ -27,7 +26,13 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-
+      - run:
+          name: Fetch CocoaPods Specs
+          command: |
+            curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
+      - run:
+          name: Install CocoaPods
+          command: cd ios && pod install --verbose
 
   tests:
     <<: *defaults
@@ -45,25 +50,25 @@ jobs:
           name: Run tests
           command: yarn ci:test # this command will be added to/found in your package.json scripts
 
-  deploy_android:
-    <<: *defaults
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
+#   deploy_android:
+#     <<: *defaults
+#     steps:
+#       - checkout
+#       - restore_cache:
+#           keys:
+#             - v1-dependencies-{{ checksum "package.json" }}
+#             # fallback to using the latest cache if no exact match is found
+#             - v1-dependencies-
 
-  deploy_ios:
-    <<: *defaults
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
+#   deploy_ios:
+#     <<: *defaults
+#     steps:
+#       - checkout
+#       - restore_cache:
+#           keys:
+#             - v1-dependencies-{{ checksum "package.json" }}
+#             # fallback to using the latest cache if no exact match is found
+#             - v1-dependencies-
 
 workflows:
   version: 2
@@ -73,13 +78,13 @@ workflows:
       - tests:
           requires:
             - setup
-      - deploy_android:
-          requires:
-            - tests
-          filters:
-            branches: master
-      - deploy_ios:
-          requires:
-            - deploy_android
-          filters:
-            branches: master
+#       - deploy_android:
+#           requires:
+#             - tests
+#           filters:
+#             branches: master
+#       - deploy_ios:
+#           requires:
+#             - deploy_android
+#           filters:
+#             branches: master
