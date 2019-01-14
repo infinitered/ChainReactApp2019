@@ -20,11 +20,11 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
+      # - restore_cache:
+      #     keys:
+      #       - v1-dependencies-{{ checksum "package.json" }}
+      #       # fallback to using the latest cache if no exact match is found
+      #       - v1-dependencies-
       - run:
           name: Install dependencies
           command: NOYARNPOSTINSTALL=1 yarn install
@@ -48,9 +48,9 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-ios-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
+            - v1-dependencies-ios-
       - run:
           name: Install dependencies
           command: NOYARNPOSTINSTALL=1 yarn install
@@ -58,7 +58,7 @@ jobs:
           name: Save node modules
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-ios-{{ checksum "package.json" }}
       - run:
           name: Fetch CocoaPods Specs
           command: |
