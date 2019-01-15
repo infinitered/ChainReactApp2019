@@ -73,7 +73,7 @@ jobs:
           command: cd ios && pod install --verbose
       - run:
           name: Fastlane
-          command: bundle exec fastlane ios play
+          command: cd ios && bundle exec fastlane ios play
 
 workflows:
   version: 2
