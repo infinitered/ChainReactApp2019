@@ -7,6 +7,7 @@ defaults: &defaults
   docker:
     # Choose the version of Node you want here
     - image: circleci/node:10.11
+  working_directory: ~/repo
 
 mac: &mac
   macos:
@@ -21,9 +22,9 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-node-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
+            - v1-dependencies-node-
       - run:
           name: Install dependencies
           command: NOYARNPOSTINSTALL=1 yarn install
@@ -31,7 +32,7 @@ jobs:
           name: Save node modules
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-node-{{ checksum "package.json" }}
 
   tests:
     <<: *defaults
@@ -39,9 +40,9 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-node-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
+            - v1-dependencies-node-
       - run:
           name: Run tests
           command: yarn ci:test # this command will be added to/found in your package.json scripts
