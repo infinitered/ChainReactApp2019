@@ -83,8 +83,8 @@ workflows:
       - tests:
           requires:
             - setup
-      - deploy_ios
-          # requires:
-          #   - tests
+      - deploy_ios:
+          requires:
+            - tests
           # filters:
             # branches: master
