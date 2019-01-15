@@ -72,6 +72,9 @@ jobs:
           name: Install CocoaPods
           command: cd ios && pod install --verbose
       - run:
+          name: Install Gems
+          command: cd ios && bundle install
+      - run:
           name: Fastlane
           command: cd ios && bundle exec fastlane ios play
 
