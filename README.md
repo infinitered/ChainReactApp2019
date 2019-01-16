@@ -1,8 +1,8 @@
 # ChainReactApp2018
 
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/) [![Build Status](https://semaphoreci.com/api/v1/projects/0ac0fde8-9a91-4d99-b9f7-427db4da0af3/1892379/shields_badge.svg)](https://semaphoreci.com/ir/chainreactapp2018)
+[![CircleCI](https://circleci.com/gh/infinitered/ChainReactApp2018/tree/master.svg?style=svg)](https://circleci.com/gh/infinitered/ChainReactApp2018/tree/master)
 
-* Standard compliant React Native App Utilizing [Ignite](https://github.com/infinitered/ignite)
+* React Native App Utilizing [Ignite](https://github.com/infinitered/ignite)
 
 ## :arrow_up: How to Setup
 
@@ -10,7 +10,9 @@
 
 **Step 2:** cd to the cloned repo:
 
-**Step 3:** Install the Application with `yarn` or `npm i`
+**Step 3:** Install the Application with `yarn`
+
+**Step 4:** Install Pods: `cd ios && pod install`. You might need to [install Cocoapods](https://guides.cocoapods.org/using/getting-started.html#installation) if you don't already have it!
 
 ## :arrow_forward: How to Run App
 
@@ -20,13 +22,12 @@
 * for iOS
   * run `react-native run-ios`
 * for Android
-  * Run Genymotion
   * run `react-native run-android`
+  * NOTE: This app uses VR software which does not run on Android emulators, so you will need to have a physical Android device connected to run the application
 
-## :no_entry_sign: Standard Compliant
+## :no_entry_sign: TSLint Compliant
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
-This project adheres to Standard. Our CI enforces this, so we suggest you enable linting to keep your project compliant during development.
+This project adheres to TSLint and Prettier. We suggest you enable linting to keep your project compliant during development. You can lint the project by running `yarn lint`.
 
 **To Lint on Commit**
 
@@ -38,32 +39,4 @@ If you have to bypass lint for a special commit that you will come back and clea
 
 **Understanding Linting Errors**
 
-The linting rules are from JS Standard and React-Standard. [Regular JS errors can be found with descriptions here](http://eslint.org/docs/rules/), while [React errors and descriptions can be found here](https://github.com/yannickcr/eslint-plugin-react).
-
-## :closed_lock_with_key: Secrets
-
-This project uses [react-native-config](https://github.com/luggit/react-native-config) to expose config variables to your javascript code in React Native. You can store API keys
-and other sensitive information in a `.env` file:
-
-```
-API_URL=https://myapi.com
-GOOGLE_MAPS_API_KEY=abcdefgh
-```
-
-and access them from React Native like so:
-
-```
-import Secrets from 'react-native-config'
-
-Secrets.API_URL  // 'https://myapi.com'
-Secrets.GOOGLE_MAPS_API_KEY  // 'abcdefgh'
-```
-
-The `.env` file is ignored by git keeping those secrets out of your repo.
-
-### Get started:
-
-1.  Copy .env.example to .env
-2.  Add your config variables
-3.  Follow instructions at [https://github.com/luggit/react-native-config#setup](https://github.com/luggit/react-native-config#setup)
-4.  Done!
+The linting rules are from tslint-config-prettier. [Regular TS errors can be found with descriptions here](https://palantir.github.io/tslint/rules/).
