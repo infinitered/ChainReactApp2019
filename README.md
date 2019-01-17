@@ -1,7 +1,5 @@
 # ChainReactApp2018
 
-[![CircleCI](https://circleci.com/gh/infinitered/ChainReactApp2018/tree/master.svg?style=svg)](https://circleci.com/gh/infinitered/ChainReactApp2018/tree/master)
-
 * React Native App Utilizing [Ignite](https://github.com/infinitered/ignite)
 
 ## :arrow_up: How to Setup
