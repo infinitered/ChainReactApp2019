@@ -1,6 +1,6 @@
 # ChainReactApp2018
 
-* React Native App Utilizing [Ignite](https://github.com/infinitered/ignite)
+* React Native app utilizing [Ignite](https://github.com/infinitered/ignite) and the [Ignite Bowser](https://github.com/infinitered/ignite-bowser) boilerplate
 
 ## :arrow_up: How to Setup
 
