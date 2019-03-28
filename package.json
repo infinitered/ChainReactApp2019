@@ -27,8 +27,12 @@
     "appcenter": "^1.6.0",
     "appcenter-analytics": "^1.6.0",
     "appcenter-crashes": "^1.6.0",
+    "aws-amplify": "^1.1.22",
+    "aws-appsync": "^1.7.2",
+    "aws-appsync-react": "^1.2.7",
     "date-fns": "^1.29.0",
     "graphql": "^0.13.2",
+    "graphql-tag": "^2.10.1",
     "lottie-react-native": "2.5.9",
     "mobx": "^4.1.0",
     "mobx-react": "^5.0.0",
@@ -44,6 +48,7 @@
     "react-viro": "./react-viro-2.7.3.tgz",
     "reactotron-mst": "2.0.0-beta.1",
     "reactotron-react-native": "2.0.0-beta.1",
+    "uuid": "^3.3.2",
     "validate.js": "^0.12.0"
   },
   "devDependencies": {

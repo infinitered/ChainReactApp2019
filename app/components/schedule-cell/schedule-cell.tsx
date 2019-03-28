@@ -101,6 +101,7 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
     const { preset, talk: { sponsor, talkType, speakers }, talk } = this.props
     const style: any = ScheduleCellPresets[preset] || ScheduleCellPresets.default
     let image = null
+
     if (talkType.toLowerCase() === "panel") {
       image = require("./images/panelist.png")
     } else if (talkType.toLowerCase() === "afterparty") {

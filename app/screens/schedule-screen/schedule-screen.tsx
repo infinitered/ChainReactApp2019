@@ -1,6 +1,7 @@
 import * as React from "react"
 import { View, ViewStyle, ScrollView, TextStyle } from "react-native"
 import { NavigationScreenProps } from "react-navigation"
+import { graphql } from "react-apollo"
 import { Text } from "../../components/text"
 import { Screen } from "../../components/screen"
 import { color, spacing } from "../../theme"
@@ -11,6 +12,7 @@ import { ScheduleCell } from "../../components//schedule-cell"
 import { inject, observer } from "mobx-react"
 import { ScheduleCellPresetNames } from "../../components//schedule-cell/schedule-cell.presets"
 import { Talk } from "../../models/talk"
+import { listTalks as ListTalks } from "../../graphql/queries"
 
 const ROOT: ViewStyle = {
   flex: 1,
@@ -35,13 +37,13 @@ const DATE: TextStyle = {
   marginBottom: spacing.small + spacing.large,
 }
 
-export interface ScheduleScreenProps extends NavigationScreenProps<{}> {
+interface ScheduleScreenProps extends NavigationScreenProps<{}> {
   talkStore: TalkStore
 }
 
-@inject("talkStore")
-@observer
-export class ScheduleScreen extends React.Component<
+// @inject("talkStore")
+// @observer
+class ScheduleScreenConsumer extends React.Component<
   ScheduleScreenProps,
   { selected: "wednesday" | "thursday" | "friday" }
 > {
@@ -58,12 +60,13 @@ export class ScheduleScreen extends React.Component<
     },
   }
 
-  componentWillMount() {
-    const { talkStore } = this.props
-    talkStore && talkStore.getAll()
-  }
+  // componentWillMount() {
+  //   const { talkStore } = this.props
+  //   talkStore && talkStore.getAll()
+  // }
 
   render() {
+    console.log("props:", this.props)
     const { selected } = this.state
     return (
       <Screen preset="fixed" backgroundColor={color.palette.portGore} style={ROOT}>
@@ -76,11 +79,12 @@ export class ScheduleScreen extends React.Component<
     )
   }
 
-  renderTalk = (talk: Talk, index: number) => {
+  renderTalk = (talk, index: number) => {
+    console.log("renderTalk called...")
     const talkType = talk.talkType.toLowerCase()
     const cellPreset: ScheduleCellPresetNames =
       talkType === "break" || talkType === "afterparty" ? talkType : "default"
-
+    console.log("this is a talk item::::::: ", talk)
     return (
       <ScheduleCell
         index={index}
@@ -95,7 +99,8 @@ export class ScheduleScreen extends React.Component<
   }
 
   renderContent = () => {
-    const { talkStore: { talks } } = this.props
+    const { talks } = this.props
+    console.log("talks:", talks)
     const { selected } = this.state
     const selectedTalks = talks.filter(talk => {
       return selected === "thursday" ? isThursday(talk.startTime) : isFriday(talk.startTime)
@@ -118,10 +123,12 @@ export class ScheduleScreen extends React.Component<
   }
 
   renderWorkshops = () => {
-    const { talkStore: { talks } } = this.props
+    const { talks } = this.props
+
     const workshops = talks.filter(talk => {
       return isWednesday(talk.startTime)
     })
+    console.log("workshops:", workshops)
     return (
       <View>
         <Text tx="scheduleScreen.workshops" style={SUBTITLE} preset="subheader" />
@@ -156,6 +163,28 @@ export class ScheduleScreen extends React.Component<
     this.setState({ selected })
   }
 }
+
+const ScheduleScreen = graphql(ListTalks, {
+  options: {
+    fetchPolicy: "network-only",
+  },
+  props: props => {
+    let talks = []
+    if (props.data.listTalks) {
+      talks = props.data.listTalks.items.map(t => {
+        if (t.speakers && t.speakers.items) {
+          t.speakers = t.speakers.items
+        }
+        return t
+      })
+    }
+    return {
+      talks,
+    }
+  },
+})(ScheduleScreenConsumer)
+
+export { ScheduleScreen }
 
 const getSelectedDay = (): "wednesday" | "thursday" | "friday" => {
   const date = new Date()

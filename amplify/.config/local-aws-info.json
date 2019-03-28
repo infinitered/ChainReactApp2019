@@ -1,0 +1,7 @@
+{
+  "local": {
+    "configLevel": "project",
+    "useProfile": true,
+    "profileName": "us-east-2-user"
+  }
+}

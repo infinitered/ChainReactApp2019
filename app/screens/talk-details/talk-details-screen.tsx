@@ -1,6 +1,19 @@
 import * as React from "react"
-import { View, Image, ViewStyle, TextStyle, Dimensions, ImageStyle, Platform } from "react-native"
+import {
+  TextInput,
+  ScrollView,
+  TouchableOpacity,
+  View,
+  Image,
+  ViewStyle,
+  TextStyle,
+  Dimensions,
+  ImageStyle,
+  Platform,
+} from "react-native"
 import { NavigationScreenProps } from "react-navigation"
+import { graphql, compose } from "react-apollo"
+import uuid from "uuid/v4"
 import { Screen } from "../../components/screen"
 import { palette, spacing } from "../../theme"
 import { Text } from "../../components/text"
@@ -9,6 +22,12 @@ import { SpeakerImage } from "../../components/speaker-image"
 import { TalkTitle } from "../../components//talk-title"
 import { SpeakerBio } from "../../components//speaker-bio"
 import { Talk } from "../../models/talk"
+import { listCommentsForTalk } from "../../graphql/queries"
+import { createComment as CreateComment } from "../../graphql/mutations"
+import { onCreateComment as OnCreateComment } from "../../graphql/subscriptions"
+import console = require("console")
+
+const CLIENTID = uuid()
 
 const ROOT: ViewStyle = {
   paddingVertical: spacing.medium,
@@ -74,6 +93,10 @@ const MENU_ITEM: ViewStyle = {
 
 const MENU_ITEM_TEXT: TextStyle = { color: palette.white }
 
+const TAB_HOLDER: ViewStyle = { flex: 1 }
+
+const TAB_STYLE: ViewStyle = { paddingVertical: 7, alignItems: "center", justifyContent: "center" }
+
 const HIT_SLOP = {
   top: 30,
   left: 30,
@@ -81,10 +104,10 @@ const HIT_SLOP = {
   bottom: 30,
 }
 
-export interface NavigationStateParams {
+interface NavigationStateParams {
   talk: Talk
 }
-export interface TalkDetailsScreenProps extends NavigationScreenProps<NavigationStateParams> {}
+interface TalkDetailsScreenProps extends NavigationScreenProps<NavigationStateParams> {}
 
 const backImage = () => (
   <View hitSlop={HIT_SLOP}>
@@ -92,7 +115,10 @@ const backImage = () => (
   </View>
 )
 
-export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> {
+class BaseTalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> {
+  // componentWillMount() {
+  //   this.props.navigation.pop()
+  // }
   static navigationOptions = ({ navigation }) => {
     const { talk } = navigation.state.params
     const titleMargin = Platform.OS === "ios" ? -50 : 0
@@ -114,11 +140,88 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
     }
   }
 
+  state = {
+    currentView: "details",
+    inputValue: "",
+  }
+
+  componentDidMount() {
+    this.props.subscribeToNewComments()
+  }
+
+  createComment = () => {
+    const { id } = this.props.navigation.state.params.talk
+    const comment = {
+      text: this.state.inputValue,
+      clientId: CLIENTID,
+      createdBy: "Nader D",
+      talkId: id,
+      id: uuid(),
+      createdAt: Date.now(),
+    }
+    this.setState({ inputValue: "" })
+    this.props.createComment(comment)
+  }
+
   render() {
+    const { talkType = "" } = this.props.navigation.state.params.talk
+    const { comments } = this.props
     return (
-      <Screen preset="scroll" backgroundColor={palette.portGore} style={ROOT}>
-        {this.renderContent()}
-      </Screen>
+      <View style={{ flex: 1, backgroundColor: palette.portGore }}>
+        {(talkType === "TALK" || talkType === "WORKSHOP") && (
+          <View>
+            <View style={{ flexDirection: "row" }}>
+              <View style={{ ...TAB_HOLDER, ...chosen(this.state.currentView, "details") }}>
+                <TouchableOpacity
+                  style={TAB_STYLE}
+                  onPress={() => this.setState({ currentView: "details" })}
+                >
+                  <Text style={{ color: "white" }}>Details</Text>
+                </TouchableOpacity>
+              </View>
+              <View style={{ ...TAB_HOLDER, ...chosen(this.state.currentView, "discussion") }}>
+                <TouchableOpacity
+                  style={TAB_STYLE}
+                  onPress={() => this.setState({ currentView: "discussion" })}
+                >
+                  <Text style={{ color: "white" }}>Discussion</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          </View>
+        )}
+        {this.state.currentView === "discussion" && (
+          <View style={{ flex: 1 }}>
+            <ScrollView>
+              <View style={{ paddingVertical: 15 }}>
+                {comments.map((c, i) => (
+                  <View style={{ paddingHorizontal: 20 }} key={i}>
+                    <Text>{c.createdAt}</Text>
+                    <Text style={{ marginBottom: 4, color: "white", fontWeight: "600" }}>
+                      {c.createdBy}
+                    </Text>
+                    <Text style={{ color: "white" }}>{c.text}</Text>
+                  </View>
+                ))}
+              </View>
+            </ScrollView>
+            <View style={{ bottom: 0, position: "absolute", left: 0, width: SCREEN_WIDTH }}>
+              <TextInput
+                onChangeText={v => this.setState({ inputValue: v })}
+                style={{ backgroundColor: "white", height: 50, paddingHorizontal: 8 }}
+                placeholder="Type a message..."
+                onSubmitEditing={this.createComment}
+                value={this.state.inputValue}
+              />
+            </View>
+          </View>
+        )}
+        {this.state.currentView !== "discussion" && (
+          <Screen preset="scroll" backgroundColor={palette.portGore} style={ROOT}>
+            {this.renderContent()}
+          </Screen>
+        )}
+      </View>
     )
   }
 
@@ -141,6 +244,14 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
       default:
         return null
     }
+  }
+
+  renderComments() {
+    return (
+      <View>
+        <Text style={{ color: "white" }}>Comments</Text>
+      </View>
+    )
   }
 
   renderTalk = () => {
@@ -262,5 +373,92 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
         <Text preset="subheader" text={item} style={MENU_ITEM_TEXT} />
       </View>
     )
+  }
+}
+
+const TalkDetailsScreen = compose(
+  graphql(CreateComment, {
+    props: props => {
+      return {
+        createComment: comment => {
+          props.mutate({
+            variables: comment,
+            optimisticResponse: {
+              createComment: { ...comment, __typename: "Comment" },
+            },
+          })
+        },
+      }
+    },
+    options: props => {
+      const { id } = props.navigation.state.params.talk
+      return {
+        update: (dataProxy, { data: { createComment } }) => {
+          console.log("createComment: ", createComment)
+          const query = listCommentsForTalk
+          const data = dataProxy.readQuery({ query, variables: { talkId: id } })
+          console.log("data2: ", data)
+          data.listCommentsForTalk.items = data.listCommentsForTalk.items.filter(
+            i => i.id !== createComment.id,
+          )
+          data.listCommentsForTalk.items.push(createComment)
+          console.log("id: ", id)
+          dataProxy.writeQuery({ query, data, variables: { talkId: id } })
+        },
+      }
+    },
+  }),
+  graphql(listCommentsForTalk, {
+    options: props => {
+      const { talk } = props.navigation.state.params
+      return {
+        variables: {
+          talkId: talk.id,
+        },
+        fetchPolicy: "cache-and-network",
+      }
+    },
+    props: props => {
+      console.log("props from talkdetailsscreen: ", props)
+      const { id } = props.ownProps.navigation.state.params.talk
+      return {
+        comments: props.data.listCommentsForTalk ? props.data.listCommentsForTalk.items : [],
+        data: props.data,
+        subscribeToNewComments: params => {
+          props.data.subscribeToMore({
+            document: OnCreateComment,
+            variables: { talkId: id },
+            updateQuery: (prev, { subscriptionData: { data: { onCreateComment } } }) => {
+              console.log("onCreateComment: ", onCreateComment)
+              console.log("pprev.listCommentsForTalk.items.: ", prev.listCommentsForTalk.items)
+
+              let messageArray = prev.listCommentsForTalk.items.filter(
+                message => message.clientId !== onCreateComment.clientId,
+              )
+              messageArray = [...messageArray, onCreateComment]
+
+              return {
+                ...prev,
+                listCommentsForTalk: {
+                  ...prev.listCommentsForTalk,
+                  items: messageArray,
+                },
+              }
+            },
+          })
+        },
+      }
+    },
+  }),
+)(BaseTalkDetailsScreen)
+
+export { TalkDetailsScreen, NavigationStateParams, TalkDetailsScreenProps }
+
+function chosen(type, comp) {
+  if (type === comp) {
+    return {
+      borderBottomWidth: 2,
+      borderBottomColor: "white",
+    }
   }
 }

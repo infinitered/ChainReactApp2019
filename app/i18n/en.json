@@ -11,7 +11,7 @@
     "schedule": "Schedule",
     "venue": "Venue",
     "info": "Info",
-    "ar": "AR"
+    "profile": "Profile"
   },
   "welcomeScreen": {
     "header1": "Welcome to",
@@ -19,6 +19,9 @@
     "subtitle":
       "We've rebuilt our app to make it easier to view the schedule, explore the city, and access need-to-know details!",
     "nextScreenButton": "I'm Ready!"
+  },
+  "profilescreen": {
+    "title": "Profile"
   },
   "scheduleScreen": {
     "title": "Schedule",
