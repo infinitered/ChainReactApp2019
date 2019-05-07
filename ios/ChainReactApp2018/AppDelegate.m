@@ -35,7 +35,7 @@
   #endif
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
-                                                      moduleName:@"ChainReactApp2018"
+                                                      moduleName:@"ChainReactConf"
                                                initialProperties:nil
                                                    launchOptions:launchOptions];
 

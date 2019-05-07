@@ -20,6 +20,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "ChainReactApp2018";
+        return "ChainReactConf";
     }
 }

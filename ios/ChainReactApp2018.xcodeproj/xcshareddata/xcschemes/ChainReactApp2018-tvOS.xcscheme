@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "ChainReactApp2018-tvOS.app"
-               BlueprintName = "ChainReactApp2018-tvOS"
-               ReferencedContainer = "container:ChainReactApp2018.xcodeproj">
+               BuildableName = "ChainReactConf-tvOS.app"
+               BlueprintName = "ChainReactConf-tvOS"
+               ReferencedContainer = "container:ChainReactConf.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "ChainReactApp2018-tvOSTests.xctest"
-               BlueprintName = "ChainReactApp2018-tvOSTests"
-               ReferencedContainer = "container:ChainReactApp2018.xcodeproj">
+               BuildableName = "ChainReactConf-tvOSTests.xctest"
+               BlueprintName = "ChainReactConf-tvOSTests"
+               ReferencedContainer = "container:ChainReactConf.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "ChainReactApp2018-tvOSTests.xctest"
-               BlueprintName = "ChainReactApp2018-tvOSTests"
-               ReferencedContainer = "container:ChainReactApp2018.xcodeproj">
+               BuildableName = "ChainReactConf-tvOSTests.xctest"
+               BlueprintName = "ChainReactConf-tvOSTests"
+               ReferencedContainer = "container:ChainReactConf.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "ChainReactApp2018-tvOS.app"
-            BlueprintName = "ChainReactApp2018-tvOS"
-            ReferencedContainer = "container:ChainReactApp2018.xcodeproj">
+            BuildableName = "ChainReactConf-tvOS.app"
+            BlueprintName = "ChainReactConf-tvOS"
+            ReferencedContainer = "container:ChainReactConf.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "ChainReactApp2018-tvOS.app"
-            BlueprintName = "ChainReactApp2018-tvOS"
-            ReferencedContainer = "container:ChainReactApp2018.xcodeproj">
+            BuildableName = "ChainReactConf-tvOS.app"
+            BlueprintName = "ChainReactConf-tvOS"
+            ReferencedContainer = "container:ChainReactConf.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -113,9 +113,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "ChainReactApp2018-tvOS.app"
-            BlueprintName = "ChainReactApp2018-tvOS"
-            ReferencedContainer = "container:ChainReactApp2018.xcodeproj">
+            BuildableName = "ChainReactConf-tvOS.app"
+            BlueprintName = "ChainReactConf-tvOS"
+            ReferencedContainer = "container:ChainReactConf.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

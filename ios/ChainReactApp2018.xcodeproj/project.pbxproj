@@ -11,7 +11,7 @@
 		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
-		00E356F31AD99517003FC87E /* ChainReactApp2018Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ChainReactApp2018Tests.m */; };
+		00E356F31AD99517003FC87E /* ChainReactConfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ChainReactConfTests.m */; };
 		0E93A57BF67442D2983EE414 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1AACED6FDE4411086DAF21F /* AppCenter-Config.plist */; };
 		11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
@@ -31,14 +31,14 @@
 		2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E901DF850E9000B6D8A /* libRCTSettings-tvOS.a */; };
 		2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E941DF850E9000B6D8A /* libRCTText-tvOS.a */; };
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
-		2DCD954D1E0B4F2C00145EB5 /* ChainReactApp2018Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ChainReactApp2018Tests.m */; };
+		2DCD954D1E0B4F2C00145EB5 /* ChainReactConfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ChainReactConfTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		381C6FAB20E54315008B11AA /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381C6FAA20E54314008B11AA /* Mapbox.framework */; };
 		381C6FAC20E54315008B11AA /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 381C6FAA20E54314008B11AA /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3EABFF5EC2F04B48875D79D5 /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FAF8BBE9814469B8C444E2 /* libSplashScreen.a */; };
 		4790DC9324164219AC9348EA /* libLottie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9A243B10744B7FB09F3A96 /* libLottie.a */; };
 		58E0CE2D84A74FA3A119CFF2 /* libRNKeychain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4584748EEE444C8CBD9718B1 /* libRNKeychain.a */; };
-		66549EBAAD185DA440350B18 /* libPods-ChainReactApp2018.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CC3B19C09761377D3C65FE /* libPods-ChainReactApp2018.a */; };
+		66549EBAAD185DA440350B18 /* libPods-ChainReactConf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CC3B19C09761377D3C65FE /* libPods-ChainReactConf.a */; };
 		79E9137EE55942A081E34C75 /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA4F6F71EDA4A2D857FFD28 /* libRNI18n.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8A34CBED20E5987B00470345 /* ViroKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A34CBC020E5987B00470345 /* ViroKit.framework */; };
@@ -110,7 +110,7 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = ChainReactApp2018;
+			remoteInfo = ChainReactConf;
 		};
 		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -138,7 +138,7 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "ChainReactApp2018-tvOS";
+			remoteInfo = "ChainReactConf-tvOS";
 		};
 		2D16E6711FA4F8DC00B85C8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -473,23 +473,23 @@
 		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
 		00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTNetwork.xcodeproj; path = "../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj"; sourceTree = "<group>"; };
 		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = "../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj"; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* ChainReactApp2018Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChainReactApp2018Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* ChainReactConfTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChainReactConfTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* ChainReactApp2018Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChainReactApp2018Tests.m; sourceTree = "<group>"; };
-		05CC3B19C09761377D3C65FE /* libPods-ChainReactApp2018.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChainReactApp2018.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F21AD99517003FC87E /* ChainReactConfTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChainReactConfTests.m; sourceTree = "<group>"; };
+		05CC3B19C09761377D3C65FE /* libPods-ChainReactConf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChainReactConf.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09FAF8BBE9814469B8C444E2 /* libSplashScreen.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libSplashScreen.a; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* ChainReactApp2018.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChainReactApp2018.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ChainReactApp2018/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ChainReactApp2018/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ChainReactApp2018/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ChainReactApp2018/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ChainReactApp2018/main.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* ChainReactConf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChainReactConf.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ChainReactConf/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ChainReactConf/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ChainReactConf/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ChainReactConf/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ChainReactConf/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		2AA4F6F71EDA4A2D857FFD28 /* libRNI18n.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNI18n.a; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* ChainReactApp2018-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChainReactApp2018-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* ChainReactApp2018-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ChainReactApp2018-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E47B1E0B4A5D006451C7 /* ChainReactConf-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChainReactConf-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* ChainReactConf-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ChainReactConf-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37AA9A562BD84D1AA4CB45A5 /* RNI18n.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNI18n.xcodeproj; path = "../node_modules/react-native-i18n/ios/RNI18n.xcodeproj"; sourceTree = "<group>"; };
 		381C6FAA20E54314008B11AA /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../node_modules/@mapbox/react-native-mapbox-gl/ios/Mapbox.framework"; sourceTree = "<group>"; };
 		4584748EEE444C8CBD9718B1 /* libRNKeychain.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNKeychain.a; sourceTree = "<group>"; };
@@ -498,14 +498,14 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		65458B4DB464475D809F6A9D /* libRNI18n-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNI18n-tvOS.a"; sourceTree = "<group>"; };
 		673384FCBAE54685B2C45B37 /* libLottieReactNative.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libLottieReactNative.a; sourceTree = "<group>"; };
-		6952AD460025C7719CA37D7F /* Pods-ChainReactApp2018.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChainReactApp2018.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChainReactApp2018/Pods-ChainReactApp2018.debug.xcconfig"; sourceTree = "<group>"; };
+		6952AD460025C7719CA37D7F /* Pods-ChainReactConf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChainReactConf.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChainReactConf/Pods-ChainReactConf.debug.xcconfig"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7A50F9986E6042E89B77F295 /* Lottie.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = Lottie.xcodeproj; path = "../node_modules/lottie-ios/Lottie.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8A34CBC020E5987B00470345 /* ViroKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ViroKit.framework; path = "../node_modules/react-viro/ios/dist/ViroRenderer/ViroKit.framework"; sourceTree = "<group>"; };
 		8A34CBEC20E5987B00470345 /* libViroReact.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libViroReact.a; path = "../node_modules/react-viro/ios/dist/lib/libViroReact.a"; sourceTree = "<group>"; };
-		9003EF1BD036BC5F45B18047 /* libPods-ChainReactApp2018-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChainReactApp2018-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		929A100AB2E49489DEF4C73A /* libPods-ChainReactApp2018Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChainReactApp2018Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9003EF1BD036BC5F45B18047 /* libPods-ChainReactConf-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChainReactConf-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		929A100AB2E49489DEF4C73A /* libPods-ChainReactConfTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChainReactConfTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92B2926B20F58779007AF724 /* AppCenterReactNativeShared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppCenterReactNativeShared.framework; sourceTree = "<group>"; };
 		92B2926D20F5886B007AF724 /* AppCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppCenter.framework; sourceTree = "<group>"; };
 		92B2926F20F58878007AF724 /* AppCenterAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppCenterAnalytics.framework; sourceTree = "<group>"; };
@@ -514,13 +514,13 @@
 		92B2927920F588D3007AF724 /* AppCenterReactNativeAnalytics.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNativeAnalytics.xcodeproj; path = "../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics.xcodeproj"; sourceTree = "<group>"; };
 		92B2927F20F588DB007AF724 /* AppCenterReactNativeCrashes.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNativeCrashes.xcodeproj; path = "../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
-		B1AACED6FDE4411086DAF21F /* AppCenter-Config.plist */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "ChainReactApp2018/AppCenter-Config.plist"; sourceTree = "<group>"; };
+		B1AACED6FDE4411086DAF21F /* AppCenter-Config.plist */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "ChainReactConf/AppCenter-Config.plist"; sourceTree = "<group>"; };
 		B21A47A5F92F444C848FDD09 /* RNKeychain.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNKeychain.xcodeproj; path = "../node_modules/react-native-keychain/RNKeychain.xcodeproj"; sourceTree = "<group>"; };
 		B58EB9FE107B440C8E26A7E0 /* SplashScreen.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = SplashScreen.xcodeproj; path = "../node_modules/react-native-splash-screen/ios/SplashScreen.xcodeproj"; sourceTree = "<group>"; };
 		BC7BA294DFD641EAAC8BB216 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = System/Library/Frameworks/Lottie.framework; sourceTree = SDKROOT; };
 		CAF0DE45E9AD4B60989894A6 /* libRCTMGL.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTMGL.a; sourceTree = "<group>"; };
-		E36EB9DE818DFEE6EBA282EB /* libPods-ChainReactApp2018-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChainReactApp2018-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED8B9AAA14F86CE9533AC7C5 /* Pods-ChainReactApp2018.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChainReactApp2018.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChainReactApp2018/Pods-ChainReactApp2018.release.xcconfig"; sourceTree = "<group>"; };
+		E36EB9DE818DFEE6EBA282EB /* libPods-ChainReactConf-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChainReactConf-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED8B9AAA14F86CE9533AC7C5 /* Pods-ChainReactConf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChainReactConf.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChainReactConf/Pods-ChainReactConf.release.xcconfig"; sourceTree = "<group>"; };
 		F3AACC5D093B4422BFAFF50B /* LottieReactNative.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = LottieReactNative.xcodeproj; path = "../node_modules/lottie-react-native/src/ios/LottieReactNative.xcodeproj"; sourceTree = "<group>"; };
 		97214954C2FB4A808C4F8A62 /* GothamRnd-Bold.otf */ = {isa = PBXFileReference; name = "GothamRnd-Bold.otf"; path = "../app/theme/fonts/GothamRnd-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		606231E212304B7AABC748AA /* GothamRnd-BoldItal.otf */ = {isa = PBXFileReference; name = "GothamRnd-BoldItal.otf"; path = "../app/theme/fonts/GothamRnd-BoldItal.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
@@ -577,7 +577,7 @@
 				A3580AF649A04E86B2D9164A /* Lottie.framework in Frameworks */,
 				4790DC9324164219AC9348EA /* libLottie.a in Frameworks */,
 				FD6C522D01B746D99BB49188 /* libLottieReactNative.a in Frameworks */,
-				66549EBAAD185DA440350B18 /* libPods-ChainReactApp2018.a in Frameworks */,
+				66549EBAAD185DA440350B18 /* libPods-ChainReactConf.a in Frameworks */,
 				AB31D29C8C3A4F21814A9B98 /* libAppCenterReactNativePush.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,13 +650,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		00E356EF1AD99517003FC87E /* ChainReactApp2018Tests */ = {
+		00E356EF1AD99517003FC87E /* ChainReactConfTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* ChainReactApp2018Tests.m */,
+				00E356F21AD99517003FC87E /* ChainReactConfTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = ChainReactApp2018Tests;
+			path = ChainReactConfTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -687,7 +687,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* ChainReactApp2018 */ = {
+		13B07FAE1A68108700A75B9A /* ChainReactConf */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -697,7 +697,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = ChainReactApp2018;
+			name = ChainReactConf;
 			sourceTree = "<group>";
 		};
 		146834001AC3E56700842450 /* Products */ = {
@@ -728,10 +728,10 @@
 			children = (
 				8A34CBEC20E5987B00470345 /* libViroReact.a */,
 				8A34CBC020E5987B00470345 /* ViroKit.framework */,
-				05CC3B19C09761377D3C65FE /* libPods-ChainReactApp2018.a */,
-				9003EF1BD036BC5F45B18047 /* libPods-ChainReactApp2018-tvOS.a */,
-				E36EB9DE818DFEE6EBA282EB /* libPods-ChainReactApp2018-tvOSTests.a */,
-				929A100AB2E49489DEF4C73A /* libPods-ChainReactApp2018Tests.a */,
+				05CC3B19C09761377D3C65FE /* libPods-ChainReactConf.a */,
+				9003EF1BD036BC5F45B18047 /* libPods-ChainReactConf-tvOS.a */,
+				E36EB9DE818DFEE6EBA282EB /* libPods-ChainReactConf-tvOSTests.a */,
+				929A100AB2E49489DEF4C73A /* libPods-ChainReactConfTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -739,8 +739,8 @@
 		350FA8AA4CD89455A0D01762 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6952AD460025C7719CA37D7F /* Pods-ChainReactApp2018.debug.xcconfig */,
-				ED8B9AAA14F86CE9533AC7C5 /* Pods-ChainReactApp2018.release.xcconfig */,
+				6952AD460025C7719CA37D7F /* Pods-ChainReactConf.debug.xcconfig */,
+				ED8B9AAA14F86CE9533AC7C5 /* Pods-ChainReactConf.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -858,9 +858,9 @@
 				92B2926D20F5886B007AF724 /* AppCenter.framework */,
 				92B2926B20F58779007AF724 /* AppCenterReactNativeShared.framework */,
 				381C6FAA20E54314008B11AA /* Mapbox.framework */,
-				13B07FAE1A68108700A75B9A /* ChainReactApp2018 */,
+				13B07FAE1A68108700A75B9A /* ChainReactConf */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* ChainReactApp2018Tests */,
+				00E356EF1AD99517003FC87E /* ChainReactConfTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				FF0D5A5161824610A946E6BC /* Resources */,
@@ -876,10 +876,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* ChainReactApp2018.app */,
-				00E356EE1AD99517003FC87E /* ChainReactApp2018Tests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* ChainReactApp2018-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* ChainReactApp2018-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* ChainReactConf.app */,
+				00E356EE1AD99517003FC87E /* ChainReactConfTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* ChainReactConf-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* ChainReactConf-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -954,9 +954,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* ChainReactApp2018Tests */ = {
+		00E356ED1AD99517003FC87E /* ChainReactConfTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ChainReactApp2018Tests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ChainReactConfTests" */;
 			buildPhases = (
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
@@ -967,14 +967,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = ChainReactApp2018Tests;
-			productName = ChainReactApp2018Tests;
-			productReference = 00E356EE1AD99517003FC87E /* ChainReactApp2018Tests.xctest */;
+			name = ChainReactConfTests;
+			productName = ChainReactConfTests;
+			productReference = 00E356EE1AD99517003FC87E /* ChainReactConfTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* ChainReactApp2018 */ = {
+		13B07F861A680F5B00A75B9A /* ChainReactConf */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ChainReactApp2018" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ChainReactConf" */;
 			buildPhases = (
 				4DCA7952C892A20BA7AB9106 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
@@ -989,14 +989,14 @@
 			dependencies = (
 				8A34CE2D20E5A3E900470345 /* PBXTargetDependency */,
 			);
-			name = ChainReactApp2018;
+			name = ChainReactConf;
 			productName = "Hello World";
-			productReference = 13B07F961A680F5B00A75B9A /* ChainReactApp2018.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* ChainReactConf.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* ChainReactApp2018-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* ChainReactConf-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ChainReactApp2018-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ChainReactConf-tvOS" */;
 			buildPhases = (
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -1007,14 +1007,14 @@
 			);
 			dependencies = (
 			);
-			name = "ChainReactApp2018-tvOS";
-			productName = "ChainReactApp2018-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* ChainReactApp2018-tvOS.app */;
+			name = "ChainReactConf-tvOS";
+			productName = "ChainReactConf-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* ChainReactConf-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* ChainReactApp2018-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* ChainReactConf-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ChainReactApp2018-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ChainReactConf-tvOSTests" */;
 			buildPhases = (
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
@@ -1025,9 +1025,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "ChainReactApp2018-tvOSTests";
-			productName = "ChainReactApp2018-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* ChainReactApp2018-tvOSTests.xctest */;
+			name = "ChainReactConf-tvOSTests";
+			productName = "ChainReactConf-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* ChainReactConf-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -1060,7 +1060,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ChainReactApp2018" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ChainReactConf" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1159,10 +1159,10 @@
 			);
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* ChainReactApp2018 */,
-				00E356ED1AD99517003FC87E /* ChainReactApp2018Tests */,
-				2D02E47A1E0B4A5D006451C7 /* ChainReactApp2018-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* ChainReactApp2018-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* ChainReactConf */,
+				00E356ED1AD99517003FC87E /* ChainReactConfTests */,
+				2D02E47A1E0B4A5D006451C7 /* ChainReactConf-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* ChainReactConf-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1626,7 +1626,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ChainReactApp2018-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ChainReactConf-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1640,7 +1640,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* ChainReactApp2018Tests.m in Sources */,
+				00E356F31AD99517003FC87E /* ChainReactConfTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1665,7 +1665,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* ChainReactApp2018Tests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* ChainReactConfTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1674,12 +1674,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* ChainReactApp2018 */;
+			target = 13B07F861A680F5B00A75B9A /* ChainReactConf */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* ChainReactApp2018-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* ChainReactConf-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 		8A34CE2D20E5A3E900470345 /* PBXTargetDependency */ = {
@@ -1709,7 +1709,7 @@
 					"$(SRCROOT)/../node_modules/lottie-react-native/src/ios/LottieReactNative",
 					"$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush",
 				);
-				INFOPLIST_FILE = ChainReactApp2018Tests/Info.plist;
+				INFOPLIST_FILE = ChainReactConfTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1730,7 +1730,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = infinitered.stage.ChainReactConf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChainReactApp2018.app/ChainReactApp2018";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChainReactConf.app/ChainReactConf";
 			};
 			name = Debug;
 		};
@@ -1750,7 +1750,7 @@
 					"$(SRCROOT)/../node_modules/lottie-react-native/src/ios/LottieReactNative",
 					"$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush",
 				);
-				INFOPLIST_FILE = ChainReactApp2018Tests/Info.plist;
+				INFOPLIST_FILE = ChainReactConfTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1771,13 +1771,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = infinitered.stage.ChainReactConf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChainReactApp2018.app/ChainReactApp2018";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChainReactConf.app/ChainReactConf";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6952AD460025C7719CA37D7F /* Pods-ChainReactApp2018.debug.xcconfig */;
+			baseConfigurationReference = 6952AD460025C7719CA37D7F /* Pods-ChainReactConf.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1806,7 +1806,7 @@
 					"$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes",
 					"$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush",
 				);
-				INFOPLIST_FILE = ChainReactApp2018/Info.plist;
+				INFOPLIST_FILE = ChainReactConf/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../node_modules/react-viro/ios/dist/lib";
@@ -1816,7 +1816,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = infinitered.stage.ChainReactConf;
-				PRODUCT_NAME = ChainReactApp2018;
+				PRODUCT_NAME = ChainReactConf;
 				PROVISIONING_PROFILE = "d63749b1-a778-4ccd-97cc-2690705c5dab";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development infinitered.stage.ChainReactConf 1530133221";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1826,7 +1826,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED8B9AAA14F86CE9533AC7C5 /* Pods-ChainReactApp2018.release.xcconfig */;
+			baseConfigurationReference = ED8B9AAA14F86CE9533AC7C5 /* Pods-ChainReactConf.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1854,7 +1854,7 @@
 					"$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes",
 					"$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush",
 				);
-				INFOPLIST_FILE = ChainReactApp2018/Info.plist;
+				INFOPLIST_FILE = ChainReactConf/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../node_modules/react-viro/ios/dist/lib";
@@ -1864,7 +1864,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = infinitered.stage.ChainReactConf;
-				PRODUCT_NAME = ChainReactApp2018;
+				PRODUCT_NAME = ChainReactConf;
 				PROVISIONING_PROFILE = "deed921e-f216-4d7e-9d3f-2f69fe457a44";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore infinitered.stage.ChainReactConf";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1895,7 +1895,7 @@
 					"$(SRCROOT)/../node_modules/lottie-react-native/src/ios/LottieReactNative",
 					"$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush",
 				);
-				INFOPLIST_FILE = "ChainReactApp2018-tvOS/Info.plist";
+				INFOPLIST_FILE = "ChainReactConf-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1913,7 +1913,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ChainReactApp2018-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ChainReactConf-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
@@ -1946,7 +1946,7 @@
 					"$(SRCROOT)/../node_modules/lottie-react-native/src/ios/LottieReactNative",
 					"$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush",
 				);
-				INFOPLIST_FILE = "ChainReactApp2018-tvOS/Info.plist";
+				INFOPLIST_FILE = "ChainReactConf-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1964,7 +1964,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ChainReactApp2018-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ChainReactConf-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
@@ -1995,7 +1995,7 @@
 					"$(SRCROOT)/../node_modules/lottie-react-native/src/ios/LottieReactNative",
 					"$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush",
 				);
-				INFOPLIST_FILE = "ChainReactApp2018-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "ChainReactConf-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2013,10 +2013,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ChainReactApp2018-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ChainReactConf-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChainReactApp2018-tvOS.app/ChainReactApp2018-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChainReactConf-tvOS.app/ChainReactConf-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
@@ -2043,7 +2043,7 @@
 					"$(SRCROOT)/../node_modules/lottie-react-native/src/ios/LottieReactNative",
 					"$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush",
 				);
-				INFOPLIST_FILE = "ChainReactApp2018-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "ChainReactConf-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2061,10 +2061,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ChainReactApp2018-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ChainReactConf-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChainReactApp2018-tvOS.app/ChainReactApp2018-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChainReactConf-tvOS.app/ChainReactConf-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -2171,7 +2171,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ChainReactApp2018Tests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ChainReactConfTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -2180,7 +2180,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ChainReactApp2018" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ChainReactConf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -2189,7 +2189,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ChainReactApp2018-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ChainReactConf-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -2198,7 +2198,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ChainReactApp2018-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ChainReactConf-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -2207,7 +2207,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ChainReactApp2018" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ChainReactConf" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

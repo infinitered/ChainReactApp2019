@@ -104,7 +104,7 @@ export class App extends React.Component<{}, AppState> {
 /**
  * This needs to match what's found in your app_delegate.m and MainActivity.java.
  */
-const APP_NAME = "ChainReactApp2018"
+const APP_NAME = "ChainReactConf"
 
 // Should we show storybook instead of our app?
 //
