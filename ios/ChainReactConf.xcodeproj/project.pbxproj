@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -12,6 +13,7 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* ChainReactConfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ChainReactConfTests.m */; };
+		0226FFDE304446848A8C1E7E /* GothamRnd-BookItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 37E983621E544847B913FFD9 /* GothamRnd-BookItal.otf */; };
 		0E93A57BF67442D2983EE414 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1AACED6FDE4411086DAF21F /* AppCenter-Config.plist */; };
 		11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
@@ -22,6 +24,8 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		1E4BC119CE254DA394CD671F /* GothamRnd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9ED1812F5F75456CA751E1FB /* GothamRnd-Medium.otf */; };
+		1ECEEECE3D0F48B7A3E38B00 /* GothamRnd-BoldItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 606231E212304B7AABC748AA /* GothamRnd-BoldItal.otf */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2D02E4C21E0B4AEC006451C7 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157351DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
@@ -33,12 +37,14 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* ChainReactConfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ChainReactConfTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
+		336489F9EB834C3CA0F77620 /* GothamRnd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 701C1A6E70D440FC9B653471 /* GothamRnd-Book.otf */; };
 		381C6FAB20E54315008B11AA /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381C6FAA20E54314008B11AA /* Mapbox.framework */; };
 		381C6FAC20E54315008B11AA /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 381C6FAA20E54314008B11AA /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3EABFF5EC2F04B48875D79D5 /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FAF8BBE9814469B8C444E2 /* libSplashScreen.a */; };
 		4790DC9324164219AC9348EA /* libLottie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9A243B10744B7FB09F3A96 /* libLottie.a */; };
 		58E0CE2D84A74FA3A119CFF2 /* libRNKeychain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4584748EEE444C8CBD9718B1 /* libRNKeychain.a */; };
 		66549EBAAD185DA440350B18 /* libPods-ChainReactConf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CC3B19C09761377D3C65FE /* libPods-ChainReactConf.a */; };
+		6D91659140B34158A386B6AD /* GothamRnd-LightItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 99FAFA465416484F811EE8FA /* GothamRnd-LightItal.otf */; };
 		79E9137EE55942A081E34C75 /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA4F6F71EDA4A2D857FFD28 /* libRNI18n.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8A34CBED20E5987B00470345 /* ViroKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A34CBC020E5987B00470345 /* ViroKit.framework */; };
@@ -54,19 +60,14 @@
 		92B2928620F5890D007AF724 /* libAppCenterReactNativeAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B2927E20F588D3007AF724 /* libAppCenterReactNativeAnalytics.a */; };
 		92B2928720F5890D007AF724 /* libAppCenterReactNativeCrashes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B2928420F588DC007AF724 /* libAppCenterReactNativeCrashes.a */; };
 		A3580AF649A04E86B2D9164A /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7BA294DFD641EAAC8BB216 /* Lottie.framework */; };
+		AB31D29C8C3A4F21814A9B98 /* libAppCenterReactNativePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF482FAB974F4ABF98F1E710 /* libAppCenterReactNativePush.a */; };
+		AB388666685D4143B733CB0D /* GothamRnd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 97214954C2FB4A808C4F8A62 /* GothamRnd-Bold.otf */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		DA4417FE69724F0596E323D2 /* GothamRnd-MedItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC50B8C1FDA54B4AB12134F8 /* GothamRnd-MedItal.otf */; };
 		DEF6A9377F5642CF93683E77 /* libRCTMGL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF0DE45E9AD4B60989894A6 /* libRCTMGL.a */; };
 		E8519D6B2799422E8BAA0D6D /* libRNI18n-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65458B4DB464475D809F6A9D /* libRNI18n-tvOS.a */; };
-		FD6C522D01B746D99BB49188 /* libLottieReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 673384FCBAE54685B2C45B37 /* libLottieReactNative.a */; };
-		AB388666685D4143B733CB0D /* GothamRnd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 97214954C2FB4A808C4F8A62 /* GothamRnd-Bold.otf */; };
-		1ECEEECE3D0F48B7A3E38B00 /* GothamRnd-BoldItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 606231E212304B7AABC748AA /* GothamRnd-BoldItal.otf */; };
-		336489F9EB834C3CA0F77620 /* GothamRnd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 701C1A6E70D440FC9B653471 /* GothamRnd-Book.otf */; };
-		0226FFDE304446848A8C1E7E /* GothamRnd-BookItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 37E983621E544847B913FFD9 /* GothamRnd-BookItal.otf */; };
 		F04AC33984E44F9A84BF2922 /* GothamRnd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B976D889CA0B4DFE8D6E58D0 /* GothamRnd-Light.otf */; };
-		6D91659140B34158A386B6AD /* GothamRnd-LightItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 99FAFA465416484F811EE8FA /* GothamRnd-LightItal.otf */; };
-		DA4417FE69724F0596E323D2 /* GothamRnd-MedItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC50B8C1FDA54B4AB12134F8 /* GothamRnd-MedItal.otf */; };
-		1E4BC119CE254DA394CD671F /* GothamRnd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9ED1812F5F75456CA751E1FB /* GothamRnd-Medium.otf */; };
-		AB31D29C8C3A4F21814A9B98 /* libAppCenterReactNativePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF482FAB974F4ABF98F1E710 /* libAppCenterReactNativePush.a */; };
+		FD6C522D01B746D99BB49188 /* libLottieReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 673384FCBAE54685B2C45B37 /* libLottieReactNative.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -203,20 +204,6 @@
 			remoteGlobalIDString = 3D383D621EBD27B9005632C8;
 			remoteInfo = "double-conversion-tvOS";
 		};
-		2DF0FFEA2056DD460020B375 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9936F3131F5F2E4B0010BF04;
-			remoteInfo = privatedata;
-		};
-		2DF0FFEC2056DD460020B375 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9936F32F1F5F2E5B0010BF04;
-			remoteInfo = "privatedata-tvOS";
-		};
 		381C6EE120E53C59008B11AA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 37AA9A562BD84D1AA4CB45A5 /* RNI18n.xcodeproj */;
@@ -336,20 +323,6 @@
 			remoteGlobalIDString = 3D3CD9321DE5FBEE00167DC4;
 			remoteInfo = "cxxreact-tvOS";
 		};
-		3DAD3EAC1DF850E9000B6D8A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3D3CD90B1DE5FBD600167DC4;
-			remoteInfo = jschelpers;
-		};
-		3DAD3EAE1DF850E9000B6D8A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3D3CD9181DE5FBD800167DC4;
-			remoteInfo = "jschelpers-tvOS";
-		};
 		5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
@@ -448,6 +421,48 @@
 			remoteGlobalIDString = 358F4ED71D1E81A9004DF814;
 			remoteInfo = RCTBlob;
 		};
+		E994BB7B2282480D001D5F37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A50F9986E6042E89B77F295 /* Lottie.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6445B0D5207E0D4D00D84F6A;
+			remoteInfo = LottieLibraryMacOS;
+		};
+		E994BBA42282480D001D5F37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EDEBC6D6214B3E7000DD5AC8;
+			remoteInfo = jsi;
+		};
+		E994BBA62282480D001D5F37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EDEBC73B214B45A300DD5AC8;
+			remoteInfo = jsiexecutor;
+		};
+		E994BBA82282480D001D5F37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ED296FB6214C9A0900B7C4FE;
+			remoteInfo = "jsi-tvOS";
+		};
+		E994BBAA2282480D001D5F37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ED296FEE214C9CF800B7C4FE;
+			remoteInfo = "jsiexecutor-tvOS";
+		};
+		E994BBB422824811001D5F37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6AB71DB50404BF7A920D39D /* AppCenterReactNativePush.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BA189FAA1EEE74F100CAD13F;
+			remoteInfo = AppCenterReactNativePush;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -491,14 +506,17 @@
 		2D02E47B1E0B4A5D006451C7 /* ChainReactConf-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChainReactConf-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* ChainReactConf-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ChainReactConf-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37AA9A562BD84D1AA4CB45A5 /* RNI18n.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNI18n.xcodeproj; path = "../node_modules/react-native-i18n/ios/RNI18n.xcodeproj"; sourceTree = "<group>"; };
+		37E983621E544847B913FFD9 /* GothamRnd-BookItal.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-BookItal.otf"; path = "../app/theme/fonts/GothamRnd-BookItal.otf"; sourceTree = "<group>"; };
 		381C6FAA20E54314008B11AA /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../node_modules/@mapbox/react-native-mapbox-gl/ios/Mapbox.framework"; sourceTree = "<group>"; };
 		4584748EEE444C8CBD9718B1 /* libRNKeychain.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNKeychain.a; sourceTree = "<group>"; };
 		5C9A243B10744B7FB09F3A96 /* libLottie.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libLottie.a; sourceTree = "<group>"; };
 		5D7BCAA7E3DA4B348A4C1E71 /* RCTMGL.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTMGL.xcodeproj; path = "../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL.xcodeproj"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		606231E212304B7AABC748AA /* GothamRnd-BoldItal.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-BoldItal.otf"; path = "../app/theme/fonts/GothamRnd-BoldItal.otf"; sourceTree = "<group>"; };
 		65458B4DB464475D809F6A9D /* libRNI18n-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNI18n-tvOS.a"; sourceTree = "<group>"; };
 		673384FCBAE54685B2C45B37 /* libLottieReactNative.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libLottieReactNative.a; sourceTree = "<group>"; };
 		6952AD460025C7719CA37D7F /* Pods-ChainReactConf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChainReactConf.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChainReactConf/Pods-ChainReactConf.debug.xcconfig"; sourceTree = "<group>"; };
+		701C1A6E70D440FC9B653471 /* GothamRnd-Book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-Book.otf"; path = "../app/theme/fonts/GothamRnd-Book.otf"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7A50F9986E6042E89B77F295 /* Lottie.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = Lottie.xcodeproj; path = "../node_modules/lottie-ios/Lottie.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -513,25 +531,22 @@
 		92B2927320F588BC007AF724 /* AppCenterReactNative.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNative.xcodeproj; path = ../node_modules/appcenter/ios/AppCenterReactNative.xcodeproj; sourceTree = "<group>"; };
 		92B2927920F588D3007AF724 /* AppCenterReactNativeAnalytics.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNativeAnalytics.xcodeproj; path = "../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics.xcodeproj"; sourceTree = "<group>"; };
 		92B2927F20F588DB007AF724 /* AppCenterReactNativeCrashes.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNativeCrashes.xcodeproj; path = "../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes.xcodeproj"; sourceTree = "<group>"; };
+		97214954C2FB4A808C4F8A62 /* GothamRnd-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-Bold.otf"; path = "../app/theme/fonts/GothamRnd-Bold.otf"; sourceTree = "<group>"; };
+		99FAFA465416484F811EE8FA /* GothamRnd-LightItal.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-LightItal.otf"; path = "../app/theme/fonts/GothamRnd-LightItal.otf"; sourceTree = "<group>"; };
+		9ED1812F5F75456CA751E1FB /* GothamRnd-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-Medium.otf"; path = "../app/theme/fonts/GothamRnd-Medium.otf"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		B1AACED6FDE4411086DAF21F /* AppCenter-Config.plist */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "ChainReactConf/AppCenter-Config.plist"; sourceTree = "<group>"; };
 		B21A47A5F92F444C848FDD09 /* RNKeychain.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNKeychain.xcodeproj; path = "../node_modules/react-native-keychain/RNKeychain.xcodeproj"; sourceTree = "<group>"; };
 		B58EB9FE107B440C8E26A7E0 /* SplashScreen.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = SplashScreen.xcodeproj; path = "../node_modules/react-native-splash-screen/ios/SplashScreen.xcodeproj"; sourceTree = "<group>"; };
+		B976D889CA0B4DFE8D6E58D0 /* GothamRnd-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-Light.otf"; path = "../app/theme/fonts/GothamRnd-Light.otf"; sourceTree = "<group>"; };
 		BC7BA294DFD641EAAC8BB216 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = System/Library/Frameworks/Lottie.framework; sourceTree = SDKROOT; };
 		CAF0DE45E9AD4B60989894A6 /* libRCTMGL.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTMGL.a; sourceTree = "<group>"; };
+		D6AB71DB50404BF7A920D39D /* AppCenterReactNativePush.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNativePush.xcodeproj; path = "../node_modules/appcenter-push/ios/AppCenterReactNativePush.xcodeproj"; sourceTree = "<group>"; };
+		DF482FAB974F4ABF98F1E710 /* libAppCenterReactNativePush.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAppCenterReactNativePush.a; sourceTree = "<group>"; };
 		E36EB9DE818DFEE6EBA282EB /* libPods-ChainReactConf-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChainReactConf-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED8B9AAA14F86CE9533AC7C5 /* Pods-ChainReactConf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChainReactConf.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChainReactConf/Pods-ChainReactConf.release.xcconfig"; sourceTree = "<group>"; };
 		F3AACC5D093B4422BFAFF50B /* LottieReactNative.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = LottieReactNative.xcodeproj; path = "../node_modules/lottie-react-native/src/ios/LottieReactNative.xcodeproj"; sourceTree = "<group>"; };
-		97214954C2FB4A808C4F8A62 /* GothamRnd-Bold.otf */ = {isa = PBXFileReference; name = "GothamRnd-Bold.otf"; path = "../app/theme/fonts/GothamRnd-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		606231E212304B7AABC748AA /* GothamRnd-BoldItal.otf */ = {isa = PBXFileReference; name = "GothamRnd-BoldItal.otf"; path = "../app/theme/fonts/GothamRnd-BoldItal.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		701C1A6E70D440FC9B653471 /* GothamRnd-Book.otf */ = {isa = PBXFileReference; name = "GothamRnd-Book.otf"; path = "../app/theme/fonts/GothamRnd-Book.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		37E983621E544847B913FFD9 /* GothamRnd-BookItal.otf */ = {isa = PBXFileReference; name = "GothamRnd-BookItal.otf"; path = "../app/theme/fonts/GothamRnd-BookItal.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B976D889CA0B4DFE8D6E58D0 /* GothamRnd-Light.otf */ = {isa = PBXFileReference; name = "GothamRnd-Light.otf"; path = "../app/theme/fonts/GothamRnd-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		99FAFA465416484F811EE8FA /* GothamRnd-LightItal.otf */ = {isa = PBXFileReference; name = "GothamRnd-LightItal.otf"; path = "../app/theme/fonts/GothamRnd-LightItal.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		FC50B8C1FDA54B4AB12134F8 /* GothamRnd-MedItal.otf */ = {isa = PBXFileReference; name = "GothamRnd-MedItal.otf"; path = "../app/theme/fonts/GothamRnd-MedItal.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		9ED1812F5F75456CA751E1FB /* GothamRnd-Medium.otf */ = {isa = PBXFileReference; name = "GothamRnd-Medium.otf"; path = "../app/theme/fonts/GothamRnd-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D6AB71DB50404BF7A920D39D /* AppCenterReactNativePush.xcodeproj */ = {isa = PBXFileReference; name = "AppCenterReactNativePush.xcodeproj"; path = "../node_modules/appcenter-push/ios/AppCenterReactNativePush.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		DF482FAB974F4ABF98F1E710 /* libAppCenterReactNativePush.a */ = {isa = PBXFileReference; name = "libAppCenterReactNativePush.a"; path = "libAppCenterReactNativePush.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		FC50B8C1FDA54B4AB12134F8 /* GothamRnd-MedItal.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-MedItal.otf"; path = "../app/theme/fonts/GothamRnd-MedItal.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -709,16 +724,16 @@
 				3DAD3EA71DF850E9000B6D8A /* libyoga.a */,
 				3DAD3EA91DF850E9000B6D8A /* libcxxreact.a */,
 				3DAD3EAB1DF850E9000B6D8A /* libcxxreact.a */,
-				3DAD3EAD1DF850E9000B6D8A /* libjschelpers.a */,
-				3DAD3EAF1DF850E9000B6D8A /* libjschelpers.a */,
 				2DF0FFDF2056DD460020B375 /* libjsinspector.a */,
 				2DF0FFE12056DD460020B375 /* libjsinspector-tvOS.a */,
 				2DF0FFE32056DD460020B375 /* libthird-party.a */,
 				2DF0FFE52056DD460020B375 /* libthird-party.a */,
 				2DF0FFE72056DD460020B375 /* libdouble-conversion.a */,
 				2DF0FFE92056DD460020B375 /* libdouble-conversion.a */,
-				2DF0FFEB2056DD460020B375 /* libprivatedata.a */,
-				2DF0FFED2056DD460020B375 /* libprivatedata-tvOS.a */,
+				E994BBA52282480D001D5F37 /* libjsi.a */,
+				E994BBA72282480D001D5F37 /* libjsiexecutor.a */,
+				E994BBA92282480D001D5F37 /* libjsi-tvOS.a */,
+				E994BBAB2282480D001D5F37 /* libjsiexecutor-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -756,6 +771,7 @@
 				BC7BA294DFD641EAAC8BB216 /* Lottie.framework */,
 				5C9A243B10744B7FB09F3A96 /* libLottie.a */,
 				673384FCBAE54685B2C45B37 /* libLottieReactNative.a */,
+				DF482FAB974F4ABF98F1E710 /* libAppCenterReactNativePush.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -891,6 +907,7 @@
 				8A34CC6A20E59D8800470345 /* Lottie.framework */,
 				8A34CC6C20E59D8800470345 /* Lottie.framework */,
 				8A34CC6E20E59D8800470345 /* libLottie.a */,
+				E994BB7C2282480D001D5F37 /* libLottie.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -932,6 +949,14 @@
 			children = (
 				ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */,
 				2D16E6721FA4F8DC00B85C8A /* libRCTBlob-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E994BBB122824810001D5F37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E994BBB522824811001D5F37 /* libAppCenterReactNativePush.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1046,7 +1071,7 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = L7YNDPLSEB;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1065,6 +1090,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1083,6 +1109,10 @@
 				{
 					ProductGroup = 92B2928020F588DB007AF724 /* Products */;
 					ProjectRef = 92B2927F20F588DB007AF724 /* AppCenterReactNativeCrashes.xcodeproj */;
+				},
+				{
+					ProductGroup = E994BBB122824810001D5F37 /* Products */;
+					ProjectRef = D6AB71DB50404BF7A920D39D /* AppCenterReactNativePush.xcodeproj */;
 				},
 				{
 					ProductGroup = 8A34CC6120E59D8800470345 /* Products */;
@@ -1287,20 +1317,6 @@
 			remoteRef = 2DF0FFE82056DD460020B375 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2DF0FFEB2056DD460020B375 /* libprivatedata.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libprivatedata.a;
-			remoteRef = 2DF0FFEA2056DD460020B375 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2DF0FFED2056DD460020B375 /* libprivatedata-tvOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libprivatedata-tvOS.a";
-			remoteRef = 2DF0FFEC2056DD460020B375 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		381C6EE220E53C59008B11AA /* libRNI18n.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1420,20 +1436,6 @@
 			remoteRef = 3DAD3EAA1DF850E9000B6D8A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		3DAD3EAD1DF850E9000B6D8A /* libjschelpers.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libjschelpers.a;
-			remoteRef = 3DAD3EAC1DF850E9000B6D8A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3DAD3EAF1DF850E9000B6D8A /* libjschelpers.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libjschelpers.a;
-			remoteRef = 3DAD3EAE1DF850E9000B6D8A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1525,6 +1527,48 @@
 			remoteRef = ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		E994BB7C2282480D001D5F37 /* libLottie.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libLottie.a;
+			remoteRef = E994BB7B2282480D001D5F37 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E994BBA52282480D001D5F37 /* libjsi.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjsi.a;
+			remoteRef = E994BBA42282480D001D5F37 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E994BBA72282480D001D5F37 /* libjsiexecutor.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjsiexecutor.a;
+			remoteRef = E994BBA62282480D001D5F37 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E994BBA92282480D001D5F37 /* libjsi-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libjsi-tvOS.a";
+			remoteRef = E994BBA82282480D001D5F37 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E994BBAB2282480D001D5F37 /* libjsiexecutor-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libjsiexecutor-tvOS.a";
+			remoteRef = E994BBAA2282480D001D5F37 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E994BBB522824811001D5F37 /* libAppCenterReactNativePush.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAppCenterReactNativePush.a;
+			remoteRef = E994BBB422824811001D5F37 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1582,7 +1626,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1609,7 +1653,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework/strip-frameworks.sh\"";
+			shellScript = "\"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework/strip-frameworks.sh\"\n";
 		};
 		4DCA7952C892A20BA7AB9106 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1782,10 +1826,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 16;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = L7YNDPLSEB;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				ENABLE_ONLY_ACTIVE_RESOURCES = NO;
 				HEADER_SEARCH_PATHS = (
@@ -1812,7 +1856,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = infinitered.stage.ChainReactConf;
 				PRODUCT_NAME = ChainReactConf;
 				PROVISIONING_PROFILE = "d63749b1-a778-4ccd-97cc-2690705c5dab";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development infinitered.stage.ChainReactConf 1530133221";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1824,10 +1868,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 16;
-				DEVELOPMENT_TEAM = L7YNDPLSEB;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				ENABLE_ONLY_ACTIVE_RESOURCES = NO;
 				HEADER_SEARCH_PATHS = (
@@ -1854,7 +1898,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = infinitered.stage.ChainReactConf;
 				PRODUCT_NAME = ChainReactConf;
 				PROVISIONING_PROFILE = "deed921e-f216-4d7e-9d3f-2f69fe457a44";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore infinitered.stage.ChainReactConf";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -2087,7 +2131,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -2138,7 +2182,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -2152,7 +2196,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
+				VALIDATE_PRODUCT = NO;
 			};
 			name = Release;
 		};
