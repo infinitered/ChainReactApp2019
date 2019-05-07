@@ -1788,11 +1788,6 @@
 				DEVELOPMENT_TEAM = L7YNDPLSEB;
 				ENABLE_BITCODE = NO;
 				ENABLE_ONLY_ACTIVE_RESOURCES = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../node_modules/@mapbox/react-native-mapbox-gl/ios",
-					"$(PROJECT_DIR)/../node_modules/react-viro/ios/dist/ViroRenderer",
-					"$(PROJECT_DIR)",
-				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
@@ -1809,7 +1804,6 @@
 				INFOPLIST_FILE = ChainReactConf/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../node_modules/react-viro/ios/dist/lib";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1836,11 +1830,6 @@
 				DEVELOPMENT_TEAM = L7YNDPLSEB;
 				ENABLE_BITCODE = NO;
 				ENABLE_ONLY_ACTIVE_RESOURCES = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../node_modules/@mapbox/react-native-mapbox-gl/ios",
-					"$(PROJECT_DIR)/../node_modules/react-viro/ios/dist/ViroRenderer",
-					"$(PROJECT_DIR)",
-				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
@@ -1857,7 +1846,6 @@
 				INFOPLIST_FILE = ChainReactConf/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../node_modules/react-viro/ios/dist/lib";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

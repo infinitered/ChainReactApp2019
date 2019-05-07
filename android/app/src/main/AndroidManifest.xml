@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <uses-permission android:name="android.permission.CAMERA" />
 
-    <uses-sdk android:minSdkVersion="16" tools:overrideLibrary="com.viro.renderer, com.viromedia.virobridge"/>
+    <!-- <uses-sdk android:minSdkVersion="16" tools:overrideLibrary="com.viro.renderer, com.viromedia.virobridge"/> -->
 
     <application
       android:name=".MainApplication"

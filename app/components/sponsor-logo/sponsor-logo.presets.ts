@@ -38,7 +38,6 @@ export const sponsors = {
   amazon: require("./logos/Gold_AmazonAWS.png"),
   formidable: require("./logos/Gold_Formidable.png"),
   taxslayer: require("./logos/Gold_Taxslayer.png"),
-  viro: require("./logos/Gold_Viro.png"),
   bugsnag: require("./logos/Silver_Bugsnag.png"),
   builderX: require("./logos/Silver_BuilderX.png"),
   callstack: require("./logos/Silver_Callstack.png"),

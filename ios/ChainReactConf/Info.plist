@@ -53,12 +53,6 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>NSCameraUsageDescription</key>
-	<string>Need Camera access for AR feature</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Access is needed to calibrate video in our VR experience</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Access is needed for our VR experience</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>GothamRnd-Bold.otf</string>

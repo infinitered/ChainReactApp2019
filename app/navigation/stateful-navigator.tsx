@@ -23,8 +23,6 @@ export class StatefulNavigator extends React.Component<StatefulNavigatorProps, {
       addListener,
     }
 
-    // if the saved route is the arscreen, re-route the user to the artab
-    // only on firstRun
     const route = this.props.navigationStore.findCurrentRoute()
 
     firstRun = false
