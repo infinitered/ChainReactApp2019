@@ -25,3 +25,7 @@ if ! [ -x "$(command -v pod)" ]; then
   exit 1
 fi
 echo "☑️"
+
+echo ""
+echo "😎 PREREQUISITES GOOD! 😎"
+echo ""

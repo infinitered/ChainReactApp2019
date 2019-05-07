@@ -4,8 +4,11 @@
 set -e
 set -o pipefail
 
+# Path to the ./bin folder
+BINPATH=`dirname "$0"`
+
 # Check prerequisites
-./check
+$BINPATH/check
 
 echo "-----------------------------------------------"
 echo "Welcome aboard! Setting up the Chain React app."
