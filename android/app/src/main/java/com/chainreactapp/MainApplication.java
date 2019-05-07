@@ -4,6 +4,8 @@ import android.app.Application;
 
 import com.airbnb.android.react.lottie.LottiePackage;
 import com.facebook.react.ReactApplication;
+import com.microsoft.appcenter.reactnative.push.AppCenterReactNativePushPackage;
+import com.mapbox.rctmgl.RCTMGLPackage;
 import com.oblador.keychain.KeychainPackage;
 import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
 import com.mapbox.rctmgl.RCTMGLPackage;
@@ -32,6 +34,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
         new MainReactPackage(),
+            new AppCenterReactNativePushPackage(MainApplication.this),
+            new RCTMGLPackage(),
         new AppCenterReactNativePackage(MainApplication.this),
         new KeychainPackage(),
         new RNI18nPackage(),

@@ -14,10 +14,19 @@ echo "-----------------------------------------------"
 echo "Welcome aboard! Setting up the Chain React app."
 echo "-----------------------------------------------"
 echo ""
+echo "NOTE: Answer 'Enable Automatically' for all react-native link prompts"
+echo ""
 
 echo "🔨 Running yarn..."
 yarn
+echo ""
+
+echo "🔨 Linking React Native packages..."
+echo ""
+react-native link
+echo ""
 
 echo "🔨 Installing pods..."
 cd ios && pod install && cd ..
+echo ""
 

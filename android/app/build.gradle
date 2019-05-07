@@ -150,6 +150,8 @@ android {
 }
 
 dependencies {
+    implementation project(':appcenter-push')
+    implementation project(':@mapbox_react-native-mapbox-gl')
     implementation project(':appcenter')
     implementation project(':appcenter-crashes')
     implementation project(':appcenter-analytics')

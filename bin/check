@@ -26,6 +26,14 @@ if ! [ -x "$(command -v pod)" ]; then
 fi
 echo "☑️"
 
+printf "🔦 Checking react-native-cli installed..."
+if ! [ -x "$(command -v react-native)" ]; then
+  echo 'Error: react-native-cli is not installed.' >&2
+  echo "Run `yarn global add react-native-cli` and try again"
+  exit 1
+fi
+echo "☑️"
+
 echo ""
 echo "😎 PREREQUISITES GOOD! 😎"
 echo ""

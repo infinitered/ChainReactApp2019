@@ -1,21 +1,24 @@
 PODS:
-  - AppCenter/Analytics (1.7.1):
+  - AppCenter/Analytics (1.14.0):
     - AppCenter/Core
-  - AppCenter/Core (1.7.1)
-  - AppCenter/Crashes (1.7.1):
+  - AppCenter/Core (1.14.0)
+  - AppCenter/Crashes (1.14.0):
     - AppCenter/Core
-  - AppCenterReactNativeShared (1.6.0):
-    - AppCenter/Core (= 1.7.1)
-  - React (0.57.8):
-    - React/Core (= 0.57.8)
-  - React/Core (0.57.8):
-    - yoga (= 0.57.8.React)
-  - yoga (0.57.8.React)
+  - AppCenter/Push (1.14.0):
+    - AppCenter/Core
+  - AppCenterReactNativeShared (1.13.0):
+    - AppCenter/Core (= 1.14.0)
+  - React (0.59.5):
+    - React/Core (= 0.59.5)
+  - React/Core (0.59.5):
+    - yoga (= 0.59.5.React)
+  - yoga (0.59.5.React)
 
 DEPENDENCIES:
-  - AppCenter/Analytics (~> 1.7.1)
-  - AppCenter/Crashes (~> 1.7.1)
-  - AppCenterReactNativeShared (~> 1.6.0)
+  - AppCenter/Analytics (~> 1.14.0)
+  - AppCenter/Crashes (~> 1.14.0)
+  - AppCenter/Push (~> 1.14.0)
+  - AppCenterReactNativeShared (~> 1.13.0)
   - React (from `../node_modules/react-native`)
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -31,11 +34,11 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  AppCenter: 53349f138e596f2514f7559bb50a7e6e55219f17
-  AppCenterReactNativeShared: 9174f9a976f5d4b1949dccfac7f3a38399478c87
-  React: adbac0757ce35e92fbd447ab98c810209d27d9b0
-  yoga: 74cdf036c30820443b25ade59916236b1e95ee93
+  AppCenter: 02c5efe08d3bbab5421ae41d5f7aa7238906b817
+  AppCenterReactNativeShared: 00f470c3c17b47718db8733cbe811ccdcfd86282
+  React: 90adac468c7b72bf1fa6c64bf230650f851a8388
+  yoga: 2e571f113e8cbeb0eb752aeebc86c1bfe7a8200c
 
-PODFILE CHECKSUM: 14248e16826567e54d33005842618a26d525c9e7
+PODFILE CHECKSUM: c0850a513eec859c6cf122f9c367e7025c2cad7b
 
 COCOAPODS: 1.6.1
