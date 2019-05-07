@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Exit immediately on any failure
+set -e
+set -o pipefail
+
+# Check prerequisites
+./check
+
+echo "-----------------------------------------------"
+echo "Welcome aboard! Setting up the Chain React app."
+echo "-----------------------------------------------"
+echo ""
+
+echo "🔨 Running yarn..."
+yarn
+
+echo "🔨 Installing pods..."
+cd ios && pod install && cd ..
+

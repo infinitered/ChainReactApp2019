@@ -3,8 +3,7 @@ import { ScheduleScreen } from "../screens/schedule-screen"
 import { VenueScreen } from "../screens/venue-screen"
 import { InfoScreen } from "../screens/info-screen"
 import { TalkDetailsScreen } from "../screens/talk-details"
-import { ARScreen } from "../screens/ar-screen"
-import { ARTab } from "../screens/artab-screen"
+import { ProfileScreen } from "../screens/profile-screen"
 import { TabBar } from "../components/tab-bar"
 import { CodeOfConductScreen } from "../screens/code-of-conduct"
 
@@ -33,7 +32,7 @@ export const MainNavigator = createStackNavigator(
               initialRouteName: "infoScreen",
             },
           ),
-          ar: { screen: ARTab },
+          profile: { screen: ProfileScreen },
         },
         {
           tabBarComponent: TabBar,
@@ -44,7 +43,6 @@ export const MainNavigator = createStackNavigator(
         },
       ),
     },
-    arscreen: { screen: ARScreen },
   },
   {
     headerMode: "none",

@@ -46,8 +46,6 @@ const TAB_ICONS: any = {
   venueActive: require("./icons/map.active.png"),
   info: require("./icons/info.inactive.png"),
   infoActive: require("./icons/info.active.png"),
-  ar: require("./icons/ar.inactive.png"),
-  arActive: require("./icons/ar.active.png"),
 }
 
 export const Tab = ({

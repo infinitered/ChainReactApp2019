@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# Checks prerequisites before running ./bin/setup
+
+# Exit immediately on any failure
+set -e
+set -o pipefail
+
+echo ""
+echo "🤞 CHECKING PREREQUISITES 🤞"
+echo ""
+
+printf "🔦 Checking git installed..."
+if ! [ -x "$(command -v git)" ]; then
+  echo 'Error: git is not installed.' >&2
+  echo "Install it and try again"
+  exit 1
+fi
+echo "☑️"
+
+printf "🔦 Checking cocoapods installed..."
+if ! [ -x "$(command -v pod)" ]; then
+  echo 'Error: cocoapods is not installed.' >&2
+  echo "Run `sudo gem install cocoapods --no-ri --no-rdoc` and try again"
+  exit 1
+fi
+echo "☑️"

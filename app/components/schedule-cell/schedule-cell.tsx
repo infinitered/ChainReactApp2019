@@ -55,15 +55,13 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
             <View style={style.imageWrapper as ViewStyle}>{this.renderImage()}</View>
             <View style={style.content as ViewStyle}>
               <Text preset="subheader" text={talk.title} style={style.title as TextStyle} />
-              {talk.speakers &&
-                talk.speakers.length > 0 &&
-                talk.speakers[0].name && (
-                  <Text
-                    preset="subheader"
-                    text={talk.speakers[0].name}
-                    style={style.speaker as TextStyle}
-                  />
-                )}
+              {talk.speakers && talk.speakers.length > 0 && talk.speakers[0].name && (
+                <Text
+                  preset="subheader"
+                  text={talk.speakers[0].name}
+                  style={style.speaker as TextStyle}
+                />
+              )}
               {preset === "afterparty" && (
                 <Text
                   preset="subheader"
@@ -98,9 +96,14 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
   }
 
   renderImage = () => {
-    const { preset, talk: { sponsor, talkType, speakers }, talk } = this.props
+    const {
+      preset,
+      talk: { sponsor, talkType, speakers },
+      talk,
+    } = this.props
     const style: any = ScheduleCellPresets[preset] || ScheduleCellPresets.default
     let image = null
+
     if (talkType.toLowerCase() === "panel") {
       image = require("./images/panelist.png")
     } else if (talkType.toLowerCase() === "afterparty") {

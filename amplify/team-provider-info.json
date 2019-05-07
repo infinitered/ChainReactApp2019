@@ -1,0 +1,14 @@
+{
+  "local": {
+    "awscloudformation": {
+      "AuthRoleName": "chainreactapp2019-20190327072001-authRole",
+      "UnauthRoleArn": "arn:aws:iam::557458351015:role/chainreactapp2019-20190327072001-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::557458351015:role/chainreactapp2019-20190327072001-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "chainreactapp2019-20190327072001-deployment",
+      "UnauthRoleName": "chainreactapp2019-20190327072001-unauthRole",
+      "StackName": "chainreactapp2019-20190327072001",
+      "StackId": "arn:aws:cloudformation:us-east-2:557458351015:stack/chainreactapp2019-20190327072001/69559480-509b-11e9-b9f9-0659c08a3f80"
+    }
+  }
+}

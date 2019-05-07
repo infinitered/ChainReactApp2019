@@ -1,0 +1,40 @@
+type Speaker @model {
+  id: ID!
+  name: String!
+  bio: String
+  image: String
+  employer: String
+  facebook: String
+  github: String
+  twitter: String
+  instagram: String
+  medium: String
+  dribbble: String
+  websites: [String]
+  talk: Talk @connection(name: "TalkSpeakers", keyField: "speakerTalkId")
+}
+
+type Talk @model {
+  id: ID!
+  title: String!
+  description: String
+  startTime: String
+  endTime: String
+  talkType: String
+  sponsor: String
+  speakers: [Speaker] @connection(name: "TalkSpeakers")
+  menuItems: [String]
+  image: String
+  location: String
+  comments: [Comment] @connection(name: "TalkComments")
+}
+
+type Comment @model {
+  id: ID!
+  talkId: ID
+  clientId: ID!
+  talk: Talk @connection(sortField: "createdAt", name: "TalkComments", keyField: "talkId")
+  text: String
+  createdAt: String
+  createdBy: String
+}
