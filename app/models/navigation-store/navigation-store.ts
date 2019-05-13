@@ -31,6 +31,12 @@ export const NavigationStoreModel = NavigationEvents.named("NavigationStore")
   })
   .actions(self => ({
     /**
+     * Return all subscribers
+     */
+    actionSubscribers() {
+      return self.subs
+    },
+    /**
      * Fires when navigation happens.
      *
      * Our job is to update the state for this new navigation action.

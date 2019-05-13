@@ -21,12 +21,13 @@ echo "🔨 Running yarn..."
 yarn
 echo ""
 
+echo "🔨 Installing pods..."
+cd ios && pod repo update && pod install && cd ..
+echo ""
+
 echo "🔨 Linking React Native packages..."
 echo ""
 react-native link
 echo ""
 
-echo "🔨 Installing pods..."
-cd ios && pod install && cd ..
-echo ""
 

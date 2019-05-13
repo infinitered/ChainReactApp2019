@@ -4,7 +4,6 @@
 import "./i18n"
 import * as React from "react"
 import { AppRegistry, StatusBar, Platform } from "react-native"
-import { createAppContainer } from "react-navigation"
 import SplashScreen from "react-native-splash-screen"
 import { Rehydrated } from "aws-appsync-react"
 import { ApolloProvider } from "react-apollo"
@@ -113,4 +112,4 @@ const APP_NAME = "ChainReactConf"
 const SHOW_STORYBOOK = false
 
 const RootComponent = SHOW_STORYBOOK && __DEV__ ? StorybookUI : App
-AppRegistry.registerComponent(APP_NAME, () => createAppContainer(RootComponent))
+AppRegistry.registerComponent(APP_NAME, () => RootComponent)

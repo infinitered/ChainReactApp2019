@@ -1,4 +1,5 @@
 import * as React from "react"
+import { getNavigation, NavigationScreenProp, NavigationState } from "react-navigation"
 import { inject, observer } from "mobx-react"
 import { RootNavigator } from "./root-navigator"
 import { NavigationStore } from "../models/navigation-store/navigation-store"
@@ -12,21 +13,26 @@ var firstRun = true
 @inject("navigationStore")
 @observer
 export class StatefulNavigator extends React.Component<StatefulNavigatorProps, {}> {
+  currentNavProp: NavigationScreenProp<NavigationState>
+
+  getCurrentNavigation = () => {
+    return this.currentNavProp
+  }
+
   render() {
     // grab our state & dispatch from our navigation store
-    const { state, dispatch, addListener } = this.props.navigationStore
+    const { state, dispatch, actionSubscribers } = this.props.navigationStore
 
     // create a custom navigation implementation
-    const navigation: any = {
-      dispatch,
+    this.currentNavProp = getNavigation(
+      RootNavigator.router,
       state,
-      addListener,
-    }
+      dispatch,
+      actionSubscribers(),
+      {},
+      this.getCurrentNavigation,
+    )
 
-    // const route = this.props.navigationStore.findCurrentRoute()
-
-    firstRun = false
-
-    return <RootNavigator navigation={navigation} />
+    return <RootNavigator navigation={this.currentNavProp} />
   }
 }

@@ -103,19 +103,20 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
     } = this.props
     const style: any = ScheduleCellPresets[preset] || ScheduleCellPresets.default
     let image = null
+    const talkTypeLower = talkType ? talkType.toLowerCase() : ""
 
-    if (talkType.toLowerCase() === "panel") {
+    if (talkTypeLower === "panel") {
       image = require("./images/panelist.png")
-    } else if (talkType.toLowerCase() === "afterparty") {
+    } else if (talkTypeLower === "afterparty") {
       if (sponsor === "Squarespace") image = require("./images/afterparty-squarespace.png")
       if (sponsor === "G2i") image = require("./images/afterparty-G2i.png")
-    } else if (talkType.toLowerCase() === "break") {
+    } else if (talkTypeLower === "break") {
       image = require("./images/coffee-modus.png")
-    } else if (talkType.toLowerCase() === "talk" || talkType.toLowerCase() === "workshop") {
+    } else if (talkTypeLower === "talk" || talkTypeLower === "workshop") {
       image = speakers && speakers[0] && speakers[0].image ? { uri: speakers[0].image } : null
-    } else if (talkType.toLowerCase() === "lunch") {
+    } else if (talkTypeLower === "lunch") {
       image = require("./images/lunch.png")
-    } else if (talkType.toLowerCase() === "breakfast") {
+    } else if (talkTypeLower === "breakfast") {
       image = require("./images/registration.png")
     } else {
       if (talk.image) image = { uri: talk.image }

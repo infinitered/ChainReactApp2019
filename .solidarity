@@ -18,6 +18,10 @@
         "semver": ">=9.2.0",
         "platform": "darwin"
       }
+    ],
+    "Cocoapods": [
+      {rule: 'cli', binary: 'pod', platform: 'darwin', semver: '1.6.1'},
+      {rule: 'dir', location: './ios/Pods'}
     ]
   }
 }
