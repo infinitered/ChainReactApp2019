@@ -23,7 +23,7 @@ export class StatefulNavigator extends React.Component<StatefulNavigatorProps, {
       addListener,
     }
 
-    const route = this.props.navigationStore.findCurrentRoute()
+    // const route = this.props.navigationStore.findCurrentRoute()
 
     firstRun = false
 

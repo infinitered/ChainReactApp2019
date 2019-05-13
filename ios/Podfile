@@ -6,15 +6,19 @@ target 'ChainReactConf' do
 
   # Pods for ChainReactConf
   pod 'AppCenter/Push', '~> 1.14.0'
-  pod 'React', :path => '../node_modules/react-native'
-  pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
+  pod 'React', path: '../node_modules/react-native', subspecs: [
+    'RCTLinkingIOS' # If linking to custom Swift or Obj-C files
+  ]
   pod 'AppCenter/Crashes', '~> 1.14.0'
   pod 'AppCenter/Analytics', '~> 1.14.0'
   pod 'AppCenterReactNativeShared', '~> 1.13.0'
+  pod 'yoga', path: '../node_modules/react-native/ReactCommon/yoga'
   pod 'DoubleConversion', podspec: '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'glog', podspec: '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', podspec: '../node_modules/react-native/third-party-podspecs/Folly.podspec'
-
+  pod 'RNGestureHandler', path: '../node_modules/react-native-gesture-handler'
+  pod 'RNScreens', path: '../node_modules/react-native-screens'
+  
   # Remove React from the project pods...I guess?
   post_install do |installer|
     installer.pods_project.targets.each do |target|

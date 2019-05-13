@@ -1,4 +1,4 @@
-import { createStackNavigator, createTabNavigator } from "react-navigation"
+import { createStackNavigator, createBottomTabNavigator } from "react-navigation"
 import { ScheduleScreen } from "../screens/schedule-screen"
 import { VenueScreen } from "../screens/venue-screen"
 import { InfoScreen } from "../screens/info-screen"
@@ -10,7 +10,7 @@ import { CodeOfConductScreen } from "../screens/code-of-conduct"
 export const MainNavigator = createStackNavigator(
   {
     tabs: {
-      screen: createTabNavigator(
+      screen: createBottomTabNavigator(
         {
           schedule: createStackNavigator(
             {

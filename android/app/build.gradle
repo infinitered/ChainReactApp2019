@@ -150,6 +150,8 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-screens')
+    implementation project(':react-native-gesture-handler')
     implementation project(':appcenter-push')
     implementation project(':@mapbox_react-native-mapbox-gl')
     implementation project(':appcenter')

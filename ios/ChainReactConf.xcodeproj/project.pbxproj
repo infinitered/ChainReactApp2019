@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -63,6 +62,7 @@
 		DA4417FE69724F0596E323D2 /* GothamRnd-MedItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC50B8C1FDA54B4AB12134F8 /* GothamRnd-MedItal.otf */; };
 		DEF6A9377F5642CF93683E77 /* libRCTMGL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF0DE45E9AD4B60989894A6 /* libRCTMGL.a */; };
 		E8519D6B2799422E8BAA0D6D /* libRNI18n-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65458B4DB464475D809F6A9D /* libRNI18n-tvOS.a */; };
+		E9BA522C2289E68300497DF2 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9BA52242289E57C00497DF2 /* libRNGestureHandler.a */; };
 		F04AC33984E44F9A84BF2922 /* GothamRnd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B976D889CA0B4DFE8D6E58D0 /* GothamRnd-Light.otf */; };
 		FD6C522D01B746D99BB49188 /* libLottieReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 673384FCBAE54685B2C45B37 /* libLottieReactNative.a */; };
 /* End PBXBuildFile section */
@@ -460,6 +460,20 @@
 			remoteGlobalIDString = BA189FAA1EEE74F100CAD13F;
 			remoteInfo = AppCenterReactNativePush;
 		};
+		E9BA52232289E57C00497DF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9BA51EF2289E57C00497DF2 /* RNGestureHandler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNGestureHandler;
+		};
+		E9BA52252289E57C00497DF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9BA51EF2289E57C00497DF2 /* RNGestureHandler.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B5C32A36220C603B000FFB8D;
+			remoteInfo = "RNGestureHandler-tvOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -538,6 +552,7 @@
 		D6AB71DB50404BF7A920D39D /* AppCenterReactNativePush.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNativePush.xcodeproj; path = "../node_modules/appcenter-push/ios/AppCenterReactNativePush.xcodeproj"; sourceTree = "<group>"; };
 		DF482FAB974F4ABF98F1E710 /* libAppCenterReactNativePush.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAppCenterReactNativePush.a; sourceTree = "<group>"; };
 		E36EB9DE818DFEE6EBA282EB /* libPods-ChainReactConf-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChainReactConf-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9BA51EF2289E57C00497DF2 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
 		ED8B9AAA14F86CE9533AC7C5 /* Pods-ChainReactConf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChainReactConf.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChainReactConf/Pods-ChainReactConf.release.xcconfig"; sourceTree = "<group>"; };
 		F3AACC5D093B4422BFAFF50B /* LottieReactNative.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = LottieReactNative.xcodeproj; path = "../node_modules/lottie-react-native/src/ios/LottieReactNative.xcodeproj"; sourceTree = "<group>"; };
 		FC50B8C1FDA54B4AB12134F8 /* GothamRnd-MedItal.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-MedItal.otf"; path = "../app/theme/fonts/GothamRnd-MedItal.otf"; sourceTree = "<group>"; };
@@ -568,6 +583,7 @@
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
+				E9BA522C2289E68300497DF2 /* libRNGestureHandler.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
@@ -821,6 +837,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				E9BA51EF2289E57C00497DF2 /* RNGestureHandler.xcodeproj */,
 				92B2927F20F588DB007AF724 /* AppCenterReactNativeCrashes.xcodeproj */,
 				92B2927920F588D3007AF724 /* AppCenterReactNativeAnalytics.xcodeproj */,
 				92B2927320F588BC007AF724 /* AppCenterReactNative.xcodeproj */,
@@ -947,6 +964,15 @@
 			isa = PBXGroup;
 			children = (
 				E994BBB522824811001D5F37 /* libAppCenterReactNativePush.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9BA51F02289E57C00497DF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9BA52242289E57C00497DF2 /* libRNGestureHandler.a */,
+				E9BA52262289E57C00497DF2 /* libRNGestureHandler-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1163,6 +1189,10 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = E9BA51F02289E57C00497DF2 /* Products */;
+					ProjectRef = E9BA51EF2289E57C00497DF2 /* RNGestureHandler.xcodeproj */;
 				},
 				{
 					ProductGroup = 381C6EDD20E53C59008B11AA /* Products */;
@@ -1557,6 +1587,20 @@
 			fileType = archive.ar;
 			path = libAppCenterReactNativePush.a;
 			remoteRef = E994BBB422824811001D5F37 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E9BA52242289E57C00497DF2 /* libRNGestureHandler.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNGestureHandler.a;
+			remoteRef = E9BA52232289E57C00497DF2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E9BA52262289E57C00497DF2 /* libRNGestureHandler-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNGestureHandler-tvOS.a";
+			remoteRef = E9BA52252289E57C00497DF2 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
