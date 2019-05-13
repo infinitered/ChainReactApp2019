@@ -1,5 +1,4 @@
 app_identifier "infinitered.stage.ChainReactConf" # The bundle identifier of your app
-apple_id "gantman@gmail.com" # Your Apple email address
 
 team_id "L7YNDPLSEB" # Developer Portal Team ID
 
