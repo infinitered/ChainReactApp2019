@@ -2,38 +2,89 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
+
+defaults: &defaults
+  docker:
+    # Choose the version of Node you want here
+    - image: circleci/node:10.11
+  working_directory: ~/repo
+
+mac: &mac
+  macos:
+    xcode: "10.1.0"
+  working_directory: ~/repo
+
 version: 2
 jobs:
-  build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:8.9
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
-    working_directory: ~/repo
-
+  setup:
+    <<: *defaults
     steps:
       - checkout
-
-      # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-node-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-node-
-
-      - run: NOYARNPOSTINSTALL=1 yarn install
-
-      - run: yarn fixReactViro
-
+            - v1-dependencies-node-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-node-
+      - run:
+          name: Install dependencies
+          command: NOYARNPOSTINSTALL=1 yarn install
       - save_cache:
+          name: Save node modules
           paths:
             - node_modules
           key: v1-dependencies-node-{{ checksum "package.json" }}
 
-      # run tests!
-      - run: yarn ci:test
+  tests:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-node-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-node-
+      - run:
+          name: Run tests
+          command: yarn ci:test # this command will be added to/found in your package.json scripts
+
+  deploy_ios:
+    <<: *mac
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore node modules
+          keys:
+            - v1-dependencies-mac-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-mac-
+      - run:
+          name: Install dependencies
+          command: NOYARNPOSTINSTALL=1 yarn install
+      - save_cache:
+          name: Save node modules
+          paths:
+            - node_modules
+          key: v1-dependencies-mac-{{ checksum "package.json" }}
+      - run:
+          name: Fetch CocoaPods Specs
+          command: |
+            curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
+      - run:
+          name: Install CocoaPods
+          command: cd ios && pod install --verbose
+      - run:
+          name: Install Gems
+          command: cd ios && bundle install
+      - run:
+          name: Fastlane
+          command: cd ios && bundle exec fastlane ios play
+
+workflows:
+  version: 2
+  test_and_release:
+    jobs:
+      - setup
+      - tests:
+          requires:
+            - setup
+      - deploy_ios

@@ -13,7 +13,7 @@
     "format:ts": "prettier --write {.,**}/*.{ts,tsx} && tslint --fix -p .",
     "lint": "npm-run-all lint:*",
     "lint:ts": "tslint -p .",
-    "ci:test": "yarn test",
+    "ci:test": "yarn test --ci",
     "postinstall": "test -n \"$NOYARNPOSTINSTALL\" || (solidarity && yarn run fixReactViro)",
     "precommit": "lint-staged",
     "prepare": "patch-package",
