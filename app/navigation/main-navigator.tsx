@@ -1,11 +1,13 @@
+import * as React from "react"
 import { createStackNavigator, createBottomTabNavigator } from "react-navigation"
 import { ScheduleScreen } from "../screens/schedule-screen"
 import { VenueScreen } from "../screens/venue-screen"
 import { InfoScreen } from "../screens/info-screen"
 import { TalkDetailsScreen } from "../screens/talk-details"
 import { ProfileScreen } from "../screens/profile-screen"
-import { TabBar } from "../components/tab-bar"
 import { CodeOfConductScreen } from "../screens/code-of-conduct"
+import { TabIcon } from "../components/tab-icon"
+import { color, palette } from "../theme"
 
 export const MainNavigator = createStackNavigator(
   {
@@ -35,11 +37,22 @@ export const MainNavigator = createStackNavigator(
           profile: { screen: ProfileScreen },
         },
         {
-          tabBarComponent: TabBar,
+          defaultNavigationOptions: ({ navigation }) => ({
+            tabBarIcon: ({ focused }) => {
+              const { routeName } = navigation.state
+              return <TabIcon routeName={routeName} focused={focused} />
+            },
+          }),
           tabBarPosition: "bottom",
           animationEnabled: false,
           swipeEnabled: false,
           initialRouteName: "schedule",
+          tabBarOptions: {
+            style: {
+              backgroundColor: color.tabbar,
+            },
+            activeTintColor: palette.white,
+          },
         },
       ),
     },
