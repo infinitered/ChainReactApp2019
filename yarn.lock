@@ -1013,10 +1013,9 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.1.3.tgz#b700d97385fa91affed60c71dfd51c67e9dad762"
   integrity sha512-QsYGKdhhuDFNq7bjm2r44y0mp5xW3uO3csuTPDWZc0OIiMQv+AIY5Cqwd4mJiC5N8estVl7qlvOx1hbtOuUWbw==
 
-"@mapbox/react-native-mapbox-gl@6.1.1":
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/@mapbox/react-native-mapbox-gl/-/react-native-mapbox-gl-6.1.1.tgz#d4a791d5ba51f25c837991b5c7a48ede9d5b5f49"
-  integrity sha512-ksGMUlGTQ+1jr0sNNAFHEj5c9Gwrw9dMqADdoOJRAGexG+WK3CuHMZVUJFlDtiknaXETFgWXagXTLb4wT6LgeA==
+"@mapbox/react-native-mapbox-gl@https://github.com/nitaliano/react-native-mapbox-gl#master":
+  version "6.1.4"
+  resolved "https://github.com/nitaliano/react-native-mapbox-gl#429f540224c0be789e055bee4b7ed2943f0a5573"
   dependencies:
     "@turf/helpers" "4.6.0"
     underscore "^1.8.3"

@@ -20,7 +20,7 @@
     "storybook": "storybook start -p 9001 --skip-packager"
   },
   "dependencies": {
-    "@mapbox/react-native-mapbox-gl": "6.1.1",
+    "@mapbox/react-native-mapbox-gl": "https://github.com/nitaliano/react-native-mapbox-gl#master",
     "apisauce": "^0.14.3",
     "apollo-boost": "^0.1.9",
     "appcenter": "1.13.0",
