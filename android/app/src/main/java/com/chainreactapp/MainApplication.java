@@ -4,15 +4,17 @@ import android.app.Application;
 
 import com.airbnb.android.react.lottie.LottiePackage;
 import com.facebook.react.ReactApplication;
+import com.mapbox.rctmgl.RCTMGLPackage;
+import com.swmansion.rnscreens.RNScreensPackage;
+import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
+import com.microsoft.appcenter.reactnative.push.AppCenterReactNativePushPackage;
 import com.oblador.keychain.KeychainPackage;
 import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
-import com.mapbox.rctmgl.RCTMGLPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
-import com.viromedia.bridge.ReactViroPackage;
 import com.microsoft.appcenter.reactnative.crashes.AppCenterReactNativeCrashesPackage;
 import com.microsoft.appcenter.reactnative.analytics.AppCenterReactNativeAnalyticsPackage;
 import com.microsoft.appcenter.reactnative.appcenter.AppCenterReactNativePackage;
@@ -32,15 +34,17 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
         new MainReactPackage(),
+        new RNScreensPackage(),
+        new RNGestureHandlerPackage(),
+        new AppCenterReactNativePushPackage(MainApplication.this),
+        new RCTMGLPackage(),
         new AppCenterReactNativePackage(MainApplication.this),
         new KeychainPackage(),
         new RNI18nPackage(),
-        new RCTMGLPackage(),
         new SplashScreenReactPackage(),
-        new ReactViroPackage(ReactViroPackage.ViroPlatform.GVR),
         new LottiePackage(),
         new AppCenterReactNativeCrashesPackage(MainApplication.this, getResources().getString(R.string.appCenterCrashes_whenToSendCrashes)),
-        new AppCenterReactNativeAnalyticsPackage(MainApplication.this, getResources().getString(R.string.appCenterAnalytics_whenToEnableAnalytics)),
+        new AppCenterReactNativeAnalyticsPackage(MainApplication.this, getResources().getString(R.string.appCenterAnalytics_whenToEnableAnalytics))
       );
     }
 

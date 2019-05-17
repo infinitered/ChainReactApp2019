@@ -7158,7 +7158,6 @@ exports[`Storyshots Sponsors Presets 1`] = `
                   }
                 >
                   <Image
-                    source={1}
                     style={
                       Object {
                         "alignSelf": "center",
@@ -8155,436 +8154,6 @@ exports[`Storyshots Switch Styling 1`] = `
 </View>
 `;
 
-exports[`Storyshots TabBar Behaviour 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Array [
-      Object {
-        "backgroundColor": "#f0f0f0",
-        "flex": 1,
-      },
-      Object {
-        "paddingBottom": 0,
-      },
-    ]
-  }
->
-  <View
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  >
-    <RCTScrollView>
-      <View>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#eee",
-            }
-          }
-        >
-          <View
-            style={
-              Object {
-                "borderBottomColor": "#e6e6e6",
-                "borderBottomWidth": 1,
-                "paddingBottom": 10,
-                "paddingHorizontal": 10,
-                "paddingTop": 20,
-              }
-            }
-          >
-            <View
-              style={
-                Object {
-                  "borderTopColor": "#e6e6e6",
-                  "borderTopWidth": 1,
-                  "flexDirection": "row",
-                  "left": 0,
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0,
-                }
-              }
-            >
-              <Text
-                style={
-                  Object {
-                    "color": "#666",
-                    "fontSize": 10,
-                    "paddingBottom": 2,
-                    "paddingHorizontal": 4,
-                  }
-                }
-              >
-                Use Case
-              </Text>
-            </View>
-            <View
-              style={Object {}}
-            >
-              <Text
-                style={
-                  Object {
-                    "color": "#3d3d3d",
-                    "fontWeight": "600",
-                  }
-                }
-              >
-                The TabBar
-              </Text>
-            </View>
-            <Text
-              style={
-                Object {
-                  "color": "#666",
-                  "fontSize": 10,
-                  "paddingTop": 0,
-                }
-              }
-            >
-              The main tab bar in the app.
-            </Text>
-          </View>
-          <View
-            style={
-              Object {
-                "backgroundColor": "#fff",
-                "padding": 0,
-              }
-            }
-          >
-            <RCTSafeAreaView
-              style={
-                Object {
-                  "backgroundColor": "#10102A",
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "backgroundColor": "#10102A",
-                    "flexDirection": "row",
-                    "justifyContent": "center",
-                    "minHeight": 49,
-                    "paddingBottom": 4,
-                  }
-                }
-              >
-                <View
-                  accessible={true}
-                  isTVSelectable={true}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "flex": 1,
-                      "flexDirection": "column",
-                      "justifyContent": "flex-end",
-                      "marginTop": 10,
-                      "opacity": 1,
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "flexGrow": 1,
-                        "justifyContent": "center",
-                        "minHeight": 26,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "justifyContent": "center",
-                          "maxHeight": 24,
-                          "maxWidth": 24,
-                          "opacity": 1,
-                          "position": "absolute",
-                        }
-                      }
-                    >
-                      <Image
-                        source={1}
-                      />
-                    </View>
-                    <View
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "justifyContent": "center",
-                          "maxHeight": 24,
-                          "maxWidth": 24,
-                          "opacity": 0,
-                          "position": "absolute",
-                        }
-                      }
-                    >
-                      <Image
-                        source={1}
-                      />
-                    </View>
-                  </View>
-                  <Text
-                    style={
-                      Object {
-                        "color": "#878794",
-                        "fontFamily": "Gotham Rounded",
-                        "fontSize": 11,
-                      }
-                    }
-                  >
-                    tabbar.schedule.test
-                  </Text>
-                </View>
-                <View
-                  accessible={true}
-                  isTVSelectable={true}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "flex": 1,
-                      "flexDirection": "column",
-                      "justifyContent": "flex-end",
-                      "marginTop": 10,
-                      "opacity": 1,
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "flexGrow": 1,
-                        "justifyContent": "center",
-                        "minHeight": 26,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "justifyContent": "center",
-                          "maxHeight": 24,
-                          "maxWidth": 24,
-                          "opacity": 0,
-                          "position": "absolute",
-                        }
-                      }
-                    >
-                      <Image
-                        source={1}
-                      />
-                    </View>
-                    <View
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "justifyContent": "center",
-                          "maxHeight": 24,
-                          "maxWidth": 24,
-                          "opacity": 1,
-                          "position": "absolute",
-                        }
-                      }
-                    >
-                      <Image
-                        source={1}
-                      />
-                    </View>
-                  </View>
-                  <Text
-                    style={
-                      Object {
-                        "color": "#878794",
-                        "fontFamily": "Gotham Rounded",
-                        "fontSize": 11,
-                      }
-                    }
-                  >
-                    tabbar.venue.test
-                  </Text>
-                </View>
-                <View
-                  accessible={true}
-                  isTVSelectable={true}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "flex": 1,
-                      "flexDirection": "column",
-                      "justifyContent": "flex-end",
-                      "marginTop": 10,
-                      "opacity": 1,
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "flexGrow": 1,
-                        "justifyContent": "center",
-                        "minHeight": 26,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "justifyContent": "center",
-                          "maxHeight": 24,
-                          "maxWidth": 24,
-                          "opacity": 0,
-                          "position": "absolute",
-                        }
-                      }
-                    >
-                      <Image
-                        source={1}
-                      />
-                    </View>
-                    <View
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "justifyContent": "center",
-                          "maxHeight": 24,
-                          "maxWidth": 24,
-                          "opacity": 1,
-                          "position": "absolute",
-                        }
-                      }
-                    >
-                      <Image
-                        source={1}
-                      />
-                    </View>
-                  </View>
-                  <Text
-                    style={
-                      Object {
-                        "color": "#878794",
-                        "fontFamily": "Gotham Rounded",
-                        "fontSize": 11,
-                      }
-                    }
-                  >
-                    tabbar.info.test
-                  </Text>
-                </View>
-                <View
-                  accessible={true}
-                  isTVSelectable={true}
-                  onResponderGrant={[Function]}
-                  onResponderMove={[Function]}
-                  onResponderRelease={[Function]}
-                  onResponderTerminate={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "flex": 1,
-                      "flexDirection": "column",
-                      "justifyContent": "flex-end",
-                      "marginTop": 10,
-                      "opacity": 1,
-                    }
-                  }
-                >
-                  <View
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "flexGrow": 1,
-                        "justifyContent": "center",
-                        "minHeight": 26,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "justifyContent": "center",
-                          "maxHeight": 24,
-                          "maxWidth": 24,
-                          "opacity": 0,
-                          "position": "absolute",
-                        }
-                      }
-                    >
-                      <Image
-                        source={1}
-                      />
-                    </View>
-                    <View
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "justifyContent": "center",
-                          "maxHeight": 24,
-                          "maxWidth": 24,
-                          "opacity": 1,
-                          "position": "absolute",
-                        }
-                      }
-                    >
-                      <Image
-                        source={1}
-                      />
-                    </View>
-                  </View>
-                  <Text
-                    style={
-                      Object {
-                        "color": "#878794",
-                        "fontFamily": "Gotham Rounded",
-                        "fontSize": 11,
-                      }
-                    }
-                  >
-                    tabbar.ar.test
-                  </Text>
-                </View>
-              </View>
-            </RCTSafeAreaView>
-          </View>
-        </View>
-      </View>
-    </RCTScrollView>
-  </View>
-</View>
-`;
-
 exports[`Storyshots Text Passing Content 1`] = `
 <View
   onLayout={[Function]}
@@ -9567,6 +9136,7 @@ exports[`Storyshots TextField Labelling 1`] = `
                 onChangeText={[Function]}
                 placeholder="omg your name"
                 placeholderTextColor="#CDD4DA"
+                rejectResponderTermination={true}
                 style={
                   Object {
                     "backgroundColor": "#ffffff",
@@ -9683,6 +9253,7 @@ exports[`Storyshots TextField Labelling 1`] = `
                 onChangeText={[Function]}
                 placeholder="storybook.placeholder.test"
                 placeholderTextColor="#CDD4DA"
+                rejectResponderTermination={true}
                 style={
                   Object {
                     "backgroundColor": "#ffffff",
@@ -9830,6 +9401,7 @@ exports[`Storyshots TextField Style Overrides 1`] = `
                 allowFontScaling={true}
                 onChangeText={[Function]}
                 placeholderTextColor="#CDD4DA"
+                rejectResponderTermination={true}
                 style={
                   Object {
                     "backgroundColor": "#ffffff",
@@ -9866,6 +9438,7 @@ exports[`Storyshots TextField Style Overrides 1`] = `
                 allowFontScaling={true}
                 onChangeText={[Function]}
                 placeholderTextColor="#CDD4DA"
+                rejectResponderTermination={true}
                 style={
                   Object {
                     "backgroundColor": "#ffffff",
@@ -9981,6 +9554,7 @@ exports[`Storyshots TextField Style Overrides 1`] = `
                 allowFontScaling={true}
                 onChangeText={[Function]}
                 placeholderTextColor="#CDD4DA"
+                rejectResponderTermination={true}
                 style={
                   Object {
                     "backgroundColor": "rebeccapurple",

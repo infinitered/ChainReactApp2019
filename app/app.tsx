@@ -5,6 +5,9 @@ import "./i18n"
 import * as React from "react"
 import { AppRegistry, StatusBar, Platform } from "react-native"
 import SplashScreen from "react-native-splash-screen"
+import { Rehydrated } from "aws-appsync-react"
+import { ApolloProvider } from "react-apollo"
+import AWSAppSyncClient from "aws-appsync"
 import { StorybookUI } from "../storybook"
 import { StatefulNavigator } from "./navigation"
 import { RootStore, setupRootStore } from "./models/root-store"
@@ -13,6 +16,17 @@ import { BackButtonHandler } from "./navigation/back-button-handler"
 import { contains } from "ramda"
 import { DEFAULT_NAVIGATION_CONFIG } from "./navigation/navigation-config"
 import { palette } from "./theme/palette"
+import AppSyncConfig from "./aws-exports"
+
+const client = new AWSAppSyncClient({
+  url: AppSyncConfig.aws_appsync_graphqlEndpoint,
+  region: AppSyncConfig.aws_project_region,
+  auth: {
+    type: AppSyncConfig.aws_appsync_authenticationType,
+    apiKey: AppSyncConfig.aws_appsync_apiKey,
+    // jwtToken: async () => token, // Required when you use Cognito UserPools OR OpenID Connect. token object is obtained previously
+  },
+})
 
 interface AppState {
   rootStore?: RootStore
@@ -74,11 +88,15 @@ export class App extends React.Component<{}, AppState> {
     }
 
     return (
-      <Provider {...injectableStores}>
-        <BackButtonHandler canExit={this.canExit}>
-          <StatefulNavigator />
-        </BackButtonHandler>
-      </Provider>
+      <ApolloProvider client={client}>
+        <Rehydrated>
+          <Provider {...injectableStores}>
+            <BackButtonHandler canExit={this.canExit}>
+              <StatefulNavigator />
+            </BackButtonHandler>
+          </Provider>
+        </Rehydrated>
+      </ApolloProvider>
     )
   }
 }
@@ -86,7 +104,7 @@ export class App extends React.Component<{}, AppState> {
 /**
  * This needs to match what's found in your app_delegate.m and MainActivity.java.
  */
-const APP_NAME = "ChainReactApp2018"
+const APP_NAME = "ChainReactConf"
 
 // Should we show storybook instead of our app?
 //

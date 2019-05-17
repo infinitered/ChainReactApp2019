@@ -1,4 +1,14 @@
 rootProject.name = 'ChainReactApp'
+include ':@mapbox_react-native-mapbox-gl'
+project(':@mapbox_react-native-mapbox-gl').projectDir = new File(rootProject.projectDir, '../node_modules/@mapbox/react-native-mapbox-gl/android/rctmgl')
+include ':react-native-screens'
+project(':react-native-screens').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-screens/android')
+include ':react-native-gesture-handler'
+project(':react-native-gesture-handler').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-gesture-handler/android')
+include ':app'
+
+include ':appcenter-push'
+project(':appcenter-push').projectDir = new File(rootProject.projectDir, '../node_modules/appcenter-push/android')
 include ':appcenter-crashes'
 project(':appcenter-crashes').projectDir = new File(rootProject.projectDir, '../node_modules/appcenter-crashes/android')
 include ':appcenter-analytics'
@@ -13,14 +23,5 @@ include ':mapbox-react-native-mapbox-gl'
 project(':mapbox-react-native-mapbox-gl').projectDir = new File(rootProject.projectDir, '../node_modules/@mapbox/react-native-mapbox-gl/android/rctmgl')
 include ':react-native-splash-screen'
 project(':react-native-splash-screen').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-splash-screen/android')
-
-include ':app'
-
-include ':react_viro', ':arcore_client', ':gvr_common', ':viro_renderer'
-project(':arcore_client').projectDir = new File('../node_modules/react-viro/android/arcore_client')
-project(':gvr_common').projectDir = new File('../node_modules/react-viro/android/gvr_common')
-project(':viro_renderer').projectDir = new File('../node_modules/react-viro/android/viro_renderer')
-project(':react_viro').projectDir = new File('../node_modules/react-viro/android/react_viro')
-
 include ':lottie-react-native'
 project(':lottie-react-native').projectDir = new File(rootProject.projectDir, '../node_modules/lottie-react-native/src/android')

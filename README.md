@@ -1,6 +1,6 @@
-# ChainReactApp2018
+# The official Chain React App for #ChainReact2019
 
-* React Native app utilizing [Ignite](https://github.com/infinitered/ignite) and the [Ignite Bowser](https://github.com/infinitered/ignite-bowser) boilerplate
+- React Native app utilizing [Ignite CLI](https://github.com/infinitered/ignite) and the [Ignite Bowser](https://github.com/infinitered/ignite-bowser) boilerplate
 
 ## :arrow_up: How to Setup
 
@@ -8,20 +8,17 @@
 
 **Step 2:** cd to the cloned repo:
 
-**Step 3:** Install the Application with `yarn`
-
-**Step 4:** Install Pods: `cd ios && pod install`. You might need to [install Cocoapods](https://guides.cocoapods.org/using/getting-started.html#installation) if you don't already have it!
+**Step 3:** Run the setup script: `./bin/setup`
 
 ## :arrow_forward: How to Run App
 
 1.  cd to the repo
 2.  Run Build for either OS
 
-* for iOS
-  * run `react-native run-ios`
-* for Android
-  * run `react-native run-android`
-  * NOTE: This app uses VR software which does not run on Android emulators, so you will need to have a physical Android device connected to run the application
+- for iOS
+  - run `react-native run-ios`
+- for Android
+  - run `react-native run-android`
 
 ## :no_entry_sign: TSLint Compliant
 

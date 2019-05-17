@@ -150,13 +150,17 @@ android {
 }
 
 dependencies {
+    // implementation project(':@mapbox_react-native-mapbox-gl')
+    implementation project(':react-native-screens')
+    implementation project(':react-native-gesture-handler')
+    implementation project(':appcenter-push')
     implementation project(':appcenter')
     implementation project(':appcenter-crashes')
     implementation project(':appcenter-analytics')
     implementation project(':react-native-keychain')
     implementation project(':react-native-i18n')
     implementation (project(':mapbox-react-native-mapbox-gl')) {
-            implementation ('com.squareup.okhttp3:okhttp:3.6.0') {
+            implementation ('com.squareup.okhttp3:okhttp:3.12.1') {
                 force = true
             }
     }
@@ -165,10 +169,6 @@ dependencies {
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     implementation "com.facebook.react:react-native:+"  // From node_modules
     implementation project(':lottie-react-native')
-    implementation project(':arcore_client') // remove this if AR not required
-    implementation project(':gvr_common')
-    implementation project(path: ':viro_renderer')
-    implementation project(path: ':react_viro')
     implementation 'com.google.android.exoplayer:exoplayer:2.7.1'
     implementation 'com.google.protobuf.nano:protobuf-javanano:3.0.0-alpha-7'
     implementation 'com.amazonaws:aws-android-sdk-core:2.2.+'

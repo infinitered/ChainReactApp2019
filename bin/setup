@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+# Exit immediately on any failure
+set -e
+set -o pipefail
+
+# Path to the ./bin folder
+BINPATH=`dirname "$0"`
+
+# Check prerequisites
+$BINPATH/check
+
+echo "-----------------------------------------------"
+echo "Welcome aboard! Setting up the Chain React app."
+echo "-----------------------------------------------"
+echo ""
+echo "NOTE: Answer 'Enable Automatically' for all react-native link prompts"
+echo ""
+
+echo "🔨 Running yarn..."
+yarn
+echo ""
+
+echo "🔨 Installing pods..."
+cd ios && pod repo update && pod install && cd ..
+echo ""
+
+echo "🔨 Linking React Native packages..."
+echo ""
+react-native link
+echo ""
+
+

@@ -72,7 +72,7 @@ platform :ios do
 
     #bump version number
     increment_build_number(
-      xcodeproj: "./ChainReactApp2018.xcodeproj"
+      xcodeproj: "./ChainReactConf.xcodeproj"
     )
 
     # # Make sure latest artwork is in place
@@ -84,8 +84,8 @@ platform :ios do
 
     # match(type: "appstore") # more information: https://codesigning.guide
     gym(
-      scheme: "ChainReactApp2018",
-      # workspace: "./ChainReactApp2018.xcworkspace"
+      scheme: "ChainReactConf",
+      # workspace: "./ChainReactConf.xcworkspace"
     ) # Build your app - more options available
 
     # Ship it!

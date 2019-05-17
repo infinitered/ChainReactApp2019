@@ -1,14 +1,36 @@
 import * as React from "react"
-import { View, Image, ViewStyle, TextStyle, Dimensions, ImageStyle, Platform } from "react-native"
+import {
+  TextInput,
+  ScrollView,
+  TouchableOpacity,
+  View,
+  Image,
+  ViewStyle,
+  TextStyle,
+  Dimensions,
+  ImageStyle,
+  Platform,
+  AsyncStorage,
+} from "react-native"
 import { NavigationScreenProps } from "react-navigation"
+import { graphql, compose } from "react-apollo"
+import Amplify, { API, graphqlOperation } from "aws-amplify"
+import { format } from "date-fns"
+import uuid from "uuid/v4"
 import { Screen } from "../../components/screen"
 import { palette, spacing } from "../../theme"
 import { Text } from "../../components/text"
-import { format } from "date-fns"
 import { SpeakerImage } from "../../components/speaker-image"
 import { TalkTitle } from "../../components//talk-title"
 import { SpeakerBio } from "../../components//speaker-bio"
 import { Talk } from "../../models/talk"
+import { listCommentsForTalk } from "../../graphql/queries"
+import { createComment as CreateComment } from "../../graphql/mutations"
+import { onCreateComment as OnCreateComment } from "../../graphql/subscriptions"
+import config from "../../aws-exports"
+Amplify.configure(config)
+
+const CLIENTID = uuid()
 
 const ROOT: ViewStyle = {
   paddingVertical: spacing.medium,
@@ -74,6 +96,19 @@ const MENU_ITEM: ViewStyle = {
 
 const MENU_ITEM_TEXT: TextStyle = { color: palette.white }
 
+const TAB_HOLDER: ViewStyle = { flex: 1 }
+const TAB_STYLE: ViewStyle = { paddingVertical: 7, alignItems: "center", justifyContent: "center" }
+const TAB_CONTAINER = { flexDirection: "row" }
+const WHITE_TEXT = { color: "white" }
+const FLEX_ONE = { flex: 1 }
+const FLEX_ROW = { flexDirection: "row" }
+const COMMENT_CONTAINER = { paddingVertical: 15, marginBottom: 50 }
+const COMMENT_STYLE = { paddingHorizontal: 20, marginBottom: 20 }
+const CREATED_BY = { color: "white", fontWeight: "600" }
+const CREATED_AT = { color: "rgba(255, 255, 255, .5)", fontSize: 11, marginLeft: 8, marginTop: 3 }
+const INPUT_CONTAINER = { bottom: 0, position: "absolute", left: 0, width: SCREEN_WIDTH }
+const MESSAGE_INPUT = { backgroundColor: "white", height: 50, paddingHorizontal: 8 }
+
 const HIT_SLOP = {
   top: 30,
   left: 30,
@@ -81,9 +116,12 @@ const HIT_SLOP = {
   bottom: 30,
 }
 
+const MAIN_CONTAINER = { flex: 1, backgroundColor: palette.portGore }
+
 export interface NavigationStateParams {
   talk: Talk
 }
+
 export interface TalkDetailsScreenProps extends NavigationScreenProps<NavigationStateParams> {}
 
 const backImage = () => (
@@ -92,7 +130,7 @@ const backImage = () => (
   </View>
 )
 
-export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> {
+class BaseTalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> {
   static navigationOptions = ({ navigation }) => {
     const { talk } = navigation.state.params
     const titleMargin = Platform.OS === "ios" ? -50 : 0
@@ -114,11 +152,123 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
     }
   }
 
+  scroller = React.createRef()
+  commentSubscription = {}
+
+  state = {
+    currentView: "details",
+    inputValue: "",
+    name: "",
+  }
+
+  async componentDidMount() {
+    const { id } = this.props.navigation.state.params.talk
+    this.props.subscribeToNewComments()
+    try {
+      const name = await AsyncStorage.getItem("name")
+      this.setState({ name })
+    } catch (err) {
+      console.log("error fetching user name...: ", err)
+    }
+    this.commentSubscription = API.graphql(
+      graphqlOperation(OnCreateComment, { talkId: id }),
+    ).subscribe({
+      next: eventData => {
+        if (this.state.currentView === "details") return
+        const { clientId } = eventData.value.data.onCreateComment
+        if (clientId === CLIENTID) return
+        this.scroller.current.scrollToEnd()
+      },
+    })
+  }
+
+  componentWillUnmount() {
+    this.commentSubscription.unsubscribe()
+  }
+
+  createComment = () => {
+    const { id } = this.props.navigation.state.params.talk
+    const comment = {
+      text: this.state.inputValue,
+      clientId: CLIENTID,
+      createdBy: this.state.name,
+      talkId: id,
+      id: uuid(),
+      createdAt: Date.now(),
+    }
+    this.setState({ inputValue: "" })
+    this.props.createComment(comment)
+    setTimeout(() => {
+      this.scroller.current.scrollToEnd()
+    }, 50)
+  }
+
+  toggleView = currentView => {
+    this.setState({ currentView })
+    if (currentView === "discussion") {
+      this.scroller = React.createRef()
+      setTimeout(() => {
+        this.scroller.current.scrollToEnd({ animated: false })
+      })
+    }
+  }
+
   render() {
+    const { talkType = "" } = this.props.navigation.state.params.talk
+    let { comments } = this.props
+    comments = comments
+      .sort(function(a, b) {
+        return new Date(b.createdAt) - new Date(a.createdAt)
+      })
+      .reverse()
     return (
-      <Screen preset="scroll" backgroundColor={palette.portGore} style={ROOT}>
-        {this.renderContent()}
-      </Screen>
+      <View style={MAIN_CONTAINER}>
+        {(talkType === "TALK" || talkType === "WORKSHOP") && (
+          <View style={TAB_CONTAINER}>
+            <View style={{ ...TAB_HOLDER, ...chosen(this.state.currentView, "details") }}>
+              <TouchableOpacity style={TAB_STYLE} onPress={() => this.toggleView("details")}>
+                <Text style={WHITE_TEXT}>Details</Text>
+              </TouchableOpacity>
+            </View>
+            <View style={{ ...TAB_HOLDER, ...chosen(this.state.currentView, "discussion") }}>
+              <TouchableOpacity style={TAB_STYLE} onPress={() => this.toggleView("discussion")}>
+                <Text style={WHITE_TEXT}>Discussion</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        )}
+        {this.state.currentView === "discussion" && (
+          <View style={FLEX_ONE}>
+            <ScrollView ref={this.scroller}>
+              <View style={COMMENT_CONTAINER}>
+                {comments.map((c, i) => (
+                  <View style={COMMENT_STYLE} key={i}>
+                    <View style={FLEX_ROW}>
+                      <Text style={CREATED_BY}>{c.createdBy}</Text>
+                      <Text style={CREATED_AT}>{format(c.createdAt, "hh:mma MM DD")}</Text>
+                    </View>
+                    <Text style={WHITE_TEXT}>{c.text}</Text>
+                  </View>
+                ))}
+              </View>
+            </ScrollView>
+            <View style={INPUT_CONTAINER}>
+              <TextInput
+                onChangeText={v => this.setState({ inputValue: v })}
+                style={MESSAGE_INPUT}
+                placeholder="Type a message..."
+                onSubmitEditing={this.createComment}
+                value={this.state.inputValue}
+              />
+            </View>
+          </View>
+        )}
+        {this.state.currentView !== "discussion" && (
+          <Screen preset="scroll" backgroundColor={palette.portGore} style={ROOT}>
+            {this.renderContent()}
+          </Screen>
+        )}
+      </View>
     )
   }
 
@@ -217,7 +367,9 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
   }
 
   renderPanel = () => {
-    const { talk: { image, title, description, speakers } } = this.props.navigation.state.params
+    const {
+      talk: { image, title, description, speakers },
+    } = this.props.navigation.state.params
     return (
       <View style={FULL_SIZE}>
         {<Image source={{ uri: image }} style={FULL_WIDTH_IMAGE} />}
@@ -262,5 +414,89 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
         <Text preset="subheader" text={item} style={MENU_ITEM_TEXT} />
       </View>
     )
+  }
+}
+
+export const TalkDetailsScreen = compose(
+  graphql(CreateComment, {
+    props: props => {
+      return {
+        createComment: comment => {
+          props.mutate({
+            variables: comment,
+            optimisticResponse: {
+              createComment: { ...comment, __typename: "Comment" },
+            },
+          })
+        },
+      }
+    },
+    options: props => {
+      const { id } = props.navigation.state.params.talk
+      return {
+        update: (dataProxy, { data: { createComment } }) => {
+          const query = listCommentsForTalk
+          const data = dataProxy.readQuery({ query, variables: { talkId: id } })
+          data.listCommentsForTalk.items = data.listCommentsForTalk.items.filter(
+            i => i.id !== createComment.id,
+          )
+          data.listCommentsForTalk.items.push(createComment)
+          dataProxy.writeQuery({ query, data, variables: { talkId: id } })
+        },
+      }
+    },
+  }),
+  graphql(listCommentsForTalk, {
+    options: props => {
+      const { talk } = props.navigation.state.params
+      return {
+        variables: {
+          talkId: talk.id,
+        },
+        fetchPolicy: "cache-and-network",
+      }
+    },
+    props: props => {
+      console.log("props from talkdetailsscreen: ", props)
+      const { id } = props.ownProps.navigation.state.params.talk
+      return {
+        comments: props.data.listCommentsForTalk ? props.data.listCommentsForTalk.items : [],
+        data: props.data,
+        subscribeToNewComments: params => {
+          props.data.subscribeToMore({
+            document: OnCreateComment,
+            variables: { talkId: id },
+            updateQuery: (
+              prev,
+              {
+                subscriptionData: {
+                  data: { onCreateComment },
+                },
+              },
+            ) => {
+              if (onCreateComment.clientId === CLIENTID) return
+              let messageArray = [...prev.listCommentsForTalk.items, onCreateComment]
+
+              return {
+                ...prev,
+                listCommentsForTalk: {
+                  ...prev.listCommentsForTalk,
+                  items: messageArray,
+                },
+              }
+            },
+          })
+        },
+      }
+    },
+  }),
+)(BaseTalkDetailsScreen)
+
+function chosen(type, comp) {
+  if (type === comp) {
+    return {
+      borderBottomWidth: 2,
+      borderBottomColor: "white",
+    }
   }
 }

@@ -1,0 +1,32 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "chainreactapp2019-20190327072001-authRole",
+      "UnauthRoleArn": "arn:aws:iam::557458351015:role/chainreactapp2019-20190327072001-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::557458351015:role/chainreactapp2019-20190327072001-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "chainreactapp2019-20190327072001-deployment",
+      "UnauthRoleName": "chainreactapp2019-20190327072001-unauthRole",
+      "StackName": "chainreactapp2019-20190327072001",
+      "StackId": "arn:aws:cloudformation:us-east-2:557458351015:stack/chainreactapp2019-20190327072001/69559480-509b-11e9-b9f9-0659c08a3f80"
+    }
+  },
+  "api": {
+    "chainreactapp2019": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "securityType": "API_KEY",
+        "GraphQLAPIIdOutput": "33vnw7ef5zd57ltmbiqizj7nsa",
+        "GraphQLAPIEndpointOutput": "https://najx2aa76zb55jeexyyc43nuyy.appsync-api.us-east-2.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-yvx5mdvb2vfmtplx6hedskhhgq"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/chainreactapp2019-20190327072001-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apichainreactapp2019"
+      },
+      "lastPushTimeStamp": "2019-03-27T14:45:06.678Z",
+      "lastPushDirHash": "HQf+fU+T9AgA2YIsE+9I0xqMapc="
+    }
+  }
+}

@@ -55,15 +55,13 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
             <View style={style.imageWrapper as ViewStyle}>{this.renderImage()}</View>
             <View style={style.content as ViewStyle}>
               <Text preset="subheader" text={talk.title} style={style.title as TextStyle} />
-              {talk.speakers &&
-                talk.speakers.length > 0 &&
-                talk.speakers[0].name && (
-                  <Text
-                    preset="subheader"
-                    text={talk.speakers[0].name}
-                    style={style.speaker as TextStyle}
-                  />
-                )}
+              {talk.speakers && talk.speakers.length > 0 && talk.speakers[0].name && (
+                <Text
+                  preset="subheader"
+                  text={talk.speakers[0].name}
+                  style={style.speaker as TextStyle}
+                />
+              )}
               {preset === "afterparty" && (
                 <Text
                   preset="subheader"
@@ -98,21 +96,27 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
   }
 
   renderImage = () => {
-    const { preset, talk: { sponsor, talkType, speakers }, talk } = this.props
+    const {
+      preset,
+      talk: { sponsor, talkType, speakers },
+      talk,
+    } = this.props
     const style: any = ScheduleCellPresets[preset] || ScheduleCellPresets.default
     let image = null
-    if (talkType.toLowerCase() === "panel") {
+    const talkTypeLower = talkType ? talkType.toLowerCase() : ""
+
+    if (talkTypeLower === "panel") {
       image = require("./images/panelist.png")
-    } else if (talkType.toLowerCase() === "afterparty") {
+    } else if (talkTypeLower === "afterparty") {
       if (sponsor === "Squarespace") image = require("./images/afterparty-squarespace.png")
       if (sponsor === "G2i") image = require("./images/afterparty-G2i.png")
-    } else if (talkType.toLowerCase() === "break") {
+    } else if (talkTypeLower === "break") {
       image = require("./images/coffee-modus.png")
-    } else if (talkType.toLowerCase() === "talk" || talkType.toLowerCase() === "workshop") {
+    } else if (talkTypeLower === "talk" || talkTypeLower === "workshop") {
       image = speakers && speakers[0] && speakers[0].image ? { uri: speakers[0].image } : null
-    } else if (talkType.toLowerCase() === "lunch") {
+    } else if (talkTypeLower === "lunch") {
       image = require("./images/lunch.png")
-    } else if (talkType.toLowerCase() === "breakfast") {
+    } else if (talkTypeLower === "breakfast") {
       image = require("./images/registration.png")
     } else {
       if (talk.image) image = { uri: talk.image }
