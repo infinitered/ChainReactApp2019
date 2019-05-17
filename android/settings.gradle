@@ -1,4 +1,6 @@
 rootProject.name = 'ChainReactApp'
+include ':@mapbox_react-native-mapbox-gl'
+project(':@mapbox_react-native-mapbox-gl').projectDir = new File(rootProject.projectDir, '../node_modules/@mapbox/react-native-mapbox-gl/android/rctmgl')
 include ':react-native-screens'
 project(':react-native-screens').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-screens/android')
 include ':react-native-gesture-handler'

@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.airbnb.android.react.lottie.LottiePackage;
 import com.facebook.react.ReactApplication;
+import com.mapbox.rctmgl.RCTMGLPackage;
 import com.swmansion.rnscreens.RNScreensPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.microsoft.appcenter.reactnative.push.AppCenterReactNativePushPackage;
@@ -34,6 +35,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
         new MainReactPackage(),
+            new RCTMGLPackage(),
         new RNScreensPackage(),
         new RNGestureHandlerPackage(),
         new AppCenterReactNativePushPackage(MainApplication.this),
