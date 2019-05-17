@@ -118,10 +118,11 @@ const HIT_SLOP = {
 
 const MAIN_CONTAINER = { flex: 1, backgroundColor: palette.portGore }
 
-interface NavigationStateParams {
+export interface NavigationStateParams {
   talk: Talk
 }
-interface TalkDetailsScreenProps extends NavigationScreenProps<NavigationStateParams> {}
+
+export interface TalkDetailsScreenProps extends NavigationScreenProps<NavigationStateParams> {}
 
 const backImage = () => (
   <View hitSlop={HIT_SLOP}>
@@ -416,7 +417,7 @@ class BaseTalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> 
   }
 }
 
-const TalkDetailsScreen = compose(
+export const TalkDetailsScreen = compose(
   graphql(CreateComment, {
     props: props => {
       return {
@@ -490,8 +491,6 @@ const TalkDetailsScreen = compose(
     },
   }),
 )(BaseTalkDetailsScreen)
-
-export { TalkDetailsScreen, NavigationStateParams, TalkDetailsScreenProps }
 
 function chosen(type, comp) {
   if (type === comp) {
