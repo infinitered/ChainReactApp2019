@@ -6,7 +6,6 @@ import { Text } from "../../components/text"
 import { palette, spacing, color, typography } from "../../theme"
 import { TextStyle } from "react-native"
 import name from "./profile-info"
-import console = require("console")
 
 const PROFILENAME: TextStyle = {
   fontFamily: typography.primary,

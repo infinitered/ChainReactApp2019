@@ -27,7 +27,6 @@ import { Talk } from "../../models/talk"
 import { listCommentsForTalk } from "../../graphql/queries"
 import { createComment as CreateComment } from "../../graphql/mutations"
 import { onCreateComment as OnCreateComment } from "../../graphql/subscriptions"
-import console = require("console")
 import config from "../../aws-exports"
 Amplify.configure(config)
 
