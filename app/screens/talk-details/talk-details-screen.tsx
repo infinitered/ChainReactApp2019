@@ -138,7 +138,6 @@ class BaseTalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> 
       headerStyle: {
         backgroundColor: palette.portGore,
         borderBottomWidth: 0,
-        paddingLeft: spacing.large + spacing.tiny,
       },
       headerBackImage: backImage,
       headerTintColor: palette.shamrock,
