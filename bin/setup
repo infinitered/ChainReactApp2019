@@ -30,6 +30,11 @@ echo ""
 react-native link
 echo ""
 
+echo "🔨 Creating empty .env file"
+echo ""
+touch .env
+echo ""
+
 echo "🚫 If you are working on the AWS AppSync talk discussion feature of the app,"
 echo "you will need a '.env' file with the proper API token. "
 echo "Please ping @jamon in the #chainreact channel of the"
