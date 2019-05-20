@@ -22,7 +22,7 @@
 
 # Secrets
 
-If you are working on the AWS AppSync talk discussion feature of the app, you will need a `.env` file with the proper API token. Please ping @jamon in the #chainreact channel of the [Infinite Red community Slack](https://community.infinite.red) and we'll hook you up!
+If you are working on the AWS AppSync talk discussion feature of the app, you will need a `.env` file with the proper API token. Please ping @jamon in the #chainreact channel of the [Infinite Red community Slack](http://community.infinite.red) and we'll hook you up!
 
 ## :no_entry_sign: TSLint Compliant
 
