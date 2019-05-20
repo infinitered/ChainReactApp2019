@@ -41,6 +41,7 @@
     "react": "16.6.3",
     "react-apollo": "^2.1.5",
     "react-native": "0.59.5",
+    "react-native-dotenv": "^0.2.0",
     "react-native-gesture-handler": "^1.2.1",
     "react-native-i18n": "^2.0.12",
     "react-native-keychain": "3.0.0-rc.3",

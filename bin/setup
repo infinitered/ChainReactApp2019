@@ -30,4 +30,28 @@ echo ""
 react-native link
 echo ""
 
+echo "Getting .env setup...."
+echo ""
+if [ ! -f .env ]
+then
+  echo "🔨 Creating empty .env file"
+  echo ""
+  touch .env
+  "AWS_APPSYNC_API_KEY=foo" >> .env
+  echo ""
+else
+  if grep -q "AWS_APPSYNC_API_KEY=" .env
+  then
+    echo "Your .env is all set!"
+  else
+    echo "Adding dummy api key to .env"
+    echo ""
+    echo "AWS_APPSYNC_API_KEY=foo" >> .env
+  fi
+fi
 
+echo "🚫 NOTE: In order to run the app without error,"
+echo "you will need the the proper AWS API token to put in .env. "
+echo "Please ping @jamon in the #chainreact channel of the"
+echo "Infinite Red community Slack (http://community.infinite.red) and we'll hook you up!"
+echo ""

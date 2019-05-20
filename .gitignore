@@ -59,3 +59,6 @@ buck-out/
 
 # Cocoapods
 ios/Pods
+
+# Dot Env
+.env

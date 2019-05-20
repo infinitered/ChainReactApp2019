@@ -20,6 +20,10 @@
 - for Android
   - run `react-native run-android`
 
+# Secrets
+
+If you are working on the AWS AppSync talk discussion feature of the app, you will need a `.env` file with the proper API token. Please ping `@jamon` in the #chainreact channel of the [Infinite Red community Slack](http://community.infinite.red) and we'll hook you up!
+
 ## :no_entry_sign: TSLint Compliant
 
 This project adheres to TSLint and Prettier. We suggest you enable linting to keep your project compliant during development. You can lint the project by running `yarn lint`.
@@ -35,3 +39,9 @@ If you have to bypass lint for a special commit that you will come back and clea
 **Understanding Linting Errors**
 
 The linting rules are from tslint-config-prettier. [Regular TS errors can be found with descriptions here](https://palantir.github.io/tslint/rules/).
+
+## Deploying and Releasing
+
+IR Devs: You will need access to the "keys to the kingdom" private repo in order to get proper Google/Apple credentials for deploying beta and release builds. Let Jamon know if you need this.
+
+Please see `ios/fastlane/README.md` and `android/fastlane/README.md` for more details on how to deploy.
