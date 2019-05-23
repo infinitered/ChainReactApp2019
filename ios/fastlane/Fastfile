@@ -23,7 +23,7 @@ XCODE_PROJECT    = "#{PROJECT}.xcodeproj"
 XCODE_WORKSPACE  = "#{PROJECT}.xcworkspace"
 XCODE_SCHEME     = PROJECT
 BUILD_NUMBER     = get_build_number(xcodeproj: "./#{XCODE_PROJECT}")
-VERSION          = get_version_number(xcodeproj: "./#{XCODE_PROJECT}")
+VERSION          = get_version_number(xcodeproj: "./#{XCODE_PROJECT}", target: PROJECT)
 
 def fancy_sign(message, size=60, separator='=-')
   puts '\|||/'.center(size, ' ')
