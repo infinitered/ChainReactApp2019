@@ -31,11 +31,6 @@ Submit a new Beta Build
 fastlane android play
 ```
 Playground stuff
-### android mc
-```
-fastlane android mc
-```
-Upload to Mobile Center
 ### android deploy
 ```
 fastlane android deploy
