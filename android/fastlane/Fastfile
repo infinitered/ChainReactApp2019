@@ -15,13 +15,6 @@ fastlane_version "2.37.0"
 
 default_platform :android
 
-# ------------- CONFIGURATION -------------------------------------------------
-
-PROJECT          = 'ChainReactConf'
-ANDROID_PACKAGE  = "com.chainreactapp"
-XCODE_PROJECT    = "#{PROJECT}.xcodeproj"
-VERSION          = get_version_number(xcodeproj: "../ios/#{XCODE_PROJECT}")
-
 platform :android do
   before_all do
     # load variables from .env file in the root if it exists
