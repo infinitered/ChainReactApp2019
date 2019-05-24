@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -333,6 +334,34 @@
 			proxyType = 2;
 			remoteGlobalIDString = 2D2A28201D9B03D100D4039D;
 			remoteInfo = "RCTAnimation-tvOS";
+		};
+		713B39BF2294AFBA004C0043 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9BA51EF2289E57C00497DF2 /* RNGestureHandler.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 58B511DA1A9E6C8500147676;
+			remoteInfo = RNGestureHandler;
+		};
+		713B39F72294AFC1004C0043 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92B2927F20F588DB007AF724 /* AppCenterReactNativeCrashes.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5419C26F1D824AA700DDF3A1;
+			remoteInfo = AppCenterReactNativeCrashes;
+		};
+		713B39F92294AFC8004C0043 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92B2927920F588D3007AF724 /* AppCenterReactNativeAnalytics.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 548693FF1D8384E600E6685A;
+			remoteInfo = AppCenterReactNativeAnalytics;
+		};
+		713B39FB2294AFCC004C0043 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92B2927320F588BC007AF724 /* AppCenterReactNative.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C35AEC201EF91F9300931F0C;
+			remoteInfo = AppCenterReactNative;
 		};
 		78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1028,6 +1057,10 @@
 			buildRules = (
 			);
 			dependencies = (
+				713B39FC2294AFCC004C0043 /* PBXTargetDependency */,
+				713B39FA2294AFC8004C0043 /* PBXTargetDependency */,
+				713B39F82294AFC1004C0043 /* PBXTargetDependency */,
+				713B39C02294AFBA004C0043 /* PBXTargetDependency */,
 				8A34CE2D20E5A3E900470345 /* PBXTargetDependency */,
 			);
 			name = ChainReactConf;
@@ -1087,7 +1120,7 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = L7YNDPLSEB;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1760,6 +1793,26 @@
 			target = 2D02E47A1E0B4A5D006451C7 /* ChainReactConf-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
+		713B39C02294AFBA004C0043 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RNGestureHandler;
+			targetProxy = 713B39BF2294AFBA004C0043 /* PBXContainerItemProxy */;
+		};
+		713B39F82294AFC1004C0043 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppCenterReactNativeCrashes;
+			targetProxy = 713B39F72294AFC1004C0043 /* PBXContainerItemProxy */;
+		};
+		713B39FA2294AFC8004C0043 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppCenterReactNativeAnalytics;
+			targetProxy = 713B39F92294AFC8004C0043 /* PBXContainerItemProxy */;
+		};
+		713B39FC2294AFCC004C0043 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppCenterReactNative;
+			targetProxy = 713B39FB2294AFCC004C0043 /* PBXContainerItemProxy */;
+		};
 		8A34CE2D20E5A3E900470345 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Lottie_iOS;
@@ -1860,10 +1913,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 17;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L7YNDPLSEB;
 				ENABLE_BITCODE = NO;
 				ENABLE_ONLY_ACTIVE_RESOURCES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1896,7 +1949,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = infinitered.stage.ChainReactConf;
 				PRODUCT_NAME = ChainReactConf;
 				PROVISIONING_PROFILE = "d63749b1-a778-4ccd-97cc-2690705c5dab";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development infinitered.stage.ChainReactConf 1530133221";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1908,10 +1961,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 17;
+				DEVELOPMENT_TEAM = L7YNDPLSEB;
 				ENABLE_BITCODE = NO;
 				ENABLE_ONLY_ACTIVE_RESOURCES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1944,7 +1997,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = infinitered.stage.ChainReactConf;
 				PRODUCT_NAME = ChainReactConf;
 				PROVISIONING_PROFILE = "deed921e-f216-4d7e-9d3f-2f69fe457a44";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore infinitered.stage.ChainReactConf";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

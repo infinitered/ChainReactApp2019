@@ -60,5 +60,6 @@ buck-out/
 # Cocoapods
 ios/Pods
 
-# Dot Env
+# Secrets
 .env
+android/fastlane/google-play.json

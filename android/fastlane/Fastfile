@@ -44,22 +44,14 @@ platform :android do
       appicon_path: 'app/src/main/res/mipmap'
     )
 
-    # Assemble a release
-    gradle(
-      task: "assemble",
-      build_type: "Release"
-    )
+      # cut a build
+      gradle(
+        task: "assemble",
+        build_type: "release",
+      )
 
     # Upload to beta
-    supply(track: 'beta')
-
-    # Friendly copy sent to Mobile Center
-    # mobile_center_upload(
-    #   api_token: ENV['CR_MOBILE_CENTER_TOKEN'],
-    #   owner_name: "gantman-1rtx",
-    #   app_name: "Chain-React-01",
-    #   apk: "./app/build/outputs/apk/app-release.apk"
-    # )
+    upload_to_play_store(track: 'beta')
   end
 
   desc "Playground stuff"
@@ -73,17 +65,6 @@ platform :android do
       appicon_path: 'app/src/main/res/mipmap'
     )
   end
-
-  desc "Upload to Mobile Center"
-  lane :mc do
-    mobile_center_upload(
-      api_token: ENV['CR_MOBILE_CENTER_TOKEN'],
-      owner_name: "gantman-1rtx",
-      app_name: "Chain-React-01",
-      apk: "./app/build/outputs/apk/app-release.apk"
-    )
-  end
-
 
   desc "Deploy a new version to the Google Play"
   lane :deploy do

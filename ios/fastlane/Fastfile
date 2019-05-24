@@ -15,6 +15,16 @@ fastlane_version "2.32.1"
 
 default_platform :ios
 
+# ------------- CONFIGURATION -------------------------------------------------
+
+PROJECT          = 'ChainReactConf'
+BUNDLE_ID        = "com.chainreactapp"
+XCODE_PROJECT    = "#{PROJECT}.xcodeproj"
+XCODE_WORKSPACE  = "#{PROJECT}.xcworkspace"
+XCODE_SCHEME     = PROJECT
+BUILD_NUMBER     = get_build_number(xcodeproj: "./#{XCODE_PROJECT}")
+VERSION          = get_version_number(xcodeproj: "./#{XCODE_PROJECT}", target: PROJECT)
+
 def fancy_sign(message, size=60, separator='=-')
   puts '\|||/'.center(size, ' ')
   puts '(o o)'.center(size, ' ')
@@ -30,8 +40,8 @@ platform :ios do
   before_all do
     setup_circle_ci
     # load variables from .env file in the root if it exists
-    if File.exist?('../../.env')
-      open('../../.env', 'r').readlines.each do |l|
+    if File.exist?('../.env')
+      open('../.env', 'r').readlines.each do |l|
         kv = l.split('=')
         ENV[kv[0]] = kv[1].chomp if kv[1]
       end
@@ -42,87 +52,30 @@ platform :ios do
 
   desc "Playground for fastlane plugins"
   lane :play do
-    # Nice!
-    # ascii_art(
-    #   image_path: 'https://avatars1.githubusercontent.com/u/3902527?v=3&s=200',
-    #   width: 60
-    # )
-
-    # So pretty
     fancy_sign number_of_commits
+  end
 
-    # Automatic Icon magic
-    # appicon(
-    #   appicon_image_file: '../AppIcon/IconIOS.png',
-    #   appicon_devices: [:ipad, :iphone, :ios_marketing],
-    #   appicon_path: 'ChainReactApp/Images.xcassets'
-    # )
-
+  desc "Increment the build number (like 25)"
+  desc "Note: This is NOT the same as the version number (like 2.1.0)"
+  lane :bump_build_number do
+    increment_build_number(xcodeproj: "./#{XCODE_PROJECT}")
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
   lane :beta do
 
-    # Print out the current logo 🎉
-    # ascii_art(
-    #   image_path: 'https://avatars1.githubusercontent.com/u/3902527?v=3&s=200',
-    #   width: 60
-    # )
-
-    #bump version number
-    increment_build_number(
-      xcodeproj: "./ChainReactConf.xcodeproj"
+    build_ios_app(
+      scheme: PROJECT,
+      workspace: "./ChainReactConf.xcworkspace"
     )
 
-    # # Make sure latest artwork is in place
-    # appicon(
-    #   appicon_image_file: '../AppIcon/IconIOS.png',
-    #   appicon_devices: [:ipad, :iphone, :ios_marketing],
-    #   appicon_path: 'ChainReactApp/Images.xcassets'
-    # )
-
-    # match(type: "appstore") # more information: https://codesigning.guide
-    gym(
-      scheme: "ChainReactConf",
-      # workspace: "./ChainReactConf.xcworkspace"
-    ) # Build your app - more options available
-
     # Ship it!
-    pilot(
+    upload_to_testflight(
       skip_waiting_for_build_processing: true
     )
 
-    # upload this dSYM to mobilecenter
-    # mobile_center_upload(
-    #   api_token: ENV['CR_MOBILE_CENTER_TOKEN'],
-    #   owner_name: "gantman-1rtx",
-    #   app_name: "Chain-React-01",
-    #   upload_dsym_only: true,
-    #   dsym: "./ChainReactApp.app.dSYM.zip"
-    # )
-
-    # Give us a friendly high five
-    # Jamon HATES this feature... commenting it out for his sanity
-    # slack(
-    #   message: "New Build: successfully released",
-    #   channel: "#p-cr-conferenceapp"
-    # )
-
   end
-
-  # desc "Upload the dSYM to Mobile Center"
-  # lane :dsym do
-  #   # upload this dSYM to mobilecenter
-  #   mobile_center_upload(
-  #     api_token: ENV['CR_MOBILE_CENTER_TOKEN'],
-  #     owner_name: "gantman-1rtx",
-  #     app_name: "Chain-React",
-  #     upload_dsym_only: true,
-  #     dsym: "./ChainReactApp.app.dSYM.zip"
-  #   )
-  # end
-
 
   desc "Deploy a new version to the App Store"
   lane :release do

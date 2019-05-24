@@ -21,6 +21,13 @@ or alternatively using `brew cask install fastlane`
 fastlane ios play
 ```
 Playground for fastlane plugins
+### ios bump_build_number
+```
+fastlane ios bump_build_number
+```
+Increment the build number (like 25)
+
+Note: This is NOT the same as the version number (like 2.1.0)
 ### ios beta
 ```
 fastlane ios beta
