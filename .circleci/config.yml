@@ -51,6 +51,9 @@ jobs:
     <<: *mac
     steps:
       - checkout
+      - add_ssh_keys:
+          fingerprints:
+            — “33:d2:12:c7:f5:29:67:f8:66:51:4e:f4:73:a7:9a:71”
       # Node modules
       - restore_cache:
           name: Restore node modules
