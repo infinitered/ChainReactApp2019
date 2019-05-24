@@ -53,7 +53,7 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            — “2c:89:ba:19:ad:c5:7e:57:1a:6c:dd:b8:a6:33:31:c0”
+            — “99:92:b0:c2:30:72:ca:28:0d:d5:d4:61:20:0e:f9:b3”
       # Node modules
       - restore_cache:
           name: Restore node modules
@@ -90,6 +90,12 @@ jobs:
           key: bundle-v1-{{ checksum "ios/Gemfile.lock" }}-{{ arch }}
           paths:
             - vendor/bundle
+
+      - run:
+        name: "Install React Native dependencies"
+        command: |
+          brew update
+          brew install watchman
       - run:
           working_directory: ios
           name: Fastlane
