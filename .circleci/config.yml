@@ -51,6 +51,7 @@ jobs:
     <<: *mac
     steps:
       - checkout
+      # Node modules
       - restore_cache:
           name: Restore node modules
           keys:
@@ -65,19 +66,31 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-mac-{{ checksum "package.json" }}
+
+      # Cocoapods
       - run:
           name: Fetch CocoaPods Specs
           command: |
             curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
       - run:
+          working_directory: ios
           name: Install CocoaPods
-          command: cd ios && pod install --verbose
+          command: pod install --verbose
+
+      # Gems
+      - restore_cache:
+          key: bundle-v1-{{ checksum "ios/Gemfile.lock" }}-{{ arch }}
       - run:
-          name: Install Gems
-          command: cd ios && bundle install
+          command: bundle install
+          working_directory: ios
+      - save_cache:
+          key: bundle-v1-{{ checksum "ios/Gemfile.lock" }}-{{ arch }}
+          paths:
+            - vendor/bundle
       - run:
+          working_directory: ios
           name: Fastlane
-          command: cd ios && bundle exec fastlane ios play
+          command: bundle exec fastlane ios play
 
 workflows:
   version: 2

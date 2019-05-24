@@ -53,6 +53,11 @@ platform :ios do
   desc "Playground for fastlane plugins"
   lane :play do
     fancy_sign number_of_commits
+
+    build_ios_app(
+      scheme: PROJECT,
+      workspace: "./ChainReactConf.xcworkspace"
+    )
   end
 
   desc "Increment the build number (like 25)"
