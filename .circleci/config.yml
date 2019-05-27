@@ -94,19 +94,16 @@ jobs:
           paths:
             - vendor/bundle
 
+      # React Native Dependencies
       - run:
-        name: "Install React Native dependencies"
-        command: |
-          brew update
-          brew install watchman
-          npm install -g react-native-cli
+          command: brew update && brew install watchman && npm install -g react-native-cli
 
       - run:
           working_directory: ios
           name: Fastlane
           command: bundle exec fastlane ios play
       - store_artifacts:
-        path: output
+          path: output
 
 workflows:
   version: 2
