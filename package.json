@@ -14,6 +14,7 @@
     "lint": "npm-run-all lint:*",
     "lint:ts": "tslint -p .",
     "ci:test": "yarn test --ci",
+    "ci:setup": "cp .sample.env .env",
     "postinstall": "test -n \"$NOYARNPOSTINSTALL\" || solidarity",
     "precommit": "lint-staged",
     "prepare": "patch-package",

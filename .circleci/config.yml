@@ -99,6 +99,9 @@ jobs:
           command: brew update && brew install watchman && npm install -g react-native-cli
 
       - run:
+          name: Misc setup
+          command: yarn ci:setup
+      - run:
           working_directory: ios
           name: Fastlane
           command: bundle exec fastlane ios play
