@@ -13,6 +13,9 @@ mac: &mac
   macos:
     xcode: "10.1.0"
   working_directory: ~/repo
+  environment:
+    FL_OUTPUT_DIR: output
+  shell: /bin/bash --login -o pipefail
 
 version: 2
 jobs:
@@ -96,10 +99,14 @@ jobs:
         command: |
           brew update
           brew install watchman
+          npm install -g react-native-cli
+
       - run:
           working_directory: ios
           name: Fastlane
           command: bundle exec fastlane ios play
+      - store_artifacts:
+        path: output
 
 workflows:
   version: 2

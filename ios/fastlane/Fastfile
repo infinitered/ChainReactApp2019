@@ -58,8 +58,8 @@ platform :ios do
     build_ios_app(
       scheme: PROJECT,
       workspace: "./ChainReactConf.xcworkspace",
-      export_method: "app-store",
-      xcargs: "-allowProvisioningUpdates"
+      xcargs: "-UseNewBuildSystem=NO -allowProvisioningUpdates",
+      export_method: "app-store"
     )
   end
 
