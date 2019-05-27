@@ -42,6 +42,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
+          name: Restore npm cache
           keys:
             - v1-dependencies-node-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
@@ -85,8 +86,10 @@ jobs:
 
       # Gems
       - restore_cache:
+          name: Restore gems
           key: bundle-v1-{{ checksum "ios/Gemfile.lock" }}-{{ arch }}
       - run:
+          name: Bundle Install
           command: bundle install
           working_directory: ios
       - save_cache:
@@ -94,17 +97,16 @@ jobs:
           paths:
             - vendor/bundle
 
-      # React Native Dependencies
-      - run:
-          command: brew update && brew install watchman && npm install -g react-native-cli
-
+      # Misc setup
       - run:
           name: Misc setup
           command: yarn ci:setup
+
+      # Run fastlane!
       - run:
           working_directory: ios
           name: Fastlane
-          command: bundle exec fastlane ios play
+          command: bundle exec fastlane ios beta
       - store_artifacts:
           path: output
 

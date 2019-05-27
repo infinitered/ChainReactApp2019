@@ -53,14 +53,6 @@ platform :ios do
   desc "Playground for fastlane plugins"
   lane :play do
     fancy_sign number_of_commits
-
-    match(type: "appstore")
-    build_ios_app(
-      scheme: PROJECT,
-      workspace: "./ChainReactConf.xcworkspace",
-      xcargs: "-UseNewBuildSystem=NO -allowProvisioningUpdates",
-      export_method: "app-store"
-    )
   end
 
   desc "Increment the build number (like 25)"
@@ -73,9 +65,14 @@ platform :ios do
   desc "This will also make sure the profile is up to date"
   lane :beta do
 
+    increment_build_number(xcodeproj: "./#{XCODE_PROJECT}")
+
+    match(type: "appstore")
     build_ios_app(
       scheme: PROJECT,
-      workspace: "./ChainReactConf.xcworkspace"
+      workspace: "./ChainReactConf.xcworkspace",
+      xcargs: "-UseNewBuildSystem=NO -allowProvisioningUpdates",
+      export_method: "app-store"
     )
 
     # Ship it!
@@ -83,6 +80,9 @@ platform :ios do
       skip_waiting_for_build_processing: true
     )
 
+    commit_version_bump(
+      xcodeproj: "./#{XCODE_PROJECT}"
+    )
   end
 
   desc "Deploy a new version to the App Store"
