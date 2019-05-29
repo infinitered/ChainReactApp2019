@@ -112,7 +112,7 @@ jobs:
       - run:
           working_directory: ios
           name: Fastlane
-          command: bundle exec fastlane ios play
+          command: bundle exec fastlane ios beta
       - run:
           name: Push version bump commit
           command: git push
@@ -127,4 +127,7 @@ workflows:
       - tests:
           requires:
             - setup
-      - deploy_ios
+      - deploy_ios:
+          filters:
+            branches:
+              only: master
