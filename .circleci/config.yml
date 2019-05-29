@@ -118,4 +118,7 @@ workflows:
       - tests:
           requires:
             - setup
-      - deploy_ios
+      - deploy_ios:
+          filters:
+            branches:
+              only: master
