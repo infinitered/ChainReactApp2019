@@ -54,9 +54,12 @@ platform :ios do
   lane :play do
     fancy_sign number_of_commits
 
+    increment_build_number(xcodeproj: "./#{XCODE_PROJECT}")
+
     commit_version_bump(
       xcodeproj: "./#{XCODE_PROJECT}",
-      ignore: /Podfile|tvOS/
+      ignore: /tvOS/,
+      force: true,
     )
   end
 
@@ -87,7 +90,8 @@ platform :ios do
 
     commit_version_bump(
       xcodeproj: "./#{XCODE_PROJECT}",
-      ignore: /Podfile|tvOS/
+      ignore: /tvOS/,
+      force: true
     )
   end
 
