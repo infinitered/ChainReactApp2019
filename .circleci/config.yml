@@ -58,6 +58,9 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             — “99:92:b0:c2:30:72:ca:28:0d:d5:d4:61:20:0e:f9:b3”
+      - run:
+          name: Git configuration
+          command: git config user.email "ci@infinite.red" && git config user.name "CircleCI"
       # Node modules
       - restore_cache:
           name: Restore node modules
@@ -106,7 +109,10 @@ jobs:
       - run:
           working_directory: ios
           name: Fastlane
-          command: bundle exec fastlane ios beta
+          command: bundle exec fastlane ios play
+      - run:
+          name: Push version bump commit
+          command: git push
       - store_artifacts:
           path: output
 

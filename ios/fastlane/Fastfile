@@ -60,6 +60,7 @@ platform :ios do
       xcodeproj: "./#{XCODE_PROJECT}",
       ignore: /tvOS/,
       force: true,
+      message: "[skip ci] Version bump"
     )
   end
 
@@ -91,7 +92,8 @@ platform :ios do
     commit_version_bump(
       xcodeproj: "./#{XCODE_PROJECT}",
       ignore: /tvOS/,
-      force: true
+      force: true,
+      message: "[skip ci] Version bump"
     )
   end
 
