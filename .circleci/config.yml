@@ -13,6 +13,9 @@ mac: &mac
   macos:
     xcode: "10.1.0"
   working_directory: ~/repo
+  environment:
+    FL_OUTPUT_DIR: output
+  shell: /bin/bash --login -o pipefail
 
 version: 2
 jobs:
@@ -39,6 +42,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
+          name: Restore npm cache
           keys:
             - v1-dependencies-node-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
@@ -51,6 +55,16 @@ jobs:
     <<: *mac
     steps:
       - checkout
+      - add_ssh_keys:
+          fingerprints:
+            — “99:92:b0:c2:30:72:ca:28:0d:d5:d4:61:20:0e:f9:b3”
+      - run:
+          name: Git configuration
+          command: git config user.email "ci@infinite.red" && git config user.name "CircleCI"
+      - run:
+          name: Set upstream branch
+          command: git push --set-upstream origin ${CIRCLE_BRANCH}
+      # Node modules
       - restore_cache:
           name: Restore node modules
           keys:
@@ -65,19 +79,45 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-mac-{{ checksum "package.json" }}
+
+      # Cocoapods
       - run:
           name: Fetch CocoaPods Specs
           command: |
             curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
       - run:
+          working_directory: ios
           name: Install CocoaPods
-          command: cd ios && pod install --verbose
+          command: pod install --verbose
+
+      # Gems
+      - restore_cache:
+          name: Restore gems
+          key: bundle-v1-{{ checksum "ios/Gemfile.lock" }}-{{ arch }}
       - run:
-          name: Install Gems
-          command: cd ios && bundle install
+          name: Bundle Install
+          command: bundle install
+          working_directory: ios
+      - save_cache:
+          key: bundle-v1-{{ checksum "ios/Gemfile.lock" }}-{{ arch }}
+          paths:
+            - vendor/bundle
+
+      # Misc setup
       - run:
+          name: Misc setup
+          command: yarn ci:setup
+
+      # Run fastlane!
+      - run:
+          working_directory: ios
           name: Fastlane
-          command: cd ios && bundle exec fastlane ios play
+          command: bundle exec fastlane ios beta
+      - run:
+          name: Push version bump commit
+          command: git push
+      - store_artifacts:
+          path: output
 
 workflows:
   version: 2
@@ -87,4 +127,7 @@ workflows:
       - tests:
           requires:
             - setup
-      - deploy_ios
+      - deploy_ios:
+          filters:
+            branches:
+              only: master
