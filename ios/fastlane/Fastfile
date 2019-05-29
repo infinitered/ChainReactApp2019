@@ -53,6 +53,11 @@ platform :ios do
   desc "Playground for fastlane plugins"
   lane :play do
     fancy_sign number_of_commits
+
+    commit_version_bump(
+      xcodeproj: "./#{XCODE_PROJECT}",
+      ignore: /Podfile|tvOS/
+    )
   end
 
   desc "Increment the build number (like 25)"
@@ -81,7 +86,8 @@ platform :ios do
     )
 
     commit_version_bump(
-      xcodeproj: "./#{XCODE_PROJECT}"
+      xcodeproj: "./#{XCODE_PROJECT}",
+      ignore: /Podfile|tvOS/
     )
   end
 
