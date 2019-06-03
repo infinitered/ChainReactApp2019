@@ -2,17 +2,17 @@ import { types } from "mobx-state-tree"
 import { SpeakerModel } from "../speaker"
 
 export const TalkModel = types.model().props({
-  id: types.identifier(),
-  startTime: types.maybe(types.string),
-  endTime: types.maybe(types.string),
-  title: types.maybe(types.string),
-  description: types.maybe(types.string),
-  image: types.maybe(types.string),
-  speakers: types.maybe(types.array(SpeakerModel)),
-  menuItems: types.maybe(types.array(types.string)),
-  sponsor: types.maybe(types.string),
-  talkType: types.maybe(types.string),
-  location: types.maybe(types.string),
+  id: types.identifier,
+  startTime: types.maybeNull(types.string),
+  endTime: types.maybeNull(types.string),
+  title: types.maybeNull(types.string),
+  description: types.maybeNull(types.string),
+  image: types.maybeNull(types.string),
+  speakers: types.maybeNull(types.array(SpeakerModel)),
+  menuItems: types.maybeNull(types.array(types.string)),
+  sponsor: types.maybeNull(types.string),
+  talkType: types.maybeNull(types.string),
+  location: types.maybeNull(types.string),
 })
 
 export type Talk = typeof TalkModel.Type
