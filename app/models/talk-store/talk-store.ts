@@ -59,6 +59,13 @@ export const TalkStoreModel = types
       }
     }),
   }))
+  .views(self => ({
+    get sortedTalks() {
+      return self.talks.sort(
+        (a, b) => new Date(a.startTime).getTime() - new Date(b.startTime).getTime(),
+      )
+    },
+  }))
 
 export const defaults = {}
 export const createTalkStoreModel = () => types.optional(TalkStoreModel, defaults)

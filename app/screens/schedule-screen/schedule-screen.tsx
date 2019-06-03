@@ -94,7 +94,7 @@ export class ScheduleScreen extends React.Component<
   }
 
   renderContent = () => {
-    const { talks } = this.props.talkStore
+    const { sortedTalks: talks } = this.props.talkStore
     const { selected } = this.state
     const selectedTalks = talks.filter(talk => {
       return selected === "thursday" ? isThursday(talk.startTime) : isFriday(talk.startTime)
@@ -117,7 +117,7 @@ export class ScheduleScreen extends React.Component<
   }
 
   renderWorkshops = () => {
-    const { talks } = this.props.talkStore
+    const { sortedTalks: talks } = this.props.talkStore
 
     const workshops = talks.filter(talk => {
       return isWednesday(talk.startTime)
