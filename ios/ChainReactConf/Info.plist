@@ -40,7 +40,9 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string/>
+	<string>We'll help you find nearby restaurants and attractions, as well as the conference venues.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We'll help you find nearby restaurants and attractions, as well as the conference venues.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>GothamRnd-Bold.otf</string>
