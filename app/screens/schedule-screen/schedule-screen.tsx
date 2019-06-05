@@ -118,36 +118,18 @@ export class ScheduleScreen extends React.Component<
 
   renderWorkshops = () => {
     const { sortedTalks: talks } = this.props.talkStore
+    const beginnerWorkshop = talks.find(talk => talk.track === "BEGINNER")
+    const intermediateWorkshop = talks.find(talk => talk.track === "INTERMEDIATE")
+    const advancedWorkshop = talks.find(talk => talk.track === "ADVANCED")
+    const onPressWorkshop = talk => this.props.navigation.navigate("talkDetails", { talk })
 
-    const workshops = talks.filter(talk => {
-      return isWednesday(talk.startTime)
-    })
     return (
       <View>
         <Text tx="scheduleScreen.workshops" style={SUBTITLE} preset="subheader" />
         <Text tx="scheduleScreen.workshopsDate" style={DATE} preset="label" />
-        <ScheduleCell
-          index={0}
-          talk={{ ...workshops[0], track: "BEGINNER" }}
-          onPress={talk => {
-            this.props.navigation.navigate("talkDetails", { talk })
-          }}
-        />
-        <ScheduleCell
-          index={1}
-          talk={{ ...workshops[1], track: "ADVANCED" }}
-          onPress={talk => {
-            this.props.navigation.navigate("talkDetails", { talk })
-          }}
-        />
-        <ScheduleCell
-          index={1}
-          talk={workshops[2]}
-          onPress={talk => {
-            this.props.navigation.navigate("talkDetails", { talk })
-          }}
-          noTime
-        />
+        <ScheduleCell index={0} talk={beginnerWorkshop} onPress={onPressWorkshop} />
+        <ScheduleCell index={1} talk={intermediateWorkshop} onPress={onPressWorkshop} />
+        <ScheduleCell index={2} talk={advancedWorkshop} onPress={onPressWorkshop} />
       </View>
     )
   }

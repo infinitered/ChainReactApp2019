@@ -32,6 +32,7 @@ export const TalkStoreModel = types
               sponsor
               talkType
               location
+              track
               speakers {
                 id
                 name
