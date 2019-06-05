@@ -94,6 +94,10 @@ const MENU_ITEM: ViewStyle = {
   width: "100%",
 }
 
+const BACK_BUTTON: ViewStyle = {
+  paddingHorizontal: spacing.small,
+}
+
 const MENU_ITEM_TEXT: TextStyle = { color: palette.white }
 
 const TAB_HOLDER: ViewStyle = { flex: 1 }
@@ -125,7 +129,7 @@ export interface NavigationStateParams {
 export interface TalkDetailsScreenProps extends NavigationScreenProps<NavigationStateParams> {}
 
 const backImage = () => (
-  <View hitSlop={HIT_SLOP}>
+  <View style={BACK_BUTTON} hitSlop={HIT_SLOP}>
     <Image source={require("../../components/title-bar/icon.back-arrow.png")} />
   </View>
 )

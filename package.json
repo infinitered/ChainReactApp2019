@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "adb": "adb reverse tcp:9090 tcp:9090 && adb reverse tcp:3000 tcp:3000 && adb reverse tcp:9001 tcp:9001 && adb reverse tcp:8081 tcp:8081",
     "test": "NODE_ENV=test TZ=America/Los_Angeles jest",
     "compile": "tsc --noEmit -p . --pretty",
     "format": "npm-run-all format:*",
