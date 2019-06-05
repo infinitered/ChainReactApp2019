@@ -123,8 +123,6 @@ export class ScheduleScreen extends React.Component<
     const advancedWorkshop = talks.find(talk => talk.track === "ADVANCED")
     const onPressWorkshop = talk => this.props.navigation.navigate("talkDetails", { talk })
 
-    console.tron.log(beginnerWorkshop)
-
     return (
       <View>
         <Text tx="scheduleScreen.workshops" style={SUBTITLE} preset="subheader" />
