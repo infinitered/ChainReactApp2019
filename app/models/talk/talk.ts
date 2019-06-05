@@ -13,6 +13,7 @@ export const TalkModel = types.model().props({
   sponsor: types.maybeNull(types.string),
   talkType: types.maybeNull(types.string),
   location: types.maybeNull(types.string),
+  track: types.maybeNull(types.string),
 })
 
 export type Talk = typeof TalkModel.Type

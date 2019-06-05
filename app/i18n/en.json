@@ -30,11 +30,11 @@
       "friday": "FRI"
     },
     "workshops": "WORKSHOPS",
-    "workshopsDate": "Wed, July 11",
+    "workshopsDate": "Wed, July 10",
     "day1": "CONFERENCE DAY 1",
-    "day1Date": "Thu, July 12",
+    "day1Date": "Thu, July 11",
     "day2": "CONFERENCE DAY 2",
-    "day2Date": "Fri, July 13"
+    "day2Date": "Fri, July 12"
   },
   "talkDetailsScreen": {
     "workshop": "WORKSHOP",
