@@ -50,6 +50,7 @@ export class ScheduleScreen extends React.Component<
   }
   static navigationOptions = {
     header: null,
+    headerBackTitle: null,
     // Header Style is necessary to prevent ugly white header when navigating back to this screen from a child screen
     headerStyle: {
       backgroundColor: color.palette.portGore,
