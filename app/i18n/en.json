@@ -59,6 +59,11 @@
       "rideShare": "UBER & LYFT (30 MINS)",
       "massTransit": "MAX/LIGHTRAIL (55 MINS)"
     },
+    "blog": {
+      "title": "COPY NEEDED - SEE THE SIGHTS",
+      "description": "COPY NEEDED - Our MC Jason gives insider info about some of his favorite places in Portland.",
+      "button": "COPY NEEDED - CHECK OUT THE BLOG"
+    },
     "nearbyAttractions": {
       "navigation": {
         "food": "FOOD",
@@ -82,6 +87,11 @@
     "conduct": {
       "title": "CODE OF CONDUCT",
       "description": "All attendees, speakers, sponsors, and volunteers at our conference are required to agree with our code of conduct.  Please read it carefully."
+    },
+    "photobomb": {
+      "title": "CHAIN REACT PHOTOBOMB APP",
+      "description": "COPY NEEDED",
+      "button": "GET THE APP"
     },
     "sponsors": {
       "title": "THANKS TO THIS YEAR'S SPONSORS",

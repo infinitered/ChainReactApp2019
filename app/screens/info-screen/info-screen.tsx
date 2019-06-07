@@ -8,6 +8,7 @@ import { palette, spacing } from "../../theme"
 import { WiFi } from "../../components/wi-fi"
 import { Conduct } from "../../components/conduct"
 import { Sponsors } from "../../components/sponsors"
+import { Photobomb } from "../../components/photobomb/photobomb"
 
 export interface InfoScreenProps extends NavigationScreenProps<{}> {}
 
@@ -29,6 +30,7 @@ export class InfoScreen extends React.Component<InfoScreenProps, {}> {
         <Text preset="title" tx="infoScreen.title" style={TITLE} />
         <WiFi />
         <Conduct onPress={() => this.props.navigation.navigate("codeOfConduct")} />
+        <Photobomb />
         <Sponsors />
         <PresentedBy />
       </Screen>

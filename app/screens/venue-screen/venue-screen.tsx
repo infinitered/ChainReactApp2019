@@ -7,6 +7,7 @@ import { palette, spacing } from "../../theme"
 import { GerdingTheater } from "../../components/gerding-theater"
 import { GettingToChainReact } from "../../components/getting-to-chain-react"
 import { NearbyAttractions } from "../../components/nearby-attractions"
+import { BlogLink } from "../../components/blog-link/blog-link"
 
 export interface VenueScreenProps extends NavigationScreenProps<{}> {}
 
@@ -22,6 +23,7 @@ export class VenueScreen extends React.Component<VenueScreenProps, {}> {
         <Text preset="title" tx="venueScreen.title" style={TITLE} />
         <GerdingTheater />
         <GettingToChainReact />
+        <BlogLink />
         <NearbyAttractions />
       </Screen>
     )
