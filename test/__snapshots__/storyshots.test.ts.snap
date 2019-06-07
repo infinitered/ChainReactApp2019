@@ -344,7 +344,7 @@ exports[`Storyshots AttractionsList Props 1`] = `
                       }
                     }
                   >
-                    venueScreen.nearbyAttractions.navigation.food.test
+                    FOOD
                   </Text>
                 </View>
                 <View
@@ -373,7 +373,7 @@ exports[`Storyshots AttractionsList Props 1`] = `
                       }
                     }
                   >
-                    venueScreen.nearbyAttractions.navigation.drink.test
+                    DRINK
                   </Text>
                 </View>
                 <View
@@ -402,7 +402,7 @@ exports[`Storyshots AttractionsList Props 1`] = `
                       }
                     }
                   >
-                    venueScreen.nearbyAttractions.navigation.coffee.test
+                    COFFEE
                   </Text>
                 </View>
                 <View
@@ -431,7 +431,7 @@ exports[`Storyshots AttractionsList Props 1`] = `
                       }
                     }
                   >
-                    venueScreen.nearbyAttractions.navigation.sights.test
+                    SIGHTS
                   </Text>
                 </View>
               </View>
@@ -2337,7 +2337,7 @@ exports[`Storyshots Code of Blog Link Presets 1`] = `
                   }
                 }
               >
-                venueScreen.blog.title.test
+                COPY NEEDED - SEE THE SIGHTS
               </Text>
               <Text
                 style={
@@ -2351,7 +2351,7 @@ exports[`Storyshots Code of Blog Link Presets 1`] = `
                   }
                 }
               >
-                venueScreen.blog.description.test
+                COPY NEEDED - Our MC Jason gives insider info about some of his favorite places in Portland.
               </Text>
               <View
                 accessible={true}
@@ -2384,7 +2384,7 @@ exports[`Storyshots Code of Blog Link Presets 1`] = `
                     }
                   }
                 >
-                  venueScreen.blog.button.test
+                  COPY NEEDED - CHECK OUT THE BLOG
                 </Text>
               </View>
             </View>
@@ -2790,7 +2790,7 @@ exports[`Storyshots Code of Conduct Presets 1`] = `
                   }
                 }
               >
-                infoScreen.conduct.title.test
+                CODE OF CONDUCT
               </Text>
               <Text
                 style={
@@ -2804,7 +2804,7 @@ exports[`Storyshots Code of Conduct Presets 1`] = `
                   }
                 }
               >
-                infoScreen.conduct.description.test
+                All attendees, speakers, sponsors, and volunteers at our conference are required to agree with our code of conduct.  Please read it carefully.
               </Text>
               <View
                 accessible={true}
@@ -2959,7 +2959,7 @@ exports[`Storyshots Code of Photobomb Presets 1`] = `
                   }
                 }
               >
-                infoScreen.photobomb.title.test
+                CHAIN REACT PHOTOBOMB APP
               </Text>
               <Text
                 style={
@@ -2973,7 +2973,7 @@ exports[`Storyshots Code of Photobomb Presets 1`] = `
                   }
                 }
               >
-                infoScreen.photobomb.description.test
+                COPY NEEDED
               </Text>
               <View
                 accessible={true}
@@ -3006,7 +3006,7 @@ exports[`Storyshots Code of Photobomb Presets 1`] = `
                     }
                   }
                 >
-                  infoScreen.photobomb.button.test
+                  GET THE APP
                 </Text>
               </View>
             </View>
@@ -4386,7 +4386,8 @@ exports[`Storyshots GerdingTheater Presets 1`] = `
                   }
                 }
               >
-                venueScreen.gerdingTheater.title.test
+                THE ARMORY
+IN PORTLAND
               </Text>
               <Text
                 style={
@@ -4399,7 +4400,7 @@ exports[`Storyshots GerdingTheater Presets 1`] = `
                   }
                 }
               >
-                venueScreen.gerdingTheater.description.test
+                Join us in historic, diverse downtown Portland for this year’s Chain React Conference! We’ll kick off on July 10th with a hands-on, two-track workshop at the Benson Hotel, continuing at the Gerding Theater at the Armory on the 11th and 12th.
               </Text>
             </View>
           </View>
@@ -4521,7 +4522,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                   }
                 }
               >
-                venueScreen.gettingToChainReact.title1.test
+                PORTLAND GUIDE
               </Text>
               <Text
                 style={
@@ -4534,7 +4535,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                   }
                 }
               >
-                venueScreen.gettingToChainReact.title2.test
+                EXPLORE THE CITY
               </Text>
               <Text
                 style={
@@ -4547,7 +4548,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                   }
                 }
               >
-                venueScreen.gettingToChainReact.subtitle.test
+                GETTING TO CHAIN REACT FROM PDX
               </Text>
               <Text
                 style={
@@ -4560,7 +4561,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                   }
                 }
               >
-                venueScreen.gettingToChainReact.description1.test
+                The closest airport is Portland International Airport (PDX), a one-hour flight from San Francisco. From New York, PDX is more like a six or seven-hour flight. Think of all the email you can catch up on!
               </Text>
               <Text
                 style={
@@ -4573,7 +4574,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                   }
                 }
               >
-                venueScreen.gettingToChainReact.description2.test
+                Upon arriving at PDX, take a taxi, Uber, or Lyft downtown. It's an easy 20-minute ride to The Benson Hotel where the conference kicks off. Once you’re at your hotel, grabbing a Lyft or Uber is a breeze, so there’s no need to rent a car. You’ll be exploring all the city has to offer in no time.
               </Text>
               <View
                 style={
@@ -4598,7 +4599,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                     }
                   }
                 >
-                  venueScreen.gettingToChainReact.rideShare.test
+                  UBER & LYFT (30 MINS)
                 </Text>
               </View>
               <View
@@ -4624,7 +4625,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                     }
                   }
                 >
-                  venueScreen.gettingToChainReact.massTransit.test
+                  MAX/LIGHTRAIL (55 MINS)
                 </Text>
               </View>
               <View
@@ -4807,7 +4808,7 @@ exports[`Storyshots PresentedBy Presets 1`] = `
                     }
                   }
                 >
-                  infoScreen.presentedBy.title.test
+                  THE HOST
                 </Text>
                 <Text
                   style={
@@ -4820,7 +4821,7 @@ exports[`Storyshots PresentedBy Presets 1`] = `
                     }
                   }
                 >
-                  infoScreen.presentedBy.subtitle.test
+                  INFINITE RED
                 </Text>
                 <Text
                   style={
@@ -4833,7 +4834,9 @@ exports[`Storyshots PresentedBy Presets 1`] = `
                     }
                   }
                 >
-                  infoScreen.presentedBy.bio.test
+                  Infinite Red is a distributed app design and development team of mobile and web experts in Portland, San Francisco, New Orleans, and other locales across the U.S. We’re passionate about creating beautifully functional products and amazing user experiences.
+
+Our team has been creating apps and websites for over ten years, and we’ve worked with companies from BlueJeans to Microsoft to Fandor. We believe it’s important to participate in and give back to the tech community, which is one reason we started Chain React.
                 </Text>
                 <View
                   style={
@@ -7327,7 +7330,7 @@ exports[`Storyshots Sponsors Presets 1`] = `
                   }
                 }
               >
-                infoScreen.sponsors.title.test
+                THANKS TO THIS YEAR'S SPONSORS
               </Text>
               <Text
                 style={
@@ -7340,7 +7343,7 @@ exports[`Storyshots Sponsors Presets 1`] = `
                   }
                 }
               >
-                infoScreen.sponsors.description.test
+                Support from our amazing sponsors make Chain React possible!
               </Text>
               <View
                 style={
@@ -7359,7 +7362,7 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     }
                   }
                 >
-                  infoScreen.sponsors.platinum.test
+                  PLATINUM SPONSORS
                 </Text>
                 <View
                   style={
@@ -7404,7 +7407,7 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     }
                   }
                 >
-                  infoScreen.sponsors.gold.test
+                  GOLD SPONSORS
                 </Text>
                 <View
                   style={
@@ -7526,7 +7529,7 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     }
                   }
                 >
-                  infoScreen.sponsors.silver.test
+                  SILVER SPONSORS
                 </Text>
                 <View
                   style={
@@ -7539,177 +7542,6 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     }
                   }
                 />
-                <View
-                  style={
-                    Object {
-                      "flexDirection": "row",
-                      "justifyContent": "space-between",
-                    }
-                  }
-                >
-                  <Image
-                    source={1}
-                    style={
-                      Object {
-                        "alignSelf": "center",
-                        "flex": 1,
-                        "margin": 10,
-                        "maxHeight": 51,
-                        "resizeMode": "contain",
-                        "width": 100,
-                      }
-                    }
-                  />
-                  <Image
-                    source={1}
-                    style={
-                      Object {
-                        "alignSelf": "center",
-                        "flex": 1,
-                        "margin": 10,
-                        "maxHeight": 51,
-                        "resizeMode": "contain",
-                        "width": 100,
-                      }
-                    }
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "flexDirection": "row",
-                      "justifyContent": "space-between",
-                    }
-                  }
-                >
-                  <Image
-                    source={1}
-                    style={
-                      Object {
-                        "alignSelf": "center",
-                        "flex": 1,
-                        "margin": 10,
-                        "maxHeight": 51,
-                        "resizeMode": "contain",
-                        "width": 100,
-                      }
-                    }
-                  />
-                  <Image
-                    source={1}
-                    style={
-                      Object {
-                        "alignSelf": "center",
-                        "flex": 1,
-                        "margin": 10,
-                        "maxHeight": 51,
-                        "resizeMode": "contain",
-                        "width": 100,
-                      }
-                    }
-                  />
-                </View>
-                <View
-                  style={
-                    Object {
-                      "flexDirection": "row",
-                      "justifyContent": "space-between",
-                    }
-                  }
-                >
-                  <Image
-                    source={1}
-                    style={
-                      Object {
-                        "alignSelf": "center",
-                        "flex": 1,
-                        "margin": 10,
-                        "maxHeight": 51,
-                        "resizeMode": "contain",
-                        "width": 100,
-                      }
-                    }
-                  />
-                  <Image
-                    source={1}
-                    style={
-                      Object {
-                        "alignSelf": "center",
-                        "flex": 1,
-                        "margin": 10,
-                        "maxHeight": 51,
-                        "resizeMode": "contain",
-                        "width": 100,
-                      }
-                    }
-                  />
-                </View>
-              </View>
-              <View
-                style={
-                  Object {
-                    "marginTop": 43,
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#C7C4DB",
-                      "fontFamily": "Gotham Rounded",
-                      "fontSize": 14,
-                      "lineHeight": 17,
-                    }
-                  }
-                >
-                  infoScreen.sponsors.bronze.test
-                </Text>
-                <View
-                  style={
-                    Object {
-                      "backgroundColor": "#2C2C4C",
-                      "height": 1,
-                      "marginBottom": 43,
-                      "marginTop": 20,
-                      "width": "100%",
-                    }
-                  }
-                />
-                <View
-                  style={
-                    Object {
-                      "flexDirection": "row",
-                      "justifyContent": "space-between",
-                    }
-                  }
-                >
-                  <Image
-                    source={1}
-                    style={
-                      Object {
-                        "alignSelf": "center",
-                        "flex": 1,
-                        "margin": 10,
-                        "maxHeight": 51,
-                        "resizeMode": "contain",
-                        "width": 100,
-                      }
-                    }
-                  />
-                  <Image
-                    source={1}
-                    style={
-                      Object {
-                        "alignSelf": "center",
-                        "flex": 1,
-                        "margin": 10,
-                        "maxHeight": 51,
-                        "resizeMode": "contain",
-                        "width": 100,
-                      }
-                    }
-                  />
-                </View>
                 <View
                   style={
                     Object {
@@ -7833,7 +7665,178 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     }
                   }
                 >
-                  infoScreen.sponsors.additional.test
+                  BRONZE SPONSORS
+                </Text>
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#2C2C4C",
+                      "height": 1,
+                      "marginBottom": 43,
+                      "marginTop": 20,
+                      "width": "100%",
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                    }
+                  }
+                >
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "flex": 1,
+                        "margin": 10,
+                        "maxHeight": 51,
+                        "resizeMode": "contain",
+                        "width": 100,
+                      }
+                    }
+                  />
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "flex": 1,
+                        "margin": 10,
+                        "maxHeight": 51,
+                        "resizeMode": "contain",
+                        "width": 100,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                    }
+                  }
+                >
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "flex": 1,
+                        "margin": 10,
+                        "maxHeight": 51,
+                        "resizeMode": "contain",
+                        "width": 100,
+                      }
+                    }
+                  />
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "flex": 1,
+                        "margin": 10,
+                        "maxHeight": 51,
+                        "resizeMode": "contain",
+                        "width": 100,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                    }
+                  }
+                >
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "flex": 1,
+                        "margin": 10,
+                        "maxHeight": 51,
+                        "resizeMode": "contain",
+                        "width": 100,
+                      }
+                    }
+                  />
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "flex": 1,
+                        "margin": 10,
+                        "maxHeight": 51,
+                        "resizeMode": "contain",
+                        "width": 100,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                    }
+                  }
+                >
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "flex": 1,
+                        "margin": 10,
+                        "maxHeight": 51,
+                        "resizeMode": "contain",
+                        "width": 100,
+                      }
+                    }
+                  />
+                  <Image
+                    source={1}
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "flex": 1,
+                        "margin": 10,
+                        "maxHeight": 51,
+                        "resizeMode": "contain",
+                        "width": 100,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "marginTop": 43,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#C7C4DB",
+                      "fontFamily": "Gotham Rounded",
+                      "fontSize": 14,
+                      "lineHeight": 17,
+                    }
+                  }
+                >
+                  ADDITIONAL SPONSORS
                 </Text>
                 <View
                   style={
@@ -8694,7 +8697,7 @@ exports[`Storyshots Text Passing Content 1`] = `
                 }
               }
             >
-              common.ok.test
+              OK!
             </Text>
             <Text
               style={
@@ -8705,7 +8708,7 @@ exports[`Storyshots Text Passing Content 1`] = `
                 }
               }
             >
-              omglol.test
+              [missing "en-US.omglol" translation]
             </Text>
           </View>
         </View>
@@ -9584,12 +9587,12 @@ exports[`Storyshots TextField Labelling 1`] = `
                   }
                 }
               >
-                storybook.field.test
+                [missing "en-US.storybook.field" translation]
               </Text>
               <TextInput
                 allowFontScaling={true}
                 onChangeText={[Function]}
-                placeholder="storybook.placeholder.test"
+                placeholder="[missing \\"en-US.storybook.placeholder\\" translation]"
                 placeholderTextColor="#CDD4DA"
                 rejectResponderTermination={true}
                 style={
@@ -10054,7 +10057,7 @@ exports[`Storyshots TravelOption Presets 1`] = `
                   }
                 }
               >
-                venueScreen.gettingToChainReact.rideShare.test
+                UBER & LYFT (30 MINS)
               </Text>
             </View>
           </View>
@@ -10160,7 +10163,7 @@ exports[`Storyshots TravelOption Presets 1`] = `
                   }
                 }
               >
-                venueScreen.gettingToChainReact.massTransit.test
+                MAX/LIGHTRAIL (55 MINS)
               </Text>
             </View>
           </View>
@@ -10281,7 +10284,7 @@ exports[`Storyshots WiFi Presets 1`] = `
                   }
                 }
               >
-                infoScreen.wifi.title.test
+                WIFI NETWORK
               </Text>
               <Text
                 style={
@@ -10294,7 +10297,7 @@ exports[`Storyshots WiFi Presets 1`] = `
                   }
                 }
               >
-                infoScreen.wifi.description.test
+                Thanks to PlayStation for sponsoring our wifi this year.
               </Text>
               <View
                 style={
@@ -10325,7 +10328,7 @@ exports[`Storyshots WiFi Presets 1`] = `
                       }
                     }
                   >
-                    infoScreen.wifi.networkLabel.test
+                    WIFI NETWORK
                   </Text>
                   <Image
                     source={1}
@@ -10343,7 +10346,7 @@ exports[`Storyshots WiFi Presets 1`] = `
                     }
                   }
                 >
-                  infoScreen.wifi.networkName.test
+                  PlayStation
                 </Text>
               </View>
               <View
@@ -10367,7 +10370,7 @@ exports[`Storyshots WiFi Presets 1`] = `
                     }
                   }
                 >
-                  infoScreen.wifi.passwordLabel.test
+                  WIFI PASSWORD
                 </Text>
                 <Text
                   style={
@@ -10381,7 +10384,7 @@ exports[`Storyshots WiFi Presets 1`] = `
                     }
                   }
                 >
-                  infoScreen.wifi.password.test
+                  diversity
                 </Text>
               </View>
             </View>

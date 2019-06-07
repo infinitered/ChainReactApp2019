@@ -158,7 +158,7 @@ dependencies {
     implementation project(':appcenter-crashes')
     implementation project(':appcenter-analytics')
     implementation project(':react-native-keychain')
-    implementation project(':react-native-i18n')
+    implementation project(':react-native-localize')
     implementation (project(':mapbox-react-native-mapbox-gl')) {
             implementation ('com.squareup.okhttp3:okhttp:3.12.1') {
                 force = true
