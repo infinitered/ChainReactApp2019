@@ -1,5 +1,9 @@
-jest.mock("react-native-i18n", () => {
+jest.mock("react-native-localize", () => {
   return {
-    t: key => `${key}.test`,
+    getLocales: () => [
+      // you can choose / add the locales you want
+      { countryCode: "US", languageTag: "en-US", languageCode: "en", isRTL: false },
+      { countryCode: "JP", languageTag: "ja-JA", languageCode: "ja", isRTL: false },
+    ],
   }
 })

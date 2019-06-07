@@ -43,9 +43,10 @@
 		3EABFF5EC2F04B48875D79D5 /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FAF8BBE9814469B8C444E2 /* libSplashScreen.a */; };
 		4790DC9324164219AC9348EA /* libLottie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9A243B10744B7FB09F3A96 /* libLottie.a */; };
 		58E0CE2D84A74FA3A119CFF2 /* libRNKeychain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4584748EEE444C8CBD9718B1 /* libRNKeychain.a */; };
+		59A042F5ED3443D698936274 /* libRNLocalize.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D8AAA51A204AD386013D48 /* libRNLocalize.a */; };
 		66549EBAAD185DA440350B18 /* libPods-ChainReactConf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CC3B19C09761377D3C65FE /* libPods-ChainReactConf.a */; };
 		6D91659140B34158A386B6AD /* GothamRnd-LightItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 99FAFA465416484F811EE8FA /* GothamRnd-LightItal.otf */; };
-		79E9137EE55942A081E34C75 /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA4F6F71EDA4A2D857FFD28 /* libRNI18n.a */; };
+		6EAE4D9C01584CA99E2CE1F2 /* libRNLocalize-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6359FDBED6034AA4A7DDE0B3 /* libRNLocalize-tvOS.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8A34CE2A20E5A3E900470345 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A34CC6820E59D8800470345 /* Lottie.framework */; };
 		8A34CE2B20E5A3E900470345 /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A34CC6820E59D8800470345 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -62,7 +63,6 @@
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		DA4417FE69724F0596E323D2 /* GothamRnd-MedItal.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC50B8C1FDA54B4AB12134F8 /* GothamRnd-MedItal.otf */; };
 		DEF6A9377F5642CF93683E77 /* libRCTMGL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF0DE45E9AD4B60989894A6 /* libRCTMGL.a */; };
-		E8519D6B2799422E8BAA0D6D /* libRNI18n-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65458B4DB464475D809F6A9D /* libRNI18n-tvOS.a */; };
 		E9BA522C2289E68300497DF2 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9BA52242289E57C00497DF2 /* libRNGestureHandler.a */; };
 		F04AC33984E44F9A84BF2922 /* GothamRnd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B976D889CA0B4DFE8D6E58D0 /* GothamRnd-Light.otf */; };
 		FD6C522D01B746D99BB49188 /* libLottieReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 673384FCBAE54685B2C45B37 /* libLottieReactNative.a */; };
@@ -201,20 +201,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 3D383D621EBD27B9005632C8;
 			remoteInfo = "double-conversion-tvOS";
-		};
-		381C6EE120E53C59008B11AA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 37AA9A562BD84D1AA4CB45A5 /* RNI18n.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 134814201AA4EA6300B7C361;
-			remoteInfo = RNI18n;
-		};
-		381C6EE320E53C59008B11AA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 37AA9A562BD84D1AA4CB45A5 /* RNI18n.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6476C4051EEAA69700B10F51;
-			remoteInfo = "RNI18n-tvOS";
 		};
 		381C6F1D20E53C81008B11AA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -362,6 +348,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = C35AEC201EF91F9300931F0C;
 			remoteInfo = AppCenterReactNative;
+		};
+		713B3C4922AB0284004C0043 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25AFE9459F6340FEAB366E79 /* RNLocalize.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNLocalize;
+		};
+		713B3C4B22AB0284004C0043 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25AFE9459F6340FEAB366E79 /* RNLocalize.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D2A28471D9B043800D4039D;
+			remoteInfo = "RNLocalize-tvOS";
 		};
 		78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -541,10 +541,9 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ChainReactConf/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ChainReactConf/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		2AA4F6F71EDA4A2D857FFD28 /* libRNI18n.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNI18n.a; sourceTree = "<group>"; };
+		25AFE9459F6340FEAB366E79 /* RNLocalize.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNLocalize.xcodeproj; path = "../node_modules/react-native-localize/ios/RNLocalize.xcodeproj"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* ChainReactConf-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChainReactConf-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* ChainReactConf-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ChainReactConf-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		37AA9A562BD84D1AA4CB45A5 /* RNI18n.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNI18n.xcodeproj; path = "../node_modules/react-native-i18n/ios/RNI18n.xcodeproj"; sourceTree = "<group>"; };
 		37E983621E544847B913FFD9 /* GothamRnd-BookItal.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-BookItal.otf"; path = "../app/theme/fonts/GothamRnd-BookItal.otf"; sourceTree = "<group>"; };
 		381C6FAA20E54314008B11AA /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../node_modules/@mapbox/react-native-mapbox-gl/ios/Mapbox.framework"; sourceTree = "<group>"; };
 		4584748EEE444C8CBD9718B1 /* libRNKeychain.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNKeychain.a; sourceTree = "<group>"; };
@@ -552,7 +551,8 @@
 		5D7BCAA7E3DA4B348A4C1E71 /* RCTMGL.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTMGL.xcodeproj; path = "../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL.xcodeproj"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		606231E212304B7AABC748AA /* GothamRnd-BoldItal.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-BoldItal.otf"; path = "../app/theme/fonts/GothamRnd-BoldItal.otf"; sourceTree = "<group>"; };
-		65458B4DB464475D809F6A9D /* libRNI18n-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNI18n-tvOS.a"; sourceTree = "<group>"; };
+		60D8AAA51A204AD386013D48 /* libRNLocalize.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNLocalize.a; sourceTree = "<group>"; };
+		6359FDBED6034AA4A7DDE0B3 /* libRNLocalize-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNLocalize-tvOS.a"; sourceTree = "<group>"; };
 		673384FCBAE54685B2C45B37 /* libLottieReactNative.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libLottieReactNative.a; sourceTree = "<group>"; };
 		6952AD460025C7719CA37D7F /* Pods-ChainReactConf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChainReactConf.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChainReactConf/Pods-ChainReactConf.debug.xcconfig"; sourceTree = "<group>"; };
 		701C1A6E70D440FC9B653471 /* GothamRnd-Book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRnd-Book.otf"; path = "../app/theme/fonts/GothamRnd-Book.otf"; sourceTree = "<group>"; };
@@ -622,7 +622,6 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				8A34CE2A20E5A3E900470345 /* Lottie.framework in Frameworks */,
-				79E9137EE55942A081E34C75 /* libRNI18n.a in Frameworks */,
 				58E0CE2D84A74FA3A119CFF2 /* libRNKeychain.a in Frameworks */,
 				3EABFF5EC2F04B48875D79D5 /* libSplashScreen.a in Frameworks */,
 				DEF6A9377F5642CF93683E77 /* libRCTMGL.a in Frameworks */,
@@ -632,6 +631,7 @@
 				FD6C522D01B746D99BB49188 /* libLottieReactNative.a in Frameworks */,
 				66549EBAAD185DA440350B18 /* libPods-ChainReactConf.a in Frameworks */,
 				AB31D29C8C3A4F21814A9B98 /* libAppCenterReactNativePush.a in Frameworks */,
+				59A042F5ED3443D698936274 /* libRNLocalize.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,7 +646,7 @@
 				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
-				E8519D6B2799422E8BAA0D6D /* libRNI18n-tvOS.a in Frameworks */,
+				6EAE4D9C01584CA99E2CE1F2 /* libRNLocalize-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -800,8 +800,6 @@
 		381C6EB720E53C57008B11AA /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				2AA4F6F71EDA4A2D857FFD28 /* libRNI18n.a */,
-				65458B4DB464475D809F6A9D /* libRNI18n-tvOS.a */,
 				4584748EEE444C8CBD9718B1 /* libRNKeychain.a */,
 				09FAF8BBE9814469B8C444E2 /* libSplashScreen.a */,
 				CAF0DE45E9AD4B60989894A6 /* libRCTMGL.a */,
@@ -809,17 +807,10 @@
 				5C9A243B10744B7FB09F3A96 /* libLottie.a */,
 				673384FCBAE54685B2C45B37 /* libLottieReactNative.a */,
 				DF482FAB974F4ABF98F1E710 /* libAppCenterReactNativePush.a */,
+				60D8AAA51A204AD386013D48 /* libRNLocalize.a */,
+				6359FDBED6034AA4A7DDE0B3 /* libRNLocalize-tvOS.a */,
 			);
 			name = "Recovered References";
-			sourceTree = "<group>";
-		};
-		381C6EDD20E53C59008B11AA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				381C6EE220E53C59008B11AA /* libRNI18n.a */,
-				381C6EE420E53C59008B11AA /* libRNI18n-tvOS.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		381C6F1920E53C81008B11AA /* Products */ = {
@@ -856,6 +847,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		713B3C4522AB0283004C0043 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				713B3C4A22AB0284004C0043 /* libRNLocalize.a */,
+				713B3C4C22AB0284004C0043 /* libRNLocalize-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		78C398B11ACF4ADC00677621 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -884,13 +884,13 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				37AA9A562BD84D1AA4CB45A5 /* RNI18n.xcodeproj */,
 				B21A47A5F92F444C848FDD09 /* RNKeychain.xcodeproj */,
 				B58EB9FE107B440C8E26A7E0 /* SplashScreen.xcodeproj */,
 				5D7BCAA7E3DA4B348A4C1E71 /* RCTMGL.xcodeproj */,
 				7A50F9986E6042E89B77F295 /* Lottie.xcodeproj */,
 				F3AACC5D093B4422BFAFF50B /* LottieReactNative.xcodeproj */,
 				D6AB71DB50404BF7A920D39D /* AppCenterReactNativePush.xcodeproj */,
+				25AFE9459F6340FEAB366E79 /* RNLocalize.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1235,12 +1235,12 @@
 					ProjectRef = E9BA51EF2289E57C00497DF2 /* RNGestureHandler.xcodeproj */;
 				},
 				{
-					ProductGroup = 381C6EDD20E53C59008B11AA /* Products */;
-					ProjectRef = 37AA9A562BD84D1AA4CB45A5 /* RNI18n.xcodeproj */;
-				},
-				{
 					ProductGroup = 381C6F1920E53C81008B11AA /* Products */;
 					ProjectRef = B21A47A5F92F444C848FDD09 /* RNKeychain.xcodeproj */;
+				},
+				{
+					ProductGroup = 713B3C4522AB0283004C0043 /* Products */;
+					ProjectRef = 25AFE9459F6340FEAB366E79 /* RNLocalize.xcodeproj */;
 				},
 				{
 					ProductGroup = 381C6F5820E53C8B008B11AA /* Products */;
@@ -1377,20 +1377,6 @@
 			remoteRef = 2DF0FFE82056DD460020B375 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		381C6EE220E53C59008B11AA /* libRNI18n.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNI18n.a;
-			remoteRef = 381C6EE120E53C59008B11AA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		381C6EE420E53C59008B11AA /* libRNI18n-tvOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libRNI18n-tvOS.a";
-			remoteRef = 381C6EE320E53C59008B11AA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		381C6F1E20E53C81008B11AA /* libRNKeychain.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1508,6 +1494,20 @@
 			fileType = archive.ar;
 			path = libRCTAnimation.a;
 			remoteRef = 5E9157341DD0AC6500FF2AA8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		713B3C4A22AB0284004C0043 /* libRNLocalize.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNLocalize.a;
+			remoteRef = 713B3C4922AB0284004C0043 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		713B3C4C22AB0284004C0043 /* libRNLocalize-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNLocalize-tvOS.a";
+			remoteRef = 713B3C4B22AB0284004C0043 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		78C398B91ACF4ADC00677621 /* libRCTLinking.a */ = {
@@ -1839,13 +1839,13 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
 					"$(SRCROOT)/../node_modules/react-native-keychain/RNKeychainManager",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 					"$(SRCROOT)/../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL/**",
 					"$(SRCROOT)/../node_modules/lottie-ios/lottie-ios/Classes/**",
 					"$(SRCROOT)/../node_modules/lottie-react-native/src/ios/LottieReactNative",
 					"$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush",
+					"$(SRCROOT)/../node_modules/react-native-localize/ios",
 				);
 				INFOPLIST_FILE = ChainReactConfTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1858,6 +1858,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)/System/Library/Frameworks\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1880,13 +1882,13 @@
 				DEVELOPMENT_TEAM = L7YNDPLSEB;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
 					"$(SRCROOT)/../node_modules/react-native-keychain/RNKeychainManager",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 					"$(SRCROOT)/../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL/**",
 					"$(SRCROOT)/../node_modules/lottie-ios/lottie-ios/Classes/**",
 					"$(SRCROOT)/../node_modules/lottie-react-native/src/ios/LottieReactNative",
 					"$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush",
+					"$(SRCROOT)/../node_modules/react-native-localize/ios",
 				);
 				INFOPLIST_FILE = ChainReactConfTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1899,6 +1901,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)/System/Library/Frameworks\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1935,7 +1939,6 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
 					"$(SRCROOT)/../node_modules/react-native-keychain/RNKeychainManager",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 					"$(SRCROOT)/../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL/**",
@@ -1945,6 +1948,7 @@
 					"$(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics",
 					"$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes",
 					"$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush",
+					"$(SRCROOT)/../node_modules/react-native-localize/ios",
 				);
 				INFOPLIST_FILE = ChainReactConf/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1984,7 +1988,6 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
 					"$(SRCROOT)/../node_modules/react-native-keychain/RNKeychainManager",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 					"$(SRCROOT)/../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL/**",
@@ -1994,6 +1997,7 @@
 					"$(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics",
 					"$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes",
 					"$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush",
+					"$(SRCROOT)/../node_modules/react-native-localize/ios",
 				);
 				INFOPLIST_FILE = ChainReactConf/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -2027,13 +2031,13 @@
 				GCC_NO_COMMON_BLOCKS = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
 					"$(SRCROOT)/../node_modules/react-native-keychain/RNKeychainManager",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 					"$(SRCROOT)/../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL/**",
 					"$(SRCROOT)/../node_modules/lottie-ios/lottie-ios/Classes/**",
 					"$(SRCROOT)/../node_modules/lottie-react-native/src/ios/LottieReactNative",
 					"$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush",
+					"$(SRCROOT)/../node_modules/react-native-localize/ios",
 				);
 				INFOPLIST_FILE = "ChainReactConf-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2045,6 +2049,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)/System/Library/Frameworks\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -2078,13 +2084,13 @@
 				GCC_NO_COMMON_BLOCKS = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
 					"$(SRCROOT)/../node_modules/react-native-keychain/RNKeychainManager",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 					"$(SRCROOT)/../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL/**",
 					"$(SRCROOT)/../node_modules/lottie-ios/lottie-ios/Classes/**",
 					"$(SRCROOT)/../node_modules/lottie-react-native/src/ios/LottieReactNative",
 					"$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush",
+					"$(SRCROOT)/../node_modules/react-native-localize/ios",
 				);
 				INFOPLIST_FILE = "ChainReactConf-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2096,6 +2102,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)/System/Library/Frameworks\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -2127,13 +2135,13 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
 					"$(SRCROOT)/../node_modules/react-native-keychain/RNKeychainManager",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 					"$(SRCROOT)/../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL/**",
 					"$(SRCROOT)/../node_modules/lottie-ios/lottie-ios/Classes/**",
 					"$(SRCROOT)/../node_modules/lottie-react-native/src/ios/LottieReactNative",
 					"$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush",
+					"$(SRCROOT)/../node_modules/react-native-localize/ios",
 				);
 				INFOPLIST_FILE = "ChainReactConf-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2145,6 +2153,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)/System/Library/Frameworks\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -2175,13 +2185,13 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
 					"$(SRCROOT)/../node_modules/react-native-keychain/RNKeychainManager",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 					"$(SRCROOT)/../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL/**",
 					"$(SRCROOT)/../node_modules/lottie-ios/lottie-ios/Classes/**",
 					"$(SRCROOT)/../node_modules/lottie-react-native/src/ios/LottieReactNative",
 					"$(SRCROOT)/../node_modules/appcenter-push/ios/AppCenterReactNativePush",
+					"$(SRCROOT)/../node_modules/react-native-localize/ios",
 				);
 				INFOPLIST_FILE = "ChainReactConf-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2193,6 +2203,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)/System/Library/Frameworks\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",

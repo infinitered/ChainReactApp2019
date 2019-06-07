@@ -1,0 +1,125 @@
+{
+  "common": {
+    "ok": "OK! 🇯🇵 🇯🇵",
+    "cancel": "Cancel 🇯🇵",
+    "back": "Back"
+  },
+  "errors": {
+    "invalidEmail": "Invalid email address."
+  },
+  "tabbar": {
+    "schedule": "Schedule 🇯🇵",
+    "venue": "Venue 🇯🇵",
+    "info": "Info 🇯🇵",
+    "profile": "Profile 🇯🇵"
+  },
+  "welcomeScreen": {
+    "header1": "Welcome to 🇯🇵",
+    "header2": "Chain React 2019 🇯🇵",
+    "subtitle": "Use our app to to view the schedule, explore the city, and access need-to-know details! You can even chat with others about each talk, right here in the app! 🇯🇵",
+    "nextScreenButton": "I'm Ready! 🇯🇵"
+  },
+  "profilescreen": {
+    "title": "Profile 🇯🇵"
+  },
+  "scheduleScreen": {
+    "title": "Schedule 🇯🇵",
+    "nav": {
+      "wednesday": "WED 🇯🇵",
+      "thursday": "THU 🇯🇵",
+      "friday": "FRI 🇯🇵"
+    },
+    "workshops": "WORKSHOPS 🇯🇵",
+    "workshopsDate": "Wed, July 10 🇯🇵",
+    "day1": "CONFERENCE DAY 1 🇯🇵",
+    "day1Date": "Thu, July 11 🇯🇵",
+    "day2": "CONFERENCE DAY 2 🇯🇵",
+    "day2Date": "Fri, July 12 🇯🇵"
+  },
+  "talkDetailsScreen": {
+    "workshop": "WORKSHOP 🇯🇵",
+    "location": "LOCATION 🇯🇵",
+    "aboutWorkshop": "ABOUT WORKSHOP 🇯🇵",
+    "sponsoredBy": "Sponsored By  🇯🇵",
+    "menuTitle": "WHAT'S ON THE MENU 🇯🇵",
+    "rsvp": "RSVP Now 🇯🇵"
+  },
+  "venueScreen": {
+    "title": "Explore 🇯🇵",
+    "gerdingTheater": {
+      "title": "THE ARMORY\nIN PORTLAND 🇯🇵",
+      "description": "Join us in historic, diverse downtown Portland for this year’s Chain React Conference! We’ll kick off on July 10th with a hands-on, two-track workshop at the Benson Hotel, continuing at the Gerding Theater at the Armory on the 11th and 12th. 🇯🇵"
+    },
+    "gettingToChainReact": {
+      "title1": "PORTLAND GUIDE 🇯🇵",
+      "title2": "EXPLORE THE CITY 🇯🇵",
+      "subtitle": "GETTING TO CHAIN REACT FROM PDX 🇯🇵",
+      "description1": "The closest airport is Portland International Airport (PDX), a one-hour flight from San Francisco. From New York, PDX is more like a six or seven-hour flight. Think of all the email you can catch up on! 🇯🇵",
+      "description2": "Upon arriving at PDX, take a taxi, Uber, or Lyft downtown. It's an easy 20-minute ride to The Benson Hotel where the conference kicks off. Once you’re at your hotel, grabbing a Lyft or Uber is a breeze, so there’s no need to rent a car. You’ll be exploring all the city has to offer in no time. 🇯🇵",
+      "rideShare": "UBER & LYFT (30 MINS) 🇯🇵",
+      "massTransit": "MAX/LIGHTRAIL (55 MINS) 🇯🇵"
+    },
+    "blog": {
+      "title": "COPY NEEDED - SEE THE SIGHTS 🇯🇵",
+      "description": "COPY NEEDED - Our MC Jason gives insider info about some of his favorite places in Portland. 🇯🇵",
+      "button": "COPY NEEDED - CHECK OUT THE BLOG 🇯🇵"
+    },
+    "nearbyAttractions": {
+      "navigation": {
+        "food": "FOOD 🇯🇵",
+        "drink": "DRINK 🇯🇵",
+        "coffee": "COFFEE 🇯🇵",
+        "sights": "SIGHTS 🇯🇵",
+        "getDirections": "GET DIRECTIONS 🇯🇵"
+      }
+    }
+  },
+  "infoScreen": {
+    "title": "Info 🇯🇵",
+    "wifi": {
+      "title": "WIFI NETWORK 🇯🇵",
+      "description": "Thanks to PlayStation for sponsoring our wifi this year. 🇯🇵",
+      "networkLabel": "WIFI NETWORK 🇯🇵",
+      "networkName": "PlayStation 🇯🇵",
+      "passwordLabel": "WIFI PASSWORD 🇯🇵",
+      "password": "diversity 🇯🇵"
+    },
+    "conduct": {
+      "title": "CODE OF CONDUCT 🇯🇵",
+      "description": "All attendees, speakers, sponsors, and volunteers at our conference are required to agree with our code of conduct.  Please read it carefully. 🇯🇵"
+    },
+    "photobomb": {
+      "title": "CHAIN REACT PHOTOBOMB APP 🇯🇵",
+      "description": "COPY NEEDED 🇯🇵",
+      "button": "GET THE APP 🇯🇵"
+    },
+    "sponsors": {
+      "title": "THANKS TO THIS YEAR'S SPONSORS 🇯🇵",
+      "description": "Support from our amazing sponsors make Chain React possible! 🇯🇵",
+      "platinum": "PLATINUM SPONSORS 🇯🇵",
+      "gold": "GOLD SPONSORS 🇯🇵",
+      "silver": "SILVER SPONSORS 🇯🇵",
+      "bronze": "BRONZE SPONSORS 🇯🇵",
+      "additional": "ADDITIONAL SPONSORS 🇯🇵"
+    },
+    "presentedBy": {
+      "title": "THE HOST 🇯🇵",
+      "subtitle": "INFINITE RED 🇯🇵",
+      "bio": "Infinite Red is a distributed app design and development team of mobile and web experts in Portland, San Francisco, New Orleans, and other locales across the U.S. We’re passionate about creating beautifully functional products and amazing user experiences.\n\nOur team has been creating apps and websites for over ten years, and we’ve worked with companies from BlueJeans to Microsoft to Fandor. We believe it’s important to participate in and give back to the tech community, which is one reason we started Chain React. 🇯🇵"
+    }
+  },
+  "codeOfConductScreen": {
+    "title": "CONFERENCE CODE OF CONDUCT 🇯🇵",
+    "intro": "All attendees, speakers, sponsors and volunteers at our conference are required to agree with the following code of conduct. Organizers will enforce this code throughout the event. We expect cooperation from all participants to help ensure a safe environment for everybody. 🇯🇵",
+    "contact": {
+      "alertTitle": "Call or Text 🇯🇵",
+      "alertBody": "Would you like to call or send a text message? 🇯🇵",
+      "call": "Call 🇯🇵",
+      "text": "Text 🇯🇵"
+    },
+    "quickVersionTitle": "THE QUICK VERSION 🇯🇵",
+    "quickVersion": "Our conference is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), or technology choices. We do not tolerate harassment of conference participants in any form. Sexual language and imagery is not appropriate for any conference venue, including talks, workshops, parties, Twitter and other online media. Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organisers.  🇯🇵",
+    "lessQuickTitle": "THE LESS QUICK VERSION 🇯🇵",
+    "lessQuickVersion": "Harassment includes offensive verbal comments related to gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion, technology choices, sexual images in public spaces, deliberate intimidation, stalking, following, harassing, photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention. Participants asked to stop any harassing behavior are expected to comply immediately. Sponsors are also subject to the anti-harassment policy. In particular, sponsors should not use sexualised images, activities, or other material. Booth staff (including volunteers) should not use sexualised clothing/uniforms/costumes, or otherwise create a sexualised environment. If a participant engages in harassing behavior, the conference organisers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund. If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff immediately. Conference staff can be identified as they'll be wearing branded clothing and/or badges. Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance. We expect participants to follow these rules at conference and workshop venues and conference-related social events. 🇯🇵"
+  }
+}
