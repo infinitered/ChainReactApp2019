@@ -1,12 +1,5 @@
 import * as React from "react"
-import {
-  View,
-  ViewStyle,
-  TextStyle,
-  TouchableOpacityProperties,
-  Linking,
-  Platform,
-} from "react-native"
+import { View, ViewStyle, TextStyle, Linking, Platform } from "react-native"
 import { Text } from "../text"
 import { Button } from "../button"
 import { spacing, palette } from "../../theme"
@@ -24,7 +17,7 @@ const BODY: TextStyle = {
   marginBottom: spacing.medium,
 }
 
-export function Photobomb(props: TouchableOpacityProperties) {
+export function Photobomb() {
   const onPressLink = () => {
     const url = Platform.select({
       ios: "https://itunes.apple.com/us/app/chain-react-photobomb/id1253527606?mt=8",

@@ -1,5 +1,5 @@
 import * as React from "react"
-import { View, ViewStyle, TextStyle, TouchableOpacityProperties, Linking } from "react-native"
+import { View, ViewStyle, TextStyle, Linking } from "react-native"
 import { Text } from "../text"
 import { Button } from "../button"
 import { spacing, palette } from "../../theme"
@@ -19,7 +19,7 @@ const BODY: TextStyle = {
   marginBottom: spacing.medium,
 }
 
-export function BlogLink(props: TouchableOpacityProperties) {
+export function BlogLink() {
   const onPressLink = () => {
     Linking.openURL(
       "https://shift.infinite.red/an-insiders-guide-to-the-best-spots-in-portland-ce84e316bfc9",
