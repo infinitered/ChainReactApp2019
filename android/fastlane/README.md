@@ -16,6 +16,11 @@ or alternatively using `brew cask install fastlane`
 
 # Available Actions
 ## Android
+### android clear_artifacts
+```
+fastlane android clear_artifacts
+```
+
 ### android test
 ```
 fastlane android test
