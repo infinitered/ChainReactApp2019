@@ -16,6 +16,10 @@ fastlane_version "2.37.0"
 default_platform :android
 
 platform :android do
+  lane :clear_artifacts do
+    sh "rm -f ../app/build/outputs/apk/*/*.apk"
+  end
+
   before_all do
     # load variables from .env file in the root if it exists
     if File.exist?('../../.env')
@@ -24,6 +28,8 @@ platform :android do
         ENV[kv[0]] = kv[1].chomp if kv[1]
       end
     end
+
+    clear_artifacts
   end
 
   desc "Runs all the tests"
