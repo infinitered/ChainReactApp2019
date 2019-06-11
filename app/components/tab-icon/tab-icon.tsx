@@ -25,6 +25,8 @@ const TAB_ICONS: any = {
   venueActive: require("./icons/map.active.png"),
   info: require("./icons/info.inactive.png"),
   infoActive: require("./icons/info.active.png"),
+  profile: require("./icons/profile.inactive.png"),
+  profileActive: require("./icons/profile.active.png"),
 }
 
 export const TabIcon = ({ routeName, focused }) => {
