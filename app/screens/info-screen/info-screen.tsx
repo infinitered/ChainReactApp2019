@@ -13,20 +13,19 @@ import { Photobomb } from "../../components/photobomb/photobomb"
 export interface InfoScreenProps extends NavigationScreenProps<{}> {}
 
 const TITLE: TextStyle = {
-  marginLeft: spacing.large,
-}
-const ROOT: ViewStyle = {
   marginTop: spacing.extraLarge,
+  marginLeft: spacing.large,
 }
 
 export class InfoScreen extends React.Component<InfoScreenProps, {}> {
   static navigationOptions = {
     header: null,
+    headerBackTitle: null,
   }
 
   render() {
     return (
-      <Screen style={ROOT} preset="scrollStack" backgroundColor={palette.portGore}>
+      <Screen preset="scrollStack" backgroundColor={palette.portGore}>
         <Text preset="title" tx="infoScreen.title" style={TITLE} />
         <WiFi />
         <Conduct onPress={() => this.props.navigation.navigate("codeOfConduct")} />

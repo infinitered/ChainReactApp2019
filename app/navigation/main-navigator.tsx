@@ -7,7 +7,7 @@ import { TalkDetailsScreen } from "../screens/talk-details"
 import { ProfileScreen } from "../screens/profile-screen"
 import { CodeOfConductScreen } from "../screens/code-of-conduct"
 import { TabIcon } from "../components/tab-icon"
-import { color, palette } from "../theme"
+import { color, palette, spacing } from "../theme"
 
 export const MainNavigator = createStackNavigator(
   {
@@ -50,6 +50,8 @@ export const MainNavigator = createStackNavigator(
           tabBarOptions: {
             style: {
               backgroundColor: color.tabbar,
+              height: 56,
+              paddingVertical: spacing.tiny,
             },
             activeTintColor: palette.white,
           },
