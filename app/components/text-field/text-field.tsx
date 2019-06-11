@@ -1,6 +1,6 @@
 import * as React from "react"
 import { View, TextInput, TextStyle, ViewStyle } from "react-native"
-import { color, spacing, typography } from "../../theme"
+import { color, spacing, typography, palette } from "../../theme"
 import { translate } from "../../i18n"
 import { Text } from "../text"
 import { TextFieldProps } from "./text-field.props"
@@ -14,14 +14,18 @@ const CONTAINER: ViewStyle = {
 const INPUT: TextStyle = {
   fontFamily: typography.primary,
   color: color.text,
-  minHeight: 44,
+  minHeight: 32,
   fontSize: 18,
-  backgroundColor: color.palette.white,
+  backgroundColor: color.primaryDarker,
 }
 
 // currently we have no presets, but that changes quickly when you build your app.
 const PRESETS: { [name: string]: ViewStyle } = {
-  default: {},
+  default: {
+    flex: 1,
+    borderBottomColor: palette.martinique,
+    borderBottomWidth: 1,
+  },
 }
 
 /**
