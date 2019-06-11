@@ -13,10 +13,10 @@ const HEADER: TextStyle = {
   color: palette.white,
 }
 const BODY: TextStyle = {
-  marginTop: spacing.medium,
+  marginVertical: spacing.medium,
 }
 const SECTION: ViewStyle = {
-  marginTop: spacing.extraLarge,
+  marginTop: spacing.large,
 }
 const LINE_BREAK: ViewStyle = {
   height: 1,
@@ -39,57 +39,43 @@ export class Sponsors extends React.Component {
         <View style={SECTION}>
           <Text preset="sectionHeader" tx="infoScreen.sponsors.platinum" />
           <View style={LINE_BREAK} />
-          <SponsorLogo size="platinum" sponsor="squarespace" />
+          <SponsorLogo size="platinum" sponsor="alexa" />
+          <SponsorLogo size="platinum" sponsor="aws" />
         </View>
         <View style={SECTION}>
           <Text preset="sectionHeader" tx="infoScreen.sponsors.gold" />
           <View style={LINE_BREAK} />
           <View style={LOGO_ROW}>
-            <SponsorLogo size="gold" sponsor="agora" />
-            <SponsorLogo size="gold" sponsor="amazon" />
+            <SponsorLogo size="gold" sponsor="callstack" />
+            <SponsorLogo size="gold" sponsor="coinbase" />
           </View>
           <View style={LOGO_ROW}>
-            <SponsorLogo size="gold" sponsor="formidable" />
-            <SponsorLogo size="gold" sponsor="taxslayer" />
-          </View>
-          <View style={LOGO_ROW}>
-            <SponsorLogo size="gold" sponsor="viro" />
+            <SponsorLogo size="gold" sponsor="sentry" />
           </View>
         </View>
         <View style={SECTION}>
           <Text preset="sectionHeader" tx="infoScreen.sponsors.silver" />
           <View style={LINE_BREAK} />
           <View style={LOGO_ROW}>
+            <SponsorLogo size="silver" sponsor="amazonWeb" />
             <SponsorLogo size="silver" sponsor="bugsnag" />
-            <SponsorLogo size="silver" sponsor="builderX" />
           </View>
           <View style={LOGO_ROW}>
-            <SponsorLogo size="silver" sponsor="callstack" />
-            <SponsorLogo size="silver" sponsor="cambia" />
-          </View>
-          <View style={LOGO_ROW}>
-            <SponsorLogo size="bronze" sponsor="rnTraining" />
-            <SponsorLogo size="bronze" sponsor="sentry" />
+            <SponsorLogo size="silver" sponsor="serverlessGuru" />
           </View>
         </View>
         <View style={SECTION}>
           <Text preset="sectionHeader" tx="infoScreen.sponsors.bronze" />
           <View style={LINE_BREAK} />
           <View style={LOGO_ROW}>
-            <SponsorLogo size="bronze" sponsor="blueJeans" />
+            <SponsorLogo size="bronze" sponsor="airship" />
+            <SponsorLogo size="bronze" sponsor="builderX" />
+            <SponsorLogo size="bronze" sponsor="cambia" />
+          </View>
+          <View style={LOGO_ROW}>
             <SponsorLogo size="bronze" sponsor="echobind" />
-          </View>
-          <View style={LOGO_ROW}>
+            <SponsorLogo size="bronze" sponsor="facebook" />
             <SponsorLogo size="bronze" sponsor="g2i" />
-            <SponsorLogo size="bronze" sponsor="microsoft" />
-          </View>
-          <View style={LOGO_ROW}>
-            <SponsorLogo size="bronze" sponsor="modus" />
-            <SponsorLogo size="bronze" sponsor="paypal" />
-          </View>
-          <View style={LOGO_ROW}>
-            <SponsorLogo size="bronze" sponsor="paypal" />
-            <SponsorLogo size="bronze" sponsor="wix" />
           </View>
         </View>
         <View style={SECTION}>
@@ -97,11 +83,11 @@ export class Sponsors extends React.Component {
           <View style={LINE_BREAK} />
           <View style={LOGO_ROW}>
             <SponsorLogo size="additional" sponsor="g2iAdditional" />
-            <SponsorLogo size="additional" sponsor="modusAdditional" />
+            <SponsorLogo size="additional" sponsor="devLifts" />
           </View>
           <View style={LOGO_ROW}>
-            <SponsorLogo size="additional" sponsor="playstationAdditional" />
-            <SponsorLogo size="additional" sponsor="squarespaceAdditional" />
+            <SponsorLogo size="additional" sponsor="playstation" />
+            <SponsorLogo size="additional" sponsor="squarespace" />
           </View>
         </View>
       </View>
