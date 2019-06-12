@@ -1,18 +1,14 @@
 import * as React from "react"
-import { View, Image, ViewStyle, ImageStyle, TextStyle, Dimensions } from "react-native"
+import { View, Image, ViewStyle, ImageStyle, TextStyle } from "react-native"
 import { presentedByPresets } from "./presented-by.presets"
 import { PresentedByProps } from "./presented-by.props"
 import { Text } from "../text"
 import { SocialButton } from "../social-button"
-import { spacing, palette } from "../../theme"
-
-const SCREEN_WIDTH = Dimensions.get("window").width
-const MAX_WIDTH = SCREEN_WIDTH - 2 * spacing.large
+import { spacing, palette, getScreenWidth } from "../../theme"
 
 const BACKGROUND: ImageStyle = {
   position: "absolute",
   bottom: 0,
-  width: "100%",
   alignSelf: "center",
 }
 const TEXT: TextStyle = {
@@ -39,7 +35,6 @@ const SOCIAL_WRAPPER: ViewStyle = {
   alignItems: "center",
   marginTop: 40,
   marginBottom: 107,
-  maxWidth: MAX_WIDTH,
   flexWrap: "wrap",
 }
 const SOCIAL_BUTTON: ViewStyle = {
@@ -64,22 +59,29 @@ export const linkPresets = {
 export function PresentedBy(props: PresentedByProps) {
   // grab the props
   const { ...rest } = props
+  const fullWidth = {
+    width: getScreenWidth(),
+  }
 
   // assemble the style
   const viewPresetToUse = presentedByPresets.default
 
-  const viewStyle = { ...viewPresetToUse }
+  const viewStyle = { ...viewPresetToUse, ...fullWidth }
+
+  const widthStyle = {
+    maxWidth: getScreenWidth() - 2 * spacing.large,
+  }
 
   return (
     <View>
-      <Image style={BACKGROUND} source={backgroundImage} />
+      <Image style={{ ...BACKGROUND, ...fullWidth }} source={backgroundImage} />
       <View style={viewStyle} {...rest}>
         <Text preset="header" tx="infoScreen.presentedBy.title" style={TITLE} />
         <Text preset="header" tx="infoScreen.presentedBy.subtitle" style={SUBTITLE} />
         <Text preset="body" style={BIO} tx="infoScreen.presentedBy.bio" />
         <View style={FOOTER}>
           <Image style={LOGO} source={infiniteRedLogo} />
-          <View style={SOCIAL_WRAPPER}>
+          <View style={{ ...SOCIAL_WRAPPER, ...widthStyle }}>
             <SocialButton preset="website" link={linkPresets.website} style={SOCIAL_BUTTON} />
             <SocialButton preset="twitter" link={linkPresets.twitter} style={SOCIAL_BUTTON} />
             <SocialButton preset="github" link={linkPresets.github} style={SOCIAL_BUTTON} />

@@ -1,19 +1,15 @@
 import * as React from "react"
-import { View, ViewStyle, TextStyle, Dimensions } from "react-native"
+import { View, ViewStyle, TextStyle } from "react-native"
 import { Text } from "../text"
 import { SocialButton } from "../social-button"
-import { palette, spacing } from "../../theme"
+import { palette, spacing, getScreenWidth } from "../../theme"
 
 export interface SpeakerBioProps {
   speaker: any
   last?: boolean
 }
 
-const SCREEN_WIDTH = Dimensions.get("window").width
-const MAX_WIDTH = SCREEN_WIDTH - 2 * spacing.large
-
 const ROOT: ViewStyle = {
-  width: "100%",
   marginTop: spacing.extraLarge + spacing.large,
 }
 
@@ -26,7 +22,6 @@ const SOCIAL_WRAPPER: ViewStyle = {
   flex: 1,
   flexDirection: "row",
   marginTop: spacing.large,
-  maxWidth: MAX_WIDTH,
   flexWrap: "wrap",
 }
 
@@ -59,7 +54,10 @@ export class SpeakerBio extends React.Component<SpeakerBioProps, {}> {
       dribbble,
       websites: websites || [],
     }
-    const socialStyles = [SOCIAL_WRAPPER, last && SOCIAL_WRAPPER_LAST]
+    const widthStyles = {
+      maxWidth: getScreenWidth() - 2 * spacing.large,
+    }
+    const socialStyles = [{ ...SOCIAL_WRAPPER, ...widthStyles }, last && SOCIAL_WRAPPER_LAST]
 
     if (
       facebook ||
@@ -74,7 +72,7 @@ export class SpeakerBio extends React.Component<SpeakerBioProps, {}> {
       const lastIndex = splitName.length - 1
       const firstName = splitName.slice(0, lastIndex).join(" ")
       return (
-        <View key={key} style={ROOT}>
+        <View key={key} style={{ ...ROOT, ...{ width: 0.9 * getScreenWidth() } }}>
           <Text
             text={`${bio ? "ABOUT" : "FOLLOW"} ${firstName.toUpperCase()}`}
             preset="sectionHeader"

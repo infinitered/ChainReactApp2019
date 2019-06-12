@@ -1,7 +1,7 @@
 import * as React from "react"
 import { View, TouchableOpacity, ViewStyle, TextStyle } from "react-native"
 import { Text } from "../text"
-import { palette, spacing } from "../../theme"
+import { palette, spacing, getScreenHeight, getScreenWidth } from "../../theme"
 import { Attraction } from "../attraction"
 const nearbyAttractionsData = require("../nearby-attractions/nearby-attractions.data.json")
 
@@ -10,7 +10,6 @@ export interface AttractionsListState {
 }
 
 const ROOT: ViewStyle = {
-  width: "100%",
   flex: 1,
   paddingHorizontal: 17,
   paddingBottom: spacing.large + spacing.small,
@@ -41,7 +40,7 @@ export class AttractionsList extends React.Component<{}, AttractionsListState> {
   render() {
     const { selectedType } = this.state
     return (
-      <View style={ROOT}>
+      <View style={{ ...ROOT, ...{ width: getScreenWidth() } }}>
         <View style={NAV}>
           <TouchableOpacity
             style={NAV_ITEM}

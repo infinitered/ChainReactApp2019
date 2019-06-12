@@ -7,7 +7,6 @@ import {
   Image,
   ViewStyle,
   TextStyle,
-  Dimensions,
   ImageStyle,
   Platform,
   AsyncStorage,
@@ -18,7 +17,7 @@ import Amplify, { API, graphqlOperation } from "aws-amplify"
 import { format } from "date-fns"
 import uuid from "uuid/v4"
 import { Screen } from "../../components/screen"
-import { palette, spacing } from "../../theme"
+import { palette, spacing, getScreenWidth } from "../../theme"
 import { Text } from "../../components/text"
 import { SpeakerImage } from "../../components/speaker-image"
 import { TalkTitle } from "../../components//talk-title"
@@ -42,13 +41,8 @@ const FULL_SIZE: ViewStyle = {
   height: "100%",
 }
 
-const SCREEN_WIDTH = Dimensions.get("window").width
-const IMAGE_WIDTH = SCREEN_WIDTH - 2 * spacing.large
 const IMAGE_ASPECT_RATIO = 1.5
-const IMAGE_HEIGHT = IMAGE_WIDTH / IMAGE_ASPECT_RATIO
 const FULL_WIDTH_IMAGE: ImageStyle = {
-  width: IMAGE_WIDTH,
-  height: IMAGE_HEIGHT,
   resizeMode: "contain",
 }
 
@@ -110,7 +104,7 @@ const COMMENT_CONTAINER = { paddingVertical: 15, marginBottom: 50 }
 const COMMENT_STYLE = { paddingHorizontal: 20, marginBottom: 20 }
 const CREATED_BY = { color: "white", fontWeight: "600" }
 const CREATED_AT = { color: "rgba(255, 255, 255, .5)", fontSize: 11, marginLeft: 8, marginTop: 3 }
-const INPUT_CONTAINER = { bottom: 0, position: "absolute", left: 0, width: SCREEN_WIDTH }
+const INPUT_CONTAINER = { bottom: 0, position: "absolute", left: 0 }
 const MESSAGE_INPUT = { backgroundColor: "white", height: 50, paddingHorizontal: 8 }
 
 const HIT_SLOP = {
@@ -219,11 +213,23 @@ class BaseTalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> 
   render() {
     const { talkType = "" } = this.props.navigation.state.params.talk
     let { comments } = this.props
+    // Image size math
+    const imageWidth = 0.92 * (getScreenWidth() - 2 * spacing.large) // 95% of the available container, screen width minus twice the screen padding.
+    const imageHeight = imageWidth / IMAGE_ASPECT_RATIO
+    const speakerImageWidthStyles = {
+      height: imageHeight,
+      width: imageWidth,
+    }
+    const widthStyles = {
+      width: getScreenWidth(),
+    }
+
     comments = comments
       .sort(function(a, b) {
         return new Date(b.createdAt) - new Date(a.createdAt)
       })
       .reverse()
+
     return (
       <View style={MAIN_CONTAINER}>
         {(talkType === "TALK" || talkType === "WORKSHOP") && (
@@ -255,7 +261,7 @@ class BaseTalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> 
                 ))}
               </View>
             </ScrollView>
-            <View style={INPUT_CONTAINER}>
+            <View style={{ ...INPUT_CONTAINER, ...widthStyles }}>
               <TextInput
                 onChangeText={v => this.setState({ inputValue: v })}
                 style={MESSAGE_INPUT}
@@ -348,9 +354,19 @@ class BaseTalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> 
       title,
       image,
     } = this.props.navigation.state.params.talk
+    // Image size math
+    const imageWidth = 0.92 * (getScreenWidth() - 2 * spacing.large) // 95% of the available container, screen width minus twice the screen padding.
+    const imageHeight = imageWidth / IMAGE_ASPECT_RATIO
+    const speakerImageWidthStyles = {
+      height: imageHeight,
+      width: imageWidth,
+    }
     return (
       <View style={FULL_SIZE}>
-        <Image source={{ uri: image }} style={FULL_WIDTH_IMAGE} />
+        <Image
+          source={{ uri: image }}
+          style={{ ...FULL_WIDTH_IMAGE, ...speakerImageWidthStyles }}
+        />
         <Text text={title} preset="body" style={TITLE} />
         {sponsor && this.renderSponsored(sponsor)}
         <Text text={description} preset="body" style={DESCRIPTION} />
