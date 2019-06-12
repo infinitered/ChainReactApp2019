@@ -6,7 +6,6 @@ import { spacing } from "../../theme"
  */
 const BASE_VIEW: ViewStyle = {
   flex: 1,
-  width: "100%",
   justifyContent: "center",
   marginTop: spacing.ginormous + spacing.large,
   paddingHorizontal: spacing.large,

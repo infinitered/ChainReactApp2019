@@ -10,7 +10,7 @@ import {
   Linking,
 } from "react-native"
 import { Text } from "../text"
-import { color, spacing, SCREEN_WIDTH } from "../../theme"
+import { color, spacing, getScreenWidth } from "../../theme"
 import { CLOSE_ICON } from "./"
 
 export interface AttractionsMapCalloutProps {
@@ -26,7 +26,6 @@ const CALLOUT_CONTAINER: ViewStyle = {
 }
 
 const CALLOUT_CONTENT_CONTAINER: ViewStyle = {
-  width: SCREEN_WIDTH * 0.9,
   padding: spacing.large,
   backgroundColor: color.callout,
   shadowColor: color.calloutShadow,
@@ -112,10 +111,13 @@ export class AttractionsMapCallout extends React.Component<AttractionsMapCallout
   }
 
   render() {
+    const widthStyle = {
+      width: getScreenWidth() * 0.9,
+    }
     return (
       <Mapbox.Callout>
         <View style={CALLOUT_CONTAINER}>
-          <View style={CALLOUT_CONTENT_CONTAINER}>
+          <View style={{ ...CALLOUT_CONTENT_CONTAINER, ...widthStyle }}>
             <View style={CALLOUT_INFO}>
               <Text style={TITLE} text={this.props.title.toUpperCase()} />
               <Text style={DESCRIPTION} text={this.props.description} />
