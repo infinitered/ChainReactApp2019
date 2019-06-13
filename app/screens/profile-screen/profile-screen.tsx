@@ -31,6 +31,11 @@ const ROW: ViewStyle = {
   justifyContent: "space-between",
 }
 
+const USERNAME: ViewStyle = {
+  flex: 1,
+  marginRight: spacing.small,
+}
+
 const BUTTONS_ROW: ViewStyle = {
   ...ROW,
   justifyContent: "flex-start",
@@ -56,9 +61,9 @@ export class ProfileScreen extends React.Component {
         {!this.state.editInput && (
           <View>
             <View style={ROW}>
-              <View>
+              <View style={USERNAME}>
                 <Text tx="profileScreen.usernameField.label" preset="label" />
-                <Text preset="body" text={username} />
+                <Text preset="body" text={username} numberOfLines={1} />
               </View>
               <Button preset="dark" onPress={this.updateName} tx="common.edit" style={BUTTON} />
             </View>
