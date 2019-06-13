@@ -102,6 +102,11 @@
       "bronze": "BRONZE SPONSORS",
       "additional": "ADDITIONAL SPONSORS"
     },
+    "survey": {
+      "title": "SURVEY",
+      "description": "COPY NEEDED - Take our short survey",
+      "button": "TAKE THE SURVEY"
+    },
     "presentedBy": {
       "title": "THE HOST",
       "subtitle": "INFINITE RED",

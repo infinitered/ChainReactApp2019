@@ -1,22 +1,12 @@
 import * as React from "react"
-import { View, ViewStyle, TextStyle, Linking } from "react-native"
-import { Text } from "../text"
-import { Button } from "../button"
-import { spacing, palette } from "../../theme"
+import { Linking, ViewStyle } from "react-native"
+import { ContentLink } from "../content-link"
+import { spacing } from "../../theme"
 
 const ROOT: ViewStyle = {
   marginTop: spacing.extraLarge,
   paddingHorizontal: spacing.large,
   marginBottom: spacing.huge,
-}
-
-const SUBTITLE: TextStyle = {
-  color: palette.shamrock,
-}
-
-const BODY: TextStyle = {
-  marginTop: spacing.medium,
-  marginBottom: spacing.medium,
 }
 
 export function BlogLink() {
@@ -26,10 +16,12 @@ export function BlogLink() {
     )
   }
   return (
-    <View style={ROOT}>
-      <Text preset="sectionHeader" tx="venueScreen.blog.title" style={SUBTITLE} />
-      <Text preset="body" tx="venueScreen.blog.description" style={BODY} />
-      <Button tx="venueScreen.blog.button" preset="dark" onPress={onPressLink} />
-    </View>
+    <ContentLink
+      style={ROOT}
+      headerTx="venueScreen.blog.title"
+      bodyTx="venueScreen.blog.description"
+      buttonTx="venueScreen.blog.button"
+      onPressLink={onPressLink}
+    />
   )
 }
