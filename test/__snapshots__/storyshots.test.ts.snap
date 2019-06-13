@@ -1402,7 +1402,7 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
                 numberOfLines={1}
                 style={
                   Object {
-                    "color": "#1d1d1d",
+                    "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                     "paddingLeft": undefined,
@@ -1538,7 +1538,7 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
                 numberOfLines={1}
                 style={
                   Object {
-                    "color": "#1d1d1d",
+                    "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                     "paddingLeft": undefined,
@@ -1664,7 +1664,7 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
                 numberOfLines={1}
                 style={
                   Object {
-                    "color": "#1d1d1d",
+                    "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                     "paddingLeft": undefined,
@@ -1821,7 +1821,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                   numberOfLines={0}
                   style={
                     Object {
-                      "color": "#1d1d1d",
+                      "color": "#ffffff",
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 15,
                       "paddingLeft": undefined,
@@ -1952,7 +1952,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                   numberOfLines={1}
                   style={
                     Object {
-                      "color": "#1d1d1d",
+                      "color": "#ffffff",
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 15,
                       "paddingLeft": undefined,
@@ -2080,7 +2080,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                   numberOfLines={1}
                   style={
                     Object {
-                      "color": "#1d1d1d",
+                      "color": "#ffffff",
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 15,
                       "paddingLeft": undefined,
@@ -2208,7 +2208,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                   numberOfLines={1}
                   style={
                     Object {
-                      "color": "#1d1d1d",
+                      "color": "#ffffff",
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 15,
                       "paddingLeft": undefined,
@@ -3388,7 +3388,7 @@ exports[`Storyshots FormRow Assembled 1`] = `
               <Text
                 style={
                   Object {
-                    "color": "#1d1d1d",
+                    "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
@@ -3433,7 +3433,7 @@ exports[`Storyshots FormRow Assembled 1`] = `
               <Text
                 style={
                   Object {
-                    "color": "#1d1d1d",
+                    "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
@@ -3534,7 +3534,7 @@ exports[`Storyshots FormRow Assembled 1`] = `
               <Text
                 style={
                   Object {
-                    "color": "#1d1d1d",
+                    "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
@@ -3556,7 +3556,7 @@ exports[`Storyshots FormRow Assembled 1`] = `
               <Text
                 style={
                   Object {
-                    "color": "#1d1d1d",
+                    "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
@@ -3579,7 +3579,7 @@ exports[`Storyshots FormRow Assembled 1`] = `
               <Text
                 style={
                   Object {
-                    "color": "#1d1d1d",
+                    "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
@@ -3713,7 +3713,7 @@ exports[`Storyshots FormRow Presets 1`] = `
               <Text
                 style={
                   Object {
-                    "color": "#1d1d1d",
+                    "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
@@ -3724,7 +3724,7 @@ exports[`Storyshots FormRow Presets 1`] = `
               <Text
                 style={
                   Object {
-                    "color": "#1d1d1d",
+                    "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
@@ -3826,7 +3826,7 @@ exports[`Storyshots FormRow Presets 1`] = `
               <Text
                 style={
                   Object {
-                    "color": "#1d1d1d",
+                    "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
@@ -3929,7 +3929,7 @@ exports[`Storyshots FormRow Presets 1`] = `
               <Text
                 style={
                   Object {
-                    "color": "#1d1d1d",
+                    "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
@@ -3940,7 +3940,7 @@ exports[`Storyshots FormRow Presets 1`] = `
               <Text
                 style={
                   Object {
-                    "color": "#1d1d1d",
+                    "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
@@ -4042,7 +4042,7 @@ exports[`Storyshots FormRow Presets 1`] = `
               <Text
                 style={
                   Object {
-                    "color": "#1d1d1d",
+                    "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
@@ -4143,7 +4143,7 @@ exports[`Storyshots FormRow Presets 1`] = `
               <Text
                 style={
                   Object {
-                    "color": "#1d1d1d",
+                    "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
@@ -4244,7 +4244,7 @@ exports[`Storyshots FormRow Presets 1`] = `
               <Text
                 style={
                   Object {
-                    "color": "#1d1d1d",
+                    "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                   }
@@ -8480,7 +8480,7 @@ exports[`Storyshots Text Passing Content 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#1d1d1d",
+                  "color": "#ffffff",
                   "fontFamily": "Gotham Rounded",
                   "fontSize": 15,
                 }
@@ -8571,7 +8571,7 @@ exports[`Storyshots Text Passing Content 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#1d1d1d",
+                  "color": "#ffffff",
                   "fontFamily": "Gotham Rounded",
                   "fontSize": 15,
                 }
@@ -8582,7 +8582,7 @@ exports[`Storyshots Text Passing Content 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#1d1d1d",
+                  "color": "#ffffff",
                   "fontFamily": "Gotham Rounded",
                   "fontSize": 15,
                 }
@@ -8673,7 +8673,7 @@ exports[`Storyshots Text Passing Content 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#1d1d1d",
+                  "color": "#ffffff",
                   "fontFamily": "Gotham Rounded",
                   "fontSize": 15,
                 }
@@ -8764,7 +8764,7 @@ exports[`Storyshots Text Passing Content 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#1d1d1d",
+                  "color": "#ffffff",
                   "fontFamily": "Gotham Rounded",
                   "fontSize": 15,
                 }
@@ -8775,7 +8775,7 @@ exports[`Storyshots Text Passing Content 1`] = `
               <Text
                 style={
                   Object {
-                    "color": "#1d1d1d",
+                    "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
                     "fontWeight": "600",
@@ -8899,7 +8899,7 @@ exports[`Storyshots Text Style Presets 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#1d1d1d",
+                  "color": "#ffffff",
                   "fontFamily": "Gotham Rounded",
                   "fontSize": 15,
                 }
@@ -8910,7 +8910,7 @@ exports[`Storyshots Text Style Presets 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#1d1d1d",
+                  "color": "#ffffff",
                   "fontFamily": "Gotham Rounded",
                   "fontSize": 15,
                   "paddingTop": 10,
@@ -8928,7 +8928,7 @@ exports[`Storyshots Text Style Presets 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#1d1d1d",
+                  "color": "#ffffff",
                   "fontFamily": "Gotham Rounded",
                   "fontSize": 15,
                   "paddingTop": 10,
@@ -8940,7 +8940,7 @@ exports[`Storyshots Text Style Presets 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#1d1d1d",
+                  "color": "#ffffff",
                   "fontFamily": "Gotham Rounded",
                   "fontSize": 15,
                 }
@@ -9122,7 +9122,7 @@ exports[`Storyshots Text Style Presets 1`] = `
             <Text
               style={
                 Object {
-                  "color": "#1d1d1d",
+                  "color": "#ffffff",
                   "fontFamily": "Gotham Rounded",
                   "fontSize": 15,
                   "fontWeight": "600",
@@ -9337,6 +9337,9 @@ exports[`Storyshots TextField Labelling 1`] = `
             <View
               style={
                 Object {
+                  "borderBottomColor": "#2C2C4C",
+                  "borderBottomWidth": 1,
+                  "flex": 1,
                   "paddingVertical": undefined,
                 }
               }
@@ -9360,11 +9363,11 @@ exports[`Storyshots TextField Labelling 1`] = `
                 rejectResponderTermination={true}
                 style={
                   Object {
-                    "backgroundColor": "#ffffff",
-                    "color": "#1d1d1d",
+                    "backgroundColor": "#161637",
+                    "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 18,
-                    "minHeight": 44,
+                    "minHeight": 32,
                   }
                 }
                 underlineColorAndroid="rgba(0, 0, 0, 0)"
@@ -9454,6 +9457,9 @@ exports[`Storyshots TextField Labelling 1`] = `
             <View
               style={
                 Object {
+                  "borderBottomColor": "#2C2C4C",
+                  "borderBottomWidth": 1,
+                  "flex": 1,
                   "paddingVertical": undefined,
                 }
               }
@@ -9477,11 +9483,11 @@ exports[`Storyshots TextField Labelling 1`] = `
                 rejectResponderTermination={true}
                 style={
                   Object {
-                    "backgroundColor": "#ffffff",
-                    "color": "#1d1d1d",
+                    "backgroundColor": "#161637",
+                    "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 18,
-                    "minHeight": 44,
+                    "minHeight": 32,
                   }
                 }
                 underlineColorAndroid="rgba(0, 0, 0, 0)"
@@ -9601,6 +9607,9 @@ exports[`Storyshots TextField Style Overrides 1`] = `
             <View
               style={
                 Object {
+                  "borderBottomColor": "#2C2C4C",
+                  "borderBottomWidth": 1,
+                  "flex": 1,
                   "paddingHorizontal": 40,
                   "paddingTop": 0,
                   "paddingVertical": undefined,
@@ -9625,11 +9634,11 @@ exports[`Storyshots TextField Style Overrides 1`] = `
                 rejectResponderTermination={true}
                 style={
                   Object {
-                    "backgroundColor": "#ffffff",
-                    "color": "#1d1d1d",
+                    "backgroundColor": "#161637",
+                    "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 18,
-                    "minHeight": 44,
+                    "minHeight": 32,
                   }
                 }
                 underlineColorAndroid="rgba(0, 0, 0, 0)"
@@ -9639,6 +9648,9 @@ exports[`Storyshots TextField Style Overrides 1`] = `
             <View
               style={
                 Object {
+                  "borderBottomColor": "#2C2C4C",
+                  "borderBottomWidth": 1,
+                  "flex": 1,
                   "paddingBottom": 0,
                   "paddingVertical": undefined,
                 }
@@ -9662,11 +9674,11 @@ exports[`Storyshots TextField Style Overrides 1`] = `
                 rejectResponderTermination={true}
                 style={
                   Object {
-                    "backgroundColor": "#ffffff",
-                    "color": "#1d1d1d",
+                    "backgroundColor": "#161637",
+                    "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 18,
-                    "minHeight": 44,
+                    "minHeight": 32,
                   }
                 }
                 underlineColorAndroid="rgba(0, 0, 0, 0)"
@@ -9756,6 +9768,9 @@ exports[`Storyshots TextField Style Overrides 1`] = `
             <View
               style={
                 Object {
+                  "borderBottomColor": "#2C2C4C",
+                  "borderBottomWidth": 1,
+                  "flex": 1,
                   "paddingVertical": undefined,
                 }
               }
@@ -9785,7 +9800,7 @@ exports[`Storyshots TextField Style Overrides 1`] = `
                     "color": "white",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 18,
-                    "minHeight": 44,
+                    "minHeight": 32,
                     "padding": 40,
                   }
                 }
