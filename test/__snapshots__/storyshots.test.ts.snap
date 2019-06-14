@@ -2330,10 +2330,11 @@ exports[`Storyshots Code of Blog Link Presets 1`] = `
               <Text
                 style={
                   Object {
-                    "color": "#56E39F",
+                    "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
-                    "fontSize": 14,
-                    "lineHeight": 17,
+                    "fontSize": 28,
+                    "fontWeight": "500",
+                    "lineHeight": 35,
                   }
                 }
               >

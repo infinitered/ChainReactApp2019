@@ -1,21 +1,6 @@
 import * as React from "react"
-import { View, ViewStyle, TextStyle, Linking, Platform } from "react-native"
-import { Text } from "../text"
-import { Button } from "../button"
-import { spacing, palette } from "../../theme"
-
-const ROOT: ViewStyle = {
-  marginTop: spacing.huge,
-  paddingHorizontal: spacing.large,
-}
-
-const HEADER: TextStyle = {
-  color: palette.white,
-}
-const BODY: TextStyle = {
-  marginTop: spacing.medium,
-  marginBottom: spacing.medium,
-}
+import { Linking, Platform } from "react-native"
+import { ContentLink } from "../content-link"
 
 export function Photobomb() {
   const onPressLink = () => {
@@ -27,10 +12,11 @@ export function Photobomb() {
   }
 
   return (
-    <View style={ROOT}>
-      <Text preset="header" tx="infoScreen.photobomb.title" style={HEADER} />
-      <Text preset="body" tx="infoScreen.photobomb.description" style={BODY} />
-      <Button tx="infoScreen.photobomb.button" preset="dark" onPress={onPressLink} />
-    </View>
+    <ContentLink
+      headerTx="infoScreen.photobomb.title"
+      bodyTx="infoScreen.photobomb.description"
+      buttonTx="infoScreen.photobomb.button"
+      onPressLink={onPressLink}
+    />
   )
 }
