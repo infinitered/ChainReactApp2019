@@ -1,8 +1,10 @@
 {
   "common": {
     "ok": "OK!",
-    "cancel": "Cancel",
-    "back": "Back"
+    "cancel": "CANCEL",
+    "back": "Back",
+    "edit": "EDIT",
+    "save": "SAVE"
   },
   "errors": {
     "invalidEmail": "Invalid email address."
@@ -19,8 +21,12 @@
     "subtitle": "Use our app to to view the schedule, explore the city, and access need-to-know details! You can even chat with others about each talk, right here in the app!",
     "nextScreenButton": "I'm Ready!"
   },
-  "profilescreen": {
-    "title": "Profile"
+  "profileScreen": {
+    "title": "Profile",
+    "usernameField": {
+      "label": "USERNAME",
+      "placeholder": "USERNAME"
+    }
   },
   "scheduleScreen": {
     "title": "Schedule",

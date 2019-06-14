@@ -1,53 +1,45 @@
 import React from "react"
-import { View, Text as NativeText, TextInput, AsyncStorage, TouchableOpacity } from "react-native"
-
+import { View, TextInput, AsyncStorage, TouchableOpacity, ViewStyle, Keyboard } from "react-native"
 import { Screen } from "../../components/screen"
 import { Text } from "../../components/text"
 import { palette, spacing, color, typography } from "../../theme"
 import { TextStyle } from "react-native"
 import name from "./profile-info"
+import { Button } from "../../components/button"
+import { TextField } from "../../components/text-field/text-field"
 
-const PROFILENAME: TextStyle = {
-  fontFamily: typography.primary,
-  color: "white",
-  paddingLeft: 20,
-  fontSize: 26,
-}
-
-const EditButton: TextStyle = {
-  fontFamily: typography.primary,
-  color: "white",
-  paddingLeft: 20,
-  fontSize: 16,
+const ROOT: ViewStyle = {
+  padding: spacing.medium,
 }
 
 const TITLE: TextStyle = {
-  marginTop: spacing.extraLarge,
-  marginLeft: spacing.large,
+  marginVertical: spacing.extraLarge,
 }
 
-const INPUTSTYLE = {
-  fontFamily: typography.primary,
-  color: "white",
-  marginLeft: 20,
-  marginTop: 5,
-  padding: 7,
-  width: 300,
-  height: 50,
-  borderWidth: 1,
-  borderColor: "white",
+const BUTTON: ViewStyle = {
+  paddingHorizontal: spacing.medium,
 }
 
-const SAVEBUTTON: TextStyle = {
-  fontFamily: typography.primary,
-  color: "white",
-  marginTop: 10,
-  fontSize: 16,
-  marginLeft: 20,
+const MARGIN_BUTTON: ViewStyle = {
+  ...BUTTON,
+  marginLeft: spacing.small,
 }
 
-const WITHPADDING = {
-  paddingVertical: 5,
+const ROW: ViewStyle = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+}
+
+const USERNAME: ViewStyle = {
+  flex: 1,
+  marginRight: spacing.small,
+}
+
+const BUTTONS_ROW: ViewStyle = {
+  ...ROW,
+  justifyContent: "flex-start",
+  marginTop: spacing.medium,
 }
 
 export class ProfileScreen extends React.Component {
@@ -60,30 +52,35 @@ export class ProfileScreen extends React.Component {
       editInput: true,
     }))
   }
+
   render() {
     const { username } = this.state
     return (
-      <Screen preset="scroll" backgroundColor={palette.portGore}>
-        <Text preset="title" tx="profilescreen.title" style={TITLE} />
+      <Screen preset="scrollStack" backgroundColor={palette.portGore} style={ROOT}>
+        <Text preset="title" tx="profileScreen.title" style={TITLE} />
         {!this.state.editInput && (
           <View>
-            <NativeText style={PROFILENAME}>{username}</NativeText>
-            <TouchableOpacity onPress={this.updateName} style={WITHPADDING}>
-              <NativeText style={EditButton}>Edit Username</NativeText>
-            </TouchableOpacity>
+            <View style={ROW}>
+              <View style={USERNAME}>
+                <Text tx="profileScreen.usernameField.label" preset="label" />
+                <Text preset="body" text={username} numberOfLines={1} />
+              </View>
+              <Button preset="dark" onPress={this.updateName} tx="common.edit" style={BUTTON} />
+            </View>
           </View>
         )}
         {this.state.editInput && (
           <View>
-            <TextInput
-              style={INPUTSTYLE}
-              placeholder="Username"
+            <Text tx="profileScreen.usernameField.label" preset="label" />
+            <TextField
+              placeholderTx="profileScreen.usernameField.placeholder"
               value={username}
               onChangeText={v => this.setState({ username: v })}
             />
-            <TouchableOpacity onPress={this.onSave} style={WITHPADDING}>
-              <NativeText style={SAVEBUTTON}>Save</NativeText>
-            </TouchableOpacity>
+            <View style={BUTTONS_ROW}>
+              <Button preset="dark" tx="common.cancel" onPress={this.onCancel} style={BUTTON} />
+              <Button preset="dark" tx="common.save" onPress={this.onSave} style={MARGIN_BUTTON} />
+            </View>
           </View>
         )}
       </Screen>
@@ -98,6 +95,11 @@ export class ProfileScreen extends React.Component {
       console.log("err...: ", err)
     }
   }
+
+  onCancel = () => {
+    this.setState({ editInput: false })
+  }
+
   async componentDidMount() {
     try {
       const username = await AsyncStorage.getItem("name")
