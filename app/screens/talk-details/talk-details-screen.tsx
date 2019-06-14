@@ -27,6 +27,7 @@ import { listCommentsForTalk } from "../../graphql/queries"
 import { createComment as CreateComment } from "../../graphql/mutations"
 import { onCreateComment as OnCreateComment } from "../../graphql/subscriptions"
 import config from "../../aws-exports"
+import { calculateImageDimensions } from "./image-dimension-helpers"
 Amplify.configure(config)
 
 const CLIENTID = uuid()
@@ -41,7 +42,6 @@ const FULL_SIZE: ViewStyle = {
   height: "100%",
 }
 
-const IMAGE_ASPECT_RATIO = 1.5
 const FULL_WIDTH_IMAGE: ImageStyle = {
   resizeMode: "contain",
 }
@@ -213,13 +213,7 @@ class BaseTalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> 
   render() {
     const { talkType = "" } = this.props.navigation.state.params.talk
     let { comments } = this.props
-    // Image size math
-    const imageWidth = 0.92 * (getScreenWidth() - 2 * spacing.large) // 95% of the available container, screen width minus twice the screen padding.
-    const imageHeight = imageWidth / IMAGE_ASPECT_RATIO
-    const speakerImageWidthStyles = {
-      height: imageHeight,
-      width: imageWidth,
-    }
+    const imageDimensions = calculateImageDimensions(getScreenWidth())
     const widthStyles = {
       width: getScreenWidth(),
     }
@@ -274,14 +268,14 @@ class BaseTalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> 
         )}
         {this.state.currentView !== "discussion" && (
           <Screen preset="scroll" backgroundColor={palette.portGore} style={ROOT}>
-            {this.renderContent()}
+            {this.renderContent(imageDimensions)}
           </Screen>
         )}
       </View>
     )
   }
 
-  renderContent = () => {
+  renderContent = imageDimensions => {
     const { talkType = "" } = this.props.navigation.state.params.talk
     switch (talkType.toLowerCase()) {
       case "talk":
@@ -289,14 +283,14 @@ class BaseTalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> 
       case "workshop":
         return this.renderWorkshop()
       case "break":
-        return this.renderBreak()
+        return this.renderBreak(imageDimensions)
       case "lunch":
       case "breakfast":
-        return this.renderLunch()
+        return this.renderLunch(imageDimensions)
       case "panel":
-        return this.renderPanel()
+        return this.renderPanel(imageDimensions)
       case "afterparty":
-        return this.renderAfterParty()
+        return this.renderAfterParty(imageDimensions)
       default:
         return null
     }
@@ -331,11 +325,14 @@ class BaseTalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> 
     )
   }
 
-  renderBreak = () => {
+  renderBreak = imageDimensions => {
     const { sponsor, description, title } = this.props.navigation.state.params.talk
     return (
       <View style={FULL_SIZE}>
-        <Image source={require("./images/img.coffee-modus.png")} style={FULL_WIDTH_IMAGE} />
+        <Image
+          source={require("./images/img.coffee-modus.png")}
+          style={{ ...FULL_WIDTH_IMAGE, ...imageDimensions }}
+        />
         <Text text={title} preset="body" style={TITLE} />
         <View style={SPONSOR_CONTAINER}>
           <Text tx="talkDetailsScreen.sponsoredBy" preset="input" style={SPONSORED_BY} />
@@ -346,7 +343,7 @@ class BaseTalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> 
     )
   }
 
-  renderLunch = () => {
+  renderLunch = imageDimensions => {
     const {
       sponsor,
       description,
@@ -354,19 +351,9 @@ class BaseTalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> 
       title,
       image,
     } = this.props.navigation.state.params.talk
-    // Image size math
-    const imageWidth = 0.92 * (getScreenWidth() - 2 * spacing.large) // 95% of the available container, screen width minus twice the screen padding.
-    const imageHeight = imageWidth / IMAGE_ASPECT_RATIO
-    const speakerImageWidthStyles = {
-      height: imageHeight,
-      width: imageWidth,
-    }
     return (
       <View style={FULL_SIZE}>
-        <Image
-          source={{ uri: image }}
-          style={{ ...FULL_WIDTH_IMAGE, ...speakerImageWidthStyles }}
-        />
+        <Image source={{ uri: image }} style={{ ...FULL_WIDTH_IMAGE, ...imageDimensions }} />
         <Text text={title} preset="body" style={TITLE} />
         {sponsor && this.renderSponsored(sponsor)}
         <Text text={description} preset="body" style={DESCRIPTION} />
@@ -385,13 +372,13 @@ class BaseTalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> 
     )
   }
 
-  renderPanel = () => {
+  renderPanel = imageDimensions => {
     const {
       talk: { image, title, description, speakers },
     } = this.props.navigation.state.params
     return (
       <View style={FULL_SIZE}>
-        {<Image source={{ uri: image }} style={FULL_WIDTH_IMAGE} />}
+        {<Image source={{ uri: image }} style={{ ...FULL_WIDTH_IMAGE, ...imageDimensions }} />}
         <Text text={title} preset="body" style={TITLE} />
         <Text text={description} preset="body" style={DESCRIPTION} />
         {speakers &&
@@ -409,7 +396,7 @@ class BaseTalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> 
     )
   }
 
-  renderAfterParty = () => {
+  renderAfterParty = imageDimensions => {
     const { title, description, sponsor } = this.props.navigation.state.params.talk
     let image =
       sponsor === "Squarespace"
@@ -418,7 +405,7 @@ class BaseTalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> 
     return (
       <View style={FULL_SIZE}>
         <View>
-          <Image source={image} style={FULL_WIDTH_IMAGE} />
+          <Image source={image} style={{ ...FULL_WIDTH_IMAGE, ...imageDimensions }} />
         </View>
         <Text text={title} preset="body" style={TITLE} />
         <Text text={description} preset="body" style={AFTER_PARTY_DESCRIPTION} />
