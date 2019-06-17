@@ -4,7 +4,7 @@ import { ContentLink } from "../content-link"
 
 export function SurveyLink() {
   const onPressLink = () => {
-    Linking.openURL("https://www.surveymonkey.com/r/ChainReact2019 ")
+    Linking.openURL("https://www.surveymonkey.com/r/ChainReact2019")
   }
 
   return (
