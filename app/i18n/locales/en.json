@@ -66,9 +66,9 @@
       "massTransit": "MAX/LIGHTRAIL (55 MINS)"
     },
     "blog": {
-      "title": "COPY NEEDED - SEE THE SIGHTS",
-      "description": "COPY NEEDED - Our MC Jason gives insider info about some of his favorite places in Portland.",
-      "button": "COPY NEEDED - CHECK OUT THE BLOG"
+      "title": "SEE THE SIGHTS",
+      "description": "Check out all the awesome things the Rose City has to offer in this blog post by our MC Jason!",
+      "button": "CHECK OUT THE BLOG"
     },
     "nearbyAttractions": {
       "navigation": {
@@ -96,7 +96,7 @@
     },
     "photobomb": {
       "title": "CHAIN REACT PHOTOBOMB APP",
-      "description": "COPY NEEDED",
+      "description": "Echobind has brought back the Chain React Photobomb! Have fun with it and be sure to tag us on Insta @chainreactconf and Twitter!",
       "button": "GET THE APP"
     },
     "sponsors": {
@@ -110,7 +110,7 @@
     },
     "survey": {
       "title": "SURVEY",
-      "description": "COPY NEEDED - Take our short survey",
+      "description": "We know surveys aren’t your favorite, but if you have 3 minutes, we will take the results of this survey into serious consideration when planning the next conf! Much appreciated!",
       "button": "TAKE THE SURVEY"
     },
     "presentedBy": {
