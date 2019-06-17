@@ -85,7 +85,9 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
     const style: any = ScheduleCellPresets[preset] || ScheduleCellPresets.default
     return (
       <View style={style.timeWrapper as ViewStyle}>
-        {talk.track && <Text preset="label" text={talk.track} style={style.track} />}
+        {talk.track && talk.track !== "NONE" && (
+          <Text preset="label" text={talk.track} style={style.track} />
+        )}
         <Text
           preset="label"
           text={`${format(talk.startTime, "h:mm A")} - ${format(talk.endTime, "h:mm A")}`}
@@ -108,10 +110,9 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
     if (talkTypeLower === "panel") {
       image = require("./images/panelist.png")
     } else if (talkTypeLower === "afterparty") {
-      if (sponsor === "Squarespace") image = require("./images/afterparty-squarespace.png")
       if (sponsor === "G2i") image = require("./images/afterparty-G2i.png")
     } else if (talkTypeLower === "break") {
-      image = require("./images/coffee-modus.png")
+      image = require("./images/coffee-small.png")
     } else if (talkTypeLower === "talk" || talkTypeLower === "workshop") {
       image = speakers && speakers[0] && speakers[0].image ? { uri: speakers[0].image } : null
     } else if (talkTypeLower === "lunch") {
