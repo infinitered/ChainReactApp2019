@@ -330,7 +330,7 @@ class BaseTalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> 
     return (
       <View style={FULL_SIZE}>
         <Image
-          source={require("./images/img.coffee-modus.png")}
+          source={require("./images/img.break.png")}
           style={{ ...FULL_WIDTH_IMAGE, ...imageDimensions }}
         />
         <Text text={title} preset="body" style={TITLE} />
