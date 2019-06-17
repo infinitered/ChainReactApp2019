@@ -2338,7 +2338,7 @@ exports[`Storyshots Code of Blog Link Presets 1`] = `
                   }
                 }
               >
-                COPY NEEDED - SEE THE SIGHTS
+                SEE THE SIGHTS
               </Text>
               <Text
                 style={
@@ -2352,7 +2352,7 @@ exports[`Storyshots Code of Blog Link Presets 1`] = `
                   }
                 }
               >
-                COPY NEEDED - Our MC Jason gives insider info about some of his favorite places in Portland.
+                Check out all the awesome things the Rose City has to offer in this blog post by our MC Jason!
               </Text>
               <View
                 accessible={true}
@@ -2385,7 +2385,7 @@ exports[`Storyshots Code of Blog Link Presets 1`] = `
                     }
                   }
                 >
-                  COPY NEEDED - CHECK OUT THE BLOG
+                  CHECK OUT THE BLOG
                 </Text>
               </View>
             </View>
@@ -2974,7 +2974,7 @@ exports[`Storyshots Code of Photobomb Presets 1`] = `
                   }
                 }
               >
-                COPY NEEDED
+                Echobind has brought back the Chain React Photobomb! Have fun with it and be sure to tag us on Insta @chainreactconf and Twitter!
               </Text>
               <View
                 accessible={true}
