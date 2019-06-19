@@ -11,6 +11,7 @@ import {
   Platform,
   AsyncStorage,
 } from "react-native"
+import { inject, observer } from "mobx-react"
 import { NavigationScreenProps } from "react-navigation"
 import { graphql, compose } from "react-apollo"
 import Amplify, { API, graphqlOperation } from "aws-amplify"
@@ -28,6 +29,7 @@ import { createComment as CreateComment } from "../../graphql/mutations"
 import { onCreateComment as OnCreateComment } from "../../graphql/subscriptions"
 import config from "../../aws-exports"
 import { calculateImageDimensions } from "./image-dimension-helpers"
+import { TalkStore } from "../../models/talk-store"
 Amplify.configure(config)
 
 const CLIENTID = uuid()
@@ -120,7 +122,9 @@ export interface NavigationStateParams {
   talk: Talk
 }
 
-export interface TalkDetailsScreenProps extends NavigationScreenProps<NavigationStateParams> {}
+export interface TalkDetailsScreenProps extends NavigationScreenProps<NavigationStateParams> {
+  talkStore: TalkStore
+}
 
 const backImage = () => (
   <View style={BACK_BUTTON} hitSlop={HIT_SLOP}>
@@ -128,6 +132,8 @@ const backImage = () => (
   </View>
 )
 
+@inject("talkStore")
+@observer
 class BaseTalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> {
   static navigationOptions = ({ navigation }) => {
     const { talk } = navigation.state.params
@@ -211,12 +217,17 @@ class BaseTalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> 
   }
 
   render() {
-    const { talkType = "" } = this.props.navigation.state.params.talk
-    let { comments } = this.props
+    const talk = this.props.navigation.state.params.talk
+    const { talkType = "" } = talk
+    let { comments, talkStore } = this.props
     const imageDimensions = calculateImageDimensions(getScreenWidth())
     const widthStyles = {
       width: getScreenWidth(),
     }
+    const displayTabs =
+      (talkType === "TALK" || talkType === "WORKSHOP") &&
+      talkStore.discussionsEnabled &&
+      talk.discussionEnabled
 
     comments = comments
       .sort(function(a, b) {
@@ -226,7 +237,7 @@ class BaseTalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> 
 
     return (
       <View style={MAIN_CONTAINER}>
-        {(talkType === "TALK" || talkType === "WORKSHOP") && (
+        {displayTabs && (
           <View style={TAB_CONTAINER}>
             <View style={{ ...TAB_HOLDER, ...chosen(this.state.currentView, "details") }}>
               <TouchableOpacity style={TAB_STYLE} onPress={() => this.toggleView("details")}>
