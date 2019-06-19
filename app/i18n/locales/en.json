@@ -26,6 +26,9 @@
     "usernameField": {
       "label": "USERNAME",
       "placeholder": "USERNAME"
+    },
+    "disabled": {
+      "warning": "The discussions feature is unavailable at this time."
     }
   },
   "scheduleScreen": {
