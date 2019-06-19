@@ -14,6 +14,7 @@ export const TalkModel = types.model().props({
   talkType: types.maybeNull(types.string),
   location: types.maybeNull(types.string),
   track: types.maybeNull(types.string),
+  discussionEnabled: types.maybeNull(types.boolean),
 })
 
 export type Talk = typeof TalkModel.Type

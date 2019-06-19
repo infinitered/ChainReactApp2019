@@ -1,12 +1,15 @@
 import React from "react"
-import { View, TextInput, AsyncStorage, TouchableOpacity, ViewStyle, Keyboard } from "react-native"
+import { View, AsyncStorage, ViewStyle } from "react-native"
 import { Screen } from "../../components/screen"
 import { Text } from "../../components/text"
-import { palette, spacing, color, typography } from "../../theme"
+import { palette, spacing } from "../../theme"
 import { TextStyle } from "react-native"
 import name from "./profile-info"
 import { Button } from "../../components/button"
 import { TextField } from "../../components/text-field/text-field"
+import { observer, inject } from "mobx-react"
+import { NavigationScreenProps } from "react-navigation"
+import { TalkStore } from "../../models/talk-store"
 
 const ROOT: ViewStyle = {
   padding: spacing.medium,
@@ -42,7 +45,17 @@ const BUTTONS_ROW: ViewStyle = {
   marginTop: spacing.medium,
 }
 
-export class ProfileScreen extends React.Component {
+interface ProfileScreenProps extends NavigationScreenProps<{}> {
+  talkStore: TalkStore
+}
+interface ProfileScreenState {
+  username?: string
+  editInput: boolean
+}
+
+@observer
+@inject("talkStore")
+export class ProfileScreen extends React.Component<ProfileScreenProps, ProfileScreenState> {
   state = {
     username: null,
     editInput: false,
@@ -54,22 +67,26 @@ export class ProfileScreen extends React.Component {
   }
 
   render() {
-    const { username } = this.state
     return (
       <Screen preset="scrollStack" backgroundColor={palette.portGore} style={ROOT}>
         <Text preset="title" tx="profileScreen.title" style={TITLE} />
-        {!this.state.editInput && (
-          <View>
-            <View style={ROW}>
-              <View style={USERNAME}>
-                <Text tx="profileScreen.usernameField.label" preset="label" />
-                <Text preset="body" text={username} numberOfLines={1} />
-              </View>
-              <Button preset="dark" onPress={this.updateName} tx="common.edit" style={BUTTON} />
-            </View>
-          </View>
-        )}
-        {this.state.editInput && (
+        {this.renderContent()}
+      </Screen>
+    )
+  }
+
+  renderDisabled = () => (
+    <View>
+      <Text tx="profileScreen.disabled.warning" />
+    </View>
+  )
+
+  renderContent = () => {
+    const { username, editInput } = this.state
+
+    if (this.props.talkStore.discussionsEnabled) {
+      if (editInput) {
+        return (
           <View>
             <Text tx="profileScreen.usernameField.label" preset="label" />
             <TextField
@@ -82,10 +99,25 @@ export class ProfileScreen extends React.Component {
               <Button preset="dark" tx="common.save" onPress={this.onSave} style={MARGIN_BUTTON} />
             </View>
           </View>
-        )}
-      </Screen>
-    )
+        )
+      } else {
+        return (
+          <View>
+            <View style={ROW}>
+              <View style={USERNAME}>
+                <Text tx="profileScreen.usernameField.label" preset="label" />
+                <Text preset="body" text={username} numberOfLines={1} />
+              </View>
+              <Button preset="dark" onPress={this.updateName} tx="common.edit" style={BUTTON} />
+            </View>
+          </View>
+        )
+      }
+    } else {
+      return this.renderDisabled()
+    }
   }
+
   onSave = async () => {
     try {
       await AsyncStorage.setItem("name", this.state.username)

@@ -1,6 +1,7 @@
 import { types, flow, getEnv } from "mobx-state-tree"
 import gql from "graphql-tag"
 import { TalkModel, TalkSnapshot } from "../talk"
+import { SettingModel, SettingSnapshot } from "../setting"
 
 export const TalkStoreModel = types
   .model()
@@ -8,11 +9,13 @@ export const TalkStoreModel = types
     talks: types.optional(types.array(TalkModel), []),
     status: types.optional(types.enumeration(["pending", "done", "error"]), "done"),
     updatedAt: types.maybe(types.Date),
+    settings: types.optional(types.array(SettingModel), []),
   })
   .actions(self => ({
     subscribe: () => {},
-    load: (talks: TalkSnapshot[]) => {
+    load: (talks: TalkSnapshot[], settings: SettingSnapshot[]) => {
       self.talks.replace(talks as any)
+      self.settings.replace(settings as any)
     },
   }))
   .actions(self => ({
@@ -21,6 +24,10 @@ export const TalkStoreModel = types
       const result = yield getEnv(self).graphql.query({
         query: gql`
           query Talks {
+            settings {
+              name
+              value
+            }
             talks {
               id
               title
@@ -33,6 +40,7 @@ export const TalkStoreModel = types
               talkType
               location
               track
+              discussionEnabled
               speakers {
                 id
                 name
@@ -54,7 +62,7 @@ export const TalkStoreModel = types
 
       if (result.data) {
         self.status = "done"
-        self.load(result.data.talks)
+        self.load(result.data.talks, result.data.settings)
       } else {
         self.status = "error"
       }
@@ -65,6 +73,9 @@ export const TalkStoreModel = types
       return self.talks.sort(
         (a, b) => new Date(a.startTime).getTime() - new Date(b.startTime).getTime(),
       )
+    },
+    get discussionsEnabled() {
+      return self.settings.find(s => s.name === "discussions_enabled").value
     },
   }))
 
