@@ -236,7 +236,7 @@ export const deleteTalk = `mutation DeleteTalk($input: DeleteTalkInput!) {
   }
 }
 `
-export const createComment = gql`
+export const createComment = `
   mutation CreateComment(
     $clientId: ID!
     $talkId: ID
@@ -321,4 +321,16 @@ export const deleteComment = `mutation DeleteComment($input: DeleteCommentInput!
     createdBy
   }
 }
+`
+
+export const createReport = `
+  mutation createReport($comment: String! $commentId: ID!, $talkTitle: String!) {
+    createReport(input: {
+      comment: $comment
+      commentId: $commentId
+      talkTitle: $talkTitle
+    }) {
+      id comment commentId talkTitle
+    }
+  }
 `
