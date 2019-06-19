@@ -1,5 +1,5 @@
 import * as React from "react"
-import { View, ViewStyle, TextStyle } from "react-native"
+import { View, ViewStyle, TextStyle, ImageStyle } from "react-native"
 import { Text } from "../text"
 import { spacing, palette } from "../../theme"
 import { SponsorLogo } from "../sponsor-logo"
@@ -29,6 +29,10 @@ const LOGO_ROW: ViewStyle = {
   flexDirection: "row",
   justifyContent: "space-between",
 }
+const AWS_STYLE: ImageStyle = {
+  width: "60%",
+  height: 65, // Restrict the height so it better matches the size of the Alexa logo
+}
 
 export class Sponsors extends React.Component {
   render() {
@@ -40,7 +44,7 @@ export class Sponsors extends React.Component {
           <Text preset="sectionHeader" tx="infoScreen.sponsors.platinum" />
           <View style={LINE_BREAK} />
           <SponsorLogo size="platinum" sponsor="alexa" />
-          <SponsorLogo size="platinum" sponsor="aws" />
+          <SponsorLogo size="platinum" sponsor="aws" style={AWS_STYLE} />
         </View>
         <View style={SECTION}>
           <Text preset="sectionHeader" tx="infoScreen.sponsors.gold" />
