@@ -398,7 +398,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
   }
 
   renderBreak = imageDimensions => {
-    const { sponsor, description, title } = this.props.navigation.state.params.talk
+    const { sponsor, description, title, menuItems } = this.props.navigation.state.params.talk
     return (
       <View style={FULL_SIZE}>
         <Image
@@ -406,11 +406,17 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
           style={{ ...FULL_WIDTH_IMAGE, ...imageDimensions }}
         />
         <Text text={title} preset="body" style={TITLE} />
-        <View style={SPONSOR_CONTAINER}>
-          <Text tx="talkDetailsScreen.sponsoredBy" preset="input" style={SPONSORED_BY} />
-          <Text text={sponsor} preset="input" style={SPONSOR_NAME} />
-        </View>
+        {sponsor && (
+          <View style={SPONSOR_CONTAINER}>
+            <Text tx="talkDetailsScreen.sponsoredBy" preset="input" style={SPONSORED_BY} />
+            <Text text={sponsor} preset="input" style={SPONSOR_NAME} />
+          </View>
+        )}
         <Text text={description} preset="body" style={DESCRIPTION} />
+        {menuItems && (
+          <Text preset="sectionHeader" tx="talkDetailsScreen.menuTitle" style={LABEL} />
+        )}
+        {menuItems && menuItems.map((item, index) => this.renderMenuItem(item, index))}
       </View>
     )
   }
