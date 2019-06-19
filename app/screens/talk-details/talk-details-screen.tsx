@@ -113,7 +113,7 @@ const CREATED_BY = { color: "white", fontWeight: "600" }
 const CREATED_AT = { color: "rgba(255, 255, 255, .5)", fontSize: 11, marginLeft: 8, marginTop: 3 }
 const INPUT_CONTAINER = { bottom: 0, position: "absolute", left: 0 }
 const MESSAGE_INPUT = { backgroundColor: "white", height: 50, paddingHorizontal: 8 }
-const REPORT = { marginTop: 5, color: "green" }
+const REPORT = { marginTop: 5, color: palette.angry, fontSize: 11 }
 
 const HIT_SLOP = {
   top: 30,
