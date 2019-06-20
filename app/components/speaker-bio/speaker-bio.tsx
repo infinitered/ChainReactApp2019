@@ -57,9 +57,7 @@ export class SpeakerBio extends React.Component<SpeakerBioProps, {}> {
     const widthStyles = {
       maxWidth: getScreenWidth() - 2 * spacing.large,
     }
-    const socialStyles = [{ ...SOCIAL_WRAPPER, ...widthStyles }, last && SOCIAL_WRAPPER_LAST]
-
-    if (
+    const displaySocial =
       facebook ||
       twitter ||
       github ||
@@ -67,18 +65,18 @@ export class SpeakerBio extends React.Component<SpeakerBioProps, {}> {
       instagram ||
       dribbble ||
       (websites && websites.length > 0)
-    ) {
-      const splitName = name.split(" ")
-      const lastIndex = splitName.length - 1
-      const firstName = splitName.slice(0, lastIndex).join(" ")
-      return (
-        <View key={key} style={{ ...ROOT, ...{ width: 0.9 * getScreenWidth() } }}>
-          <Text
-            text={`${bio ? "ABOUT" : "FOLLOW"} ${firstName.toUpperCase()}`}
-            preset="sectionHeader"
-            style={{ color: palette.shamrock }}
-          />
-          {bio && <Text text={bio} preset="subheader" style={BIO} />}
+    const socialStyles = [{ ...SOCIAL_WRAPPER, ...widthStyles }, last && SOCIAL_WRAPPER_LAST]
+    const lastIndex = splitName.length - 1
+    const firstName = splitName.slice(0, lastIndex).join(" ")
+    return (
+      <View key={key} style={{ ...ROOT, ...{ width: 0.9 * getScreenWidth() } }}>
+        <Text
+          text={`${bio ? "ABOUT" : "FOLLOW"} ${firstName.toUpperCase()}`}
+          preset="sectionHeader"
+          style={{ color: palette.shamrock }}
+        />
+        {bio && <Text text={bio} preset="subheader" style={BIO} />}
+        {displaySocial ? (
           <View style={socialStyles}>
             {Object.keys(links).map(k => {
               return k === "websites"
@@ -86,11 +84,9 @@ export class SpeakerBio extends React.Component<SpeakerBioProps, {}> {
                 : this.renderLink(k, links[k])
             })}
           </View>
-        </View>
-      )
-    } else {
-      return null
-    }
+        ) : null}
+      </View>
+    )
   }
 
   renderLink = (k, link) => {

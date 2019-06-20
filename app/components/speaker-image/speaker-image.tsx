@@ -48,15 +48,17 @@ export class SpeakerImage extends React.Component<SpeakerImageProps, {}> {
     // Image size math
     const imageWidth = 0.92 * (getScreenWidth() - 2 * spacing.large) // 95% of the available container, screen width minus twice the screen padding.
     const imageHeight = imageWidth / IMAGE_ASPECT_RATIO
-    const speakerImageWidthStyles = {
+    const imageDimensions = {
       height: imageHeight,
       width: imageWidth,
     }
 
     return (
       <View key={key} style={ROOT}>
-        {image && (
-          <Image source={{ uri: image }} style={{ ...SPEAKER_IMAGE, ...speakerImageWidthStyles }} />
+        {image ? (
+          <Image source={{ uri: image }} style={{ ...SPEAKER_IMAGE, ...imageDimensions }} />
+        ) : (
+          <View style={{ ...imageDimensions }} />
         )}
         <View style={NAME}>
           <Text text={firstPart.toUpperCase()} preset="body" style={SPEAKER_NAME} />
