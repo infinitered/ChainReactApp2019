@@ -477,7 +477,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
         image = require("./images/img.afterparty-squarespace.png")
         break
       case "Bumped":
-        image = require("./images/sponsor-bumped.png")
+        image = require("./images/bumped.png")
         break
       case "G2i":
         image = require("./images/img.afterparty-g2i.png")

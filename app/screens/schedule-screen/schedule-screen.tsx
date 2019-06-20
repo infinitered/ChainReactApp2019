@@ -132,7 +132,12 @@ export class ScheduleScreen extends React.Component<
         <ScheduleCell index={0} talk={beginnerWorkshop} onPress={onPressWorkshop} />
         <ScheduleCell index={1} talk={intermediateWorkshop} onPress={onPressWorkshop} />
         <ScheduleCell index={2} talk={advancedWorkshop} onPress={onPressWorkshop} />
-        <ScheduleCell index={3} preset={"afterparty"} talk={welcomeParty} onPress={() => {}} />
+        <ScheduleCell
+          index={3}
+          preset={"afterparty"}
+          talk={welcomeParty}
+          onPress={onPressWorkshop}
+        />
       </View>
     )
   }
