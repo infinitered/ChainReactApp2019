@@ -111,6 +111,7 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
       image = require("./images/panelist.png")
     } else if (talkTypeLower === "afterparty") {
       if (sponsor === "G2i") image = require("./images/afterparty-G2i.png")
+      if (sponsor === "Bumped") image = require("./images/sponsor-bumped.png")
     } else if (talkTypeLower === "break") {
       image = require("./images/coffee-small.png")
     } else if (talkTypeLower === "talk" || talkTypeLower === "workshop") {

@@ -122,6 +122,7 @@ export class ScheduleScreen extends React.Component<
     const beginnerWorkshop = talks.find(talk => talk.track === "BEGINNER")
     const intermediateWorkshop = talks.find(talk => talk.track === "INTERMEDIATE")
     const advancedWorkshop = talks.find(talk => talk.track === "ADVANCED")
+    const welcomeParty = talks.find(talk => talk.talkType === "AFTERPARTY")
     const onPressWorkshop = talk => this.props.navigation.navigate("talkDetails", { talk })
 
     return (
@@ -131,6 +132,12 @@ export class ScheduleScreen extends React.Component<
         <ScheduleCell index={0} talk={beginnerWorkshop} onPress={onPressWorkshop} />
         <ScheduleCell index={1} talk={intermediateWorkshop} onPress={onPressWorkshop} />
         <ScheduleCell index={2} talk={advancedWorkshop} onPress={onPressWorkshop} />
+        <ScheduleCell
+          index={3}
+          preset={"afterparty"}
+          talk={welcomeParty}
+          onPress={onPressWorkshop}
+        />
       </View>
     )
   }

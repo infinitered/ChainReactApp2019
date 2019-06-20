@@ -476,10 +476,22 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
 
   renderAfterParty = imageDimensions => {
     const { title, description, sponsor } = this.props.navigation.state.params.talk
-    let image =
-      sponsor === "Squarespace"
-        ? require("./images/img.afterparty-squarespace.png")
-        : require("./images/img.afterparty-g2i.png")
+
+    let image = null
+    switch (sponsor) {
+      case "Squarespace":
+        image = require("./images/img.afterparty-squarespace.png")
+        break
+      case "Bumped":
+        image = require("./images/bumped.png")
+        break
+      case "G2i":
+        image = require("./images/img.afterparty-g2i.png")
+        break
+      default:
+        image = require("./images/img.afterparty-g2i.png")
+        break
+    }
     return (
       <View style={FULL_SIZE}>
         <View>
