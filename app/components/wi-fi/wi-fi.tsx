@@ -1,5 +1,5 @@
 import * as React from "react"
-import { View, ViewStyle, TextStyle, Image } from "react-native"
+import { View, ViewStyle, TextStyle, Image, ImageStyle } from "react-native"
 import { Text } from "../text"
 import { spacing, palette } from "../../theme"
 
@@ -9,6 +9,11 @@ const ROOT: ViewStyle = {
 }
 const BODY: TextStyle = {
   marginTop: spacing.large,
+}
+const IMAGE: ImageStyle = {
+  width: "60%",
+  height: 75,
+  resizeMode: "contain",
 }
 const INPUT_WRAPPER: ViewStyle = {
   flex: 1,
@@ -24,6 +29,7 @@ const INPUT: TextStyle = {
 const SPLITZY: ViewStyle = {
   flexDirection: "row",
   justifyContent: "space-between",
+  alignItems: "center",
 }
 
 export class WiFi extends React.Component<{}, {}> {
@@ -35,7 +41,7 @@ export class WiFi extends React.Component<{}, {}> {
         <View style={INPUT_WRAPPER}>
           <View style={SPLITZY}>
             <Text preset="label" tx="infoScreen.wifi.networkLabel" />
-            <Image source={require("./sponsor-logo/sony-white.png")} />
+            <Image style={IMAGE} source={require("./sponsor-logo/playstation.png")} />
           </View>
           <Text preset="input" tx="infoScreen.wifi.networkName" style={INPUT} />
         </View>
