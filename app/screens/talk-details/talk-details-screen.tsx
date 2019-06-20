@@ -11,6 +11,7 @@ import {
   ImageStyle,
   Platform,
   AsyncStorage,
+  KeyboardAvoidingView,
 } from "react-native"
 import { inject, observer } from "mobx-react"
 import { NavigationScreenProps } from "react-navigation"
@@ -294,7 +295,11 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
       .reverse()
 
     return (
-      <View style={MAIN_CONTAINER}>
+      <KeyboardAvoidingView
+        style={MAIN_CONTAINER}
+        behavior={Platform.OS === "ios" ? "padding" : null}
+        keyboardVerticalOffset={88}
+      >
         {displayTabs && (
           <View style={TAB_CONTAINER}>
             <View style={{ ...TAB_HOLDER, ...chosen(this.state.currentView, "details") }}>
@@ -343,7 +348,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
             {this.renderContent(imageDimensions)}
           </Screen>
         )}
-      </View>
+      </KeyboardAvoidingView>
     )
   }
 
