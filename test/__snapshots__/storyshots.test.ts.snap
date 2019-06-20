@@ -7392,11 +7392,12 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     Object {
                       "alignSelf": "center",
                       "flex": 1,
+                      "height": 65,
                       "margin": 10,
                       "marginVertical": 14,
                       "maxHeight": 135,
                       "resizeMode": "contain",
-                      "width": "100%",
+                      "width": "60%",
                     }
                   }
                 />
@@ -10210,6 +10211,7 @@ exports[`Storyshots WiFi Presets 1`] = `
                 <View
                   style={
                     Object {
+                      "alignItems": "center",
                       "flexDirection": "row",
                       "justifyContent": "space-between",
                     }
@@ -10228,6 +10230,13 @@ exports[`Storyshots WiFi Presets 1`] = `
                   </Text>
                   <Image
                     source={1}
+                    style={
+                      Object {
+                        "height": 75,
+                        "resizeMode": "contain",
+                        "width": "60%",
+                      }
+                    }
                   />
                 </View>
                 <Text
