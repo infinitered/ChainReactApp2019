@@ -366,6 +366,9 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
         return this.renderLunch(imageDimensions)
       case "panel":
         return this.renderPanel(imageDimensions)
+      case "welcome":
+      case "goodbye":
+        return this.renderWelcome()
       case "afterparty":
         return this.renderAfterParty(imageDimensions)
       default:
@@ -387,6 +390,29 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
           />
         )}
         {talk.speakers && <SpeakerBio speaker={talk.speakers[0]} />}
+      </View>
+    )
+  }
+
+  renderWelcome = () => {
+    const {
+      talk: { title, description, speakers },
+    } = this.props.navigation.state.params
+    return (
+      <View style={FULL_SIZE}>
+        <Text text={title} preset="body" style={TITLE} />
+        <Text text={description} preset="body" style={DESCRIPTION} />
+        {speakers &&
+          speakers.length &&
+          speakers.map((speaker, index) => {
+            const isLast = index === speakers.length - 1
+            return (
+              <View key={index} style={PANEL_BIO}>
+                <SpeakerImage speaker={speaker} />
+                <SpeakerBio speaker={speaker} last={isLast} />
+              </View>
+            )
+          })}
       </View>
     )
   }
