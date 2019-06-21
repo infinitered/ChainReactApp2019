@@ -1,5 +1,5 @@
 import * as React from "react"
-import { View, ViewStyle, TextStyle } from "react-native"
+import { View, ViewStyle, TextStyle, Linking, Platform } from "react-native"
 import { Text } from "../text"
 import { palette, spacing } from "../../theme"
 
@@ -43,6 +43,15 @@ export class TalkTitle extends React.Component<{ talk: any }, {}> {
 
   renderWorkshop = () => {
     const { title, location, description } = this.props.talk
+    const label = location.split("\n")[0]
+    const query = location
+      .split("\n")
+      .slice(1)
+      .join(" ")
+    const url = Platform.select({
+      ios: `maps:0,0?q=${label}@${query}`,
+      android: `geo:0,0?q=${query}(${label})`,
+    })
     return (
       <View style={ROOT}>
         <Text tx="talkDetailsScreen.workshop" preset="sectionHeader" style={LABEL} />
@@ -52,6 +61,7 @@ export class TalkTitle extends React.Component<{ talk: any }, {}> {
           text={location}
           preset="subheader"
           style={{ color: palette.white, fontWeight: "500" }}
+          onPress={() => Linking.openURL(url)}
         />
         <Text tx="talkDetailsScreen.aboutWorkshop" preset="sectionHeader" style={LABEL} />
         <Text text={description} preset="body" style={{}} />

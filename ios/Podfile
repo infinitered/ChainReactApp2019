@@ -1,4 +1,5 @@
 install! 'cocoapods', deterministic_uuids: false
+project 'ChainReactConf.xcodeworkspace'
 
 target 'ChainReactConf' do
   # use_frameworks! # if using Swift or dynamic frameworks
