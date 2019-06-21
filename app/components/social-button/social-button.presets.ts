@@ -34,6 +34,7 @@ export const imageSource = {
   facebook: require("./social_icon_assets/facebook.png"),
   email: require("./social_icon_assets/email.icon.png"),
   phone: require("./social_icon_assets/phone.icon.png"),
+  slack: require("./social_icon_assets/slack.png"),
 }
 
 export const imageStyle = {
