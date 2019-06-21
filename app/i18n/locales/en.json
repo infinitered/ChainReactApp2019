@@ -23,6 +23,7 @@
   },
   "profileScreen": {
     "title": "Profile",
+    "description": "Thanks to AWS AppSync, you can discuss each talk with your fellow attendees, right here in the app! Change your username to whatever suits you and get chatting!",
     "usernameField": {
       "label": "USERNAME",
       "placeholder": "USERNAME"

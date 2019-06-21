@@ -16,7 +16,13 @@ const ROOT: ViewStyle = {
 }
 
 const TITLE: TextStyle = {
-  marginVertical: spacing.extraLarge,
+  marginTop: spacing.extraLarge,
+  marginBottom: spacing.large,
+}
+
+const DESCRIPTION: TextStyle = {
+  marginTop: spacing.large,
+  marginBottom: spacing.extraLarge,
 }
 
 const BUTTON: ViewStyle = {
@@ -70,6 +76,7 @@ export class ProfileScreen extends React.Component<ProfileScreenProps, ProfileSc
     return (
       <Screen preset="scrollStack" backgroundColor={palette.portGore} style={ROOT}>
         <Text preset="title" tx="profileScreen.title" style={TITLE} />
+        <Text preset="subheader" tx="profileScreen.description" style={DESCRIPTION} />
         {this.renderContent()}
       </Screen>
     )
