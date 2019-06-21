@@ -43,15 +43,14 @@ export class TalkTitle extends React.Component<{ talk: any }, {}> {
 
   renderWorkshop = () => {
     const { title, location, description } = this.props.talk
-    const scheme = Platform.select({ ios: "maps:0,0?q=", android: "geo:0,0?q=" })
     const label = location.split("\n")[0]
     const query = location
       .split("\n")
       .slice(1)
       .join(" ")
     const url = Platform.select({
-      ios: `${scheme}${label}@${query}`,
-      android: `${scheme}${query}(${label})`,
+      ios: `maps:0,0?q=${label}@${query}`,
+      android: `geo:0,0?q=${query}(${label})`,
     })
     return (
       <View style={ROOT}>
