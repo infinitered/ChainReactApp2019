@@ -31,6 +31,7 @@ import { onCreateComment as OnCreateComment } from "../../graphql/subscriptions"
 import config from "../../aws-exports"
 import { calculateImageDimensions } from "./image-dimension-helpers"
 import { TalkStore } from "../../models/talk-store"
+import Hyperlink from "react-native-hyperlink"
 Amplify.configure(config)
 
 const CLIENTID = uuid()
@@ -384,11 +385,14 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
         {talk.speakers && <SpeakerImage speaker={talk.speakers[0]} />}
         <TalkTitle talk={talk} />
         {talk.description && (
-          <Text
-            text={talk.description}
-            preset="body"
-            style={{ fontSize: 16, marginTop: spacing.large }}
-          />
+          <Hyperlink
+            linkDefault={true}
+            linkStyle={{ color: palette.shamrock, textDecorationLine: "underline" }}
+          >
+            <Text preset="body" style={{ fontSize: 16, marginTop: spacing.large }}>
+              {talk.description}
+            </Text>
+          </Hyperlink>
         )}
         {talk.speakers && <SpeakerBio speaker={talk.speakers[0]} />}
       </View>
