@@ -1,5 +1,5 @@
 import * as React from "react"
-import { View, ViewStyle, ScrollView, TextStyle } from "react-native"
+import { View, ViewStyle, ScrollView, TextStyle, RefreshControl } from "react-native"
 import { NavigationScreenProps } from "react-navigation"
 import { Text } from "../../components/text"
 import { Screen } from "../../components/screen"
@@ -39,14 +39,17 @@ interface ScheduleScreenProps extends NavigationScreenProps<{}> {
   talkStore: TalkStore
 }
 
+interface ScheduleScreenState {
+  selected: "wednesday" | "thursday" | "friday"
+  refreshing: boolean
+}
+
 @inject("talkStore")
 @observer
-export class ScheduleScreen extends React.Component<
-  ScheduleScreenProps,
-  { selected: "wednesday" | "thursday" | "friday" }
-> {
+export class ScheduleScreen extends React.Component<ScheduleScreenProps, ScheduleScreenState> {
   state = {
     selected: getSelectedDay(),
+    refreshing: false,
   }
   static navigationOptions = {
     header: null,
@@ -63,11 +66,24 @@ export class ScheduleScreen extends React.Component<
     talkStore && talkStore.getAll()
   }
 
+  refreshData = () => {
+    const { talkStore } = this.props
+    this.setState({ refreshing: true })
+    talkStore && talkStore.getAll()
+    this.setState({ refreshing: false })
+  }
+
   render() {
     const { selected } = this.state
     return (
       <Screen preset="fixed" backgroundColor={color.palette.portGore} style={ROOT}>
-        <ScrollView style={{ flex: 1, width: "100%" }} key={`${selected}-scrollview`}>
+        <ScrollView
+          style={{ flex: 1, width: "100%" }}
+          key={`${selected}-scrollview`}
+          refreshControl={
+            <RefreshControl refreshing={this.state.refreshing} onRefresh={this.refreshData} />
+          }
+        >
           <Text preset="title" tx="scheduleScreen.title" style={TITLE} />
           {selected === "wednesday" ? this.renderWorkshops() : this.renderContent()}
         </ScrollView>

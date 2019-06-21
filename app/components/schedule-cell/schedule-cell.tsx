@@ -36,6 +36,7 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
     const { preset, index, talk, onPress, noTime } = this.props
     const style: any = ScheduleCellPresets[preset] || ScheduleCellPresets.default
     const isOdd = index % 2 === 0 // index starts at 0
+    const speakerName = talk.speakers.map(s => s.name).join(", ")
     if (!talk) return null
     return (
       <TouchableWithoutFeedback
@@ -56,11 +57,7 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
             <View style={style.content as ViewStyle}>
               <Text preset="subheader" text={talk.title} style={style.title as TextStyle} />
               {talk.speakers && talk.speakers.length > 0 && talk.speakers[0].name && (
-                <Text
-                  preset="subheader"
-                  text={talk.speakers[0].name}
-                  style={style.speaker as TextStyle}
-                />
+                <Text preset="subheader" text={speakerName} style={style.speaker as TextStyle} />
               )}
               {preset === "afterparty" && (
                 <Text
@@ -114,7 +111,7 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
       if (sponsor === "Bumped") image = require("./images/sponsor-bumped.png")
     } else if (talkTypeLower === "break") {
       image = require("./images/coffee-small.png")
-    } else if (talkTypeLower === "talk" || talkTypeLower === "workshop") {
+    } else if (["talk", "workshop", "welcome", "goodbye"].includes(talkTypeLower)) {
       image = speakers && speakers[0] && speakers[0].image ? { uri: speakers[0].image } : null
     } else if (talkTypeLower === "lunch") {
       image = require("./images/lunch.png")
