@@ -26,7 +26,7 @@ const SELECTED_NAV_ITEM: TextStyle = {
   color: palette.shamrock,
 }
 const LIST: ViewStyle = {
-  marginTop: spacing.huge,
+  marginTop: spacing.medium,
 }
 
 export class AttractionsList extends React.Component<{}, AttractionsListState> {

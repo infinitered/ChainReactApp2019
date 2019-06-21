@@ -16,13 +16,13 @@ const BODY: TextStyle = {
   marginVertical: spacing.medium,
 }
 const SECTION: ViewStyle = {
-  marginTop: spacing.large,
+  marginTop: spacing.huge,
 }
 const LINE_BREAK: ViewStyle = {
   height: 1,
   backgroundColor: palette.martinique,
   marginTop: spacing.large,
-  marginBottom: spacing.extraLarge,
+  marginBottom: spacing.small,
   width: "100%",
 }
 const LOGO_ROW: ViewStyle = {

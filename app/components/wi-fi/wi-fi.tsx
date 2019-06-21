@@ -4,7 +4,7 @@ import { Text } from "../text"
 import { spacing, palette } from "../../theme"
 
 const ROOT: ViewStyle = {
-  marginTop: spacing.huge,
+  marginTop: spacing.large,
   paddingHorizontal: spacing.large,
 }
 const BODY: TextStyle = {
