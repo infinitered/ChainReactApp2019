@@ -339,6 +339,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
                 placeholder="Type a message..."
                 onSubmitEditing={this.createComment}
                 value={this.state.inputValue}
+                returnKeyType={"send"}
               />
             </View>
           </View>
