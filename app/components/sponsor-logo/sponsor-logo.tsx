@@ -3,14 +3,18 @@ import { Image, View, ViewStyle, TextStyle } from "react-native"
 import { Text } from "../text"
 import { SponsorLogoProps } from "./sponsor-logo.props"
 import { sponsorLogoSizePresets, sponsors } from "./sponsor-logo.presets"
-import { color } from "../../theme"
+import { color, spacing } from "../../theme"
 
 const ROOT: ViewStyle = {
   flexDirection: "column",
+  width: "50%",
   alignItems: "center",
 }
 
 const SUBTITLE: TextStyle = {
+  fontSize: 12,
+  fontWeight: "600",
+  letterSpacing: 3.0,
   color: color.palette.shamrock,
 }
 
@@ -19,7 +23,10 @@ export class SponsorLogo extends React.Component<SponsorLogoProps, {}> {
     const { size, sponsor, style, subtitle } = this.props
     return (
       <View style={ROOT}>
-        <Image source={sponsors[sponsor]} style={{ ...sponsorLogoSizePresets[size], ...style }} />
+        <Image
+          source={sponsors[sponsor]}
+          style={{ ...sponsorLogoSizePresets[size], ...style, marginBottom: 0 }}
+        />
         {subtitle && <Text style={SUBTITLE} text={subtitle} />}
       </View>
     )
