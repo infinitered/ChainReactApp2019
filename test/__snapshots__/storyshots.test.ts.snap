@@ -4809,7 +4809,7 @@ exports[`Storyshots PresentedBy Presets 1`] = `
                     }
                   }
                 >
-                  THE HOST
+                  PRESENTED BY
                 </Text>
                 <Text
                   style={
