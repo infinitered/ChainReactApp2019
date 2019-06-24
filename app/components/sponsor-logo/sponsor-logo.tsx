@@ -21,14 +21,20 @@ const SUBTITLE: TextStyle = {
 export class SponsorLogo extends React.Component<SponsorLogoProps, {}> {
   render() {
     const { size, sponsor, style, subtitle } = this.props
-    return (
-      <View style={ROOT}>
-        <Image
-          source={sponsors[sponsor]}
-          style={{ ...sponsorLogoSizePresets[size], ...style, marginBottom: 0 }}
-        />
-        {subtitle && <Text style={SUBTITLE} text={subtitle} />}
-      </View>
-    )
+    if (!subtitle) {
+      return (
+        <Image source={sponsors[sponsor]} style={{ ...sponsorLogoSizePresets[size], ...style }} />
+      )
+    } else {
+      return (
+        <View style={ROOT}>
+          <Image
+            source={sponsors[sponsor]}
+            style={{ ...sponsorLogoSizePresets[size], ...style, marginBottom: 0 }}
+          />
+          {subtitle && <Text style={SUBTITLE} text={subtitle} />}
+        </View>
+      )
+    }
   }
 }
