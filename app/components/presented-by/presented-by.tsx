@@ -54,6 +54,7 @@ export const linkPresets = {
   dribbble: "https://dribbble.com/infinitered",
   instagram: "https://www.instagram.com/infinitered_designers/",
   facebook: "https://facebook.com/infiniteredinc",
+  slack: "http://community.infinite.red",
 }
 
 export function PresentedBy(props: PresentedByProps) {
@@ -89,6 +90,7 @@ export function PresentedBy(props: PresentedByProps) {
             <SocialButton preset="dribbble" link={linkPresets.dribbble} style={SOCIAL_BUTTON} />
             <SocialButton preset="instagram" link={linkPresets.instagram} style={SOCIAL_BUTTON} />
             <SocialButton preset="facebook" link={linkPresets.facebook} style={SOCIAL_BUTTON} />
+            <SocialButton preset="slack" link={linkPresets.slack} style={SOCIAL_BUTTON} />
           </View>
         </View>
       </View>
