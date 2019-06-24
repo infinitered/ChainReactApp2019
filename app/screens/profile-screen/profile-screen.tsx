@@ -10,6 +10,7 @@ import { TextField } from "../../components/text-field/text-field"
 import { observer, inject } from "mobx-react"
 import { NavigationScreenProps } from "react-navigation"
 import { TalkStore } from "../../models/talk-store"
+import { CodeOfConductLink } from "../../components/code-of-conduct-link"
 
 const ROOT: ViewStyle = {
   padding: spacing.medium,
@@ -90,14 +91,7 @@ export class ProfileScreen extends React.Component<ProfileScreenProps, ProfileSc
           <Text preset="title" tx="profileScreen.title" style={TITLE} />
           <View style={DESCRIPTION_CONTAINER}>
             <Text preset="subheader" tx="profileScreen.description" style={DESCRIPTION_ITEM} />
-            <View style={{ ...ROW, ...DESCRIPTION_ITEM }}>
-              <Text tx="profileScreen.pleaseRemember" />
-              <Button
-                preset="link"
-                tx="profileScreen.codeOfConduct"
-                onPress={this.linkToCodeOfConduct}
-              />
-            </View>
+            <CodeOfConductLink onPress={this.linkToCodeOfConduct} style={DESCRIPTION_ITEM} />
           </View>
           {this.renderContent()}
         </View>
