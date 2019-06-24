@@ -5,4 +5,5 @@ export interface SponsorLogoProps extends ViewProperties {
   size?: SponsorLogoSizePresetNames
   sponsor?: SponsorNames
   style?: ImageStyle
+  subtitle?: string
 }
