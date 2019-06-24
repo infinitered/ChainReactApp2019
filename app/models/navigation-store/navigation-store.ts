@@ -64,5 +64,19 @@ export const NavigationStoreModel = NavigationEvents.named("NavigationStore")
       return findCurrentRoute(self.state)
     },
   }))
+  .preProcessSnapshot(snapshot => {
+    // only if we have a valid .state to check
+    if (!snapshot || !Boolean(snapshot.state)) return snapshot
+
+    try {
+      // will react-navigation be ok?
+      RootNavigator.router.getPathAndParamsForState(snapshot.state)
+      // snapshot is valid, let's go.
+      return snapshot
+    } catch (e) {
+      // fallback to initial state
+      return { ...snapshot, state: DEFAULT_STATE }
+    }
+  })
 
 export type NavigationStore = typeof NavigationStoreModel.Type

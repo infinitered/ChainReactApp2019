@@ -27,7 +27,7 @@ const TITLE: TextStyle = {
 }
 const BACK_ARROW: ViewStyle = {
   flexDirection: "row",
-  paddingHorizontal: spacing.large,
+  paddingLeft: spacing.large,
   alignItems: "center",
   justifyContent: "center",
 }
