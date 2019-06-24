@@ -5072,6 +5072,35 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                         style={Object {}}
                       />
                     </View>
+                    <View
+                      accessible={true}
+                      isTVSelectable={true}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Array [
+                          Object {
+                            "alignItems": "center",
+                            "height": 32,
+                            "justifyContent": "center",
+                            "marginRight": 14,
+                            "width": 32,
+                          },
+                          Object {
+                            "marginTop": 10,
+                          },
+                        ]
+                      }
+                    >
+                      <Image
+                        source={1}
+                        style={Object {}}
+                      />
+                    </View>
                   </View>
                 </View>
               </View>
