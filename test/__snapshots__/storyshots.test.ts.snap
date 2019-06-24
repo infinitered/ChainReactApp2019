@@ -7772,30 +7772,78 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     }
                   }
                 >
-                  <Image
-                    source={1}
+                  <View
                     style={
                       Object {
-                        "alignSelf": "center",
-                        "flex": 1,
-                        "height": 60,
-                        "margin": 10,
-                        "resizeMode": "contain",
+                        "alignItems": "center",
+                        "flexDirection": "column",
+                        "width": "50%",
                       }
                     }
-                  />
-                  <Image
-                    source={1}
+                  >
+                    <Image
+                      source={1}
+                      style={
+                        Object {
+                          "alignSelf": "center",
+                          "flex": 1,
+                          "height": 60,
+                          "margin": 10,
+                          "marginBottom": 0,
+                          "resizeMode": "contain",
+                        }
+                      }
+                    />
+                    <Text
+                      style={
+                        Object {
+                          "color": "#56E39F",
+                          "fontFamily": "Gotham Rounded",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "letterSpacing": 3,
+                        }
+                      }
+                    >
+                      AFTER PARTY
+                    </Text>
+                  </View>
+                  <View
                     style={
                       Object {
-                        "alignSelf": "center",
-                        "flex": 1,
-                        "height": 60,
-                        "margin": 10,
-                        "resizeMode": "contain",
+                        "alignItems": "center",
+                        "flexDirection": "column",
+                        "width": "50%",
                       }
                     }
-                  />
+                  >
+                    <Image
+                      source={1}
+                      style={
+                        Object {
+                          "alignSelf": "center",
+                          "flex": 1,
+                          "height": 60,
+                          "margin": 10,
+                          "marginBottom": 0,
+                          "resizeMode": "contain",
+                        }
+                      }
+                    />
+                    <Text
+                      style={
+                        Object {
+                          "color": "#56E39F",
+                          "fontFamily": "Gotham Rounded",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "letterSpacing": 3,
+                        }
+                      }
+                    >
+                      STRETCHES
+                    </Text>
+                  </View>
                 </View>
                 <View
                   style={
@@ -7805,30 +7853,78 @@ exports[`Storyshots Sponsors Presets 1`] = `
                     }
                   }
                 >
-                  <Image
-                    source={1}
+                  <View
                     style={
                       Object {
-                        "alignSelf": "center",
-                        "flex": 1,
-                        "height": 60,
-                        "margin": 10,
-                        "resizeMode": "contain",
+                        "alignItems": "center",
+                        "flexDirection": "column",
+                        "width": "50%",
                       }
                     }
-                  />
-                  <Image
-                    source={1}
+                  >
+                    <Image
+                      source={1}
+                      style={
+                        Object {
+                          "alignSelf": "center",
+                          "flex": 1,
+                          "height": 60,
+                          "margin": 10,
+                          "marginBottom": 0,
+                          "resizeMode": "contain",
+                        }
+                      }
+                    />
+                    <Text
+                      style={
+                        Object {
+                          "color": "#56E39F",
+                          "fontFamily": "Gotham Rounded",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "letterSpacing": 3,
+                        }
+                      }
+                    >
+                      WIFI
+                    </Text>
+                  </View>
+                  <View
                     style={
                       Object {
-                        "alignSelf": "center",
-                        "flex": 1,
-                        "height": 60,
-                        "margin": 10,
-                        "resizeMode": "contain",
+                        "alignItems": "center",
+                        "flexDirection": "column",
+                        "width": "50%",
                       }
                     }
-                  />
+                  >
+                    <Image
+                      source={1}
+                      style={
+                        Object {
+                          "alignSelf": "center",
+                          "flex": 1,
+                          "height": 60,
+                          "margin": 10,
+                          "marginBottom": 0,
+                          "resizeMode": "contain",
+                        }
+                      }
+                    />
+                    <Text
+                      style={
+                        Object {
+                          "color": "#56E39F",
+                          "fontFamily": "Gotham Rounded",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "letterSpacing": 3,
+                        }
+                      }
+                    >
+                      BADGES
+                    </Text>
+                  </View>
                 </View>
               </View>
             </View>
