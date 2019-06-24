@@ -22,6 +22,7 @@ export class InfoScreen extends React.Component<InfoScreenProps, {}> {
   static navigationOptions = {
     header: null,
     headerBackTitle: null,
+    headerStyle: { backgroundColor: palette.portGore, borderBottomWidth: 0 },
   }
 
   render() {

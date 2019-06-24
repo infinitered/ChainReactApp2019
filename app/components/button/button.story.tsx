@@ -16,5 +16,8 @@ storiesOf("Button")
       <UseCase text="Styled Dark Button" usage="The dark preset.">
         <Button text="Click It" preset="dark" onPress={() => window.alert("pressed")} />
       </UseCase>
+      <UseCase text="Clickable Text" usage="For in-line links">
+        <Button text="Click It" preset="link" onPress={() => window.alert("pressed")} />
+      </UseCase>
     </Story>
   ))

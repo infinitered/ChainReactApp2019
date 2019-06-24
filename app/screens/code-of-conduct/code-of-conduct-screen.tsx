@@ -10,7 +10,6 @@ import { Contact } from "../../components/contact"
 export interface CodeOfConductScreenProps extends NavigationScreenProps<{}> {}
 
 const ROOT: ViewStyle = {
-  marginTop: spacing.extraLarge,
   marginHorizontal: spacing.large,
   paddingBottom: spacing.huge,
 }
@@ -28,7 +27,7 @@ const TITLE: TextStyle = {
 }
 const BACK_ARROW: ViewStyle = {
   flexDirection: "row",
-  paddingLeft: spacing.large,
+  paddingHorizontal: spacing.large,
   alignItems: "center",
   justifyContent: "center",
 }
@@ -51,10 +50,10 @@ const HIT_SLOP = {
   bottom: 20,
 }
 
-const backArrow = () => (
+const backArrow = backTitle => (
   <View style={BACK_ARROW} hitSlop={HIT_SLOP}>
     <Image source={require("../../components/title-bar/icon.back-arrow.png")} />
-    <Text text="INFO" style={HEADER_TEXT} />
+    <Text text={backTitle} style={HEADER_TEXT} />
   </View>
 )
 
@@ -63,11 +62,11 @@ const twitter = "chainreactconf"
 const phoneNumber = "(360) 562-0450"
 
 export class CodeOfConductScreen extends React.Component<CodeOfConductScreenProps, {}> {
-  static navigationOptions = {
+  static navigationOptions = ({ navigation, _ }) => ({
     headerStyle: { backgroundColor: color.palette.portGore, borderBottomWidth: 0 },
-    headerBackImage: backArrow,
+    headerBackImage: backArrow(navigation.getParam("backTitle", "INFO")),
     headerTintColor: color.palette.shamrock,
-  }
+  })
 
   render() {
     return (
