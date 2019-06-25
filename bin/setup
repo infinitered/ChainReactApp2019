@@ -17,12 +17,12 @@ echo ""
 echo "NOTE: Answer 'Enable Automatically' for all react-native link prompts"
 echo ""
 
-echo "🔨 Running yarn..."
-yarn
-echo ""
-
 echo "🔨 Installing pods..."
 cd ios && pod repo update && pod install && cd ..
+echo ""
+
+echo "🔨 Running yarn..."
+yarn
 echo ""
 
 echo "🔨 Linking React Native packages..."
@@ -37,7 +37,7 @@ then
   echo "🔨 Creating empty .env file"
   echo ""
   touch .env
-  "AWS_APPSYNC_API_KEY=foo" >> .env
+  echo "AWS_APPSYNC_API_KEY=foo" >> .env
   echo ""
 else
   if grep -q "AWS_APPSYNC_API_KEY=" .env
