@@ -54,7 +54,8 @@
     "aboutWorkshop": "ABOUT WORKSHOP",
     "sponsoredBy": "Sponsored By ",
     "menuTitle": "WHAT'S ON THE MENU",
-    "rsvp": "RSVP Now"
+    "rsvp": "RSVP Now",
+    "prerequisites": "PREREQUISITES"
   },
   "venueScreen": {
     "title": "Explore",
