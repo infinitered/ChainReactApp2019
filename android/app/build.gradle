@@ -101,7 +101,7 @@ android {
         applicationId "com.chainreactapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 127
+        versionCode 128
         versionName "3.0"
         ndk {
             abiFilters "armeabi-v7a", "x86"
