@@ -11,7 +11,7 @@ import { ScheduleCell } from "../../components//schedule-cell"
 import { inject, observer } from "mobx-react"
 import { ScheduleCellPresetNames } from "../../components//schedule-cell/schedule-cell.presets"
 import { Talk } from "../../models/talk"
-import { utcToZonedTime } from "date-fns-tz"
+import { convertToTimeZone } from "date-fns-timezone"
 import { TIMEZONE } from "../../utils/info"
 
 const ROOT: ViewStyle = {
@@ -116,7 +116,7 @@ export class ScheduleScreen extends React.Component<ScheduleScreenProps, Schedul
     const { sortedTalks: talks } = this.props.talkStore
     const { selected } = this.state
     const selectedTalks = talks.filter(talk => {
-      const zonedStartTime = utcToZonedTime(talk.startTime, TIMEZONE)
+      const zonedStartTime = convertToTimeZone(talk.startTime, { timeZone: TIMEZONE })
       return selected === "thursday" ? isThursday(zonedStartTime) : isFriday(zonedStartTime)
     })
     return (
