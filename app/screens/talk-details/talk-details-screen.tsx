@@ -14,7 +14,7 @@ import {
   KeyboardAvoidingView,
 } from "react-native"
 import { inject, observer } from "mobx-react"
-import { NavigationScreenProps } from "react-navigation"
+import { NavigationScreenProps, NavigationEventSubscription } from "react-navigation"
 import Amplify, { API, graphqlOperation } from "aws-amplify"
 import { formatToTimeZone } from "date-fns-timezone"
 import uuid from "uuid/v4"
@@ -22,8 +22,8 @@ import { Screen } from "../../components/screen"
 import { palette, spacing, getScreenWidth, color } from "../../theme"
 import { Text } from "../../components/text"
 import { SpeakerImage } from "../../components/speaker-image"
-import { TalkTitle } from "../../components//talk-title"
-import { SpeakerBio } from "../../components//speaker-bio"
+import { TalkTitle } from "../../components/talk-title"
+import { SpeakerBio } from "../../components/speaker-bio"
 import { Talk } from "../../models/talk"
 import { listCommentsForTalk } from "../../graphql/queries"
 import { createComment as CreateComment, createReport } from "../../graphql/mutations"
@@ -31,6 +31,7 @@ import { onCreateComment as OnCreateComment } from "../../graphql/subscriptions"
 import config from "../../aws-exports"
 import { calculateImageDimensions } from "./image-dimension-helpers"
 import { TalkStore } from "../../models/talk-store"
+import { NavigationStore } from "../../models/navigation-store"
 import Hyperlink from "react-native-hyperlink"
 import { TIMEZONE } from "../../utils/info"
 import { CodeOfConductLink } from "../../components/code-of-conduct-link"
@@ -147,6 +148,7 @@ export interface NavigationStateParams {
 }
 
 export interface TalkDetailsScreenProps extends NavigationScreenProps<NavigationStateParams> {
+  navigationStore: NavigationStore
   talkStore: TalkStore
 }
 
@@ -156,7 +158,7 @@ const backImage = () => (
   </View>
 )
 
-@inject("talkStore")
+@inject("navigationStore", "talkStore")
 @observer
 export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> {
   static navigationOptions = ({ navigation }) => {
@@ -184,6 +186,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
 
   scroller = React.createRef()
   commentSubscription = {}
+  navListener: NavigationEventSubscription
 
   state = {
     currentView: "details",
@@ -194,20 +197,32 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
 
   async componentDidMount() {
     const { id } = this.props.navigation.state.params.talk
+    const { addListener, currentRoute } = this.props.navigationStore
     this.fetchComments()
     this.subscribeToComments(id)
     AppState.addEventListener("change", this.handleAppStateChange)
+    this.fetchUserName()
+    this.navListener = addListener("action", () => {
+      // check if talkDetails is focused
+      if (currentRoute.routeName === "talkDetails") {
+        this.fetchUserName()
+      }
+    })
+  }
+
+  componentWillUnmount() {
+    this.commentSubscription.unsubscribe()
+    this.navListener.remove()
+    AppState.removeEventListener("change", this.handleAppStateChange)
+  }
+
+  fetchUserName = async () => {
     try {
       const name = await AsyncStorage.getItem("name")
       this.setState({ name })
     } catch (err) {
       console.log("error fetching user name...: ", err)
     }
-  }
-
-  componentWillUnmount() {
-    this.commentSubscription.unsubscribe()
-    AppState.removeEventListener("change", this.handleAppStateChange)
   }
 
   subscribeToComments = id => {

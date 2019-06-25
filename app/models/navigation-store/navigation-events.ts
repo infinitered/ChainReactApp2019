@@ -1,5 +1,5 @@
 import { types } from "mobx-state-tree"
-import { EventType, NavigationEventCallback } from "react-navigation"
+import { EventType, NavigationEventCallback, NavigationEventSubscription } from "react-navigation"
 
 /**
  * This mobx-state-tree model bestows a few events for working with `react-navigation`
@@ -38,7 +38,10 @@ export const NavigationEvents = types.model("NavigationEvents").volatile(self =>
    * @param eventName The event.
    * @param handler Some strange handler
    */
-  const addListener = (eventName: EventType, handler: NavigationEventCallback) => {
+  const addListener = (
+    eventName: EventType,
+    handler: NavigationEventCallback,
+  ): NavigationEventSubscription => {
     if (eventName !== "action") {
       return { remove: () => {} }
     }
