@@ -1010,8 +1010,8 @@ exports[`Storyshots Button Style Presets 1`] = `
                   "borderRadius": 4,
                   "justifyContent": "center",
                   "opacity": 1,
-                  "paddingHorizontal": undefined,
-                  "paddingVertical": undefined,
+                  "paddingHorizontal": 14,
+                  "paddingVertical": 14,
                 }
               }
             >
@@ -1021,7 +1021,7 @@ exports[`Storyshots Button Style Presets 1`] = `
                     "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 9,
-                    "paddingHorizontal": undefined,
+                    "paddingHorizontal": 20,
                   }
                 }
               >
@@ -1124,8 +1124,8 @@ exports[`Storyshots Button Style Presets 1`] = `
                   "borderRadius": 4,
                   "justifyContent": "center",
                   "opacity": 1,
-                  "paddingHorizontal": undefined,
-                  "paddingVertical": undefined,
+                  "paddingHorizontal": 14,
+                  "paddingVertical": 14,
                 }
               }
             >
@@ -1135,7 +1135,7 @@ exports[`Storyshots Button Style Presets 1`] = `
                     "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 9,
-                    "paddingHorizontal": undefined,
+                    "paddingHorizontal": 20,
                   }
                 }
               >
@@ -1238,7 +1238,7 @@ exports[`Storyshots Button Style Presets 1`] = `
                   "borderRadius": 4,
                   "justifyContent": "center",
                   "opacity": 1,
-                  "paddingHorizontal": undefined,
+                  "paddingHorizontal": 14,
                   "paddingVertical": 10,
                 }
               }
@@ -1249,7 +1249,8 @@ exports[`Storyshots Button Style Presets 1`] = `
                     "color": "#56E39F",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 14,
-                    "paddingHorizontal": undefined,
+                    "height": 14,
+                    "paddingHorizontal": 20,
                   }
                 }
               >
@@ -1380,7 +1381,7 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
                   "alignSelf": "flex-start",
                   "flexDirection": "row",
                   "opacity": 1,
-                  "paddingVertical": undefined,
+                  "paddingVertical": 10,
                 }
               }
             >
@@ -1405,7 +1406,7 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
                     "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
-                    "paddingLeft": undefined,
+                    "paddingLeft": 14,
                   }
                 }
               >
@@ -1506,7 +1507,7 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
                   "alignSelf": "flex-start",
                   "flexDirection": "row",
                   "opacity": 1,
-                  "paddingVertical": undefined,
+                  "paddingVertical": 10,
                 }
               }
             >
@@ -1541,7 +1542,7 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
                     "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
-                    "paddingLeft": undefined,
+                    "paddingLeft": 14,
                   }
                 }
               >
@@ -1642,7 +1643,7 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
                   "alignSelf": "flex-start",
                   "flexDirection": "row",
                   "opacity": 1,
-                  "paddingVertical": undefined,
+                  "paddingVertical": 10,
                 }
               }
             >
@@ -1667,7 +1668,7 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
                     "color": "#ffffff",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 15,
-                    "paddingLeft": undefined,
+                    "paddingLeft": 14,
                   }
                 }
               >
@@ -1799,7 +1800,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                     "alignSelf": "flex-start",
                     "flexDirection": "row",
                     "opacity": 1,
-                    "paddingVertical": undefined,
+                    "paddingVertical": 10,
                   }
                 }
               >
@@ -1824,7 +1825,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                       "color": "#ffffff",
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 15,
-                      "paddingLeft": undefined,
+                      "paddingLeft": 14,
                     }
                   }
                 >
@@ -1955,7 +1956,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                       "color": "#ffffff",
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 15,
-                      "paddingLeft": undefined,
+                      "paddingLeft": 14,
                     }
                   }
                 >
@@ -2058,7 +2059,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                     "alignSelf": "flex-start",
                     "flexDirection": "row",
                     "opacity": 1,
-                    "paddingVertical": undefined,
+                    "paddingVertical": 10,
                   }
                 }
               >
@@ -2083,7 +2084,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                       "color": "#ffffff",
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 15,
-                      "paddingLeft": undefined,
+                      "paddingLeft": 14,
                     }
                   }
                 >
@@ -2186,7 +2187,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                     "alignSelf": "flex-start",
                     "flexDirection": "row",
                     "opacity": 1,
-                    "paddingVertical": undefined,
+                    "paddingVertical": 10,
                   }
                 }
               >
@@ -2211,7 +2212,7 @@ exports[`Storyshots Checkbox Styling 1`] = `
                       "color": "#ffffff",
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 15,
-                      "paddingLeft": undefined,
+                      "paddingLeft": 14,
                     }
                   }
                 >
@@ -2370,7 +2371,7 @@ exports[`Storyshots Code of Blog Link Presets 1`] = `
                     "borderRadius": 4,
                     "justifyContent": "center",
                     "opacity": 1,
-                    "paddingHorizontal": undefined,
+                    "paddingHorizontal": 14,
                     "paddingVertical": 10,
                   }
                 }
@@ -2381,7 +2382,8 @@ exports[`Storyshots Code of Blog Link Presets 1`] = `
                       "color": "#56E39F",
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
-                      "paddingHorizontal": undefined,
+                      "height": 14,
+                      "paddingHorizontal": 20,
                     }
                   }
                 >
@@ -2823,7 +2825,7 @@ exports[`Storyshots Code of Conduct Presets 1`] = `
                     "borderRadius": 4,
                     "justifyContent": "center",
                     "opacity": 1,
-                    "paddingHorizontal": undefined,
+                    "paddingHorizontal": 14,
                     "paddingVertical": 10,
                   }
                 }
@@ -2834,7 +2836,8 @@ exports[`Storyshots Code of Conduct Presets 1`] = `
                       "color": "#56E39F",
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
-                      "paddingHorizontal": undefined,
+                      "height": 14,
+                      "paddingHorizontal": 20,
                     }
                   }
                 >
@@ -2992,7 +2995,7 @@ exports[`Storyshots Code of Photobomb Presets 1`] = `
                     "borderRadius": 4,
                     "justifyContent": "center",
                     "opacity": 1,
-                    "paddingHorizontal": undefined,
+                    "paddingHorizontal": 14,
                     "paddingVertical": 10,
                   }
                 }
@@ -3003,7 +3006,8 @@ exports[`Storyshots Code of Photobomb Presets 1`] = `
                       "color": "#56E39F",
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
-                      "paddingHorizontal": undefined,
+                      "height": 14,
+                      "paddingHorizontal": 20,
                     }
                   }
                 >
@@ -3360,7 +3364,7 @@ exports[`Storyshots FormRow Assembled 1`] = `
                   "borderTopLeftRadius": 8,
                   "borderTopRightRadius": 8,
                   "borderWidth": 1,
-                  "padding": undefined,
+                  "padding": 14,
                 }
               }
             >
@@ -3382,7 +3386,7 @@ exports[`Storyshots FormRow Assembled 1`] = `
                   "borderBottomWidth": 0,
                   "borderColor": "#C7C4DB",
                   "borderWidth": 1,
-                  "padding": undefined,
+                  "padding": 14,
                 }
               }
             >
@@ -3404,7 +3408,7 @@ exports[`Storyshots FormRow Assembled 1`] = `
                   "borderBottomWidth": 0,
                   "borderColor": "#C7C4DB",
                   "borderWidth": 1,
-                  "padding": undefined,
+                  "padding": 14,
                 }
               }
             >
@@ -3427,7 +3431,7 @@ exports[`Storyshots FormRow Assembled 1`] = `
                   "borderBottomRightRadius": 8,
                   "borderColor": "#C7C4DB",
                   "borderWidth": 1,
-                  "padding": undefined,
+                  "padding": 14,
                 }
               }
             >
@@ -3528,7 +3532,7 @@ exports[`Storyshots FormRow Assembled 1`] = `
                 Object {
                   "borderColor": "rgba(0, 0, 0, 0)",
                   "borderWidth": 1,
-                  "padding": undefined,
+                  "padding": 14,
                 }
               }
             >
@@ -3550,7 +3554,7 @@ exports[`Storyshots FormRow Assembled 1`] = `
                   "borderColor": "#C7C4DB",
                   "borderRadius": 8,
                   "borderWidth": 1,
-                  "padding": undefined,
+                  "padding": 14,
                 }
               }
             >
@@ -3573,7 +3577,7 @@ exports[`Storyshots FormRow Assembled 1`] = `
                   "borderColor": "#C7C4DB",
                   "borderWidth": 1,
                   "marginTop": 10,
-                  "padding": undefined,
+                  "padding": 14,
                 }
               }
             >
@@ -3707,7 +3711,7 @@ exports[`Storyshots FormRow Presets 1`] = `
                   "borderTopLeftRadius": 8,
                   "borderTopRightRadius": 8,
                   "borderWidth": 1,
-                  "padding": undefined,
+                  "padding": 14,
                 }
               }
             >
@@ -3820,7 +3824,7 @@ exports[`Storyshots FormRow Presets 1`] = `
                   "borderBottomWidth": 0,
                   "borderColor": "#C7C4DB",
                   "borderWidth": 1,
-                  "padding": undefined,
+                  "padding": 14,
                 }
               }
             >
@@ -3923,7 +3927,7 @@ exports[`Storyshots FormRow Presets 1`] = `
                   "borderBottomRightRadius": 8,
                   "borderColor": "#C7C4DB",
                   "borderWidth": 1,
-                  "padding": undefined,
+                  "padding": 14,
                 }
               }
             >
@@ -4036,7 +4040,7 @@ exports[`Storyshots FormRow Presets 1`] = `
                   "borderColor": "#C7C4DB",
                   "borderRadius": 8,
                   "borderWidth": 1,
-                  "padding": undefined,
+                  "padding": 14,
                 }
               }
             >
@@ -4137,7 +4141,7 @@ exports[`Storyshots FormRow Presets 1`] = `
                 Object {
                   "borderColor": "#C7C4DB",
                   "borderWidth": 1,
-                  "padding": undefined,
+                  "padding": 14,
                 }
               }
             >
@@ -4238,7 +4242,7 @@ exports[`Storyshots FormRow Presets 1`] = `
                 Object {
                   "borderColor": "rgba(0, 0, 0, 0)",
                   "borderWidth": 1,
-                  "padding": undefined,
+                  "padding": 14,
                 }
               }
             >
@@ -4646,7 +4650,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                     "justifyContent": "center",
                     "marginTop": 20,
                     "opacity": 1,
-                    "paddingHorizontal": undefined,
+                    "paddingHorizontal": 14,
                     "paddingVertical": 10,
                   }
                 }
@@ -4657,7 +4661,8 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                       "color": "#56E39F",
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
-                      "paddingHorizontal": undefined,
+                      "height": 14,
+                      "paddingHorizontal": 20,
                     }
                   }
                 >
@@ -9467,7 +9472,7 @@ exports[`Storyshots TextField Labelling 1`] = `
                   "borderBottomColor": "#2C2C4C",
                   "borderBottomWidth": 1,
                   "flex": 1,
-                  "paddingVertical": undefined,
+                  "paddingVertical": 20,
                 }
               }
             >
@@ -9587,7 +9592,7 @@ exports[`Storyshots TextField Labelling 1`] = `
                   "borderBottomColor": "#2C2C4C",
                   "borderBottomWidth": 1,
                   "flex": 1,
-                  "paddingVertical": undefined,
+                  "paddingVertical": 20,
                 }
               }
             >
@@ -9739,7 +9744,7 @@ exports[`Storyshots TextField Style Overrides 1`] = `
                   "flex": 1,
                   "paddingHorizontal": 40,
                   "paddingTop": 0,
-                  "paddingVertical": undefined,
+                  "paddingVertical": 20,
                 }
               }
             >
@@ -9779,7 +9784,7 @@ exports[`Storyshots TextField Style Overrides 1`] = `
                   "borderBottomWidth": 1,
                   "flex": 1,
                   "paddingBottom": 0,
-                  "paddingVertical": undefined,
+                  "paddingVertical": 20,
                 }
               }
             >
@@ -9898,7 +9903,7 @@ exports[`Storyshots TextField Style Overrides 1`] = `
                   "borderBottomColor": "#2C2C4C",
                   "borderBottomWidth": 1,
                   "flex": 1,
-                  "paddingVertical": undefined,
+                  "paddingVertical": 20,
                 }
               }
             >
