@@ -63,7 +63,7 @@ jobs:
           command: git config user.email "ci@infinite.red" && git config user.name "CircleCI"
       - run:
           name: Set upstream branch
-          command: git push --set-upstream origin ${CIRCLE_BRANCH}
+          command: git branch --set-upstream-to origin ${CIRCLE_BRANCH}
       # Node modules
       - restore_cache:
           name: Restore node modules
@@ -108,14 +108,21 @@ jobs:
           name: Misc setup
           command: yarn ci:setup
 
-      # Run fastlane!
+      # Git grooming
       - run:
           name: Pull latest git
-          command: git checkout . && git pull
+          command: git stash && git pull && git stash pop
+
+      # Run Fastlane
       - run:
           working_directory: ios
           name: Fastlane
           command: bundle exec fastlane ios beta
+
+      # Git cleanup
+      - run:
+          name: Pull latest git
+          command: git stash && git pull && git stash pop
       - run:
           name: Push version bump commit
           command: git push
