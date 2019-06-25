@@ -16,7 +16,7 @@ import {
 import { inject, observer } from "mobx-react"
 import { NavigationScreenProps } from "react-navigation"
 import Amplify, { API, graphqlOperation } from "aws-amplify"
-import { format } from "date-fns"
+import { format, utcToZonedTime } from "date-fns-tz"
 import uuid from "uuid/v4"
 import { Screen } from "../../components/screen"
 import { palette, spacing, getScreenWidth, color } from "../../theme"
@@ -32,7 +32,9 @@ import config from "../../aws-exports"
 import { calculateImageDimensions } from "./image-dimension-helpers"
 import { TalkStore } from "../../models/talk-store"
 import Hyperlink from "react-native-hyperlink"
+import { TIMEZONE } from "../../utils/info"
 import { CodeOfConductLink } from "../../components/code-of-conduct-link"
+
 Amplify.configure(config)
 
 const CLIENTID = uuid()
@@ -160,6 +162,8 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
   static navigationOptions = ({ navigation }) => {
     const { talk } = navigation.state.params
     const titleMargin = Platform.OS === "ios" ? -50 : 0
+    const zonedStartTime = utcToZonedTime(talk.startTime, TIMEZONE)
+    const zonedEndTime = utcToZonedTime(talk.endTime, TIMEZONE)
     return {
       headerStyle: {
         backgroundColor: palette.portGore,
@@ -168,7 +172,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
       headerBackTitle: null,
       headerBackImage: backImage,
       headerTintColor: palette.shamrock,
-      title: `${format(talk.startTime, "h:mm")} - ${format(talk.endTime, "h:mm")}`,
+      title: `${format(zonedStartTime, "h:mm")} - ${format(zonedEndTime, "h:mm")}`,
       headerTitleStyle: {
         textAlign: "left",
         fontWeight: "500",
@@ -336,7 +340,9 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
                   <View style={COMMENT_STYLE} key={i}>
                     <View style={FLEX_ROW}>
                       <Text style={CREATED_BY}>{c.createdBy}</Text>
-                      <Text style={CREATED_AT}>{format(c.createdAt, "hh:mma MM DD")}</Text>
+                      <Text style={CREATED_AT}>
+                        {format(utcToZonedTime(c.createdAt, TIMEZONE), "LLL dd h:mm aaaa")}
+                      </Text>
                     </View>
                     <Text style={COMMENT_TEXT}>{c.text}</Text>
                     <Text style={REPORT} onPress={() => this.reportComment(c)}>
