@@ -23,7 +23,7 @@ export interface AttractionsMapCalloutProps {
 const CALLOUT_CONTAINER: ViewStyle = {
   alignItems: "center",
   justifyContent: "center",
-  overflow: "hidden",
+  zIndex: 1,
 }
 
 const CALLOUT_CONTENT_CONTAINER: ViewStyle = {
