@@ -207,6 +207,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
 
   componentWillUnmount() {
     this.commentSubscription.unsubscribe()
+    AppState.removeEventListener("change", this.handleAppStateChange)
   }
 
   subscribeToComments = id => {
