@@ -29,6 +29,14 @@ export const NavigationStoreModel = NavigationEvents.named("NavigationStore")
      */
     state: types.optional(types.frozen(), DEFAULT_STATE),
   })
+  .views(self => ({
+    /**
+     * Gets the current route.
+     */
+    get currentRoute() {
+      return findCurrentRoute(self.state)
+    },
+  }))
   .actions(self => ({
     /**
      * Return all subscribers
@@ -47,6 +55,7 @@ export const NavigationStoreModel = NavigationEvents.named("NavigationStore")
     dispatch(action: NavigationAction, shouldPush: boolean = true) {
       const previousNavState = shouldPush ? self.state : null
       self.state = RootNavigator.router.getStateForAction(action, previousNavState) || self.state
+      self.fireSubscribers(action, previousNavState, self.state)
       return true
     },
 
