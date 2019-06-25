@@ -86,12 +86,12 @@ export class Sponsors extends React.Component {
           <Text preset="sectionHeader" tx="infoScreen.sponsors.additional" />
           <View style={LINE_BREAK} />
           <View style={LOGO_ROW}>
-            <SponsorLogo size="additional" sponsor="g2iAdditional" />
-            <SponsorLogo size="additional" sponsor="devLifts" />
+            <SponsorLogo size="additional" sponsor="g2iAdditional" subtitle="AFTER PARTY" />
+            <SponsorLogo size="additional" sponsor="devLifts" subtitle="STRETCHES" />
           </View>
           <View style={LOGO_ROW}>
-            <SponsorLogo size="additional" sponsor="playstation" />
-            <SponsorLogo size="additional" sponsor="squarespace" />
+            <SponsorLogo size="additional" sponsor="playstation" subtitle="WIFI" />
+            <SponsorLogo size="additional" sponsor="squarespace" subtitle="BADGES" />
           </View>
         </View>
       </View>
