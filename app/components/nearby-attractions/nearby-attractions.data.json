@@ -305,14 +305,17 @@
         "type": "Point"
       },
       "id": "address.8638138425065340"
-    },
+    }
+  ],
+  "hotels": [
     {
       "type": "Feature",
       "properties": {
         "place_address": "309 SW Broadway, Portland, Oregon 97205, United States",
         "place_name": "The Benson",
         "place_link": "https://goo.gl/maps/GRNhPWacjtD2",
-        "place_description": "The main conference Hotel"
+        "place_description": "The main conference Hotel",
+        "rating": 4
       },
       "geometry": {
         "coordinates": [-122.678454, 45.521841],
@@ -326,7 +329,8 @@
         "place_name": "Radisson RED Portland Downtown",
         "place_address": "1455 SW Broadway, Portland, OR 97201",
         "place_link": "https://goo.gl/maps/LUwEUPQyxzJDGxBG8",
-        "place_description": "Radisson RED beckons you to Portland, a quirky paradise brimming with microbreweries, eclectic events and urban gardens."
+        "place_description": "Radisson RED beckons you to Portland, a quirky paradise brimming with microbreweries, eclectic events and urban gardens.",
+        "rating": 5
       },
       "geometry": {
         "coordinates": [-122.682374, 45.514593],
@@ -340,7 +344,8 @@
         "place_name": "Marriott-City Center",
         "place_address": " 520 SW Broadway, Portland, Oregon 97205 USA",
         "place_link": "https://goo.gl/maps/UACXjC6z7SbvVjgc9",
-        "place_description": ""
+        "place_description": "",
+        "rating": 4
       },
       "geometry": {
         "coordinates": [-122.678924, 45.520435],
