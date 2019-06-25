@@ -7,7 +7,7 @@ import { TextFieldProps } from "./text-field.props"
 
 // the base styling for the container
 const CONTAINER: ViewStyle = {
-  paddingVertical: spacing[3],
+  paddingVertical: spacing.large,
 }
 
 // the base styling for the TextInput

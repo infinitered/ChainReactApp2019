@@ -12,7 +12,7 @@ const RADIUS = 8
 const ROOT: ViewStyle = {
   borderWidth: 1,
   borderColor: color.line,
-  padding: spacing[2],
+  padding: spacing.medium,
 }
 
 /**
