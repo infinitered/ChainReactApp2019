@@ -110,6 +110,9 @@ jobs:
 
       # Run fastlane!
       - run:
+          name: Pull latest git
+          command: git checkout . && git pull
+      - run:
           working_directory: ios
           name: Fastlane
           command: bundle exec fastlane ios beta

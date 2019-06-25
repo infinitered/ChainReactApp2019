@@ -19,7 +19,7 @@ import Amplify, { API, graphqlOperation } from "aws-amplify"
 import { format } from "date-fns"
 import uuid from "uuid/v4"
 import { Screen } from "../../components/screen"
-import { palette, spacing, getScreenWidth } from "../../theme"
+import { palette, spacing, getScreenWidth, color } from "../../theme"
 import { Text } from "../../components/text"
 import { SpeakerImage } from "../../components/speaker-image"
 import { TalkTitle } from "../../components//talk-title"
@@ -32,6 +32,7 @@ import config from "../../aws-exports"
 import { calculateImageDimensions } from "./image-dimension-helpers"
 import { TalkStore } from "../../models/talk-store"
 import Hyperlink from "react-native-hyperlink"
+import { CodeOfConductLink } from "../../components/code-of-conduct-link"
 Amplify.configure(config)
 
 const CLIENTID = uuid()
@@ -111,13 +112,24 @@ const COMMENT_STYLE = {
   paddingTop: 20,
   paddingHorizontal: 20,
   borderTopWidth: 1,
-  borderTopColor: "rgba(255, 255, 255, .1)",
+  borderColor: "rgba(255, 255, 255, .1)",
 }
 const CREATED_BY = { color: "white", fontWeight: "600" }
 const CREATED_AT = { color: "rgba(255, 255, 255, .5)", fontSize: 11, marginLeft: 8, marginTop: 3 }
-const INPUT_CONTAINER = { bottom: 0, position: "absolute", left: 0 }
+const INPUT_CONTAINER = {
+  bottom: 0,
+  position: "absolute",
+  left: 0,
+  backgroundColor: color.background,
+}
 const MESSAGE_INPUT = { backgroundColor: "white", height: 50, paddingHorizontal: 8 }
 const REPORT = { marginTop: 5, color: palette.angry, fontSize: 11 }
+const CODE_OF_CONDUCT_LINK = {
+  paddingHorizontal: spacing.large,
+  paddingVertical: spacing.medium,
+  borderTopWidth: 1,
+  borderColor: "rgba(255, 255, 255, .1)",
+}
 
 const HIT_SLOP = {
   top: 30,
@@ -153,6 +165,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
         backgroundColor: palette.portGore,
         borderBottomWidth: 0,
       },
+      headerBackTitle: null,
       headerBackImage: backImage,
       headerTintColor: palette.shamrock,
       title: `${format(talk.startTime, "h:mm")} - ${format(talk.endTime, "h:mm")}`,
@@ -334,6 +347,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
               </View>
             </ScrollView>
             <View style={{ ...INPUT_CONTAINER, ...widthStyles }}>
+              <CodeOfConductLink onPress={this.linkToCodeOfConduct} style={CODE_OF_CONDUCT_LINK} />
               <TextInput
                 onChangeText={v => this.setState({ inputValue: v })}
                 style={MESSAGE_INPUT}
@@ -546,6 +560,13 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
         <Text preset="subheader" text={item} style={MENU_ITEM_TEXT} />
       </View>
     )
+  }
+
+  linkToCodeOfConduct = () => {
+    this.props.navigation.navigate({
+      routeName: "talkCodeOfConduct",
+      params: { backTitle: "TALK" },
+    })
   }
 }
 
