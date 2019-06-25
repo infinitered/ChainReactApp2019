@@ -4246,6 +4246,11 @@ commander@2.17.x:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.17.1.tgz#bd77ab7de6de94205ceacc72f1716d29f20a77bf"
   integrity sha512-wPMUt6FnH2yzG95SA6mzjQOEKUU3aLaDEmzs1ti+1E9h+CsrZghRlqEM/EJ4KscsQVG8uNN4uVreUeT8+drlgg==
 
+commander@2.19.0, commander@~2.19.0:
+  version "2.19.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.19.0.tgz#f6198aa84e5b83c46054b94ddedbfed5ee9ff12a"
+  integrity sha512-6tvAOO+D6OENvRAh524Dh9jcfKTYDQAqvqezbCW82xj5X0pSrcpxtvRKHLG0yBY6SD7PSDrJaj+0AiOcKVd1Xg==
+
 commander@^2.12.1, commander@^2.14.1, commander@^2.19.0, commander@^2.9.0, commander@~2.20.0:
   version "2.20.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.0.tgz#d58bb2b5c1ee8f87b0d340027e9e94e222c5a422"
@@ -4255,11 +4260,6 @@ commander@~2.13.0:
   version "2.13.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.13.0.tgz#6964bca67685df7c1f1430c584f07d7597885b9c"
   integrity sha512-MVuS359B+YzaWqjCL/c+22gfryv+mCBPHAv3zyVI2GN8EY6IRP8VwtasXn8jyyhvvq84R4ImN1OKRtcbIasjYA==
-
-commander@~2.19.0:
-  version "2.19.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-2.19.0.tgz#f6198aa84e5b83c46054b94ddedbfed5ee9ff12a"
-  integrity sha512-6tvAOO+D6OENvRAh524Dh9jcfKTYDQAqvqezbCW82xj5X0pSrcpxtvRKHLG0yBY6SD7PSDrJaj+0AiOcKVd1Xg==
 
 common-tags@^1.8.0:
   version "1.8.0"
@@ -4636,20 +4636,18 @@ data-urls@^1.0.0:
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
 
-date-fns-tz@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/date-fns-tz/-/date-fns-tz-1.0.7.tgz#1c80f7592cca5da4fd2085132936dcc7fa9afecd"
-  integrity sha512-oNfi/3IxRfmysRIT+QJMbO/44Uj10nApAYJvlayTmNRFZG+JqdOJYXm1DWU65DNlG/ySbuQwpFkGIa3b2XFUVw==
+date-fns-timezone@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/date-fns-timezone/-/date-fns-timezone-0.1.4.tgz#bc9fac78aae9a7bdb847f3ab4ce6d14f9fb9a55f"
+  integrity sha512-npnZn1eIeHV8A3Hqw86mn6CjH+qMe0TSCs4anpD4Rouf+mE9eIJuaHviIpNmGL9GiDmcUoiaKdkX5ihf+yZQZA==
+  dependencies:
+    date-fns "^1.29.0"
+    timezone-support "^1.5.5"
 
-date-fns@^1.27.2:
+date-fns@1.30.1, date-fns@^1.27.2, date-fns@^1.29.0:
   version "1.30.1"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.30.1.tgz#2e71bf0b119153dbb4cc4e88d9ea5acfb50dc05c"
   integrity sha512-hBSVCvSmWC+QypYObzwGOd9wqdDpOt+0wl0KbU+R+uuZBS1jN8VsD1ss3irQDknRj5NvxiTF6oj/nDRnN/UQNw==
-
-date-fns@^2.0.0-alpha.36:
-  version "2.0.0-alpha.36"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.0.0-alpha.36.tgz#e3d106fbc6a7247e951916229b948d47848d6102"
-  integrity sha512-VcO89v0bmgw1V6wVlg9iYiOfyS9/m8T/TDhLBlERkF9NxVEatVr3LcwronDtUGMwGAK6KxUzs2TrOx7TzANMkw==
 
 date-now@^0.1.4:
   version "0.1.4"
@@ -12107,6 +12105,13 @@ timers-browserify@^2.0.4:
   integrity sha512-YvC1SV1XdOUaL6gx5CoGroT3Gu49pK9+TZ38ErPldOWW4j49GI1HKs9DV+KGq/w6y+LZ72W1c8cKz2vzY+qpzg==
   dependencies:
     setimmediate "^1.0.4"
+
+timezone-support@^1.5.5:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/timezone-support/-/timezone-support-1.8.1.tgz#0a8c04d0614be6fccdd2280aaad5072fa5d31e5f"
+  integrity sha512-+pKzxoUe4PZXaQcswceJlA+69oRyyu1uivnYKdpsC7eGzZiuvTLbU4WYPqTKslEsoSvjN8k/u/6qNfGikBB/wA==
+  dependencies:
+    commander "2.19.0"
 
 tmp@^0.0.31:
   version "0.0.31"

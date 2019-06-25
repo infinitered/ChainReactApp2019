@@ -16,7 +16,7 @@ import {
 import { inject, observer } from "mobx-react"
 import { NavigationScreenProps } from "react-navigation"
 import Amplify, { API, graphqlOperation } from "aws-amplify"
-import { format, utcToZonedTime } from "date-fns-tz"
+import { formatToTimeZone } from "date-fns-timezone"
 import uuid from "uuid/v4"
 import { Screen } from "../../components/screen"
 import { palette, spacing, getScreenWidth, color } from "../../theme"
@@ -162,8 +162,6 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
   static navigationOptions = ({ navigation }) => {
     const { talk } = navigation.state.params
     const titleMargin = Platform.OS === "ios" ? -50 : 0
-    const zonedStartTime = utcToZonedTime(talk.startTime, TIMEZONE)
-    const zonedEndTime = utcToZonedTime(talk.endTime, TIMEZONE)
     return {
       headerStyle: {
         backgroundColor: palette.portGore,
@@ -172,7 +170,9 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
       headerBackTitle: null,
       headerBackImage: backImage,
       headerTintColor: palette.shamrock,
-      title: `${format(zonedStartTime, "h:mm")} - ${format(zonedEndTime, "h:mm")}`,
+      title: `${formatToTimeZone(talk.startTime, "h:mm", {
+        timeZone: TIMEZONE,
+      })} - ${formatToTimeZone(talk.endTime, "h:mm", { timeZone: TIMEZONE })}`,
       headerTitleStyle: {
         textAlign: "left",
         fontWeight: "500",
@@ -207,6 +207,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
 
   componentWillUnmount() {
     this.commentSubscription.unsubscribe()
+    AppState.removeEventListener("change", this.handleAppStateChange)
   }
 
   subscribeToComments = id => {
@@ -341,7 +342,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
                     <View style={FLEX_ROW}>
                       <Text style={CREATED_BY}>{c.createdBy}</Text>
                       <Text style={CREATED_AT}>
-                        {format(utcToZonedTime(c.createdAt, TIMEZONE), "LLL dd h:mm aaaa")}
+                        {formatToTimeZone(c.createdAt, "MMM DD h:mm A", { timeZone: TIMEZONE })}
                       </Text>
                     </View>
                     <Text style={COMMENT_TEXT}>{c.text}</Text>
