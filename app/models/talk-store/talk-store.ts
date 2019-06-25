@@ -41,6 +41,7 @@ export const TalkStoreModel = types
               location
               track
               discussionEnabled
+              prerequisites
               speakers {
                 id
                 name

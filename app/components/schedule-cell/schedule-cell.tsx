@@ -12,7 +12,7 @@ import { ScheduleCellPresets } from "./schedule-cell.presets"
 import { ScheduleCellProps } from "./schedule-cell.props"
 import { Text } from "../text"
 import { palette } from "../../theme"
-import { utcToZonedTime, format } from "date-fns-tz"
+import { formatToTimeZone } from "date-fns-timezone"
 import { TIMEZONE } from "../../utils/info"
 
 export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
@@ -81,9 +81,9 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
   renderTime = () => {
     const { preset, talk } = this.props
     const style: any = ScheduleCellPresets[preset] || ScheduleCellPresets.default
-    const zonedStartTime = utcToZonedTime(talk.startTime, TIMEZONE)
-    const zonedEndTime = utcToZonedTime(talk.endTime, TIMEZONE)
-    const label = `${format(zonedStartTime, "h:mm a")} - ${format(zonedEndTime, "h:mm a")}`
+    const label = `${formatToTimeZone(talk.startTime, "h:mm A", {
+      timeZone: TIMEZONE,
+    })} - ${formatToTimeZone(talk.endTime, "h:mm A", { timeZone: TIMEZONE })}`
     return (
       <View style={style.timeWrapper as ViewStyle}>
         {talk.track && talk.track !== "NONE" && (
