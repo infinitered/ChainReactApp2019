@@ -4,7 +4,7 @@ import { StoryScreen, Story, UseCase } from "../../../storybook/views"
 import { ScheduleNav } from "./schedule-nav"
 
 const onSelected = (selected: string) =>
-  void storiesOf("ScheduleNav")
+  void storiesOf("ScheduleNav", module)
     .addDecorator(fn => <StoryScreen>{fn()}</StoryScreen>)
     .add("Presets", () => (
       <Story>

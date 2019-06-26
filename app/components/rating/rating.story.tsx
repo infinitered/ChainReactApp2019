@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react-native"
 import { StoryScreen, Story, UseCase } from "../../../storybook/views"
 import { Rating } from "./rating"
 
-storiesOf("Rating")
+storiesOf("Rating", module)
   .addDecorator(fn => <StoryScreen>{fn()}</StoryScreen>)
   .add("Props", () => (
     <Story>

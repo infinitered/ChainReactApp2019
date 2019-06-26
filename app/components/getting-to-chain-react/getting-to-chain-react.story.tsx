@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react-native"
 import { StoryScreen, Story, UseCase } from "../../../storybook/views"
 import { GettingToChainReact } from "./getting-to-chain-react"
 
-storiesOf("GettingToChainReact")
+storiesOf("GettingToChainReact", module)
   .addDecorator(fn => <StoryScreen>{fn()}</StoryScreen>)
   .add("Presets", () => (
     <Story>

@@ -4,3 +4,4 @@ import "react-native"
 // libraries to mock
 import "./mock-i18n"
 import "./mock-reactotron"
+import "./mock-text-input"
