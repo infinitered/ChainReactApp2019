@@ -1,4 +1,4 @@
-import { ViewStyle, TextStyle } from "react-native"
+import { ViewStyle, TextStyle, Platform } from "react-native"
 import { color, palette, spacing } from "../../theme"
 
 /**
@@ -37,7 +37,12 @@ export const viewPresets = {
 
 export const textPresets = {
   primary: { ...BASE_TEXT, fontSize: 9, color: color.palette.white } as TextStyle,
-  dark: { ...BASE_TEXT, fontSize: 14, color: color.palette.shamrock, height: 14 } as TextStyle,
+  dark: {
+    ...BASE_TEXT,
+    fontSize: 14,
+    color: color.palette.shamrock,
+    height: Platform.select({ ios: 14, android: 18 }),
+  } as TextStyle,
   link: { color: palette.shamrock } as TextStyle,
 }
 

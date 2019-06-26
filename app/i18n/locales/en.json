@@ -4,7 +4,8 @@
     "cancel": "CANCEL",
     "back": "Back",
     "edit": "EDIT",
-    "save": "SAVE"
+    "save": "SAVE",
+    "send": "SEND"
   },
   "errors": {
     "invalidEmail": "Invalid email address."
