@@ -8,6 +8,7 @@
 #import "AppDelegate.h"
 #import <AppCenterReactNativePush/AppCenterReactNativePush.h>
 
+#import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 #import <AppCenterReactNative/AppCenterReactNative.h>
@@ -19,25 +20,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  [AppCenterReactNativePush register];  // Initialize AppCenter push
-  [AppCenterReactNative register];
   [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];  // Initialize AppCenter analytics
   [AppCenterReactNativeCrashes registerWithAutomaticProcessing];  // Initialize AppCenter crashes
-
-  NSURL *jsCodeLocation;
-
+  [AppCenterReactNativePush register];  // Initialize AppCenter push
   [AppCenterReactNative register];  // Initialize AppCenter
 
-  #ifdef DEBUG
-    jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
-  #else
-    jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
-  #endif
-
-  RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
-                                                      moduleName:@"ChainReactConf"
-                                               initialProperties:nil
-                                                   launchOptions:launchOptions];
+  RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
+  RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
+                                                   moduleName:@"ChainReactConf"
+                                            initialProperties:nil];
 
   [SplashScreen show];
   rootView.backgroundColor = [[UIColor alloc] initWithRed:0.09f green:0.09f blue:0.22f alpha:1];
@@ -48,6 +39,15 @@
   [self.window makeKeyAndVisible];
 
   return YES;
+}
+
+- (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
+{
+#if DEBUG
+  return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+#else
+  return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+#endif
 }
 
 @end
