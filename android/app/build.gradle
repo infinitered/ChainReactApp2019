@@ -152,25 +152,24 @@ android {
 
 dependencies {
     implementation project(':@react-native-community_async-storage')
-    // implementation project(':@mapbox_react-native-mapbox-gl')
-    implementation project(':react-native-screens')
-    implementation project(':react-native-gesture-handler')
+    implementation project(':appcenter-analytics')
+    implementation project(':appcenter-crashes')
     implementation project(':appcenter-push')
     implementation project(':appcenter')
-    implementation project(':appcenter-crashes')
-    implementation project(':appcenter-analytics')
-    implementation project(':react-native-keychain')
-    implementation project(':react-native-localize')
+    implementation project(':lottie-react-native')
     implementation (project(':mapbox-react-native-mapbox-gl')) {
             implementation ('com.squareup.okhttp3:okhttp:3.12.1') {
                 force = true
             }
     }
+    implementation project(':react-native-gesture-handler')
+    implementation project(':react-native-keychain')
+    implementation project(':react-native-localize')
     implementation project(':react-native-splash-screen')
+    implementation project(':react-native-screens')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     implementation "com.facebook.react:react-native:+"  // From node_modules
-    implementation project(':lottie-react-native')
     implementation 'com.google.android.exoplayer:exoplayer:2.7.1'
     implementation 'com.google.protobuf.nano:protobuf-javanano:3.0.0-alpha-7'
     implementation 'com.amazonaws:aws-android-sdk-core:2.2.+'
