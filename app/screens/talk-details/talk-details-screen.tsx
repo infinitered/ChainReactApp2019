@@ -10,20 +10,19 @@ import {
   TextStyle,
   ImageStyle,
   Platform,
-  AsyncStorage,
   KeyboardAvoidingView,
 } from "react-native"
 import { inject, observer } from "mobx-react"
-import { NavigationScreenProps } from "react-navigation"
+import { NavigationScreenProps, NavigationEventSubscription } from "react-navigation"
 import Amplify, { API, graphqlOperation } from "aws-amplify"
-import { format } from "date-fns"
+import { formatToTimeZone } from "date-fns-timezone"
 import uuid from "uuid/v4"
 import { Screen } from "../../components/screen"
-import { palette, spacing, getScreenWidth } from "../../theme"
+import { palette, spacing, getScreenWidth, color } from "../../theme"
 import { Text } from "../../components/text"
 import { SpeakerImage } from "../../components/speaker-image"
-import { TalkTitle } from "../../components//talk-title"
-import { SpeakerBio } from "../../components//speaker-bio"
+import { TalkTitle } from "../../components/talk-title"
+import { SpeakerBio } from "../../components/speaker-bio"
 import { Talk } from "../../models/talk"
 import { listCommentsForTalk } from "../../graphql/queries"
 import { createComment as CreateComment, createReport } from "../../graphql/mutations"
@@ -31,7 +30,13 @@ import { onCreateComment as OnCreateComment } from "../../graphql/subscriptions"
 import config from "../../aws-exports"
 import { calculateImageDimensions } from "./image-dimension-helpers"
 import { TalkStore } from "../../models/talk-store"
+import { NavigationStore } from "../../models/navigation-store"
 import Hyperlink from "react-native-hyperlink"
+import { TIMEZONE } from "../../utils/info"
+import { loadString } from "../../utils/storage"
+import { CodeOfConductLink } from "../../components/code-of-conduct-link"
+import { Button } from "../../components/button"
+
 Amplify.configure(config)
 
 const CLIENTID = uuid()
@@ -105,19 +110,32 @@ const WHITE_TEXT = { color: "white" }
 const COMMENT_TEXT = { ...WHITE_TEXT, fontSize: 16, marginTop: 4 }
 const FLEX_ONE = { flex: 1 }
 const FLEX_ROW = { flexDirection: "row" }
-const COMMENT_CONTAINER = { paddingVertical: 15, marginBottom: 50 }
+const COMMENT_CONTAINER = { paddingVertical: 15, marginBottom: spacing.huge }
 const COMMENT_STYLE = {
   paddingBottom: 15,
   paddingTop: 20,
   paddingHorizontal: 20,
   borderTopWidth: 1,
-  borderTopColor: "rgba(255, 255, 255, .1)",
+  borderColor: "rgba(255, 255, 255, .1)",
 }
 const CREATED_BY = { color: "white", fontWeight: "600" }
 const CREATED_AT = { color: "rgba(255, 255, 255, .5)", fontSize: 11, marginLeft: 8, marginTop: 3 }
-const INPUT_CONTAINER = { bottom: 0, position: "absolute", left: 0 }
-const MESSAGE_INPUT = { backgroundColor: "white", height: 50, paddingHorizontal: 8 }
+const INPUT_CONTAINER = {
+  bottom: 0,
+  position: "absolute",
+  left: 0,
+  backgroundColor: color.background,
+}
+const MESSAGE_INPUT = { backgroundColor: "white", height: 50, paddingHorizontal: 8, flex: 1 }
 const REPORT = { marginTop: 5, color: palette.angry, fontSize: 11 }
+const CODE_OF_CONDUCT_LINK = {
+  paddingHorizontal: spacing.large,
+  paddingVertical: spacing.medium,
+  borderTopWidth: 1,
+  borderColor: "rgba(255, 255, 255, .1)",
+}
+const SEND_BUTTON_TEXT: TextStyle = { paddingHorizontal: spacing.small }
+const SEND_BUTTON: ViewStyle = { paddingHorizontal: spacing.small, borderRadius: 0 }
 
 const HIT_SLOP = {
   top: 30,
@@ -133,6 +151,7 @@ export interface NavigationStateParams {
 }
 
 export interface TalkDetailsScreenProps extends NavigationScreenProps<NavigationStateParams> {
+  navigationStore: NavigationStore
   talkStore: TalkStore
 }
 
@@ -142,7 +161,7 @@ const backImage = () => (
   </View>
 )
 
-@inject("talkStore")
+@inject("navigationStore", "talkStore")
 @observer
 export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> {
   static navigationOptions = ({ navigation }) => {
@@ -153,9 +172,12 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
         backgroundColor: palette.portGore,
         borderBottomWidth: 0,
       },
+      headerBackTitle: null,
       headerBackImage: backImage,
       headerTintColor: palette.shamrock,
-      title: `${format(talk.startTime, "h:mm")} - ${format(talk.endTime, "h:mm")}`,
+      title: `${formatToTimeZone(talk.startTime, "h:mm", {
+        timeZone: TIMEZONE,
+      })} - ${formatToTimeZone(talk.endTime, "h:mm", { timeZone: TIMEZONE })}`,
       headerTitleStyle: {
         textAlign: "left",
         fontWeight: "500",
@@ -167,6 +189,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
 
   scroller = React.createRef()
   commentSubscription = {}
+  navListener: NavigationEventSubscription
 
   state = {
     currentView: "details",
@@ -177,19 +200,32 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
 
   async componentDidMount() {
     const { id } = this.props.navigation.state.params.talk
+    const { addListener, currentRoute } = this.props.navigationStore
     this.fetchComments()
     this.subscribeToComments(id)
     AppState.addEventListener("change", this.handleAppStateChange)
-    try {
-      const name = await AsyncStorage.getItem("name")
-      this.setState({ name })
-    } catch (err) {
-      console.log("error fetching user name...: ", err)
-    }
+    this.fetchUserName()
+    this.navListener = addListener("action", () => {
+      // check if talkDetails is focused
+      if (currentRoute.routeName === "talkDetails") {
+        this.fetchUserName()
+      }
+    })
   }
 
   componentWillUnmount() {
     this.commentSubscription.unsubscribe()
+    this.navListener.remove()
+    AppState.removeEventListener("change", this.handleAppStateChange)
+  }
+
+  fetchUserName = async () => {
+    try {
+      const name = await loadString("name")
+      this.setState({ name })
+    } catch (err) {
+      console.log("error fetching user name...: ", err)
+    }
   }
 
   subscribeToComments = id => {
@@ -323,7 +359,9 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
                   <View style={COMMENT_STYLE} key={i}>
                     <View style={FLEX_ROW}>
                       <Text style={CREATED_BY}>{c.createdBy}</Text>
-                      <Text style={CREATED_AT}>{format(c.createdAt, "hh:mma MM DD")}</Text>
+                      <Text style={CREATED_AT}>
+                        {formatToTimeZone(c.createdAt, "MMM DD h:mm A", { timeZone: TIMEZONE })}
+                      </Text>
                     </View>
                     <Text style={COMMENT_TEXT}>{c.text}</Text>
                     <Text style={REPORT} onPress={() => this.reportComment(c)}>
@@ -334,14 +372,24 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
               </View>
             </ScrollView>
             <View style={{ ...INPUT_CONTAINER, ...widthStyles }}>
-              <TextInput
-                onChangeText={v => this.setState({ inputValue: v })}
-                style={MESSAGE_INPUT}
-                placeholder="Type a message..."
-                onSubmitEditing={this.createComment}
-                value={this.state.inputValue}
-                returnKeyType={"send"}
-              />
+              <CodeOfConductLink onPress={this.linkToCodeOfConduct} style={CODE_OF_CONDUCT_LINK} />
+              <View style={{ flexDirection: "row" }}>
+                <TextInput
+                  onChangeText={v => this.setState({ inputValue: v })}
+                  style={MESSAGE_INPUT}
+                  placeholder="Type a message..."
+                  onSubmitEditing={this.createComment}
+                  value={this.state.inputValue}
+                  returnKeyType={"send"}
+                />
+                <Button
+                  preset="dark"
+                  onPress={this.createComment}
+                  tx="common.send"
+                  textStyle={SEND_BUTTON_TEXT}
+                  style={SEND_BUTTON}
+                />
+              </View>
             </View>
           </View>
         )}
@@ -546,6 +594,13 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
         <Text preset="subheader" text={item} style={MENU_ITEM_TEXT} />
       </View>
     )
+  }
+
+  linkToCodeOfConduct = () => {
+    this.props.navigation.navigate({
+      routeName: "talkCodeOfConduct",
+      params: { backTitle: "TALK" },
+    })
   }
 }
 

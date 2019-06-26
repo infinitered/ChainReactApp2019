@@ -29,6 +29,14 @@ export const NavigationStoreModel = NavigationEvents.named("NavigationStore")
      */
     state: types.optional(types.frozen(), DEFAULT_STATE),
   })
+  .views(self => ({
+    /**
+     * Gets the current route.
+     */
+    get currentRoute() {
+      return findCurrentRoute(self.state)
+    },
+  }))
   .actions(self => ({
     /**
      * Return all subscribers
@@ -47,6 +55,7 @@ export const NavigationStoreModel = NavigationEvents.named("NavigationStore")
     dispatch(action: NavigationAction, shouldPush: boolean = true) {
       const previousNavState = shouldPush ? self.state : null
       self.state = RootNavigator.router.getStateForAction(action, previousNavState) || self.state
+      self.fireSubscribers(action, previousNavState, self.state)
       return true
     },
 
@@ -64,5 +73,19 @@ export const NavigationStoreModel = NavigationEvents.named("NavigationStore")
       return findCurrentRoute(self.state)
     },
   }))
+  .preProcessSnapshot(snapshot => {
+    // only if we have a valid .state to check
+    if (!snapshot || !Boolean(snapshot.state)) return snapshot
+
+    try {
+      // will react-navigation be ok?
+      RootNavigator.router.getPathAndParamsForState(snapshot.state)
+      // snapshot is valid, let's go.
+      return snapshot
+    } catch (e) {
+      // fallback to initial state
+      return { ...snapshot, state: DEFAULT_STATE }
+    }
+  })
 
 export type NavigationStore = typeof NavigationStoreModel.Type

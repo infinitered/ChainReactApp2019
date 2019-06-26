@@ -4,7 +4,7 @@ import { StoryScreen, Story, UseCase } from "../../../storybook/views"
 import { Footer } from "./footer"
 import { Text } from "../text"
 
-storiesOf("Footer")
+storiesOf("Footer", module)
   .addDecorator(fn => <StoryScreen>{fn()}</StoryScreen>)
   .add("Presets", () => (
     <Story>

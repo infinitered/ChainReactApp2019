@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react-native"
 import { StoryScreen, Story, UseCase } from "../../../storybook/views"
 import { Photobomb } from "./photobomb"
 
-storiesOf("Code of Photobomb")
+storiesOf("Code of Photobomb", module)
   .addDecorator(fn => <StoryScreen>{fn()}</StoryScreen>)
   .add("Presets", () => (
     <Story>

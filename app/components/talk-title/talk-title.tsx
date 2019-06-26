@@ -2,6 +2,7 @@ import * as React from "react"
 import { View, ViewStyle, TextStyle, Linking, Platform } from "react-native"
 import { Text } from "../text"
 import { palette, spacing } from "../../theme"
+import { BulletItem } from "../bullet-item/bullet-item"
 
 const ROOT: ViewStyle = {
   width: "100%",
@@ -42,7 +43,7 @@ export class TalkTitle extends React.Component<{ talk: any }, {}> {
   }
 
   renderWorkshop = () => {
-    const { title, location, description } = this.props.talk
+    const { title, location, description, prerequisites } = this.props.talk
     const label = location.split("\n")[0]
     const query = location
       .split("\n")
@@ -64,7 +65,14 @@ export class TalkTitle extends React.Component<{ talk: any }, {}> {
           onPress={() => Linking.openURL(url)}
         />
         <Text tx="talkDetailsScreen.aboutWorkshop" preset="sectionHeader" style={LABEL} />
-        <Text text={description} preset="body" style={{}} />
+        <Text text={description} preset="body" />
+        {prerequisites && (
+          <Text tx="talkDetailsScreen.prerequisites" preset="sectionHeader" style={LABEL} />
+        )}
+        {prerequisites &&
+          prerequisites.map((prerequisite, index) => (
+            <BulletItem text={prerequisite} key={index} />
+          ))}
       </View>
     )
   }

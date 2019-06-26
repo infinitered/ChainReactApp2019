@@ -1,14 +1,14 @@
 import * as React from "react"
 import { storiesOf } from "@storybook/react-native"
 import { StoryScreen, Story, UseCase } from "../../../storybook/views"
-import { GettingToChainReact } from "./getting-to-chain-react"
+import { BulletItem } from "./bullet-item"
 
-storiesOf("GettingToChainReact", module)
+storiesOf("Code of BulletItem", module)
   .addDecorator(fn => <StoryScreen>{fn()}</StoryScreen>)
   .add("Presets", () => (
     <Story>
-      <UseCase text="GettingToChainReact" noBackground noPad>
-        <GettingToChainReact />
+      <UseCase text="BulletItem" noBackground noPad>
+        <BulletItem text="This is a bullet item" />
       </UseCase>
     </Story>
   ))

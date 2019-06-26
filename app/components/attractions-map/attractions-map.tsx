@@ -31,6 +31,11 @@ export class AttractionsMap extends React.Component<{}, AttractionsMapState> {
     selected: null,
   }
 
+  onPressLocation = (location, locationId) => {
+    this.setState({ selected: locationId })
+    this.mapView.flyTo(location.geometry.coordinates)
+  }
+
   renderCategory = (key, category) => category.map(location => this.renderLocation(key, location))
 
   renderLocation = (key, location) => {
@@ -45,7 +50,7 @@ export class AttractionsMap extends React.Component<{}, AttractionsMapState> {
         coordinate={location.geometry.coordinates}
         selected={isSelected}
       >
-        <TouchableWithoutFeedback onPress={() => this.setState({ selected: locationId })}>
+        <TouchableWithoutFeedback onPress={() => this.onPressLocation(location, locationId)}>
           <View style={[HIDDEN_MARKER, markerDimensions]} />
         </TouchableWithoutFeedback>
         <AttractionsMapCallout
@@ -62,6 +67,7 @@ export class AttractionsMap extends React.Component<{}, AttractionsMapState> {
     const size = { width: getScreenWidth(), maxHeight: getScreenHeight() * 0.8 }
     return (
       <Mapbox.MapView
+        ref={ref => (this.mapView = ref)}
         centerCoordinate={nearbyAttractionsData.locations[0].geometry.coordinates}
         rotateEnabled={false}
         pitchEnabled={false}

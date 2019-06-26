@@ -1,5 +1,5 @@
 import React from "react"
-import { View, AsyncStorage, ViewStyle } from "react-native"
+import { View, ViewStyle } from "react-native"
 import { Screen } from "../../components/screen"
 import { Text } from "../../components/text"
 import { palette, spacing } from "../../theme"
@@ -10,6 +10,8 @@ import { TextField } from "../../components/text-field/text-field"
 import { observer, inject } from "mobx-react"
 import { NavigationScreenProps } from "react-navigation"
 import { TalkStore } from "../../models/talk-store"
+import { CodeOfConductLink } from "../../components/code-of-conduct-link"
+import { loadString, saveString } from "../../utils/storage"
 
 const ROOT: ViewStyle = {
   padding: spacing.medium,
@@ -20,9 +22,12 @@ const TITLE: TextStyle = {
   marginBottom: spacing.large,
 }
 
-const DESCRIPTION: TextStyle = {
+const DESCRIPTION_CONTAINER: ViewStyle = {
   marginTop: spacing.large,
   marginBottom: spacing.extraLarge,
+}
+const DESCRIPTION_ITEM: ViewStyle = {
+  marginVertical: spacing.small,
 }
 
 const BUTTON: ViewStyle = {
@@ -37,7 +42,6 @@ const MARGIN_BUTTON: ViewStyle = {
 const ROW: ViewStyle = {
   flexDirection: "row",
   alignItems: "center",
-  justifyContent: "space-between",
 }
 
 const USERNAME: ViewStyle = {
@@ -47,8 +51,12 @@ const USERNAME: ViewStyle = {
 
 const BUTTONS_ROW: ViewStyle = {
   ...ROW,
-  justifyContent: "flex-start",
   marginTop: spacing.medium,
+}
+
+const INPUT_ROW: ViewStyle = {
+  ...ROW,
+  justifyContent: "space-between",
 }
 
 interface ProfileScreenProps extends NavigationScreenProps<{}> {
@@ -62,6 +70,11 @@ interface ProfileScreenState {
 @observer
 @inject("talkStore")
 export class ProfileScreen extends React.Component<ProfileScreenProps, ProfileScreenState> {
+  static navigationOptions = {
+    header: null,
+    headerBackTitle: null,
+    headerStyle: { backgroundColor: palette.portGore, borderBottomWidth: 0 },
+  }
   state = {
     username: null,
     editInput: false,
@@ -75,11 +88,23 @@ export class ProfileScreen extends React.Component<ProfileScreenProps, ProfileSc
   render() {
     return (
       <Screen preset="scrollStack" backgroundColor={palette.portGore} style={ROOT}>
-        <Text preset="title" tx="profileScreen.title" style={TITLE} />
-        <Text preset="subheader" tx="profileScreen.description" style={DESCRIPTION} />
-        {this.renderContent()}
+        <View>
+          <Text preset="title" tx="profileScreen.title" style={TITLE} />
+          <View style={DESCRIPTION_CONTAINER}>
+            <Text preset="subheader" tx="profileScreen.description" style={DESCRIPTION_ITEM} />
+            <CodeOfConductLink onPress={this.linkToCodeOfConduct} style={DESCRIPTION_ITEM} />
+          </View>
+          {this.renderContent()}
+        </View>
       </Screen>
     )
+  }
+
+  linkToCodeOfConduct = () => {
+    this.props.navigation.navigate({
+      routeName: "profileCodeOfConduct",
+      params: { backTitle: "PROFILE" },
+    })
   }
 
   renderDisabled = () => (
@@ -110,7 +135,7 @@ export class ProfileScreen extends React.Component<ProfileScreenProps, ProfileSc
       } else {
         return (
           <View>
-            <View style={ROW}>
+            <View style={INPUT_ROW}>
               <View style={USERNAME}>
                 <Text tx="profileScreen.usernameField.label" preset="label" />
                 <Text preset="body" text={username} numberOfLines={1} />
@@ -127,7 +152,7 @@ export class ProfileScreen extends React.Component<ProfileScreenProps, ProfileSc
 
   onSave = async () => {
     try {
-      await AsyncStorage.setItem("name", this.state.username)
+      await saveString("name", this.state.username)
       console.log("username updated...")
       this.setState({ editInput: false })
     } catch (err) {
@@ -141,10 +166,10 @@ export class ProfileScreen extends React.Component<ProfileScreenProps, ProfileSc
 
   async componentDidMount() {
     try {
-      const username = await AsyncStorage.getItem("name")
+      const username = await loadString("name")
       console.log("username: ", username)
       if (!username) {
-        await AsyncStorage.setItem("name", name)
+        await saveString("name", name)
         this.setState({ username: name })
       } else {
         this.setState({ username })

@@ -18,6 +18,7 @@ export const MainNavigator = createStackNavigator(
             {
               scheduleScreen: { screen: ScheduleScreen },
               talkDetails: { screen: TalkDetailsScreen },
+              talkCodeOfConduct: { screen: CodeOfConductScreen },
             },
             {
               // headerMode: "none",
@@ -34,7 +35,15 @@ export const MainNavigator = createStackNavigator(
               initialRouteName: "infoScreen",
             },
           ),
-          profile: { screen: ProfileScreen },
+          profile: createStackNavigator(
+            {
+              profileScreen: { screen: ProfileScreen },
+              profileCodeOfConduct: { screen: CodeOfConductScreen },
+            },
+            {
+              initialRouteName: "profileScreen",
+            },
+          ),
         },
         {
           defaultNavigationOptions: ({ navigation }) => ({

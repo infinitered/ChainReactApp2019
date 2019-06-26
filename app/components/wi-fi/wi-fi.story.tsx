@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react-native"
 import { StoryScreen, Story, UseCase } from "../../../storybook/views"
 import { WiFi } from "./wi-fi"
 
-storiesOf("WiFi")
+storiesOf("WiFi", module)
   .addDecorator(fn => <StoryScreen>{fn()}</StoryScreen>)
   .add("Presets", () => (
     <Story>

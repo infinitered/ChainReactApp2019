@@ -1,24 +1,15 @@
-import { load, loadString, save, saveString, clear, remove } from "./storage"
+import AsyncStorage from "@react-native-community/async-storage"
+import { load, loadString, save, saveString, clear, remove } from "."
 
 // fixtures
 const VALUE_OBJECT = { x: 1 }
 const VALUE_STRING = JSON.stringify(VALUE_OBJECT)
 
-// mocks
-const mockGetItem = jest.fn().mockReturnValue(Promise.resolve(VALUE_STRING))
-const mockSetItem = jest.fn()
-const mockRemoveItem = jest.fn()
-const mockClear = jest.fn()
+beforeEach(() => {
+  // @ts-ignore
+  AsyncStorage.getItem.mockReturnValue(Promise.resolve(VALUE_STRING))
+})
 
-// replace AsyncStorage
-jest.mock("AsyncStorage", () => ({
-  getItem: mockGetItem,
-  setItem: mockSetItem,
-  removeItem: mockRemoveItem,
-  clear: mockClear,
-}))
-
-// reset mocks after each test
 afterEach(() => jest.clearAllMocks())
 
 test("load", async () => {
@@ -26,27 +17,64 @@ test("load", async () => {
   expect(value).toEqual(JSON.parse(VALUE_STRING))
 })
 
+test("load exception", async () => {
+  // @ts-ignore
+  AsyncStorage.getItem.mockImplementation(() => {
+    throw new Error("wat")
+  })
+  const value = await load("something")
+  expect(value).toEqual(null)
+})
+
 test("loadString", async () => {
   const value = await loadString("something")
   expect(value).toEqual(VALUE_STRING)
 })
 
+test("loadString exception", async () => {
+  // @ts-ignore
+  AsyncStorage.getItem.mockImplementation(() => {
+    throw new Error("wat")
+  })
+  const value = await loadString("something")
+  expect(value).toEqual(null)
+})
+
 test("save", async () => {
-  await save("something", VALUE_OBJECT)
-  expect(mockSetItem).toHaveBeenCalledWith("something", VALUE_STRING)
+  const value = await save("something", VALUE_OBJECT)
+  expect(AsyncStorage.setItem).toHaveBeenCalledWith("something", VALUE_STRING)
+  expect(value).toEqual(true)
+})
+
+test("save exception", async () => {
+  // @ts-ignore
+  AsyncStorage.setItem.mockImplementationOnce(() => {
+    throw new Error("wat")
+  })
+  const value = await save("something", "value")
+  expect(value).toEqual(false)
 })
 
 test("saveString", async () => {
   await saveString("something", VALUE_STRING)
-  expect(mockSetItem).toHaveBeenCalledWith("something", VALUE_STRING)
+  expect(AsyncStorage.setItem).toHaveBeenCalledWith("something", VALUE_STRING)
+})
+
+test("saveString exception", async () => {
+  // @ts-ignore
+  AsyncStorage.setItem.mockImplementationOnce(() => {
+    throw new Error("wat")
+  })
+  const value = await saveString("something", "value")
+  expect(value).toEqual(false)
 })
 
 test("remove", async () => {
   await remove("something")
-  expect(mockRemoveItem).toHaveBeenCalledWith("something")
+  expect(AsyncStorage.removeItem).toHaveBeenCalledWith("something")
 })
 
 test("clear", async () => {
   await clear()
-  expect(mockClear).toHaveBeenCalledWith()
+  expect(AsyncStorage.clear).toHaveBeenCalledWith()
 })

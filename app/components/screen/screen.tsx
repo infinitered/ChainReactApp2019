@@ -40,9 +40,11 @@ function ScreenWithScrolling(props: ScreenProps) {
   const innerStyle = { ...preset.scrollInner, ...props.style } as ViewStyle
 
   return (
-    <ScrollView style={[outerStyle, backgroundStyle]} contentContainerStyle={innerStyle}>
-      <SafeAreaView>{props.children}</SafeAreaView>
-    </ScrollView>
+    <SafeAreaView style={[outerStyle, backgroundStyle]}>
+      <ScrollView style={[outerStyle, backgroundStyle]} contentContainerStyle={innerStyle}>
+        {props.children}
+      </ScrollView>
+    </SafeAreaView>
   )
 }
 
