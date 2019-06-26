@@ -330,7 +330,6 @@ exports[`Storyshots AttractionsList Props 1`] = `
                   style={
                     Object {
                       "opacity": 1,
-                      "paddingRight": 43,
                       "paddingVertical": 10,
                     }
                   }
@@ -359,7 +358,6 @@ exports[`Storyshots AttractionsList Props 1`] = `
                   style={
                     Object {
                       "opacity": 1,
-                      "paddingRight": 43,
                       "paddingVertical": 10,
                     }
                   }
@@ -388,7 +386,6 @@ exports[`Storyshots AttractionsList Props 1`] = `
                   style={
                     Object {
                       "opacity": 1,
-                      "paddingRight": 43,
                       "paddingVertical": 10,
                     }
                   }
@@ -417,7 +414,6 @@ exports[`Storyshots AttractionsList Props 1`] = `
                   style={
                     Object {
                       "opacity": 1,
-                      "paddingRight": 43,
                       "paddingVertical": 10,
                     }
                   }
@@ -432,6 +428,34 @@ exports[`Storyshots AttractionsList Props 1`] = `
                     }
                   >
                     SIGHTS
+                  </Text>
+                </View>
+                <View
+                  accessible={true}
+                  isTVSelectable={true}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                      "paddingVertical": 10,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#C7C4DB",
+                        "fontFamily": "Gotham Rounded",
+                        "fontSize": 11,
+                      }
+                    }
+                  >
+                    HOTELS
                   </Text>
                 </View>
               </View>
