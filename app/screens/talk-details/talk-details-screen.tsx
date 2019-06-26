@@ -35,6 +35,7 @@ import { NavigationStore } from "../../models/navigation-store"
 import Hyperlink from "react-native-hyperlink"
 import { TIMEZONE } from "../../utils/info"
 import { CodeOfConductLink } from "../../components/code-of-conduct-link"
+import { Button } from "../../components/button"
 
 Amplify.configure(config)
 
@@ -109,7 +110,7 @@ const WHITE_TEXT = { color: "white" }
 const COMMENT_TEXT = { ...WHITE_TEXT, fontSize: 16, marginTop: 4 }
 const FLEX_ONE = { flex: 1 }
 const FLEX_ROW = { flexDirection: "row" }
-const COMMENT_CONTAINER = { paddingVertical: 15, marginBottom: 50 }
+const COMMENT_CONTAINER = { paddingVertical: 15, marginBottom: spacing.huge }
 const COMMENT_STYLE = {
   paddingBottom: 15,
   paddingTop: 20,
@@ -125,7 +126,7 @@ const INPUT_CONTAINER = {
   left: 0,
   backgroundColor: color.background,
 }
-const MESSAGE_INPUT = { backgroundColor: "white", height: 50, paddingHorizontal: 8 }
+const MESSAGE_INPUT = { backgroundColor: "white", height: 50, paddingHorizontal: 8, flex: 1 }
 const REPORT = { marginTop: 5, color: palette.angry, fontSize: 11 }
 const CODE_OF_CONDUCT_LINK = {
   paddingHorizontal: spacing.large,
@@ -133,6 +134,8 @@ const CODE_OF_CONDUCT_LINK = {
   borderTopWidth: 1,
   borderColor: "rgba(255, 255, 255, .1)",
 }
+const SEND_BUTTON_TEXT: TextStyle = { paddingHorizontal: spacing.small }
+const SEND_BUTTON: ViewStyle = { paddingHorizontal: spacing.small, borderRadius: 0 }
 
 const HIT_SLOP = {
   top: 30,
@@ -370,14 +373,23 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
             </ScrollView>
             <View style={{ ...INPUT_CONTAINER, ...widthStyles }}>
               <CodeOfConductLink onPress={this.linkToCodeOfConduct} style={CODE_OF_CONDUCT_LINK} />
-              <TextInput
-                onChangeText={v => this.setState({ inputValue: v })}
-                style={MESSAGE_INPUT}
-                placeholder="Type a message..."
-                onSubmitEditing={this.createComment}
-                value={this.state.inputValue}
-                returnKeyType={"send"}
-              />
+              <View style={{ flexDirection: "row" }}>
+                <TextInput
+                  onChangeText={v => this.setState({ inputValue: v })}
+                  style={MESSAGE_INPUT}
+                  placeholder="Type a message..."
+                  onSubmitEditing={this.createComment}
+                  value={this.state.inputValue}
+                  returnKeyType={"send"}
+                />
+                <Button
+                  preset="dark"
+                  onPress={this.createComment}
+                  tx="common.send"
+                  textStyle={SEND_BUTTON_TEXT}
+                  style={SEND_BUTTON}
+                />
+              </View>
             </View>
           </View>
         )}
