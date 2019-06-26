@@ -9728,11 +9728,9 @@ exports[`Storyshots TextField Labelling 1`] = `
                 Name
               </Text>
               <TextInput
-                allowFontScaling={true}
                 onChangeText={[Function]}
                 placeholder="omg your name"
                 placeholderTextColor="#CDD4DA"
-                rejectResponderTermination={true}
                 style={
                   Object {
                     "backgroundColor": "#161637",
@@ -9848,11 +9846,9 @@ exports[`Storyshots TextField Labelling 1`] = `
                 [missing "en-US.storybook.field" translation]
               </Text>
               <TextInput
-                allowFontScaling={true}
                 onChangeText={[Function]}
                 placeholder="[missing \\"en-US.storybook.placeholder\\" translation]"
                 placeholderTextColor="#CDD4DA"
-                rejectResponderTermination={true}
                 style={
                   Object {
                     "backgroundColor": "#161637",
@@ -10000,10 +9996,8 @@ exports[`Storyshots TextField Style Overrides 1`] = `
                 First Name
               </Text>
               <TextInput
-                allowFontScaling={true}
                 onChangeText={[Function]}
                 placeholderTextColor="#CDD4DA"
-                rejectResponderTermination={true}
                 style={
                   Object {
                     "backgroundColor": "#161637",
@@ -10040,10 +10034,8 @@ exports[`Storyshots TextField Style Overrides 1`] = `
                 Last Name
               </Text>
               <TextInput
-                allowFontScaling={true}
                 onChangeText={[Function]}
                 placeholderTextColor="#CDD4DA"
-                rejectResponderTermination={true}
                 style={
                   Object {
                     "backgroundColor": "#161637",
@@ -10159,10 +10151,8 @@ exports[`Storyshots TextField Style Overrides 1`] = `
                 Name
               </Text>
               <TextInput
-                allowFontScaling={true}
                 onChangeText={[Function]}
                 placeholderTextColor="#CDD4DA"
-                rejectResponderTermination={true}
                 style={
                   Object {
                     "backgroundColor": "rebeccapurple",

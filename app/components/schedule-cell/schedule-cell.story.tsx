@@ -49,7 +49,7 @@ const afterparty: any = {
 }
 
 const noop = () =>
-  void storiesOf("ScheduleCell")
+  void storiesOf("ScheduleCell", module)
     .addDecorator(fn => <StoryScreen>{fn()}</StoryScreen>)
     .add("Presets", () => (
       <Story>
