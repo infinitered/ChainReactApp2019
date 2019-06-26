@@ -342,7 +342,7 @@
       "type": "Feature",
       "properties": {
         "place_name": "Marriott-City Center",
-        "place_address": " 520 SW Broadway, Portland, Oregon 97205 USA",
+        "place_address": "520 SW Broadway, Portland, Oregon 97205 USA",
         "place_link": "https://goo.gl/maps/UACXjC6z7SbvVjgc9",
         "place_description": "",
         "rating": 4
