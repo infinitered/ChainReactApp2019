@@ -10,7 +10,6 @@ import {
   TextStyle,
   ImageStyle,
   Platform,
-  AsyncStorage,
   KeyboardAvoidingView,
 } from "react-native"
 import { inject, observer } from "mobx-react"
@@ -34,6 +33,7 @@ import { TalkStore } from "../../models/talk-store"
 import { NavigationStore } from "../../models/navigation-store"
 import Hyperlink from "react-native-hyperlink"
 import { TIMEZONE } from "../../utils/info"
+import { loadString } from "../../utils/storage"
 import { CodeOfConductLink } from "../../components/code-of-conduct-link"
 import { Button } from "../../components/button"
 
@@ -221,7 +221,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
 
   fetchUserName = async () => {
     try {
-      const name = await AsyncStorage.getItem("name")
+      const name = await loadString("name")
       this.setState({ name })
     } catch (err) {
       console.log("error fetching user name...: ", err)

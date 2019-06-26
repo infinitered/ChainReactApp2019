@@ -1,5 +1,5 @@
 import React from "react"
-import { View, AsyncStorage, ViewStyle } from "react-native"
+import { View, ViewStyle } from "react-native"
 import { Screen } from "../../components/screen"
 import { Text } from "../../components/text"
 import { palette, spacing } from "../../theme"
@@ -11,6 +11,7 @@ import { observer, inject } from "mobx-react"
 import { NavigationScreenProps } from "react-navigation"
 import { TalkStore } from "../../models/talk-store"
 import { CodeOfConductLink } from "../../components/code-of-conduct-link"
+import { loadString, saveString } from "../../utils/storage"
 
 const ROOT: ViewStyle = {
   padding: spacing.medium,
@@ -151,7 +152,7 @@ export class ProfileScreen extends React.Component<ProfileScreenProps, ProfileSc
 
   onSave = async () => {
     try {
-      await AsyncStorage.setItem("name", this.state.username)
+      await saveString("name", this.state.username)
       console.log("username updated...")
       this.setState({ editInput: false })
     } catch (err) {
@@ -165,10 +166,10 @@ export class ProfileScreen extends React.Component<ProfileScreenProps, ProfileSc
 
   async componentDidMount() {
     try {
-      const username = await AsyncStorage.getItem("name")
+      const username = await loadString("name")
       console.log("username: ", username)
       if (!username) {
-        await AsyncStorage.setItem("name", name)
+        await saveString("name", name)
         this.setState({ username: name })
       } else {
         this.setState({ username })

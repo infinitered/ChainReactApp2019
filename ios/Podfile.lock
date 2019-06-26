@@ -21,6 +21,8 @@ PODS:
     - yoga (= 0.59.5.React)
   - React/RCTLinkingIOS (0.59.5):
     - React/Core
+  - RNCAsyncStorage (1.5.0):
+    - React
   - RNGestureHandler (1.2.1):
     - React
   - RNScreens (1.0.0-alpha.22):
@@ -36,6 +38,7 @@ DEPENDENCIES:
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - React/RCTLinkingIOS (from `../node_modules/react-native`)
+  - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
@@ -55,6 +58,8 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
   React:
     :path: "../node_modules/react-native"
+  RNCAsyncStorage:
+    :path: "../node_modules/@react-native-community/async-storage"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNScreens:
@@ -70,10 +75,11 @@ SPEC CHECKSUMS:
   Folly: de497beb10f102453a1afa9edbf8cf8a251890de
   glog: aefd1eb5dda2ab95ba0938556f34b98e2da3a60d
   React: 90adac468c7b72bf1fa6c64bf230650f851a8388
+  RNCAsyncStorage: 9436928b444c5f5361960a7eea051a697c244b68
   RNGestureHandler: aea90f0ad8e35fec23438db6fc3ad79be58bb734
   RNScreens: 720a9e6968beb73e8196239801e887d8401f86ed
   yoga: 2e571f113e8cbeb0eb752aeebc86c1bfe7a8200c
 
-PODFILE CHECKSUM: 7c632e082e4ae15ab0b06680974677ef13766776
+PODFILE CHECKSUM: 66d5dca5d91fd754f1e23475f67ccec3817ab10f
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.1
