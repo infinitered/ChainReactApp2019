@@ -19,7 +19,7 @@ const NAV: ViewStyle = {
   justifyContent: "space-between",
 }
 const NAV_ITEM: ViewStyle = {
-  paddingRight: spacing.large,
+  // paddingRight: spacing.large,
   paddingVertical: spacing.small,
 }
 const SELECTED_NAV_ITEM: TextStyle = {
