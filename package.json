@@ -3,26 +3,29 @@
   "version": "3.0.0",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
     "adb": "adb reverse tcp:9090 tcp:9090 && adb reverse tcp:3000 tcp:3000 && adb reverse tcp:9001 tcp:9001 && adb reverse tcp:8081 tcp:8081",
-    "test": "NODE_ENV=test TZ=America/Los_Angeles jest",
+    "android": "react-native run-android",
+    "ci:setup": "touch .env && echo \"AWS_APPSYNC_API_KEY=\"$AWS_APPSYNC_API_KEY >> .env",
+    "ci:test": "yarn test --ci",
     "compile": "tsc --noEmit -p . --pretty",
-    "format": "npm-run-all format:*",
     "format:js": "prettier --write {.,**}/*.js",
     "format:json": "prettier --write {.,**}/*.json",
     "format:md": "prettier --write {.,**}/*.md",
     "format:ts": "prettier --write {.,**}/*.{ts,tsx} && tslint --fix -p .",
-    "lint": "npm-run-all lint:*",
+    "format": "npm-run-all format:*",
+    "ios": "react-native run-ios",
     "lint:ts": "tslint -p .",
-    "ci:test": "yarn test --ci",
-    "ci:setup": "touch .env && echo \"AWS_APPSYNC_API_KEY=\"$AWS_APPSYNC_API_KEY >> .env",
+    "lint": "npm-run-all lint:*",
     "postinstall": "test -n \"$NOYARNPOSTINSTALL\" || solidarity",
     "precommit": "lint-staged",
     "prepare": "patch-package",
-    "storybook": "storybook start -p 9001 --skip-packager"
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "storybook": "storybook start -p 9001 --skip-packager",
+    "test": "NODE_ENV=test TZ=America/Los_Angeles jest"
   },
   "dependencies": {
     "@mapbox/react-native-mapbox-gl": "https://github.com/nitaliano/react-native-mapbox-gl#master",
+    "@react-native-community/async-storage": "^1.5.0",
     "apisauce": "^0.14.3",
     "apollo-boost": "^0.1.9",
     "appcenter": "1.13.0",
@@ -97,6 +100,12 @@
       "./node_modules/appcenter/test/AppCenterMock.js",
       "./node_modules/appcenter-analytics/test/AppCenterAnalyticsMock.js",
       "./node_modules/appcenter-crashes/test/AppCenterCrashesMock.js"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-native|react-navigation|@react-navigation|@storybook|@react-native-community)"
     ]
   },
   "rnpm": {

@@ -150,6 +150,7 @@ android {
 }
 
 dependencies {
+    implementation project(':@react-native-community_async-storage')
     // implementation project(':@mapbox_react-native-mapbox-gl')
     implementation project(':react-native-screens')
     implementation project(':react-native-gesture-handler')
