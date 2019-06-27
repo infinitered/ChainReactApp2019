@@ -1,5 +1,5 @@
 import * as React from "react"
-import { TouchableOpacity } from "react-native"
+import { Image, TouchableOpacity } from "react-native"
 import { Text } from "../text"
 import { viewPresets, textPresets } from "./button.presets"
 import { ButtonProps } from "./button.props"
@@ -17,6 +17,7 @@ export function Button(props: ButtonProps) {
     text,
     style: styleOverride,
     textStyle: textStyleOverride,
+    imageSource,
     ...rest
   } = props
 
@@ -29,6 +30,7 @@ export function Button(props: ButtonProps) {
 
   return (
     <TouchableOpacity style={viewStyle} {...rest}>
+      {imageSource && <Image source={imageSource} />}
       <Text tx={tx} text={text} style={textStyle} />
     </TouchableOpacity>
   )
