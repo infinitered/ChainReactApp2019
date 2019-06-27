@@ -84,6 +84,7 @@
         "drink": "DRINK",
         "coffee": "COFFEE",
         "sights": "SIGHTS",
+        "hotels": "HOTELS",
         "getDirections": "GET DIRECTIONS"
       }
     }

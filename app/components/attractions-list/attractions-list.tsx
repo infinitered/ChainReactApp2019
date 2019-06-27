@@ -6,7 +6,7 @@ import { Attraction } from "../attraction"
 const nearbyAttractionsData = require("../nearby-attractions/nearby-attractions.data.json")
 
 export interface AttractionsListState {
-  selectedType: "food" | "drink" | "coffee" | "sights"
+  selectedType: "food" | "drink" | "coffee" | "sights" | "hotels"
 }
 
 const ROOT: ViewStyle = {
@@ -19,7 +19,7 @@ const NAV: ViewStyle = {
   justifyContent: "space-between",
 }
 const NAV_ITEM: ViewStyle = {
-  paddingRight: spacing.extraLarge,
+  // paddingRight: spacing.large,
   paddingVertical: spacing.small,
 }
 const SELECTED_NAV_ITEM: TextStyle = {
@@ -80,6 +80,16 @@ export class AttractionsList extends React.Component<{}, AttractionsListState> {
               preset="label"
               tx="venueScreen.nearbyAttractions.navigation.sights"
               style={selectedType === "sights" ? SELECTED_NAV_ITEM : {}}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={NAV_ITEM}
+            onPress={() => this.setState({ selectedType: "hotels" })}
+          >
+            <Text
+              preset="label"
+              tx="venueScreen.nearbyAttractions.navigation.hotels"
+              style={selectedType === "hotels" ? SELECTED_NAV_ITEM : {}}
             />
           </TouchableOpacity>
         </View>

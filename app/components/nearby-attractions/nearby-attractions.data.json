@@ -6,8 +6,7 @@
         "place_address": "923 SW Oak St, Portland, Oregon 97205, United States",
         "place_name": "Courier Coffee",
         "place_link": "https://goo.gl/maps/gbsekFfSM492",
-        "place_description":
-          "Using house-roasted, single-origin beans, this snug place offers espresso drinks & pour-overs.",
+        "place_description": "Using house-roasted, single-origin beans, this snug place offers espresso drinks & pour-overs.",
         "rating": 5
       },
       "geometry": {
@@ -22,8 +21,7 @@
         "place_address": "1026 SW Stark St, Portland, Oregon 97205, United States",
         "place_name": "Stumptown",
         "place_link": "https://goo.gl/maps/8u4QvV3j6Xx",
-        "place_description":
-          "Coffee bar chain offering house-roasted direct-trade coffee, along with brewing gear & whole beans",
+        "place_description": "Coffee bar chain offering house-roasted direct-trade coffee, along with brewing gear & whole beans",
         "rating": 4
       },
       "geometry": {
@@ -38,8 +36,7 @@
         "place_address": "539 NW 13th Ave, Portland, Oregon 97209, United States",
         "place_name": "Barista",
         "place_link": "https://goo.gl/maps/ZRhkgqreaxw",
-        "place_description":
-          "Petite flagship location of a small local coffeehouse chain offering rotating roasts & latte art.",
+        "place_description": "Petite flagship location of a small local coffeehouse chain offering rotating roasts & latte art.",
         "rating": 5
       },
       "geometry": {
@@ -54,8 +51,7 @@
         "place_address": "537 SW 12th Ave, Portland, Oregon 97205, United States",
         "place_name": "Heart Coffee",
         "place_link": "https://goo.gl/maps/KeEdzfscEyj",
-        "place_description":
-          "Coffee drinks & gourmet baked goods offered in stylish, industrial-chic quarters.",
+        "place_description": "Coffee drinks & gourmet baked goods offered in stylish, industrial-chic quarters.",
         "rating": 5
       },
       "geometry": {
@@ -72,8 +68,7 @@
         "place_address": "22 SW 3rd Ave, Portland, Oregon 97204, United States",
         "place_name": "Voodoo Doughnut",
         "place_link": "https://goo.gl/maps/8FoJ6iHNK7o",
-        "place_description":
-          "This counter-serve, cash-only bakeshop serves creative donuts in colorful, quirky environs.",
+        "place_description": "This counter-serve, cash-only bakeshop serves creative donuts in colorful, quirky environs.",
         "rating": 4
       },
       "geometry": {
@@ -88,8 +83,7 @@
         "place_address": "838 NW 23rd Ave, Portland, Oregon 97210, United States",
         "place_name": "Salt & Straw",
         "place_link": "https://goo.gl/maps/4gcXernE9RU2",
-        "place_description":
-          "Quirky flavors & handmade waffle cones draw crowds to this artisanal ice cream maker's 3 parlors.",
+        "place_description": "Quirky flavors & handmade waffle cones draw crowds to this artisanal ice cream maker's 3 parlors.",
         "rating": 5
       },
       "geometry": {
@@ -104,8 +98,7 @@
         "place_address": "580 SW 12th Ave, Portland, Oregon 97205, United States",
         "place_name": "Tasty N' Alder",
         "place_link": "https://goo.gl/maps/SUeZ1wa4a6T2",
-        "place_description":
-          "Small plates, cheeses & seasonal sides pair with an array of steaks at this lively New American pub.",
+        "place_description": "Small plates, cheeses & seasonal sides pair with an array of steaks at this lively New American pub.",
         "rating": 5
       },
       "geometry": {
@@ -120,8 +113,7 @@
         "place_address": "122 NW 10th Ave, Portland, Oregon 97209, United States",
         "place_name": "Little Big Burger",
         "place_link": "https://goo.gl/maps/Uo6jLiEkLTu",
-        "place_description":
-          "Small menu including burgers & truffle fries at no-frills, sustainably minded local chain outpost.",
+        "place_description": "Small menu including burgers & truffle fries at no-frills, sustainably minded local chain outpost.",
         "rating": 4
       },
       "geometry": {
@@ -138,8 +130,7 @@
         "place_address": "210 NW 11th Ave, Portland, Oregon 97209, United States",
         "place_name": "Deschutes Brewery",
         "place_link": "https://goo.gl/maps/YNoj8AnTNXQ2",
-        "place_description":
-          "Beers brewed on-site & gourmet pub grub in a converted auto-body shop with a fireplace & wood beams.",
+        "place_description": "Beers brewed on-site & gourmet pub grub in a converted auto-body shop with a fireplace & wood beams.",
         "rating": 4
       },
       "geometry": {
@@ -154,8 +145,7 @@
         "place_address": "1339 NW Flanders St, Portland, Oregon 97209, United States",
         "place_name": "Rogue Distillery and Public House",
         "place_link": "https://goo.gl/maps/ZsncCEypsVN2",
-        "place_description":
-          "Family-friendly chain offering handcrafted beers & American gastropub eats in a laid-back setting.",
+        "place_description": "Family-friendly chain offering handcrafted beers & American gastropub eats in a laid-back setting.",
         "rating": 4
       },
       "geometry": {
@@ -170,8 +160,7 @@
         "place_address": "10 NW 12th Ave, Portland, Oregon 97209, United States",
         "place_name": "Henry's 12th Street Tavern",
         "place_link": "https://goo.gl/maps/UpeukNozBJQ2",
-        "place_description":
-          "Upscale American eatery & bar in a former brewery with a list of 100+ beers & a bustling happy hour.",
+        "place_description": "Upscale American eatery & bar in a former brewery with a list of 100+ beers & a bustling happy hour.",
         "rating": 4
       },
       "geometry": {
@@ -186,8 +175,7 @@
         "place_address": "131 NW 13th Ave, Portland, Oregon 97209, United States",
         "place_name": "Fat Head's Brewery",
         "place_link": "https://goo.gl/maps/kJUEDBpdE7T2",
-        "place_description":
-          "Micro-brewery & bar serves beers made in German, Belgian & Czech styles, plus sandwiches & pretzels.",
+        "place_description": "Micro-brewery & bar serves beers made in German, Belgian & Czech styles, plus sandwiches & pretzels.",
         "rating": 4
       },
       "geometry": {
@@ -234,8 +222,7 @@
         "place_address": "1005 W Burnside St, Portland, Oregon 97209, United States",
         "place_name": "Powell's Books",
         "place_link": "https://goo.gl/maps/acPz6FhD71L2",
-        "place_description":
-          "This outpost next door to Powell's City of Books houses its math, science & engineering titles.",
+        "place_description": "This outpost next door to Powell's City of Books houses its math, science & engineering titles.",
         "rating": 5
       },
       "geometry": {
@@ -250,8 +237,7 @@
         "place_address": "1945 SE Water Ave, Portland, OR 97214",
         "place_name": "OMSI",
         "place_link": "https://goo.gl/maps/KyuNGBkRbzD2",
-        "place_description":
-          "Rotating shows, science labs, submarine tours & planetarium at a museum with monthly 21+ events.",
+        "place_description": "Rotating shows, science labs, submarine tours & planetarium at a museum with monthly 21+ events.",
         "rating": 4
       },
       "geometry": {
@@ -266,8 +252,7 @@
         "place_address": "239 NW Everett St, Portland, OR 97209",
         "place_name": "Chinese Garden",
         "place_link": "https://goo.gl/maps/gj8yB3DZSuS2",
-        "place_description":
-          "Tranquil botanical garden featuring rare plants native to China, decorative stonework & a tea shop.",
+        "place_description": "Tranquil botanical garden featuring rare plants native to China, decorative stonework & a tea shop.",
         "rating": 5
       },
       "geometry": {
@@ -282,8 +267,7 @@
         "place_address": "98 SW Naito Pkwy, Portland, Oregon 97204, United States",
         "place_name": "Waterfront Park",
         "place_link": "https://goo.gl/maps/vRU9BTNndWn",
-        "place_description":
-          "Governor Tom McCall Waterfront Park is a 36.59-acre park located in downtown Portland, Oregon, along the Willamette River.",
+        "place_description": "Governor Tom McCall Waterfront Park is a 36.59-acre park located in downtown Portland, Oregon, along the Willamette River.",
         "rating": 5
       },
       "geometry": {
@@ -298,8 +282,7 @@
         "place_address": "611 SW Kingston Ave, Portland, OR 97205",
         "place_name": "Japanese Garden",
         "place_link": "https://goo.gl/maps/NswShTseyiT2",
-        "place_description":
-          "Many styles of gardens showcased in serene 5.5-acre space with waterfall, teahouse & mountain view.",
+        "place_description": "Many styles of gardens showcased in serene 5.5-acre space with waterfall, teahouse & mountain view.",
         "rating": 5
       },
       "geometry": {
@@ -322,6 +305,53 @@
         "type": "Point"
       },
       "id": "address.8638138425065340"
+    }
+  ],
+  "hotels": [
+    {
+      "type": "Feature",
+      "properties": {
+        "place_address": "309 SW Broadway, Portland, Oregon 97205, United States",
+        "place_name": "The Benson",
+        "place_link": "https://goo.gl/maps/GRNhPWacjtD2",
+        "place_description": "The main conference Hotel",
+        "rating": 4
+      },
+      "geometry": {
+        "coordinates": [-122.678454, 45.521841],
+        "type": "Point"
+      },
+      "id": "address.15911238564571630"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Radisson RED Portland Downtown",
+        "place_address": "1455 SW Broadway, Portland, OR 97201",
+        "place_link": "https://goo.gl/maps/LUwEUPQyxzJDGxBG8",
+        "place_description": "Radisson RED beckons you to Portland, a quirky paradise brimming with microbreweries, eclectic events and urban gardens.",
+        "rating": 5
+      },
+      "geometry": {
+        "coordinates": [-122.682374, 45.514593],
+        "type": "Point"
+      },
+      "id": "21d96c1c050cfbb04c3a2765ad6f531c"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "place_name": "Marriott-City Center",
+        "place_address": "520 SW Broadway, Portland, Oregon 97205 USA",
+        "place_link": "https://goo.gl/maps/UACXjC6z7SbvVjgc9",
+        "place_description": "",
+        "rating": 4
+      },
+      "geometry": {
+        "coordinates": [-122.678924, 45.520435],
+        "type": "Point"
+      },
+      "id": "932de0ae0f492bc66b4f6e533c281253"
     }
   ]
 }
