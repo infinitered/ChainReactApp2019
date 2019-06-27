@@ -1,5 +1,6 @@
 import * as React from "react"
-import { Image, SafeAreaView, ScrollView, ViewStyle } from "react-native"
+import { Image, SafeAreaView, ViewStyle } from "react-native"
+import { ScrollView } from "react-navigation"
 import { ScreenProps } from "./screen.props"
 import { presets, isNonScrolling } from "./screen.presets"
 

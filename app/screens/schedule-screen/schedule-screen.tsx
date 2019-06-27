@@ -1,6 +1,6 @@
 import * as React from "react"
-import { View, ViewStyle, ScrollView, TextStyle, RefreshControl } from "react-native"
-import { NavigationScreenProps } from "react-navigation"
+import { View, ViewStyle, TextStyle, RefreshControl } from "react-native"
+import { NavigationScreenProps, ScrollView } from "react-navigation"
 import { Text } from "../../components/text"
 import { Screen } from "../../components/screen"
 import { color, spacing } from "../../theme"
