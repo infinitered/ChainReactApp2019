@@ -12,7 +12,7 @@
     "noUnusedLocals": true,
     "sourceMap": true,
     "target": "es2015",
-    "lib": ["es6", "dom", "esnext.asynciterable"]
+    "lib": ["es2016", "es2017", "es2018", "esnext.asynciterable"]
   },
   "exclude": ["node_modules"],
   "include": ["src", "test", "storybook"]

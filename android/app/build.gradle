@@ -95,7 +95,11 @@ def enableProguardInReleaseBuilds = false
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    // buildToolsVersion rootProject.ext.buildToolsVersion
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
     defaultConfig {
         applicationId "com.chainreactapp"
@@ -103,9 +107,6 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 129
         versionName "3.0"
-        ndk {
-            abiFilters "armeabi-v7a", "x86"
-        }
         multiDexEnabled true
     }
     splits {
@@ -113,7 +114,7 @@ android {
             reset()
             enable enableSeparateBuildPerCPUArchitecture
             universalApk false  // If true, also generate a universal APK
-            include "armeabi-v7a", "x86"
+            include "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
         }
     }
     signingConfigs {
@@ -139,7 +140,7 @@ android {
         variant.outputs.each { output ->
             // For each separate APK per architecture, set a unique version code as described here:
             // http://tools.android.com/tech-docs/new-build-system/user-guide/apk-splits
-            def versionCodes = ["armeabi-v7a":1, "x86":2]
+            def versionCodes = ["armeabi-v7a":1, "x86":2, "arm64-v8a": 3, "x86_64": 4]
             def abi = output.getFilter(OutputFile.ABI)
             if (abi != null) {  // null for the universal-debug, universal-release variants
                 output.versionCodeOverride =
@@ -151,25 +152,24 @@ android {
 
 dependencies {
     implementation project(':@react-native-community_async-storage')
-    // implementation project(':@mapbox_react-native-mapbox-gl')
-    implementation project(':react-native-screens')
-    implementation project(':react-native-gesture-handler')
+    implementation project(':appcenter-analytics')
+    implementation project(':appcenter-crashes')
     implementation project(':appcenter-push')
     implementation project(':appcenter')
-    implementation project(':appcenter-crashes')
-    implementation project(':appcenter-analytics')
-    implementation project(':react-native-keychain')
-    implementation project(':react-native-localize')
+    implementation project(':lottie-react-native')
     implementation (project(':mapbox-react-native-mapbox-gl')) {
             implementation ('com.squareup.okhttp3:okhttp:3.12.1') {
                 force = true
             }
     }
+    implementation project(':react-native-gesture-handler')
+    implementation project(':react-native-keychain')
+    implementation project(':react-native-localize')
     implementation project(':react-native-splash-screen')
+    implementation project(':react-native-screens')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     implementation "com.facebook.react:react-native:+"  // From node_modules
-    implementation project(':lottie-react-native')
     implementation 'com.google.android.exoplayer:exoplayer:2.7.1'
     implementation 'com.google.protobuf.nano:protobuf-javanano:3.0.0-alpha-7'
     implementation 'com.amazonaws:aws-android-sdk-core:2.2.+'
