@@ -4909,6 +4909,135 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                 style={
                   Object {
                     "alignItems": "center",
+                    "backgroundColor": "#FC1FBE",
+                    "borderRadius": 4,
+                    "flexDirection": "row-reverse",
+                    "justifyContent": "space-between",
+                    "marginBottom": 14,
+                    "marginHorizontal": 20,
+                    "marginTop": 40,
+                    "opacity": 1,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 8,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "white",
+                      "flex": 1,
+                      "fontFamily": "Gotham Rounded",
+                      "fontSize": 14,
+                      "height": 14,
+                      "letterSpacing": 3,
+                      "paddingHorizontal": 20,
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  RIDE WITH LYFT
+                </Text>
+                <Image
+                  resizeMode="center"
+                  source={1}
+                  style={
+                    Object {
+                      "height": 37,
+                      "width": 65,
+                    }
+                  }
+                />
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "black",
+                    "borderRadius": 4,
+                    "flexDirection": "row-reverse",
+                    "justifyContent": "space-between",
+                    "marginBottom": 14,
+                    "marginHorizontal": 20,
+                    "opacity": 1,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 8,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "white",
+                      "flex": 1,
+                      "fontFamily": "Gotham Rounded",
+                      "fontSize": 14,
+                      "height": 14,
+                      "letterSpacing": 3,
+                      "paddingHorizontal": 20,
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  RIDE WITH UBER
+                </Text>
+                <Image
+                  resizeMode="center"
+                  source={1}
+                  style={
+                    Object {
+                      "height": 37,
+                      "width": 65,
+                    }
+                  }
+                />
+              </View>
+              <Text
+                style={
+                  Object {
+                    "color": "#56E39F",
+                    "fontFamily": "Gotham Rounded",
+                    "fontSize": 14,
+                    "lineHeight": 17,
+                    "marginTop": 48,
+                  }
+                }
+              >
+                PLANNING ON DRIVING?
+              </Text>
+              <Text
+                style={
+                  Object {
+                    "color": "#C7C4DB",
+                    "fontFamily": "Gotham Rounded",
+                    "fontSize": 18,
+                    "lineHeight": 32,
+                    "marginTop": 20,
+                  }
+                }
+              >
+                Limited parking is available near The Armory. See recommendations below for directions & where to park.
+              </Text>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
                     "backgroundColor": "rgba(86,227,159,0.20)",
                     "borderRadius": 4,
                     "justifyContent": "center",

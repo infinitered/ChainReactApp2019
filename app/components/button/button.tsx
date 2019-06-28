@@ -15,6 +15,7 @@ export function Button(props: ButtonProps) {
     preset = "primary",
     tx,
     text,
+    children,
     style: styleOverride,
     textStyle: textStyleOverride,
     ...rest
@@ -30,6 +31,7 @@ export function Button(props: ButtonProps) {
   return (
     <TouchableOpacity style={viewStyle} {...rest}>
       <Text tx={tx} text={text} style={textStyle} />
+      {children}
     </TouchableOpacity>
   )
 }
