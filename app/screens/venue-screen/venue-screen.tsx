@@ -10,13 +10,26 @@ import { NearbyAttractions } from "../../components/nearby-attractions"
 import { BlogLink } from "../../components/blog-link/blog-link"
 
 export interface VenueScreenProps extends NavigationScreenProps<{}> {}
+export interface VenueScreenState {
+  renderFullContent: boolean
+}
 
 const TITLE: TextStyle = {
   marginTop: spacing.extraLarge,
   marginLeft: spacing.large,
 }
 
-export class VenueScreen extends React.Component<VenueScreenProps, {}> {
+export class VenueScreen extends React.Component<VenueScreenProps, VenueScreenState> {
+  state = {
+    renderFullContent: false,
+  }
+
+  componentDidMount() {
+    requestAnimationFrame(() => {
+      this.setState({ renderFullContent: true })
+    })
+  }
+
   render() {
     return (
       <Screen preset="scroll" backgroundColor={palette.portGore}>
@@ -24,7 +37,7 @@ export class VenueScreen extends React.Component<VenueScreenProps, {}> {
         <GerdingTheater />
         <GettingToChainReact />
         <BlogLink />
-        <NearbyAttractions />
+        {this.state.renderFullContent ? <NearbyAttractions /> : null}
       </Screen>
     )
   }
