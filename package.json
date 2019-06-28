@@ -44,6 +44,7 @@
     "mobx": "^4.9.4",
     "mobx-react": "^5.0.0",
     "mobx-state-tree": "^3.10.1",
+    "prop-types": "^15.7.2",
     "ramda": "^0.26.1",
     "react": "16.8.3",
     "react-apollo": "^2.5.8",
@@ -63,8 +64,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
-    "@babel/runtime": "^7.4.5",
     "@babel/plugin-proposal-decorators": "^7.2.3",
+    "@babel/runtime": "^7.4.5",
     "@storybook/addon-storyshots": "^4.1.13",
     "@storybook/react-native": "^4.1.13",
     "@types/jest": "^24.0.15",
