@@ -15,9 +15,9 @@ export function Button(props: ButtonProps) {
     preset = "primary",
     tx,
     text,
+    children,
     style: styleOverride,
     textStyle: textStyleOverride,
-    imageSource,
     ...rest
   } = props
 
@@ -30,8 +30,8 @@ export function Button(props: ButtonProps) {
 
   return (
     <TouchableOpacity style={viewStyle} {...rest}>
-      {imageSource && <Image source={imageSource} />}
       <Text tx={tx} text={text} style={textStyle} />
+      {children}
     </TouchableOpacity>
   )
 }

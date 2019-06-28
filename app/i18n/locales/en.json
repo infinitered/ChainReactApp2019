@@ -71,7 +71,11 @@
       "description1": "The closest airport is Portland International Airport (PDX), a one-hour flight from San Francisco. From New York, PDX is more like a six or seven-hour flight. Think of all the email you can catch up on!",
       "description2": "Upon arriving at PDX, take a taxi, Uber, or Lyft downtown. It's an easy 20-minute ride to The Benson Hotel where the conference kicks off. Once you’re at your hotel, grabbing a Lyft or Uber is a breeze, so there’s no need to rent a car. You’ll be exploring all the city has to offer in no time.",
       "rideShare": "UBER & LYFT (30 MINS)",
-      "massTransit": "MAX/LIGHTRAIL (55 MINS)"
+      "massTransit": "MAX/LIGHTRAIL (55 MINS)",
+      "rideWithLyft": "RIDE WITH LYFT",
+      "rideWithUber": "RIDE WITH UBER",
+      "drivingTitle": "PLANNING ON DRIVING?",
+      "drivingDescription": "Limited parking is available near The Armory. See recommendations below for directions & where to park."
     },
     "blog": {
       "title": "SEE THE SIGHTS",

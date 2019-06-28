@@ -1,4 +1,4 @@
-import { ImageSourcePropType, ViewStyle, TouchableOpacityProperties, TextStyle } from "react-native"
+import { TextStyle, TouchableOpacityProperties, ViewStyle } from "react-native"
 import { ButtonPresetNames } from "./button.presets"
 
 export interface ButtonProps extends TouchableOpacityProperties {
@@ -28,7 +28,7 @@ export interface ButtonProps extends TouchableOpacityProperties {
   preset?: ButtonPresetNames
 
   /**
-   * The image source
+   * Children components.
    */
-  imageSource?: ImageSourcePropType
+  children?: React.ReactNode
 }
