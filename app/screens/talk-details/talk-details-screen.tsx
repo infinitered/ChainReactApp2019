@@ -1,41 +1,42 @@
-import * as React from "react"
-import {
-  TextInput,
-  ScrollView,
-  TouchableOpacity,
-  View,
-  AppState,
-  Image,
-  ViewStyle,
-  TextStyle,
-  ImageStyle,
-  Platform,
-  KeyboardAvoidingView,
-} from "react-native"
-import { inject, observer } from "mobx-react"
-import { NavigationScreenProps, NavigationEventSubscription } from "react-navigation"
 import Amplify, { API, graphqlOperation } from "aws-amplify"
 import { formatToTimeZone } from "date-fns-timezone"
+import { inject, observer } from "mobx-react"
+import * as React from "react"
+import {
+  AppState,
+  Image,
+  ImageStyle,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  TextInput,
+  TextStyle,
+  TouchableOpacity,
+  View,
+  ViewStyle,
+} from "react-native"
+import Hyperlink from "react-native-hyperlink"
+import { NavigationEventSubscription, NavigationScreenProps } from "react-navigation"
 import uuid from "uuid/v4"
+import config from "../../aws-exports"
+import { BackButton } from "../../components/back-button"
+import { Button } from "../../components/button"
+import { CodeOfConductLink } from "../../components/code-of-conduct-link"
 import { Screen } from "../../components/screen"
-import { palette, spacing, getScreenWidth, color } from "../../theme"
-import { Text } from "../../components/text"
+import { SpeakerBio } from "../../components/speaker-bio"
 import { SpeakerImage } from "../../components/speaker-image"
 import { TalkTitle } from "../../components/talk-title"
-import { SpeakerBio } from "../../components/speaker-bio"
-import { Talk } from "../../models/talk"
-import { listCommentsForTalk } from "../../graphql/queries"
+import { Text } from "../../components/text"
 import { createComment as CreateComment, createReport } from "../../graphql/mutations"
+import { listCommentsForTalk } from "../../graphql/queries"
 import { onCreateComment as OnCreateComment } from "../../graphql/subscriptions"
-import config from "../../aws-exports"
-import { calculateImageDimensions } from "./image-dimension-helpers"
-import { TalkStore } from "../../models/talk-store"
 import { NavigationStore } from "../../models/navigation-store"
-import Hyperlink from "react-native-hyperlink"
+import { Talk } from "../../models/talk"
+import { TalkStore } from "../../models/talk-store"
+import { color, getScreenWidth, palette, spacing } from "../../theme"
 import { TIMEZONE } from "../../utils/info"
 import { loadString } from "../../utils/storage"
-import { CodeOfConductLink } from "../../components/code-of-conduct-link"
-import { Button } from "../../components/button"
+import { calculateImageDimensions } from "./image-dimension-helpers"
 
 Amplify.configure(config)
 
@@ -173,11 +174,9 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
         borderBottomWidth: 0,
       },
       headerBackTitle: null,
-      headerBackImage: backImage,
+      headerBackImage: <BackButton backTitle={navigation.getParam("backTitle", "SCHEDULE")} />,
       headerTintColor: palette.shamrock,
-      title: `${formatToTimeZone(talk.startTime, "h:mm", {
-        timeZone: TIMEZONE,
-      })} - ${formatToTimeZone(talk.endTime, "h:mm", { timeZone: TIMEZONE })}`,
+      title: null,
       headerTitleStyle: {
         textAlign: "left",
         fontWeight: "500",

@@ -1,8 +1,10 @@
+import { formatToTimeZone } from "date-fns-timezone"
 import * as React from "react"
-import { View, ViewStyle, TextStyle, Linking, Platform } from "react-native"
-import { Text } from "../text"
+import { Linking, Platform, TextStyle, View, ViewStyle } from "react-native"
 import { palette, spacing } from "../../theme"
+import { TIMEZONE } from "../../utils/info"
 import { BulletItem } from "../bullet-item/bullet-item"
+import { Text } from "../text"
 
 const ROOT: ViewStyle = {
   width: "100%",
@@ -32,11 +34,14 @@ export class TalkTitle extends React.Component<{ talk: any }, {}> {
   }
 
   renderTalk = () => {
-    const { title, speakers } = this.props.talk
-    const splitName = speakers ? speakers[0].name.split(" ") : [""]
+    const { talk } = this.props
+    const { title, speakers } = talk
+    const talkTime = `${formatToTimeZone(talk.startTime, "h:mm", {
+      timeZone: TIMEZONE,
+    })} - ${formatToTimeZone(talk.endTime, "h:mm", { timeZone: TIMEZONE })}`
     return (
       <View style={ROOT}>
-        <Text text={`${splitName[0].toUpperCase()}'S TALK`} preset="sectionHeader" style={LABEL} />
+        <Text text={talkTime} preset="sectionHeader" style={LABEL} />
         <Text text={title} preset="header" style={TITLE} />
       </View>
     )
