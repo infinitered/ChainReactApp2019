@@ -15,6 +15,7 @@ import {
   View,
   ViewStyle,
 } from "react-native"
+import DeviceInfo from "react-native-device-info"
 import Hyperlink from "react-native-hyperlink"
 import { NavigationEventSubscription, NavigationScreenProps } from "react-navigation"
 import uuid from "uuid/v4"
@@ -28,7 +29,7 @@ import { SpeakerImage } from "../../components/speaker-image"
 import { TalkTitle } from "../../components/talk-title"
 import { Text } from "../../components/text"
 import { createComment as CreateComment, createReport } from "../../graphql/mutations"
-import { listCommentsForTalk } from "../../graphql/queries"
+import { getBannedId, listCommentsForTalk } from "../../graphql/queries"
 import { onCreateComment as OnCreateComment } from "../../graphql/subscriptions"
 import { NavigationStore } from "../../models/navigation-store"
 import { Talk } from "../../models/talk"
@@ -37,6 +38,8 @@ import { color, getScreenWidth, palette, spacing } from "../../theme"
 import { TIMEZONE } from "../../utils/info"
 import { loadString } from "../../utils/storage"
 import { calculateImageDimensions } from "./image-dimension-helpers"
+
+const uniqueId = DeviceInfo.getUniqueID()
 
 Amplify.configure(config)
 
@@ -195,6 +198,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
     inputValue: "",
     name: "",
     comments: [],
+    showInput: true,
   }
 
   async componentDidMount() {
@@ -204,6 +208,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
     this.subscribeToComments(id)
     AppState.addEventListener("change", this.handleAppStateChange)
     this.fetchUserName()
+    this.checkBanned()
     this.navListener = addListener("action", () => {
       // check if talkDetails is focused
       if (currentRoute.routeName === "talkDetails") {
@@ -216,6 +221,19 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
     this.commentSubscription.unsubscribe()
     this.navListener.remove()
     AppState.removeEventListener("change", this.handleAppStateChange)
+  }
+
+  checkBanned = async () => {
+    try {
+      const {
+        data: { getBannedId: isBanned },
+      } = await API.graphql(graphqlOperation(getBannedId, { id: uniqueId }))
+      if (isBanned) {
+        this.setState({ showInput: false })
+      }
+    } catch (err) {
+      console.log("error: ", err)
+    }
   }
 
   fetchUserName = async () => {
@@ -269,6 +287,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
   createComment = async () => {
     const { id } = this.props.navigation.state.params.talk
     const comment = {
+      deviceId: uniqueId,
       text: this.state.inputValue,
       clientId: CLIENTID,
       createdBy: this.state.name,
@@ -288,9 +307,9 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
     }
   }
 
-  reportComment = async ({ text, id }) => {
+  reportComment = async ({ text, id, deviceId }) => {
     const { title } = this.props.navigation.state.params.talk
-    const report = { comment: text, commentId: id, talkTitle: title }
+    const report = { comment: text, commentId: id, talkTitle: title, deviceId }
     const comments = this.state.comments.filter(c => c.id !== id)
     this.setState({ comments })
     try {
@@ -372,23 +391,25 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
             </ScrollView>
             <View style={{ ...INPUT_CONTAINER, ...widthStyles }}>
               <CodeOfConductLink onPress={this.linkToCodeOfConduct} style={CODE_OF_CONDUCT_LINK} />
-              <View style={{ flexDirection: "row" }}>
-                <TextInput
-                  onChangeText={v => this.setState({ inputValue: v })}
-                  style={MESSAGE_INPUT}
-                  placeholder="Type a message..."
-                  onSubmitEditing={this.createComment}
-                  value={this.state.inputValue}
-                  returnKeyType={"send"}
-                />
-                <Button
-                  preset="dark"
-                  onPress={this.createComment}
-                  tx="common.send"
-                  textStyle={SEND_BUTTON_TEXT}
-                  style={SEND_BUTTON}
-                />
-              </View>
+              {this.state.showInput && (
+                <View style={{ flexDirection: "row" }}>
+                  <TextInput
+                    onChangeText={v => this.setState({ inputValue: v })}
+                    style={MESSAGE_INPUT}
+                    placeholder="Type a message..."
+                    onSubmitEditing={this.createComment}
+                    value={this.state.inputValue}
+                    returnKeyType={"send"}
+                  />
+                  <Button
+                    preset="dark"
+                    onPress={this.createComment}
+                    tx="common.send"
+                    textStyle={SEND_BUTTON_TEXT}
+                    style={SEND_BUTTON}
+                  />
+                </View>
+              )}
             </View>
           </View>
         )}
