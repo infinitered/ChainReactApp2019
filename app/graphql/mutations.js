@@ -244,6 +244,7 @@ export const createComment = `
     $createdAt: String
     $createdBy: String
     $id: ID
+    $deviceId: ID
   ) {
     createComment(
       input: {
@@ -253,9 +254,11 @@ export const createComment = `
         createdAt: $createdAt
         createdBy: $createdBy
         id: $id
+        deviceId: $deviceId
       }
     ) {
       id
+      deviceId
       clientId
       text
       createdAt
