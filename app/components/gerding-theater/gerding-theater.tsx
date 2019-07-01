@@ -1,5 +1,5 @@
 import * as React from "react"
-import { View, Image, ViewStyle, ImageStyle, TextStyle } from "react-native"
+import { Image, ImageStyle, TextStyle, View, ViewStyle } from "react-native"
 import { Text } from "../text"
 import { spacing } from "../../theme"
 

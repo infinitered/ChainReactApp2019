@@ -1,7 +1,7 @@
 import * as React from "react"
-import { View, TouchableOpacity, ViewStyle, TextStyle } from "react-native"
+import { TextStyle, TouchableOpacity, View, ViewStyle } from "react-native"
 import { Text } from "../text"
-import { palette, spacing, getScreenHeight, getScreenWidth } from "../../theme"
+import { getScreenWidth, palette, spacing } from "../../theme"
 import { Attraction } from "../attraction"
 const nearbyAttractionsData = require("../nearby-attractions/nearby-attractions.data.json")
 

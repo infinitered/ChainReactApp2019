@@ -1,0 +1,73 @@
+diff --git a/node_modules/@types/react-native/globals.d.ts b/node_modules/@types/react-native/globals.d.ts
+index 7f27293..ad4efb2 100644
+--- a/node_modules/@types/react-native/globals.d.ts
++++ b/node_modules/@types/react-native/globals.d.ts
+@@ -37,7 +37,7 @@ declare interface WindowOrWorkerGlobalScope {
+ 
+ interface Blob {}
+ 
+-declare class FormData {
++declare class RNFormData {
+     append(name: string, value: any): void;
+ }
+ 
+@@ -47,7 +47,7 @@ declare interface Body {
+     blob(): Promise<Blob>;
+     json(): Promise<any>;
+     text(): Promise<string>;
+-    formData(): Promise<FormData>;
++    formData(): Promise<RNFormData>;
+ }
+ 
+ declare interface Headers {
+@@ -81,8 +81,8 @@ type BodyInit_ =
+     | string
+     | null;
+ 
+-declare interface RequestInit {
+-    body?: BodyInit_;
++    declare interface RequestInit {
++    body?: BodyInit | null;
+     credentials?: RequestCredentials_;
+     headers?: HeadersInit_;
+     integrity?: string;
+@@ -108,7 +108,7 @@ declare var Request: {
+     new (input: Request | string, init?: RequestInit): Request;
+ };
+ 
+-declare type RequestInfo = Request | string;
++// declare type RequestInfo = Request | string;
+ 
+ declare interface ResponseInit {
+     headers?: HeadersInit_;
+@@ -127,6 +127,7 @@ declare interface Response extends Object, Body {
+     clone(): Response;
+ }
+ 
++// @ts-ignore
+ declare var Response: {
+     prototype: Response;
+     new (body?: BodyInit_, init?: ResponseInit): Response;
+@@ -250,4 +251,4 @@ declare var XMLHttpRequestUpload: {
+     new (): XMLHttpRequestUpload;
+ };
+ 
+-declare type XMLHttpRequestResponseType = "" | "arraybuffer" | "blob" | "document" | "json" | "text";
++// declare type XMLHttpRequestResponseType = "" | "arraybuffer" | "blob" | "document" | "json" | "text";
+diff --git a/node_modules/@types/react-native/index.d.ts b/node_modules/@types/react-native/index.d.ts
+index 126e340..0e139d5 100644
+--- a/node_modules/@types/react-native/index.d.ts
++++ b/node_modules/@types/react-native/index.d.ts
+@@ -9414,10 +9414,11 @@ declare global {
+      */
+     interface Navigator {
+         readonly product: string;
++        //@ts-ignore
+         readonly geolocation: Geolocation;
+     }
+ 
+-    const navigator: Navigator;
++    // const navigator: Navigator;
+ 
+     /**
+      * This contains the non-native `XMLHttpRequest` object, which you can use if you want to route network requests

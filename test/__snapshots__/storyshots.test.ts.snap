@@ -7517,6 +7517,7 @@ exports[`Storyshots SponsorLogo Presets 1`] = `
             }
           >
             <Image
+              source={1}
               style={
                 Object {
                   "alignSelf": "center",
@@ -7680,6 +7681,7 @@ exports[`Storyshots SponsorLogo Presets 1`] = `
             }
           >
             <Image
+              source={1}
               style={
                 Object {
                   "alignSelf": "center",
@@ -7761,6 +7763,7 @@ exports[`Storyshots SponsorLogo Presets 1`] = `
             }
           >
             <Image
+              source={1}
               style={
                 Object {
                   "alignSelf": "center",

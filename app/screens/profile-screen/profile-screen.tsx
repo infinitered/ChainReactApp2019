@@ -1,13 +1,13 @@
-import React from "react"
-import { View, ViewStyle } from "react-native"
+import * as React from "react"
+import { Button } from "../../components/button"
 import { Screen } from "../../components/screen"
 import { Text } from "../../components/text"
 import { palette, spacing } from "../../theme"
 import { TextStyle } from "react-native"
 import name from "./profile-info"
-import { Button } from "../../components/button"
+import { View, ViewStyle } from "react-native"
 import { TextField } from "../../components/text-field/text-field"
-import { observer, inject } from "mobx-react"
+import { inject, observer } from "mobx-react"
 import { NavigationScreenProps } from "react-navigation"
 import { TalkStore } from "../../models/talk-store"
 import { CodeOfConductLink } from "../../components/code-of-conduct-link"
@@ -67,8 +67,8 @@ interface ProfileScreenState {
   editInput: boolean
 }
 
-@observer
 @inject("talkStore")
+@observer
 export class ProfileScreen extends React.Component<ProfileScreenProps, ProfileScreenState> {
   static navigationOptions = {
     header: null,

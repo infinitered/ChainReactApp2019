@@ -1,5 +1,5 @@
 import { onSnapshot } from "mobx-state-tree"
-import { RootStoreModel, RootStore } from "../root-store"
+import { RootStore, RootStoreModel } from "../root-store"
 import { Environment } from "../environment"
 import * as storage from "../../utils/storage"
 import { Reactotron } from "../../services/reactotron"
@@ -34,7 +34,7 @@ export async function setupRootStore() {
   } catch {
     // if there's any problems loading, then let's at least fallback to an empty state
     // instead of crashing.
-    rootStore = RootStoreModel.create({}, env)
+    rootStore = RootStoreModel.create({} as any, env)
   }
 
   // reactotron logging

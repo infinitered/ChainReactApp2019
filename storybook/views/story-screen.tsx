@@ -1,5 +1,5 @@
 import * as React from "react"
-import { ViewStyle, KeyboardAvoidingView, Platform } from "react-native"
+import { KeyboardAvoidingView, Platform, ViewStyle } from "react-native"
 
 const ROOT: ViewStyle = { backgroundColor: "#f0f0f0", flex: 1 }
 

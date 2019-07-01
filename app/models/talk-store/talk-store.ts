@@ -1,4 +1,4 @@
-import { types, flow, getEnv } from "mobx-state-tree"
+import { flow, getEnv, types } from "mobx-state-tree"
 import gql from "graphql-tag"
 import { TalkModel, TalkSnapshot } from "../talk"
 import { SettingModel, SettingSnapshot } from "../setting"
@@ -81,7 +81,7 @@ export const TalkStoreModel = types
   }))
 
 export const defaults = {}
-export const createTalkStoreModel = () => types.optional(TalkStoreModel, defaults)
+export const createTalkStoreModel = () => types.optional(TalkStoreModel, defaults as any) // Using any because https://github.com/mobxjs/mobx-state-tree/issues/1307
 
 type TalkStoreType = typeof TalkStoreModel.Type
 export interface TalkStore extends TalkStoreType {}

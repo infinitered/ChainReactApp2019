@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Linking, Platform } from "react-native"
+import { Linking } from "react-native"
 import { ContentLink } from "../content-link"
 
 export function SurveyLink() {

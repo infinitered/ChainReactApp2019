@@ -1,5 +1,5 @@
 import * as React from "react"
-import { TextStyle, ViewStyle } from "react-native"
+import { TextStyle } from "react-native"
 import { Text } from "../../components/text"
 import { NavigationScreenProps } from "react-navigation"
 import { Screen } from "../../components/screen"

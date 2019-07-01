@@ -1,8 +1,8 @@
 import * as React from "react"
-import { View, ViewStyle, TextStyle } from "react-native"
+import { TextStyle, View, ViewStyle } from "react-native"
 import { Text } from "../text"
 import { SocialButton } from "../social-button"
-import { palette, spacing, getScreenWidth } from "../../theme"
+import { getScreenWidth, palette, spacing } from "../../theme"
 
 export interface SpeakerBioProps {
   speaker: any

@@ -28,6 +28,7 @@
     "@react-native-community/async-storage": "^1.5.0",
     "apisauce": "^1.0.3",
     "apollo-boost": "^0.1.9",
+    "apollo-client": "^2.6.3",
     "appcenter": "1.13.0",
     "appcenter-analytics": "1.13.0",
     "appcenter-crashes": "1.13.0",
@@ -69,6 +70,7 @@
     "@storybook/addon-storyshots": "^4.1.13",
     "@storybook/react-native": "^4.1.13",
     "@types/jest": "^24.0.15",
+    "@types/node": "^12.0.10",
     "@types/ramda": "^0.26.12",
     "@types/react": "^16.8.22",
     "@types/react-native": "^0.57.64",
@@ -82,7 +84,7 @@
     "lint-staged": "^7.0.0",
     "metro-react-native-babel-preset": "^0.54.1",
     "npm-run-all": "^4.1.2",
-    "patch-package": "^5.1.1",
+    "patch-package": "^6.0.0-12",
     "postinstall-prepare": "^1.0.1",
     "prettier": "^1.18.2",
     "react-dom": "^16.2.0",
@@ -93,6 +95,9 @@
     "tslint": "^5.18.0",
     "tslint-config-prettier": "^1.10.0",
     "typescript": "^3.5.2"
+  },
+  "resolutions": {
+    "apollo-cache-inmemory": "^1.4.3"
   },
   "jest": {
     "preset": "jest-preset-ignite",

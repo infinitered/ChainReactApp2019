@@ -1,4 +1,4 @@
-import { TextStyle, TextProperties } from "react-native"
+import { TextProperties, TextStyle } from "react-native"
 import { TextPresets } from "./text.presets"
 
 export interface TextProps extends TextProperties {

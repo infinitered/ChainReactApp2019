@@ -1,16 +1,16 @@
 import * as React from "react"
 import Mapbox from "@mapbox/react-native-mapbox-gl"
 import {
-  View,
-  ViewStyle,
   Image,
   ImageStyle,
+  Linking,
   TextStyle,
   TouchableOpacity,
-  Linking,
+  View,
+  ViewStyle,
 } from "react-native"
 import { Text } from "../text"
-import { color, spacing, getScreenWidth } from "../../theme"
+import { color, getScreenWidth, spacing } from "../../theme"
 import { CLOSE_ICON } from "./"
 
 export interface AttractionsMapCalloutProps {

@@ -1,8 +1,8 @@
 import * as React from "react"
 import Mapbox from "@mapbox/react-native-mapbox-gl"
-import { View, ViewStyle, TouchableWithoutFeedback } from "react-native"
+import { TouchableWithoutFeedback, View, ViewStyle } from "react-native"
 import { AttractionsMapCallout } from "../attractions-map-callout"
-import { color, getScreenWidth, getScreenHeight } from "../../theme"
+import { color, getScreenHeight, getScreenWidth } from "../../theme"
 import { unnest } from "ramda"
 const nearbyAttractionsData = require("../nearby-attractions/nearby-attractions.data.json")
 
@@ -65,13 +65,14 @@ export class AttractionsMap extends React.Component<{}, AttractionsMapState> {
 
   render() {
     const size = { width: getScreenWidth(), maxHeight: getScreenHeight() * 0.8 }
+    const styleUrl: any = "mapbox://styles/jhuskey/cjabpqolp3lf02so534xe4q9g"
     return (
       <Mapbox.MapView
         ref={ref => (this.mapView = ref)}
         centerCoordinate={nearbyAttractionsData.locations[0].geometry.coordinates}
         rotateEnabled={false}
         pitchEnabled={false}
-        styleURL="mapbox://styles/jhuskey/cjabpqolp3lf02so534xe4q9g"
+        styleURL={styleUrl}
         style={{ ...MAPVIEW, ...size }}
         // showUserLocation
       >

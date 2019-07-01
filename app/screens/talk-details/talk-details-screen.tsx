@@ -38,6 +38,7 @@ import { color, getScreenWidth, palette, spacing } from "../../theme"
 import { TIMEZONE } from "../../utils/info"
 import { loadString } from "../../utils/storage"
 import { calculateImageDimensions } from "./image-dimension-helpers"
+import { differenceInMilliseconds } from "date-fns"
 
 const uniqueId = DeviceInfo.getUniqueID()
 
@@ -101,38 +102,44 @@ const MENU_ITEM: ViewStyle = {
   width: "100%",
 }
 
-const BACK_BUTTON: ViewStyle = {
-  paddingHorizontal: spacing.small,
-}
-
 const MENU_ITEM_TEXT: TextStyle = { color: palette.white }
 
 const TAB_HOLDER: ViewStyle = { flex: 1 }
 const TAB_STYLE: ViewStyle = { paddingVertical: 7, alignItems: "center", justifyContent: "center" }
-const TAB_CONTAINER = { flexDirection: "row" }
-const WHITE_TEXT = { color: "white" }
-const COMMENT_TEXT = { ...WHITE_TEXT, fontSize: 16, marginTop: 4 }
-const FLEX_ONE = { flex: 1 }
-const FLEX_ROW = { flexDirection: "row" }
-const COMMENT_CONTAINER = { paddingVertical: 15, marginBottom: spacing.huge }
-const COMMENT_STYLE = {
+const TAB_CONTAINER: ViewStyle = { flexDirection: "row" }
+const WHITE_TEXT: TextStyle = { color: "white" }
+const COMMENT_TEXT: TextStyle = { ...WHITE_TEXT, fontSize: 16, marginTop: 4 }
+const FLEX_ONE: ViewStyle = { flex: 1 }
+const FLEX_ROW: ViewStyle = { flexDirection: "row" }
+const COMMENT_CONTAINER: ViewStyle = { paddingVertical: 15, marginBottom: spacing.huge }
+const COMMENT_STYLE: ViewStyle = {
   paddingBottom: 15,
   paddingTop: 20,
   paddingHorizontal: 20,
   borderTopWidth: 1,
   borderColor: "rgba(255, 255, 255, .1)",
 }
-const CREATED_BY = { color: "white", fontWeight: "600" }
-const CREATED_AT = { color: "rgba(255, 255, 255, .5)", fontSize: 11, marginLeft: 8, marginTop: 3 }
-const INPUT_CONTAINER = {
+const CREATED_BY: TextStyle = { color: "white", fontWeight: "600" }
+const CREATED_AT: TextStyle = {
+  color: "rgba(255, 255, 255, .5)",
+  fontSize: 11,
+  marginLeft: 8,
+  marginTop: 3,
+}
+const INPUT_CONTAINER: ViewStyle = {
   bottom: 0,
   position: "absolute",
   left: 0,
   backgroundColor: color.background,
 }
-const MESSAGE_INPUT = { backgroundColor: "white", height: 50, paddingHorizontal: 8, flex: 1 }
-const REPORT = { marginTop: 5, color: palette.angry, fontSize: 11 }
-const CODE_OF_CONDUCT_LINK = {
+const MESSAGE_INPUT: ViewStyle = {
+  backgroundColor: "white",
+  height: 50,
+  paddingHorizontal: 8,
+  flex: 1,
+}
+const REPORT: TextStyle = { marginTop: 5, color: palette.angry, fontSize: 11 }
+const CODE_OF_CONDUCT_LINK: ViewStyle = {
   paddingHorizontal: spacing.large,
   paddingVertical: spacing.medium,
   borderTopWidth: 1,
@@ -140,15 +147,7 @@ const CODE_OF_CONDUCT_LINK = {
 }
 const SEND_BUTTON_TEXT: TextStyle = { paddingHorizontal: spacing.small }
 const SEND_BUTTON: ViewStyle = { paddingHorizontal: spacing.small, borderRadius: 0 }
-
-const HIT_SLOP = {
-  top: 30,
-  left: 30,
-  right: 30,
-  bottom: 30,
-}
-
-const MAIN_CONTAINER = { flex: 1, backgroundColor: palette.portGore }
+const MAIN_CONTAINER: ViewStyle = { flex: 1, backgroundColor: palette.portGore }
 
 export interface NavigationStateParams {
   talk: Talk
@@ -159,17 +158,10 @@ export interface TalkDetailsScreenProps extends NavigationScreenProps<Navigation
   talkStore: TalkStore
 }
 
-const backImage = () => (
-  <View style={BACK_BUTTON} hitSlop={HIT_SLOP}>
-    <Image source={require("../../components/title-bar/icon.back-arrow.png")} />
-  </View>
-)
-
 @inject("navigationStore", "talkStore")
 @observer
 export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {}> {
   static navigationOptions = ({ navigation }) => {
-    const { talk } = navigation.state.params
     const titleMargin = Platform.OS === "ios" ? -50 : 0
     return {
       headerStyle: {
@@ -189,8 +181,8 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
     }
   }
 
-  scroller = React.createRef()
-  commentSubscription = {}
+  scroller: any = React.createRef()
+  commentSubscription: any = {}
   navListener: NavigationEventSubscription
 
   state = {
@@ -227,7 +219,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
     try {
       const {
         data: { getBannedId: isBanned },
-      } = await API.graphql(graphqlOperation(getBannedId, { id: uniqueId }))
+      } = await (API.graphql(graphqlOperation(getBannedId, { id: uniqueId })) as any)
       if (isBanned) {
         this.setState({ showInput: false })
       }
@@ -246,9 +238,9 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
   }
 
   subscribeToComments = id => {
-    this.commentSubscription = API.graphql(
+    this.commentSubscription = (API.graphql(
       graphqlOperation(OnCreateComment, { talkId: id }),
-    ).subscribe({
+    ) as any).subscribe({
       next: eventData => {
         if (this.state.currentView === "details") return
         const { onCreateComment } = eventData.value.data
@@ -273,7 +265,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
 
   fetchComments = async () => {
     try {
-      const commentData = await API.graphql(
+      const commentData: any = await API.graphql(
         graphqlOperation(listCommentsForTalk, {
           talkId: this.props.navigation.state.params.talk.id,
         }),
@@ -345,7 +337,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
 
     comments = comments
       .sort(function(a, b) {
-        return new Date(b.createdAt) - new Date(a.createdAt)
+        return differenceInMilliseconds(new Date(b.createdAt), new Date(a.createdAt))
       })
       .reverse()
 
@@ -630,5 +622,7 @@ function chosen(type, comp) {
       borderBottomWidth: 2,
       borderBottomColor: "white",
     }
+  } else {
+    return null
   }
 }

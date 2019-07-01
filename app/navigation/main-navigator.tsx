@@ -1,5 +1,5 @@
 import * as React from "react"
-import { createStackNavigator, createBottomTabNavigator } from "react-navigation"
+import { createBottomTabNavigator, createStackNavigator } from "react-navigation"
 import { ScheduleScreen } from "../screens/schedule-screen"
 import { VenueScreen } from "../screens/venue-screen"
 import { InfoScreen } from "../screens/info-screen"
