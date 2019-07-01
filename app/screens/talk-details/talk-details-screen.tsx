@@ -219,7 +219,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
     try {
       const {
         data: { getBannedId: isBanned },
-      } = await API.graphql(graphqlOperation(getBannedId, { id: uniqueId }))
+      } = await (API.graphql(graphqlOperation(getBannedId, { id: uniqueId })) as any)
       if (isBanned) {
         this.setState({ showInput: false })
       }
