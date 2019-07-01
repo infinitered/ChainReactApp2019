@@ -1,8 +1,8 @@
 import * as React from "react"
 import Mapbox from "@mapbox/react-native-mapbox-gl"
-import { View, ViewStyle, TouchableWithoutFeedback } from "react-native"
+import { TouchableWithoutFeedback, View, ViewStyle } from "react-native"
 import { AttractionsMapCallout } from "../attractions-map-callout"
-import { color, getScreenWidth, getScreenHeight } from "../../theme"
+import { color, getScreenHeight, getScreenWidth } from "../../theme"
 import { unnest } from "ramda"
 const nearbyAttractionsData = require("../nearby-attractions/nearby-attractions.data.json")
 

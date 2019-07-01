@@ -1,4 +1,4 @@
-import { types, flow, getEnv } from "mobx-state-tree"
+import { flow, getEnv, types } from "mobx-state-tree"
 import gql from "graphql-tag"
 import { TalkModel, TalkSnapshot } from "../talk"
 import { SettingModel, SettingSnapshot } from "../setting"

@@ -1,4 +1,4 @@
-import { ViewStyle, ViewProperties } from "react-native"
+import { ViewProperties, ViewStyle } from "react-native"
 import { FooterPresetNames } from "./footer.presets"
 
 export interface FooterProps extends ViewProperties {

@@ -3,7 +3,7 @@
   "rules": {
     "quotemark": [true, "double", "jsx-double", "avoid-escape"],
     "semicolon": [true, "never"],
-    "ordered-imports": true,
+    "ordered-imports": [true, { "import-sources-order": "any" }],
     "trailing-comma": [
       true,
       {

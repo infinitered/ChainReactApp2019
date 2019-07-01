@@ -1,12 +1,12 @@
 import * as React from "react"
 import {
-  View,
-  ViewStyle,
+  Animated,
   Image,
   ImageStyle,
   TextStyle,
   TouchableWithoutFeedback,
-  Animated,
+  View,
+  ViewStyle,
 } from "react-native"
 import { ScheduleCellPresets } from "./schedule-cell.presets"
 import { ScheduleCellProps } from "./schedule-cell.props"

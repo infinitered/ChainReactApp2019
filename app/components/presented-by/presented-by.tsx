@@ -1,10 +1,10 @@
 import * as React from "react"
-import { View, Image, ViewStyle, ImageStyle, TextStyle } from "react-native"
+import { Image, ImageStyle, TextStyle, View, ViewStyle } from "react-native"
 import { presentedByPresets } from "./presented-by.presets"
 import { PresentedByProps } from "./presented-by.props"
 import { Text } from "../text"
 import { SocialButton } from "../social-button"
-import { spacing, palette, getScreenWidth } from "../../theme"
+import { getScreenWidth, palette, spacing } from "../../theme"
 
 const BACKGROUND: ImageStyle = {
   position: "absolute",

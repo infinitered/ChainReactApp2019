@@ -1,5 +1,5 @@
 import * as React from "react"
-import { View, Image, ViewStyle, ImageStyle } from "react-native"
+import { Image, ImageStyle, View, ViewStyle } from "react-native"
 import { RatingProps } from "./rating.props"
 
 const filled = require("./star.filled.png")

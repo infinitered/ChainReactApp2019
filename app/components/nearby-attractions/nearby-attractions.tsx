@@ -1,6 +1,6 @@
 import * as React from "react"
 import { View, ViewStyle } from "react-native"
-import { palette, spacing, getScreenWidth } from "../../theme"
+import { getScreenWidth, palette, spacing } from "../../theme"
 import { AttractionsList } from "../attractions-list"
 import { AttractionsMap } from "../attractions-map"
 

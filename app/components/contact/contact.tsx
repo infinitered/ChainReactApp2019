@@ -1,5 +1,5 @@
 import * as React from "react"
-import { View, ViewStyle, TextStyle, TouchableOpacity, Linking, Alert } from "react-native"
+import { Alert, Linking, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native"
 import { spacing } from "../../theme"
 import { SocialButton } from "../social-button"
 import { Text } from "../text"

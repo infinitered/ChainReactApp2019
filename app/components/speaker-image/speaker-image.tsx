@@ -1,7 +1,7 @@
 import * as React from "react"
-import { View, ViewStyle, Image, ImageStyle, TextStyle } from "react-native"
+import { Image, ImageStyle, TextStyle, View, ViewStyle } from "react-native"
 import { Text } from "../text"
-import { palette, spacing, getScreenWidth } from "../../theme"
+import { getScreenWidth, palette, spacing } from "../../theme"
 
 // Image size math
 const IMAGE_ASPECT_RATIO = 0.77 // This is the original aspect ratio of all the speaker images as they come from the server, which are 292 x 380.
