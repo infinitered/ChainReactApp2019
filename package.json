@@ -28,6 +28,7 @@
     "@react-native-community/async-storage": "^1.5.0",
     "apisauce": "^1.0.3",
     "apollo-boost": "^0.4.3",
+    "apollo-client": "^2.6.3",
     "appcenter": "1.13.0",
     "appcenter-analytics": "1.13.0",
     "appcenter-crashes": "1.13.0",
