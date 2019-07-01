@@ -2,6 +2,12 @@
 // this is an auto generated file. This will be overwritten
 import gql from "graphql-tag"
 
+export const getBannedId = `query getBannedId($id: ID!) {
+  getBannedId(id: $id) {
+    id
+  }
+}`
+
 export const listCommentsForTalk = gql`
   query listCommentsForTalk($talkId: ID) {
     listCommentsForTalk(talkId: $talkId) {
@@ -12,6 +18,7 @@ export const listCommentsForTalk = gql`
         clientId
         createdAt
         createdBy
+        deviceId
       }
     }
   }

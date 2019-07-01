@@ -19,6 +19,8 @@ target 'ChainReactConf' do
   pod 'RNGestureHandler', path: '../node_modules/react-native-gesture-handler'
   pod 'RNScreens', path: '../node_modules/react-native-screens'
 
+  pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'
+
   post_install do |installer|
     installer.pods_project.targets.each do |target|
       if target.name == "React"

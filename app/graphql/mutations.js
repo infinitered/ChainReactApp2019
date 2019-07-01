@@ -244,6 +244,7 @@ export const createComment = `
     $createdAt: String
     $createdBy: String
     $id: ID
+    $deviceId: ID
   ) {
     createComment(
       input: {
@@ -253,9 +254,11 @@ export const createComment = `
         createdAt: $createdAt
         createdBy: $createdBy
         id: $id
+        deviceId: $deviceId
       }
     ) {
       id
+      deviceId
       clientId
       text
       createdAt
@@ -324,11 +327,12 @@ export const deleteComment = `mutation DeleteComment($input: DeleteCommentInput!
 `
 
 export const createReport = `
-  mutation createReport($comment: String! $commentId: ID!, $talkTitle: String!) {
+  mutation createReport($comment: String! $commentId: ID!, $talkTitle: String! $deviceId: ID!) {
     createReport(input: {
       comment: $comment
       commentId: $commentId
       talkTitle: $talkTitle
+      deviceId: $deviceId
     }) {
       id comment commentId talkTitle
     }
