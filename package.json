@@ -83,7 +83,7 @@
     "lint-staged": "^7.0.0",
     "metro-react-native-babel-preset": "^0.54.1",
     "npm-run-all": "^4.1.2",
-    "patch-package": "^5.1.1",
+    "patch-package": "^6.0.0-12",
     "postinstall-prepare": "^1.0.1",
     "prettier": "^1.18.2",
     "react-dom": "^16.2.0",
