@@ -18,6 +18,7 @@ export const listCommentsForTalk = gql`
         clientId
         createdAt
         createdBy
+        deviceId
       }
     }
   }

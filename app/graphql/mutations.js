@@ -327,11 +327,12 @@ export const deleteComment = `mutation DeleteComment($input: DeleteCommentInput!
 `
 
 export const createReport = `
-  mutation createReport($comment: String! $commentId: ID!, $talkTitle: String!) {
+  mutation createReport($comment: String! $commentId: ID!, $talkTitle: String! $deviceId: ID!) {
     createReport(input: {
       comment: $comment
       commentId: $commentId
       talkTitle: $talkTitle
+      deviceId: $deviceId
     }) {
       id comment commentId talkTitle
     }

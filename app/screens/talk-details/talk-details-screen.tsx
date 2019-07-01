@@ -307,9 +307,9 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
     }
   }
 
-  reportComment = async ({ text, id }) => {
+  reportComment = async ({ text, id, deviceId }) => {
     const { title } = this.props.navigation.state.params.talk
-    const report = { comment: text, commentId: id, talkTitle: title }
+    const report = { comment: text, commentId: id, talkTitle: title, deviceId }
     const comments = this.state.comments.filter(c => c.id !== id)
     this.setState({ comments })
     try {
