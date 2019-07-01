@@ -1,4 +1,5 @@
 import * as React from "react"
+// @ts-ignore
 import { getNavigation, NavigationScreenProp, NavigationState } from "react-navigation"
 import { inject, observer } from "mobx-react"
 import { RootNavigator } from "./root-navigator"
@@ -7,8 +8,6 @@ import { NavigationStore } from "../models/navigation-store/navigation-store"
 interface StatefulNavigatorProps {
   navigationStore?: NavigationStore
 }
-
-var firstRun = true
 
 @inject("navigationStore")
 @observer

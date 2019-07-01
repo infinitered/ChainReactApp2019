@@ -35,7 +35,7 @@ export class TalkTitle extends React.Component<{ talk: any }, {}> {
 
   renderTalk = () => {
     const { talk } = this.props
-    const { title, speakers } = talk
+    const { title } = talk
     const talkTime = `${formatToTimeZone(talk.startTime, "h:mm", {
       timeZone: TIMEZONE,
     })} - ${formatToTimeZone(talk.endTime, "h:mm", { timeZone: TIMEZONE })}`

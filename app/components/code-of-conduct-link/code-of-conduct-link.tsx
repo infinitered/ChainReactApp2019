@@ -1,8 +1,7 @@
 import * as React from "react"
-import { TextStyle, View, ViewStyle } from "react-native"
+import { View, ViewStyle } from "react-native"
 import { Text } from "../text"
 import { Button } from "../button"
-import { palette, spacing } from "../../theme"
 
 const ROOT: ViewStyle = {
   flexDirection: "row",

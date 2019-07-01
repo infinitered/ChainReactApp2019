@@ -1,4 +1,4 @@
-import { isFriday, isThursday, isWednesday } from "date-fns"
+import { isFriday, isThursday } from "date-fns"
 import * as React from "react"
 import { NavigationScreenProps, ScrollView } from "react-navigation"
 import { Text } from "../../components/text"

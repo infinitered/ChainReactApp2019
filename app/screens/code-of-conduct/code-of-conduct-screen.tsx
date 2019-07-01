@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Image, TextStyle, View, ViewStyle } from "react-native"
+import { TextStyle, ViewStyle } from "react-native"
 import { NavigationScreenProps } from "react-navigation"
 import { BackButton } from "../../components/back-button"
 import { Contact } from "../../components/contact"

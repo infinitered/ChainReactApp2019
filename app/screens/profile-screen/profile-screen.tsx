@@ -1,5 +1,5 @@
+import * as React from "react"
 import { Button } from "../../components/button"
-import React from "react"
 import { Screen } from "../../components/screen"
 import { Text } from "../../components/text"
 import { palette, spacing } from "../../theme"
@@ -67,8 +67,8 @@ interface ProfileScreenState {
   editInput: boolean
 }
 
-@observer
 @inject("talkStore")
+@observer
 export class ProfileScreen extends React.Component<ProfileScreenProps, ProfileScreenState> {
   static navigationOptions = {
     header: null,
