@@ -1670,7 +1670,7 @@
 				PRODUCT_NAME = ChainReactConf;
 				PROVISIONING_PROFILE = "d63749b1-a778-4ccd-97cc-2690705c5dab";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development infinitered.stage.ChainReactConf";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1719,6 +1719,7 @@
 				PRODUCT_NAME = ChainReactConf;
 				PROVISIONING_PROFILE = "deed921e-f216-4d7e-9d3f-2f69fe457a44";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore infinitered.stage.ChainReactConf";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
