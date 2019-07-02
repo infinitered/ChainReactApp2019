@@ -7946,10 +7946,10 @@ reactotron-core-client@2.8.3, reactotron-core-client@^2.8.3:
   resolved "https://registry.yarnpkg.com/reactotron-core-client/-/reactotron-core-client-2.8.3.tgz#e8ce782f21ba3c04eb3c678297edceac283857ff"
   integrity sha512-TAidkKZvU2KyCSkRyorLm0RZ/8KnYMIWsawyMsXcSNm2aEOku/5RbBh/7yPNZHU1X7199UMs4T1TAedlK6/w6A==
 
-reactotron-mst@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/reactotron-mst/-/reactotron-mst-3.1.2.tgz#bf3a3d9e4f3fa1adfdfab21ca6500f4e90fa44d0"
-  integrity sha512-2jZpKuuY4Nra3WYYdrJVIN+2+PN+MbaHuwDNkdHrf/MVBYZGwRT/jFEpb4jlRMsUiOUs94kY3S82671i8stArA==
+reactotron-mst@^3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/reactotron-mst/-/reactotron-mst-3.1.3.tgz#110401af04be4e1d8d9185e73f1c9e54e393f204"
+  integrity sha512-mYdg7Ajp0immBrUHifhrFV2bwFEcGu/8mOGOhlbYJ2jDCFB5ZmZ3jY8LuZUnvwpL3zmLZUVfJFeousEZP1XJ5g==
   dependencies:
     ramda "^0.25.0"
 
