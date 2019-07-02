@@ -1155,6 +1155,14 @@ exports[`Storyshots Button Style Presets 1`] = `
           >
             <View
               accessible={true}
+              hitSlop={
+                Object {
+                  "bottom": 20,
+                  "left": 20,
+                  "right": 20,
+                  "top": 20,
+                }
+              }
               isTVSelectable={true}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -1269,6 +1277,14 @@ exports[`Storyshots Button Style Presets 1`] = `
           >
             <View
               accessible={true}
+              hitSlop={
+                Object {
+                  "bottom": 20,
+                  "left": 20,
+                  "right": 20,
+                  "top": 20,
+                }
+              }
               isTVSelectable={true}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -1383,6 +1399,14 @@ exports[`Storyshots Button Style Presets 1`] = `
           >
             <View
               accessible={true}
+              hitSlop={
+                Object {
+                  "bottom": 20,
+                  "left": 20,
+                  "right": 20,
+                  "top": 20,
+                }
+              }
               isTVSelectable={true}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -1408,8 +1432,7 @@ exports[`Storyshots Button Style Presets 1`] = `
                     "color": "#56E39F",
                     "fontFamily": "Gotham Rounded",
                     "fontSize": 14,
-                    "height": 14,
-                    "paddingHorizontal": 20,
+                    "textAlign": "center",
                   }
                 }
               >
@@ -1498,6 +1521,14 @@ exports[`Storyshots Button Style Presets 1`] = `
           >
             <View
               accessible={true}
+              hitSlop={
+                Object {
+                  "bottom": 20,
+                  "left": 20,
+                  "right": 20,
+                  "top": 20,
+                }
+              }
               isTVSelectable={true}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -2619,10 +2650,18 @@ exports[`Storyshots Code of Blog Link Presets 1`] = `
                   }
                 }
               >
-                Check out all the awesome things the Rose City has to offer in this blog post by our MC Jason!
+                Check out all the awesome things the Rose City has to offer in this blog post by our MC, Jason!
               </Text>
               <View
                 accessible={true}
+                hitSlop={
+                  Object {
+                    "bottom": 20,
+                    "left": 20,
+                    "right": 20,
+                    "top": 20,
+                  }
+                }
                 isTVSelectable={true}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -2648,8 +2687,7 @@ exports[`Storyshots Code of Blog Link Presets 1`] = `
                       "color": "#56E39F",
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
-                      "height": 14,
-                      "paddingHorizontal": 20,
+                      "textAlign": "center",
                     }
                   }
                 >
@@ -2915,6 +2953,14 @@ exports[`Storyshots Code of Conduct - Contact Presets 1`] = `
               >
                 <View
                   accessible={true}
+                  hitSlop={
+                    Object {
+                      "bottom": 20,
+                      "left": 20,
+                      "right": 20,
+                      "top": 20,
+                    }
+                  }
                   isTVSelectable={true}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -2928,7 +2974,6 @@ exports[`Storyshots Code of Conduct - Contact Presets 1`] = `
                         "alignItems": "center",
                         "height": 32,
                         "justifyContent": "center",
-                        "marginRight": 14,
                         "width": 32,
                       },
                       undefined,
@@ -2974,6 +3019,14 @@ exports[`Storyshots Code of Conduct - Contact Presets 1`] = `
               >
                 <View
                   accessible={true}
+                  hitSlop={
+                    Object {
+                      "bottom": 20,
+                      "left": 20,
+                      "right": 20,
+                      "top": 20,
+                    }
+                  }
                   isTVSelectable={true}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -2987,7 +3040,6 @@ exports[`Storyshots Code of Conduct - Contact Presets 1`] = `
                         "alignItems": "center",
                         "height": 32,
                         "justifyContent": "center",
-                        "marginRight": 14,
                         "width": 32,
                       },
                       undefined,
@@ -3033,6 +3085,14 @@ exports[`Storyshots Code of Conduct - Contact Presets 1`] = `
               >
                 <View
                   accessible={true}
+                  hitSlop={
+                    Object {
+                      "bottom": 20,
+                      "left": 20,
+                      "right": 20,
+                      "top": 20,
+                    }
+                  }
                   isTVSelectable={true}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -3046,7 +3106,6 @@ exports[`Storyshots Code of Conduct - Contact Presets 1`] = `
                         "alignItems": "center",
                         "height": 32,
                         "justifyContent": "center",
-                        "marginRight": 14,
                         "width": 32,
                       },
                       undefined,
@@ -3210,6 +3269,14 @@ exports[`Storyshots Code of Conduct Presets 1`] = `
               </Text>
               <View
                 accessible={true}
+                hitSlop={
+                  Object {
+                    "bottom": 20,
+                    "left": 20,
+                    "right": 20,
+                    "top": 20,
+                  }
+                }
                 isTVSelectable={true}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -3235,8 +3302,7 @@ exports[`Storyshots Code of Conduct Presets 1`] = `
                       "color": "#56E39F",
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
-                      "height": 14,
-                      "paddingHorizontal": 20,
+                      "textAlign": "center",
                     }
                   }
                 >
@@ -3380,6 +3446,14 @@ exports[`Storyshots Code of Photobomb Presets 1`] = `
               </Text>
               <View
                 accessible={true}
+                hitSlop={
+                  Object {
+                    "bottom": 20,
+                    "left": 20,
+                    "right": 20,
+                    "top": 20,
+                  }
+                }
                 isTVSelectable={true}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -3405,8 +3479,7 @@ exports[`Storyshots Code of Photobomb Presets 1`] = `
                       "color": "#56E39F",
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
-                      "height": 14,
-                      "paddingHorizontal": 20,
+                      "textAlign": "center",
                     }
                   }
                 >
@@ -5034,6 +5107,14 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
               </View>
               <View
                 accessible={true}
+                hitSlop={
+                  Object {
+                    "bottom": 20,
+                    "left": 20,
+                    "right": 20,
+                    "top": 20,
+                  }
+                }
                 isTVSelectable={true}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -5086,6 +5167,14 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
               </View>
               <View
                 accessible={true}
+                hitSlop={
+                  Object {
+                    "bottom": 20,
+                    "left": 20,
+                    "right": 20,
+                    "top": 20,
+                  }
+                }
                 isTVSelectable={true}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -5163,6 +5252,14 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
               </Text>
               <View
                 accessible={true}
+                hitSlop={
+                  Object {
+                    "bottom": 20,
+                    "left": 20,
+                    "right": 20,
+                    "top": 20,
+                  }
+                }
                 isTVSelectable={true}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -5189,8 +5286,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                       "color": "#56E39F",
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
-                      "height": 14,
-                      "paddingHorizontal": 20,
+                      "textAlign": "center",
                     }
                   }
                 >
@@ -5376,6 +5472,7 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                   style={
                     Object {
                       "alignItems": "center",
+                      "flex": 1,
                     }
                   }
                 >
@@ -5393,17 +5490,26 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                     style={
                       Object {
                         "alignItems": "center",
+                        "flex": 1,
                         "flexDirection": "row",
                         "flexWrap": "wrap",
-                        "justifyContent": "center",
+                        "justifyContent": "space-around",
                         "marginBottom": 107,
                         "marginTop": 40,
-                        "maxWidth": 710,
+                        "width": "100%",
                       }
                     }
                   >
                     <View
                       accessible={true}
+                      hitSlop={
+                        Object {
+                          "bottom": 20,
+                          "left": 20,
+                          "right": 20,
+                          "top": 20,
+                        }
+                      }
                       isTVSelectable={true}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
@@ -5417,7 +5523,6 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                             "alignItems": "center",
                             "height": 32,
                             "justifyContent": "center",
-                            "marginRight": 14,
                             "width": 32,
                           },
                           Object {
@@ -5433,6 +5538,14 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                     </View>
                     <View
                       accessible={true}
+                      hitSlop={
+                        Object {
+                          "bottom": 20,
+                          "left": 20,
+                          "right": 20,
+                          "top": 20,
+                        }
+                      }
                       isTVSelectable={true}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
@@ -5446,7 +5559,6 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                             "alignItems": "center",
                             "height": 32,
                             "justifyContent": "center",
-                            "marginRight": 14,
                             "width": 32,
                           },
                           Object {
@@ -5462,6 +5574,14 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                     </View>
                     <View
                       accessible={true}
+                      hitSlop={
+                        Object {
+                          "bottom": 20,
+                          "left": 20,
+                          "right": 20,
+                          "top": 20,
+                        }
+                      }
                       isTVSelectable={true}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
@@ -5475,7 +5595,6 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                             "alignItems": "center",
                             "height": 32,
                             "justifyContent": "center",
-                            "marginRight": 14,
                             "width": 32,
                           },
                           Object {
@@ -5491,6 +5610,14 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                     </View>
                     <View
                       accessible={true}
+                      hitSlop={
+                        Object {
+                          "bottom": 20,
+                          "left": 20,
+                          "right": 20,
+                          "top": 20,
+                        }
+                      }
                       isTVSelectable={true}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
@@ -5504,7 +5631,6 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                             "alignItems": "center",
                             "height": 32,
                             "justifyContent": "center",
-                            "marginRight": 14,
                             "width": 32,
                           },
                           Object {
@@ -5520,6 +5646,14 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                     </View>
                     <View
                       accessible={true}
+                      hitSlop={
+                        Object {
+                          "bottom": 20,
+                          "left": 20,
+                          "right": 20,
+                          "top": 20,
+                        }
+                      }
                       isTVSelectable={true}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
@@ -5533,7 +5667,6 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                             "alignItems": "center",
                             "height": 32,
                             "justifyContent": "center",
-                            "marginRight": 14,
                             "width": 32,
                           },
                           Object {
@@ -5549,6 +5682,14 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                     </View>
                     <View
                       accessible={true}
+                      hitSlop={
+                        Object {
+                          "bottom": 20,
+                          "left": 20,
+                          "right": 20,
+                          "top": 20,
+                        }
+                      }
                       isTVSelectable={true}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
@@ -5562,7 +5703,6 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                             "alignItems": "center",
                             "height": 32,
                             "justifyContent": "center",
-                            "marginRight": 14,
                             "width": 32,
                           },
                           Object {
@@ -5578,6 +5718,14 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                     </View>
                     <View
                       accessible={true}
+                      hitSlop={
+                        Object {
+                          "bottom": 20,
+                          "left": 20,
+                          "right": 20,
+                          "top": 20,
+                        }
+                      }
                       isTVSelectable={true}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
@@ -5591,7 +5739,6 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                             "alignItems": "center",
                             "height": 32,
                             "justifyContent": "center",
-                            "marginRight": 14,
                             "width": 32,
                           },
                           Object {
@@ -5607,6 +5754,14 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                     </View>
                     <View
                       accessible={true}
+                      hitSlop={
+                        Object {
+                          "bottom": 20,
+                          "left": 20,
+                          "right": 20,
+                          "top": 20,
+                        }
+                      }
                       isTVSelectable={true}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
@@ -5620,7 +5775,6 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                             "alignItems": "center",
                             "height": 32,
                             "justifyContent": "center",
-                            "marginRight": 14,
                             "width": 32,
                           },
                           Object {
@@ -6560,6 +6714,14 @@ exports[`Storyshots SocialButton Presets 1`] = `
           >
             <View
               accessible={true}
+              hitSlop={
+                Object {
+                  "bottom": 20,
+                  "left": 20,
+                  "right": 20,
+                  "top": 20,
+                }
+              }
               isTVSelectable={true}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -6573,7 +6735,6 @@ exports[`Storyshots SocialButton Presets 1`] = `
                     "alignItems": "center",
                     "height": 32,
                     "justifyContent": "center",
-                    "marginRight": 14,
                     "width": 32,
                   },
                   undefined,
@@ -6667,6 +6828,14 @@ exports[`Storyshots SocialButton Presets 1`] = `
           >
             <View
               accessible={true}
+              hitSlop={
+                Object {
+                  "bottom": 20,
+                  "left": 20,
+                  "right": 20,
+                  "top": 20,
+                }
+              }
               isTVSelectable={true}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -6680,7 +6849,6 @@ exports[`Storyshots SocialButton Presets 1`] = `
                     "alignItems": "center",
                     "height": 32,
                     "justifyContent": "center",
-                    "marginRight": 14,
                     "width": 32,
                   },
                   undefined,
@@ -6774,6 +6942,14 @@ exports[`Storyshots SocialButton Presets 1`] = `
           >
             <View
               accessible={true}
+              hitSlop={
+                Object {
+                  "bottom": 20,
+                  "left": 20,
+                  "right": 20,
+                  "top": 20,
+                }
+              }
               isTVSelectable={true}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -6787,7 +6963,6 @@ exports[`Storyshots SocialButton Presets 1`] = `
                     "alignItems": "center",
                     "height": 32,
                     "justifyContent": "center",
-                    "marginRight": 14,
                     "width": 32,
                   },
                   undefined,
@@ -6881,6 +7056,14 @@ exports[`Storyshots SocialButton Presets 1`] = `
           >
             <View
               accessible={true}
+              hitSlop={
+                Object {
+                  "bottom": 20,
+                  "left": 20,
+                  "right": 20,
+                  "top": 20,
+                }
+              }
               isTVSelectable={true}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -6894,7 +7077,6 @@ exports[`Storyshots SocialButton Presets 1`] = `
                     "alignItems": "center",
                     "height": 32,
                     "justifyContent": "center",
-                    "marginRight": 14,
                     "width": 32,
                   },
                   undefined,
@@ -6988,6 +7170,14 @@ exports[`Storyshots SocialButton Presets 1`] = `
           >
             <View
               accessible={true}
+              hitSlop={
+                Object {
+                  "bottom": 20,
+                  "left": 20,
+                  "right": 20,
+                  "top": 20,
+                }
+              }
               isTVSelectable={true}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -7001,7 +7191,6 @@ exports[`Storyshots SocialButton Presets 1`] = `
                     "alignItems": "center",
                     "height": 32,
                     "justifyContent": "center",
-                    "marginRight": 14,
                     "width": 32,
                   },
                   undefined,
@@ -7095,6 +7284,14 @@ exports[`Storyshots SocialButton Presets 1`] = `
           >
             <View
               accessible={true}
+              hitSlop={
+                Object {
+                  "bottom": 20,
+                  "left": 20,
+                  "right": 20,
+                  "top": 20,
+                }
+              }
               isTVSelectable={true}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -7108,7 +7305,6 @@ exports[`Storyshots SocialButton Presets 1`] = `
                     "alignItems": "center",
                     "height": 32,
                     "justifyContent": "center",
-                    "marginRight": 14,
                     "width": 32,
                   },
                   undefined,
@@ -7202,6 +7398,14 @@ exports[`Storyshots SocialButton Presets 1`] = `
           >
             <View
               accessible={true}
+              hitSlop={
+                Object {
+                  "bottom": 20,
+                  "left": 20,
+                  "right": 20,
+                  "top": 20,
+                }
+              }
               isTVSelectable={true}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -7215,7 +7419,6 @@ exports[`Storyshots SocialButton Presets 1`] = `
                     "alignItems": "center",
                     "height": 32,
                     "justifyContent": "center",
-                    "marginRight": 14,
                     "width": 32,
                   },
                   undefined,
@@ -7309,6 +7512,14 @@ exports[`Storyshots SocialButton Presets 1`] = `
           >
             <View
               accessible={true}
+              hitSlop={
+                Object {
+                  "bottom": 20,
+                  "left": 20,
+                  "right": 20,
+                  "top": 20,
+                }
+              }
               isTVSelectable={true}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -7322,7 +7533,6 @@ exports[`Storyshots SocialButton Presets 1`] = `
                     "alignItems": "center",
                     "height": 32,
                     "justifyContent": "center",
-                    "marginRight": 14,
                     "width": 32,
                   },
                   undefined,
