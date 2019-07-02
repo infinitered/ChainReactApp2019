@@ -1,14 +1,7 @@
 import * as React from "react"
 import { Image, TextStyle, View, ViewStyle } from "react-native"
-import { palette, spacing } from "../../theme"
+import { HIT_SLOP, palette, spacing } from "../../theme"
 import { Text } from "../text"
-
-const HIT_SLOP = {
-  top: 20,
-  left: 20,
-  right: 20,
-  bottom: 20,
-}
 
 const HEADER_TEXT: TextStyle = {
   fontSize: 17,

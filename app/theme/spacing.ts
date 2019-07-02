@@ -12,3 +12,10 @@ export const spacing = {
 
 export const getScreenWidth = () => Dimensions.get("window").width
 export const getScreenHeight = () => Dimensions.get("window").height
+
+export const HIT_SLOP = {
+  top: 20,
+  left: 20,
+  right: 20,
+  bottom: 20,
+}
