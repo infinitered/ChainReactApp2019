@@ -8001,7 +8001,7 @@ exports[`Storyshots Sponsors Presets 1`] = `
                   style={
                     Object {
                       "flexDirection": "row",
-                      "justifyContent": "space-between",
+                      "justifyContent": "space-around",
                     }
                   }
                 >
@@ -8036,7 +8036,7 @@ exports[`Storyshots Sponsors Presets 1`] = `
                   style={
                     Object {
                       "flexDirection": "row",
-                      "justifyContent": "space-between",
+                      "justifyContent": "space-around",
                     }
                   }
                 >
@@ -8089,7 +8089,7 @@ exports[`Storyshots Sponsors Presets 1`] = `
                   style={
                     Object {
                       "flexDirection": "row",
-                      "justifyContent": "space-between",
+                      "justifyContent": "space-around",
                     }
                   }
                 >
@@ -8124,7 +8124,7 @@ exports[`Storyshots Sponsors Presets 1`] = `
                   style={
                     Object {
                       "flexDirection": "row",
-                      "justifyContent": "space-between",
+                      "justifyContent": "space-around",
                     }
                   }
                 >
@@ -8177,7 +8177,7 @@ exports[`Storyshots Sponsors Presets 1`] = `
                   style={
                     Object {
                       "flexDirection": "row",
-                      "justifyContent": "space-between",
+                      "justifyContent": "space-around",
                     }
                   }
                 >
@@ -8225,23 +8225,10 @@ exports[`Storyshots Sponsors Presets 1`] = `
                   style={
                     Object {
                       "flexDirection": "row",
-                      "justifyContent": "space-between",
+                      "justifyContent": "space-around",
                     }
                   }
                 >
-                  <Image
-                    source={1}
-                    style={
-                      Object {
-                        "alignSelf": "center",
-                        "flex": 1,
-                        "margin": 10,
-                        "maxHeight": 35,
-                        "maxWidth": "30%",
-                        "resizeMode": "contain",
-                      }
-                    }
-                  />
                   <Image
                     source={1}
                     style={
@@ -8304,7 +8291,7 @@ exports[`Storyshots Sponsors Presets 1`] = `
                   style={
                     Object {
                       "flexDirection": "row",
-                      "justifyContent": "space-between",
+                      "justifyContent": "space-around",
                     }
                   }
                 >
@@ -8385,7 +8372,7 @@ exports[`Storyshots Sponsors Presets 1`] = `
                   style={
                     Object {
                       "flexDirection": "row",
-                      "justifyContent": "space-between",
+                      "justifyContent": "space-around",
                     }
                   }
                 >

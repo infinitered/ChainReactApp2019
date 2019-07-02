@@ -27,7 +27,7 @@ const LINE_BREAK: ViewStyle = {
 }
 const LOGO_ROW: ViewStyle = {
   flexDirection: "row",
-  justifyContent: "space-between",
+  justifyContent: "space-around",
 }
 const AWS_STYLE: ImageStyle = {
   width: "60%",
@@ -72,14 +72,13 @@ export class Sponsors extends React.Component {
           <Text preset="sectionHeader" tx="infoScreen.sponsors.bronze" />
           <View style={LINE_BREAK} />
           <View style={LOGO_ROW}>
-            <SponsorLogo size="bronze" sponsor="airship" />
+            <SponsorLogo size="bronze" sponsor="echobind" />
             <SponsorLogo size="bronze" sponsor="builderX" />
             <SponsorLogo size="bronze" sponsor="cambia" />
           </View>
           <View style={LOGO_ROW}>
-            <SponsorLogo size="bronze" sponsor="echobind" />
+            <SponsorLogo size="bronze" sponsor="airship" />
             <SponsorLogo size="bronze" sponsor="facebook" />
-            <SponsorLogo size="bronze" sponsor="g2i" />
           </View>
         </View>
         <View style={SECTION}>
