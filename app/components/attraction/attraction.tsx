@@ -1,5 +1,5 @@
 import * as React from "react"
-import { View, ViewStyle, TextStyle } from "react-native"
+import { TextStyle, View, ViewStyle } from "react-native"
 import { Text } from "../text"
 import { palette } from "../../theme"
 import { AttractionProps } from "./attraction.props"

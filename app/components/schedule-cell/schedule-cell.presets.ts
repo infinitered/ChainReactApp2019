@@ -1,4 +1,4 @@
-import { spacing, palette } from "../../theme"
+import { palette, spacing } from "../../theme"
 
 /**
  * All text will start off looking like this.

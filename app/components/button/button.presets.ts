@@ -1,4 +1,4 @@
-import { ViewStyle, TextStyle, Platform } from "react-native"
+import { Platform, TextStyle, ViewStyle } from "react-native"
 import { color, palette, spacing } from "../../theme"
 
 /**

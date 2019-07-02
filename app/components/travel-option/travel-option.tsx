@@ -1,5 +1,5 @@
 import * as React from "react"
-import { View, Image, ViewStyle, TextStyle } from "react-native"
+import { Image, TextStyle, View, ViewStyle } from "react-native"
 import { Text } from "../text"
 import { spacing } from "../../theme"
 import { presets } from "./travel-option.presets"

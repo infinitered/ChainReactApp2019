@@ -1,7 +1,7 @@
 import * as React from "react"
-import { View, ViewStyle, TextStyle, ImageStyle } from "react-native"
+import { ImageStyle, TextStyle, View, ViewStyle } from "react-native"
 import { Text } from "../text"
-import { spacing, palette } from "../../theme"
+import { palette, spacing } from "../../theme"
 import { SponsorLogo } from "../sponsor-logo"
 
 const ROOT: ViewStyle = {

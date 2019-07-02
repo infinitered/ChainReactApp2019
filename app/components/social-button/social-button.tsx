@@ -1,6 +1,6 @@
 import * as React from "react"
-import { TouchableHighlight, Image, Linking } from "react-native"
-import { viewPresets, imageSource, imageStyle } from "./social-button.presets"
+import { Image, Linking, TouchableHighlight } from "react-native"
+import { imageSource, imageStyle, viewPresets } from "./social-button.presets"
 import { SocialButtonProps } from "./social-button.props"
 
 /**

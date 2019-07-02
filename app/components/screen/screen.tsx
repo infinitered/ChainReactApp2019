@@ -2,7 +2,7 @@ import * as React from "react"
 import { Image, SafeAreaView, ViewStyle } from "react-native"
 import { ScrollView } from "react-navigation"
 import { ScreenProps } from "./screen.props"
-import { presets, isNonScrolling } from "./screen.presets"
+import { isNonScrolling, presets } from "./screen.presets"
 
 /**
  * This screen does not scroll.

@@ -1,15 +1,15 @@
 // Welcome to the main entry point of the app.
 //
 // In this file, we'll be kicking off our app or storybook.
+import { StatefulNavigator } from "./navigation"
 import "./i18n"
-import * as React from "react"
-import { AppRegistry, StatusBar, Platform } from "react-native"
+import { AppRegistry, Platform, StatusBar } from "react-native"
 import SplashScreen from "react-native-splash-screen"
 import { Rehydrated } from "aws-appsync-react"
 import { ApolloProvider } from "react-apollo"
 import AWSAppSyncClient from "aws-appsync"
 import { StorybookUI } from "../storybook"
-import { StatefulNavigator } from "./navigation"
+import * as React from "react"
 import { RootStore, setupRootStore } from "./models/root-store"
 import { Provider } from "mobx-react"
 import { BackButtonHandler } from "./navigation/back-button-handler"
@@ -18,7 +18,7 @@ import { DEFAULT_NAVIGATION_CONFIG } from "./navigation/navigation-config"
 import { palette } from "./theme/palette"
 import AppSyncConfig from "./aws-exports"
 
-const client = new AWSAppSyncClient({
+const client: any = new AWSAppSyncClient({
   url: AppSyncConfig.aws_appsync_graphqlEndpoint,
   region: AppSyncConfig.aws_project_region,
   auth: {

@@ -1,6 +1,6 @@
 import { types } from "mobx-state-tree"
 import { RootNavigator } from "../../navigation/root-navigator"
-import { NavigationActions, NavigationAction } from "react-navigation"
+import { NavigationAction, NavigationActions } from "react-navigation"
 import { NavigationEvents } from "./navigation-events"
 
 const DEFAULT_STATE = RootNavigator.router.getStateForAction(NavigationActions.init(), null)

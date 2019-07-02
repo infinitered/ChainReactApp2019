@@ -1,16 +1,7 @@
 import * as React from "react"
-import { Image, ViewStyle } from "react-native"
-import { color, spacing } from "../../theme"
-import { Text } from "../text"
+import { Image, ImageStyle } from "react-native"
 
-// const ICON_WRAPPER: ViewStyle = {
-//   alignItems: "center",
-//   flexGrow: 1,
-//   justifyContent: "center",
-//   minHeight: 26,
-// }
-
-const ICON: ViewStyle = {
+const ICON: ImageStyle = {
   position: "absolute",
   alignItems: "center",
   justifyContent: "center",

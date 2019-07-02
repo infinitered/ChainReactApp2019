@@ -1,9 +1,9 @@
 import * as React from "react"
-import { Image, View, ViewStyle, TextStyle } from "react-native"
+import { Image, TextStyle, View, ViewStyle } from "react-native"
 import { Text } from "../text"
 import { SponsorLogoProps } from "./sponsor-logo.props"
 import { sponsorLogoSizePresets, sponsors } from "./sponsor-logo.presets"
-import { color, spacing } from "../../theme"
+import { color } from "../../theme"
 
 const ROOT: ViewStyle = {
   flexDirection: "column",

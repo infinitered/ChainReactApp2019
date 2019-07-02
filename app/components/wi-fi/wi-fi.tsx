@@ -1,7 +1,7 @@
 import * as React from "react"
-import { View, ViewStyle, TextStyle, Image, ImageStyle } from "react-native"
+import { Image, ImageStyle, TextStyle, View, ViewStyle } from "react-native"
 import { Text } from "../text"
-import { spacing, palette } from "../../theme"
+import { palette, spacing } from "../../theme"
 
 const ROOT: ViewStyle = {
   marginTop: spacing.large,

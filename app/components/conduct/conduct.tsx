@@ -1,8 +1,8 @@
 import * as React from "react"
-import { View, ViewStyle, TextStyle, TouchableOpacityProperties } from "react-native"
+import { TextStyle, TouchableOpacityProperties, View, ViewStyle } from "react-native"
 import { Text } from "../text"
 import { Button } from "../button"
-import { spacing, palette } from "../../theme"
+import { palette, spacing } from "../../theme"
 
 const ROOT: ViewStyle = {
   marginTop: spacing.huge,

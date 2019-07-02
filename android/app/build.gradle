@@ -105,7 +105,7 @@ android {
         applicationId "com.chainreactapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 129
+        versionCode 130
         versionName "3.0"
         multiDexEnabled true
     }
@@ -151,6 +151,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-device-info')
     implementation project(':@react-native-community_async-storage')
     implementation project(':appcenter-analytics')
     implementation project(':appcenter-crashes')

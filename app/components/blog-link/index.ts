@@ -1,1 +1,1 @@
-export * from "./photobomb"
+export * from "./blog-link"
