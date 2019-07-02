@@ -9,7 +9,7 @@ const BASE_VIEW: ViewStyle = {
   height: 32,
   justifyContent: "center",
   alignItems: "center",
-  marginRight: spacing.medium,
+  // marginRight: spacing.medium,
 }
 
 /**

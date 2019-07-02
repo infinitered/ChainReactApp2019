@@ -10,7 +10,7 @@ import {
   ViewStyle,
 } from "react-native"
 import { Text } from "../text"
-import { color, getScreenWidth, spacing } from "../../theme"
+import { color, getScreenWidth, HIT_SLOP, spacing } from "../../theme"
 import { CLOSE_ICON } from "./"
 
 export interface AttractionsMapCalloutProps {
@@ -87,13 +87,6 @@ const CLOSE_TOUCHABLE: ViewStyle = {
 const CLOSE_IMAGE: ImageStyle = {
   width: 14,
   height: 14,
-}
-
-const HIT_SLOP = {
-  top: spacing.large,
-  right: spacing.large,
-  bottom: spacing.large,
-  left: spacing.large,
 }
 
 export class AttractionsMapCallout extends React.Component<AttractionsMapCalloutProps, {}> {

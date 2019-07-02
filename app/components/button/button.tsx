@@ -3,6 +3,7 @@ import { TouchableOpacity } from "react-native"
 import { Text } from "../text"
 import { textPresets, viewPresets } from "./button.presets"
 import { ButtonProps } from "./button.props"
+import { HIT_SLOP } from "../../theme"
 
 /**
  * For your text displaying needs.
@@ -29,7 +30,7 @@ export function Button(props: ButtonProps) {
   const textStyle = { ...textPresetToUse, ...textStyleOverride }
 
   return (
-    <TouchableOpacity style={viewStyle} {...rest}>
+    <TouchableOpacity style={viewStyle} hitSlop={HIT_SLOP} {...rest}>
       <Text tx={tx} text={text} style={textStyle} />
       {children}
     </TouchableOpacity>
