@@ -1,10 +1,10 @@
 {
   "common": {
     "ok": "OK!",
-    "cancel": "CANCEL",
+    "cancel": "Cancel",
     "back": "Back",
     "edit": "EDIT",
-    "save": "SAVE",
+    "save": "Save",
     "send": "SEND"
   },
   "errors": {
@@ -56,7 +56,12 @@
     "sponsoredBy": "Sponsored By ",
     "menuTitle": "WHAT'S ON THE MENU",
     "rsvp": "RSVP Now",
-    "prerequisites": "PREREQUISITES"
+    "prerequisites": "PREREQUISITES",
+    "report": {
+      "alertTitle": "Report this comment?",
+      "alertBody": "Are you sure you want to report this comment from {{name}}?",
+      "alertConfirm": "Yes, report it"
+    }
   },
   "venueScreen": {
     "title": "Explore",
