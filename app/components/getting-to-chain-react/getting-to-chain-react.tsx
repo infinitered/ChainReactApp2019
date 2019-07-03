@@ -51,6 +51,7 @@ const RIDE_BUTTON_TEXT: TextStyle = {
   flex: 1,
   fontSize: 14,
   letterSpacing: 3,
+  paddingHorizontal: 0,
   textAlign: "center",
 }
 const LYFT_LINK =

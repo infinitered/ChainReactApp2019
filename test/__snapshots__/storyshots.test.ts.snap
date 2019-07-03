@@ -5146,7 +5146,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
                       "letterSpacing": 3,
-                      "paddingHorizontal": 20,
+                      "paddingHorizontal": 0,
                       "textAlign": "center",
                     }
                   }
@@ -5204,7 +5204,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                       "fontFamily": "Gotham Rounded",
                       "fontSize": 14,
                       "letterSpacing": 3,
-                      "paddingHorizontal": 20,
+                      "paddingHorizontal": 0,
                       "textAlign": "center",
                     }
                   }
