@@ -8341,7 +8341,7 @@ exports[`Storyshots Sponsors Presets 1`] = `
                         }
                       }
                     >
-                      AFTER PARTY
+                      WELCOME PARTY
                     </Text>
                   </View>
                   <View
@@ -8377,7 +8377,7 @@ exports[`Storyshots Sponsors Presets 1`] = `
                         }
                       }
                     >
-                      STRETCHES
+                      BADGES
                     </Text>
                   </View>
                 </View>
@@ -8458,7 +8458,52 @@ exports[`Storyshots Sponsors Presets 1`] = `
                         }
                       }
                     >
-                      BADGES
+                      STRETCHES
+                    </Text>
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "column",
+                        "width": "50%",
+                      }
+                    }
+                  >
+                    <Image
+                      source={1}
+                      style={
+                        Object {
+                          "alignSelf": "center",
+                          "flex": 1,
+                          "height": 60,
+                          "margin": 10,
+                          "marginBottom": 0,
+                          "resizeMode": "contain",
+                        }
+                      }
+                    />
+                    <Text
+                      style={
+                        Object {
+                          "color": "#56E39F",
+                          "fontFamily": "Gotham Rounded",
+                          "fontSize": 12,
+                          "fontWeight": "600",
+                          "letterSpacing": 3,
+                        }
+                      }
+                    >
+                      AFTER PARTY
                     </Text>
                   </View>
                 </View>

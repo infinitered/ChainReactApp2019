@@ -12,12 +12,15 @@ const ROOT: ViewStyle = {
 const HEADER: TextStyle = {
   color: palette.white,
 }
+
 const BODY: TextStyle = {
   marginVertical: spacing.medium,
 }
+
 const SECTION: ViewStyle = {
   marginTop: spacing.huge,
 }
+
 const LINE_BREAK: ViewStyle = {
   height: 1,
   backgroundColor: palette.martinique,
@@ -25,10 +28,12 @@ const LINE_BREAK: ViewStyle = {
   marginBottom: spacing.small,
   width: "100%",
 }
+
 const LOGO_ROW: ViewStyle = {
   flexDirection: "row",
   justifyContent: "space-between",
 }
+
 const AWS_STYLE: ImageStyle = {
   width: "60%",
   height: 65, // Restrict the height so it better matches the size of the Alexa logo
@@ -50,47 +55,47 @@ export class Sponsors extends React.Component {
           <Text preset="sectionHeader" tx="infoScreen.sponsors.gold" />
           <View style={LINE_BREAK} />
           <View style={LOGO_ROW}>
+            <SponsorLogo size="gold" sponsor="sentry" />
             <SponsorLogo size="gold" sponsor="callstack" />
-            <SponsorLogo size="gold" sponsor="coinbase" />
           </View>
           <View style={LOGO_ROW}>
-            <SponsorLogo size="gold" sponsor="sentry" />
+            <SponsorLogo size="gold" sponsor="coinbase" />
           </View>
         </View>
         <View style={SECTION}>
           <Text preset="sectionHeader" tx="infoScreen.sponsors.silver" />
           <View style={LINE_BREAK} />
           <View style={LOGO_ROW}>
-            <SponsorLogo size="silver" sponsor="amazonWeb" />
             <SponsorLogo size="silver" sponsor="bugsnag" />
+            <SponsorLogo size="silver" sponsor="serverlessGuru" />
           </View>
           <View style={LOGO_ROW}>
-            <SponsorLogo size="silver" sponsor="serverlessGuru" />
+            <SponsorLogo size="silver" sponsor="goDaddy" />
           </View>
         </View>
         <View style={SECTION}>
           <Text preset="sectionHeader" tx="infoScreen.sponsors.bronze" />
           <View style={LINE_BREAK} />
           <View style={LOGO_ROW}>
-            <SponsorLogo size="bronze" sponsor="airship" />
+            <SponsorLogo size="bronze" sponsor="echobind" />
             <SponsorLogo size="bronze" sponsor="builderX" />
-            <SponsorLogo size="bronze" sponsor="cambia" />
+            <SponsorLogo size="bronze" sponsor="facebook" />
           </View>
           <View style={LOGO_ROW}>
-            <SponsorLogo size="bronze" sponsor="echobind" />
-            <SponsorLogo size="bronze" sponsor="facebook" />
-            <SponsorLogo size="bronze" sponsor="g2i" />
+            <SponsorLogo size="bronze" sponsor="airship" />
+            <SponsorLogo size="bronze" sponsor="cambia" />
+            <SponsorLogo size="bronze" sponsor="modus" />
           </View>
         </View>
         <View style={SECTION}>
           <Text preset="sectionHeader" tx="infoScreen.sponsors.additional" />
           <View style={LINE_BREAK} />
           <View style={LOGO_ROW}>
+            <SponsorLogo size="additional" sponsor="bumped" subtitle="WELCOME PARTY" />
             <SponsorLogo size="additional" sponsor="squarespace" subtitle="BADGES" />
-            <SponsorLogo size="additional" sponsor="playstation" subtitle="WIFI" />
           </View>
           <View style={LOGO_ROW}>
-            <SponsorLogo size="additional" sponsor="bumped" subtitle="WELCOME PARTY" />
+            <SponsorLogo size="additional" sponsor="playstation" subtitle="WIFI" />
             <SponsorLogo size="additional" sponsor="devLifts" subtitle="STRETCHES" />
           </View>
           <View style={LOGO_ROW}>

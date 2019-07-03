@@ -41,6 +41,8 @@ export const sponsors = {
   facebook: require("./logos/Bronze_Facebook.png"),
   g2i: require("./logos/Bronze_G2i.png"),
   g2iAdditional: require("./logos/Additional_G2i.png"),
+  goDaddy: require("./logos/Silver_GoDaddy.png"),
+  modus: require("./logos/Bronze_Modus.png"),
   playstation: require("./logos/Additional_Playstation_Wifi.png"),
   sentry: require("./logos/Gold_Sentry.png"),
   serverlessGuru: require("./logos/Silver_ServerlessGuru.png"),
