@@ -2,6 +2,7 @@ import { flow, getEnv, types } from "mobx-state-tree"
 import gql from "graphql-tag"
 import { TalkModel, TalkSnapshot } from "../talk"
 import { SettingModel, SettingSnapshot } from "../setting"
+import { Environment } from "../environment"
 
 export const TalkStoreModel = types
   .model()
@@ -21,7 +22,9 @@ export const TalkStoreModel = types
   .actions(self => ({
     getAll: flow(function*() {
       self.status = "pending"
-      const result = yield getEnv(self).graphql.query({
+      const env: Environment = getEnv(self)
+      const result = yield env.graphql.query({
+        fetchPolicy: "network-only",
         query: gql`
           query Talks {
             settings {
