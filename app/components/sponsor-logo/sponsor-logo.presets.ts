@@ -26,24 +26,25 @@ export const sponsorLogoSizePresets = {
 }
 
 export const sponsors = {
-  devLifts: require("./logos/Additional_DevLifts_Streches.png"),
-  g2iAdditional: require("./logos/Additional_G2i.png"),
-  playstation: require("./logos/Additional_Playstation_Wifi.png"),
-  squarespace: require("./logos/Additional_SquarespaceBadges.png"),
   airship: require("./logos/Bronze_Airship.png"),
+  alexa: require("./logos/Platinum_Amazon_Alexa.png"),
+  amazonWeb: require("./logos/Silver_AmazonWebService.png"),
+  aws: require("./logos/Platinum_AWS.png"),
+  bugsnag: require("./logos/Silver_Bugsnag.png"),
   builderX: require("./logos/Bronze_BuilderX.png"),
+  bumped: require("./logos/Additional_bumped-alt.png"),
+  callstack: require("./logos/Gold_Callstack.png"),
   cambia: require("./logos/Bronze_Cambia.png"),
+  coinbase: require("./logos/Gold_Coinbase.png"),
+  devLifts: require("./logos/Additional_DevLifts_Streches.png"),
   echobind: require("./logos/Bronze_Echobind.png"),
   facebook: require("./logos/Bronze_Facebook.png"),
   g2i: require("./logos/Bronze_G2i.png"),
-  amazonWeb: require("./logos/Silver_AmazonWebService.png"),
-  bugsnag: require("./logos/Silver_Bugsnag.png"),
-  serverlessGuru: require("./logos/Silver_ServerlessGuru.png"),
-  callstack: require("./logos/Gold_Callstack.png"),
-  coinbase: require("./logos/Gold_Coinbase.png"),
+  g2iAdditional: require("./logos/Additional_G2i.png"),
+  playstation: require("./logos/Additional_Playstation_Wifi.png"),
   sentry: require("./logos/Gold_Sentry.png"),
-  alexa: require("./logos/Platinum_Amazon_Alexa.png"),
-  aws: require("./logos/Platinum_AWS.png"),
+  serverlessGuru: require("./logos/Silver_ServerlessGuru.png"),
+  squarespace: require("./logos/Additional_SquarespaceBadges.png"),
 }
 
 export type SponsorLogoSizePresetNames = keyof typeof sponsorLogoSizePresets
