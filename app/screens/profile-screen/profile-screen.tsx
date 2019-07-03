@@ -62,6 +62,7 @@ const INPUT_ROW: ViewStyle = {
 interface ProfileScreenProps extends NavigationScreenProps<{}> {
   talkStore: TalkStore
 }
+
 interface ProfileScreenState {
   username?: string
   editInput: boolean
@@ -75,29 +76,30 @@ export class ProfileScreen extends React.Component<ProfileScreenProps, ProfileSc
     headerBackTitle: null,
     headerStyle: { backgroundColor: palette.portGore, borderBottomWidth: 0 },
   }
+
   state = {
     username: null,
     editInput: false,
   }
+
+  async componentDidMount() {
+    try {
+      const username = await loadString("name")
+      if (!username) {
+        await saveString("name", name)
+        this.setState({ username: name })
+      } else {
+        this.setState({ username })
+      }
+    } catch (e) {
+      console.tron.error(e.message, e.stack)
+    }
+  }
+
   updateName = () => {
     this.setState(() => ({
       editInput: true,
     }))
-  }
-
-  render() {
-    return (
-      <Screen preset="scrollStack" backgroundColor={palette.portGore} style={ROOT}>
-        <View>
-          <Text preset="title" tx="profileScreen.title" style={TITLE} />
-          <View style={DESCRIPTION_CONTAINER}>
-            <Text preset="subheader" tx="profileScreen.description" style={DESCRIPTION_ITEM} />
-            <CodeOfConductLink onPress={this.linkToCodeOfConduct} style={DESCRIPTION_ITEM} />
-          </View>
-          {this.renderContent()}
-        </View>
-      </Screen>
-    )
   }
 
   linkToCodeOfConduct = () => {
@@ -107,11 +109,18 @@ export class ProfileScreen extends React.Component<ProfileScreenProps, ProfileSc
     })
   }
 
-  renderDisabled = () => (
-    <View>
-      <Text tx="profileScreen.disabled.warning" />
-    </View>
-  )
+  onSave = async () => {
+    try {
+      await saveString("name", this.state.username)
+      this.setState({ editInput: false })
+    } catch (e) {
+      console.tron.error(e.message, e.stack)
+    }
+  }
+
+  onCancel = () => {
+    this.setState({ editInput: false })
+  }
 
   renderContent = () => {
     const { username, editInput } = this.state
@@ -146,36 +155,26 @@ export class ProfileScreen extends React.Component<ProfileScreenProps, ProfileSc
         )
       }
     } else {
-      return this.renderDisabled()
+      return (
+        <View>
+          <Text tx="profileScreen.disabled.warning" />
+        </View>
+      )
     }
   }
 
-  onSave = async () => {
-    try {
-      await saveString("name", this.state.username)
-      console.log("username updated...")
-      this.setState({ editInput: false })
-    } catch (err) {
-      console.log("err...: ", err)
-    }
-  }
-
-  onCancel = () => {
-    this.setState({ editInput: false })
-  }
-
-  async componentDidMount() {
-    try {
-      const username = await loadString("name")
-      console.log("username: ", username)
-      if (!username) {
-        await saveString("name", name)
-        this.setState({ username: name })
-      } else {
-        this.setState({ username })
-      }
-    } catch (err) {
-      console.log("error: ", err)
-    }
+  render() {
+    return (
+      <Screen preset="scrollStack" backgroundColor={palette.portGore} style={ROOT}>
+        <View>
+          <Text preset="title" tx="profileScreen.title" style={TITLE} />
+          <View style={DESCRIPTION_CONTAINER}>
+            <Text preset="subheader" tx="profileScreen.description" style={DESCRIPTION_ITEM} />
+            <CodeOfConductLink onPress={this.linkToCodeOfConduct} style={DESCRIPTION_ITEM} />
+          </View>
+          {this.renderContent()}
+        </View>
+      </Screen>
+    )
   }
 }

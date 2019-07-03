@@ -20,7 +20,7 @@
       }
     ],
     "Cocoapods": [
-      {rule: 'cli', binary: 'pod', platform: 'darwin', semver: '1.6.1'},
+      {rule: 'cli', binary: 'pod', platform: 'darwin', semver: '>=1.6.1'},
       {rule: 'dir', location: './ios/Pods'}
     ],
     "Android": [

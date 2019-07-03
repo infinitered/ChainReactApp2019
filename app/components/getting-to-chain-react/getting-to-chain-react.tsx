@@ -50,7 +50,6 @@ const RIDE_BUTTON_TEXT: TextStyle = {
   color: "white",
   flex: 1,
   fontSize: 14,
-  height: 14,
   letterSpacing: 3,
   textAlign: "center",
 }

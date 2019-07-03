@@ -30,17 +30,20 @@ const LOGO: ImageStyle = {
   marginTop: spacing.medium,
 }
 const SOCIAL_WRAPPER: ViewStyle = {
+  flex: 1,
   flexDirection: "row",
-  justifyContent: "center",
+  justifyContent: "space-around",
   alignItems: "center",
   marginTop: 40,
   marginBottom: 107,
   flexWrap: "wrap",
+  width: "100%",
 }
 const SOCIAL_BUTTON: ViewStyle = {
   marginTop: spacing.small,
 }
 const FOOTER: ViewStyle = {
+  flex: 1,
   alignItems: "center",
 }
 const backgroundImage = require("./bg.team.png")
@@ -66,12 +69,7 @@ export function PresentedBy(props: PresentedByProps) {
 
   // assemble the style
   const viewPresetToUse = presentedByPresets.default
-
   const viewStyle = { ...viewPresetToUse, ...fullWidth }
-
-  const widthStyle = {
-    maxWidth: getScreenWidth() - 2 * spacing.large,
-  }
 
   return (
     <View>
@@ -82,7 +80,7 @@ export function PresentedBy(props: PresentedByProps) {
         <Text preset="body" style={BIO} tx="infoScreen.presentedBy.bio" />
         <View style={FOOTER}>
           <Image style={LOGO} source={infiniteRedLogo} />
-          <View style={{ ...SOCIAL_WRAPPER, ...widthStyle }}>
+          <View style={SOCIAL_WRAPPER}>
             <SocialButton preset="website" link={linkPresets.website} style={SOCIAL_BUTTON} />
             <SocialButton preset="twitter" link={linkPresets.twitter} style={SOCIAL_BUTTON} />
             <SocialButton preset="github" link={linkPresets.github} style={SOCIAL_BUTTON} />

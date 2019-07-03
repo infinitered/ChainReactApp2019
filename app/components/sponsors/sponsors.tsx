@@ -31,7 +31,7 @@ const LINE_BREAK: ViewStyle = {
 
 const LOGO_ROW: ViewStyle = {
   flexDirection: "row",
-  justifyContent: "space-between",
+  justifyContent: "space-around",
 }
 
 const AWS_STYLE: ImageStyle = {

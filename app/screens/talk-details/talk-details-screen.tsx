@@ -1,8 +1,9 @@
+import { SpeakerBio } from "../../components/speaker-bio"
 import Amplify, { API, graphqlOperation } from "aws-amplify"
-import { formatToTimeZone } from "date-fns-timezone"
 import { inject, observer } from "mobx-react"
 import * as React from "react"
 import {
+  Alert,
   AppState,
   Image,
   ImageStyle,
@@ -24,7 +25,7 @@ import { BackButton } from "../../components/back-button"
 import { Button } from "../../components/button"
 import { CodeOfConductLink } from "../../components/code-of-conduct-link"
 import { Screen } from "../../components/screen"
-import { SpeakerBio } from "../../components/speaker-bio"
+import { formatToTimeZone } from "date-fns-timezone"
 import { SpeakerImage } from "../../components/speaker-image"
 import { TalkTitle } from "../../components/talk-title"
 import { Text } from "../../components/text"
@@ -39,6 +40,7 @@ import { TIMEZONE } from "../../utils/info"
 import { loadString } from "../../utils/storage"
 import { calculateImageDimensions } from "./image-dimension-helpers"
 import { differenceInMilliseconds } from "date-fns"
+import { translate, translateWithVars } from "../../i18n"
 
 const uniqueId = DeviceInfo.getUniqueID()
 
@@ -311,6 +313,20 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
     }
   }
 
+  pressReport = comment => {
+    Alert.alert(
+      translate("talkDetailsScreen.report.alertTitle"),
+      translateWithVars("talkDetailsScreen.report.alertBody", { name: comment.createdBy }),
+      [
+        {
+          text: translate("talkDetailsScreen.report.alertConfirm"),
+          onPress: () => this.reportComment(comment),
+        },
+        { text: translate("common.cancel"), onPress: () => null },
+      ],
+    )
+  }
+
   toggleView = currentView => {
     this.setState({ currentView })
     if (currentView === "discussion") {
@@ -374,9 +390,12 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
                       </Text>
                     </View>
                     <Text style={COMMENT_TEXT}>{c.text}</Text>
-                    <Text style={REPORT} onPress={() => this.reportComment(c)}>
-                      Report
-                    </Text>
+                    <Button
+                      preset="link"
+                      text="Report"
+                      textStyle={REPORT}
+                      onPress={() => this.pressReport(c)}
+                    />
                   </View>
                 ))}
               </View>
