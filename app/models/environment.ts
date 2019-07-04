@@ -1,5 +1,6 @@
 import { Reactotron } from "../services/reactotron"
 import { Api } from "../services/api"
+import DefaultClient from "apollo-boost"
 
 /**
  * The environment is a place where services and shared dependencies between
@@ -19,5 +20,5 @@ export class Environment {
   /**
    * Our graphql client.
    */
-  graphql: any
+  graphql: DefaultClient<any>
 }
