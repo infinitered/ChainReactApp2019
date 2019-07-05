@@ -1,21 +1,24 @@
-import * as React from "react"
 import { Button } from "../../components/button"
-import { Screen } from "../../components/screen"
+import { View, ViewStyle } from "react-native"
 import { Text } from "../../components/text"
 import { palette, spacing } from "../../theme"
-import { TextStyle } from "react-native"
+import { KeyboardAvoidingView, Platform, TextStyle } from "react-native"
 import name from "./profile-info"
-import { View, ViewStyle } from "react-native"
+import * as React from "react"
 import { TextField } from "../../components/text-field/text-field"
 import { inject, observer } from "mobx-react"
-import { NavigationScreenProps } from "react-navigation"
+import { NavigationScreenProps, SafeAreaView } from "react-navigation"
 import { TalkStore } from "../../models/talk-store"
 import { CodeOfConductLink } from "../../components/code-of-conduct-link"
 import { loadString, saveString } from "../../utils/storage"
 
 const ROOT: ViewStyle = {
+  backgroundColor: palette.portGore,
   padding: spacing.medium,
+  flex: 1,
 }
+
+const INNER: ViewStyle = { flex: 1, justifyContent: "flex-end" }
 
 const TITLE: TextStyle = {
   marginTop: spacing.extraLarge,
@@ -51,7 +54,7 @@ const USERNAME: ViewStyle = {
 
 const BUTTONS_ROW: ViewStyle = {
   ...ROW,
-  marginTop: spacing.medium,
+  marginTop: spacing.large,
 }
 
 const INPUT_ROW: ViewStyle = {
@@ -165,16 +168,22 @@ export class ProfileScreen extends React.Component<ProfileScreenProps, ProfileSc
 
   render() {
     return (
-      <Screen preset="scrollStack" backgroundColor={palette.portGore} style={ROOT}>
-        <View>
-          <Text preset="title" tx="profileScreen.title" style={TITLE} />
-          <View style={DESCRIPTION_CONTAINER}>
-            <Text preset="subheader" tx="profileScreen.description" style={DESCRIPTION_ITEM} />
-            <CodeOfConductLink onPress={this.linkToCodeOfConduct} style={DESCRIPTION_ITEM} />
+      <KeyboardAvoidingView
+        behavior={Platform.select({ ios: "padding", android: null })}
+        style={{ flex: 1, backgroundColor: palette.portGore }}
+      >
+        <SafeAreaView style={ROOT}>
+          <View style={INNER}>
+            <Text preset="title" tx="profileScreen.title" style={TITLE} />
+            <View style={DESCRIPTION_CONTAINER}>
+              <Text preset="subheader" tx="profileScreen.description" style={DESCRIPTION_ITEM} />
+              <CodeOfConductLink onPress={this.linkToCodeOfConduct} style={DESCRIPTION_ITEM} />
+            </View>
+            {this.renderContent()}
+            <View style={{ flex: 1 }} />
           </View>
-          {this.renderContent()}
-        </View>
-      </Screen>
+        </SafeAreaView>
+      </KeyboardAvoidingView>
     )
   }
 }
