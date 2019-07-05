@@ -10255,8 +10255,6 @@ exports[`Storyshots TextField Labelling 1`] = `
                 Object {
                   "borderBottomColor": "#2C2C4C",
                   "borderBottomWidth": 1,
-                  "flex": 1,
-                  "paddingVertical": 20,
                 }
               }
             >
@@ -10373,8 +10371,6 @@ exports[`Storyshots TextField Labelling 1`] = `
                 Object {
                   "borderBottomColor": "#2C2C4C",
                   "borderBottomWidth": 1,
-                  "flex": 1,
-                  "paddingVertical": 20,
                 }
               }
             >
@@ -10521,10 +10517,8 @@ exports[`Storyshots TextField Style Overrides 1`] = `
                 Object {
                   "borderBottomColor": "#2C2C4C",
                   "borderBottomWidth": 1,
-                  "flex": 1,
                   "paddingHorizontal": 40,
                   "paddingTop": 0,
-                  "paddingVertical": 20,
                 }
               }
             >
@@ -10560,9 +10554,7 @@ exports[`Storyshots TextField Style Overrides 1`] = `
                 Object {
                   "borderBottomColor": "#2C2C4C",
                   "borderBottomWidth": 1,
-                  "flex": 1,
                   "paddingBottom": 0,
-                  "paddingVertical": 20,
                 }
               }
             >
@@ -10678,8 +10670,6 @@ exports[`Storyshots TextField Style Overrides 1`] = `
                 Object {
                   "borderBottomColor": "#2C2C4C",
                   "borderBottomWidth": 1,
-                  "flex": 1,
-                  "paddingVertical": 20,
                 }
               }
             >
