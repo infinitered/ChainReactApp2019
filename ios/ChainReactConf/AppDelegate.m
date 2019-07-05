@@ -6,14 +6,13 @@
  */
 
 #import "AppDelegate.h"
-#import <AppCenterReactNativePush/AppCenterReactNativePush.h>
-
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
-#import <AppCenterReactNative/AppCenterReactNative.h>
-#import <AppCenterReactNativeAnalytics/AppCenterReactNativeAnalytics.h>
-#import <AppCenterReactNativeCrashes/AppCenterReactNativeCrashes.h>
+#import <AppCenterReactNative.h>
+#import <AppCenterReactNativeAnalytics.h>
+#import <AppCenterReactNativeCrashes.h>
+#import <AppCenterReactNativePush.h>
 #import "RNSplashScreen.h"
 
 @implementation AppDelegate
@@ -30,7 +29,7 @@
                                                    moduleName:@"ChainReactConf"
                                             initialProperties:nil];
 
-  [RNSplashScreen show];
+  // [RNSplashScreen show];
   rootView.backgroundColor = [[UIColor alloc] initWithRed:0.09f green:0.09f blue:0.22f alpha:1];
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIViewController *rootViewController = [UIViewController new];

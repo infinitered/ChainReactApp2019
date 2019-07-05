@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.airbnb.android.react.lottie.LottiePackage;
 import com.facebook.react.ReactApplication;
+import com.reactnativecommunity.netinfo.NetInfoPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.reactcommunity.rnlocalize.RNLocalizePackage;
@@ -36,19 +37,20 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
         new MainReactPackage(),
-            new RNDeviceInfo(),
-            new AsyncStoragePackage(),
+        new AppCenterReactNativePackage(MainApplication.this),
+        new AppCenterReactNativeAnalyticsPackage(MainApplication.this, getResources().getString(R.string.appCenterAnalytics_whenToEnableAnalytics)),
+        new AppCenterReactNativeCrashesPackage(MainApplication.this, getResources().getString(R.string.appCenterCrashes_whenToSendCrashes)),
+        new AppCenterReactNativePushPackage(MainApplication.this),
+        new AsyncStoragePackage(),
+        new KeychainPackage(),
+        new LottiePackage(),
+        new NetInfoPackage(),
+        new RCTMGLPackage(),
+        new RNDeviceInfo(),
+        new RNGestureHandlerPackage(),
         new RNLocalizePackage(),
         new RNScreensPackage(),
-        new RNGestureHandlerPackage(),
-        new AppCenterReactNativePushPackage(MainApplication.this),
-        new RCTMGLPackage(),
-        new AppCenterReactNativePackage(MainApplication.this),
-        new KeychainPackage(),
-        new SplashScreenReactPackage(),
-        new LottiePackage(),
-        new AppCenterReactNativeCrashesPackage(MainApplication.this, getResources().getString(R.string.appCenterCrashes_whenToSendCrashes)),
-        new AppCenterReactNativeAnalyticsPackage(MainApplication.this, getResources().getString(R.string.appCenterAnalytics_whenToEnableAnalytics))
+        new SplashScreenReactPackage()
       );
     }
 
