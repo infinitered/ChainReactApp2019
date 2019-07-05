@@ -16,14 +16,12 @@
     "ios": "react-native run-ios",
     "lint:ts": "tslint -p .",
     "lint": "npm-run-all lint:*",
-    "postinstall": "npm run upgrade-060 && test -n \"$NOYARNPOSTINSTALL\" || solidarity",
+    "postinstall": "node_modules/.bin/jetify && test -n \"$NOYARNPOSTINSTALL\" || solidarity",
     "precommit": "lint-staged",
     "prepare": "patch-package",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "storybook": "storybook start -p 9001 --skip-packager",
-    "test": "NODE_ENV=test TZ=America/Los_Angeles jest",
-    "upgrade-060": "npm run fix-redux-offline && node_modules/.bin/jetify",
-    "fix-redux-offline": "find node_modules -name \"detectNetwork.native.js\" -exec sed -i '' s/require\\(\\'react-native\\'\\)\\;/require\\(\\'react-native\\'\\)\\;_reactNative\\.NetInfo=require\\(\\'\\@react\\-native\\-community\\\\/netinfo\\'\\)\\;/g {} + "
+    "test": "NODE_ENV=test TZ=America/Los_Angeles jest"
   },
   "dependencies": {
     "@mapbox/react-native-mapbox-gl": "https://github.com/nitaliano/react-native-mapbox-gl#master",

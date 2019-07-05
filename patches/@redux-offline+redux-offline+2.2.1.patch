@@ -1,0 +1,13 @@
+diff --git a/node_modules/@redux-offline/redux-offline/lib/defaults/detectNetwork.native.js b/node_modules/@redux-offline/redux-offline/lib/defaults/detectNetwork.native.js
+index 4a51cb8..2f8f077 100644
+--- a/node_modules/@redux-offline/redux-offline/lib/defaults/detectNetwork.native.js
++++ b/node_modules/@redux-offline/redux-offline/lib/defaults/detectNetwork.native.js
+@@ -20,7 +20,7 @@ var _createClass2 = require('babel-runtime/helpers/createClass');
+ 
+ var _createClass3 = _interopRequireDefault(_createClass2);
+ 
+-var _reactNative = require('react-native');
++var _reactNative = require('react-native');_reactNative.NetInfo=require('@react-native-community/netinfo');
+ 
+ var _detectNetworkNative = require('./detectNetwork.native.legacy');
+ 
