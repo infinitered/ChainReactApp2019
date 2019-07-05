@@ -17,6 +17,7 @@ export interface AttractionsMapState {
 const MAPVIEW: ViewStyle = {
   height: 506,
   flex: 1,
+  overflow: "hidden",
 }
 
 const HIDDEN_MARKER: ViewStyle = { backgroundColor: color.transparent }
