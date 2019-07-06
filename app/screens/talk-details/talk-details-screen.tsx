@@ -96,7 +96,7 @@ const BULLET: ViewStyle = {
 
 const PANEL_BIO: ViewStyle = { flex: 1, marginTop: spacing.extraLarge + spacing.large }
 
-const AFTER_PARTY_DESCRIPTION: TextStyle = { marginTop: spacing.large }
+const AFTER_PARTY_DESCRIPTION: TextStyle = { marginTop: spacing.small }
 
 const MENU_ITEM: ViewStyle = {
   flexDirection: "row",
@@ -590,7 +590,7 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
   }
 
   renderAfterParty = imageDimensions => {
-    const { title, description, sponsor } = this.props.navigation.state.params.talk
+    const { title, description, sponsor, location } = this.props.navigation.state.params.talk
 
     let image = null
     switch (sponsor) {
@@ -614,6 +614,14 @@ export class TalkDetailsScreen extends React.Component<TalkDetailsScreenProps, {
         </View>
         <Text text={title} preset="body" style={TITLE} />
         <Text text={description} preset="body" style={AFTER_PARTY_DESCRIPTION} />
+        {location && (
+          <Text
+            style={{ color: palette.shamrock, marginTop: spacing.large, fontSize: 14 }}
+            preset="subheader"
+            text="LOCATION"
+          />
+        )}
+        {location && <Text text={location} preset="body" style={AFTER_PARTY_DESCRIPTION} />}
       </View>
     )
   }
