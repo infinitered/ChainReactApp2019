@@ -420,13 +420,6 @@
 			remoteGlobalIDString = 358F4ED71D1E81A9004DF814;
 			remoteInfo = RCTBlob;
 		};
-		E994BB7B2282480D001D5F37 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7A50F9986E6042E89B77F295 /* Lottie.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6445B0D5207E0D4D00D84F6A;
-			remoteInfo = LottieLibraryMacOS;
-		};
 		E994BBA42282480D001D5F37 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
@@ -884,7 +877,6 @@
 				8A34CC6A20E59D8800470345 /* Lottie.framework */,
 				8A34CC6C20E59D8800470345 /* Lottie.framework */,
 				8A34CC6E20E59D8800470345 /* libLottie.a */,
-				E994BB7C2282480D001D5F37 /* libLottie.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1454,13 +1446,6 @@
 			remoteRef = ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		E994BB7C2282480D001D5F37 /* libLottie.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libLottie.a;
-			remoteRef = E994BB7B2282480D001D5F37 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		E994BBA52282480D001D5F37 /* libjsi.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1634,7 +1619,7 @@
 				CODE_SIGN_ENTITLEMENTS = ChainReactConf/ChainReactConf.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 61;
+				CURRENT_PROJECT_VERSION = 62;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = L7YNDPLSEB;
 				ENABLE_BITCODE = NO;
@@ -1684,7 +1669,7 @@
 				CODE_SIGN_ENTITLEMENTS = ChainReactConf/ChainReactConf.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 61;
+				CURRENT_PROJECT_VERSION = 62;
 				DEVELOPMENT_TEAM = L7YNDPLSEB;
 				ENABLE_BITCODE = NO;
 				ENABLE_ONLY_ACTIVE_RESOURCES = NO;
