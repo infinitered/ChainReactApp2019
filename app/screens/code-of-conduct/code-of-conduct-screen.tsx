@@ -34,7 +34,7 @@ const SECTION_TITLE: TextStyle = {
 
 const email = "conf@infinite.red"
 const twitter = "chainreactconf"
-const phoneNumber = "(360) 562-0450"
+const phoneNumber = "(360) 450-4752"
 
 export class CodeOfConductScreen extends React.Component<CodeOfConductScreenProps, {}> {
   static navigationOptions = ({ navigation, _ }) => ({

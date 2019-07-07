@@ -21,6 +21,7 @@ const TEXT: TextStyle = {
   fontWeight: "500",
   letterSpacing: 3.0,
   fontSize: 14,
+  marginLeft: spacing.small,
 }
 
 export class Contact extends React.Component<ContactProps, {}> {
