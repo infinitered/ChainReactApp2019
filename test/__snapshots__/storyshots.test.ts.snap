@@ -2994,6 +2994,7 @@ exports[`Storyshots Code of Conduct - Contact Presets 1`] = `
                       "fontWeight": "500",
                       "letterSpacing": 3,
                       "lineHeight": 32,
+                      "marginLeft": 10,
                     }
                   }
                 >
@@ -3060,6 +3061,7 @@ exports[`Storyshots Code of Conduct - Contact Presets 1`] = `
                       "fontWeight": "500",
                       "letterSpacing": 3,
                       "lineHeight": 32,
+                      "marginLeft": 10,
                     }
                   }
                 >
@@ -3126,6 +3128,7 @@ exports[`Storyshots Code of Conduct - Contact Presets 1`] = `
                       "fontWeight": "500",
                       "letterSpacing": 3,
                       "lineHeight": 32,
+                      "marginLeft": 10,
                     }
                   }
                 >
