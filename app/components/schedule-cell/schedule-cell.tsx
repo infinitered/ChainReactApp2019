@@ -37,7 +37,7 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
     const { preset, index, talk, onPress, noTime } = this.props
     const style: any = ScheduleCellPresets[preset] || ScheduleCellPresets.default
     const isOdd = index % 2 === 0 // index starts at 0
-    const speakerName = talk.speakers.map(s => s.name).join(", ")
+    const speakerName = talk && talk.speakers ? talk.speakers.map(s => s.name).join(", ") : ""
     if (!talk) return null
     return (
       <TouchableWithoutFeedback
@@ -57,7 +57,7 @@ export class ScheduleCell extends React.Component<ScheduleCellProps, {}> {
             <View style={style.imageWrapper as ViewStyle}>{this.renderImage()}</View>
             <View style={style.content as ViewStyle}>
               <Text preset="subheader" text={talk.title} style={style.title as TextStyle} />
-              {talk.speakers && talk.speakers.length > 0 && talk.speakers[0].name && (
+              {talk && talk.speakers && talk.speakers.length > 0 && talk.speakers[0].name && (
                 <Text preset="subheader" text={speakerName} style={style.speaker as TextStyle} />
               )}
               {preset === "afterparty" && (
