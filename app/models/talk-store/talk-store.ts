@@ -23,52 +23,55 @@ export const TalkStoreModel = types
     getAll: flow(function*() {
       self.status = "pending"
       const env: Environment = getEnv(self)
-      const result = yield env.graphql.query({
-        fetchPolicy: "network-only",
-        query: gql`
-          query Talks {
-            settings {
-              name
-              value
-            }
-            talks {
-              id
-              title
-              description
-              image
-              startTime
-              endTime
-              menuItems
-              sponsor
-              talkType
-              location
-              track
-              discussionEnabled
-              prerequisites
-              speakers {
-                id
+      try {
+        const result = yield env.graphql.query({
+          fetchPolicy: "network-only",
+          query: gql`
+            query Talks {
+              settings {
                 name
-                employer
+                value
+              }
+              talks {
+                id
+                title
+                description
                 image
-                facebook
-                twitter
-                github
-                medium
-                instagram
-                dribbble
-                websites
-                bio
+                startTime
+                endTime
+                menuItems
+                sponsor
+                talkType
+                location
+                track
+                discussionEnabled
+                prerequisites
+                speakers {
+                  id
+                  name
+                  employer
+                  image
+                  facebook
+                  twitter
+                  github
+                  medium
+                  instagram
+                  dribbble
+                  websites
+                  bio
+                }
               }
             }
-          }
-        `,
-      })
-
-      if (result.data) {
-        self.status = "done"
-        self.load(result.data.talks, result.data.settings)
-      } else {
-        self.status = "error"
+          `,
+        })
+        if (result.data) {
+          self.status = "done"
+          self.load(result.data.talks, result.data.settings)
+        } else {
+          self.status = "error"
+        }
+      } catch (e) {
+        __DEV__ && console.tron.log(e)
       }
     }),
   }))
@@ -79,7 +82,14 @@ export const TalkStoreModel = types
       )
     },
     get discussionsEnabled() {
-      return self.settings.find(s => s.name === "discussions_enabled").value
+      try {
+        return self.settings.length > 0
+          ? self.settings.find(s => s.name === "discussions_enabled").value
+          : false
+      } catch (error) {
+        __DEV__ && console.tron.log(error.message)
+        return false
+      }
     },
   }))
 
