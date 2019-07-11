@@ -114,8 +114,8 @@ android {
         applicationId "com.chainreactapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 133
-        versionName "3.0.1"
+        versionCode 135
+        versionName "3.0.2"
         multiDexEnabled true
     }
     splits {
