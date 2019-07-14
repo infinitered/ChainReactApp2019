@@ -320,7 +320,9 @@ exports[`Storyshots AttractionsList Props 1`] = `
               >
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -348,7 +350,9 @@ exports[`Storyshots AttractionsList Props 1`] = `
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -376,7 +380,9 @@ exports[`Storyshots AttractionsList Props 1`] = `
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -404,7 +410,9 @@ exports[`Storyshots AttractionsList Props 1`] = `
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -432,7 +440,9 @@ exports[`Storyshots AttractionsList Props 1`] = `
                 </View>
                 <View
                   accessible={true}
+                  clickable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -1155,6 +1165,7 @@ exports[`Storyshots Button Style Presets 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
               hitSlop={
                 Object {
                   "bottom": 20,
@@ -1164,6 +1175,7 @@ exports[`Storyshots Button Style Presets 1`] = `
                 }
               }
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1277,6 +1289,7 @@ exports[`Storyshots Button Style Presets 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
               hitSlop={
                 Object {
                   "bottom": 20,
@@ -1286,6 +1299,7 @@ exports[`Storyshots Button Style Presets 1`] = `
                 }
               }
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1399,6 +1413,7 @@ exports[`Storyshots Button Style Presets 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
               hitSlop={
                 Object {
                   "bottom": 20,
@@ -1408,6 +1423,7 @@ exports[`Storyshots Button Style Presets 1`] = `
                 }
               }
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1521,6 +1537,7 @@ exports[`Storyshots Button Style Presets 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
               hitSlop={
                 Object {
                   "bottom": 20,
@@ -1530,6 +1547,7 @@ exports[`Storyshots Button Style Presets 1`] = `
                 }
               }
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1666,7 +1684,9 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1792,7 +1812,9 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1928,7 +1950,9 @@ exports[`Storyshots Checkbox Behaviour 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -2085,7 +2109,9 @@ exports[`Storyshots Checkbox Styling 1`] = `
             <View>
               <View
                 accessible={true}
+                clickable={true}
                 isTVSelectable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -2213,7 +2239,9 @@ exports[`Storyshots Checkbox Styling 1`] = `
             <View>
               <View
                 accessible={true}
+                clickable={true}
                 isTVSelectable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -2344,7 +2372,9 @@ exports[`Storyshots Checkbox Styling 1`] = `
             <View>
               <View
                 accessible={true}
+                clickable={true}
                 isTVSelectable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -2472,7 +2502,9 @@ exports[`Storyshots Checkbox Styling 1`] = `
             <View>
               <View
                 accessible={true}
+                clickable={true}
                 isTVSelectable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -2654,6 +2686,7 @@ exports[`Storyshots Code of Blog Link Presets 1`] = `
               </Text>
               <View
                 accessible={true}
+                clickable={true}
                 hitSlop={
                   Object {
                     "bottom": 20,
@@ -2663,6 +2696,7 @@ exports[`Storyshots Code of Blog Link Presets 1`] = `
                   }
                 }
                 isTVSelectable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -2936,7 +2970,9 @@ exports[`Storyshots Code of Conduct - Contact Presets 1`] = `
             >
               <View
                 accessible={true}
+                clickable={true}
                 isTVSelectable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -2953,6 +2989,7 @@ exports[`Storyshots Code of Conduct - Contact Presets 1`] = `
               >
                 <View
                   accessible={true}
+                  clickable={true}
                   hitSlop={
                     Object {
                       "bottom": 20,
@@ -2962,6 +2999,7 @@ exports[`Storyshots Code of Conduct - Contact Presets 1`] = `
                     }
                   }
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -3003,7 +3041,9 @@ exports[`Storyshots Code of Conduct - Contact Presets 1`] = `
               </View>
               <View
                 accessible={true}
+                clickable={true}
                 isTVSelectable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -3020,6 +3060,7 @@ exports[`Storyshots Code of Conduct - Contact Presets 1`] = `
               >
                 <View
                   accessible={true}
+                  clickable={true}
                   hitSlop={
                     Object {
                       "bottom": 20,
@@ -3029,6 +3070,7 @@ exports[`Storyshots Code of Conduct - Contact Presets 1`] = `
                     }
                   }
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -3070,7 +3112,9 @@ exports[`Storyshots Code of Conduct - Contact Presets 1`] = `
               </View>
               <View
                 accessible={true}
+                clickable={true}
                 isTVSelectable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -3087,6 +3131,7 @@ exports[`Storyshots Code of Conduct - Contact Presets 1`] = `
               >
                 <View
                   accessible={true}
+                  clickable={true}
                   hitSlop={
                     Object {
                       "bottom": 20,
@@ -3096,6 +3141,7 @@ exports[`Storyshots Code of Conduct - Contact Presets 1`] = `
                     }
                   }
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -3272,6 +3318,7 @@ exports[`Storyshots Code of Conduct Presets 1`] = `
               </Text>
               <View
                 accessible={true}
+                clickable={false}
                 hitSlop={
                   Object {
                     "bottom": 20,
@@ -3281,6 +3328,7 @@ exports[`Storyshots Code of Conduct Presets 1`] = `
                   }
                 }
                 isTVSelectable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -3449,6 +3497,7 @@ exports[`Storyshots Code of Photobomb Presets 1`] = `
               </Text>
               <View
                 accessible={true}
+                clickable={true}
                 hitSlop={
                   Object {
                     "bottom": 20,
@@ -3458,6 +3507,7 @@ exports[`Storyshots Code of Photobomb Presets 1`] = `
                   }
                 }
                 isTVSelectable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -5110,6 +5160,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
               </View>
               <View
                 accessible={true}
+                clickable={true}
                 hitSlop={
                   Object {
                     "bottom": 20,
@@ -5119,6 +5170,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                   }
                 }
                 isTVSelectable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -5169,6 +5221,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
               </View>
               <View
                 accessible={true}
+                clickable={true}
                 hitSlop={
                   Object {
                     "bottom": 20,
@@ -5178,6 +5231,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                   }
                 }
                 isTVSelectable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -5253,6 +5307,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
               </Text>
               <View
                 accessible={true}
+                clickable={true}
                 hitSlop={
                   Object {
                     "bottom": 20,
@@ -5262,6 +5317,7 @@ exports[`Storyshots GettingToChainReact Presets 1`] = `
                   }
                 }
                 isTVSelectable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
@@ -5503,6 +5559,7 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                   >
                     <View
                       accessible={true}
+                      clickable={true}
                       hitSlop={
                         Object {
                           "bottom": 20,
@@ -5512,6 +5569,7 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                         }
                       }
                       isTVSelectable={true}
+                      onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
                       onResponderRelease={[Function]}
@@ -5539,6 +5597,7 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                     </View>
                     <View
                       accessible={true}
+                      clickable={true}
                       hitSlop={
                         Object {
                           "bottom": 20,
@@ -5548,6 +5607,7 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                         }
                       }
                       isTVSelectable={true}
+                      onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
                       onResponderRelease={[Function]}
@@ -5575,6 +5635,7 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                     </View>
                     <View
                       accessible={true}
+                      clickable={true}
                       hitSlop={
                         Object {
                           "bottom": 20,
@@ -5584,6 +5645,7 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                         }
                       }
                       isTVSelectable={true}
+                      onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
                       onResponderRelease={[Function]}
@@ -5611,6 +5673,7 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                     </View>
                     <View
                       accessible={true}
+                      clickable={true}
                       hitSlop={
                         Object {
                           "bottom": 20,
@@ -5620,6 +5683,7 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                         }
                       }
                       isTVSelectable={true}
+                      onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
                       onResponderRelease={[Function]}
@@ -5647,6 +5711,7 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                     </View>
                     <View
                       accessible={true}
+                      clickable={true}
                       hitSlop={
                         Object {
                           "bottom": 20,
@@ -5656,6 +5721,7 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                         }
                       }
                       isTVSelectable={true}
+                      onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
                       onResponderRelease={[Function]}
@@ -5683,6 +5749,7 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                     </View>
                     <View
                       accessible={true}
+                      clickable={true}
                       hitSlop={
                         Object {
                           "bottom": 20,
@@ -5692,6 +5759,7 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                         }
                       }
                       isTVSelectable={true}
+                      onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
                       onResponderRelease={[Function]}
@@ -5719,6 +5787,7 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                     </View>
                     <View
                       accessible={true}
+                      clickable={true}
                       hitSlop={
                         Object {
                           "bottom": 20,
@@ -5728,6 +5797,7 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                         }
                       }
                       isTVSelectable={true}
+                      onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
                       onResponderRelease={[Function]}
@@ -5755,6 +5825,7 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                     </View>
                     <View
                       accessible={true}
+                      clickable={true}
                       hitSlop={
                         Object {
                           "bottom": 20,
@@ -5764,6 +5835,7 @@ Our team has been creating apps and websites for over ten years, and we’ve wor
                         }
                       }
                       isTVSelectable={true}
+                      onClick={[Function]}
                       onResponderGrant={[Function]}
                       onResponderMove={[Function]}
                       onResponderRelease={[Function]}
@@ -6715,6 +6787,7 @@ exports[`Storyshots SocialButton Presets 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
               hitSlop={
                 Object {
                   "bottom": 20,
@@ -6724,6 +6797,7 @@ exports[`Storyshots SocialButton Presets 1`] = `
                 }
               }
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -6829,6 +6903,7 @@ exports[`Storyshots SocialButton Presets 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
               hitSlop={
                 Object {
                   "bottom": 20,
@@ -6838,6 +6913,7 @@ exports[`Storyshots SocialButton Presets 1`] = `
                 }
               }
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -6943,6 +7019,7 @@ exports[`Storyshots SocialButton Presets 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
               hitSlop={
                 Object {
                   "bottom": 20,
@@ -6952,6 +7029,7 @@ exports[`Storyshots SocialButton Presets 1`] = `
                 }
               }
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -7057,6 +7135,7 @@ exports[`Storyshots SocialButton Presets 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
               hitSlop={
                 Object {
                   "bottom": 20,
@@ -7066,6 +7145,7 @@ exports[`Storyshots SocialButton Presets 1`] = `
                 }
               }
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -7171,6 +7251,7 @@ exports[`Storyshots SocialButton Presets 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
               hitSlop={
                 Object {
                   "bottom": 20,
@@ -7180,6 +7261,7 @@ exports[`Storyshots SocialButton Presets 1`] = `
                 }
               }
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -7285,6 +7367,7 @@ exports[`Storyshots SocialButton Presets 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
               hitSlop={
                 Object {
                   "bottom": 20,
@@ -7294,6 +7377,7 @@ exports[`Storyshots SocialButton Presets 1`] = `
                 }
               }
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -7399,6 +7483,7 @@ exports[`Storyshots SocialButton Presets 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
               hitSlop={
                 Object {
                   "bottom": 20,
@@ -7408,6 +7493,7 @@ exports[`Storyshots SocialButton Presets 1`] = `
                 }
               }
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -7513,6 +7599,7 @@ exports[`Storyshots SocialButton Presets 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
               hitSlop={
                 Object {
                   "bottom": 20,
@@ -7522,6 +7609,7 @@ exports[`Storyshots SocialButton Presets 1`] = `
                 }
               }
               isTVSelectable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -8832,6 +8920,8 @@ exports[`Storyshots Switch Behaviour 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -8958,6 +9048,8 @@ exports[`Storyshots Switch Behaviour 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -9084,6 +9176,8 @@ exports[`Storyshots Switch Behaviour 1`] = `
           >
             <View
               accessible={true}
+              clickable={true}
+              onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -9241,6 +9335,8 @@ exports[`Storyshots Switch Styling 1`] = `
             <View>
               <View
                 accessible={true}
+                clickable={true}
+                onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
                 onResponderRelease={[Function]}
