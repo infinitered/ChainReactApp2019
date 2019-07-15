@@ -7,7 +7,7 @@ storiesOf("BackButton", module)
   .addDecorator(fn => <StoryScreen>{fn()}</StoryScreen>)
   .add("Presets", () => (
     <Story>
-      <UseCase text="Blog Link" noBackground noPad>
+      <UseCase text="Blog Link" noPad>
         <BackButton backTitle="SCHEDULE" />
       </UseCase>
     </Story>
