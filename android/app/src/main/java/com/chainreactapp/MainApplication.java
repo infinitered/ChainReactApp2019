@@ -1,8 +1,11 @@
 package com.chainreactapp;
 
 import android.app.Application;
+import android.util.Log;
 
 import com.airbnb.android.react.lottie.LottiePackage;
+import com.facebook.hermes.reactexecutor.HermesExecutorFactory;
+import com.facebook.react.bridge.JavaScriptExecutorFactory;
 import com.facebook.react.ReactApplication;
 import com.reactnativecommunity.netinfo.NetInfoPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
