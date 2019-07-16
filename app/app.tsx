@@ -36,15 +36,14 @@ interface AppState {
  * This is the main component of our app.
  */
 export class App extends React.Component<{}, AppState> {
-  componentWillMount() {
-    if (Platform.OS === "android") StatusBar.setBackgroundColor(palette.portGore)
-    StatusBar.setBarStyle("light-content")
-  }
   /**
    * When the component is mounted. This happens asynchronously and simply
    * re-renders when we're good to go.
    */
   async componentDidMount() {
+    if (Platform.OS === "android") StatusBar.setBackgroundColor(palette.portGore)
+    StatusBar.setBarStyle("light-content")
+
     this.setState(
       {
         rootStore: await setupRootStore(),

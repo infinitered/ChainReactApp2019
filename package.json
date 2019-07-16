@@ -1,12 +1,15 @@
 {
-  "name": "ChainReactApp2019",
+  "name": "chain-react-conf",
   "version": "3.0.0",
   "private": true,
   "scripts": {
     "adb": "adb reverse tcp:9090 tcp:9090 && adb reverse tcp:3000 tcp:3000 && adb reverse tcp:9001 tcp:9001 && adb reverse tcp:8081 tcp:8081",
     "android": "react-native run-android",
+    "build:e2e": "detox build -c ios.sim.debug",
     "ci:setup": "touch .env && echo \"AWS_APPSYNC_API_KEY=\"$AWS_APPSYNC_API_KEY >> .env",
     "ci:test": "yarn test --ci",
+    "ci:test:e2e": "detox test -c ios.sim.release -l verbose --cleanup",
+    "ci:build:e2e": "detox build -c ios.sim.release",
     "compile": "tsc --noEmit -p . --pretty",
     "format:js": "prettier --write {.,**}/*.js",
     "format:json": "prettier --write {.,**}/*.json",
@@ -21,7 +24,9 @@
     "prepare": "patch-package",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "storybook": "storybook start -p 9001 --skip-packager",
-    "test": "NODE_ENV=test TZ=America/Los_Angeles jest"
+    "test": "NODE_ENV=test TZ=America/Los_Angeles jest",
+    "test:coverage": "yarn test --coverage",
+    "test:e2e": "detox test -c ios.sim.debug"
   },
   "dependencies": {
     "@mapbox/react-native-mapbox-gl": "https://github.com/nitaliano/react-native-mapbox-gl#master",
@@ -84,6 +89,7 @@
     "@types/react-test-renderer": "^16.8.2",
     "babel-jest": "^24.8.0",
     "babel-plugin-transform-inline-environment-variables": "^0.4.3",
+    "detox": "^13.1.1",
     "husky": "^0.14.3",
     "jest": "^24.8.0",
     "jetifier": "^1.6.1",
@@ -144,5 +150,22 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "detox": {
+    "test-runner": "jest",
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/ChainReactConf.app",
+        "build": "xcodebuild -workspace ios/ChainReactConf.xcworkspace -scheme ChainReactConf -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build -UseModernBuildSystem=NO",
+        "type": "ios.simulator",
+        "name": "iPhone X, iOS 12.2"
+      },
+      "ios.sim.release": {
+        "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/ChainReactConf.app",
+        "build": "xcodebuild -workspace ios/ChainReactConf.xcworkspace -scheme ChainReactConf -configuration Release -sdk iphonesimulator -derivedDataPath ios/build -UseModernBuildSystem=NO",
+        "type": "ios.simulator",
+        "name": "iPhone X -- iOS 12.2"
+      }
+    }
   }
 }

@@ -67,3 +67,6 @@ android/fastlane/google-play.json
 # CI
 ios/output
 android/output
+
+# Tests
+coverage/
