@@ -7,19 +7,19 @@ storiesOf("SponsorLogo", module)
   .addDecorator(fn => <StoryScreen>{fn()}</StoryScreen>)
   .add("Presets", () => (
     <Story>
-      <UseCase text="Platinum Sponsor" noBackground>
+      <UseCase text="Platinum Sponsor">
         <SponsorLogo size="platinum" sponsor="alexa" />
       </UseCase>
-      <UseCase text="Gold Sponsor" noBackground>
+      <UseCase text="Gold Sponsor">
         <SponsorLogo size="gold" sponsor="callstack" />
       </UseCase>
-      <UseCase text="Silver Sponsor" noBackground>
+      <UseCase text="Silver Sponsor">
         <SponsorLogo size="silver" sponsor="bugsnag" />
       </UseCase>
-      <UseCase text="Bronze Sponsor" noBackground>
+      <UseCase text="Bronze Sponsor">
         <SponsorLogo size="bronze" sponsor="cambia" />
       </UseCase>
-      <UseCase text="Additional Sponsor" noBackground>
+      <UseCase text="Additional Sponsor">
         <SponsorLogo size="additional" sponsor="g2iAdditional" />
       </UseCase>
     </Story>

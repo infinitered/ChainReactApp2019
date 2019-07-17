@@ -50,7 +50,7 @@ bundle exec fastlane android beta
 
 - If the build was successful, commit the build number
 
-## :no_entry_sign: TSLint Compliant
+# :no_entry_sign: TSLint Compliant
 
 This project adheres to TSLint and Prettier. We suggest you enable linting to keep your project compliant during development. You can lint the project by running `yarn lint`.
 
@@ -65,3 +65,57 @@ If you have to bypass lint for a special commit that you will come back and clea
 **Understanding Linting Errors**
 
 The linting rules are from tslint-config-prettier. [Regular TS errors can be found with descriptions here](https://palantir.github.io/tslint/rules/).
+
+# Detox End-To-End Testing
+
+## Setup
+
+_Note that Detox is only configured for macOS._
+
+To get your Detox tests up and running, you'll need to install some global dependencies:
+
+1. Install the latest version of [Homebrew](https://brew.sh/)
+
+2. Make sure you have Node installed (at least 8.6.0).
+
+3. Install `applesimutils`, which will allow Detox to communicate with the iOS simulator:
+
+```bash
+brew tap wix/brew && brew install applesimutils
+```
+
+4. Install the Detox CLI
+
+```bash
+  yarn global add detox-cli
+```
+
+## Adding tests
+
+We've gotten you started with `./e2e/firstTest.spec.js`, which tests that the two main example screens render properly.
+
+Note that in order to pick up elements by ID, we've added the `testID` prop to the component.
+
+## Running tests
+
+1. Start the packager
+
+```
+yarn start
+```
+
+2. Run the app
+
+In a separate terminal window from the packager:
+
+```
+yarn build:e2e
+```
+
+3. Run the tests
+
+```
+yarn test:e2e
+```
+
+For more information, make sure to check out the official [Detox Docs](https://github.com/wix/Detox/blob/master/docs/README.md)

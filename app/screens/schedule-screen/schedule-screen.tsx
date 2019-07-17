@@ -63,7 +63,7 @@ export class ScheduleScreen extends React.Component<ScheduleScreenProps, Schedul
     },
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const { talkStore } = this.props
     talkStore && talkStore.getAll()
   }
@@ -78,7 +78,12 @@ export class ScheduleScreen extends React.Component<ScheduleScreenProps, Schedul
   render() {
     const { selected } = this.state
     return (
-      <Screen preset="fixed" backgroundColor={color.palette.portGore} style={ROOT}>
+      <Screen
+        preset="fixed"
+        backgroundColor={color.palette.portGore}
+        style={ROOT}
+        testID={"ScheduleScreen"}
+      >
         <ScrollView
           style={{ flex: 1, width: "100%" }}
           key={`${selected}-scrollview`}

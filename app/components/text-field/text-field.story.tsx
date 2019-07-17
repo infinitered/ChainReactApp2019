@@ -1,6 +1,6 @@
 import * as React from "react"
 import { storiesOf } from "@storybook/react-native"
-import { StoryScreen, Story, UseCase } from "../../../storybook/views"
+import { Story, StoryScreen, UseCase } from "../../../storybook/views"
 import { Text } from "../text"
 import { TextField } from "./"
 import { State } from "react-powerplug"
@@ -28,8 +28,8 @@ storiesOf("TextField", module)
             <TextField
               onChangeText={value => setState({ value })}
               value={state.value}
-              placeholderTx="storybook.placeholder"
-              labelTx="storybook.field"
+              placeholderTx="profileScreen.usernameField.placeholder"
+              labelTx="profileScreen.usernameField.label"
             />
           )}
         </State>

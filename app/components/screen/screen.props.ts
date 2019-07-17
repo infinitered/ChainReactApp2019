@@ -1,7 +1,7 @@
-import { ImageURISource, ViewStyle } from "react-native"
+import { ImageURISource, ViewProperties, ViewStyle } from "react-native"
 import { ScreenPresets } from "./screen.presets"
 
-export interface ScreenProps {
+export interface ScreenProps extends ViewProperties {
   /**
    * Children components.
    */

@@ -1,5 +1,5 @@
 import * as React from "react"
-import { View, ViewStyle, TextStyle } from "react-native"
+import { TextStyle, View, ViewStyle } from "react-native"
 import { Text } from "../../components/text"
 import { Button } from "../../components/button"
 import { NavigationScreenProps } from "react-navigation"
@@ -39,6 +39,7 @@ export class WelcomeScreen extends React.Component<WelcomeScreenProps, {}> {
         style={ROOT}
         backgroundImage={backgroundImage}
         backgroundColor={palette.portGore}
+        testID={"WelcomeScreen"}
       >
         <View style={TOP_CONTAINER}>
           <Text preset="header" tx="welcomeScreen.header1" style={HEADER1} />
@@ -51,6 +52,7 @@ export class WelcomeScreen extends React.Component<WelcomeScreenProps, {}> {
             onPress={this.nextScreen}
             style={{ width: 335, height: 50, borderRadius: 0 }}
             textStyle={{ fontSize: 14, fontWeight: "500" }}
+            testID={"next-screen-button"}
           />
         </Footer>
       </Screen>

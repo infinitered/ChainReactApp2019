@@ -7,7 +7,7 @@ storiesOf("Attraction", module)
   .addDecorator(fn => <StoryScreen>{fn()}</StoryScreen>)
   .add("Props", () => (
     <Story>
-      <UseCase text="Simple attraction" noBackground>
+      <UseCase text="Simple attraction">
         <Attraction
           attraction={{
             type: "Feature",

@@ -10,13 +10,21 @@ import { isNonScrolling, presets } from "./screen.presets"
  * @param props The screen props
  */
 function ScreenWithoutScrolling(props: ScreenProps) {
-  const preset = presets[props.preset] || presets["fixed"]
-  const style = { ...preset.nonScroll, ...props.style }
-  const backgroundStyle = props.backgroundColor ? { backgroundColor: props.backgroundColor } : {}
+  const {
+    preset: propsPreset,
+    backgroundImage,
+    backgroundColor,
+    style: propStyle,
+    children,
+    ...rest
+  } = props
+  const preset = presets[propsPreset] || presets["fixed"]
+  const style = { ...preset.nonScroll, ...propStyle }
+  const backgroundStyle = backgroundColor ? { backgroundColor: backgroundColor } : {}
 
-  if (props.backgroundImage) {
+  if (backgroundImage) {
     return (
-      <SafeAreaView style={[style, backgroundStyle]}>
+      <SafeAreaView style={[style, backgroundStyle]} {...rest}>
         <Image
           source={props.backgroundImage}
           style={{ position: "absolute", width: "100%", height: "100%" }}
@@ -25,7 +33,11 @@ function ScreenWithoutScrolling(props: ScreenProps) {
       </SafeAreaView>
     )
   } else {
-    return <SafeAreaView style={[style, backgroundStyle]}>{props.children}</SafeAreaView>
+    return (
+      <SafeAreaView style={[style, backgroundStyle]} {...rest}>
+        {children}
+      </SafeAreaView>
+    )
   }
 }
 
@@ -35,13 +47,14 @@ function ScreenWithoutScrolling(props: ScreenProps) {
  * @param props The screen props
  */
 function ScreenWithScrolling(props: ScreenProps) {
-  const preset = presets[props.preset] || presets["scroll"]
+  const { preset: propsPreset, backgroundColor, style, children, ...rest } = props
+  const preset = presets[propsPreset] || presets["scroll"]
   const outerStyle = preset.scrollOuter
-  const backgroundStyle = props.backgroundColor ? { backgroundColor: props.backgroundColor } : {}
-  const innerStyle = { ...preset.scrollInner, ...props.style } as ViewStyle
+  const backgroundStyle = backgroundColor ? { backgroundColor: backgroundColor } : {}
+  const innerStyle = { ...preset.scrollInner, ...style } as ViewStyle
 
   return (
-    <SafeAreaView style={[outerStyle, backgroundStyle]}>
+    <SafeAreaView style={[outerStyle, backgroundStyle]} {...rest}>
       <ScrollView style={[outerStyle, backgroundStyle]} contentContainerStyle={innerStyle}>
         {props.children}
       </ScrollView>

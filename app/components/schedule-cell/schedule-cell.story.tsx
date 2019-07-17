@@ -1,6 +1,6 @@
 import * as React from "react"
 import { storiesOf } from "@storybook/react-native"
-import { StoryScreen, Story, UseCase } from "../../../storybook/views"
+import { Story, StoryScreen, UseCase } from "../../../storybook/views"
 import { ScheduleCell } from "./schedule-cell"
 
 const talk: any = {
@@ -53,19 +53,19 @@ const noop = () =>
     .addDecorator(fn => <StoryScreen>{fn()}</StoryScreen>)
     .add("Presets", () => (
       <Story>
-        <UseCase text="ScheduleCell" usage="odd" noBackground noPad>
+        <UseCase text="ScheduleCell" usage="odd" noPad>
           <ScheduleCell index={0} talk={talk} onPress={noop} />
         </UseCase>
-        <UseCase text="ScheduleCell" usage="even" noBackground noPad>
+        <UseCase text="ScheduleCell" usage="even" noPad>
           <ScheduleCell index={1} talk={talk} onPress={noop} />
         </UseCase>
-        <UseCase text="ScheduleCell" usage="break" noBackground noPad>
+        <UseCase text="ScheduleCell" usage="break" noPad>
           <ScheduleCell index={0} talk={breakTalk} preset="break" onPress={noop} />
         </UseCase>
-        <UseCase text="ScheduleCell" usage="workshop" noBackground noPad>
+        <UseCase text="ScheduleCell" usage="workshop" noPad>
           <ScheduleCell index={0} talk={workshop} onPress={noop} />
         </UseCase>
-        <UseCase text="ScheduleCell" usage="afterparty" noBackground noPad>
+        <UseCase text="ScheduleCell" usage="afterparty" noPad>
           <ScheduleCell index={0} talk={afterparty} preset="afterparty" onPress={noop} />
         </UseCase>
       </Story>

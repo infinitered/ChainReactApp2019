@@ -1,5 +1,5 @@
 watchman watch-del-all
-rm -rf /Users/gantman/Library/Caches/CocoaPods
+rm -rf ~/Library/Caches/CocoaPods
 rm -rf ~/Library/Developer/Xcode/DerivedData
 yarn cache clean
 rm -rf node_modules
