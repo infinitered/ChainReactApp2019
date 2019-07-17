@@ -90,7 +90,7 @@ Or if you'd prefer to install directly from Homebrew
 brew update && brew install node
 ```
 
-3. Install `applesimutils, which will allow Detox to communicate with the iOS simulator:
+3. Install `applesimutils`, which will allow Detox to communicate with the iOS simulator:
 
 ```bash
 brew tap wix/brew && brew install applesimutils
