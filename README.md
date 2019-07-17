@@ -76,8 +76,6 @@ _Note that Detox is only configured for macOS._
 
 1. Install the latest version of [Homebrew](https://brew.sh/)
 
-This conversation was marked as resolved by robinheinze
-
 2. Make sure you have Node installed (at least 8.6.0). If you don't:
 
 If you use NVM:
