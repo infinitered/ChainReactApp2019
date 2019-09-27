@@ -20,7 +20,7 @@
 - for Android
   - run `react-native run-android`
 
-# Secrets
+# SecretsssSSSsssSSsssSSSsss :snake:
 
 If you are working on the AWS AppSync talk discussion feature of the app, you will need a `.env` file with the proper API token. Please ping `@jamon` in the #chainreact channel of the [Infinite Red community Slack](http://community.infinite.red) and we'll hook you up!
 
