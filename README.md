@@ -22,7 +22,9 @@
 
 # SecretsssSSSsssSSsssSSSsss :snake:
 
-If you are working on the AWS AppSync talk discussion feature of the app, you will need a `.env` file with the proper API token, as well as the `amplify-meta.json` file. Please ping `@jamon` in the #chainreact channel of the [Infinite Red community Slack](http://community.infinite.red) and we'll hook you up!
+~If you are working on the AWS AppSync talk discussion feature of the app, you will need a `.env` file with the proper API token, as well as the `amplify-meta.json` file. Please ping `@jamon` in the #chainreact channel of the [Infinite Red community Slack](http://community.infinite.red) and we'll hook you up!~
+
+Apologies -- we can no longer provide secrets for this app to people outside of Infinite Red.
 
 # Deploying
 
